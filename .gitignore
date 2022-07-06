@@ -56,7 +56,6 @@ typings/
 .env*
 
 # gatsby files
-.cache/
 public
 
 # Mac files
@@ -73,3 +72,12 @@ yarn-error.log
 .netlify
 
 package-lock.json
+
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
