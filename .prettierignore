@@ -1,0 +1,16 @@
+.cache
+package.json
+package-lock.json
+public
+node_modules
+dist
+coverage
+.next
+out
+next.config.js
+.husky
+storybook-static
+components/**/*.stories.@(js|jsx|ts|tsx)
+postcss.config.js
+README.md
+tailwind.config.js

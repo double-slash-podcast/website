@@ -1,16 +1,16 @@
 # NEW WEBSITE
 
 
-## ROADMAP 
+## ROADMAP
 
-- [ ] Init Nuxt 3
-- [ ] Install Tailwind module
-- [ ] Set DS colors palette 
+- [X] Init Nuxt 3
+- [X] Install Tailwind module
+- [ ] Set DS colors palette
 - [ ] Install unoCSS / Icon
 - [ ] Install nuxt content 3
 - [ ] Config for SSR with serverless
 - [ ] Config export on Netlify Org
-- Components 
+- Components
   - [ ] Home page header
   - [ ] Navbar
   - [ ] Footer
@@ -20,10 +20,10 @@
   - [ ] Social share
   - [ ] Transcription for `SEO`
 - [ ] Import LEGACY episode
-- [ ] Contact Form 
+- [ ] Contact Form
 - [ ] Sponsoring page => redirection
 - [ ] RSS creation for episodes
-  - Rss creation by plugin / module 
+  - Rss creation by plugin / module
   - [Validate by](https://podba.se/validate/)
 - [ ] Live page ?
 - [ ] Blog for SEO content ?
