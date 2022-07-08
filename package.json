@@ -36,7 +36,7 @@
   },
   "lint-staged": {
     "*.{js,vue,ts}": [
-       "yarn lint",
+      "yarn lint",
       "yarn prettier:w",
       "yarn test"
     ]
