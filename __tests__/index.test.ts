@@ -5,6 +5,6 @@ const toUpperCase = (string: string) => {
 };
 
 it('toUpperCase', () => {
-  const result = toUpperCase('foobar');
+  const result = toUpperCase('foobarrr');
   expect(result).toMatchSnapshot();
 });
