@@ -1,5 +1,6 @@
-# NEW WEBSITE
+# Double Slash Podcast Website
 
+WIP...
 
 ## ROADMAP
 
@@ -7,7 +8,7 @@
 - [X] Install Tailwind module
 - [ ] Set DS colors palette
 - [ ] Install unoCSS / Icon
-- [ ] Install nuxt content 3
+- [x] Install nuxt content 3
 - [ ] Config for SSR with serverless
 - [ ] Config export on Netlify Org
 - Components
