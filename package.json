@@ -38,7 +38,7 @@
     "*.{js,vue,ts}": [
       "yarn lint",
       "yarn format-write",
-      "yarn test run --passWithNoTests"
+      "yarn test run related --passWithNoTests"
     ]
   },
   "volta": {
