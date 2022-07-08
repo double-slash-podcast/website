@@ -8,7 +8,7 @@
     "prepare": "husky install",
     "format-check": "npx prettier --check ./",
     "format-write": "npx prettier --write ./",
-    "test": "vitest",
+    "test": "vitest related --passWithNoTests",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
@@ -37,8 +37,7 @@
   "lint-staged": {
     "*.{js,vue,ts}": [
       "yarn lint",
-      "yarn prettier:w",
-      "yarn test"
+      "yarn prettier:w"
     ]
   },
   "volta": {
