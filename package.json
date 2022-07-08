@@ -37,7 +37,7 @@
   "lint-staged": {
     "*.{js,vue,ts}": [
       "yarn lint",
-      "yarn prettier:w",
+      "yarn format-write",
       "yarn test related --passWithNoTests"
     ]
   },
