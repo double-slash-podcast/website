@@ -18,7 +18,7 @@ guid: 505f20a07aab6d5fdfa9e3bdd41ec676
 Dans cet épisode assez technique, nous allons faire le point sur les Progressive Web App en 2020. Définir ce qu'est une PWA, les principales features d'une PWA. Puis, pourquoi choisir une PWA au lieu d'une application native. Et enfin, revenir sur les blocages de Safari par rapport aux PWA.
 
 Notre invitée pour l'épisode :
- Stéphanie Alix : [https://stephaniealix.com/](https://stephaniealix.com/) et [@StephanieAlix95](https://twitter.com/StephanieAlix95)
+Stéphanie Alix : [https://stephaniealix.com/](https://stephaniealix.com/) et [@StephanieAlix95](https://twitter.com/StephanieAlix95)
 **Développeuse Web et spécialisée dans les PWA**
 
 ## Principales fonctionnalités d'une PWA :
