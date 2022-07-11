@@ -6,6 +6,7 @@ node_modules
 dist
 coverage
 .next
+.nuxt
 out
 next.config.js
 .husky
