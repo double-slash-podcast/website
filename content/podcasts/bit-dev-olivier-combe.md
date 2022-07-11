@@ -12,10 +12,6 @@ explicit: false
 season: 1
 title: Bit.dev avec Olivier Combe
 subtitle: Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe pour parler du service Bitdev.
-sponsor:
-  img: sponsors/indy.png
-  title: Indy, la comptabilité des indépendants
-  url: https://bit.ly/3dojgDo
 guid: e8fead5a9f5e8f1d4ae779d654509d3b
 ---
 

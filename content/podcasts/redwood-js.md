@@ -12,10 +12,6 @@ explicit: false
 season: 1
 title: RedwoodJS avec Simon Gagnon
 subtitle: Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en direct de Montréal (Canada) pour parler de RedwoodJS.
-sponsor:
-  img: sponsors/indy.png
-  title: Indy, la comptabilité des indépendants
-  url: https://bit.ly/3dojgDo
 guid: 22904a35fe6a2350abd743a6d02b743b
 ---
 

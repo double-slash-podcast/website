@@ -12,10 +12,6 @@ explicit: false
 season: 1
 title: Hasura, une API GraphQL qui assure !
 subtitle: Alex nous fait découvrir Hasura, un service qui permet de monter une API GraphQL à partir d'une base de données.
-sponsor:
-  img: sponsors/indy.png
-  title: Indy, la comptabilité des indépendants
-  url: https://bit.ly/3dojgDo
 guid: 232290c1a57fb93aac34811ec55f41ca
 ---
 
