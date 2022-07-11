@@ -29,7 +29,7 @@ Obtenez 2 mois gratuits avec notre code sponsor. [Cliquez sur ici pour profiter 
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://youtu.be/0fK57NRHqPY)
 
-[Hasura](https://hasura.io/) est un système qui vous permet de monter un API GraphQL facilement à partir d'une base de données.  
+[Hasura](https://hasura.io/) est un système qui vous permet de monter un API GraphQL facilement à partir d'une base de données.
 
 Le code est open source. Vous pouvez l'autohéberger sur un serveur ou l'utiliser via le service cloud proposé par la société éditrice. Dans le dernier cas, il faudra payer en fonction de votre forfait.
 
@@ -61,9 +61,3 @@ Bonne écoute.
 
 - Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
 - Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
-
-<BlocBorder>
-  <strong>Support de l'épisode</strong><br /><br />
-  Indy, la comptabilité des indépendants tout simplement. Synchronisation bancaire sécurisée, déclarations fiscales préremplies et télétransmises, support client avec réponse sous 4 minutes.<br /><br />
-  Obtenez 2 mois gratuits avec notre code sponsor. <a href="https://bit.ly/3dojgDo" target="_blank">Cliquez sur ici pour profiter du code</a>
-</BlocBorder>

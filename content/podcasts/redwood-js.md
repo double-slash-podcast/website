@@ -74,9 +74,3 @@ Bonne écoute :)
 
 - Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
 - Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
-
-<BlocBorder>
-  <strong>Support de l'épisode</strong><br /><br />
-  Indy, la comptabilité des indépendants tout simplement. Synchronisation bancaire sécurisée, déclarations fiscales préremplies et télétransmises, support client avec réponse sous 4 minutes.<br /><br />
-  Obtenez 2 mois gratuits avec notre code sponsor. <a href="https://bit.ly/3dojgDo" target="_blank">Cliquez sur ici pour profiter du code</a>
-</BlocBorder>
