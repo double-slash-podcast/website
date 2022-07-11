@@ -41,6 +41,7 @@ describe('compare guid in markdown file episode and the old feed', async () => {
   // get all markdown podcast files
   const podcasts = await readMarkdown(
     path.join(__dirname, '../content/podcasts', '/**/*.md'),
+    {html: false},
   );
 
   test.each(tableToCompare)('%s => %s', (title, guid) => {
