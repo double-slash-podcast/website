@@ -12,6 +12,7 @@ episodeType: full
 explicit: false
 categories:
   - Technology
+guid: 3bec175544dbf2be451962b6645868df
 ---
 
 Petit retour sur la conférence annuelle de GitHub, les nouvelles fonctionnalités et autres outils liés à GitHub.

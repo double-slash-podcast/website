@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Les Web Platforms en 2022
 subtitle: Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
+guid: ab1b72df509cb2a1ec871478816c4223
 ---
 
 ## Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.

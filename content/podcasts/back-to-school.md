@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Back to school
 subtitle: Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2021.
+guid: 8c99b7f6333d2d920abfa786ffb827c9
 ---
 
 ## Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2021.

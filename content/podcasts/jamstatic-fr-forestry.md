@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Jamstatic fr, Forestry.io et Tina CMS avec Frank Taillandier
 subtitle: Un épisode avec notre invité Frank Taillandier qui a créé la communauté Jamstatic FR et qui travaille pour Forestry.io. Un épisode orienté statique !
+guid: e920b97fca291002903e32ea3aefff46
 ---
 
 ## Dans le première partie, nous allons parler de la communauté "Jamstatic FR"

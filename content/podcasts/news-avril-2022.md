@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: La chasse aux news - Avril 2022
 subtitle: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
+guid: 0479679fbfac701b8757a41fb3422d20
 ---
 
 ## Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines

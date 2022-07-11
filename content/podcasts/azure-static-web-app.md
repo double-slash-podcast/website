@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Azure Static Web Apps avec Wassim Chegham
 subtitle:
+guid: e3a620e47a0c34dcf64503211d1b5ea6
 ---
 
 Dans cet épisode, nous allons parler du nouveau service de Microsoft avec notre invité, Wassim Chegham.

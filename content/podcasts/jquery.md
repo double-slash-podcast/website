@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: jQuery en 2020
 subtitle: Faut-il encore utiliser jQuery en 2020 ? Pas de réponse absolue et tranchée. On pèse le pour et le contre, puis on vous livre notre avis.
+guid: ebbc144f9bbbd6e5a36925b7d2359da6
 ---
 
 Faut-il encore utiliser jQuery en 2020 ? Pas de réponse absolue et tranchée. On pèse le pour et le contre, puis on vous livre notre avis.

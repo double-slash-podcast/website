@@ -12,6 +12,7 @@ episodeType: full
 explicit: false
 categories:
   - Technology
+guid: 466f44b0c90f560262f2bde17a2f405a
 ---
 
 Dans ce podcast, nous parlons de l'impact de notre utilisation du numérique sur le réchauffement climatique et d'écoconception.

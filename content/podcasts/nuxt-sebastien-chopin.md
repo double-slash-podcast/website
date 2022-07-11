@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Nuxt.JS avec Sébastien Chopin
 subtitle: Dans cet épisode, nous avons le plaisir de recevoir Sébastien Chopin pour parler du framework Nuxt.JS qui arrive dans sa 3e version prochainement.
+guid: 24879b619ab1bc5eb3a7aabe2bbeb354
 ---
 
 ## Dans cet épisode, nous avons le plaisir de recevoir Sébastien Chopin pour parler du framework Nuxt.JS qui arrive dans sa 3e version prochainement

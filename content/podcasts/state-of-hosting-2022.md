@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Héberger une application web en 2022
 subtitle: Comment héberger une application web en 2022
+guid: 60f157f17c98ece17c1b550c6151d4f0
 ---
 
 ## Dans cet épisode, nous évoquons les différentes solutions pour héberger une application web

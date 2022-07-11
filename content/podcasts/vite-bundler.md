@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Vite.., un bundler !
 subtitle: Un épisode dédié aux bundlers. On passe en revue les différents bundlers utilisés et pourquoi les nouveaux comme Vite, changent les règles.
+guid: b558c0c66f61e51ad282d0827fb11c3a
 ---
 
 Les bundlers (générateur de bundle), on les utilise au quotidien. Ils sont indispensables dans les outils des développeurs front et ils ont beaucoup évolué.

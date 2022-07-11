@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Spécial news - Juin 2022
 subtitle: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
+guid: 0f919ee6ee5c883b1253f2c584915dc9
 ---
 
 ## Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines

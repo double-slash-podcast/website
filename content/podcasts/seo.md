@@ -12,9 +12,10 @@ episodeNumber: 8
 episodeType: full
 explicit: false
 season: 1
+guid: 5ee1320d8c992a324b83e8fc970de1e4
 ---
 
-Un épisode avec autour du SEO (Search Engine Optimisation).  
+Un épisode avec autour du SEO (Search Engine Optimisation).
 Le SEO en 2020, les méthodes, les outils, les bonnes pratiques. Comment penser le projet "SEO Friendly" dès sa construction.
 Nous en discutons avec notre invité, expert SEO : [Nicolas Baldi](https://www.linkedin.com/in/nicolasbaldi/)
 

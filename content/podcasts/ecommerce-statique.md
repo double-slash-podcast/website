@@ -12,6 +12,7 @@ episodeType: full
 explicit: false
 categories:
   - Technology
+guid: d7c3aec02d1fd799875c4cc1143a1f68
 ---
 
 Dans ce podcast, nous parlons d'un retour d'expérience sur la création d'un site ecommerce avec SnipCart et Gatsby JS.

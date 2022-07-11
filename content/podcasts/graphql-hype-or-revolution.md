@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: GraphQL, Hype ou Révolution
 subtitle: GraphQL est un langage de requête basé sur le protocole HTTP qui a été pensé pour une utilisation adapté aux usages actuels
+guid: e52e7d625a9a2113b1163230a11925d6
 ---
 
 Dans cet épisode, nous allons parler de GraphQL et de REST.

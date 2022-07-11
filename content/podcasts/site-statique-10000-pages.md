@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Un site statique de 11000 pages
 subtitle: Un retour d'expérience sur un projet de site statique qui doit comporter un grand nombre de pages.
+guid: 2cd0208a7d3c92a5b087e46c77caf5f8
 ---
 
 Dans cet épisode, nous allons parler d'un retour d'expérience sur un projet de site statique qui doit comporter un grand nombre de pages.

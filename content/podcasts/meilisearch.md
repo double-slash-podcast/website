@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: MeiliSearch, rustique à la française !
 subtitle: 'Un épisode avec 2 invités : Thomas cofondateur et Marin développeur Core de MeiliSearch. Nous allons parler de ce moteur de recherche open source et du langage Rust'
+guid: e514d4fc0073c9bb7ad8625d7a190e9a
 ---
 
 ## Un épisode avec 2 invités : Thomas cofondateur et Marin développeur Core de MeiliSearch. Nous allons parler de ce moteur de recherche open source et du langage Rust.

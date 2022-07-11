@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Alpine JS, petit mais costaud !
 subtitle: Alpine JS est un framework léger (moins de 9kb) qui vient se placer entre les FW complets type Vue JS et jQuery/Vanilla JS.
+guid: 7de0a7e693b772b0615747c7c5e3a0f8
 ---
 
 Dans cet épisode, nous allons parler d'un framework innovant qui apporte un peu de nouveauté dans le monde des frameworks Javascript.

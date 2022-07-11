@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Audit des Google core web vitals
 subtitle: Comment faire un audit des core web vitals en 2021 et comment améliorer le score d’un site sur chaque critère.
+guid: 53da8f3c8d7ba2c6130e200960c65de3
 ---
 
 En juin 2021, Google introduit de nouveaux indicateurs de performance pour les sites web. Ils annoncent qu'ils sont désormais pris en compte dans les critères pour le classement dans le résultat de recherches.

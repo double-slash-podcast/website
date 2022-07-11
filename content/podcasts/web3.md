@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Web3, bullshit ou révolution ?
 subtitle: Alex nous fait découvrir le Web3 et nous explique les fondamentaux de ce web décentralisé prometteur.
+guid: 86f360be3ff581e2236173ba0ed482d3
 ---
 
 ## Alex nous fait découvrir le Web3 et nous explique les fondamentaux de ce web décentralisé prometteur.

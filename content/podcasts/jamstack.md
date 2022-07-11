@@ -12,6 +12,7 @@ episodeType: full
 explicit: false
 categories:
   - Technology
+guid: 72b1aeca6ea293f3fa30d4003404be07
 ---
 
 Dans ce podcast, nous parlons de la JAMStack.

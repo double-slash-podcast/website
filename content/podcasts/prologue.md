@@ -12,6 +12,7 @@ episodeType: full
 explicit: false
 categories:
   - Technology
+guid: d6d49d9bf21bc895cc67e4af72016743
 ---
 
 Le premier épidode double slash, l'épisode "Pilote", qui présente l'équipe et le podcast.

@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Les plateformes e-commerce en 2020 avec Aurélien Lavorel
 subtitle: État des lieux des différentes plateformes et solutions e-commerce en 2020. Faut-il encore utiliser les CMS les plus connus (Magento, Prestashop, WooCommerce) ou passer sur des solutions SASS (Shopify..).
+guid: 3dff15e6db69929b871c5393172a91d8
 ---
 
 Dans ce nouvel épisode, nous allons faire un état des lieux des différentes plateformes et solutions e-commerce en 2020. Faut-il encore utiliser les CMS les plus connus (Magento, Prestashop, WooCommerce) ou passer sur des solutions SASS (Shopify..).

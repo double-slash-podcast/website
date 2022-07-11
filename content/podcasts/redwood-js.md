@@ -16,6 +16,7 @@ sponsor:
   img: sponsors/indy.png
   title: Indy, la comptabilité des indépendants
   url: https://bit.ly/3dojgDo
+guid: 22904a35fe6a2350abd743a6d02b743b
 ---
 
 ## Support de l'épisode

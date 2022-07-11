@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Prisma ORM
 subtitle: Un épisode "explore" dans lequel Alex nous présente l'ORM Prisma.
+guid: e5cc08fb14a96639f9b6a98f199d47f8
 ---
 
 ## Un épisode "explore" dans lequel Alex nous présente l'ORM Prisma

@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Doit-on utiliser TypeScript ?
 subtitle: Doit-on utiliser TypeScript sur nos projets en 2022
+guid: 2c93ee325b9807e8e4c77ec0871af9e0
 ---
 
 ## Un épisode sur les bases de TypeScript afin de vous convaincre d’utiliser TypeScript dans vos projets
@@ -24,7 +25,7 @@ Durant l'épisode, on évoque la différence entre les types et les interfaces. 
 Les principales différences :
 
 - Les types ne peuvent pas être réimplementés et étendus
-- Les interfaces peuvent être réassignées, ce qui provoque un fusion. Elles peuvent être implémentées contrairement aux types.  
+- Les interfaces peuvent être réassignées, ce qui provoque un fusion. Elles peuvent être implémentées contrairement aux types.
   Nous vous renvoyons sur cette vidéo explicative : https://youtu.be/sFNQeh5Oc08
 
 ## TypeScript c’est quoi exactement ?

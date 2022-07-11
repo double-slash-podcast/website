@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Snipcart avec François Lanthier Nadeau
 subtitle: Snipcart est une solution qui vous permet de mettre en place rapidement une boutique en ligne sur n'importe quel système
+guid: 314ab0a29bfe296e6123d984df41c97b
 ---
 
 Dans cet épisode, nous allons parler d'un service ecommerce qui vous permet de mettre en place rapidement une boutique en ligne sur n'importe quel système. Snipcart est une solution qui se place entre les systèmes monolithiques du type Prestashop ou Magento et les services API First du type Commerce JS ou Swell.

@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: State of Front-end 2022
 subtitle: Analyse du State of Front-end 2022
+guid: d7cce3e2e0ab3f01a96bdad2659cea05
 ---
 
 ## On discute et on commente les résultats du questionnaire "State of Front-end"

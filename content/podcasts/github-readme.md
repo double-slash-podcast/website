@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Utiliser le Github README comme Portfolio
 subtitle: Comment créer un portfolio automatiquement avec la nouvelle fonctionnalité de GitHub pour améliorer votre profil
+guid: d938da08dcb61e54ab6ae1c9706c80e2
 ---
 
 Dans cet épisode, nous allons parler d'une fonctionnalité sur github.com qui permet d'améliorer sa page d'accueil GitHub.

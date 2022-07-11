@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Outils de web Analytics et Vie privée
 subtitle: Web Analytics, privacy et Open Source avec François Best
+guid: a281e6f01ec88c6c24916751a843e0e9
 ---
 
 ## Dans cet épisode, nous avons le plaisir de recevoir François Best pour des outils de web Analytics et la protection de notre vie privée

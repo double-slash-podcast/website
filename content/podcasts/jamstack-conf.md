@@ -12,6 +12,7 @@ episodeType: full
 explicit: false
 categories:
   - Technology
+guid: b96116a9e855f7620515c606f1464738
 ---
 
 # JAMStack Conf London 27 mai 2020

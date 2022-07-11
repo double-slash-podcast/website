@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: Live Share pour Visual Studio Code et des news
 subtitle: Un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance. Nous revenons sur quelques actualités concernant les outils web diffusés durant l'été.
+guid: 4a41f9e18d40f062964c77e641140c76
 ---
 
 Dans cet épisode, nous faisons un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance.

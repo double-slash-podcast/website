@@ -12,6 +12,7 @@ explicit: false
 season: 1
 title: What the WASM !
 subtitle: Découvrir WebAssembly avec Ivan Enderlin
+guid: 23fe8555c6839d85bbcebb7cc21ff48b
 ---
 
 ## Un épisode avec un invité, Ivan Enderlin, co-fondateur de Wasmer. Une runtime open-source pour executer Web Assembly coté serveur.
