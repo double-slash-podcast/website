@@ -24,7 +24,6 @@ Indy, la comptabilité des indépendants tout simplement. Synchronisation bancai
 
 Obtenez 2 mois gratuits avec notre code sponsor. [Cliquez sur ici pour profiter du code](https://bit.ly/3dojgDo)
 
-
 ## Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe pour parler du service Bitdev. Un service qui vous facilite le quotidien pour la gestion de vos components.
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://www.youtube.com/watch?v=3TFpuKHMdb4) et [Twitch](https://www.twitch.tv/doubleslashpodcast/video/1221756050)

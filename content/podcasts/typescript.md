@@ -22,9 +22,10 @@ subtitle: Doit-on utiliser TypeScript sur nos projets en 2022
 Durant l'épisode, on évoque la différence entre les types et les interfaces. Je dois préciser que l'on peut également faire des objets avec les types.
 
 Les principales différences :
+
 - Les types ne peuvent pas être réimplementés et étendus
 - Les interfaces peuvent être réassignées, ce qui provoque un fusion. Elles peuvent être implémentées contrairement aux types.  
-Nous vous renvoyons sur cette vidéo explicative : https://youtu.be/sFNQeh5Oc08
+  Nous vous renvoyons sur cette vidéo explicative : https://youtu.be/sFNQeh5Oc08
 
 ## TypeScript c’est quoi exactement ?
 
@@ -44,6 +45,7 @@ Avant l’utilisation de typescript, j’utilisais Flow ([https://flow.org/](htt
 Exemple : les classes.
 
 ### Important !
+
 **Le code est toujours compilé en JS. Le browser ne sais pas executer du TS. Pareil pour le coté serveur. Deno, convertie en JS.**
 
 ## Pourquoi TypeScript ?
@@ -57,6 +59,7 @@ Autre exemple : Piège classique, les valeurs des champs de formulaire sont en t
 2 + "lol"
 "2lol"
 ```
+
 2 - Comme les tests, c’est une façon de contrôler et de valider son code
 3 - Autocompletion et vérification des valeurs : Quand un projet devient gros avec beaucoup de fonction et de fichier, il devient difficile de se souvenir des paramètres de fonction, les valeurs, etc.
 En gros, avec TypeScript, c’est une sorte de pair programming. TypeScript vient régulièrement te taper sur l’épaule pour te dire : “Yep mon gars, là, ce que tu fais, ce n’est pas bon.”
@@ -64,24 +67,27 @@ En gros, avec TypeScript, c’est une sorte de pair programming. TypeScript vien
 
 ### Principe de base
 
- • Initialisation
+• Initialisation
 Création du fichier tsconfig.json qui indique comment compiler le code. Avec target, on indique la version de JS. Mini ES5. Max ESNext. [https://www.typescriptlang.org/tsconfig#target](https://www.typescriptlang.org/tsconfig#target)
- • Extension des fichiers en .ts ou .tsx
- • Type/Interface définir les types des variables, paramètres, retour de fonction, etc.
- • Les types c’est pour les définitions simples
- • Les interfaces, c’est une sorte de shape d’objet. On pour aller plus loin et faire de l’héritage, etc..
- • Inférence TypeScript est capable de définir lui-même le type. À partir du moment où une variable est définie, il peut voir automatiquement le type.
- • Generic C’est une sorte de typage dynamique. On détermine à l’usage le type de la valeur. Ça offre plus de souplesse, car avec l’inférence, je ne suis pas obligé de typer. Il devine. Si le premier usage de la fonction envoie une string, alors le type est string.
+• Extension des fichiers en .ts ou .tsx
+• Type/Interface définir les types des variables, paramètres, retour de fonction, etc.
+• Les types c’est pour les définitions simples
+• Les interfaces, c’est une sorte de shape d’objet. On pour aller plus loin et faire de l’héritage, etc..
+• Inférence TypeScript est capable de définir lui-même le type. À partir du moment où une variable est définie, il peut voir automatiquement le type.
+• Generic C’est une sorte de typage dynamique. On détermine à l’usage le type de la valeur. Ça offre plus de souplesse, car avec l’inférence, je ne suis pas obligé de typer. Il devine. Si le premier usage de la fonction envoie une string, alors le type est string.
 
- Exemple simple :
- ```
- function identity<T>(value: T): T {
-  return value;
+Exemple simple :
+
+```
+function identity<T>(value: T): T {
+ return value;
 }
 
 const result = identity<number>(123);
 ```
+
 Plus poussé :
+
 ```
 function pickObjectKeys<T, K extends keyof T>(obj: T, keys: K[]) {
   let result = {} as Pick<T, K>
@@ -101,15 +107,18 @@ const language = {
 
 const ageAndExtensions = pickObjectKeys(language, ['age', 'extensions'])
 ```
+
 [https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript](https://www.digitalocean.com/community/tutorials/how-to-use-generics-in-typescript)
 
- • Type Guard et Narrowing Permet comme avec du code JS, vérifier que la valeur est bien la bonne. Si tu utilises un union avec donc plusieurs types, il faut tester le type avant de l’utiliser.
- ```
- const isArticle = (article: any): article is Article =>
-    typeof article === 'object' && article !== null &&
-    hasOwnProperty(article, 'title') && typeof article.title === 'string' &&
-    hasOwnProperty(article, 'views') in article && typeof article.views === 'number';
+• Type Guard et Narrowing Permet comme avec du code JS, vérifier que la valeur est bien la bonne. Si tu utilises un union avec donc plusieurs types, il faut tester le type avant de l’utiliser.
+
 ```
+const isArticle = (article: any): article is Article =>
+   typeof article === 'object' && article !== null &&
+   hasOwnProperty(article, 'title') && typeof article.title === 'string' &&
+   hasOwnProperty(article, 'views') in article && typeof article.views === 'number';
+```
+
 ```
 function padLeft(padding: number | string, input: string) {
   if (typeof padding === "number") {
@@ -119,10 +128,11 @@ function padLeft(padding: number | string, input: string) {
 }
 ```
 
- • Classes Usage très avancées des classes avec les éléments classiques : private, public, protected, readOnly, etc..
- • Decorator (toujours experimental) utiliser une fonction dans une classe, sorte d’héritage.
+• Classes Usage très avancées des classes avec les éléments classiques : private, public, protected, readOnly, etc..
+• Decorator (toujours experimental) utiliser une fonction dans une classe, sorte d’héritage.
 
 ### Tips
+
 On peut inclure TS dans un projet JS. Pas obligatoire de faire 100% TS. AllowJS dans la config. Et on peut même utiliser les types à travers JSDoc [https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html#type](https://www.typescriptlang.org/docs/handbook/jsdoc-supported-types.html#type)
 
 ## Inclure les dépendances dans son projet
@@ -130,9 +140,8 @@ On peut inclure TS dans un projet JS. Pas obligatoire de faire 100% TS. AllowJS 
 De plus en plus de librairies sont écrites avec TS. Donc dans ce cas, les Definitions Types sont dans le package. Exemple: Vue 3 est 100% en TS. Donc les définitions sont générées à la compilation.
 Sinon pour les full JS, il faut ajouter un package de type.
 Exemple : Lodash est en JS mais un package @type existe
- • [https://www.npmjs.com/package/lodash](https://www.npmjs.com/package/lodash)
- • [https://www.npmjs.com/package/@types/lodash](https://www.npmjs.com/package/@types/lodash
- )
+• [https://www.npmjs.com/package/lodash](https://www.npmjs.com/package/lodash)
+• [https://www.npmjs.com/package/@types/lodash](https://www.npmjs.com/package/@types/lodash)
 
 Definitely Typed, l’organisation @types, un repo à la base communautaire et automatisé pour ajouter les types des packages [https://github.com/DefinitelyTyped](https://github.com/DefinitelyTyped)
 
@@ -148,10 +157,7 @@ C’est souvent un problème de définition de type un peu trop poussé.
 
 - [https://www.typescriptlang.org/cheatsheets](https://www.typescriptlang.org/cheatsheets)
 
-
 Bonne écoute !
-
-
 
 ### Podcast présenté par :
 

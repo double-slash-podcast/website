@@ -20,7 +20,6 @@ subtitle: Un passage en revue des implémentations futures et actuelles dans les
 
 **Les slides utilisés pour l'épisode [https://slides.com/goodmotion/state-of-web-platform](https://slides.com/goodmotion/state-of-web-platform)**
 
-
 Pour la toute première fois, tous les principaux fournisseurs de navigateurs se sont réunis pour résoudre les principaux problèmes de compatibilité des navigateurs identifiés par les développeurs Web.
 Et cela se ressent déjà dans les évolutions de nos navigateurs. Les implémentations sont plus rapides et nous pouvons profiter plus rapidement des nouvelles fonctionnalités.
 
@@ -33,13 +32,10 @@ Suite à la Google IO 2022, la conférence annuelle Google pour les développeur
 
 Nous avons visionné ces vidéos pour vous faire un résumé des principales fonctionnalités implémentées ou qui vont être implémentées dans les navigateurs.
 
-
-
 ### Les liens des articles
 
 - [Interop 2022: browsers working together to improve the web for developers](https://web.dev/interop-2022/)
 - [State of CSS 2022](https://web.dev/state-of-css-2022/)
-
 
 ### Les liens des vidéos
 
@@ -48,11 +44,7 @@ Nous avons visionné ces vidéos pour vous faire un résumé des principales fon
 - [State of CSS](https://youtu.be/Xy9ZXRRgpLk)
 - [What's new in Safari and WebKit](https://developer.apple.com/videos/play/wwdc2022/10048/)
 
-
-
 Bonne écoute !
-
-
 
 ### Podcast présenté par :
 

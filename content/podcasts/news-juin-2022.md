@@ -34,8 +34,6 @@ subtitle: Un passage en revue des news et releases de nos outils et technologies
 
 Bonne écoute !
 
-
-
 ### Podcast présenté par :
 
 - Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)

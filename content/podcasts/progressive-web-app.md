@@ -17,10 +17,8 @@ subtitle: Dans cet épisode, nous allons faire le point sur les Progressive Web 
 Dans cet épisode assez technique, nous allons faire le point sur les Progressive Web App en 2020. Définir ce qu'est une PWA, les principales features d'une PWA. Puis, pourquoi choisir une PWA au lieu d'une application native. Et enfin, revenir sur les blocages de Safari par rapport aux PWA.
 
 Notre invitée pour l'épisode :  
-  Stéphanie Alix : [https://stephaniealix.com/](https://stephaniealix.com/) et [@StephanieAlix95](https://twitter.com/StephanieAlix95)  
+ Stéphanie Alix : [https://stephaniealix.com/](https://stephaniealix.com/) et [@StephanieAlix95](https://twitter.com/StephanieAlix95)  
 **Développeuse Web et spécialisée dans les PWA**
-
-
 
 ## Principales fonctionnalités d'une PWA :
 
@@ -33,7 +31,6 @@ Notre invitée pour l'épisode :
 - Cache/offline
 - Background sync
 
-
 ### Minimum pour être une PWA :
 
 - Être en HTTPS
@@ -43,10 +40,9 @@ Notre invitée pour l'épisode :
 
 ### Prise en charge des fonctionnalités par les navigateurs :
 
-- Service workers browser : [https://caniuse.com/#search=service workers](https://caniuse.com/#search=service%20workers) 
+- Service workers browser : [https://caniuse.com/#search=service workers](https://caniuse.com/#search=service%20workers)
 - Web App Manifest : [https://caniuse.com/#search=Web App Manifest](https://caniuse.com/#search=Web%20App%20Manifest)
 - Web Notification : [https://caniuse.com/#search=web notification](https://caniuse.com/#search=web%20notification)
-
 
 ## Pourquoi une PWA et pas une app native ?
 
@@ -60,7 +56,6 @@ Notre invitée pour l'épisode :
 - Augmentation du nombre de pages vues, d'utilisateurs qui reviennent (prouvé avec des PWA connues: Pinterest, Starbucks, Twitter..)
 - PWA et app natives peuvent aussi être complémentaires
 
-
 ## PWA VS Safari
 
 Les blocages de la part de safari :
@@ -69,13 +64,12 @@ Les blocages de la part de safari :
 - Prompt "add to Home" (obligé de passer par le menu "Sur l'écran d'accueil")
 - WebManifest icônes (pas bloquant)
 - cache capacity 50MB (pas bloquant)
-- Background sync 
+- Background sync
 - IOS purge le cache (indexDB, localstorage) et maintenant iOS [purge aussi les cookies](https://tracedock.com/blog/2019/11/29/24hours-cookies-impact/) après un jour ou une semaine selon la version webkit..
 
 **Note spécifique sur IOS :**
-Apple interdit de développer un navigateur pour IOS avec un moteur de rendu différent de WebKit. Donc les navigateurs disponibles sur IOS sont en réalité des applications composées de WebViews WebKit. 
+Apple interdit de développer un navigateur pour IOS avec un moteur de rendu différent de WebKit. Donc les navigateurs disponibles sur IOS sont en réalité des applications composées de WebViews WebKit.
 Ils n'ont donc pas les fonctionnalités PWA (ex: impossible d'ajouter la PWA à l'écran d'accueil via iOS chrome ou d'utiliser les Services Workers)
-
 
 ### Podcast présenté par :
 

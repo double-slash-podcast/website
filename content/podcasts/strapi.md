@@ -28,7 +28,6 @@ Nous vous laissons découvrir le CMS Strapi plus en détail en écoutant l'épis
 - Jim Laurie,
   - [@laurie_jim](https://twitter.com/laurie_jim)
 
-
 ### Les liens de l'épisode :
 
 - [La Strapi Conf du 22 avril 2021](https://www.strapi.io/strapi-conf-2021)
@@ -36,9 +35,7 @@ Nous vous laissons découvrir le CMS Strapi plus en détail en écoutant l'épis
 - [Le slack](https://slack.strapi.io/)
 - [Le github](https://github.com/strapi/)
 - [Le forum](https://forum.strapi.io/)
-- 
-
-
+-
 
 ### Podcast présenté par :
 

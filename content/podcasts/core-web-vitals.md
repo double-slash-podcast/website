@@ -37,31 +37,31 @@ Pour trouver l'élément, Dev Tools (chrome) > Preformance (run) > dans la timel
 
 ### Serveur
 
-- [ ]  optimiser la réponse du serveur (cache, code..)
+- [ ] optimiser la réponse du serveur (cache, code..)
 
 ### Images
 
-- [ ]  les images doivent être responsive (afficher différentes images en fonction de la largeur du device).
-- [ ]  limiter les formats des images, notamment pour les grands formats
-- [ ]  réduire le poids des images et utiliser webp si possible
-- [ ]  utiliser loading sur les images pour différer le chargement
+- [ ] les images doivent être responsive (afficher différentes images en fonction de la largeur du device).
+- [ ] limiter les formats des images, notamment pour les grands formats
+- [ ] réduire le poids des images et utiliser webp si possible
+- [ ] utiliser loading sur les images pour différer le chargement
 
 ### Fonts
 
-- [ ]  limiter et optimiser les polices
-- [ ]  utiliser "font-display: swap" et avoir des polices de fallback
+- [ ] limiter et optimiser les polices
+- [ ] utiliser "font-display: swap" et avoir des polices de fallback
 
 ### Scripts tiers
 
-- [ ]  limiter les scripts tiers (GA, etc..)
+- [ ] limiter les scripts tiers (GA, etc..)
 
 ### optimisations
 
-- [ ]  réduire le poids des fichiers JS
-- [ ]  réduire le poids des fichiers CSS
-- [ ]  supprimer le CSS inutilisé
-- [ ]  utiliser la technique du critical CSS
-- [ ]  defer chargement du CSS si possible. Pour les éléments non visibles.
+- [ ] réduire le poids des fichiers JS
+- [ ] réduire le poids des fichiers CSS
+- [ ] supprimer le CSS inutilisé
+- [ ] utiliser la technique du critical CSS
+- [ ] defer chargement du CSS si possible. Pour les éléments non visibles.
 
 ```
 for(...)
@@ -72,23 +72,23 @@ link.type = "text/css"
 document.getElementsByTagName('head')[0].appendChild(link)
 ```
 
-- [ ]  async ou defer sur les scripts non nécessaires au chargement
+- [ ] async ou defer sur les scripts non nécessaires au chargement
 
 ### Bonus
 
-- [ ]  utiliser les preconnect
-- [ ]  preload les éléments importants (image hero, fonts)
+- [ ] utiliser les preconnect
+- [ ] preload les éléments importants (image hero, fonts)
 
 ## 2 - First Input Delay (FID)
 
 Le temps pour que la page soit utilisable (clique sur un lien ou un bouton par exemple)
 Principale coupable, les fichiers JS. Le poids et le temps de parsing.
 
-- [ ]  réduire la taille des fichiers JS
+- [ ] réduire la taille des fichiers JS
 
 Pour limiter le temps de parsing des fichiers.
 
-- [ ]  limiter les scripts tiers (GA, etc..)
+- [ ] limiter les scripts tiers (GA, etc..)
 
 Pour limiter les requêtes et le temps de parsing des fichiers.
 
@@ -98,7 +98,7 @@ Dev Tools (chrome) > Performance (run) > Dans timeline "experience", trouver le 
 
 Stabilité des éléments dans la page. Insertions de pub, de bannière ou une hydratation qui est longue peut décaler le contenu. Attention aux images qui peuvent décaler le contenu une fois chargé.
 
-- [ ]  définir la taille des images et des vidéos. (16:9, height * 16/9)
+- [ ] définir la taille des images et des vidéos. (16:9, height \* 16/9)
 
 ```
 <style>
@@ -113,12 +113,11 @@ Stabilité des éléments dans la page. Insertions de pub, de bannière ou une h
 
 ```
 
-- [ ]  ne pas insérer des éléments entre d'autres éléments au chargement de la page (pub, banner)
+- [ ] ne pas insérer des éléments entre d'autres éléments au chargement de la page (pub, banner)
 
 Réserver l'espace pour les éléments dynamiques, utiliser des skeletons pour les images (bloc bg gris par exemple)
 
-- [ ]  définir la place pour les éléments "embed" (pub, vidéo, etc..)
-
+- [ ] définir la place pour les éléments "embed" (pub, vidéo, etc..)
 
 ### Les liens de l'épisode :
 

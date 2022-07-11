@@ -18,9 +18,7 @@ subtitle: Découvrir WebAssembly avec Ivan Enderlin
 
 WebAssembly est un type de code qui peut être exécuté dans un navigateur web. Langage de bas niveau, il est proche de l'assembleur et il permet d'atteindre des performances proches des applications natives (par exemple écrites en C/C++) tout en fonctionnant sur le Web. WebAssembly est pensé et conçu pour fonctionner en lien avec JavaScript.
 
-
 Ivan Enderlin, nous explique comment Web Assembly fonctionne et pourquoi il faut s’intéresser à cette techno qui devient de plus en plus populaire.
-
 
 - Ivan Enderlin : [https://twitter.com/mnt_io](https://twitter.com/mnt_io) et [https://twitter.com/wasmerio](https://twitter.com/wasmerio)
 
@@ -33,8 +31,6 @@ Ivan Enderlin, nous explique comment Web Assembly fonctionne et pourquoi il faut
 - wasm-pack, [https://github.com/rustwasm/wasm-pack/](https://github.com/rustwasm/wasm-pack/)
 - wasm-bindgen, [https://github.com/rustwasm/wasm-bindgen](https://github.com/rustwasm/wasm-bindgen)
 - The Rust and WebAssembly book, [https://rustwasm.github.io/docs/book/](https://rustwasm.github.io/docs/book/)
-
-
 
 ### Podcast présenté par :
 

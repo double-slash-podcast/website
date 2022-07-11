@@ -25,16 +25,12 @@ En 2008, le bitcoin voyait le jour. Suite à la crise des subprimes, **Satoshi N
 Aujourd'hui, le **web3** part d'une même idée. Le web, tel que nous le connaissons, et aujourd'hui principalement détenue par les grands groupes américains.
 Le **web3** serait un web décentralisé à l'image des cryptomonnaies avec des mécanismes basés sur des blockchains qui pourrait améliorer la sécurité et la confidentialité des données
 
-
 ## Le WEB 3.0, comment ça marche ?
-
 
 Alex nous explique comment le web peut tendre vers plus de transparence, confiance et résilience avec les architectures décentralisées.
 On parle de blockchain, et de toutes les technos sous-jacentes (NFT,...). Comment vont-elles jouer un rôle dans le futur de nos métiers de développeur.
 
 Bonne écoute !
-
-
 
 ### Podcast présenté par :
 

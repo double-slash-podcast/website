@@ -17,9 +17,10 @@ categories:
 Petit retour sur la conférence annuelle de GitHub, les nouvelles fonctionnalités et autres outils liés à GitHub.
 
 ### GitHub Satellite
+
 Vidéos en ligne [GITHUB SATELLITE](https://githubsatellite.com/)
 
-### Nouvelle version de la  CLI
+### Nouvelle version de la CLI
 
 https://cli.github.com/
 
@@ -39,7 +40,6 @@ https://github.com/features/actions
 - [octoTree](https://www.octotree.io/)
 - [Enhanced GitHub](https://chrome.google.com/webstore/detail/enhanced-github/anlikcnbgdeidpacdbdljnabclhahhmd/related?hl=en)
 
-
 ### Sur le site du repo
 
 - `t` pour faire une recherche , nom , extension de fichier
@@ -47,5 +47,6 @@ https://github.com/features/actions
 - `b` pour trouver qui blamer, git blame !
 
 Podcast présenté par :
+
 - Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
 - Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)

@@ -31,7 +31,6 @@ Sébastien Chopin poussa son premier commit pour le projet **Nuxt.js** le **26 o
 À la création de **Nuxt.JS**, le rendu côté serveur des applications **Vue.js** relevait plus du hacking que d'une méthode officielle et le seul exemple disponible était publié par **Evan You** (Créateur de Vue.js) sur Hacker New.
 Malgré cela, les 2 frères Chopin relevèrent le challenge et **Nuxt.JS** était bien née !
 
-
 ## Nuxt.JS
 
 **Nuxt.JS** est un framework open source. Il permet de développer des applications robustes et structurées grâce à une surcouche au-dessus de la librairie **Vue.JS**.
@@ -44,14 +43,12 @@ Il permet de supprimer toute la partie configuration et de se concentrer sur la 
 
 La version 3 est une grosse refonte du framework qui nécessite un gros travail de la part de l'équipe et de la communauté. Pour le moment, la version bêta a été rendue publique le 12 octobre 2021.
 
-
 ## Liens de l'épisode
 
 - [Nuxt.JS](https://nuxtjs.org/)
 - [NuxtLabs](https://nuxtlabs.com/)
 - [GitHub Nuxt](https://github.com/nuxt)
 - [GitHub NuxtLabs](https://github.com/nuxtlabs)
-
 
 ### Podcast présenté par :
 

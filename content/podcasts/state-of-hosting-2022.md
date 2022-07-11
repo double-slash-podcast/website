@@ -39,10 +39,10 @@ Les grosses équipes avec un gros budget. Une équipe ou une personne dédiée �
 
 ### Quelques exemples de services
 
- • [OVH](https://www.ovhcloud.com) (FR)
- • Amazon Web Services / Google Cloud Platform / Microsoft AZURE / Digital ocean (US)
- • [Infomaniak](https://www.infomaniak.com/fr/hebergement/public-cloud) (CH)
- • [Scaleway](https://www.scaleway.com) (FR)
+• [OVH](https://www.ovhcloud.com) (FR)
+• Amazon Web Services / Google Cloud Platform / Microsoft AZURE / Digital ocean (US)
+• [Infomaniak](https://www.infomaniak.com/fr/hebergement/public-cloud) (CH)
+• [Scaleway](https://www.scaleway.com) (FR)
 
 ## Les offres PAAS (Platform as a service)
 
@@ -125,19 +125,18 @@ Comme des Pass, mais en mode serverless. Pas de container, mais des apps.
 Les Startups et entreprises sans grosse équipe technique. Ou équipe qui ne veut pas gérer les serveurs.
 
 ### Quelques exemples de services
+
 [https://workers.cloudflare.com/](https://workers.cloudflare.com/) (US)
 [https://aws.amazon.com/fr/amplify/](https://aws.amazon.com/fr/amplify/) (US) [Netlify](https://www.netlify.com/) (US)
 [Vercel](https://vercel.com/) (US)
 [Stormkit](https://www.stormkit.io/) (Suisse)
 
 #### Surcouche remote AWS:
+
 [https://www.qovery.com/](https://www.qovery.com/) (FR)
 [https://www.flightcontrol.dev/](https://www.flightcontrol.dev/) (US)
 
-
 Bonne écoute !
-
-
 
 ### Podcast présenté par :
 

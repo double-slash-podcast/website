@@ -39,7 +39,6 @@ Vous pouvez importer vos settings et travailler comme si vous étiez dans votre 
 Fin mai, c'est déroulé l'alpine day. [https://alpineday.com/watch](https://alpineday.com/watch).Nous vous recommandons de visionner les différentes présentations.
 Suite à ça, la version 3 d'AlpineJS est sortie. Dans la foulée, un nouveau site et une nouvelle documentation.
 
-
 ## Petite Vue
 
 > WTF Evan !
@@ -55,16 +54,16 @@ Une grosse majorité des méthodes provenant de VueJS sont disponibles. Elle per
 La version 3.2 vient de sortir avec des nouveautés et des grosses améliorations de performance.
 Lire ici le post de la version 3.2 : [https://blog.vuejs.org/posts/vue-3.2.html](https://blog.vuejs.org/posts/vue-3.2.html)
 
-
 ## Nuxt 3
 
 > Plus c'est long, plus c'est bon !
 
-La version 3.2 vient de sortir avec des nouveautés et 	L'attente est longue, mais le travail est immense pour l'équipe de [Nuxt Lab](https://github.com/nuxtlabs).
+La version 3.2 vient de sortir avec des nouveautés et L'attente est longue, mais le travail est immense pour l'équipe de [Nuxt Lab](https://github.com/nuxtlabs).
 La conf Nuxt Nation vient de passer avec une présentation et la timeline du travail pour sortir la version 3 de Nuxt.
 La première version bêta publique est annoncée pour le 12 octobre 2021.
 Le travail est immense pour l'équipe, car en plus de réécrire totalement la version 3 en TypeScript, il faut maintenir la version 2 et sortir des nouveaux modules. À l'image de [Nuxt Image](https://image.nuxtjs.org/) sorite courant juin 2021 !
 En quelques lignes, la version 3 de Nuxt, c'est :
+
 - Compatible Vue 3
 - Très compatible avec TypeScript (comme Vue 3)
 - Un nouveau moteur Nitro, très performant et capable de faire de l'incrémentale.
@@ -76,6 +75,7 @@ En quelques lignes, la version 3 de Nuxt, c'est :
 
 La version 4 de Strapi est en développement. Une grosse majorité de fonctionnalités est repensée.
 Voici les principales évolutions :
+
 - Nouvelle interface d'admin
 - Nouveau système de plugin
 - Nouveau Database Layer
@@ -84,7 +84,7 @@ Voici les principales évolutions :
 - Système de hook pour étendre Strapi
 
 Au-delà de la version 4, Strapi a annoncé un changement de pricing :
- [https://strapi.io/blog/introducing-user-based-pricing-for-strapi-enterprise-edition](https://strapi.io/blog/introducing-user-based-pricing-for-strapi-enterprise-edition)
+[https://strapi.io/blog/introducing-user-based-pricing-for-strapi-enterprise-edition](https://strapi.io/blog/introducing-user-based-pricing-for-strapi-enterprise-edition)
 
 ## Astro JS
 
@@ -96,11 +96,9 @@ En cas d'utilisation d'un component créé avec Vue par exemple, il est rendu pa
 Il gère également tous les assets (css, etc.).
 Encore en version bêta, il semble très prometteur.
 
-
 ## Outil recommandé
 
 - [Fig](https://fig.io/)
-
 
 ### Podcast présenté par :
 

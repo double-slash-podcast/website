@@ -24,7 +24,6 @@ subtitle: Web Analytics, privacy et Open Source avec François Best
 
 La solution analytics de notre invité : [https://chiffre.io](https://chiffre.io)
 
-
 ### Les autres solutions pour sortir ou remplacer Google Analytics
 
 #### Open-source et possibilité d'auto hébergement :
@@ -42,11 +41,9 @@ La solution analytics de notre invité : [https://chiffre.io](https://chiffre.io
 - [https://usefathom.com/](https://usefathom.com/)
 - [https://simpleanalytics.com/](https://simpleanalytics.com/)
 
-
 ### Repo qui liste plusieurs solutions
 
 [https://privacyfocusedanalytics.netlify.app/](https://privacyfocusedanalytics.netlify.app/)
-
 
 Bonne écoute !
 

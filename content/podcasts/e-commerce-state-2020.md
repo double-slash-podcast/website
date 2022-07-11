@@ -17,12 +17,8 @@ subtitle: État des lieux des différentes plateformes et solutions e-commerce e
 Dans ce nouvel épisode, nous allons faire un état des lieux des différentes plateformes et solutions e-commerce en 2020. Faut-il encore utiliser les CMS les plus connus (Magento, Prestashop, WooCommerce) ou passer sur des solutions SASS (Shopify..).
 Notre invité, Aurélien Lavorel, est un expert e-commerce. Il nous donne ses avis sur les plateformes disponibles, vers quelle forme de plateforme va se diriger le e-commerce et des conseils pour lancer un e-commerce en 2020.
 
-
 Aurélien Lavorel : [https://lumao.eu/](https://lumao.eu/) et [@LavoWeb](https://twitter.com/LavoWeb)
 **Développeur certifié #Magento et dirigant de [@LumaoSAS](https://twitter.com/LumaoSAS)**
-
-
-
 
 ## Les plateformes historiques
 
@@ -30,14 +26,10 @@ Aurélien Lavorel : [https://lumao.eu/](https://lumao.eu/) et [@LavoWeb](https:/
 - https://www.prestashop.com/fr
 - https://woocommerce.com/
 
-
-
 ## Les nouveaux acteurs
 
 - https://sylius.com/
 - https://www.salesforce.com/fr/products/commerce-cloud/overview/
-
-
 
 ## Les solutions SASS
 
@@ -46,14 +38,10 @@ Aurélien Lavorel : [https://lumao.eu/](https://lumao.eu/) et [@LavoWeb](https:/
 - https://swell.store/
 - https://commercejs.com/
 
-
-
 ## Les solutions Front Web App
 
 - https://www.vuestorefront.io/
 - https://www.front-commerce.com/
-
-
 
 ## Autres liens
 
@@ -61,8 +49,6 @@ Aurélien Lavorel : [https://lumao.eu/](https://lumao.eu/) et [@LavoWeb](https:/
 - Liste de solutions e-commerce headless https://headlesscommerce.org/
 - Exemple d'une solution GatsbyJS/Sylius https://github.com/Gatsbylius/Gatsbylius
 - Solution de tracking de livraison https://www.shipup.co/
-
-
 
 ### Podcast présenté par :
 

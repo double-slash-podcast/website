@@ -11,17 +11,16 @@ episodeType: full
 explicit: false
 season: 1
 title: Vite.., un bundler !
-subtitle: Un épisode dédié aux bundlers. On passe en revue les différents bundlers utilisés et pourquoi les nouveaux comme Vite, changent les règles. 
+subtitle: Un épisode dédié aux bundlers. On passe en revue les différents bundlers utilisés et pourquoi les nouveaux comme Vite, changent les règles.
 ---
 
 Les bundlers (générateur de bundle), on les utilise au quotidien. Ils sont indispensables dans les outils des développeurs front et ils ont beaucoup évolué.
 Nous passons en revue les principaux bundlers les plus utilisés et surtout nous parlons des nouvelles générations de bundler.
 
-
 ## Pourquoi on utilise des bundlers :
 
 - Limiter les requêtes, minifier et éviter de polluer le scope global (window).
-- Avoir un code plus propre découpé en module. 
+- Avoir un code plus propre découpé en module.
 - Et une réutilisation du code.
 
 Avant les bundlers:
@@ -30,40 +29,37 @@ Avant les bundlers:
 
 ```js
 (function foo() {
-	return bar;
+  return bar;
 })();
 ```
 
 - Plugin jQuery qui s'appelait à travers jQuery
 
 ```js
-(function ( $ ) {
- 
-    $.fn.greenify = function() {
-        this.css( "color", "green" );
-        return this;
-    };
- 
-}( jQuery ));
+(function ($) {
+  $.fn.greenify = function () {
+    this.css('color', 'green');
+    return this;
+  };
+})(jQuery);
 ```
 
 ## Les principaux types de modules :
 
+- CommonJS:
 
-- CommonJS: 
-```js 
+```js
 require('..');
 
 module.exports = ...;
 ```
 
-
 - AMD (Asynchronous Module Definition):
 
 ```js
 define(['dep1', 'dep2'], function (dep1, dep2) {
-    //Define the module value by returning a value.
-    return function () {};
+  //Define the module value by returning a value.
+  return function () {};
 });
 ```
 
@@ -84,7 +80,7 @@ define(['dep1', 'dep2'], function (dep1, dep2) {
     var Requester = { // ... };
 
     return Requester;
-})); 
+}));
 ```
 
 - ESM (EcmaScript Modules): compatibilité 92% [https://caniuse.com/es6-module](https://caniuse.com/es6-module)
@@ -95,12 +91,10 @@ import toto from ...;
 export default ...;
 ```
 
-
 - Browserify (js + plugin pour autre fichier) première release en 2011. Uniquement JS. Permettait de créer des modules avec require/module.exports: [http://browserify.org/](http://browserify.org/)
 - Brunch (js, css, etc..) simple, peu de config, skeleton: [https://brunch.io/](https://brunch.io/)
 - Webpack (js, css, ...): [https://webpack.js.org/](https://webpack.js.org/)
 - Rollup: Top pour faire des packages. Capable de compiler en differents types (CommonJs, AMD, IIFE) [https://rollupjs.org/guide/en/](https://rollupjs.org/guide/en/)
-
 
 ## Nouvelle génération de bundler
 
@@ -109,7 +103,6 @@ export default ...;
 - Vite: Fais beaucoup de choses "out of the box”. Le mode dev est en ESM. Divise en 2 modules: le code source de l'app et les dépendances. Il prébundle les dépendances, car elles changent peu lors du dev. Le code source est en ESM. Fais un bundle (sans ESBuild mais avec Rollup) pour la production pour le moment. [https://vitejs.dev/](https://vitejs.dev/)
 - ESBuild (Go) vraiment jeune pas encore prêt pour la production. Par contre extrêmement rapide et très prometteur. [https://esbuild.github.io/](https://esbuild.github.io/)
 - WMR: [https://github.com/preactjs/wmr](https://github.com/preactjs/wmr)
-
 
 ### Podcast présenté par :
 

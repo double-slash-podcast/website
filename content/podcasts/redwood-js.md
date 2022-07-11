@@ -24,7 +24,6 @@ Indy, la comptabilité des indépendants tout simplement. Synchronisation bancai
 
 Obtenez 2 mois gratuits avec notre code sponsor. [Cliquez sur ici pour profiter du code](https://bit.ly/3dojgDo)
 
-
 ## Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en direct de Montréal (Canada) pour parler de RedwoodJS.
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://www.youtube.com/watch?v=eEY03v7RBy0)
@@ -54,7 +53,6 @@ Redwood est un framework développé autour de la philosophie [Ruby on Rails](ht
 
 Bonne écoute :)
 
-
 ## Pour retrouver notre invité
 
 - Simon Gagnon : [@SimonCrypta](https://twitter.com/SimonCrypta)
@@ -68,7 +66,6 @@ Bonne écoute :)
 - [Github redwoodjs](https://github.com/redwoodjs/redwood)
 - [Discord redwoodjs](https://discord.com/invite/jjSYEQd)
 - [Tutorial redwoodjs](https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood/)
-
 
 ### Podcast présenté par :
 

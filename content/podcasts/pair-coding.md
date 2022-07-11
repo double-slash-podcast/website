@@ -14,9 +14,8 @@ title: Live Share pour Visual Studio Code et des news
 subtitle: Un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance. Nous revenons sur quelques actualités concernant les outils web diffusés durant l'été.
 ---
 
-Dans cet épisode, nous faisons un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance. 
+Dans cet épisode, nous faisons un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance.
 Nous revenons sur quelques actualités concernant les outils web diffusés durant l'été. Notamment la sortie de WordPress 5.5, les évolutions de Next et Nuxt sur la génération de site statique. Petite découverte également, avec Stormkit, un service d'hébergement équivalent à Netlify.
-
 
 [Live Share Extension Pack](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack) pour Visual Studio Code.
 
@@ -35,10 +34,10 @@ En tout, 165 améliorations, 310 correctifs de bugs.
 ### Incremental build pour Nuxt et Next :
 
 #### Nuxt
-Avec la version 2.14 sortie fin juillet, la commande ```nuxt generate``` ne lance pas de build webpack si le code n'a pas changé, mais génère juste les nouvelles pages statiques. Un gros gain de vitesse pour générer un site statique.
+
+Avec la version 2.14 sortie fin juillet, la commande `nuxt generate` ne lance pas de build webpack si le code n'a pas changé, mais génère juste les nouvelles pages statiques. Un gros gain de vitesse pour générer un site statique.
 
 Article de blog de [Nuxt version 2.14](https://nuxtjs.org/blog/nuxt-static-improvements)
-
 
 #### Next
 

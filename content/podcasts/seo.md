@@ -15,9 +15,8 @@ season: 1
 ---
 
 Un épisode avec autour du SEO (Search Engine Optimisation).  
-Le SEO en 2020, les méthodes, les outils, les bonnes pratiques. Comment penser le projet "SEO Friendly" dès sa construction. 
+Le SEO en 2020, les méthodes, les outils, les bonnes pratiques. Comment penser le projet "SEO Friendly" dès sa construction.
 Nous en discutons avec notre invité, expert SEO : [Nicolas Baldi](https://www.linkedin.com/in/nicolasbaldi/)
-
 
 ## Liste des outils évoqués durant l'épisode :
 
@@ -25,9 +24,9 @@ Nous en discutons avec notre invité, expert SEO : [Nicolas Baldi](https://www.l
 
 Pour savoir quels mots-clés choisir, on utilise des outils comme :
 
-- [Yooda Insights](https://insight.yooda.com/) (39€/mois) 
-- [Keyword.io](https://www.keyword.io/) (29€/mois) 
-- [Neil Patel / Ubersuggest](https://neilpatel.com/fr/ubersuggest/) (29€/mois) 
+- [Yooda Insights](https://insight.yooda.com/) (39€/mois)
+- [Keyword.io](https://www.keyword.io/) (29€/mois)
+- [Neil Patel / Ubersuggest](https://neilpatel.com/fr/ubersuggest/) (29€/mois)
 - [Keyword Finder](https://kwfinder.com/) (29€/mois)
 
 ### Les outils Google

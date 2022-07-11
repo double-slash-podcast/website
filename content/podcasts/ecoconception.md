@@ -14,20 +14,21 @@ categories:
   - Technology
 ---
 
-Dans ce podcast, nous parlons de l'impact de notre utilisation du numérique sur le  réchauffement climatique et d'écoconception.
+Dans ce podcast, nous parlons de l'impact de notre utilisation du numérique sur le réchauffement climatique et d'écoconception.
 
 Podcast présenté par :
+
 - Alexandre Duval [https://twitter.com/xlanex6](https://twitter.com/xlanex6)
 - Patrick Faramaz [https://twitter.com/PatrickFaramaz](https://twitter.com/PatrickFaramaz)
 
 Invité dans ce podcast :
+
 - François Colin [https://www.linkedin.com/in/francois-colin/](https://www.linkedin.com/in/francois-colin/)
-Consultant indépendant sur la transformation numérique et la transition énergie-climat.
+  Consultant indépendant sur la transformation numérique et la transition énergie-climat.
 
 Liens utiles sur l'écologie :
 
 - [https://theshiftproject.org/](https://theshiftproject.org/)
-
 
 Liens utiles sur l'écoconception :
 
