@@ -13,6 +13,10 @@ WIP...
 
 - [Pinia](https://pinia.vuejs.org/)
 
+### content
+
+- [Nuxt content](https://content.nuxtjs.org/)
+
 ### Test
 
 - [Vitest](https://vitest.dev/)
