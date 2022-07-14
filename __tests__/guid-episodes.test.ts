@@ -2,11 +2,11 @@
 import {fileURLToPath} from 'node:url';
 import fs from 'fs';
 import path from 'path';
-import readMarkdown from 'read-markdown';
-import {setup} from '@nuxt/test-utils-edge';
+import {setup, $fetch} from '@nuxt/test-utils-edge';
 import {toJson} from 'xml2json';
 import {describe, expect, test} from 'vitest';
 
+type FrontmatterPodcastType = {title: string; guid: string};
 type Feed = {
   rss: {
     channel: {
@@ -38,20 +38,20 @@ describe('compare guid in markdown file episode and the old feed', async () => {
     expect(feed.rss.channel.item).toBeDefined();
   });
 
-  // get all markdown podcast files
-  const podcasts = await readMarkdown(
-    path.join(__dirname, '../content/podcasts', '/**/*.md'),
-    {html: false},
-  );
+  let podcasts: FrontmatterPodcastType[];
+  test('get content', async () => {
+    // get all markdown podcast files
+    podcasts = await $fetch('/api/_content/query?without=body}');
+  });
 
   test.each(tableToCompare)('%s => %s', (title, guid) => {
     // search podcast with this guid
-    const keyFind: string | undefined = Object.keys(podcasts).find(
-      (k: string) => podcasts[k].data.guid === guid,
+    const keyFind: FrontmatterPodcastType | undefined = podcasts.find(
+      p => p.guid === guid,
     );
-    const fromMD = keyFind ? podcasts[keyFind] : undefined;
-    expect(fromMD).toBeDefined();
+
+    expect(keyFind).toBeDefined();
     // title is equal ?
-    expect(fromMD.data.title).toEqual(title);
+    expect(keyFind?.title).toEqual(title);
   });
 });
