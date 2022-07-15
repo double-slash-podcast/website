@@ -5,9 +5,8 @@ public
 node_modules
 dist
 coverage
-.next
+.nuxt
 out
-next.config.js
 .husky
 storybook-static
 components/**/*.stories.@(js|jsx|ts|tsx)

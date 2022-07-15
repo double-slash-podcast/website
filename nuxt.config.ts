@@ -13,6 +13,10 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: false,
   },
+  components: {
+    global: true,
+    dirs: ['~/components'],
+  },
   colorMode: {
     classSuffix: '',
   },

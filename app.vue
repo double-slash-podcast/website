@@ -1,5 +1,5 @@
 <template>
   <main>
-    <ContentDoc />
+    <List />
   </main>
 </template>
