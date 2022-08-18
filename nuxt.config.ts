@@ -1,5 +1,5 @@
 import {defineNuxtConfig} from 'nuxt';
-import {globalInfos} from './config';
+import {baseInfos, globalInfos} from './config';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -28,6 +28,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
+      ...baseInfos,
       globalInfos,
     },
   },

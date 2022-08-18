@@ -1,7 +1,17 @@
+export const baseInfos = {
+  siteUrl: 'https://slash-podcast.fr',
+  email: 'info@slash-podcast.fr',
+  titleDefault: 'Double Slash',
+  imageDefault:
+    'https://res.cloudinary.com/doubleslash/image/upload/v1597260128/doubleSlashDefault_kyl8s9.png',
+  descriptionDefault:
+    'Le podcast sur le code, le développement web et les outils modernes.',
+};
+
 export const globalInfos = {
-  title: `Double Slash`,
+  title: baseInfos.titleDefault,
   // baseline
-  subtitle: `Le podcast sur le développement web moderne`,
+  subtitle: baseInfos.descriptionDefault,
   // short description
   summary: `Double Slash, un podcast sur le développement web. Retrouvez-nous régulièrement pour parler de sujets variés tels que la JAMStack, l’accessibilité, l’écoconception, React.js, Vue.js, Next.js, Nuxt.js, le CSS et des retours d’expériences sur des implémentations.`,
   // long description
@@ -13,16 +23,16 @@ export const globalInfos = {
       `,
   // episodic || serial
   podcastType: `episodic`,
-  siteUrl: `https://slash-podcast.fr`,
-  imageUrl: `https://slash-podcast.fr/new-double-slash.jpg`,
-  feedUrl: `https://slash-podcast.fr/pocast-rss-feed.xml`,
+  siteUrl: baseInfos.siteUrl,
+  imageUrl: `${baseInfos.siteUrl}/new-double-slash.jpg`,
+  feedUrl: `${baseInfos.siteUrl}/pocast-rss-feed.xml`,
   language: `fr-FR`,
   copyright: `Copyright © 2022 Double Slash`,
   authorName: `Alex Duval/Patrick Faramaz`,
   ownerName: `Double Slash`,
-  ownerEmail: `info@slash-podcast.fr`,
-  managingEditor: `info@slash-podcast.fr`,
-  webMaster: `info@slash-podcast.fr`,
+  ownerEmail: baseInfos.email,
+  managingEditor: baseInfos.email,
+  webMaster: baseInfos.email,
   explicit: `no`,
   publicationDate: `April 01, 2020 10:00:00 GMT`,
   category1: `Technology`,
