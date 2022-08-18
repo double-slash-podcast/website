@@ -20,4 +20,9 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  nitro: {
+    prerender: {
+      routes: ['/podcast-rss-feed.xml'],
+    },
+  },
 });
