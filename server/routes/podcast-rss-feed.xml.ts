@@ -1,124 +1,118 @@
 /* eslint-disable camelcase */
 import crypto from 'crypto';
+import {CompatibilityEvent} from 'h3';
 import RSS from 'rss';
-import axios from 'axios';
-import {globalInfos} from '../../config';
+// import axios from 'axios';
+import {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import {serverQueryContent} from '#content/server';
 import {PodcastGlobalInfosType} from '~/declaration';
+import {globalInfos} from '~/config';
 
-export default defineEventHandler(async event => {
-  const _globalInfos: PodcastGlobalInfosType = globalInfos;
-
+/**
+ * get the list of podcasts from content/podcasts
+ * @param event
+ * @returns array
+ */
+const getPodcasts = async (event: CompatibilityEvent) => {
   const docs = await serverQueryContent(event)
     .sort({date: -1})
     .where({_partial: false})
     .find();
-  const podcasts = docs.filter(doc => doc?._path?.includes('/podcasts'));
+  // filter for keep only podcast content
+  return docs.filter(doc => doc?._path?.includes('/podcasts'));
+};
 
-  // construct the xml
-
-  // generate RSS
+const getFeedBase = (infos: PodcastGlobalInfosType) =>
   // get the options for the podcast iteself
-  const feedOptions = {
-    title: _globalInfos.title,
-    description: _globalInfos.description,
-    site_url: _globalInfos.siteUrl,
-    feed_url: _globalInfos.feedUrl,
-    image_url: _globalInfos.imageUrl,
-    language: _globalInfos.language,
-    copyright: _globalInfos.copyright,
+  ({
+    title: infos.title,
+    description: infos.description,
+    site_url: infos.siteUrl,
+    feed_url: infos.feedUrl,
+    image_url: infos.imageUrl,
+    language: infos.language,
+    copyright: infos.copyright,
     docs: `https://help.apple.com/itc/podcasts_connect/#/itcb54353390`,
-    author: _globalInfos.authorName,
-    managingEditor: _globalInfos.managingEditor,
-    webMaster: _globalInfos.webMaster,
+    author: infos.authorName,
+    managingEditor: infos.managingEditor,
+    webMaster: infos.webMaster,
     categories: [
-      _globalInfos.category1,
-      //   _globalInfos.category2,
-      //   _globalInfos.category3,
+      infos.category1,
+      //   infos.category2,
+      //   infos.category3,
     ],
-    pubDate: _globalInfos.publicationDate,
+    pubDate: infos.publicationDate,
 
-    ttl: +_globalInfos.timeToLive,
-    // generator: `https://github.com/miller-productions/gatsby-plugin-podcast-feed-mdx`,
+    ttl: +infos.timeToLive,
     custom_namespaces: {
       itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
       googleplay: 'http://www.google.com/schemas/play-podcasts/1.0',
     },
     custom_elements: [
-      {'itunes:title': _globalInfos.title},
-      {'itunes:subtitle': _globalInfos.subtitle},
-      {'itunes:summary': _globalInfos.summary.substring(0, 3999)},
-      {'itunes:type': _globalInfos.podcastType},
-      {'itunes:explicit': _globalInfos.explicit},
-      {'itunes:author': _globalInfos.authorName},
+      {'itunes:title': infos.title},
+      {'itunes:subtitle': infos.subtitle},
+      {'itunes:summary': infos.summary.substring(0, 3999)},
+      {'itunes:type': infos.podcastType},
+      {'itunes:explicit': infos.explicit},
+      {'itunes:author': infos.authorName},
       {
         'itunes:owner': [
-          {'itunes:name': _globalInfos.ownerName},
-          {'itunes:email': _globalInfos.ownerEmail},
+          {'itunes:name': infos.ownerName},
+          {'itunes:email': infos.ownerEmail},
         ],
       },
       {
         'itunes:image': {
           _attr: {
-            href: _globalInfos.imageUrl,
+            href: infos.imageUrl,
           },
         },
       },
       {
         'itunes:category': {
           _attr: {
-            text: _globalInfos.category1,
+            text: infos.category1,
           },
         },
       },
-      //   {
-      //     "itunes:category": [
-      //       {
-      //         _attr: {
-      //           text: _globalInfos.category2,
-      //         },
-      //       },
-      //       {
-      //         "itunes:category": {
-      //           _attr: {
-      //             text: _globalInfos.subCategory2,
-      //           },
-      //         },
-      //       },
-      //     ],
-      //   },
-      //   {
-      //     "itunes:category": [
-      //       {
-      //         _attr: {
-      //           text: _globalInfos.category3,
-      //         },
-      //       },
-      //       {
-      //         "itunes:category": {
-      //           _attr: {
-      //             text: _globalInfos.subCategory3,
-      //           },
-      //         },
-      //       },
-      //     ],
-      //   },
-      {'googleplay:author': _globalInfos.authorName},
-      {'googleplay:description': _globalInfos.summary.substring(0, 999)},
-      {'googleplay:explicit': _globalInfos.explicit},
+      {'googleplay:author': infos.authorName},
+      {'googleplay:description': infos.summary.substring(0, 999)},
+      {'googleplay:explicit': infos.explicit},
     ],
-  };
+  });
+
+/**
+ * get the size of remote file
+ * @param url
+ * @returns
+ */
+// const getRemoteFileSize = async (url: string) => {
+//   let response;
+//   try {
+//     response = await axios.head(url);
+//   } catch (e) {
+//     throw new Error((e as Error).message);
+//   }
+//   const {headers} = response;
+//   return +headers['content-length'];
+// };
+
+export default defineEventHandler(async (event: CompatibilityEvent) => {
+  // global info from config app
+  const infos: PodcastGlobalInfosType = globalInfos;
+  // podcast items
+  const podcasts = getPodcasts(event);
 
   // create the rss feed
-  const feed = new RSS(feedOptions);
+  const feed = new RSS(getFeedBase(infos));
 
-  for await (const podcast of podcasts) {
+  for await (const podcast of await podcasts) {
     const {
       title,
       subtitle,
       url,
       duration,
-      //   excerpt,
+      body,
       slug,
       season,
       episodeNumber,
@@ -127,20 +121,11 @@ export default defineEventHandler(async event => {
       author,
       explicit,
       categories,
-    } = podcast;
+    }: ParsedContent = podcast;
 
-    if (!url) {
+    if (!url && !title) {
       throw new Error(`not found url for episode "${title}"`);
     }
-
-    let response;
-    try {
-      response = await axios.head(url);
-    } catch (e) {
-      throw new Error(e.message);
-    }
-    const {headers} = response;
-    const size = +headers['content-length'];
 
     // guid
     // #TODO use function in option
@@ -158,7 +143,7 @@ export default defineEventHandler(async event => {
       {
         'itunes:image': {
           _attr: {
-            href: feedOptions.image_url,
+            href: infos.imageUrl,
           },
         },
       },
@@ -169,12 +154,21 @@ export default defineEventHandler(async event => {
     if (duration) {
       custom_elements.push({'itunes:duration': duration});
     }
+
+    // get size of audio files
+    // const size = await getRemoteFileSize(url);
+    const size = 0;
+    if (body && body?.children?.length) {
+      // render body
+      //   const description = h(ContentRenderer, {value: body});
+    }
+
     // add an episode item to the feed using the options
     feed.item({
       guid,
       title: title || '',
       date: publicationDate,
-      description: 'html',
+      description: body,
       url: slug,
       categories,
       author,

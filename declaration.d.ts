@@ -46,6 +46,22 @@ export type PodcastContentType = {
   body: {type: string; children: [][]; toc: {}[]};
 };
 
+export type PodcastItems = {
+  title: string;
+  subtitle: string;
+  url: string;
+  duration: number;
+  body: string;
+  slug: string;
+  season: string;
+  episodeNumber: string;
+  episodeType: string;
+  publicationDate: string;
+  author: string;
+  explicit: string;
+  categories: string;
+};
+
 declare module '@nuxt/schema' {
   interface AppConfig {
     globalInfos: PodcastGlobalInfosType;

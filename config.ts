@@ -26,7 +26,7 @@ export const globalInfos = {
   explicit: `no`,
   publicationDate: `April 01, 2020 10:00:00 GMT`,
   category1: `Technology`,
-  timeToLive: `60`,
+  timeToLive: 60,
 };
 
 // export default defineAppConfig({
