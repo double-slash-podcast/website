@@ -28,7 +28,3 @@ export const globalInfos = {
   category1: `Technology`,
   timeToLive: 60,
 };
-
-// export default defineAppConfig({
-//   globalInfos,
-// });

@@ -6,7 +6,6 @@ import RSS from 'rss';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import {serverQueryContent} from '#content/server';
 import {PodcastGlobalInfosType} from '~/declaration';
-import {globalInfos} from '~/config';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -99,7 +98,9 @@ const getFeedBase = (infos: PodcastGlobalInfosType) =>
 
 export default defineEventHandler(async (event: CompatibilityEvent) => {
   // global info from config app
-  const infos: PodcastGlobalInfosType = globalInfos;
+  const config = useRuntimeConfig();
+  const infos: PodcastGlobalInfosType = config.public.globalInfos;
+
   // podcast items
   const podcasts = getPodcasts(event);
 

@@ -1,4 +1,5 @@
 import {defineNuxtConfig} from 'nuxt';
+import {globalInfos} from './config';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -23,6 +24,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/podcast-rss-feed.xml'],
+    },
+  },
+  runtimeConfig: {
+    public: {
+      globalInfos,
     },
   },
 });

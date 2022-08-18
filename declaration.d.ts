@@ -67,3 +67,5 @@ declare module '@nuxt/schema' {
     globalInfos: PodcastGlobalInfosType;
   }
 }
+
+export {};
