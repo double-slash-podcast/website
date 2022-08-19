@@ -36,7 +36,9 @@ export type PodcastContentType = {
   author: string;
   categories: string[];
   duration: number;
-  url: string;
+  dsSlug: string;
+  videoUrl: string;
+  url?: string;
   episodeNumber: number;
   episodeType: string;
   explicit: boolean;

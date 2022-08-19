@@ -15,11 +15,34 @@ import {PodcastGlobalInfosType} from '~/declaration';
  */
 const getPodcasts = async (event: CompatibilityEvent) => {
   const docs = await serverQueryContent(event)
-    .sort({date: -1})
+    .sort({publicationDate: -1})
     .where({_partial: false})
     .find();
+
+  // test add transcript in doc
+  docs.forEach(doc => {
+    const {_path} = doc;
+    if (_path?.includes('/transcript')) {
+      // find name of dir
+      const [, , name] = _path.split('/');
+      if (name) {
+        // find index of podcast
+        const i = docs.findIndex(
+          d =>
+            d._path?.includes(`/${name}`) && !d._path?.includes('/transcript'),
+        );
+        if (i) {
+          // add transcript in doc podcast
+          docs[i].transcript = doc;
+        }
+      }
+    }
+  });
+
   // filter for keep only podcast content
-  return docs.filter(doc => doc?._path?.includes('/podcasts'));
+  return docs
+    .filter(doc => doc?._path?.includes('/podcasts'))
+    .filter(doc => !doc?._path?.includes('/transcript'));
 };
 
 const getFeedBase = (infos: PodcastGlobalInfosType) =>
@@ -103,7 +126,8 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
   const infos: PodcastGlobalInfosType = config.public.globalInfos;
 
   // podcast items
-  const podcasts = getPodcasts(event);
+  const podcasts = await getPodcasts(event);
+  //   console.log(podcasts);
 
   // create the rss feed
   const feed = new RSS(getFeedBase(infos));
@@ -113,6 +137,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       title,
       subtitle,
       url,
+      dsSlug,
       duration,
       body,
       slug,
@@ -125,7 +150,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       categories,
     }: ParsedContent = podcast;
 
-    if (!url && !title) {
+    if (!title) {
       throw new Error(`not found url for episode "${title}"`);
     }
 
@@ -177,7 +202,8 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       author,
       custom_elements,
       enclosure: {
-        url,
+        // #TODO construct new url
+        url: url || dsSlug,
         size,
         type: 'audio/mpeg',
       },
