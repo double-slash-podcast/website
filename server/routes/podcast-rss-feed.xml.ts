@@ -2,8 +2,9 @@
 import crypto from 'crypto';
 import {CompatibilityEvent} from 'h3';
 import RSS from 'rss';
-// import axios from 'axios';
+import axios from 'axios';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
+import {convertToHtml} from '~~/helpers/renderer';
 import {serverQueryContent} from '#content/server';
 import {PodcastGlobalInfosType} from '~/declaration';
 
@@ -85,16 +86,16 @@ const getFeedBase = (infos: PodcastGlobalInfosType) =>
  * @param url
  * @returns
  */
-// const getRemoteFileSize = async (url: string) => {
-//   let response;
-//   try {
-//     response = await axios.head(url);
-//   } catch (e) {
-//     throw new Error((e as Error).message);
-//   }
-//   const {headers} = response;
-//   return +headers['content-length'];
-// };
+const getRemoteFileSize = async (url: string) => {
+  let response;
+  try {
+    response = await axios.head(url);
+  } catch (e) {
+    throw new Error((e as Error).message);
+  }
+  const {headers} = response;
+  return +headers['content-length'];
+};
 
 export default defineEventHandler(async (event: CompatibilityEvent) => {
   // global info from config app
@@ -157,11 +158,12 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
     }
 
     // get size of audio files
-    // const size = await getRemoteFileSize(url);
-    const size = 0;
+    const size = await getRemoteFileSize(url);
+    // const size = 0;
+    let description = '';
     if (body && body?.children?.length) {
       // render body
-      //   const description = h(ContentRenderer, {value: body});
+      description = convertToHtml(body);
     }
 
     // add an episode item to the feed using the options
@@ -169,7 +171,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       guid,
       title: title || '',
       date: publicationDate,
-      description: body,
+      description,
       url: slug,
       categories,
       author,
