@@ -1,6 +1,15 @@
 declare module 'read-markdown';
 
-export type PodcastGlobalInfosType = {
+export type BaseInfosType = {
+  siteUrl: string;
+  email: string;
+  titleDefault: string;
+  imageDefault: string;
+  descriptionDefault: string;
+  prefixAudio: string;
+};
+
+export type PodcastInfosType = {
   title: string;
   // baseline
   subtitle: string;
@@ -66,7 +75,7 @@ export type PodcastItems = {
 
 declare module '@nuxt/schema' {
   interface AppConfig {
-    globalInfos: PodcastGlobalInfosType;
+    globalInfos: PodcastInfosType;
   }
 }
 

@@ -1,4 +1,6 @@
-export const baseInfos = {
+import {BaseInfosType, PodcastInfosType} from './declaration';
+
+export const baseInfos: BaseInfosType = {
   siteUrl: 'https://slash-podcast.fr',
   email: 'info@slash-podcast.fr',
   titleDefault: 'Double Slash',
@@ -6,9 +8,11 @@ export const baseInfos = {
     'https://res.cloudinary.com/doubleslash/image/upload/v1597260128/doubleSlashDefault_kyl8s9.png',
   descriptionDefault:
     'Le podcast sur le code, le développement web et les outils modernes.',
+  prefixAudio:
+    'https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com',
 };
 
-export const globalInfos = {
+export const podcastInfos: PodcastInfosType = {
   title: baseInfos.titleDefault,
   // baseline
   subtitle: baseInfos.descriptionDefault,

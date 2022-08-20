@@ -6,7 +6,7 @@ import axios from 'axios';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import {convertToHtml} from '~~/helpers/renderer';
 import {serverQueryContent} from '#content/server';
-import {PodcastGlobalInfosType} from '~/declaration';
+import {PodcastInfosType} from '~/declaration';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -45,7 +45,7 @@ const getPodcasts = async (event: CompatibilityEvent) => {
     .filter(doc => !doc?._path?.includes('/transcript'));
 };
 
-const getFeedBase = (infos: PodcastGlobalInfosType) =>
+const getFeedBase = (infos: PodcastInfosType) =>
   // get the options for the podcast iteself
   ({
     title: infos.title,
@@ -123,14 +123,13 @@ const getRemoteFileSize = async (url: string) => {
 export default defineEventHandler(async (event: CompatibilityEvent) => {
   // global info from config app
   const config = useRuntimeConfig();
-  const infos: PodcastGlobalInfosType = config.public.globalInfos;
+  const {podcastInfos, siteUrl, prefixAudio} = config.public;
 
   // podcast items
   const podcasts = await getPodcasts(event);
-  //   console.log(podcasts);
 
   // create the rss feed
-  const feed = new RSS(getFeedBase(infos));
+  const feed = new RSS(getFeedBase(podcastInfos));
 
   for await (const podcast of await podcasts) {
     const {
@@ -148,15 +147,16 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       author,
       explicit,
       categories,
+      guid,
     }: ParsedContent = podcast;
 
     if (!title) {
-      throw new Error(`not found url for episode "${title}"`);
+      throw new Error(`not found url for episode "${dsSlug}"`);
     }
+    const _url = url || `${prefixAudio}/${dsSlug}.mp3`;
 
-    // guid
-    // #TODO use function in option
-    const guid = crypto.createHash('md5').update(`${title}`).digest('hex');
+    // generate guid
+    const guidFresh = crypto.createHash('md5').update(`${title}`).digest('hex');
 
     const custom_elements = [
       {'itunes:title': title},
@@ -170,7 +170,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       {
         'itunes:image': {
           _attr: {
-            href: infos.imageUrl,
+            href: podcastInfos.imageUrl,
           },
         },
       },
@@ -183,7 +183,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
     }
 
     // get size of audio files
-    const size = await getRemoteFileSize(url);
+    const size = await getRemoteFileSize(_url);
     // const size = 0;
     let description = '';
     if (body && body?.children?.length) {
@@ -193,17 +193,16 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
 
     // add an episode item to the feed using the options
     feed.item({
-      guid,
+      guid: guid || guidFresh,
       title: title || '',
       date: publicationDate,
       description,
-      url: slug,
+      url: `${siteUrl}/podcasts/${slug}`,
       categories,
       author,
       custom_elements,
       enclosure: {
-        // #TODO construct new url
-        url: url || dsSlug,
+        url: _url,
         size,
         type: 'audio/mpeg',
       },
