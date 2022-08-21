@@ -2,8 +2,8 @@
 import crypto from 'crypto';
 import {CompatibilityEvent} from 'h3';
 import RSS from 'rss';
-import axios from 'axios';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
+import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import {convertToHtml} from '~~/helpers/renderer';
 import {serverQueryContent} from '#content/server';
 import {PodcastInfosType} from '~/declaration';
@@ -15,7 +15,7 @@ import {PodcastInfosType} from '~/declaration';
  */
 const getPodcasts = async (event: CompatibilityEvent) => {
   const docs = await serverQueryContent(event)
-    .sort({publicationDate: -1})
+    .sort({publicationDate: 1})
     .where({_partial: false})
     .find();
 
@@ -109,15 +109,17 @@ const getFeedBase = (infos: PodcastInfosType) =>
  * @param url
  * @returns
  */
-const getRemoteFileSize = async (url: string) => {
-  let response;
-  try {
-    response = await axios.head(url);
-  } catch (e) {
-    throw new Error((e as Error).message);
-  }
-  const {headers} = response;
-  return +headers['content-length'];
+const getRemoteFileInfos = async (url: string) => {
+  //   let response;
+  //   try {
+  //     response = await axios.head(url);
+  //   } catch (e) {
+  //     throw new Error((e as Error).message);
+  //   }
+  // //   const {headers} = response;
+  const estimate = await estimateMP3DurationAxios(url);
+
+  return estimate || {duration: undefined, size: undefined};
 };
 
 export default defineEventHandler(async (event: CompatibilityEvent) => {
@@ -137,8 +139,8 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       subtitle,
       url,
       dsSlug,
-      duration,
       body,
+      // no slug
       slug,
       season,
       episodeNumber,
@@ -178,12 +180,14 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       {'googleplay:explicit': explicit},
     ];
 
+    // get size of audio files
+    const {duration, size} = await getRemoteFileInfos(_url);
+
     if (duration) {
-      custom_elements.push({'itunes:duration': duration});
+      // duration is * 2 !
+      custom_elements.push({'itunes:duration': Math.round(duration / 2)});
     }
 
-    // get size of audio files
-    const size = await getRemoteFileSize(_url);
     // const size = 0;
     let description = '';
     if (body && body?.children?.length) {
