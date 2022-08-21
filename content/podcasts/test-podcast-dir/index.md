@@ -1,19 +1,29 @@
 ---
-publicationDate: 2022-09-10
+publicationDate: YYYY-MM-DD
 status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4002
-dsSlug: DS_036_analytics_privacy
-videoURL: https://youtu.be/AjY6K2WFTD0
-episodeNumber: 46
+duration: SSSS
+slug: DS_0XX_text
+videoURL: AjY6K2WFTD0
+episodeNumber: XX
 episodeType: full
 explicit: false
 season: 1
-title: test-podcast-dir
-subtitle: Web Analytics, privacy et Open Source avec François Best
-guid: a281e6f01ec88c6c24916751a843e0e9
+title: full-string-title
+subtitle: full-string-subtitle
+guid: a281e6f01ec88c6c24916751a843e0e9_auto_gen
+links: 
+  - [textLink](url)
+  - [textLink](url)
+  - [textLink](url)
 ---
 
-## Dans cet épisode, nous avons le plaisir de recevoir François Best pour des outils de web Analytics et la protection de notre vie privée
+## Short notes
+
+
+### Podcast présenté par :
+
+- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
+- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
