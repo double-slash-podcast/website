@@ -118,7 +118,6 @@ const getRemoteFileInfos = async (url: string) => {
   //   }
   // //   const {headers} = response;
   const estimate = await estimateMP3DurationAxios(url);
-
   return estimate || {duration: undefined, size: undefined};
 };
 
@@ -140,8 +139,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       url,
       dsSlug,
       body,
-      // no slug
-      slug,
+      _path,
       season,
       episodeNumber,
       episodeType,
@@ -155,6 +153,10 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
     if (!title) {
       throw new Error(`not found url for episode "${dsSlug}"`);
     }
+    // remove end slash
+    const path =
+      _path?.charAt(_path.length - 1) === '/' ? _path.slice(0, -1) : _path;
+    // create url of file
     const _url = url || `${prefixAudio}/${dsSlug}.mp3`;
 
     // generate guid
@@ -184,7 +186,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
     const {duration, size} = await getRemoteFileInfos(_url);
 
     if (duration) {
-      // duration is * 2 !
+      // duration is * 2, don't find why !
       custom_elements.push({'itunes:duration': Math.round(duration / 2)});
     }
 
@@ -201,7 +203,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       title: title || '',
       date: publicationDate,
       description,
-      url: `${siteUrl}/podcasts/${slug}`,
+      url: `${siteUrl}${path}`,
       categories,
       author,
       custom_elements,
