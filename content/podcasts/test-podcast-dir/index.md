@@ -1,5 +1,5 @@
 ---
-publicationDate: 2022-09-10
+publicationDate: YYYY-MM-DD
 status: published
 author: Double Slash
 categories:
@@ -15,6 +15,17 @@ title: test-podcast-dir
 subtitle: Web Analytics, privacy et Open Source avec François Best
 guid: a281e6f01ec88c6c24916751a843e0e9
 description:
+slug: DS_0XX_text
+links:
+  - [textLink](url)
+  - [textLink](url)
+  - [textLink](url)
 ---
 
-## Dans cet épisode, nous avons le plaisir de recevoir François Best pour des outils de web Analytics et la protection de notre vie privée
+## Short notes
+
+
+### Podcast présenté par :
+
+- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
+- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
