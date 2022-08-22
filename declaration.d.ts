@@ -7,6 +7,7 @@ export type BaseInfosType = {
   imageDefault: string;
   descriptionDefault: string;
   prefixAudio: string;
+  channelID: string;
 };
 
 export type PodcastInfosType = {
@@ -45,15 +46,15 @@ export type PodcastContentType = {
   author: string;
   categories: string[];
   duration: number;
-  dsSlug: string;
-  videoUrl: string;
+  dsSlug?: string;
+  videoID?: string;
   url?: string;
   episodeNumber: number;
   episodeType: string;
   explicit: boolean;
   season: number;
   subtitle: string;
-  guid: string;
+  guid?: string;
   body: {type: string; children: [][]; toc: {}[]};
 };
 

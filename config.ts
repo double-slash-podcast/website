@@ -10,6 +10,7 @@ export const baseInfos: BaseInfosType = {
     'Le podcast sur le code, le développement web et les outils modernes.',
   prefixAudio:
     'https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com',
+  channelID: 'UCp5DGBAX2XNJXeOVAo7bICQ',
 };
 
 export const podcastInfos: PodcastInfosType = {
