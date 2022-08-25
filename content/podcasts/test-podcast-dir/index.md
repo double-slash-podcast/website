@@ -16,10 +16,6 @@ subtitle: Web Analytics, privacy et Open Source avec François Best
 guid: a281e6f01ec88c6c24916751a843e0e9
 description:
 slug: DS_0XX_text
-links:
-  - [textLink](url)
-  - [textLink](url)
-  - [textLink](url)
 ---
 
 ## Short notes
