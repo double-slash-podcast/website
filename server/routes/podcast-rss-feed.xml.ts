@@ -160,7 +160,10 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
     const url = `${prefixAudio}/${dsSlug}.mp3`;
 
     // generate guid
-    const guidFresh = crypto.createHash('md5').update(`${title}`).digest('hex');
+    const guidFresh = crypto
+      .createHash('md5')
+      .update(`${dsSlug}`)
+      .digest('hex');
 
     const custom_elements = [
       {'itunes:title': title},
