@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3747
-dsSlug: DS_030_bit.mp3
+dsSlug: DS_030_bit
 episodeNumber: 30
 episodeType: full
 explicit: false

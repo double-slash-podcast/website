@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4531
-dsSlug: DS_019_jamstatic.mp3
+dsSlug: DS_019_jamstatic
 episodeNumber: 19
 episodeType: full
 explicit: false

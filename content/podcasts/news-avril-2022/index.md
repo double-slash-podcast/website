@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3705
-dsSlug: DS_034_news22.mp3
+dsSlug: DS_034_news22
 episodeNumber: 34
 episodeType: full
 explicit: false

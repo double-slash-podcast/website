@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3277
-dsSlug: DS_017_snipcart.mp3
+dsSlug: DS_017_snipcart
 episodeNumber: 17
 episodeType: full
 explicit: false

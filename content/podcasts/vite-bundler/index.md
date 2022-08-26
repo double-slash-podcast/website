@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2799
-dsSlug: DS_022_bundler.mp3
+dsSlug: DS_022_bundler
 episodeNumber: 22
 episodeType: full
 explicit: false

@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2725
-dsSlug: DS_032_hasura.mp3
+dsSlug: DS_032_hasura
 episodeNumber: 32
 episodeType: full
 explicit: false

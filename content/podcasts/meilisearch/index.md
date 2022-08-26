@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2939
-dsSlug: DS_023_meillisearch.mp3
+dsSlug: DS_023_meillisearch
 episodeNumber: 23
 episodeType: full
 explicit: false

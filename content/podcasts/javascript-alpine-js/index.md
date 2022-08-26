@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2220
-dsSlug: DS_018_alpinejs.mp3
+dsSlug: DS_018_alpinejs
 episodeNumber: 18
 episodeType: full
 explicit: false

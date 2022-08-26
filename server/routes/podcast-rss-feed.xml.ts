@@ -4,7 +4,6 @@ import {CompatibilityEvent} from 'h3';
 import RSS from 'rss';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
-import {convertToHtml} from '~~/helpers/renderer';
 import {serverQueryContent} from '#content/server';
 import {PodcastInfosType} from '~/declaration';
 
@@ -20,24 +19,24 @@ const getPodcasts = async (event: CompatibilityEvent) => {
     .find();
 
   // test add transcript in doc
-  docs.forEach(doc => {
-    const {_path} = doc;
-    if (_path?.includes('/transcript')) {
-      // find name of dir
-      const [, , name] = _path.split('/');
-      if (name) {
-        // find index of podcast
-        const i = docs.findIndex(
-          d =>
-            d._path?.includes(`/${name}`) && !d._path?.includes('/transcript'),
-        );
-        if (i) {
-          // add transcript in doc podcast
-          docs[i].transcript = doc;
-        }
-      }
-    }
-  });
+  //   docs.forEach(doc => {
+  //     const {_path} = doc;
+  //     if (_path?.includes('/transcript')) {
+  //       // find name of dir
+  //       const [, , name] = _path.split('/');
+  //       if (name) {
+  //         // find index of podcast
+  //         const i = docs.findIndex(
+  //           d =>
+  //             d._path?.includes(`/${name}`) && !d._path?.includes('/transcript'),
+  //         );
+  //         if (i) {
+  //           // add transcript in doc podcast
+  //           docs[i].transcript = doc;
+  //         }
+  //       }
+  //     }
+  //   });
 
   // filter for keep only podcast content
   return docs
@@ -50,6 +49,7 @@ const getFeedBase = (infos: PodcastInfosType) =>
   ({
     title: infos.title,
     description: infos.description,
+    generator: 'double slash',
     site_url: infos.siteUrl,
     feed_url: infos.feedUrl,
     image_url: infos.imageUrl,
@@ -110,14 +110,12 @@ const getFeedBase = (infos: PodcastInfosType) =>
  * @returns
  */
 const getRemoteFileInfos = async (url: string) => {
-  //   let response;
-  //   try {
-  //     response = await axios.head(url);
-  //   } catch (e) {
-  //     throw new Error((e as Error).message);
-  //   }
-  // //   const {headers} = response;
-  const estimate = await estimateMP3DurationAxios(url);
+  let estimate;
+  try {
+    estimate = await estimateMP3DurationAxios(url);
+  } catch (e) {
+    throw new Error((e as Error).message);
+  }
   return estimate || {duration: undefined, size: undefined};
 };
 
@@ -136,9 +134,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
     const {
       title,
       subtitle,
-      url,
       dsSlug,
-      body,
       _path,
       season,
       episodeNumber,
@@ -147,17 +143,21 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       author,
       explicit,
       categories,
+      description,
       guid,
     }: ParsedContent = podcast;
 
     if (!title) {
-      throw new Error(`not found url for episode "${dsSlug}"`);
+      throw new Error(`not found title for episode "${dsSlug}"`);
+    }
+    if (!dsSlug) {
+      throw new Error(`not found dsSlug for episode "${title}"`);
     }
     // remove end slash
     const path =
       _path?.charAt(_path.length - 1) === '/' ? _path.slice(0, -1) : _path;
     // create url of file
-    const _url = url || `${prefixAudio}/${dsSlug}.mp3`;
+    const url = `${prefixAudio}/${dsSlug}.mp3`;
 
     // generate guid
     const guidFresh = crypto.createHash('md5').update(`${title}`).digest('hex');
@@ -169,7 +169,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       episodeNumber && {'itunes:episode': episodeNumber},
       {'itunes:episodeType': episodeType},
       {'itunes:explicit': explicit},
-      // { "itunes:summary": summary },
+      {'itunes:summary': description},
       {'itunes:author': author},
       {
         'itunes:image': {
@@ -178,23 +178,17 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
           },
         },
       },
-      // { "googleplay:description": summary },
+      {'googleplay:description': description},
       {'googleplay:explicit': explicit},
     ];
 
     // get size of audio files
-    const {duration, size} = await getRemoteFileInfos(_url);
+
+    const {duration, size} = await getRemoteFileInfos(url);
 
     if (duration) {
       // duration is * 2, don't find why !
       custom_elements.push({'itunes:duration': Math.round(duration / 2)});
-    }
-
-    // const size = 0;
-    let description = '';
-    if (body && body?.children?.length) {
-      // render body
-      description = convertToHtml(body);
     }
 
     // add an episode item to the feed using the options
@@ -208,7 +202,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       author,
       custom_elements,
       enclosure: {
-        url: _url,
+        url,
         size,
         type: 'audio/mpeg',
       },

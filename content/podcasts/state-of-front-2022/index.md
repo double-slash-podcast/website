@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4068
-dsSlug: DS_035_state-front-end-22.mp3
+dsSlug: DS_035_state-front-end-22
 episodeNumber: 35
 episodeType: full
 explicit: false

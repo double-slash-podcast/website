@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3456
-dsSlug: DS_028_prisma.mp3
+dsSlug: DS_028_prisma
 episodeNumber: 28
 episodeType: full
 explicit: false

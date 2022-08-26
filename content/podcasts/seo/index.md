@@ -4,7 +4,7 @@ subtitle: Le SEO en 2020, les méthodes, les outils, les bonnes pratiques. Comme
 publicationDate: 2020-07-10
 status: published
 author: Double slash
-dsSlug: DS_008_seo.mp3
+dsSlug: DS_008_seo
 categories:
   - Technology
 duration: 7080

@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2776
-dsSlug: DS_031_redwood.mp3
+dsSlug: DS_031_redwood
 episodeNumber: 31
 episodeType: full
 explicit: false

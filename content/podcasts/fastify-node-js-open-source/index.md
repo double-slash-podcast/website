@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3013
-url: https://chtbl.com/track/79E812/double-slash.ams3.digitaloceanspaces.com/DS_020_fastify.mp3
+dsSlug: DS_020_fastify
 episodeNumber: 20
 episodeType: full
 explicit: false

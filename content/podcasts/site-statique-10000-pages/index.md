@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2339
-dsSlug: DS_025_static10k.mp3
+dsSlug: DS_025_static10k
 episodeNumber: 25
 episodeType: full
 explicit: false

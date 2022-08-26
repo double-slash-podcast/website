@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2246
-dsSlug: DS_026_wasm.mp3
+dsSlug: DS_026_wasm
 episodeNumber: 26
 episodeType: full
 explicit: false

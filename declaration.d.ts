@@ -54,6 +54,7 @@ export type PodcastContentType = {
   explicit: boolean;
   season: number;
   subtitle: string;
+  description: string;
   guid?: string;
   body: {type: string; children: [][]; toc: {}[]};
 };

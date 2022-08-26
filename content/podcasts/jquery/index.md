@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3611
-dsSlug: DS_009_jquery.mp3
+dsSlug: DS_009_jquery
 episodeNumber: 9
 episodeType: full
 explicit: false

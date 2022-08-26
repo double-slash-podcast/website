@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4002
-dsSlug: DS_036_analytics_privacy.mp3
+dsSlug: DS_036_analytics_privacy
 episodeNumber: 36
 episodeType: full
 explicit: false

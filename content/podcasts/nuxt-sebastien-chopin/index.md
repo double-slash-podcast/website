@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3885
-dsSlug: DS_029_nuxt.mp3
+dsSlug: DS_029_nuxt
 episodeNumber: 29
 episodeType: full
 explicit: false

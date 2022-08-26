@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3012
-dsSlug: DS_015_newsOCT.mp3
+dsSlug: DS_015_newsOCT
 episodeNumber: 15
 episodeType: full
 explicit: false

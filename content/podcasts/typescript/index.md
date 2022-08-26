@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3385
-dsSlug: DS_038_ts.mp3
+dsSlug: DS_038_ts
 episodeNumber: 38
 episodeType: full
 explicit: false

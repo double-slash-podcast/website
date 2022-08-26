@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4457
-dsSlug: DS_021_strapi.mp3
+dsSlug: DS_021_strapi
 episodeNumber: 21
 episodeType: full
 explicit: false

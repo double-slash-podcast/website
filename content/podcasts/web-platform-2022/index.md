@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2773
-dsSlug: DS_040_webapi22.mp3
+dsSlug: DS_040_webapi22
 episodeNumber: 40
 episodeType: full
 explicit: false

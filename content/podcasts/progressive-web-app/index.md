@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4392
-dsSlug: DS_011_pwa.mp3
+dsSlug: DS_011_pwa
 episodeNumber: 11
 episodeType: full
 explicit: false

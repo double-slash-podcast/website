@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 1699
-dsSlug: DS_012_github_readme.mp3
+dsSlug: DS_012_github_readme
 episodeNumber: 12
 episodeType: full
 explicit: false

@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3401
-dsSlug: DS_016_swa.mp3
+dsSlug: DS_016_swa
 episodeNumber: 16
 episodeType: full
 explicit: false

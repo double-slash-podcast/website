@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2600
-dsSlug: DS_010_pair_coding.mp3
+dsSlug: DS_010_pair_coding
 episodeNumber: 10
 episodeType: full
 explicit: false

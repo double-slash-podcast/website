@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3873
-dsSlug: DS_037_hosting.mp3
+dsSlug: DS_037_hosting
 episodeNumber: 37
 episodeType: full
 explicit: false

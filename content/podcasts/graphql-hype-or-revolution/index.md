@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3464
-dsSlug: DS_013_graphql.mp3
+dsSlug: DS_013_graphql
 episodeNumber: 13
 episodeType: full
 explicit: false

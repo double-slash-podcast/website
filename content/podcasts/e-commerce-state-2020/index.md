@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4302
-dsSlug: DS_014_ecommerce2020.mp3
+dsSlug: DS_014_ecommerce2020
 episodeNumber: 14
 episodeType: full
 explicit: false

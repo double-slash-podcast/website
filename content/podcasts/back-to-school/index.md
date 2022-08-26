@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3717
-dsSlug: DS_027_news921.mp3
+dsSlug: DS_027_news921
 episodeNumber: 27
 episodeType: full
 explicit: false

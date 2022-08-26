@@ -3,7 +3,7 @@ title: JAMstack CONF. London
 subtitle: Retour de la JAMstack Conf. de Londres 27 - 28 Mai 2020
 publicationDate: 2020-06-01
 status: published
-dsSlug: DS_006_janstack_conf.mp3
+dsSlug: DS_006_janstack_conf
 author: Double slash
 duration: 4483
 season: 1

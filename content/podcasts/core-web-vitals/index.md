@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2681
-dsSlug: DS_024_audit.mp3
+dsSlug: DS_024_audit
 episodeNumber: 24
 episodeType: full
 explicit: false

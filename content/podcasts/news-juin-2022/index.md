@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2962
-dsSlug: DS_039_news06_22.mp3
+dsSlug: DS_039_news06_22
 episodeNumber: 39
 episodeType: full
 explicit: false
