@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 1699
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_012_github_readme.mp3
+dsSlug: DS_012_github_readme.mp3
 episodeNumber: 12
 episodeType: full
 explicit: false

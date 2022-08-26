@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2220
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_018_alpinejs.mp3
+dsSlug: DS_018_alpinejs.mp3
 episodeNumber: 18
 episodeType: full
 explicit: false

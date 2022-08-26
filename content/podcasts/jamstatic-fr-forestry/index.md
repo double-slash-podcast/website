@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4531
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_019_jamstatic.mp3
+dsSlug: DS_019_jamstatic.mp3
 episodeNumber: 19
 episodeType: full
 explicit: false

@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3717
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_027_news921.mp3
+dsSlug: DS_027_news921.mp3
 episodeNumber: 27
 episodeType: full
 explicit: false

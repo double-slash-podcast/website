@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2773
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_040_webapi22.mp3
+dsSlug: DS_040_webapi22.mp3
 episodeNumber: 40
 episodeType: full
 explicit: false

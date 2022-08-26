@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3705
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_034_news22.mp3
+dsSlug: DS_034_news22.mp3
 episodeNumber: 34
 episodeType: full
 explicit: false

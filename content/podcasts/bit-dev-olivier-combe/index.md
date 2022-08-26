@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3747
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_030_bit.mp3
+dsSlug: DS_030_bit.mp3
 episodeNumber: 30
 episodeType: full
 explicit: false

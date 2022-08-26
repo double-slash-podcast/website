@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3456
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_028_prisma.mp3
+dsSlug: DS_028_prisma.mp3
 episodeNumber: 28
 episodeType: full
 explicit: false

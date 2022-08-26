@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3401
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_016_swa.mp3
+dsSlug: DS_016_swa.mp3
 episodeNumber: 16
 episodeType: full
 explicit: false

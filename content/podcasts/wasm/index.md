@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2246
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_026_wasm.mp3
+dsSlug: DS_026_wasm.mp3
 episodeNumber: 26
 episodeType: full
 explicit: false

@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2939
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_023_meillisearch.mp3
+dsSlug: DS_023_meillisearch.mp3
 episodeNumber: 23
 episodeType: full
 explicit: false

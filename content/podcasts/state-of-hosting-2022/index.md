@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3873
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_037_hosting.mp3
+dsSlug: DS_037_hosting.mp3
 episodeNumber: 37
 episodeType: full
 explicit: false

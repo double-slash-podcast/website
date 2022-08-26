@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2681
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_024_audit.mp3
+dsSlug: DS_024_audit.mp3
 episodeNumber: 24
 episodeType: full
 explicit: false

@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4392
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_011_pwa.mp3
+dsSlug: DS_011_pwa.mp3
 episodeNumber: 11
 episodeType: full
 explicit: false

@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2725
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_032_hasura.mp3
+dsSlug: DS_032_hasura.mp3
 episodeNumber: 32
 episodeType: full
 explicit: false

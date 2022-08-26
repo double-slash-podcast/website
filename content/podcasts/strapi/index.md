@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4457
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_021_strapi.mp3
+dsSlug: DS_021_strapi.mp3
 episodeNumber: 21
 episodeType: full
 explicit: false

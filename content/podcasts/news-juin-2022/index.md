@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2962
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_039_news06_22.mp3
+dsSlug: DS_039_news06_22.mp3
 episodeNumber: 39
 episodeType: full
 explicit: false

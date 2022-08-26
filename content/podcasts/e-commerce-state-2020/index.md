@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 4302
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_014_ecommerce2020.mp3
+dsSlug: DS_014_ecommerce2020.mp3
 episodeNumber: 14
 episodeType: full
 explicit: false

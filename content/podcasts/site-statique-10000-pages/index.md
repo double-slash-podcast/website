@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 2339
-url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_025_static10k.mp3
+dsSlug: DS_025_static10k.mp3
 episodeNumber: 25
 episodeType: full
 explicit: false
