@@ -13,6 +13,7 @@ season: 1
 title: Spécial news - Juin 2022
 subtitle: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
 guid: 0f919ee6ee5c883b1253f2c584915dc9
+description: "Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines Retrouvez la vidéo de l'enregistrement sur le Youtube de DoubleSlash Les news évoquées durant l'épisode : 01:00 Angular 14 03:47 Atom, va mourir le 15 décembre 2022 ! 06:02 Tauri en version 1.0 08:34 Cypress en version 10 13:00 Histoire 16:38 Vue version 2.7 21:10 Fastify DX React 28:50 Fresh 35:21 Redwood en version 2.0 38:35 Wordpress 6 45:53 🎉🎉 IE11 n'est plus ! 🎉🎉 Bonne écoute ! Podcast présenté par : Alexandre Duval @xlanex6 Patrick Faramaz @PatrickFaramaz"
 ---
 
 ## Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
