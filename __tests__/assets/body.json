@@ -1,0 +1,403 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "element",
+      "tag": "h2",
+      "props": {
+        "id": "dans-cet-épisode-nous-avons-le-plaisir-de-recevoir-françois-best-pour-des-outils-de-web-analytics-et-la-protection-de-notre-vie-privée"
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": "Dans cet épisode, nous avons le plaisir de recevoir François Best pour des outils de web Analytics et la protection de notre vie privée"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "h3",
+      "props": {
+        "id": "retrouvez-la-vidéo-de-lenregistrement-sur-le-youtube-de-doubleslash"
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": "Retrouvez la vidéo de l'enregistrement sur "
+        },
+        {
+          "type": "element",
+          "tag": "a",
+          "props": {
+            "href": "https://youtu.be/AjY6K2WFTD0",
+            "rel": ["nofollow", "noopener", "noreferrer"],
+            "target": "_blank"
+          },
+          "children": [{"type": "text", "value": "le Youtube de DoubleSlash"}]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "h3",
+      "props": {"id": "notre-invité"},
+      "children": [{"type": "text", "value": "Notre invité"}]
+    },
+    {
+      "type": "element",
+      "tag": "ul",
+      "props": {},
+      "children": [
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {"type": "text", "value": "François Best "},
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://francoisbest.com/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [
+                {"type": "text", "value": "https://francoisbest.com/"}
+              ]
+            },
+            {"type": "text", "value": ", "},
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://twitter.com/fortysevenfx",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "@fortysevenfx"}]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "p",
+      "props": {},
+      "children": [
+        {
+          "type": "text",
+          "value": "La solution analytics de notre invité : "
+        },
+        {
+          "type": "element",
+          "tag": "a",
+          "props": {
+            "href": "https://chiffre.io",
+            "rel": ["nofollow", "noopener", "noreferrer"],
+            "target": "_blank"
+          },
+          "children": [{"type": "text", "value": "https://chiffre.io"}]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "h3",
+      "props": {
+        "id": "les-autres-solutions-pour-sortir-ou-remplacer-google-analytics"
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": "Les autres solutions pour sortir ou remplacer Google Analytics"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "h4",
+      "props": {"id": "open-source-et-possibilité-dauto-hébergement-"},
+      "children": [
+        {
+          "type": "text",
+          "value": "Open-source et possibilité d'auto hébergement :"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "ul",
+      "props": {},
+      "children": [
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://ackee.electerious.com/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "https://ackee.electerious.com/"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://plausible.io/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "https://plausible.io/"}]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://www.piratepx.com/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [
+                {"type": "text", "value": "https://www.piratepx.com/"}
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://umami.is/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "https://umami.is/"}]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://matomo.org/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "https://matomo.org/"}]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://posthog.com/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "https://posthog.com/"}]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://www.kokoanalytics.com/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [
+                {
+                  "type": "text",
+                  "value": "https://www.kokoanalytics.com/"
+                }
+              ]
+            },
+            {"type": "text", "value": " solution pour WordPress"}
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "h4",
+      "props": {"id": "autres-solutions"},
+      "children": [{"type": "text", "value": "Autres solutions"}]
+    },
+    {
+      "type": "element",
+      "tag": "ul",
+      "props": {},
+      "children": [
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://usefathom.com/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "https://usefathom.com/"}]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://simpleanalytics.com/",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [
+                {"type": "text", "value": "https://simpleanalytics.com/"}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "h3",
+      "props": {"id": "repo-qui-liste-plusieurs-solutions"},
+      "children": [
+        {"type": "text", "value": "Repo qui liste plusieurs solutions"}
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "p",
+      "props": {},
+      "children": [
+        {
+          "type": "element",
+          "tag": "a",
+          "props": {
+            "href": "https://privacyfocusedanalytics.netlify.app/",
+            "rel": ["nofollow", "noopener", "noreferrer"],
+            "target": "_blank"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "https://privacyfocusedanalytics.netlify.app/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "p",
+      "props": {},
+      "children": [{"type": "text", "value": "Bonne écoute !"}]
+    },
+    {
+      "type": "element",
+      "tag": "h3",
+      "props": {"id": "podcast-présenté-par-"},
+      "children": [{"type": "text", "value": "Podcast présenté par :"}]
+    },
+    {
+      "type": "element",
+      "tag": "ul",
+      "props": {},
+      "children": [
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {"type": "text", "value": "Alexandre Duval "},
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://twitter.com/xlanex6",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "@xlanex6"}]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "li",
+          "props": {},
+          "children": [
+            {"type": "text", "value": "Patrick Faramaz "},
+            {
+              "type": "element",
+              "tag": "a",
+              "props": {
+                "href": "https://twitter.com/PatrickFaramaz",
+                "rel": ["nofollow", "noopener", "noreferrer"],
+                "target": "_blank"
+              },
+              "children": [{"type": "text", "value": "@PatrickFaramaz"}]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

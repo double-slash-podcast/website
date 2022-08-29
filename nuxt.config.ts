@@ -1,4 +1,5 @@
 import {defineNuxtConfig} from 'nuxt';
+import {baseInfos, podcastInfos} from './config';
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
@@ -19,5 +20,16 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
+  },
+  nitro: {
+    prerender: {
+      routes: ['/podcast-rss-feed.xml'],
+    },
+  },
+  runtimeConfig: {
+    public: {
+      ...baseInfos,
+      podcastInfos,
+    },
   },
 });
