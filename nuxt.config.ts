@@ -7,8 +7,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
+    'nuxt-icon',
     '@nuxtjs/color-mode',
   ],
+  buildModules: ['unplugin-icons/nuxt'],
   experimental: {
     reactivityTransform: true,
     viteNode: false,

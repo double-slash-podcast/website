@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.6",
+    "@iconify-json/logos": "^1.1.14",
     "@iconify-json/twemoji": "^1.1.5",
     "@nuxt/content": "^2.0.1",
     "@nuxt/test-utils-edge": "^3.0.0-rc.4-27621410.b045b71",
@@ -30,10 +31,12 @@
     "jsdom": "^20.0.0",
     "lint-staged": "^13.0.3",
     "nuxt": "3.0.0-rc.4",
+    "nuxt-icon": "^0.1.2",
     "pinia": "^2.0.14",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
     "typescript": "^4.7.4",
+    "unplugin-icons": "^0.14.8",
     "vitest": "^0.18.0",
     "xml2json": "^0.12.0"
   },

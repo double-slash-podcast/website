@@ -1,5 +1,6 @@
 <template>
   <main>
-    <List />
+    <Header />
+    <!-- <List /> -->
   </main>
 </template>
