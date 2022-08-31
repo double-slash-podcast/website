@@ -42,9 +42,9 @@
   },
   "lint-staged": {
     "*.{js,vue,ts}": [
-      "yarn lint",
-      "yarn format-write",
-      "yarn test run related --passWithNoTests"
+      "pnpm lint",
+      "pnpm format-write",
+      "pnpm test run related --passWithNoTests"
     ]
   },
   "volta": {
