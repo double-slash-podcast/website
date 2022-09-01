@@ -1,0 +1,110 @@
+@font-face {
+  font-family: 'Mono45';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~/assets/fonts/mono45.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Dank';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('~/assets/fonts/Dank.woff2') format('woff2');
+}
+
+/* @font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+} */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 200;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+}
+
+/* @font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+} */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+}
+
+/* @font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+} */
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+}
+
+/* @font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url('~/assets/fonts/.woff2') format("woff2");
+} */
+
+@tailwind base;
+@tailwind components;
+
+body {
+  @apply font-base
+}
+
+h1 {
+  @apply text-red-500
+} 
+.brand {
+  @apply text-white uppercase font-brand text-5xl drop-shadow shadow-white
+}
+
+h2, h3 , h4 {
+  @apply font-headings
+}
+h2  {
+  @apply font-headings uppercase text-yellowDs text-2xl tracking-wider
+}
+
+
+@tailwind utilities;

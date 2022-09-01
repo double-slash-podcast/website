@@ -10,6 +10,9 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
   ],
+  tailwindcss: {
+    cssPath: '~/assets/main.css',
+  },
   buildModules: ['unplugin-icons/nuxt'],
   experimental: {
     reactivityTransform: true,

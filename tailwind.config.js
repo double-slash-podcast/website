@@ -4,10 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        darkPurple: '#3C0C55'
+        darkPurple: '#3C0C55',
+        yellowDs: '#FFE40F'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        brand: ['Mono45', 'Arial','sans-serif'],
+        headings: ['Dank', 'Arial','sans-serif'],
+        base: ['Inter', 'Arial','sans-serif']
       },
       animation: {
         'slideLeft1':'slideLeft1 40s linear infinite',
