@@ -103,7 +103,7 @@ h2, h3 , h4 {
   @apply font-headings
 }
 h2  {
-  @apply font-headings uppercase text-yellowDs text-2xl tracking-wider
+  @apply font-headings uppercase text-yellowDs text-2xl text-center tracking-wider
 }
 
 

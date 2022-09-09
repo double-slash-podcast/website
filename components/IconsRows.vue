@@ -1,31 +1,31 @@
 <template>
   <div>
     <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul class="flex h-5 min-w-full space-x-2 shrink-0 animate-slideLeft1">
-        <li v-for="logo in logos" :key="logo">
-          <Icon :name="logo" class="w-3 h-3 grayscale" />
+      <ul class="flex h-8 min-w-full space-x-3 shrink-0 animate-slideLeft1">
+        <li v-for="logo in shuffleLogos" :key="logo">
+          <Icon :name="logo" class="w-6 h-6 grayscale" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideLeft2"
       >
-        <li v-for="logo in logos" :key="logo">
-          <Icon :name="logo" class="w-3 h-3 grayscale" />
+        <li v-for="logo in shuffleLogos" :key="logo">
+          <Icon :name="logo" class="w-6 h-6 grayscale" />
         </li>
       </ul>
     </div>
     <!-- 2 eme ligne -->
     <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul class="flex h-5 min-w-full space-x-2 shrink-0 animate-slideRight1">
-        <li v-for="logo in logos" :key="logo">
-          <Icon :name="logo" class="w-3 h-3 grayscale" />
+      <ul class="flex h-8 min-w-full space-x-3 shrink-0 animate-slideRight1">
+        <li v-for="logo in shuffleLogos" :key="logo">
+          <Icon :name="logo" class="w-6 h-6 grayscale" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideRight2"
       >
-        <li v-for="logo in logos" :key="logo">
-          <Icon :name="logo" class="w-3 h-3 grayscale" />
+        <li v-for="logo in shuffleLogos" :key="logo">
+          <Icon :name="logo" class="w-6 h-6 grayscale" />
         </li>
       </ul>
     </div>
@@ -66,4 +66,8 @@ const logos = [
   'logos:alpinejs-icon',
   'logos:solidity',
 ];
+
+const shuffleLogos = computed(() => {
+  return logos.sort(() => Math.random() - 0.5);
+});
 </script>
