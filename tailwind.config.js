@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         darkPurple: '#3C0C55',
-        yellowDs: '#FFE40F'
+        yellowDs: '#FFE40F',
+        haiti: '#1A0724'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

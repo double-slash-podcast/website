@@ -11,6 +11,6 @@
 
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
-    <!-- <List /> -->
+    <PodcastList />
   </main>
 </template>
