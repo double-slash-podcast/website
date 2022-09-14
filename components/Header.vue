@@ -18,7 +18,7 @@
             transform="translate(0 111)"
             fill="#fff"
             font-size="144"
-            font-family="Mono45Headline-Regular, Mono45-Headline"
+            font-family="Mono45"
             letter-spacing="-0.26em"
           >
             <tspan x="0" y="0">//</tspan>
