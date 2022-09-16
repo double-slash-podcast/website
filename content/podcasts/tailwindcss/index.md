@@ -7,7 +7,7 @@ dsSlug: DS_007_tailwindcss
 author: Double slash
 duration: 3907
 season: 1
-episodeNumber: 7
+episodeNumber: 07
 episodeType: full
 explicit: false
 categories:

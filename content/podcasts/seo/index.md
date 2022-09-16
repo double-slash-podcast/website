@@ -8,7 +8,7 @@ dsSlug: DS_008_seo
 categories:
   - Technology
 duration: 7080
-episodeNumber: 8
+episodeNumber: 08
 episodeType: full
 explicit: false
 season: 1

@@ -1,6 +1,5 @@
 <template>
-  <main>
-    
+  <div>
     <Header :height="500">
       <template #baseline>
         <h2>le podcast <br class="sm:hidden" />des developpeurs web</h2>
@@ -12,29 +11,29 @@
 
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
-    
-    <PodcastList />
 
-    <HeadingsSection title="et en vidéo">
-      <div class="flex justify-center">
-        <a href="https://www.youtube.com/channel/UCp5DGBAX2XNJXeOVAo7bICQ">
-          <Icon name="logos:youtube-icon" size="100" />
-        </a>
-      </div>
-    </HeadingsSection>
+    <main class="max-w-lg m-auto">
+      <PodcastList />
+      <HeadingsSection title="et en vidéo">
+        <div class="flex justify-center">
+          <a
+            href="https://www.youtube.com/channel/UCp5DGBAX2XNJXeOVAo7bICQ"
+            target="_blank"
+          >
+            <Icon name="logos:youtube-icon" size="100" />
+          </a>
+        </div>
+      </HeadingsSection>
+      <HeadingsSection title="tous les épisodes précedents">
+        <div class="text-center">
+          <nuxt-link to="#" class="text-xs text-white uppercase"
+            >Voir tous les épisodes -></nuxt-link
+          >
+        </div>
+      </HeadingsSection>
 
-    <HeadingsSection title="tous les épisodes précedents">
-      <div class="text-center">
-        <nuxt-link to="#" class="text-xs text-white uppercase">Voir tous les épisodes -></nuxt-link>
-      </div>
-    </HeadingsSection>
+      <LastEpisodes />
 
-    <div class="divide-y divide-dashed divide-purpleDS">
-      <EpisodeLink/>
-      <EpisodeLink/>
-      <EpisodeLink/>
-      <EpisodeLink/>
-    </div>
-    
-  </main>
+    </main>
+  </div>
 </template>
