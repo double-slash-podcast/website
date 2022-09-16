@@ -92,6 +92,10 @@ body {
   @apply font-base;
 }
 
+main {
+  @apply max-w-lg m-auto
+}
+
 h1 {
   @apply text-red-500;
 }

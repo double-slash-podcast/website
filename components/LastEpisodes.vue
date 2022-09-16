@@ -1,4 +1,5 @@
 <script setup>
+// should be a composable useLastEpisode(3)
 const {data} = await useAsyncData('podcasts', () => {
   return queryContent('podcasts')
     .sort({episodeNumber: -1, $numeric: true})

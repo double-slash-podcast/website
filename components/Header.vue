@@ -1,3 +1,12 @@
+<script setup>
+defineProps({
+  height: {
+    type: Number,
+    default: 300,
+  },
+});
+</script>
+
 <template>
   <header
     class="relative grid col-span-1 overflow-hidden bg-darkPurple place-items-center"
@@ -34,14 +43,6 @@
   </header>
 </template>
 
-<script setup>
-defineProps({
-  height: {
-    type: Number,
-    default: 300,
-  },
-});
-</script>
 <style scoped>
 header {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);

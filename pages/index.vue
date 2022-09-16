@@ -12,7 +12,7 @@
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
 
-    <main class="max-w-lg m-auto">
+    <main>
       <PodcastList />
       <HeadingsSection title="et en vidéo">
         <div class="flex justify-center">
@@ -33,7 +33,6 @@
       </HeadingsSection>
 
       <LastEpisodes />
-
     </main>
   </div>
 </template>

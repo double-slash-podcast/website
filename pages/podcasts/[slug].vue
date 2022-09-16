@@ -12,6 +12,7 @@ if (!episode) {
 </script>
 <template>
   <main v-if="episode">
-    <h1 class="text-white">{{ episode.title }}</h1>
+    <Header title="{{episode.title}}"></Header>
+    <!-- <h1 class="text-white">{{ episode.title }}</h1> -->
   </main>
 </template>
