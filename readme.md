@@ -21,6 +21,30 @@
 
 WIP...
 
+## Quick Start
+
+We use [pnpm](https://pnpm.io) on package management.
+
+#### Install dependencies
+
+```
+pnpm install
+```
+
+#### Run dev mode
+
+```
+pnpm dev
+```
+
+
+#### Build application
+
+```
+pnpm build
+```
+
+
 ## Tools
 
 ### Interface
@@ -50,12 +74,12 @@ WIP...
 
 
 
-## ROADMAP
+## Roadmap for new website
 
 - [X] Init Nuxt 3
 - [X] Install Tailwind module
-- [ ] Set DS colors palette
-- [ ] Install unoCSS / Icon
+- [x] Set DS colors palette
+- [x] Install unoCSS / Icon
 - [x] Install nuxt content 3
 - [ ] Config for SSR with serverless
 - [ ] Config export on Netlify Org
@@ -68,10 +92,10 @@ WIP...
   - [ ] `head`
   - [ ] Social share
   - [ ] Transcription for `SEO`
-- [ ] Import LEGACY episode
+- [x] Import LEGACY episode
 - [ ] Contact Form
 - [ ] Sponsoring page => redirection
-- [ ] RSS creation for episodes
+- [x] RSS creation for episodes
   - Rss creation by plugin / module
   - [Validate by](https://podba.se/validate/)
 - [ ] Live page ?
