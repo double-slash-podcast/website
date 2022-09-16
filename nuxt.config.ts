@@ -10,7 +10,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
     '@nuxtjs/color-mode',
+    '@nathanchase/nuxt-dayjs-module',
   ],
+  dayjs: {},
   tailwindcss: {
     cssPath: '~/assets/main.css',
   },
