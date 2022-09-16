@@ -12,4 +12,8 @@ describe('transforme node from md to VNode Object', () => {
     const node = convertToHtml(body);
     expect(node).toMatchSnapshot();
   });
+
+  test('true', () => {
+    expect(true).toBe(true);
+  });
 });
