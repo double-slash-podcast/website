@@ -109,7 +109,7 @@ h4 {
   @apply font-headings;
 }
 h2 {
-  @apply text-2xl tracking-wider text-center uppercase font-headings text-yellowDs;
+  @apply text-2xl tracking-wider text-center uppercase text-yellowDs;
 }
 
 @tailwind utilities;
