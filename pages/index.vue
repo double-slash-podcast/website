@@ -29,7 +29,12 @@
       </div>
     </HeadingsSection>
 
-    
+    <div class="divide-y divide-dashed divide-purpleDS">
+      <EpisodeLink/>
+      <EpisodeLink/>
+      <EpisodeLink/>
+      <EpisodeLink/>
+    </div>
     
   </main>
 </template>
