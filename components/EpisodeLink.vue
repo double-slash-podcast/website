@@ -3,14 +3,17 @@ const {$dayjs} = useNuxtApp();
 
 defineProps({
   episode: {
-    type: String,
+    type: Object,
     required: true,
   },
 });
 </script>
 
 <template>
-  <nuxt-link to="#" class="flex py-10 text-center text-white uppercase">
+  <nuxt-link
+    :to="episode._path"
+    class="flex py-10 text-center text-white uppercase"
+  >
     <div class="flex items-center w-1/3 text-6xl font-brand text-yellowDs">
       <span class="text-haiti spe">0</span>{{ episode.episodeNumber }}
     </div>

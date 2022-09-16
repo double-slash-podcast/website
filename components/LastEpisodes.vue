@@ -14,6 +14,5 @@ const {data} = await useAsyncData('podcasts', () => {
       :key="episode._id"
       v-bind="{episode}"
     />
-    
   </div>
 </template>
