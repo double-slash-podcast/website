@@ -13,5 +13,7 @@
     </Header>
     <!-- <List /> -->
   </main>
-  <Player src="http://localhost:3000/DS_040_webapi22.mp3" />
+  <Player
+    src="https:///double-slash.ams3.cdn.digitaloceanspaces.com/DS_040_webapi22.mp3"
+  />
 </template>
