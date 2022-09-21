@@ -1,12 +1,17 @@
-export type typeDuration = {minutes: number; seconds: number};
+export type typeDuration = {hours: number; minutes: number; seconds: number};
 
 /**
  * get duration for media file
  * @param length: number
- * @returns {{seconds: number, minutes: number}}
+ * @returns {hours: number, seconds: number, minutes: number}
  */
 export const calculateTotalValue = (length: number): typeDuration => {
-  const minutes = Math.floor(length / 60);
-  const seconds = +(length - minutes * 60).toFixed(1);
-  return {minutes, seconds};
+  // hours
+  const hours = Math.floor(length / 3600);
+  // minutes
+  const minutes = Math.floor((length - hours * 3600) / 60);
+  // seconds
+  const seconds = Math.floor(length - hours * 3600 - minutes * 60);
+
+  return {hours, minutes, seconds};
 };

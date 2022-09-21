@@ -2,8 +2,16 @@
   <audio ref="audioPlayerElement" preload="auto">
     <source :src="props.src" :type="type" />
   </audio>
-  <h2>{{ detailDuration }}</h2>
-  <h2>{{ state.currentTime }}</h2>
+  <h2>
+    {{ $formatTime(detailDuration.hours) }}:{{
+      $formatTime(detailDuration.minutes)
+    }}:{{ $formatTime(detailDuration.seconds) }}
+  </h2>
+  <h2>
+    {{ $formatTime(detailCurrentTime.hours) }}:{{
+      $formatTime(detailCurrentTime.minutes)
+    }}:{{ $formatTime(detailCurrentTime.seconds) }}
+  </h2>
   <button @click="toggle">
     <span v-if="state.status === 'pause'">Play</span><span v-else>Pause</span>
   </button>
@@ -54,11 +62,20 @@ watch(
   () => audioPlayerElement.value?.load(),
 );
 
+// get object for duration
 const detailDuration = computed(
   (): typeDuration =>
     state.duration
       ? calculateTotalValue(state.duration)
-      : {seconds: 0, minutes: 0},
+      : {hours: 0, seconds: 0, minutes: 0},
+);
+
+// get object for currentTime
+const detailCurrentTime = computed(
+  (): typeDuration =>
+    state.duration
+      ? calculateTotalValue(state.currentTime)
+      : {hours: 0, seconds: 0, minutes: 0},
 );
 
 /** play sound or pause */
