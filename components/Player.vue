@@ -2,7 +2,7 @@
   <audio ref="audioPlayerElement" preload="auto">
     <source :src="props.src" :type="type" />
   </audio>
-  <h2>{{ state.duration }}</h2>
+  <h2>{{ detailDuration }}</h2>
   <h2>{{ state.currentTime }}</h2>
   <button @click="toggle">
     <span v-if="state.status === 'pause'">Play</span><span v-else>Pause</span>
@@ -10,12 +10,15 @@
 </template>
 
 <script setup lang="ts">
+import {calculateTotalValue, typeDuration} from '../helpers/player';
+
 const props = defineProps({
   src: {
     type: String,
     required: true,
   },
 });
+// never change
 const type = 'audio/mpeg';
 const audioPlayerElement = ref<HTMLAudioElement | null>(null);
 
@@ -28,8 +31,10 @@ const state: {
 
 onMounted(() => {
   if (audioPlayerElement.value) {
-    // udpate duration
-    audioPlayerElement.value.addEventListener('loadedmetadata', () => {
+    // first load
+    audioPlayerElement.value?.load();
+    // update duration
+    audioPlayerElement.value.addEventListener('durationchange', () => {
       state.duration = audioPlayerElement.value
         ? +audioPlayerElement.value.duration
         : 0;
@@ -42,6 +47,19 @@ onMounted(() => {
     audioPlayerElement.value.playbackRate = state.playbackRate;
   }
 });
+
+// reload src when props change
+watch(
+  () => props.src,
+  () => audioPlayerElement.value?.load(),
+);
+
+const detailDuration = computed(
+  (): typeDuration =>
+    state.duration
+      ? calculateTotalValue(state.duration)
+      : {seconds: 0, minutes: 0},
+);
 
 /** play sound or pause */
 const toggle = () => {
