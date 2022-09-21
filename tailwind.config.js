@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         darkPurple: '#3C0C55',
         yellowDs: '#FFE40F',
-        trackPurple: '#a700ff',
+        accent: '#a700ff',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -41,7 +41,7 @@ module.exports = {
         },
       },
       boxShadow: {
-        thumb: '-100vw 0 0 100vw #ffe40f',
+        thumb: '-100.1vw 0 0 100vw #ffe40f',
       },
     },
   },

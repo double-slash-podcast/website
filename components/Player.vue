@@ -9,7 +9,8 @@
         ><span v-else>Pause</span>
       </button>
     </div>
-    <div class="flex flex-wrap w-full">
+    <Loader v-if="!state.loaded" />
+    <div v-else class="flex flex-wrap w-full">
       <input
         :value="state.currentPosition"
         class="w-full focus:outline-none"
@@ -48,28 +49,40 @@ const props = defineProps({
 });
 // never change
 const type = 'audio/mpeg';
+// audio tag
 const audioPlayerElement = ref<HTMLAudioElement | null>(null);
 
 const state: {
+  // duration of sound
   duration: number | null;
+  // status player
   status: 'play' | 'pause';
+  // currentTime played
   currentTime: number;
+  // speed paly rate
   playbackRate: number;
+  // position for input range
   currentPosition: number;
+  // sound is loaded
+  loaded: boolean;
 } = reactive({
   duration: 0,
   status: 'pause',
   currentTime: 0,
   playbackRate: 1,
   currentPosition: 0,
+  loaded: false,
 });
 
 onMounted(() => {
   if (audioPlayerElement.value) {
     // first load
     audioPlayerElement.value?.load();
+    audioPlayerElement.value.addEventListener('canplay', () => {
+      state.loaded = true;
+    });
     // update duration
-    audioPlayerElement.value.addEventListener('durationchange', () => {
+    audioPlayerElement.value.addEventListener('loadedmetadata', () => {
       state.duration = audioPlayerElement.value
         ? +audioPlayerElement.value.duration
         : 0;
@@ -105,6 +118,7 @@ const detailCurrentTime = computed(
       : {hours: 0, seconds: 0, minutes: 0},
 );
 
+// update currentPosition on play
 watch(
   () => state.currentTime,
   () =>
@@ -130,6 +144,7 @@ const toggle = () => {
   }
 };
 
+/** update currentTime from input range */
 const updateCurrentTime = (event: Event) => {
   const {currentTarget} = event;
   if (!audioPlayerElement.value || !currentTarget) return;
@@ -148,30 +163,30 @@ input[type='range'] {
 }
 
 ::-webkit-slider-runnable-track {
-  @apply bg-trackPurple;
+  @apply bg-accent;
 }
 
 ::-moz-range-track {
-  @apply h-1.5 bg-trackPurple;
+  @apply h-3
+   bg-accent;
 }
 
 ::-webkit-slider-thumb {
-  @apply w-0 h-1.5 appearance-none border-2 border-transparent shadow-thumb rounded-lg;
+  @apply w-2 h-3 appearance-none border-2 border-yellowDs shadow-thumb rounded-xl bg-yellowDs;
 }
 
 ::-moz-range-thumb {
-  @apply w-0 h-1.5 bg-trackPurple border-0 border-transparent shadow-thumb;
-  border-radius: 0 !important;
-  box-sizing: border-box;
+  @apply w-2 h-3 bg-yellowDs border-2 rounded-xl border-yellowDs shadow-thumb;
+  /* box-sizing: border-box; */
 }
 
 ::-ms-thumb {
-  @apply w-0 h-1.5 bg-trackPurple border-0 border-transparent;
-  box-sizing: border-box;
+  @apply w-2 h-3 bg-yellowDs border-2 rounded-xl border-yellowDs shadow-thumb;
+  /* box-sizing: border-box; */
 }
 
 ::-ms-track {
-  @apply h-1.5 bg-trackPurple text-transparent border-0;
+  @apply h-1.5 bg-accent text-transparent border-0;
 }
 
 ::-ms-fill-lower {
