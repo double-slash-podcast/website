@@ -3,6 +3,7 @@
 const {data} = await useAsyncData('podcasts', () => {
   return queryContent('podcasts')
     .sort({episodeNumber: -1, $numeric: true})
+    .where({_extension: {$eq: 'md'}})
     .limit(3)
     .find();
 });
