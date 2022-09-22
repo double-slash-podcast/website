@@ -5,7 +5,7 @@
   <div class="flex w-full">
     <div class="w-32 p-10">
       <button @click="toggle">
-        <span v-if="state.status === 'pause'">Play</span
+        <span v-if="state.status === StatusPlayer.pause">Play</span
         ><span v-else>Pause</span>
       </button>
     </div>
@@ -41,6 +41,11 @@
 <script setup lang="ts">
 import {calculateTotalValue, typeDuration} from '../helpers/player';
 
+enum StatusPlayer {
+  play = 'play',
+  pause = 'pause',
+}
+
 const props = defineProps({
   src: {
     type: String,
@@ -56,7 +61,7 @@ const state: {
   // duration of sound
   duration: number | null;
   // status player
-  status: 'play' | 'pause';
+  status: StatusPlayer;
   // currentTime played
   currentTime: number;
   // speed paly rate
@@ -67,7 +72,7 @@ const state: {
   loaded: boolean;
 } = reactive({
   duration: 0,
-  status: 'pause',
+  status: StatusPlayer.pause,
   currentTime: 0,
   playbackRate: 1,
   currentPosition: 0,
@@ -142,10 +147,10 @@ const detailCurrentTime = computed(
 const toggle = () => {
   if (state.status === 'pause') {
     audioPlayerElement.value?.play();
-    state.status = 'play';
+    state.status = StatusPlayer.play;
   } else {
     audioPlayerElement.value?.pause();
-    state.status = 'pause';
+    state.status = StatusPlayer.pause;
   }
 };
 
