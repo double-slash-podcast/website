@@ -15,12 +15,12 @@ title: Les Web Platforms en 2022
 subtitle: Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
 guid: ab1b72df509cb2a1ec871478816c4223
 description: "Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple. Retrouvez la vidéo de l'enregistrement sur le Youtube de DoubleSlash Les slides utilisés pour l'épisode https://slides.com/goodmotion/state-of-web-platform Pour la toute première fois, tous les principaux fournisseurs de navigateurs se sont réunis pour..."
-links: 
+links:
   [
-    { title: "link1", url: "https://youtu.be/41oHH_opXKg" }, 
-    { title: "link2", url: "https://youtu.be/41oHH_opXKg" }, 
-    { title: "link3", url: "https://youtu.be/41oHH_opXKg" }, 
-    { title: "link4", url: "https://youtu.be/41oHH_opXKg" }, 
+    {title: 'link1', url: 'https://youtu.be/41oHH_opXKg'},
+    {title: 'link2', url: 'https://youtu.be/41oHH_opXKg'},
+    {title: 'link3', url: 'https://youtu.be/41oHH_opXKg'},
+    {title: 'link4', url: 'https://youtu.be/41oHH_opXKg'},
   ]
 ---
 
@@ -60,4 +60,3 @@ Bonne écoute !
 
 - Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
 - Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
-

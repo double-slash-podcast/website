@@ -93,7 +93,7 @@ body {
 }
 
 main {
-  @apply lg:max-w-[700px] max-w-lg m-auto px-2 sm:px-0
+  @apply lg:max-w-[700px] max-w-lg m-auto px-2 sm:px-0;
 }
 
 h1 {
