@@ -44,13 +44,14 @@
     "*.{js,vue,ts}": [
       "pnpm lint",
       "pnpm format-write",
-      "pnpm test run related"
+      "pnpm test run related  -- --passWithNoTests"
     ]
   },
   "volta": {
     "node": "16.17.0"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.7.2",
     "@nathanchase/nuxt-dayjs-module": "^1.0.11",
     "@tailwindcss/forms": "^0.5.3",
     "axios": "^0.27.2",

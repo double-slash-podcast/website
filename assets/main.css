@@ -89,11 +89,11 @@
 @tailwind components;
 
 body {
-  @apply font-base;
+  @apply font-base scroll-smooth;
 }
 
 main {
-  @apply max-w-lg m-auto
+  @apply lg:max-w-[700px] max-w-lg m-auto px-2 sm:px-0
 }
 
 h1 {

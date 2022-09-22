@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@headlessui/vue': ^1.7.2
   '@nathanchase/nuxt-dayjs-module': ^1.0.11
   '@nuxt/content': ^2.1.1
   '@nuxt/test-utils': 3.0.0-rc.9
@@ -36,6 +37,7 @@ specifiers:
   xml2json: ^0.12.0
 
 dependencies:
+  '@headlessui/vue': 1.7.2
   '@nathanchase/nuxt-dayjs-module': 1.0.11
   '@tailwindcss/forms': 0.5.3
   axios: 0.27.2
@@ -410,6 +412,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@headlessui/vue/1.7.2:
+    resolution: {integrity: sha512-nmmFpQxnAy6zgf5r0pwdAH3Qw2IsSbTgvkpov9RkEVE8A6aPAT4iaAaPEAzdI+sPL5Wby05mhciJXSqtkLu+vQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^3.2.0
+    dev: false
 
   /@humanwhocodes/config-array/0.10.4:
     resolution: {integrity: sha512-mXAIHxZT3Vcpg83opl1wGlVZ9xydbfZO3r5YfRSH6Gpp2J/PfdBP0wbDa2sO6/qRbcalpoevVyW6A/fI6LfeMw==}

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :height="500">
+    <Header :height="400">
       <template #baseline>
         <h2>le podcast <br class="sm:hidden" />des developpeurs web</h2>
         <p class="font-light text-center text-white">
