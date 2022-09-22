@@ -85,11 +85,16 @@ onMounted(() => {
     audioPlayerElement.value.addEventListener('loadedmetadata', () => {
       state.duration = audioPlayerElement.value
         ? +audioPlayerElement.value.duration
-        : 0;
+        : Infinity;
     });
     // update currentTime
     audioPlayerElement.value.addEventListener('timeupdate', () => {
       state.currentTime = audioPlayerElement.value?.currentTime || 0;
+    });
+
+    // sound is ended
+    audioPlayerElement.value.addEventListener('ended', () => {
+      reset();
     });
     // set play rate
     audioPlayerElement.value.playbackRate = state.playbackRate;
@@ -100,6 +105,21 @@ onMounted(() => {
 watch(
   () => props.src,
   () => audioPlayerElement.value?.load(),
+);
+
+// update currentPosition on play
+watch(
+  () => state.currentTime,
+  () =>
+    (state.currentPosition = audioPlayerElement.value
+      ? parseInt(
+          (
+            (audioPlayerElement.value.currentTime /
+              audioPlayerElement.value.duration) *
+            100
+          ).toString(),
+        )
+      : 0),
 );
 
 // get object for duration
@@ -116,21 +136,6 @@ const detailCurrentTime = computed(
     state.currentTime
       ? calculateTotalValue(state.currentTime)
       : {hours: 0, seconds: 0, minutes: 0},
-);
-
-// update currentPosition on play
-watch(
-  () => state.currentTime,
-  () =>
-    (state.currentPosition = audioPlayerElement.value
-      ? parseInt(
-          (
-            (audioPlayerElement.value.currentTime /
-              audioPlayerElement.value.duration) *
-            100
-          ).toString(),
-        )
-      : 0),
 );
 
 /** play sound or pause */
@@ -155,6 +160,16 @@ const updateCurrentTime = (event: Event) => {
   audioPlayerElement.value.currentTime = _currentTime;
   state.currentTime = _currentTime;
 };
+
+// reset player
+const reset = () => {
+  toggle();
+  state.currentPosition = 0;
+  if (audioPlayerElement.value) {
+    audioPlayerElement.value.currentTime = 0;
+    state.currentTime = 0;
+  }
+};
 </script>
 
 <style scoped>
@@ -172,17 +187,15 @@ input[type='range'] {
 }
 
 ::-webkit-slider-thumb {
-  @apply w-2 h-3 appearance-none border-2 border-yellowDs shadow-thumb rounded-xl bg-yellowDs;
+  @apply w-3 h-3 appearance-none border-2 border-yellowDs shadow-thumb rounded-xl bg-yellowDs;
 }
 
 ::-moz-range-thumb {
   @apply w-2 h-3 bg-yellowDs border-2 rounded-xl border-yellowDs shadow-thumb;
-  /* box-sizing: border-box; */
 }
 
 ::-ms-thumb {
   @apply w-2 h-3 bg-yellowDs border-2 rounded-xl border-yellowDs shadow-thumb;
-  /* box-sizing: border-box; */
 }
 
 ::-ms-track {
