@@ -1,27 +1,47 @@
 <script setup>
+defineProps({
+  dark: {
+    type: Boolean,
+    default: false,
+  },
+});
+
 const plateforms = [
-  {href: '#', icon: 'simple-icons:googlepodcasts'},
-  {href: '#', icon: 'simple-icons:spotify'},
-  {href: '#', icon: 'fa-brands:deezer'},
-  {href: '#', icon: 'simple-icons:applepodcasts'},
-  {href: '#', icon: 'arcticons:tunein-radio'},
-  {href: '#', icon: 'simple-icons:overcast'},
+  {
+    href: 'https://podcasts.google.com/?feed=aHR0cHM6Ly9zbGFzaC1wb2RjYXN0LmZyL3BvZGNhc3QtcnNzLWZlZWQueG1s&ved=2ahUKEwigiuTNrNTpAhUR8hoKHTJnDIQQ4aUDegQIARAC&hl=fr',
+    icon: 'GoogleIcon',
+  },
+  {
+    href: 'https://open.spotify.com/show/539N9WvnUguUzMWluPp2UK',
+    icon: 'SpotifyIcon',
+  },
+  {href: 'https://www.deezer.com/fr/show/1245532', icon: 'DeezerIcon'},
+  {
+    href: 'https://podcasts.apple.com/fr/podcast/double-slash/id1513703178',
+    icon: 'AppleIcon',
+  },
+  {
+    href: 'https://tunein.com/podcasts/Technology-Podcasts/Double-Slash-p1325678/',
+    icon: 'TuneinIcon',
+  },
 ];
 </script>
 
 <template>
-  <HeadingsSection title="abonnez vous sur votre plateforme de podcast préféré">
+  <HeadingsSection
+    :dark="dark"
+    title="abonnez vous sur votre plateforme de podcast préféré"
+  >
     <ul class="flex justify-center space-x-8">
       <li v-for="plateform in plateforms" :key="plateform.icon">
         <a href="plateform.href">
           <Icon
-            class="text-white duration-300 fill-white hover:text-gray-400 hover:-translate-y-2"
+            class="w-12 h-12 text-white duration-300 fill-white hover:text-gray-400 hover:-translate-y-2 sm:h-14 sm:w-14"
+            :class="{'text-haiti': dark}"
             :name="plateform.icon"
-            size="54"
           />
         </a>
       </li>
-      <li><Icon name="SpotifyIcon"></Icon></li>
     </ul>
   </HeadingsSection>
 </template>
