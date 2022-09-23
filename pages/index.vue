@@ -18,12 +18,15 @@
     <main>
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
-        <div class="flex justify-center">
+        <div class="flex items-center justify-center space-x-6">
           <a
             href="https://www.youtube.com/channel/UCp5DGBAX2XNJXeOVAo7bICQ"
             target="_blank"
           >
             <Icon name="logos:youtube-icon" size="100" />
+          </a>
+          <a href="https://www.twitch.tv/doubleslash_dev" target="_blank">
+            <Icon name="fa-brands:twitch" size="90" class="text-[#9146ff]" />
           </a>
         </div>
       </HeadingsSection>
