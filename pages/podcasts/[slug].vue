@@ -1,13 +1,14 @@
 <script setup>
 import {TabGroup, TabList, Tab, TabPanels, TabPanel} from '@headlessui/vue';
+import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
+import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
 definePageMeta({
   layout: 'light',
 });
 
-const linksTab = ['Description', 'Notes', 'Liens', 'Video', 'Transcription'];
-
+const linksTab = ['Description', 'Liens', 'Video', 'Transcription'];
 const {data: episode} = await useAsyncData('OneEpisode', () => {
   return queryContent()
     .where({_path: {$eq: path}})
@@ -29,6 +30,9 @@ if (!episode) {
       <template #baseline>
         <EpisodeHeadings :episode="episode"></EpisodeHeadings>
       </template>
+      <template #title>
+        <Brand />
+      </template>
     </Header>
     <div
       class="bg-purple-500 w-[600px] h-[100px] m-auto transform -translate-y-10 grid place-content-center text-white"
@@ -47,19 +51,18 @@ if (!episode) {
           >
             <button
               :class="{
-                'text-white font-bold underline': selected,
-                '': !selected,
+                'text-purple-700 font-bold underline': selected,
               }"
-              class="flex-1 py-1 rounded-sm marker:px-2 text-haiti underline-offset-4 focus:outline-none"
+              class="flex-1 py-1 mx-2 text-xl marker:px-2 text-haiti underline-offset-4 focus:outline-none"
             >
               {{ link }}
             </button>
           </Tab>
         </TabList>
-        <TabPanels>
-          <TabPanel desciption>{{ episode.description }}</TabPanel>
+        <TabPanels class="pt-4 border-t-2 border-graybg-zinc-300">
           <TabPanel notes>
-            <ContentRenderer :value="episode"> </ContentRenderer>
+            {{ episode.description }}
+            <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
           </TabPanel>
           <TabPanel links>
             <ul class="space-y-3">
@@ -84,15 +87,24 @@ if (!episode) {
           </TabPanel>
           <TabPanel video>
             <template v-if="episode.videoLink">
-              {{ episode.videoLink }}
+              <LiteYouTubeEmbed
+                :id="episode.videoLink"
+                :title="episode.title"
+              />
             </template>
             <template v-else> Pas de video pour cet episode </template>
           </TabPanel>
           <TabPanel v-show="transription" transription>
-            {{ transription.results.channels[0].alternatives[0].transcript }}
+            <div class="prose">
+              {{ transription.results.channels[0].alternatives[0].transcript }}
+            </div>
           </TabPanel>
         </TabPanels>
       </TabGroup>
     </main>
+
+    <Wrapper class="my-16">
+      <PodcastList dark />
+    </Wrapper>
   </div>
 </template>

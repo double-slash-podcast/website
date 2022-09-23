@@ -1,22 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Double Slash Podcast Website
 
 WIP...
@@ -102,7 +83,8 @@ pnpm build
 - [ ] Blog for SEO content ?
 <!-- - [ ]
 - [ ]
-- [ ]
+- [ ] -->
+<!-- - 
 - [ ]
 - [ ]
 - [ ]

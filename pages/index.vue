@@ -1,6 +1,9 @@
 <template>
   <div>
     <Header :height="400">
+      <template #title>
+        <Brand slash />
+      </template>
       <template #baseline>
         <h2>le podcast <br class="sm:hidden" />des developpeurs web</h2>
         <p class="font-light text-center text-white">
@@ -13,8 +16,8 @@
     </Header>
 
     <main>
-      <PodcastList />
-      <HeadingsSection title="et en vidéo">
+      <PodcastList class="mb-24" />
+      <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex justify-center">
           <a
             href="https://www.youtube.com/channel/UCp5DGBAX2XNJXeOVAo7bICQ"
@@ -24,7 +27,8 @@
           </a>
         </div>
       </HeadingsSection>
-      <HeadingsSection title="tous les épisodes précedents">
+
+      <HeadingsSection title="tous les épisodes précedents" class="mb-24">
         <div class="text-center">
           <nuxt-link to="#" class="text-xs text-white uppercase"
             >Voir tous les épisodes -></nuxt-link
@@ -32,7 +36,7 @@
         </div>
       </HeadingsSection>
 
-      <LastEpisodes />
+      <LastEpisodes class="mb-24" />
     </main>
   </div>
 </template>

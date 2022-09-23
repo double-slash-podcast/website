@@ -111,5 +111,20 @@ h4 {
 h2 {
   @apply text-2xl tracking-wider text-center uppercase text-yellowDs;
 }
+/* PROSE ONLY */
+.prose h2 {
+  @apply text-purple-700 font-bold text-lg my-8 font-base;
+}
+.prose h3 {
+  @apply text-purple-700 font-bold text-sm my-8 uppercase font-base;
+}
+
+.prose p{
+  @apply mb-6 font-base leading-8
+}
+/* .prose p a {
+  @apply
+} */
+
 
 @tailwind utilities;

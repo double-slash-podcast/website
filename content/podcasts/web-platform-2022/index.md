@@ -8,7 +8,7 @@ duration: 2773
 dsSlug: DS_040_webapi22
 episodeNumber: 40
 episodeType: full
-videoLink: https://youtu.be/41oHH_opXKg
+videoLink: 41oHH_opXKg
 explicit: false
 season: 1
 title: Les Web Platforms en 2022
@@ -17,16 +17,18 @@ guid: ab1b72df509cb2a1ec871478816c4223
 description: "Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple. Retrouvez la vidéo de l'enregistrement sur le Youtube de DoubleSlash Les slides utilisés pour l'épisode https://slides.com/goodmotion/state-of-web-platform Pour la toute première fois, tous les principaux fournisseurs de navigateurs se sont réunis pour..."
 links:
   [
-    {title: 'link1', url: 'https://youtu.be/41oHH_opXKg'},
-    {title: 'link2', url: 'https://youtu.be/41oHH_opXKg'},
-    {title: 'link3', url: 'https://youtu.be/41oHH_opXKg'},
-    {title: 'link4', url: 'https://youtu.be/41oHH_opXKg'},
+    {title: 'Interop 2022: browsers working together to improve the web for developers', url: 'https://web.dev/interop-2022/'},
+    {title: 'State of CSS 2022', url: 'https://web.dev/state-of-css-2022'},
+    {title: "What's new for the web platform", url: 'https://youtu.be/5b4YcLB4DVI'},
+    {title: 'Bringing page transitions to the web', url: 'https://youtu.be/JCJUPJ_zDQ4'},
+    {title: 'State of CSS', url: 'https://youtu.be/Xy9ZXRRgpLk'},
+    {title: "What's new in Safari and WebKit", url: 'https://developer.apple.com/videos/play/wwdc2022/10048'}
   ]
+
 ---
 
 ## Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
 
-### Retrouvez la vidéo de l'enregistrement sur [le Youtube de DoubleSlash](https://youtu.be/41oHH_opXKg)
 
 **Les slides utilisés pour l'épisode [https://slides.com/goodmotion/state-of-web-platform](https://slides.com/goodmotion/state-of-web-platform)**
 
@@ -42,21 +44,7 @@ Suite à la Google IO 2022, la conférence annuelle Google pour les développeur
 
 Nous avons visionné ces vidéos pour vous faire un résumé des principales fonctionnalités implémentées ou qui vont être implémentées dans les navigateurs.
 
-### Les liens des articles
-
-- [Interop 2022: browsers working together to improve the web for developers](https://web.dev/interop-2022/)
-- [State of CSS 2022](https://web.dev/state-of-css-2022/)
-
-### Les liens des vidéos
-
-- [What's new for the web platform](https://youtu.be/5b4YcLB4DVI)
-- [Bringing page transitions to the web](https://youtu.be/JCJUPJ_zDQ4)
-- [State of CSS](https://youtu.be/Xy9ZXRRgpLk)
-- [What's new in Safari and WebKit](https://developer.apple.com/videos/play/wwdc2022/10048/)
 
 Bonne écoute !
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors
