@@ -7,7 +7,7 @@ dsSlug: DS_001_jamstack
 author: Double slash
 duration: 4825
 season: 1
-episodeNumber: 2
+episodeNumber: 02
 episodeType: full
 explicit: false
 categories:

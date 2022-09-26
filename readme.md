@@ -83,7 +83,8 @@ pnpm build
 - [ ] Blog for SEO content ?
 <!-- - [ ]
 - [ ]
-- [ ]
+- [ ] -->
+<!-- - 
 - [ ]
 - [ ]
 - [ ]

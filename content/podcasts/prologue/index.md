@@ -7,7 +7,7 @@ status: published
 author: Double slash
 duration: 553
 season: 1
-episodeNumber: 1
+episodeNumber: 01
 episodeType: full
 explicit: false
 categories:

@@ -7,7 +7,7 @@ dsSlug: DS_005_gituhub_ninja
 author: Double slash
 duration: 2917
 season: 1
-episodeNumber: 5
+episodeNumber: 05
 episodeType: full
 explicit: false
 categories:

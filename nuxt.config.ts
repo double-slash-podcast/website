@@ -1,7 +1,6 @@
 import {defineNuxtConfig} from 'nuxt';
 import {baseInfos, podcastInfos} from './config';
 
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
@@ -10,18 +9,16 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
     '@nuxtjs/color-mode',
+    '@nathanchase/nuxt-dayjs-module',
   ],
+  dayjs: {},
   tailwindcss: {
     cssPath: '~/assets/main.css',
   },
-  buildModules: ['unplugin-icons/nuxt'],
+  buildModules: [],
   experimental: {
     reactivityTransform: true,
     viteNode: false,
-  },
-  components: {
-    global: true,
-    dirs: ['~/components'],
   },
   colorMode: {
     classSuffix: '',

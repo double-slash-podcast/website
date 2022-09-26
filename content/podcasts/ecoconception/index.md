@@ -7,7 +7,7 @@ dsSlug: DS_002_eco_conception
 author: Double slash
 duration: 4161
 season: 1
-episodeNumber: 3
+episodeNumber: 03
 episodeType: full
 explicit: false
 categories:
