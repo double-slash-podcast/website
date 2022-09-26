@@ -16,7 +16,7 @@
         begin="-0.5s"
       ></animate>
     </circle>
-    <circle cx="63.3441" cy="50" class="fill-accent" r="20">
+    <circle cx="63.3441" cy="50" class="fill-purpleDs" r="20">
       <animate
         attributeName="cx"
         repeatCount="indefinite"

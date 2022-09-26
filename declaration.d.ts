@@ -81,4 +81,6 @@ declare module '@nuxt/schema' {
   }
 }
 
+export type typeDuration = {hours: number; minutes: number; seconds: number};
+
 export {};

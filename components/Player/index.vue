@@ -2,56 +2,46 @@
   <audio ref="audioPlayerElement" preload="auto">
     <source :src="props.src" :type="type" />
   </audio>
-  <div class="flex w-full">
-    <div class="w-32 p-10">
+  <div class="flex w-full p-5">
+    <div class="w-32 px-10">
       <button @click="toggle">
-        <span v-if="state.status === StatusPlayer.pause">Play</span
-        ><span v-else>Pause</span>
+        <span v-if="state.status === StatusPlayer.pause"
+          ><Icon name="ant-design:play-circle-filled" size="3rem" /></span
+        ><span v-else
+          ><Icon name="ant-design:pause-circle-filled" size="3rem"
+        /></span>
       </button>
     </div>
     <Loader v-if="!state.loaded" />
     <div v-else class="flex flex-wrap w-full">
-      <input
-        :value="state.currentPosition"
-        class="w-full focus:outline-none"
-        aria-label="Seek"
-        type="range"
-        step="0.01"
-        min="0"
-        max="100"
-        autocomplete="off"
-        role="slider"
-        @click.stop="() => true"
-        @change.stop="updateCurrentTime"
+      <Timeline
+        :detail-current-time="detailCurrentTime"
+        :detail-duration="detailDuration"
+        :duration="state.duration || 0"
+        :current-time="state.currentTime"
+        :current-position="state.currentPosition"
+        @updateCurrentTime="updateCurrentTime"
       />
-      <strong>
-        {{ $formatTime(detailCurrentTime.hours) }}:{{
-          $formatTime(detailCurrentTime.minutes)
-        }}:{{ $formatTime(detailCurrentTime.seconds) }}
-      </strong>
-      <strong class="ml-10">
-        {{ $formatTime(detailDuration.hours) }}:{{
-          $formatTime(detailDuration.minutes)
-        }}:{{ $formatTime(detailDuration.seconds) }}
-      </strong>
+      <Timer :current-time="detailCurrentTime" /><span
+        class="mx-3 text-xs font-base"
+        >//</span
+      >
+      <Timer :current-time="detailDuration" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import {calculateTotalValue, typeDuration} from '../helpers/player';
+import {calculateTotalValue} from '../../helpers/player';
+import Timeline from './Timeline.vue';
+import Timer from './Timer.vue';
 
 enum StatusPlayer {
   play = 'play',
   pause = 'pause',
 }
 
-const props = defineProps({
-  src: {
-    type: String,
-    required: true,
-  },
-});
+const props = defineProps<{src: string}>();
 // never change
 const type = 'audio/mpeg';
 // audio tag
@@ -117,13 +107,9 @@ watch(
   () => state.currentTime,
   () =>
     (state.currentPosition = audioPlayerElement.value
-      ? parseInt(
-          (
-            (audioPlayerElement.value.currentTime /
-              audioPlayerElement.value.duration) *
-            100
-          ).toString(),
-        )
+      ? (audioPlayerElement.value.currentTime /
+          audioPlayerElement.value.duration) *
+        100
       : 0),
 );
 
@@ -176,50 +162,3 @@ const reset = () => {
   }
 };
 </script>
-
-<style scoped>
-input[type='range'] {
-  @apply relative appearance-none overflow-hidden cursor-pointer h-3 border-t border-transparent rounded-lg mx-3;
-}
-
-::-webkit-slider-runnable-track {
-  @apply bg-accent;
-}
-
-::-moz-range-track {
-  @apply h-3
-   bg-accent;
-}
-
-::-webkit-slider-thumb {
-  @apply w-3 h-3 appearance-none border-2 border-yellowDs shadow-thumb rounded-xl bg-yellowDs;
-}
-
-::-moz-range-thumb {
-  @apply w-2 h-3 bg-yellowDs border-2 rounded-xl border-yellowDs shadow-thumb;
-}
-
-::-ms-thumb {
-  @apply w-2 h-3 bg-yellowDs border-2 rounded-xl border-yellowDs shadow-thumb;
-}
-
-::-ms-track {
-  @apply h-1.5 bg-accent text-transparent border-0;
-}
-
-::-ms-fill-lower {
-  @apply h-1.5 bg-yellowDs;
-}
-
-::-ms-ticks-after {
-  @apply hidden;
-}
-
-::-ms-ticks-before {
-  @apply hidden;
-}
-
-::-ms-tooltip {
-  @apply hidden;
-}
-</style>

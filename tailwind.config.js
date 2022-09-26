@@ -6,7 +6,8 @@ module.exports = {
       colors: {
         darkPurple: '#3C0C55',
         yellowDs: '#FFE40F',
-        accent: '#a700ff',
+        purpleDs: '#9123CB',
+        haiti: '#1A0724',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

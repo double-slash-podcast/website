@@ -1,4 +1,4 @@
-export type typeDuration = {hours: number; minutes: number; seconds: number};
+import {typeDuration} from '~~/declaration';
 
 /**
  * get duration for media file
