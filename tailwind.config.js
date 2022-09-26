@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         darkPurple: '#3C0C55',
         yellowDs: '#FFE40F',
-        purpleDS: '#9123CB',
+        purpleDs: '#9123CB',
         haiti: '#1A0724',
       },
       backgroundImage: {

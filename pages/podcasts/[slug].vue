@@ -73,7 +73,7 @@ if (!episode) {
               >
                 <a :href="link.url" target="_blank"
                   ><span
-                    class="font-bold capitalize text-purpleDS hover:text-purple-900"
+                    class="font-bold capitalize text-purpleDs hover:text-purple-900"
                     >{{ link.title }}</span
                   >
                   -
