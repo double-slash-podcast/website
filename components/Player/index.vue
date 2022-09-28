@@ -3,18 +3,19 @@
     <source :src="props.src" :type="type" />
   </audio>
   <div class="flex w-full p-5">
-    <div class="w-32 px-10">
-      <button @click="toggle">
-        <span v-if="state.status === StatusPlayer.pause"
-          ><Icon name="ant-design:play-circle-filled" size="3rem" /></span
-        ><span v-else
-          ><Icon name="ant-design:pause-circle-filled" size="3rem"
-        /></span>
-      </button>
+    <div class="w-24 px-10">
+      <ButtonPlayer
+        :value="state.loadedProgress"
+        :status="state.status"
+        :width="65"
+        :height="65"
+        :size="4"
+        @click="toggle"
+      />
     </div>
     <Loader v-if="!state.loaded" />
     <div v-else class="flex flex-wrap w-full">
-      <Timeline
+      <TimelinePlayer
         :detail-current-time="detailCurrentTime"
         :detail-duration="detailDuration"
         :duration="state.duration || 0"
@@ -22,24 +23,20 @@
         :current-position="state.currentPosition"
         @updateCurrentTime="updateCurrentTime"
       />
-      <Timer :current-time="detailCurrentTime" /><span
+      <TimerPlayer :current-time="detailCurrentTime" /><span
         class="mx-3 text-xs font-base"
         >//</span
       >
-      <Timer :current-time="detailDuration" />
+      <TimerPlayer :current-time="detailDuration" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import {calculateTotalValue} from '../../helpers/player';
-import Timeline from './Timeline.vue';
-import Timer from './Timer.vue';
-
-enum StatusPlayer {
-  play = 'play',
-  pause = 'pause',
-}
+import ButtonPlayer from './ButtonPlayer.vue';
+import TimelinePlayer from './TimelinePlayer.vue';
+import TimerPlayer from './TimerPlayer.vue';
 
 const props = defineProps<{src: string}>();
 // never change
@@ -51,7 +48,7 @@ const state: {
   // duration of sound
   duration: number | null;
   // status player
-  status: StatusPlayer;
+  status: typeStatusPlayer;
   // currentTime played
   currentTime: number;
   // speed paly rate
@@ -60,13 +57,16 @@ const state: {
   currentPosition: number;
   // sound is loaded
   loaded: boolean;
+  // loaded percentage
+  loadedProgress: number;
 } = reactive({
   duration: 0,
-  status: StatusPlayer.pause,
+  status: 'pause',
   currentTime: 0,
   playbackRate: 1,
   currentPosition: 0,
   loaded: false,
+  loadedProgress: 0,
 });
 
 onMounted(() => {
@@ -86,6 +86,20 @@ onMounted(() => {
     audioPlayerElement.value.addEventListener('timeupdate', () => {
       state.currentTime = audioPlayerElement.value?.currentTime || 0;
     });
+
+    /** progress data load */
+    const load = () => {
+      if (!audioPlayerElement.value) return;
+      // length of buffered
+      const c = audioPlayerElement.value?.buffered.length || 1;
+
+      state.loadedProgress =
+        (audioPlayerElement.value?.buffered.end(c - 1) /
+          audioPlayerElement.value?.duration) *
+        100;
+    };
+    audioPlayerElement.value.addEventListener('progress', load);
+    audioPlayerElement.value.addEventListener('loadedmetadata', load);
 
     // sound is ended
     audioPlayerElement.value.addEventListener('ended', () => {
@@ -133,10 +147,10 @@ const detailCurrentTime = computed(
 const toggle = () => {
   if (state.status === 'pause') {
     audioPlayerElement.value?.play();
-    state.status = StatusPlayer.play;
+    state.status = 'play';
   } else {
     audioPlayerElement.value?.pause();
-    state.status = StatusPlayer.pause;
+    state.status = 'pause';
   }
 };
 

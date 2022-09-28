@@ -1,5 +1,3 @@
-import {BaseInfosType, PodcastInfosType} from './declaration';
-
 export const baseInfos: BaseInfosType = {
   siteUrl: 'https://slash-podcast.fr',
   email: 'info@slash-podcast.fr',

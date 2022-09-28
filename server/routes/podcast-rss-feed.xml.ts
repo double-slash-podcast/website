@@ -5,7 +5,6 @@ import RSS from 'rss';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import {serverQueryContent} from '#content/server';
-import {PodcastInfosType} from '~/declaration';
 
 /**
  * get the list of podcasts from content/podcasts

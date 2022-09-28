@@ -1,5 +1,3 @@
-import {typeDuration} from '~~/declaration';
-
 /**
  * get duration for media file
  * @param length: number

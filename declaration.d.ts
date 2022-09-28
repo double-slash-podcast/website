@@ -1,6 +1,6 @@
-declare module 'read-markdown';
+// declare module 'read-markdown';
 
-export type BaseInfosType = {
+type BaseInfosType = {
   siteUrl: string;
   email: string;
   titleDefault: string;
@@ -10,7 +10,7 @@ export type BaseInfosType = {
   channelID: string;
 };
 
-export type PodcastInfosType = {
+type PodcastInfosType = {
   title: string;
   // baseline
   subtitle: string;
@@ -36,7 +36,7 @@ export type PodcastInfosType = {
   timeToLive: number;
 };
 
-export type PodcastContentType = {
+type PodcastContentType = {
   _path: string;
   title: string;
   description: string;
@@ -59,7 +59,7 @@ export type PodcastContentType = {
   body: {type: string; children: [][]; toc: {}[]};
 };
 
-export type PodcastItems = {
+type PodcastItems = {
   title: string;
   subtitle: string;
   url: string;
@@ -81,6 +81,6 @@ declare module '@nuxt/schema' {
   }
 }
 
-export type typeDuration = {hours: number; minutes: number; seconds: number};
+type typeDuration = {hours: number; minutes: number; seconds: number};
 
-export {};
+type typeStatusPlayer = 'play' | 'pause';

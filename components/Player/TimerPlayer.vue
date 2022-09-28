@@ -7,8 +7,6 @@
 </template>
 
 <script setup lang="ts">
-import {typeDuration} from '~~/declaration';
-
 const props = defineProps<{
   currentTime: typeDuration;
 }>();
