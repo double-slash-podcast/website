@@ -9,9 +9,10 @@ defineProps({
 
 <template>
   <header
-    class="grid col-span-1 overflow-hidden bg-darkPurple place-items-center"
+    class="relative grid col-span-1 overflow-hidden bg-darkPurple place-items-center"
     :class="`h-[${height}px]`"
   >
+    <Navbar />
     <div class="z-10 col-start-1 row-start-1">
       <!-- titre -->
       <slot name="title">
