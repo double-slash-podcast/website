@@ -17,18 +17,28 @@ guid: ab1b72df509cb2a1ec871478816c4223
 description: "Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple. Retrouvez la vidéo de l'enregistrement sur le Youtube de DoubleSlash Les slides utilisés pour l'épisode https://slides.com/goodmotion/state-of-web-platform Pour la toute première fois, tous les principaux fournisseurs de navigateurs se sont réunis pour..."
 links:
   [
-    {title: 'Interop 2022: browsers working together to improve the web for developers', url: 'https://web.dev/interop-2022/'},
+    {
+      title: 'Interop 2022: browsers working together to improve the web for developers',
+      url: 'https://web.dev/interop-2022/',
+    },
     {title: 'State of CSS 2022', url: 'https://web.dev/state-of-css-2022'},
-    {title: "What's new for the web platform", url: 'https://youtu.be/5b4YcLB4DVI'},
-    {title: 'Bringing page transitions to the web', url: 'https://youtu.be/JCJUPJ_zDQ4'},
+    {
+      title: "What's new for the web platform",
+      url: 'https://youtu.be/5b4YcLB4DVI',
+    },
+    {
+      title: 'Bringing page transitions to the web',
+      url: 'https://youtu.be/JCJUPJ_zDQ4',
+    },
     {title: 'State of CSS', url: 'https://youtu.be/Xy9ZXRRgpLk'},
-    {title: "What's new in Safari and WebKit", url: 'https://developer.apple.com/videos/play/wwdc2022/10048'}
+    {
+      title: "What's new in Safari and WebKit",
+      url: 'https://developer.apple.com/videos/play/wwdc2022/10048',
+    },
   ]
-
 ---
 
 ## Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
-
 
 **Les slides utilisés pour l'épisode [https://slides.com/goodmotion/state-of-web-platform](https://slides.com/goodmotion/state-of-web-platform)**
 
@@ -43,7 +53,6 @@ Suite à la Google IO 2022, la conférence annuelle Google pour les développeur
 Également, suite à la WWDC 2022, la conférence annuelle Apple pour les développeurs, différentes vidéos ont été publiées pour présenter les évolutions de Safari et de WebKit.
 
 Nous avons visionné ces vidéos pour vous faire un résumé des principales fonctionnalités implémentées ou qui vont être implémentées dans les navigateurs.
-
 
 Bonne écoute !
 
