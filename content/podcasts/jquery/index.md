@@ -6,7 +6,7 @@ categories:
   - Technology
 duration: 3611
 dsSlug: DS_009_jquery
-episodeNumber: 9
+episodeNumber: 09
 episodeType: full
 explicit: false
 season: 1

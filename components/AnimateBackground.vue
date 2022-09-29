@@ -18,6 +18,6 @@ const props = defineProps({
 });
 
 const rowCount = computed(() => {
-  return Math.round(props.height / 55);
+  return Math.round(props.height / 60);
 });
 </script>

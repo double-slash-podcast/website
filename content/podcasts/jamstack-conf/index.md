@@ -7,7 +7,7 @@ dsSlug: DS_006_janstack_conf
 author: Double slash
 duration: 4483
 season: 1
-episodeNumber: 6
+episodeNumber: 06
 episodeType: full
 explicit: false
 categories:

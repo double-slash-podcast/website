@@ -1,31 +1,35 @@
 <template>
   <div>
     <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul class="flex h-8 min-w-full space-x-3 shrink-0 animate-slideLeft1">
+      <ul
+        class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideLeft1"
+      >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" class="w-6 h-6 grayscale" />
+          <Icon :name="logo" size="40" class="grayscale" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideLeft2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" class="w-6 h-6 grayscale" />
+          <Icon :name="logo" size="40" class="grayscale" />
         </li>
       </ul>
     </div>
     <!-- 2 eme ligne -->
     <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul class="flex h-8 min-w-full space-x-3 shrink-0 animate-slideRight1">
+      <ul
+        class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideRight1"
+      >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" class="w-6 h-6 grayscale" />
+          <Icon :name="logo" size="40" class="grayscale" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideRight2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" class="w-6 h-6 grayscale" />
+          <Icon :name="logo" size="40" class="grayscale" />
         </li>
       </ul>
     </div>

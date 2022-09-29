@@ -7,7 +7,7 @@ dsSlug: DS_004_ecommerce_statique
 author: Double slash
 duration: 3880
 season: 1
-episodeNumber: 4
+episodeNumber: 04
 episodeType: full
 explicit: false
 categories:
