@@ -11,6 +11,8 @@ defineProps({
 });
 </script>
 <template>
+
+  <section class="max-w-3xl m-auto my-8">
   <div class="max-w-3xl m-auto my-8">
     <h3
       class="mb-4 text-2xl text-center text-white"
@@ -19,5 +21,5 @@ defineProps({
       {{ title }}
     </h3>
     <slot />
-  </div>
+  </section>
 </template>

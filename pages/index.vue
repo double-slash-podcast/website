@@ -40,6 +40,9 @@
       </HeadingsSection>
 
       <LastEpisodes class="mb-24" />
+
+      <Cohost></Cohost>
+      <p>kfdfdskffsdklsdjf</p>
     </main>
   </div>
 </template>
