@@ -43,7 +43,7 @@
   "lint-staged": {
     "*.{js,vue,ts}": [
       "pnpm lint",
-      "pnpm format-write",
+      "pnpm prettier --write",
       "pnpm test run related  -- --passWithNoTests"
     ]
   },
