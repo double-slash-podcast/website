@@ -10,7 +10,7 @@ export const baseInfos: BaseInfosType = {
     'https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com',
   prefixAudioDev: 'https://double-slash.ams3.cdn.digitaloceanspaces.com',
   // https://www.youtube.com/feeds/videos.xml?channel_id=
-  channelID: 'UCp5DGBAX2XNJXeOVAo7bICQ',
+  youtubeChannelId: 'UCp5DGBAX2XNJXeOVAo7bICQ',
 };
 
 export const podcastInfos: PodcastInfosType = {

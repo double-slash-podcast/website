@@ -72,7 +72,7 @@ const props = defineProps<{
 /** range */
 
 input[type='range'] {
-  @apply appearance-none bg-left-top border-none rounded-full text-purpleDs h-1 m-0 p-0 w-full bg-transparent absolute top-[0%] z-10 focus:outline-none block transition-shadow;
+  @apply appearance-none bg-left-top border-none rounded-full text-purpleDs h-1 m-0 p-0 w-full bg-transparent absolute top-[0%] z-10 focus:outline-none block transition-shadow cursor-pointer;
 }
 
 /* the track */

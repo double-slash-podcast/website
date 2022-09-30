@@ -8,7 +8,7 @@ type BaseInfosType = {
   descriptionDefault: string;
   prefixAudio: string;
   prefixAudioDev: string;
-  channelID: string;
+  youtubeChannelId: string;
 };
 
 type PodcastInfosType = {

@@ -12,23 +12,23 @@
       <circle
         :cx="width / 2"
         :cy="width / 2"
-        :r="width / 2 - size"
+        :r="width / 2 - size - 0.2"
         fill="none"
         :stroke-width="size"
       />
       <circle
-        :style="`--val: ${props.value || 0};`"
         :cx="width / 2"
         :cy="width / 2"
-        :r="width / 2 - size"
+        :r="width / 2 - size - 0.2"
         fill="none"
         :stroke-width="size"
         pathLength="100"
       />
     </svg>
     <div
-      v-if="load"
-      class="flex items-center justify-center w-full h-full rounded-full bg-yellowDs"
+      v-if="load === true"
+      class="flex items-center justify-center rounded-full bg-yellowDs"
+      :style="`width: ${width - size}px; height:${height - size}px;`"
     >
       <Loader />
     </div>
@@ -61,7 +61,7 @@ const props = withDefaults(
     width?: number;
     /** in px */
     height?: number;
-    value: number;
+    value?: number;
     size?: number;
     load: boolean;
   }>(),
@@ -70,8 +70,12 @@ const props = withDefaults(
     height: 100,
     size: 6,
     load: false,
+    value: 0,
   },
 );
+
+// css calc on  stroke-dashoffset don't work on safari and firefox
+const val = computed(() => 100 - props.value);
 </script>
 
 <style scoped>
@@ -86,7 +90,7 @@ svg.progressCircle circle:first-child {
 svg.progressCircle circle:last-child {
   @apply stroke-purpleDs;
   stroke-dasharray: 100;
-  stroke-dashoffset: calc(100 - var(--val));
+  stroke-dashoffset: v-bind('val');
   transition: stroke-dashoffset 0.5s linear;
 }
 </style>

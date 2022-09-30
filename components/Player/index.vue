@@ -2,19 +2,29 @@
   <audio ref="audioPlayerElement" preload="auto">
     <source :src="props.src" :type="type" />
   </audio>
-  <div class="flex w-full p-5">
-    <div class="flex justify-center w-24 px-10">
+  <div v-if="props.src" class="flex w-full p-5">
+    <div class="flex justify-center px-10 w-34">
+      <button
+        class="mr-2"
+        title="back to 10 seconds"
+        :disabled="state.currentTime < 10"
+        :aria-disabled="state.currentTime < 10"
+        @click="skip(-10)"
+      >
+        <Icon name="fluent:skip-back-10-24-filled" />
+      </button>
       <ButtonPlayer
         :value="state.loadedProgress"
         :status="state.status"
         :width="65"
         :height="65"
         :size="4"
-        :load="
-          state.totalBuffered < state.currentTime && state.currentTime !== 0
-        "
+        :load="state.totalBuffered < state.currentTime"
         @click="toggle"
       />
+      <button class="ml-2" title="forward to 10 seconds" @click="skip(+10)">
+        <Icon name="fluent:skip-forward-10-24-filled" />
+      </button>
     </div>
     <Loader v-if="!state.loaded" />
     <div v-else class="flex flex-wrap w-full">
@@ -28,12 +38,17 @@
         "
         @updateCurrentTime="updateCurrentTime"
       />
-      <TimerPlayer :current-time="detailCurrentTime" /><span
-        class="mx-3 text-xs font-base"
-        >//</span
-      >
-      <TimerPlayer :current-time="detailDuration" />
-      <SpeedPlayer :speed="state.playbackRate" @change="changeSpeed" />
+      <div class="flex items-center w-full">
+        <TimerPlayer :current-time="detailCurrentTime" /><span
+          class="mx-3 text-xs font-base"
+          >//</span
+        >
+        <TimerPlayer :current-time="detailDuration" />
+        <div class="flex-1 mx-5 text-sm font-headings">
+          {{ props.title }}
+        </div>
+        <SpeedPlayer :speed="state.playbackRate" @change="changeSpeed" />
+      </div>
     </div>
   </div>
 </template>
@@ -45,9 +60,21 @@ import TimelinePlayer from './TimelinePlayer.vue';
 import TimerPlayer from './TimerPlayer.vue';
 import SpeedPlayer from './SpeedPlayer.vue';
 
-const props = withDefaults(defineProps<{src: string | undefined}>(), {
-  src: undefined,
-});
+const props = withDefaults(
+  defineProps<{
+    src: string | undefined;
+    title: string | undefined;
+    status: typeStatusPlayer;
+  }>(),
+  {
+    src: undefined,
+    title: undefined,
+  },
+);
+
+const emit = defineEmits<{
+  (e: 'statusChange', status: typeStatusPlayer): void;
+}>();
 
 // never change
 const type = 'audio/mpeg';
@@ -107,7 +134,6 @@ const initPlayer = (withPlay = false) => {
     state.duration = 0;
     state.currentTime = 0;
     state.currentPosition = 0;
-    state.loaded = false;
     state.loadedProgress = 0;
     state.totalBuffered = 0;
     // first load
@@ -144,6 +170,7 @@ const resetPlayer = (init = false) => {
     audioPlayerElement.value.pause();
     audioPlayerElement.value.currentTime = 0;
     state.status = 'pause';
+    emit('statusChange', state.status);
     // first load
     audioPlayerElement.value.removeEventListener('canplay', () => {
       state.loaded = true;
@@ -191,6 +218,14 @@ watch(
       : 0),
 );
 
+watch(
+  () => props.status,
+  () => {
+    // avoid infinite loops
+    if (props.status !== state.status) toggle();
+  },
+);
+
 // get object for duration
 const detailDuration = computed(
   (): typeDuration =>
@@ -216,6 +251,8 @@ const toggle = () => {
     audioPlayerElement.value?.pause();
     state.status = 'pause';
   }
+
+  emit('statusChange', state.status);
 };
 
 /** update currentTime from input range */
@@ -245,5 +282,11 @@ const changeSpeed = (speed: typeSpeedPlayer) => {
   // set play rate
   state.playbackRate = speed;
   audioPlayerElement.value.playbackRate = speed;
+};
+
+const skip = (value: number) => {
+  if (!audioPlayerElement.value) return;
+  const to = audioPlayerElement.value.currentTime + value;
+  audioPlayerElement.value.currentTime = to > 0 ? to : 0;
 };
 </script>
