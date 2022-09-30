@@ -45,7 +45,10 @@ import TimelinePlayer from './TimelinePlayer.vue';
 import TimerPlayer from './TimerPlayer.vue';
 import SpeedPlayer from './SpeedPlayer.vue';
 
-const props = defineProps<{src: string | undefined}>();
+const props = withDefaults(defineProps<{src: string | undefined}>(), {
+  src: undefined,
+});
+
 // never change
 const type = 'audio/mpeg';
 // audio tag
@@ -135,7 +138,7 @@ const initPlayer = (withPlay = false) => {
 };
 
 /** reset player */
-const resetPlayer = () => {
+const resetPlayer = (init = false) => {
   if (audioPlayerElement.value) {
     // stop
     audioPlayerElement.value.pause();
@@ -158,18 +161,22 @@ const resetPlayer = () => {
     audioPlayerElement.value.removeEventListener('loadedmetadata', load);
     // sound is ended
     audioPlayerElement.value.removeEventListener('ended', reset);
-    // reinit player
-    initPlayer(true);
+    if (init) {
+      // reinit player
+      initPlayer(true);
+    }
   }
 };
 
 onMounted(initPlayer);
 
+onUnmounted(resetPlayer);
+
 // reload src when props change
 watch(
   () => props.src,
   () => {
-    resetPlayer();
+    resetPlayer(true);
   },
 );
 
