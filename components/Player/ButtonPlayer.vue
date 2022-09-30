@@ -1,5 +1,8 @@
 <template>
-  <div class="relative flex items-center justify-center">
+  <div
+    class="relative flex items-center justify-center"
+    :style="`width: ${width}px; height:${height}px;`"
+  >
     <svg
       class="progressCircle"
       :width="`${width}px`"
@@ -23,19 +26,26 @@
         pathLength="100"
       />
     </svg>
+    <div
+      v-if="load"
+      class="flex items-center justify-center w-full h-full rounded-full bg-yellowDs"
+    >
+      <Loader />
+    </div>
     <button
+      v-else
       :aria-label="props.status === 'pause' ? 'play' : 'pause'"
       :title="props.status === 'pause' ? 'play' : 'pause'"
       @click="$emit('click')"
     >
       <span v-if="props.status === 'pause'"
         ><Icon
-          class="text-purpleDs"
+          class="text-yellowDs"
           name="ant-design:play-circle-filled"
           :size="`${width - size}px`" /></span
       ><span v-else
         ><Icon
-          class="text-purpleDs"
+          class="text-yellowDs"
           name="ant-design:pause-circle-filled"
           :size="`${width - size}px`"
       /></span>
@@ -53,11 +63,13 @@ const props = withDefaults(
     height?: number;
     value: number;
     size?: number;
+    load: boolean;
   }>(),
   {
     width: 100,
     height: 100,
     size: 6,
+    load: false,
   },
 );
 </script>
@@ -68,11 +80,11 @@ svg.progressCircle {
 }
 
 svg.progressCircle circle:first-child {
-  @apply stroke-purpleDs;
+  @apply stroke-yellowDs;
 }
 
 svg.progressCircle circle:last-child {
-  @apply stroke-yellowDs;
+  @apply stroke-purpleDs;
   stroke-dasharray: 100;
   stroke-dashoffset: calc(100 - var(--val));
   transition: stroke-dashoffset 0.5s linear;

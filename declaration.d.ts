@@ -7,6 +7,7 @@ type BaseInfosType = {
   imageDefault: string;
   descriptionDefault: string;
   prefixAudio: string;
+  prefixAudioDev: string;
   channelID: string;
 };
 
@@ -84,3 +85,5 @@ declare module '@nuxt/schema' {
 type typeDuration = {hours: number; minutes: number; seconds: number};
 
 type typeStatusPlayer = 'play' | 'pause';
+
+type typeSpeedPlayer = 0.5 | 0.75 | 1.0 | 1.25 | 1.5 | 1.75 | 2.0;

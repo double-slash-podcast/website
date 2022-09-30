@@ -43,10 +43,5 @@
       <Cohost></Cohost>
       <p>kfdfdskffsdklsdjf</p>
     </main>
-    <div class="w-1/2">
-      <LazyPlayer
-        src="https:///double-slash.ams3.cdn.digitaloceanspaces.com/DS_040_webapi22.mp3"
-      />
-    </div>
   </div>
 </template>

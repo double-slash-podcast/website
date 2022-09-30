@@ -1,4 +1,3 @@
-import {defineNuxtConfig} from 'nuxt';
 import {baseInfos, podcastInfos} from './config';
 
 export default defineNuxtConfig({
@@ -10,6 +9,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
     '@nathanchase/nuxt-dayjs-module',
+    '@pinia/nuxt',
   ],
   dayjs: {},
   tailwindcss: {
@@ -32,6 +32,7 @@ export default defineNuxtConfig({
     public: {
       ...baseInfos,
       podcastInfos,
+      isDev: process.env.NODE_ENV === 'development',
     },
   },
 });

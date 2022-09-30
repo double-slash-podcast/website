@@ -3,13 +3,16 @@
     <source :src="props.src" :type="type" />
   </audio>
   <div class="flex w-full p-5">
-    <div class="w-24 px-10">
+    <div class="flex justify-center w-24 px-10">
       <ButtonPlayer
         :value="state.loadedProgress"
         :status="state.status"
         :width="65"
         :height="65"
         :size="4"
+        :load="
+          state.totalBuffered < state.currentTime && state.currentTime !== 0
+        "
         @click="toggle"
       />
     </div>
@@ -20,7 +23,9 @@
         :detail-duration="detailDuration"
         :duration="state.duration || 0"
         :current-time="state.currentTime"
-        :current-position="state.currentPosition"
+        :current-position="
+          isNaN(state.currentPosition) ? 0 : state.currentPosition
+        "
         @updateCurrentTime="updateCurrentTime"
       />
       <TimerPlayer :current-time="detailCurrentTime" /><span
@@ -28,6 +33,7 @@
         >//</span
       >
       <TimerPlayer :current-time="detailDuration" />
+      <SpeedPlayer :speed="state.playbackRate" @change="changeSpeed" />
     </div>
   </div>
 </template>
@@ -37,8 +43,9 @@ import {calculateTotalValue} from '../../helpers/player';
 import ButtonPlayer from './ButtonPlayer.vue';
 import TimelinePlayer from './TimelinePlayer.vue';
 import TimerPlayer from './TimerPlayer.vue';
+import SpeedPlayer from './SpeedPlayer.vue';
 
-const props = defineProps<{src: string}>();
+const props = defineProps<{src: string | undefined}>();
 // never change
 const type = 'audio/mpeg';
 // audio tag
@@ -52,13 +59,15 @@ const state: {
   // currentTime played
   currentTime: number;
   // speed paly rate
-  playbackRate: number;
+  playbackRate: typeSpeedPlayer;
   // position for input range
   currentPosition: number;
   // sound is loaded
   loaded: boolean;
   // loaded percentage
   loadedProgress: number;
+  // total buffered
+  totalBuffered: number;
 } = reactive({
   duration: 0,
   status: 'pause',
@@ -67,53 +76,101 @@ const state: {
   currentPosition: 0,
   loaded: false,
   loadedProgress: 0,
+  totalBuffered: 0,
 });
 
-onMounted(() => {
-  if (audioPlayerElement.value) {
+/** progress data load */
+const load = () => {
+  if (!audioPlayerElement.value) return;
+  if (!state.loaded) return;
+  // length of buffered
+  const c = audioPlayerElement.value?.buffered.length || 1;
+  state.totalBuffered = audioPlayerElement.value?.buffered.end(c - 1);
+  state.loadedProgress =
+    (audioPlayerElement.value?.buffered.end(c - 1) /
+      audioPlayerElement.value?.duration) *
+    100;
+};
+
+const updateDuration = () => {
+  state.duration = audioPlayerElement.value
+    ? +audioPlayerElement.value.duration
+    : Infinity;
+};
+
+/** init player on mounted or when src change */
+const initPlayer = (withPlay = false) => {
+  if (audioPlayerElement.value && props.src) {
+    state.duration = 0;
+    state.currentTime = 0;
+    state.currentPosition = 0;
+    state.loaded = false;
+    state.loadedProgress = 0;
+    state.totalBuffered = 0;
     // first load
     audioPlayerElement.value?.load();
     audioPlayerElement.value.addEventListener('canplay', () => {
       state.loaded = true;
     });
     // update duration
-    audioPlayerElement.value.addEventListener('loadedmetadata', () => {
-      state.duration = audioPlayerElement.value
-        ? +audioPlayerElement.value.duration
-        : Infinity;
-    });
+    audioPlayerElement.value.addEventListener('loadedmetadata', updateDuration);
     // update currentTime
     audioPlayerElement.value.addEventListener('timeupdate', () => {
       state.currentTime = audioPlayerElement.value?.currentTime || 0;
     });
 
-    /** progress data load */
-    const load = () => {
-      if (!audioPlayerElement.value) return;
-      // length of buffered
-      const c = audioPlayerElement.value?.buffered.length || 1;
-
-      state.loadedProgress =
-        (audioPlayerElement.value?.buffered.end(c - 1) /
-          audioPlayerElement.value?.duration) *
-        100;
-    };
     audioPlayerElement.value.addEventListener('progress', load);
     audioPlayerElement.value.addEventListener('loadedmetadata', load);
 
     // sound is ended
-    audioPlayerElement.value.addEventListener('ended', () => {
-      reset();
-    });
+    audioPlayerElement.value.addEventListener('ended', reset);
+
     // set play rate
     audioPlayerElement.value.playbackRate = state.playbackRate;
+
+    if (withPlay) {
+      toggle();
+    }
   }
-});
+};
+
+/** reset player */
+const resetPlayer = () => {
+  if (audioPlayerElement.value) {
+    // stop
+    audioPlayerElement.value.pause();
+    audioPlayerElement.value.currentTime = 0;
+    state.status = 'pause';
+    // first load
+    audioPlayerElement.value.removeEventListener('canplay', () => {
+      state.loaded = true;
+    });
+    // update duration
+    audioPlayerElement.value.removeEventListener(
+      'loadedmetadata',
+      updateDuration,
+    );
+    // update currentTime
+    audioPlayerElement.value.removeEventListener('timeupdate', () => {
+      state.currentTime = audioPlayerElement.value?.currentTime || 0;
+    });
+    audioPlayerElement.value.removeEventListener('progress', load);
+    audioPlayerElement.value.removeEventListener('loadedmetadata', load);
+    // sound is ended
+    audioPlayerElement.value.removeEventListener('ended', reset);
+    // reinit player
+    initPlayer(true);
+  }
+};
+
+onMounted(initPlayer);
 
 // reload src when props change
 watch(
   () => props.src,
-  () => audioPlayerElement.value?.load(),
+  () => {
+    resetPlayer();
+  },
 );
 
 // update currentPosition on play
@@ -174,5 +231,12 @@ const reset = () => {
     audioPlayerElement.value.currentTime = 0;
     state.currentTime = 0;
   }
+};
+
+const changeSpeed = (speed: typeSpeedPlayer) => {
+  if (!audioPlayerElement.value) return;
+  // set play rate
+  state.playbackRate = speed;
+  audioPlayerElement.value.playbackRate = speed;
 };
 </script>

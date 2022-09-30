@@ -1,16 +1,16 @@
-<script setup>
-const {$dayjs} = useNuxtApp();
+<script setup lang="ts">
+import {useStore} from '~~/stores';
 
-defineProps({
-  episode: {
-    type: Object,
-    required: true,
-  },
-  cta: {
-    type: Boolean,
-    default: false,
-  },
-});
+const {$dayjs} = useNuxtApp();
+const store = useStore();
+
+withDefaults(
+  defineProps<{
+    episode: PodcastContentType;
+    cta: boolean;
+  }>(),
+  {cta: false},
+);
 </script>
 
 <template>
@@ -31,7 +31,11 @@ defineProps({
         v-show="cta"
         class="flex items-center justify-end space-x-3 text-yellowDs"
       >
-        <Icon name="ic:baseline-play-circle-filled-white" size="30" />
+        <button
+          @click.stop.prevent="store.setDsSlug(episode.dsSlug, episode.title)"
+        >
+          <Icon name="ic:baseline-play-circle-filled-white" size="30" />
+        </button>
         <p>Ecouter l'episode //</p>
       </div>
     </div>
