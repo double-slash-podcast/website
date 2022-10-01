@@ -3,7 +3,7 @@
  * @param length: number
  * @returns {hours: number, seconds: number, minutes: number}
  */
-export const calculateTotalValue = (length: number): typeDuration => {
+export const useCalculateTotalValue = (length: number): typeDuration => {
   // hours
   const hours = Math.floor(length / 3600);
   // minutes

@@ -54,7 +54,6 @@
 </template>
 
 <script setup lang="ts">
-import {calculateTotalValue} from '../../helpers/player';
 import ButtonPlayer from './ButtonPlayer.vue';
 import TimelinePlayer from './TimelinePlayer.vue';
 import TimerPlayer from './TimerPlayer.vue';
@@ -230,7 +229,7 @@ watch(
 const detailDuration = computed(
   (): typeDuration =>
     state.duration
-      ? calculateTotalValue(state.duration)
+      ? useCalculateTotalValue(state.duration)
       : {hours: 0, seconds: 0, minutes: 0},
 );
 
@@ -238,7 +237,7 @@ const detailDuration = computed(
 const detailCurrentTime = computed(
   (): typeDuration =>
     state.currentTime
-      ? calculateTotalValue(state.currentTime)
+      ? useCalculateTotalValue(state.currentTime)
       : {hours: 0, seconds: 0, minutes: 0},
 );
 
