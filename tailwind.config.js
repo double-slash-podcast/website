@@ -41,13 +41,7 @@ module.exports = {
           '100%': {transform: 'translateX(100%)'},
         },
       },
-      boxShadow: {
-        thumb: '-100.1vw 0 0 100vw #ffe40f',
-      },
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-  ],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
