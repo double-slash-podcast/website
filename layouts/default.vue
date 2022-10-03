@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-haiti">
     <slot />
-    <div class="bg-gray-200/30">
+    <div class="bg-darkPurple">
       <LazyWrapperPlayer />
     </div>
   </div>

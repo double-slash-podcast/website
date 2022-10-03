@@ -2,8 +2,11 @@
   <audio ref="audioPlayerElement" preload="auto">
     <source :src="props.src" :type="type" />
   </audio>
-  <div v-if="props.src" class="flex w-full p-5">
-    <div class="flex justify-center px-10 w-34">
+  <div
+    v-if="props.src"
+    class="block w-full px-2 -translate-y-6 md:w-3/4 lg:w-1/2 md:m-auto sm:flex"
+  >
+    <div class="flex items-end justify-center">
       <button
         class="mr-2"
         title="back to 10 seconds"
@@ -11,7 +14,7 @@
         :aria-disabled="state.currentTime < 10"
         @click="skip(-10)"
       >
-        <Icon name="fluent:skip-back-10-24-filled" />
+        <Icon class="text-white" name="fluent:skip-back-10-24-filled" />
       </button>
       <ButtonPlayer
         :value="state.loadedProgress"
@@ -23,11 +26,19 @@
         @click="toggle"
       />
       <button class="ml-2" title="forward to 10 seconds" @click="skip(+10)">
-        <Icon name="fluent:skip-forward-10-24-filled" />
+        <Icon class="text-white" name="fluent:skip-forward-10-24-filled" />
       </button>
     </div>
+
     <Loader v-if="!state.loaded" />
-    <div v-else class="flex flex-wrap w-full">
+
+    <div
+      v-else
+      class="flex flex-wrap w-full text-white sm:translate-y-5 sm:ml-4"
+    >
+      <div class="flex-1 my-2 text-sm text-center sm:text-left font-headings">
+        {{ props.title }}
+      </div>
       <TimelinePlayer
         :detail-current-time="detailCurrentTime"
         :detail-duration="detailDuration"
@@ -38,15 +49,15 @@
         "
         @updateCurrentTime="updateCurrentTime"
       />
-      <div class="flex items-center w-full">
-        <TimerPlayer :current-time="detailCurrentTime" /><span
-          class="mx-3 text-xs font-base"
-          >//</span
-        >
-        <TimerPlayer :current-time="detailDuration" />
-        <div class="flex-1 mx-5 text-sm font-headings">
-          {{ props.title }}
+      <div class="flex items-center justify-between w-full">
+        <div class="flex">
+          <TimerPlayer :current-time="detailCurrentTime" /><span
+            class="mx-3 text-xs font-base"
+            >//</span
+          >
+          <TimerPlayer :current-time="detailDuration" />
         </div>
+
         <SpeedPlayer :speed="state.playbackRate" @change="changeSpeed" />
       </div>
     </div>
