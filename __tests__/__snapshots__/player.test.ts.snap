@@ -1,0 +1,17 @@
+// Vitest Snapshot v1
+
+exports[`test duration detail > get object with detailed duration 0:51:10 1`] = `
+{
+  "hours": 0,
+  "minutes": 51,
+  "seconds": 10,
+}
+`;
+
+exports[`test duration detail > get object with detailed duration 1:08:55 1`] = `
+{
+  "hours": 1,
+  "minutes": 8,
+  "seconds": 55,
+}
+`;

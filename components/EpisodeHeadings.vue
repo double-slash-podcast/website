@@ -1,16 +1,24 @@
-<script setup>
-const {$dayjs} = useNuxtApp();
+<script setup lang="ts">
+import {useStore} from '~~/stores';
 
-defineProps({
-  episode: {
-    type: Object,
-    required: true,
-  },
-  cta: {
-    type: Boolean,
-    default: false,
-  },
-});
+const {$dayjs} = useNuxtApp();
+const store = useStore();
+
+const props = withDefaults(
+  defineProps<{
+    episode: PodcastContentType;
+    cta: boolean;
+  }>(),
+  {cta: false},
+);
+
+const handlerClick = () => {
+  if (store.currentTitle !== props.episode.title) {
+    store.setDsSlug(props.episode.dsSlug, props.episode.title);
+  } else {
+    store.setStatusPlayer(store.statusPlayer === 'pause' ? 'play' : 'pause');
+  }
+};
 </script>
 
 <template>
@@ -31,7 +39,25 @@ defineProps({
         v-show="cta"
         class="flex items-center justify-end space-x-3 text-yellowDs"
       >
-        <Icon name="ic:baseline-play-circle-filled-white" size="30" />
+        <button @click.stop.prevent="handlerClick">
+          <Icon
+            v-if="
+              (store.currentTitle === episode.title &&
+                store.statusPlayer === 'pause') ||
+              store.currentTitle !== episode.title
+            "
+            name="ic:baseline-play-circle-filled-white"
+            size="30"
+          />
+          <Icon
+            v-else-if="
+              store.currentTitle === episode.title &&
+              store.statusPlayer === 'play'
+            "
+            name="ic:baseline-pause-circle-filled"
+            size="30"
+          />
+        </button>
         <p>Ecouter l'episode //</p>
       </div>
     </div>
@@ -43,4 +69,3 @@ defineProps({
     -2px 2px 0 #9123cb;
 }
 </style>
-s

@@ -14,7 +14,6 @@
 
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
-
     <main>
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">

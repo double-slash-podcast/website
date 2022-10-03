@@ -1,5 +1,3 @@
-import {BaseInfosType, PodcastInfosType} from './declaration';
-
 export const baseInfos: BaseInfosType = {
   siteUrl: 'https://slash-podcast.fr',
   email: 'info@slash-podcast.fr',
@@ -10,8 +8,9 @@ export const baseInfos: BaseInfosType = {
     'Le podcast sur le code, le développement web et les outils modernes.',
   prefixAudio:
     'https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com',
+  prefixAudioDev: 'https://double-slash.ams3.cdn.digitaloceanspaces.com',
   // https://www.youtube.com/feeds/videos.xml?channel_id=
-  channelID: 'UCp5DGBAX2XNJXeOVAo7bICQ',
+  youtubeChannelId: 'UCp5DGBAX2XNJXeOVAo7bICQ',
 };
 
 export const podcastInfos: PodcastInfosType = {
