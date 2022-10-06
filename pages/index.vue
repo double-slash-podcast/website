@@ -1,5 +1,17 @@
 <template>
-  <div>
+  <div class="relative">
+    <Icon
+      name="SlashIcon"
+      size="400"
+      design="fill-purple-800"
+      class="fixed top-[25%] z-8 opacity-20"
+    />
+    <Icon
+      name="SlashIcon"
+      size="200"
+      design="fill-purple-800"
+      class="hidden md:fixed top-[10%] right-0 z-8 opacity-20"
+    />
     <Header :height="400">
       <template #title>
         <Brand slash />
@@ -14,7 +26,7 @@
 
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
-    <main>
+    <main class="relative">
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center space-x-6">
@@ -41,7 +53,6 @@
       <LastEpisodes class="mb-24" />
 
       <Cohost></Cohost>
-      <p>kfdfdskffsdklsdjf</p>
     </main>
   </div>
 </template>
