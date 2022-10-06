@@ -4,7 +4,6 @@ const {data} = await useAsyncData('podcasts', () => {
   return queryContent('podcasts')
     .where({_extension: {$eq: 'md'}})
     .sort({episodeNumber: -1, $numeric: true})
-    .limit(9)
     .find();
 });
 </script>
@@ -15,7 +14,7 @@ const {data} = await useAsyncData('podcasts', () => {
     <main>
       <HeadingsSection title="tous les épisodes"></HeadingsSection>
 
-      <div class="sm:max-w-md sm:m-auto">
+      <!-- <div class="sm:max-w-md sm:m-auto">
         <label for="search" class="block m-auto text-sm font-medium text-white"
           >Recherche</label
         >
@@ -34,7 +33,7 @@ const {data} = await useAsyncData('podcasts', () => {
             >
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="divide-y divide-dashed divide-purpleDs">
         <EpisodeLink
