@@ -76,7 +76,7 @@ if (!episode) {
                 :key="link.title"
                 class="hover:underline underline-offset-4"
               >
-                <a :href="link.url" target="_blank"
+                <NuxtLink :to="link.url" target="_blank" class="cursor-pointer"
                   ><span
                     class="font-bold capitalize text-purpleDs hover:text-purple-900"
                     >{{ link.title }}</span
@@ -86,7 +86,7 @@ if (!episode) {
                     >{{ link.url }}
                     <Icon name="ri:external-link-line" size="15"
                   /></span>
-                </a>
+                </NuxtLink>
               </li>
             </ul>
           </TabPanel>
