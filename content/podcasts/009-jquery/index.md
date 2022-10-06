@@ -82,7 +82,4 @@ jQuery, est-ce que vous en avez encore besoin dans vos projets en 2020 ?
 
 - [https://w3techs.com/technologies/comparison/js-bootstrap,js-jquery](https://w3techs.com/technologies/comparison/js-bootstrap,js-jquery)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

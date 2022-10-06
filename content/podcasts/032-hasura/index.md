@@ -46,7 +46,4 @@ Bonne écoute.
 - [https://hasura.io/](https://hasura.io/)
 - [https://www.nhost.io/](https://www.nhost.io/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

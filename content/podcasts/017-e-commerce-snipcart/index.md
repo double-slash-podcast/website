@@ -50,7 +50,4 @@ Dans l'épisode, nous discutons avec François du monde de la JAMStack, des soci
 - [Blog Snipcart](https://snipcart.com/blog)
 - [Un exemple de site](https://www.mercredibiscuiterie.com/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

@@ -106,7 +106,4 @@ export default ...;
 - ESBuild (Go) vraiment jeune pas encore prêt pour la production. Par contre extrêmement rapide et très prometteur. [https://esbuild.github.io/](https://esbuild.github.io/)
 - WMR: [https://github.com/preactjs/wmr](https://github.com/preactjs/wmr)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

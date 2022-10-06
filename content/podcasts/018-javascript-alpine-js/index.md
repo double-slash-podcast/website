@@ -31,7 +31,4 @@ Nous vous laissons découvrir Alpine JS plus en détail en écoutant l'épisode 
 - [Repo github Alpine JS](https://github.com/alpinejs/alpine)
 - [Article sur Alpine JS](https://pixenjoy.com/notes/le-framework-alpinejs/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

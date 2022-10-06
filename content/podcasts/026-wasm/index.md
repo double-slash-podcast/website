@@ -34,7 +34,4 @@ Ivan Enderlin, nous explique comment Web Assembly fonctionne et pourquoi il faut
 - wasm-bindgen, [https://github.com/rustwasm/wasm-bindgen](https://github.com/rustwasm/wasm-bindgen)
 - The Rust and WebAssembly book, [https://rustwasm.github.io/docs/book/](https://rustwasm.github.io/docs/book/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

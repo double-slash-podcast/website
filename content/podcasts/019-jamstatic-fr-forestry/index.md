@@ -45,7 +45,4 @@ Nous vous laissons découvrir le service plus en détail en écoutant l'épisode
   - [https://twitter.com/FrankTLDR](https://twitter.com/FrankTLDR)
   - [https://github.com/DirtyF](https://github.com/DirtyF)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

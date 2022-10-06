@@ -61,7 +61,4 @@ Dans cet épisode, nous profitons de l’expertise d’olivier pour parler rapid
 - [Angular 13](https://blog.angular.io/angular-v13-is-now-available-cce66f7bc296)
 - [NGX Translate](http://www.ngx-translate.com/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

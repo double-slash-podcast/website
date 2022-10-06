@@ -65,7 +65,4 @@ Bonne écoute :)
 - [Discord redwoodjs](https://discord.com/invite/jjSYEQd)
 - [Tutorial redwoodjs](https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

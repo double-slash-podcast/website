@@ -34,7 +34,4 @@ Pour l'automatisation:
 - [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)
 - [Pipedream](https://pipedream.com/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

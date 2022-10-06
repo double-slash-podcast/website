@@ -30,7 +30,4 @@ Sinon, vous pouvez vous rendre directement sur le lien de la page dédiée aux r
 
 Bonne écoute !
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

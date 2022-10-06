@@ -161,7 +161,4 @@ C’est souvent un problème de définition de type un peu trop poussé.
 
 Bonne écoute !
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

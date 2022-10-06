@@ -52,7 +52,4 @@ La version 3 est une grosse refonte du framework qui nécessite un gros travail 
 - [GitHub Nuxt](https://github.com/nuxt)
 - [GitHub NuxtLabs](https://github.com/nuxtlabs)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

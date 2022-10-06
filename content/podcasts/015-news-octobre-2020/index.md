@@ -54,7 +54,4 @@ Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur l
 - [article fr](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/)
 - [article original](https://css-tricks.com/comparing-static-site-generator-build-times/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

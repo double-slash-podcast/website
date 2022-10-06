@@ -41,7 +41,4 @@ Wassim Chegham, **Senior Developer Advocate spécialisé JavaScript**
 - [Static Web Apps Emulator](https://github.com/manekinekko/swa-emulator)
 - [Acheter un arbre sur Ecologi](https://ecologi.com/wassimchegham?r=5facf70521660a001d024120)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

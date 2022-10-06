@@ -33,7 +33,4 @@ Cet épisode fait suite à un article publié sur le site [jamstatic.fr](https:/
 - [https://nextjs.org/](https://nextjs.org/)
 - [https://nuxtjs.org/](https://nuxtjs.org/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

@@ -39,7 +39,4 @@ description: 'Un passage en revue des news et releases de nos outils et technolo
 
 Bonne écoute !
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

@@ -34,7 +34,4 @@ On parle de blockchain, et de toutes les technos sous-jacentes (NFT,...). Commen
 
 Bonne écoute !
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

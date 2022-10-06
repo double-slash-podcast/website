@@ -27,7 +27,4 @@ Nous vous laissons découvrir le framework plus en détail en écoutant l'épiso
 - Vincent Le Goff,
   - [https://github.com/zekth](https://github.com/zekth)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

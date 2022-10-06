@@ -52,7 +52,4 @@ Aurélien Lavorel : [https://lumao.eu/](https://lumao.eu/) et [@LavoWeb](https:/
 - Exemple d'une solution GatsbyJS/Sylius https://github.com/Gatsbylius/Gatsbylius
 - Solution de tracking de livraison https://www.shipup.co/
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

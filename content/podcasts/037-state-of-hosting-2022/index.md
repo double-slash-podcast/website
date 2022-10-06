@@ -140,7 +140,4 @@ Les Startups et entreprises sans grosse équipe technique. Ou équipe qui ne veu
 
 Bonne écoute !
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

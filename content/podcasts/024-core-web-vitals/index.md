@@ -129,7 +129,4 @@ Réserver l'espace pour les éléments dynamiques, utiliser des skeletons pour l
 - [https://gtmetrix.com/](https://gtmetrix.com/)
 - [Ligthouse](https://developers.google.com/web/tools/lighthouse)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

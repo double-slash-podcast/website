@@ -59,7 +59,4 @@ Un service en early stage pour gérer un DB via une interface cloud.
 
 - [syncinc.so](https://syncinc.so)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

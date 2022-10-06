@@ -45,7 +45,4 @@ Nous vous laissons découvrir MeiliSearch et Rust plus en détail en écoutant l
 - [Getting started](https://docs.meilisearch.com/learn/getting_started/quick_start.html#download-and-launch)
 - [twitter](https://twitter.com/meilisearch)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

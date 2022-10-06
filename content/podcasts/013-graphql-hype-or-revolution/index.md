@@ -41,7 +41,4 @@ Pourquoi avons-nous besoin d'utiliser graphQL dans nos projets, quels sont les a
 - [Prisma](https://www.prisma.io/)
 - [Apollo GraphQL](https://github.com/apollographql)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

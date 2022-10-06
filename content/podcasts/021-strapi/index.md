@@ -39,7 +39,4 @@ Nous vous laissons découvrir le CMS Strapi plus en détail en écoutant l'épis
 - [Le forum](https://forum.strapi.io/)
 -
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors

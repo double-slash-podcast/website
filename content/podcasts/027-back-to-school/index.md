@@ -102,7 +102,4 @@ Encore en version bêta, il semble très prometteur.
 
 - [Fig](https://fig.io/)
 
-### Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+:Authors
