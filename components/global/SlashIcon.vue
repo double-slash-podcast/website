@@ -4,7 +4,7 @@
     width="90"
     height="125"
     viewBox="0 0 90 144"
-    :class="design"
+    :class="insideClass"
   >
     >
     <text
@@ -18,7 +18,7 @@
   </svg>
 </template>
 <script setup>
-const {design} = useAttrs();
+const {insideClass} = useAttrs();
 </script>
 <style></style>
 

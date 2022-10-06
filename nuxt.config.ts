@@ -35,4 +35,7 @@ export default defineNuxtConfig({
       isDev: process.env.NODE_ENV === 'development',
     },
   },
+  build: {
+    transpile: ['motion/vue', '@motionone/vue'],
+  },
 });
