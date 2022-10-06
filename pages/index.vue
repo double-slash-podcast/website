@@ -1,5 +1,26 @@
+<script setup>
+import {animate, scroll} from 'motion';
+onMounted(() => {
+  scroll(animate('#bigSlash', {x: 0, y: 100}));
+});
+</script>
+
 <template>
-  <div>
+  <div class="relative">
+    <Icon
+      id="bigSlash"
+      name="SlashIcon"
+      size="400"
+      inside-class="fill-purple-800"
+      class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
+    />
+    <Icon
+      id="tinySlash"
+      name="SlashIcon"
+      size="200"
+      inside-class="fill-purple-800"
+      class="hidden md:fixed top-[10%] right-0 z-8 opacity-20"
+    />
     <Header :height="400">
       <template #title>
         <Brand slash />
@@ -14,7 +35,7 @@
 
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
-    <main>
+    <main class="relative">
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center space-x-6">
@@ -41,7 +62,6 @@
       <LastEpisodes class="mb-24" />
 
       <Cohost></Cohost>
-      <p>kfdfdskffsdklsdjf</p>
     </main>
   </div>
 </template>

@@ -57,6 +57,7 @@
     "axios": "^0.27.2",
     "crypto": "^1.0.1",
     "hast-util-to-html": "^8.0.3",
+    "motion": "^10.14.2",
     "rss": "^1.2.2",
     "vue-lite-youtube-embed": "^1.0.4"
   }
