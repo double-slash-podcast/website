@@ -4,7 +4,7 @@
       name="SlashIcon"
       size="400"
       design="fill-purple-800"
-      class="fixed top-[25%] z-8 opacity-20"
+      class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
     />
     <Icon
       name="SlashIcon"
