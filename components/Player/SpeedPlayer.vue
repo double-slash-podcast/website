@@ -1,11 +1,17 @@
 <template>
   <Listbox v-model="selectedSpeed">
-    <ListboxButton>{{ selectedSpeed }}</ListboxButton>
-    <ListboxOptions>
+    <ListboxButton
+      class="relative px-2 font-bold rounded bg-yellowDs text-darkPurple hover:bg-yellow-400"
+      >{{ selectedSpeed }}x</ListboxButton
+    >
+    <ListboxOptions
+      class="absolute rounded right-2 bottom-3 bg-purple-50 text-darkPurple"
+    >
       <ListboxOption
         v-for="spe in selectedSpeeds"
         :key="spe.label"
         :value="spe.value"
+        class="px-2 rounded hover:bg-purple-200"
       >
         {{ spe.label }}
       </ListboxOption>
@@ -34,12 +40,12 @@ const selectedSpeed = ref<typeSpeedPlayer>(props.speed);
 
 const selectedSpeeds = reactive<{value: typeSpeedPlayer; label: string}[]>([
   {value: 0.5, label: '0.5'},
-  {value: 0.75, label: '0.75'},
-  {value: 1.0, label: '1.0'},
-  {value: 1.25, label: '1.25'},
-  {value: 1.5, label: '1.50'},
-  {value: 1.75, label: '1.75'},
-  {value: 2.0, label: '2.0'},
+  // {value: 0.75, label: '0.75'},
+  {value: 1.0, label: '1'},
+  // {value: 1.25, label: '1.25'},
+  {value: 1.5, label: '1.5'},
+  // {value: 1.75, label: '1.75'},
+  {value: 2.0, label: '2'},
 ]);
 
 // emit change

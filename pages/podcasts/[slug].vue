@@ -37,7 +37,12 @@ if (!episode) {
     <div
       class="bg-purple-500 w-[600px] h-[100px] m-auto transform -translate-y-10 grid place-content-center text-white"
     >
-      PLAYER
+      <!-- <LazyPlayer
+        :src="store.src"
+        :title="store.currentTitle"
+        :status="store.statusPlayer"
+        @statusChange="store.setStatusPlayer"
+      /> -->
     </div>
     <main class="w-full">
       <!-- navbart TAB -->
