@@ -11,14 +11,14 @@ onMounted(() => {
       id="bigSlash"
       name="SlashIcon"
       size="400"
-      insideClass="fill-purple-800"
+      inside-class="fill-purple-800"
       class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
     />
     <Icon
       id="tinySlash"
       name="SlashIcon"
       size="200"
-      insideClass="fill-purple-800"
+      inside-class="fill-purple-800"
       class="hidden md:fixed top-[10%] right-0 z-8 opacity-20"
     />
     <Header :height="400">
