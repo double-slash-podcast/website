@@ -57,28 +57,37 @@ pnpm build
 
 ## Roadmap for new website
 
-- [X] Init Nuxt 3
-- [X] Install Tailwind module
-- [x] Set DS colors palette
-- [x] Install unoCSS / Icon
-- [x] Install nuxt content 3
-- [ ] Config for SSR with serverless
-- [ ] Config export on Netlify Org
-- Components
-  - [ ] Home page header
-  - [ ] Navbar
-  - [ ] Footer
-- Episode page
-  - [ ] Mp3 player / Video player
-  - [ ] `head`
-  - [ ] Social share
-  - [ ] Transcription for `SEO`
-- [x] Import LEGACY episode
-- [ ] Contact Form
-- [ ] Sponsoring page => redirection
 - [x] RSS creation for episodes
   - Rss creation by plugin / module
   - [Validate by](https://podba.se/validate/)
+- [ ] Config for SSR with serverless
+- [ ] Config export on Netlify Org
+- Components
+  - [ ] Footer
+- Episode page
+  - [ ] Mp3 player / Video player
+  - [ ] Audio player as remote 
+  - [ ] player as dedicated store
+  - [ ] refacto link comp + :after seo hack
+  - [ ] one layout
+  - [ ] import content
+  - [ ] RSS GUID
+  - [ ] add episodeArt into RSS
+  - [ ] sitemap
+  - [ ] 301 redirection
+  - [ ] build on netlify 
+  - [ ] SEO best practices
+  - [ ] 
+  - [ ] 
+  - [ ] `head`
+  - [ ] Social share
+  - [ ] Transcription for `SEO`
+
+- []
+
+### post pone
+- [ ] Sponsoring page => redirection
+- [ ] Contact Form
 - [ ] Live page ?
 - [ ] Blog for SEO content ?
 <!-- - [ ]
