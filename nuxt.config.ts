@@ -34,8 +34,5 @@ export default defineNuxtConfig({
       podcastInfos,
       isDev: process.env.NODE_ENV === 'development',
     },
-  },
-  build: {
-    transpile: ['motion/vue', '@motionone/vue'],
-  },
+  }
 });
