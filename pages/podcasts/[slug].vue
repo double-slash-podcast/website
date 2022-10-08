@@ -4,10 +4,6 @@ import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
 import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
-definePageMeta({
-  layout: 'light',
-});
-
 const linksTab = ['Description', 'Liens', 'Video', 'Transcription'];
 const {data: episode} = await useAsyncData('OneEpisode', () => {
   return queryContent()
