@@ -69,7 +69,7 @@ pnpm build
   - [ ] Audio player as remote 
   - [ ] player as dedicated store
   - [ ] refacto link comp + :after seo hack
-  - [ ] one layout
+  - [x] one layout
   - [ ] import content
   - [ ] RSS GUID
   - [ ] add episodeArt into RSS
