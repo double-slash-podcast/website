@@ -60,7 +60,7 @@ if (!episode) {
             </button>
           </Tab>
         </TabList>
-        <TabPanels class="pt-4 border-t-2 border-graybg-zinc-300">
+        <TabPanels class="pt-4 border-t-2 border-gray">
           <TabPanel notes>
             {{ episode.description }}
             <ContentRenderer :value="episode" class="prose"> </ContentRenderer>

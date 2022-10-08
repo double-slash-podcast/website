@@ -9,6 +9,9 @@ module.exports = {
         purpleDs: '#9123CB',
         haiti: '#1A0724',
       },
+      fill: {
+        yellowDs: '#FFE40F',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
       },

@@ -34,5 +34,5 @@ export default defineNuxtConfig({
       podcastInfos,
       isDev: process.env.NODE_ENV === 'development',
     },
-  }
+  },
 });

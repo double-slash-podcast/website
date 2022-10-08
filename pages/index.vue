@@ -35,7 +35,7 @@ onMounted(() => {
 
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
-    <main class="relative">
+    <main class="relative pb-24">
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center space-x-6">
@@ -61,7 +61,7 @@ onMounted(() => {
 
       <LastEpisodes class="mb-24" />
 
-      <Cohost></Cohost>
+      <Cohost class="mb-24" />
     </main>
   </div>
 </template>
