@@ -6,7 +6,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative bg-haiti">
     <Icon
       id="bigSlash"
       name="SlashIcon"
@@ -21,7 +21,7 @@ onMounted(() => {
       inside-class="fill-purple-800"
       class="hidden md:fixed top-[10%] right-0 z-8 opacity-20"
     />
-    <Header :height="400">
+    <Header :height="300">
       <template #title>
         <Brand slash />
       </template>
@@ -53,7 +53,7 @@ onMounted(() => {
 
       <HeadingsSection title="tous les épisodes précedents" class="mb-24">
         <div class="text-center">
-          <nuxt-link to="#" class="text-xs text-white uppercase"
+          <nuxt-link to="/podcasts" class="text-xs text-white uppercase"
             >Voir tous les épisodes -></nuxt-link
           >
         </div>
