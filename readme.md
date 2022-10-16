@@ -74,7 +74,7 @@ pnpm build
   - [ ] RSS GUID
   - [ ] add episodeArt into RSS
   - [ ] sitemap
-  - [ ] 301 redirection
+  - [x] 301 redirection
   - [ ] build on netlify 
   - [ ] SEO best practices
   - [ ] 
