@@ -70,7 +70,7 @@
 				<![CDATA[<h2>Dans cet épisode, nous allons expliquer comment faire des animations avec JavaScript, les concepts de base et les outils.</h2><h3>Retrouvez la vidéo de l'enregistrement sur <a href="https://youtu.be/rM4OMNDxYAM">le YouTube de DoubleSlash</a></h3><p>Pour finir la série sur les animations dans le navigateur, on termine avec un tour d'horizon des solutions avec du JavaScript. </p><p>On évoque les concepts de <strong>keyFrames</strong>, de <strong>Staggering</strong>, les <strong>Timelines</strong> ou autres <strong>Triggers</strong></p><p>Puis on brosse le panel des solutions les plus connues et utilisées sur le Web. </p><p>Bonne écoute !</p><h3>Liens</h3><p><a href="https://greensock.com/">GreenSocks</a><a href="https://animejs.com/">Anime.js</a><a href="https://motion.dev/">Motion ONE</a></p><p><a href="https://auto-animate.formkit.com/">Auto animate</a><a href="https://www.framer.com/motion/">React Framer Motion</a><a href="https://motion.vueuse.org/">VueUse Motion</a></p><h3>Podcast présenté par :</h3><ul><li>Alexandre Duval <a href="https://twitter.com/xlanex6">@xlanex6</a></li><li>Patrick Faramaz <a href="https://twitter.com/PatrickFaramaz">@PatrickFaramaz</a></li></ul>]]>
 			</description>
 			<link>https://slash-podcast.fr/podcasts/animeJS/</link>
-			<guid isPermaLink="false">1d1141cbe5302cac1cd5a15b60db8696</guid>
+			<guid isPermaLink="false"></guid>
 			<category>
 				<![CDATA[Technology]]>
 			</category>
@@ -2139,7 +2139,7 @@ Chaque pilier a son importance. Avec Dan, nous allons voir les principaux pilier
 <a href="https://papanasi.js.org/?path=/story/documentation-introduction--page">https://papanasi.js.org/?path=/story/documentation-introduction--page</a></p><h2>WEb Perf Mobile</h2><p><a href="https://www.journaldunet.com/solutions/dsi/1192875-classement-webperf/">https://www.journaldunet.com/solutions/dsi/1192875-classement-webperf/</a></p><h2>Tools</h2><ul><li><a href="https://jsoncrack.com/">https://jsoncrack.com/</a></li><li><a href="https://jsonhero.io/">https://jsonhero.io/</a></li></ul><h3>Podcast présenté par</h3><ul><li>Alexandre Duval <a href="https://twitter.com/xlanex6">@xlanex6</a></li><li>Patrick Faramaz <a href="https://twitter.com/PatrickFaramaz">@PatrickFaramaz</a></li></ul>]]>
 			</description>
 			<link>https://slash-podcast.fr/podcasts/news-octobre-22/</link>
-			<guid isPermaLink="false">d8ed6a024ed27ed3ea1b218ff3714763</guid>
+			<guid isPermaLink="false"></guid>
 			<category>
 				<![CDATA[Technology]]>
 			</category>
