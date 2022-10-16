@@ -70,8 +70,8 @@ pnpm build
   - [ ] player as dedicated store
   - [ ] refacto link comp + :after seo hack
   - [x] one layout
-  - [ ] import content
-  - [ ] RSS GUID
+  - [x] import content
+  - [X] RSS GUID
   - [ ] add episodeArt into RSS
   - [ ] sitemap
   - [x] 301 redirection
