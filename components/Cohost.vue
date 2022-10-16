@@ -13,27 +13,27 @@
           <p class="text-5xl text-white">Patrick</p>
           <p class="text-3xl text-gray-400">FARAMAZ</p>
           <div class="space-x-4">
-            <a href="" target="_blank">
+            <NuxtLink to="https://twitter.com/PatrickFaramaz" target="_blank">
               <Icon
                 name="mdi:twitter"
                 size="20"
-                class="text-gray-400 fill-gray-400"
+                class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
-            </a>
-            <a href="" target="_blank">
+            </NuxtLink>
+            <NuxtLink to="https://github.com/ipatate" target="_blank">
               <Icon
                 name="mdi:github"
                 size="20"
-                class="text-gray-400 fill-gray-400"
+                class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
-            </a>
-            <a href="" target="_blank">
+            </NuxtLink>
+            <NuxtLink to="https://www.goodmotion.fr/" target="_blank">
               <Icon
                 name="iconoir:www"
                 size="20"
-                class="text-gray-400 fill-gray-400"
+                class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
@@ -46,32 +46,32 @@
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />
         <div
-          class="flex-1 pr-6 text-right uppercase md:pl-6 font-brand md:text-left-5"
+          class="flex-1 pr-6 text-right uppercase lg:pl-6 font-brand lg:text-left"
         >
           <p class="text-5xl text-white">Alex</p>
           <p class="text-3xl text-gray-400">DUVAL</p>
           <div class="space-x-4">
-            <a href="" target="_blank">
+            <NuxtLink to="https://twitter.com/xlanex6" target="_blank">
               <Icon
                 name="mdi:twitter"
                 size="20"
-                class="text-gray-400 fill-gray-400"
+                class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
-            </a>
-            <a href="" target="_blank">
+            </NuxtLink>
+            <NuxtLink to="https://github.com/xlanex6" target="_blank">
               <Icon
                 name="mdi:github"
                 size="20"
-                class="text-gray-400 fill-gray-400"
+                class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
-            </a>
-            <a href="" target="_blank">
+            </NuxtLink>
+            <NuxtLink to="https://www.alexduval.fr/" target="_blank">
               <Icon
                 name="iconoir:www"
                 size="20"
-                class="text-gray-400 fill-gray-400"
+                class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>
