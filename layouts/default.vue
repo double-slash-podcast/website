@@ -1,8 +1,9 @@
 <template>
-  <div class="min-h-screen bg-haiti">
-    <div class="pb-12">
+  <div class="min-h-screen bg-gradient-to-b from-purple-50 to-purple-100">
+    <div class="">
       <slot />
     </div>
+    <Footer />
     <div class="fixed bottom-0 left-0 right-0 bg-darkPurple">
       <LazyWrapperPlayer />
     </div>

@@ -26,9 +26,9 @@ const handlerClick = () => {
     class="flex w-full md:w-[600px] py-10 text-center text-white uppercase justify-between"
   >
     <div
-      class="flex items-center w-1/4 text-6xl sm:w-1/3 font-brand text-yellowDs"
+      class="flex items-center w-1/5 text-6xl sm:w-1/4 font-brand text-yellowDs"
     >
-      <span class="text-haiti spe">0</span>{{ episode.episodeNumber }}
+      <span class="text-haiti text-outline">0</span>{{ episode.episodeNumber }}
     </div>
     <div class="w-2/3 text-right">
       <h3 class="text-xl sm:text-2xl">{{ episode.title }}</h3>
@@ -64,7 +64,7 @@ const handlerClick = () => {
   </div>
 </template>
 <style scoped>
-.spe {
+.text-outline {
   text-shadow: -2px -2px 0 #9123cb, 2px 2px 0 #9123cb, 2px -2px 0 #9123cb,
     -2px 2px 0 #9123cb;
 }

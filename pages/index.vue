@@ -6,7 +6,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative">
+  <div class="relative bg-haiti">
     <Icon
       id="bigSlash"
       name="SlashIcon"
@@ -21,7 +21,7 @@ onMounted(() => {
       inside-class="fill-purple-800"
       class="hidden md:fixed top-[10%] right-0 z-8 opacity-20"
     />
-    <Header :height="400">
+    <Header :height="300">
       <template #title>
         <Brand slash />
       </template>
@@ -35,7 +35,7 @@ onMounted(() => {
 
       <template #player> <p class="text-white">mon player</p> </template>
     </Header>
-    <main class="relative">
+    <main class="relative pb-24">
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center space-x-6">
@@ -53,7 +53,7 @@ onMounted(() => {
 
       <HeadingsSection title="tous les épisodes précedents" class="mb-24">
         <div class="text-center">
-          <nuxt-link to="#" class="text-xs text-white uppercase"
+          <nuxt-link to="/podcasts" class="text-xs text-white uppercase"
             >Voir tous les épisodes -></nuxt-link
           >
         </div>
@@ -61,7 +61,7 @@ onMounted(() => {
 
       <LastEpisodes class="mb-24" />
 
-      <Cohost></Cohost>
+      <Cohost class="mb-24" />
     </main>
   </div>
 </template>

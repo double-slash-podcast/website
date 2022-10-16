@@ -4,10 +4,6 @@ import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
 import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
-definePageMeta({
-  layout: 'light',
-});
-
 const linksTab = ['Description', 'Liens', 'Video', 'Transcription'];
 const {data: episode} = await useAsyncData('OneEpisode', () => {
   return queryContent()
@@ -64,7 +60,7 @@ if (!episode) {
             </button>
           </Tab>
         </TabList>
-        <TabPanels class="pt-4 border-t-2 border-graybg-zinc-300">
+        <TabPanels class="pt-4 border-t-2 border-gray">
           <TabPanel notes>
             {{ episode.description }}
             <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
@@ -76,7 +72,7 @@ if (!episode) {
                 :key="link.title"
                 class="hover:underline underline-offset-4"
               >
-                <a :href="link.url" target="_blank"
+                <NuxtLink :to="link.url" target="_blank" class="cursor-pointer"
                   ><span
                     class="font-bold capitalize text-purpleDs hover:text-purple-900"
                     >{{ link.title }}</span
@@ -86,7 +82,7 @@ if (!episode) {
                     >{{ link.url }}
                     <Icon name="ri:external-link-line" size="15"
                   /></span>
-                </a>
+                </NuxtLink>
               </li>
             </ul>
           </TabPanel>
