@@ -5,12 +5,12 @@ import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
 const linksTab = ['Description', 'Liens', 'Video', 'Transcription'];
-const {data: episode} = await useAsyncData('OneEpisode', () => {
+const {data: episode} = await useAsyncData('', () => {
   return queryContent()
     .where({_path: {$eq: path}})
     .findOne();
 });
-const {data: transription} = await useAsyncData('Transcription', () => {
+const {data: transription} = await useAsyncData('', () => {
   return queryContent()
     .where({_path: {$eq: `${path}/transcript`}})
     .findOne();
@@ -22,7 +22,7 @@ if (!episode) {
 
 <template>
   <div>
-    <Header :height="250">
+    <Header :height="210">
       <template #baseline>
         <EpisodeHeadings :episode="episode"></EpisodeHeadings>
       </template>
@@ -30,16 +30,7 @@ if (!episode) {
         <Brand />
       </template>
     </Header>
-    <div
-      class="bg-purple-500 w-[600px] h-[100px] m-auto transform -translate-y-10 grid place-content-center text-white"
-    >
-      <!-- <LazyPlayer
-        :src="store.src"
-        :title="store.currentTitle"
-        :status="store.statusPlayer"
-        @statusChange="store.setStatusPlayer"
-      /> -->
-    </div>
+
     <main class="w-full">
       <!-- navbart TAB -->
       <TabGroup>
