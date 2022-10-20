@@ -57,6 +57,7 @@ type PodcastContentType = {
   subtitle: string;
   description: string;
   guid?: string;
+  episodeArtwork?: string;
   body: {type: string; children: [][]; toc: {}[]};
 };
 

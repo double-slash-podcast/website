@@ -144,6 +144,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       categories,
       description,
       guid,
+      episodeArtwork,
     }: ParsedContent = podcast;
 
     if (!title) {
@@ -176,7 +177,7 @@ export default defineEventHandler(async (event: CompatibilityEvent) => {
       {
         'itunes:image': {
           _attr: {
-            href: podcastInfos.imageUrl,
+            href: episodeArtwork || podcastInfos.imageUrl,
           },
         },
       },
