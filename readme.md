@@ -63,7 +63,7 @@ pnpm build
 - [ ] Config for SSR with serverless
 - [ ] Config export on Netlify Org
 - Components
-  - [ ] Footer
+  - [x] Footer
 - Episode page
   - [ ] Mp3 player / Video player
   - [ ] Audio player as remote 
