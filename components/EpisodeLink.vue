@@ -9,6 +9,6 @@ defineProps({
 
 <template>
   <nuxt-link :to="episode._path">
-    <EpisodeHeadings :episode="episode" cta />
+    <EpisodeHeadings :episode="episode" />
   </nuxt-link>
 </template>
