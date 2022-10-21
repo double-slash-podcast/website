@@ -35,8 +35,8 @@ const {data} = await useAsyncData('podcasts', () => {
         </div>
       </div> -->
 
-      <div class="divide-y divide-dashed divide-purpleDs">
-        <EpisodeLink
+      <div class="">
+        <EpisodeHeadings
           v-for="episode in data"
           :key="episode._id"
           v-bind="{episode}"

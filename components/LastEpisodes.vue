@@ -1,6 +1,6 @@
 <script setup>
 // should be a composable useLastEpisode(3)
-const {data} = await useAsyncData('last3', () => {
+const {data: last3} = await useAsyncData('last3', () => {
   return queryContent('podcasts')
     .sort({episodeNumber: -1, $numeric: true})
     .where({_extension: {$eq: 'md'}})
@@ -11,8 +11,8 @@ const {data} = await useAsyncData('last3', () => {
 
 <template>
   <div class="divide-y divide-dashed divide-purpleDs">
-    <EpisodeLink
-      v-for="episode in data"
+    <EpisodeHeadings
+      v-for="episode in last3"
       :key="episode._id"
       v-bind="{episode}"
     />

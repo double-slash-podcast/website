@@ -10,19 +10,20 @@ const props = defineProps<{
   <div
     class="flex w-full md:w-[600px] py-10 text-center text-white uppercase justify-between"
   >
-    <div
+    <nuxt-link
+      :to="episode._path"
       class="flex items-center w-1/5 text-6xl sm:w-1/4 font-brand text-yellowDs"
     >
       <span class="text-haiti text-outline">0</span
       >{{ props.episode.episodeNumber }}
-    </div>
-    <div class="w-2/3 text-right">
+    </nuxt-link>
+    <nuxt-link :to="episode._path" class="w-2/3 text-right">
       <h3 class="text-xl sm:text-2xl">{{ props.episode.title }}</h3>
       <div class="italic font-light text-gray-400">
         {{ $dayjs(props.episode.publicationDate).format('DD MMM YY') }}
       </div>
       <PlayerRemote :episode="props.episode" />
-    </div>
+    </nuxt-link>
   </div>
 </template>
 <style scoped>
