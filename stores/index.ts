@@ -1,6 +1,6 @@
 import {defineStore} from 'pinia';
 
-export const useStore = defineStore('main', () => {
+export const usePlayerStore = defineStore('player', () => {
   const config = useRuntimeConfig();
   const {prefixAudioDev, prefixAudio, isDev} = config.public;
 

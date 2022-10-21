@@ -25,12 +25,12 @@
 </template>
 
 <script setup lang="ts">
-import {useStore} from '~~/stores';
+import {usePlayerStore} from '~/stores';
 const props = defineProps<{
   episode: PodcastContentType;
 }>();
 
-const store = useStore();
+const store = usePlayerStore();
 const tooglePlayer = () => {
   if (store.currentTitle !== props.episode.title) {
     store.setDsSlug(props.episode.dsSlug, props.episode.title);
