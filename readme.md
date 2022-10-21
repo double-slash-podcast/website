@@ -65,14 +65,14 @@ pnpm build
 - Components
   - [x] Footer
 - Episode page
-  - [ ] Mp3 player / Video player
-  - [ ] Audio player as remote 
+  - [x] Mp3 player / Video player
+  - [x] Audio player as remote 
   - [ ] player as dedicated store
   - [ ] refacto link comp + :after seo hack
   - [x] one layout
   - [x] import content
   - [X] RSS GUID
-  - [ ] add episodeArt into RSS
+  - [x] add episodeArt into RSS
   - [ ] sitemap
   - [x] 301 redirection
   - [ ] build on netlify 
