@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {usePlayerStore} from '~/stores';
+import {usePlayerStore} from '~~/stores/player';
 
 const store = usePlayerStore();
 </script>
