@@ -67,7 +67,7 @@ pnpm build
 - Episode page
   - [x] Mp3 player / Video player
   - [x] Audio player as remote 
-  - [ ] player as dedicated store
+  - [X] player as dedicated store
   - [ ] refacto link comp + :after seo hack
   - [x] one layout
   - [x] import content
