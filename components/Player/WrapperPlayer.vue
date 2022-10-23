@@ -6,9 +6,9 @@ const store = useStore();
 
 <template>
   <LazyPlayer
-    :src="store.src"
-    :title="store.currentTitle"
-    :status="store.statusPlayer"
+    :src="store.src || ''"
+    :title="store.currentTitle || ''"
+    :status="store.statusPlayer || ''"
     @statusChange="store.setStatusPlayer"
   />
 </template>
