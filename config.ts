@@ -29,7 +29,8 @@ export const podcastInfos: PodcastInfosType = {
   // episodic || serial
   podcastType: `episodic`,
   siteUrl: baseInfos.siteUrl,
-  imageUrl: `${baseInfos.siteUrl}/new-double-slash.jpg`,
+  imageUrl:
+    'https://res.cloudinary.com/doubleslash/image/upload/v1666362854/ArtworkPodcastMain_w6nuaf.png',
   feedUrl: `${baseInfos.siteUrl}/pocast-rss-feed.xml`,
   language: `fr-FR`,
   copyright: `Copyright © 2022 Double Slash`,

@@ -62,26 +62,27 @@ pnpm build
   - [Validate by](https://podba.se/validate/)
 - [ ] Config for SSR with serverless
 - [ ] Config export on Netlify Org
+  - [ ] sitemap
+  - [ + / - ] refacto link comp + :after seo hack
+  - [ ] build on netlify 
+  - [ ] SEO best practices
+  - [ ] `head`
+  - [ ] Social share
+  - [ ] new domain name redirection
+  - [ ] social share
+
+  - [ ] Transcription for `SEO`
 - Components
-  - [x] Footer
 - Episode page
-  - [x] Mp3 player / Video player
+  - [x] Footer
   - [x] Audio player as remote 
-  - [ ] player as dedicated store
-  - [ ] refacto link comp + :after seo hack
+  - [X] player as dedicated store
   - [x] one layout
   - [x] import content
   - [X] RSS GUID
-  - [x] add episodeArt into RSS
-  - [ ] sitemap
+  - [x] Mp3 player / Video player
+  - [x] add episodeArtwork into RSS
   - [x] 301 redirection
-  - [ ] build on netlify 
-  - [ ] SEO best practices
-  - [ ] 
-  - [ ] 
-  - [ ] `head`
-  - [ ] Social share
-  - [ ] Transcription for `SEO`
 
 - []
 
