@@ -65,7 +65,7 @@ if (!episode) {
               >
                 <NuxtLink :to="link.url" target="_blank" class="cursor-pointer"
                   ><span
-                    class="font-bold capitalize text-purpleDs hover:text-purple-900"
+                    class="font-bold text-purpleDs hover:text-purple-900"
                     >{{ link.title }}</span
                   >
                   -
