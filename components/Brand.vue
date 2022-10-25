@@ -26,7 +26,7 @@ defineProps({
         <tspan x="0" y="0">//</tspan>
       </text>
     </svg>
-    <h1 class="text-center brand sm:text-[80px] text-[50px]">DOUBLE SLASH</h1>
+    <p class="text-center brand sm:text-[80px] text-[50px]">DOUBLE SLASH</p>
   </div>
 </template>
 >

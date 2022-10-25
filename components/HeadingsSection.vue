@@ -8,17 +8,20 @@ defineProps({
     type: Boolean,
     default: false,
   },
+  level: {
+    type: Number,
+    default: 3,
+  },
 });
 </script>
 <template>
   <section class="max-w-3xl m-auto my-8">
-    <div class="max-w-3xl m-auto my-8">
-      <h3
-        class="mb-4 text-2xl text-center text-white"
-        :class="{'text-haiti': dark}"
-      >
+    <div
+      class="max-w-3xl m-auto my-8 mb-4 text-2xl text-center text-white font-headings"
+    >
+      <component :is="`h${level}`" class="" :class="{'text-haiti': dark}">
         {{ title }}
-      </h3>
+      </component>
       <slot />
     </div>
   </section>

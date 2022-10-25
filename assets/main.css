@@ -97,7 +97,7 @@ main {
 }
 
 h1 {
-  @apply text-red-500;
+ @apply font-base;
 }
 .brand {
   @apply text-5xl text-white uppercase font-brand drop-shadow shadow-white;

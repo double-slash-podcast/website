@@ -12,7 +12,7 @@ const {data} = await useAsyncData('podcasts', () => {
   <div class="bg-haiti">
     <Header :height="200"></Header>
     <main>
-      <HeadingsSection title="tous les épisodes"></HeadingsSection>
+      <HeadingsSection title="Tous les épisodes" level="1"></HeadingsSection>
 
       <!-- <div class="sm:max-w-md sm:m-auto">
         <label for="search" class="block m-auto text-sm font-medium text-white"

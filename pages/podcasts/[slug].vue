@@ -24,7 +24,7 @@ if (!episode) {
   <div>
     <Header :height="180" class="">
       <template #baseline>
-        <EpisodeHeadings :episode="episode"></EpisodeHeadings>
+        <EpisodeHeadings :episode="episode" level="1"></EpisodeHeadings>
       </template>
       <template #title>
         <Brand />
