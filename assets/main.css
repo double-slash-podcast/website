@@ -113,7 +113,7 @@ h2 {
 }
 /* PROSE ONLY */
 .prose h2 {
-  @apply text-purple-700 font-bold text-lg my-8 font-base;
+  @apply text-purple-700 font-bold text-lg my-8 font-base normal-case ;
 }
 .prose h3 {
   @apply text-purple-700 font-bold text-sm my-8 uppercase font-base;
