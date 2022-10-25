@@ -109,7 +109,7 @@ h4 {
   @apply font-headings;
 }
 h2 {
-  @apply text-2xl tracking-wider text-center uppercase text-yellowDs;
+  @apply text-2xl tracking-wider uppercase text-yellowDs;
 }
 /* PROSE ONLY */
 .prose h2 {
