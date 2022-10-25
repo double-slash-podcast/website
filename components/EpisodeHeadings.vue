@@ -1,9 +1,15 @@
 <script setup lang="ts">
 const {$dayjs} = useNuxtApp();
 
-const props = defineProps<{
-  episode: PodcastContentType;
-}>();
+const props = withDefaults(
+  defineProps<{
+    episode: PodcastContentType;
+    level: number;
+  }>(),
+  {
+    level: 2,
+  },
+);
 </script>
 
 <template>
@@ -18,7 +24,11 @@ const props = defineProps<{
       >{{ props.episode.episodeNumber }}
     </nuxt-link>
     <nuxt-link :to="episode._path" class="w-2/3 text-right">
-      <h3 class="text-xl sm:text-2xl">{{ props.episode.title }}</h3>
+      <component
+        :is="`h${level}`"
+        class="text-xl text-white sm:text-2xl font-headings"
+        >{{ props.episode.title }}</component
+      >
       <div class="italic font-light text-gray-400">
         {{ $dayjs(props.episode.publicationDate).format('DD MMM YY') }}
       </div>

@@ -22,9 +22,9 @@ if (!episode) {
 
 <template>
   <div>
-    <Header :height="210">
+    <Header :height="180" class="">
       <template #baseline>
-        <EpisodeHeadings :episode="episode"></EpisodeHeadings>
+        <EpisodeHeadings :episode="episode" level="1"></EpisodeHeadings>
       </template>
       <template #title>
         <Brand />
@@ -65,7 +65,7 @@ if (!episode) {
               >
                 <NuxtLink :to="link.url" target="_blank" class="cursor-pointer"
                   ><span
-                    class="font-bold capitalize text-purpleDs hover:text-purple-900"
+                    class="font-bold text-purpleDs hover:text-purple-900"
                     >{{ link.title }}</span
                   >
                   -

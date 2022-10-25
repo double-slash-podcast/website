@@ -1,13 +1,16 @@
 <script setup>
+// defineNuxtLink({
+//   exactActiveClass: 'bg-red-500',
+// });
 const links = [
   {
     title: 'podcasts',
     url: '/podcasts',
   },
-  {
-    title: 'contact',
-    url: '#',
-  },
+  // {
+  //   title: 'contact',
+  //   url: '#',
+  // },
 ];
 </script>
 <template>
@@ -28,3 +31,9 @@ const links = [
     >
   </div>
 </template>
+
+<style scoped>
+.router-link-exact-active {
+  @apply bg-yellowDs text-darkPurple;
+}
+</style>
