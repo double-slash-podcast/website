@@ -22,7 +22,7 @@
         :width="65"
         :height="65"
         :size="4"
-        :load="state.totalBuffered < state.currentTime"
+        :load="state.loadedProgress < state.currentPosition"
         @click="toggle"
       />
       <button class="ml-2" title="forward to 10 seconds" @click="skip(+10)">
@@ -106,8 +106,6 @@ const state: {
   loaded: boolean;
   // loaded percentage
   loadedProgress: number;
-  // total buffered
-  totalBuffered: number;
 } = reactive({
   duration: 0,
   status: 'pause',
@@ -116,7 +114,6 @@ const state: {
   currentPosition: 0,
   loaded: false,
   loadedProgress: 0,
-  totalBuffered: 0,
 });
 
 /** progress data load */
@@ -125,11 +122,9 @@ const load = () => {
   if (!state.loaded) return;
   // length of buffered
   const c = audioPlayerElement.value?.buffered.length || 1;
-  state.totalBuffered = audioPlayerElement.value?.buffered.end(c - 1);
+  const totalBuffered = audioPlayerElement.value?.buffered.end(c - 1);
   state.loadedProgress =
-    (audioPlayerElement.value?.buffered.end(c - 1) /
-      audioPlayerElement.value?.duration) *
-    100;
+    (totalBuffered / audioPlayerElement.value?.duration) * 100;
 };
 
 const updateDuration = () => {
@@ -145,7 +140,6 @@ const initPlayer = (withPlay = false) => {
     state.currentTime = 0;
     state.currentPosition = 0;
     state.loadedProgress = 0;
-    state.totalBuffered = 0;
     // first load
     audioPlayerElement.value?.load();
     audioPlayerElement.value.addEventListener('canplay', () => {
