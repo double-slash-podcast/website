@@ -27,7 +27,7 @@ const {data} = await useAsyncData('lastOne', () => {
       name="SlashIcon"
       size="200"
       inside-class="fill-purple-800"
-      class="hidden md:fixed top-[10%] right-0 z-8 opacity-20"
+      class="fixed top-[10%] right-0 z-8 opacity-20"
     />
     <Header :height="300">
       <template #title>
