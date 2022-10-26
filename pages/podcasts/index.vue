@@ -10,7 +10,7 @@ const {data} = await useAsyncData('podcasts', () => {
 
 <template>
   <div class="bg-haiti">
-    <Header :height="200"></Header>
+    <Header :height="90"></Header>
     <main>
       <HeadingsSection title="Tous les épisodes" level="1"></HeadingsSection>
 
