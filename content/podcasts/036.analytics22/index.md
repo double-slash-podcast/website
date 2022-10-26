@@ -14,6 +14,8 @@ title: Outils de web Analytics et Vie privée
 subtitle: Web Analytics, privacy et Open Source avec François Best
 guid: a281e6f01ec88c6c24916751a843e0e9
 description: "Dans cet épisode, nous avons le plaisir de recevoir François Best pour des outils de web Analytics et la protection de notre vie privée Retrouvez la vidéo de l'enregistrement sur le Youtube de DoubleSlash Notre invité François Best https://francoisbest.com/, @fortysevenfx La solution analytics de notre invité : https://chiffre.io Les autres solutions pour sortir ou remplacer Google Analytics Open-source et possibilité d'auto hébergement : https://ackee.electerious.com/ https://plausible.io/ https://www.piratepx.com/ https://umami.is/ https://matomo.org/ https://posthog.com/ https://www.kokoanalytics.com/ solution pour WordPress Autres solutions https://usefathom.com/ https://simpleanalytics.com/ Repo qui liste plusieurs solutions https://privacyfocusedanalytics.netlify.app/ Bonne écoute ! Podcast présenté par : Alexandre Duval @xlanex6 Patrick Faramaz @PatrickFaramaz"
+videoLink: 
+links: []
 ---
 
 ## Dans cet épisode, nous avons le plaisir de recevoir François Best pour des outils de web Analytics et la protection de notre vie privée
