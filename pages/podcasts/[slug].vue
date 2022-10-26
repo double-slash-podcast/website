@@ -73,7 +73,7 @@ if (!episode) {
             {{ episode.description }}
             <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
           </TabPanel>
-          <TabPanel links>
+          <TabPanel v-if="episode.links.length > 0" links>
             <ul class="space-y-3">
               <li
                 v-for="link in episode.links"
@@ -94,16 +94,10 @@ if (!episode) {
               </li>
             </ul>
           </TabPanel>
-          <TabPanel video>
-            <template v-if="episode.videoLink">
-              <LiteYouTubeEmbed
-                :id="episode.videoLink"
-                :title="episode.title"
-              />
-            </template>
-            <template v-else> Pas de video pour cet episode </template>
+          <TabPanel v-if="episode.videoLink" video>
+            <LiteYouTubeEmbed :id="episode.videoLink" :title="episode.title" />
           </TabPanel>
-          <TabPanel v-show="transcription" transcription>
+          <TabPanel v-if="transcription" transcription>
             <div class="prose">
               {{ transcription.results.channels[0].alternatives[0].transcript }}
             </div>
