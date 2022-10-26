@@ -30,9 +30,9 @@ const plateforms = [
 <template>
   <HeadingsSection
     :dark="dark"
-    title="abonnez vous sur votre plateforme de podcast préféré"
+    title="Abonnez-vous sur votre plateforme de podcast préférée"
   >
-    <ul class="flex justify-center space-x-8">
+    <ul class="flex justify-center mt-4 space-x-8">
       <li v-for="plateform in plateforms" :key="plateform.icon">
         <a href="plateform.href">
           <Icon

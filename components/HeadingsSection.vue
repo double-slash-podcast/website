@@ -19,7 +19,7 @@ defineProps({
     <div class="max-w-3xl m-auto my-8 mb-4 text-2xl text-center text-white">
       <component
         :is="`h${level}`"
-        class="font-headings"
+        class="tracking-tight font-headings"
         :class="{'text-haiti': dark}"
       >
         {{ title }}

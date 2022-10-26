@@ -5,6 +5,7 @@ const {data: last3} = await useAsyncData('last3', () => {
     .sort({episodeNumber: -1, $numeric: true})
     .where({_extension: {$eq: 'md'}})
     .limit(3)
+    .skip(1)
     .find();
 });
 </script>

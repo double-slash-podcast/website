@@ -62,7 +62,7 @@ const {data} = await useAsyncData('lastOne', () => {
         </div>
       </HeadingsSection>
 
-      <HeadingsSection title="tous les épisodes précedents" class="mb-24">
+      <HeadingsSection title="Les épisodes précédents" class="mb-24">
         <div class="text-center">
           <nuxt-link to="/podcasts" class="text-xs text-white uppercase"
             >Voir tous les épisodes -></nuxt-link
