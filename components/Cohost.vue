@@ -1,5 +1,5 @@
 <template>
-  <HeadingsSection title="animateurs">
+  <HeadingsSection title="Les animateurs">
     <div
       class="w-full px-4 py-8 space-y-12 sm:px-0 md:space-y-0 lg:divide-x-2 lg:flex divide-purpleDs divide-dashed"
     >
