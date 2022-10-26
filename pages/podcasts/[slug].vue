@@ -4,17 +4,34 @@ import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
 import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
-const linksTab = ['Description', 'Liens', 'Video', 'Transcription'];
-const {data: episode} = await useAsyncData('', () => {
+const linksTab = ref(['Description']);
+const {data: episode} = await useAsyncData('episode', () => {
   return queryContent()
     .where({_path: {$eq: path}})
     .findOne();
 });
-const {data: transription} = await useAsyncData('', () => {
+
+const {data: transcription} = await useAsyncData('transcription', () => {
   return queryContent()
     .where({_path: {$eq: `${path}/transcript`}})
     .findOne();
 });
+
+// links
+if (episode?.value?.links?.length > 0) {
+  linksTab.value.push('Liens');
+}
+
+// video
+if (episode.value?.videoLink) {
+  linksTab.value.push('Video');
+}
+
+// transcript
+if (transcription.value) {
+  linksTab.value.push('Transcription');
+}
+
 if (!episode) {
   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
@@ -86,9 +103,9 @@ if (!episode) {
             </template>
             <template v-else> Pas de video pour cet episode </template>
           </TabPanel>
-          <TabPanel v-show="transription" transription>
+          <TabPanel v-show="transcription" transcription>
             <div class="prose">
-              {{ transription.results.channels[0].alternatives[0].transcript }}
+              {{ transcription.results.channels[0].alternatives[0].transcript }}
             </div>
           </TabPanel>
         </TabPanels>
