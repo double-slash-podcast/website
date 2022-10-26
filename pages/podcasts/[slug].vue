@@ -6,7 +6,6 @@ const {path} = useRoute();
 
 const linksTab = ref(['Description']);
 const {data: episode} = await useAsyncData(`${path}`, () => {
-  console.log(path);
   return queryContent()
     .where({_path: {$eq: path}})
     .findOne();
