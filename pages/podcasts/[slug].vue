@@ -5,17 +5,21 @@ import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
 const linksTab = ref(['Description']);
-const {data: episode} = await useAsyncData('episode', () => {
+const {data: episode} = await useAsyncData(`${path}`, () => {
+  console.log(path);
   return queryContent()
     .where({_path: {$eq: path}})
     .findOne();
 });
 
-const {data: transcription} = await useAsyncData('transcription', () => {
-  return queryContent()
-    .where({_path: {$eq: `${path}/transcript`}})
-    .findOne();
-});
+const {data: transcription} = await useAsyncData(
+  `${path}/transcription`,
+  () => {
+    return queryContent()
+      .where({_path: {$eq: `${path}/transcript`}})
+      .findOne();
+  },
+);
 
 // links
 if (episode?.value?.links?.length > 0) {
