@@ -4,10 +4,10 @@ const {$dayjs} = useNuxtApp();
 const props = withDefaults(
   defineProps<{
     episode: PodcastContentType;
-    level: number;
+    level: string;
   }>(),
   {
-    level: 2,
+    level: '2',
   },
 );
 </script>

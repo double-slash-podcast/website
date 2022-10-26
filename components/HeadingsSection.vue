@@ -9,8 +9,8 @@ defineProps({
     default: false,
   },
   level: {
-    type: Number,
-    default: 3,
+    type: String,
+    default: '3',
   },
 });
 </script>
