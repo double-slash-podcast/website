@@ -1,6 +1,12 @@
 import {baseInfos, podcastInfos} from './config';
 
 export default defineNuxtConfig({
+  app: {
+    htmlAttrs: {lang: 'FR'},
+    head: {
+      title: 'Double Slash',
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
@@ -9,7 +15,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
     '@nathanchase/nuxt-dayjs-module',
-    ['@pinia/nuxt', {autoImports: ['defineStore']}],
+    '@pinia/nuxt',
   ],
   dayjs: {},
   tailwindcss: {

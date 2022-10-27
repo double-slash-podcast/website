@@ -13,6 +13,7 @@ title: Les News pour octobre 2022
 subtitle: Un épisode en format "news" pour le mois d'octobre 2022
 dsSlug: DS_049_news10_22
 guid: d8ed6a024ed27ed3ea1b218ff3714763
+episodeArtwork:
 description: Un épisode en format "news". Nous revenons sur les différentes news des dernières semaines que nous avons retenues
 videoLink : jJT14P0u5E8
 links:

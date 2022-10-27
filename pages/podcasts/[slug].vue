@@ -4,6 +4,13 @@ import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
 import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
+const {
+  $config: {
+    public: {siteUrl},
+    // facebookImage
+  },
+} = useNuxtApp();
+
 const linksTab = ref(['Description']);
 const {data: episode} = await useAsyncData(`${path}`, () => {
   return queryContent()
@@ -38,6 +45,66 @@ if (transcription.value) {
 if (!episode) {
   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
+
+useHead({
+  title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content: episode.value.description,
+    },
+    {
+      hid: 'og:title',
+      name: 'og:title',
+      content: episode.value.title,
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content:
+        'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
+    },
+    {
+      hid: 'og:image:alt',
+      property: 'og:image:alt',
+      content: `${episode.value.episodeNumber} - ${episode.value.title}`,
+    },
+    {
+      hid: 'og:description',
+      property: 'og:description',
+      content: episode.value.description,
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: `${siteUrl}${path}`,
+    },
+    {name: 'twitter:site', content: '@doubleslash_dev'},
+    {name: 'twitter:card', content: 'summary_large_image'},
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: siteUrl,
+    },
+    {
+      hid: 'twitter:title',
+      name: 'twitter:title',
+      content: episode.value.title,
+    },
+    {
+      hid: 'twitter:description',
+      name: 'twitter:description',
+      content: episode.value.description,
+    },
+    {
+      hid: 'twitter:image',
+      name: 'twitter:image',
+      content:
+        'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
+    },
+  ],
+});
 </script>
 
 <template>
