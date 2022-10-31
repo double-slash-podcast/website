@@ -9,13 +9,15 @@ const {
     public: {siteUrl},
   },
 } = useNuxtApp();
-console.log(path);
 const linksTab = ref(['Description']);
-const {data: episode} = await useAsyncData(`${path.replace(/\/+$/, '')}`, () => {
-  return queryContent()
-    .where({_path: {$eq: path.replace(/\/+$/, '')}})
-    .findOne();
-});
+const {data: episode} = await useAsyncData(
+  `${path.replace(/\/+$/, '')}`,
+  () => {
+    return queryContent()
+      .where({_path: {$eq: path.replace(/\/+$/, '')}})
+      .findOne();
+  },
+);
 
 const {data: transcription} = await useAsyncData(
   `${path}/transcription`,
