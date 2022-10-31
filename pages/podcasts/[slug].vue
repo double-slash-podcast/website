@@ -9,11 +9,11 @@ const {
     public: {siteUrl},
   },
 } = useNuxtApp();
-
+console.log(path);
 const linksTab = ref(['Description']);
 const {data: episode} = await useAsyncData(`${path}`, () => {
   return queryContent()
-    .where({_path: {$eq: path}})
+    .where({_path: {$eq: path.replace(/\/+$/, '')}})
     .findOne();
 });
 
