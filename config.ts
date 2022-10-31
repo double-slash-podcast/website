@@ -31,7 +31,9 @@ export const podcastInfos: PodcastInfosType = {
   siteUrl: baseInfos.siteUrl,
   imageUrl:
     'https://res.cloudinary.com/doubleslash/image/upload/v1666362854/ArtworkPodcastMain_w6nuaf.png',
-  feedUrl: `${baseInfos.siteUrl}/podcast-rss-feed.xml`,
+  facebookImage:
+    'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
+  feedUrl: `${baseInfos.siteUrl}/pocast-rss-feed.xml`,
   language: `fr-FR`,
   copyright: `Copyright © 2022 Double Slash`,
   authorName: `Alex Duval/Patrick Faramaz`,

@@ -4,12 +4,52 @@ onMounted(() => {
   scroll(animate('#bigSlash', {x: 0, y: 100}));
 });
 
+const {path} = useRoute();
+
+const {
+  $config: {
+    public: {siteUrl},
+  },
+} = useNuxtApp();
+
 const {data} = await useAsyncData('lastOne', () => {
   return queryContent('podcasts')
     .where({_extension: {$eq: 'md'}})
     .sort({episodeNumber: -1, $numeric: true})
     .limit(1)
     .find();
+});
+
+useHead({
+  title: 'Double Slash, le Podcast des développeur web modernes',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        "Double Slash, c'est le Podcast des développeur web modernes. Patrick et Alex racontent leurs visions des technos, des lib , des tendances du dévelopement Web.",
+    },
+    {
+      hid: 'og:title',
+      name: 'og:title',
+      content: 'Double Slash, le Podcast des développeur web modernes',
+    },
+    {
+      hid: 'og:url',
+      property: 'og:url',
+      content: `${siteUrl}${path}`,
+    },
+    {
+      hid: 'og:image',
+      property: 'og:image',
+      content: '/android-chrome-512x512.png',
+    },
+    {
+      hid: 'twitter:url',
+      name: 'twitter:url',
+      content: siteUrl,
+    },
+  ],
 });
 </script>
 

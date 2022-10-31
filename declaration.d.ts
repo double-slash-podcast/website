@@ -35,6 +35,7 @@ type PodcastInfosType = {
   publicationDate: string;
   category1: string;
   timeToLive: number;
+  facebookImage: string;
 };
 
 type PodcastContentType = {

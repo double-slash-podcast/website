@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/color-mode',
     '@nathanchase/nuxt-dayjs-module',
-    ['@pinia/nuxt', {autoImports: ['defineStore']}],
+    '@pinia/nuxt',
   ],
   dayjs: {},
   tailwindcss: {
