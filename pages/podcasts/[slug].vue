@@ -7,7 +7,6 @@ const {path} = useRoute();
 const {
   $config: {
     public: {siteUrl},
-    // facebookImage
   },
 } = useNuxtApp();
 
@@ -52,7 +51,7 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: episode.value.description,
+      content: episode.value.description.slice(0, 160),
     },
     {
       hid: 'og:title',

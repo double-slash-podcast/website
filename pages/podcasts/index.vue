@@ -6,6 +6,10 @@ const {data} = await useAsyncData('podcasts', () => {
     .sort({episodeNumber: -1, $numeric: true})
     .find();
 });
+
+useHead({
+  title: 'Tous les épisodes de Double Slash',
+});
 </script>
 
 <template>

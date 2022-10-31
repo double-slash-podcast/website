@@ -11,6 +11,18 @@ const {data} = await useAsyncData('lastOne', () => {
     .limit(1)
     .find();
 });
+
+useHead({
+  title: 'Double Slash, le Podcast des développeur web modernes',
+  meta: [
+    {
+      hid: 'description',
+      name: 'description',
+      content:
+        "Double Slash, c'est le Podcast des développeur web modernes. Patrick et Alex explore les Web et racontent leurs visions des technos, des lib , des tendances..",
+    },
+  ],
+});
 </script>
 
 <template>

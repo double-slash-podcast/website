@@ -1,12 +1,6 @@
 import {baseInfos, podcastInfos} from './config';
 
 export default defineNuxtConfig({
-  app: {
-    htmlAttrs: {lang: 'FR'},
-    head: {
-      title: 'Double Slash',
-    },
-  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
