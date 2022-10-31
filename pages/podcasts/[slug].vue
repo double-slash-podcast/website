@@ -62,8 +62,7 @@ useHead({
     {
       hid: 'og:image',
       property: 'og:image',
-      content:
-        'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
+      content: `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`,
     },
     {
       hid: 'og:image:alt',
@@ -100,8 +99,12 @@ useHead({
     {
       hid: 'twitter:image',
       name: 'twitter:image',
-      content:
-        'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
+      content: `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`,
+    },
+    {
+      hid: 'twitter:image:alt',
+      property: 'twitter:image:alt',
+      content: `${episode.value.episodeNumber} - ${episode.value.title}`,
     },
   ],
 });
