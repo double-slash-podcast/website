@@ -124,7 +124,7 @@ useHead({
 
     <main class="w-full">
       <!-- navbart TAB -->
-      <TabGroup default-index="0">
+      <TabGroup :default-index="0">
         <TabList class="flex mb-8">
           <Tab
             v-for="link in linksTab"
