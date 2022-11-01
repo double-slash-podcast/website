@@ -75,7 +75,7 @@ useHead({
         <EpisodeHeadings :episode="data[0]" class="mt-4"></EpisodeHeadings>
       </template>
     </Header>
-    <main class="relative pb-24">
+    <main class="relative z-10 pb-24">
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center space-x-6">
