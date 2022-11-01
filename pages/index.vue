@@ -1,7 +1,10 @@
 <script setup>
 import {animate, scroll} from 'motion';
+const bigSlash = ref();
+const tinySlash = ref();
 onMounted(() => {
-  scroll(animate('#bigSlash', {x: 0, y: 100}));
+  scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
+  scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
 });
 
 const {path} = useRoute();
@@ -55,21 +58,7 @@ useHead({
 
 <template>
   <div class="relative bg-haiti">
-    <LazyIcon
-      id="bigSlash"
-      name="SlashIcon"
-      size="350"
-      inside-class="fill-purple-800"
-      class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
-    />
-    <LazyIcon
-      id="tinySlash"
-      name="SlashIcon"
-      size="200"
-      inside-class="fill-purple-800"
-      class="fixed top-[10%] right-0 z-8 opacity-20"
-    />
-    <Header :height="300">
+    <Header :height="300" class="z-10">
       <template #title>
         <Brand slash />
       </template>
@@ -86,7 +75,7 @@ useHead({
         <EpisodeHeadings :episode="data[0]" class="mt-4"></EpisodeHeadings>
       </template>
     </Header>
-    <main class="relative pb-24">
+    <main class="relative z-10 pb-24">
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center space-x-6">
@@ -114,5 +103,17 @@ useHead({
 
       <Cohost class="mb-24" />
     </main>
+    <LazySlashIcon
+      ref="bigSlash"
+      size="350"
+      class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
+      inside-class="fill-purple-800"
+    />
+    <LazySlashIcon
+      ref="tinySlash"
+      size="200"
+      class="fixed top-[10%] right-0 z-8 opacity-20"
+      inside-class="fill-purple-800"
+    />
   </div>
 </template>

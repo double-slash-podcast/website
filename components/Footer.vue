@@ -1,7 +1,6 @@
 <template>
   <footer class="relative h-12 bg-purple-800 border-t-4 border-yellowDs">
-    <Icon
-      name="SlashIcon"
+    <SlashIcon
       size="80"
       class="absolute top-[-50px] left-0 md:left-[20%] sm:left-[10%] fill-yellowDs"
     />

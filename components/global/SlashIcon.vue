@@ -1,8 +1,9 @@
 <template>
   <svg
+    ref="svg"
     xmlns="http://www.w3.org/2000/svg"
-    width="90"
-    height="125"
+    :width="`${size}px`"
+    :height="`${size}px`"
     viewBox="0 0 90 144"
     :class="insideClass"
   >
@@ -17,9 +18,15 @@
     </text>
   </svg>
 </template>
-<script setup>
+<script setup lang="ts">
 const {insideClass} = useAttrs();
+defineProps<{
+  size: string;
+}>();
+const svg = ref();
+defineExpose({
+  svg,
+});
 </script>
-<style></style>
 
 <!-- class="absolute -top-[13px] left-[43%] hidden drop-shadow -z-10 sm:block" -->
