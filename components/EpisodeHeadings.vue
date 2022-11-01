@@ -14,7 +14,7 @@ const props = withDefaults(
 
 <template>
   <div
-    class="flex w-full md:min-w-[600px] py-10 text-center text-white uppercase justify-between"
+    class="flex w-full md:min-w-[600px] px-1 py-10 text-center text-white uppercase justify-between"
   >
     <nuxt-link
       :to="episode._path"
