@@ -12,6 +12,7 @@ season: 1
 title: Docusaurus et React Hebdo
 subtitle: Avec Sébastien Lorber
 dsSlug: DS_051_docusaurus
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
 description: 
 videoLink : xzB3TGeENEU
 links:
