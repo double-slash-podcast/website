@@ -1,5 +1,6 @@
 <template>
   <svg
+    ref="svg"
     xmlns="http://www.w3.org/2000/svg"
     :width="`${size}px`"
     :height="`${size}px`"
@@ -22,6 +23,10 @@ const {insideClass} = useAttrs();
 defineProps<{
   size: string;
 }>();
+const svg = ref();
+defineExpose({
+  svg,
+});
 </script>
 
 <!-- class="absolute -top-[13px] left-[43%] hidden drop-shadow -z-10 sm:block" -->

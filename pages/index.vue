@@ -1,7 +1,10 @@
 <script setup>
 import {animate, scroll} from 'motion';
+const bigSlash = ref();
+const tinySlash = ref();
 onMounted(() => {
-  scroll(animate('#bigSlash', {x: 0, y: 100}));
+  scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
+  scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
 });
 
 const {path} = useRoute();
@@ -55,19 +58,7 @@ useHead({
 
 <template>
   <div class="relative bg-haiti">
-    <SlashIcon
-      id="bigSlash"
-      size="350"
-      class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
-      inside-class="fill-purple-800"
-    />
-    <SlashIcon
-      id="tinySlash"
-      size="200"
-      class="fixed top-[10%] right-0 z-8 opacity-20"
-      inside-class="fill-purple-800"
-    />
-    <Header :height="300">
+    <Header :height="300" class="z-10">
       <template #title>
         <Brand slash />
       </template>
@@ -112,5 +103,17 @@ useHead({
 
       <Cohost class="mb-24" />
     </main>
+    <LazySlashIcon
+      ref="bigSlash"
+      size="350"
+      class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
+      inside-class="fill-purple-800"
+    />
+    <LazySlashIcon
+      ref="tinySlash"
+      size="200"
+      class="fixed top-[10%] right-0 z-8 opacity-20"
+      inside-class="fill-purple-800"
+    />
   </div>
 </template>
