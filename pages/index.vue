@@ -55,19 +55,17 @@ useHead({
 
 <template>
   <div class="relative bg-haiti">
-    <LazyIcon
+    <SlashIcon
       id="bigSlash"
-      name="SlashIcon"
       size="350"
-      inside-class="fill-purple-800"
       class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
-    />
-    <LazyIcon
-      id="tinySlash"
-      name="SlashIcon"
-      size="200"
       inside-class="fill-purple-800"
+    />
+    <SlashIcon
+      id="tinySlash"
+      size="200"
       class="fixed top-[10%] right-0 z-8 opacity-20"
+      inside-class="fill-purple-800"
     />
     <Header :height="300">
       <template #title>
