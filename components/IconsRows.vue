@@ -5,14 +5,21 @@
         class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideLeft1"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" size="40" class="grayscale" />
+          <Icon
+            v-if="isFirst"
+            :id="logo"
+            :name="logo"
+            size="40"
+            class="grayscale"
+          />
+          <IconsUse v-else :id="logo" size="40" class="grayscale icon" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideLeft2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" size="40" class="grayscale" />
+          <IconsUse :id="logo" size="40" class="grayscale icon" />
         </li>
       </ul>
     </div>
@@ -22,21 +29,28 @@
         class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideRight1"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" size="40" class="grayscale" />
+          <IconsUse :id="logo" size="40" class="grayscale icon" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideRight2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon :name="logo" size="40" class="grayscale" />
+          <IconsUse :id="logo" size="40" class="grayscale icon" />
         </li>
       </ul>
     </div>
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
+withDefaults(
+  defineProps<{
+    isFirst: boolean;
+  }>(),
+  {isFirst: false},
+);
+
 const logos = [
   'logos:vitejs',
   'logos:pnpm',

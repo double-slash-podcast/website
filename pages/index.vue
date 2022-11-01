@@ -55,14 +55,14 @@ useHead({
 
 <template>
   <div class="relative bg-haiti">
-    <Icon
+    <LazyIcon
       id="bigSlash"
       name="SlashIcon"
       size="350"
       inside-class="fill-purple-800"
       class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
     />
-    <Icon
+    <LazyIcon
       id="tinySlash"
       name="SlashIcon"
       size="200"
@@ -83,7 +83,7 @@ useHead({
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data[0]"></EpisodeHeadings>
+        <EpisodeHeadings :episode="data[0]" class="mt-4"></EpisodeHeadings>
       </template>
     </Header>
     <main class="relative pb-24">
