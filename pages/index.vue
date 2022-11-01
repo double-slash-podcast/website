@@ -83,7 +83,7 @@ useHead({
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data[0]"></EpisodeHeadings>
+        <EpisodeHeadings :episode="data[0]" class="mt-4"></EpisodeHeadings>
       </template>
     </Header>
     <main class="relative pb-24">

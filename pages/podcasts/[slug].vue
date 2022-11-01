@@ -136,7 +136,7 @@ useHead({
               :class="{
                 'text-purple-700 font-bold underline': selected,
               }"
-              class="flex-1 py-1 mx-2 text-xl marker:px-2 text-haiti underline-offset-4 focus:outline-none"
+              class="flex-1 pt-2 pb-1 mx-2 text-lg xs:text-xl marker:px-2 text-haiti underline-offset-4 focus:outline-none"
             >
               {{ link }}
             </button>
