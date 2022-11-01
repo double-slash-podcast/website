@@ -55,14 +55,14 @@ useHead({
 
 <template>
   <div class="relative bg-haiti">
-    <Icon
+    <LazyIcon
       id="bigSlash"
       name="SlashIcon"
       size="350"
       inside-class="fill-purple-800"
       class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
     />
-    <Icon
+    <LazyIcon
       id="tinySlash"
       name="SlashIcon"
       size="200"
