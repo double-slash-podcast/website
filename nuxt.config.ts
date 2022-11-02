@@ -13,7 +13,14 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
   ],
   image: {
-    provider: 'netlify',
+    provider: 'cloudinary',
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/doubleslash/image/fetch/',
+      modifiers: {
+        effect: 'sharpen:100',
+        quality: 'auto:best',
+      },
+    },
   },
   dayjs: {},
   tailwindcss: {
