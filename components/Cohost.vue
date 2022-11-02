@@ -57,7 +57,10 @@
       >
         <nuxt-img
           src="/assets/alex_picture.jpg"
-          alt=""
+          alt="Photo Alex Duval"
+          width="160px"
+          height="160px"
+          sizes="xs:128px sm:160px"
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />
         <div
