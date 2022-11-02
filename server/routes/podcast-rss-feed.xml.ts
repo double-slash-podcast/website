@@ -5,14 +5,14 @@ import RSS from 'rss';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import {serverQueryContent} from '#content/server';
-import DB from '~/cache';
+import DB from '~/cache/index';
 
 /**
  * get the list of podcasts from content/podcasts
  * @param event
  * @returns array
  */
-const getPodcasts = async (event: CompatibilityEvent) => {
+const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
   const docs = await serverQueryContent(event)
     .sort({publicationDate: 1})
     .where({_partial: false})
