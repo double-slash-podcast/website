@@ -33,6 +33,7 @@ specifiers:
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
   rss: ^1.2.2
+  simple-json-db: ^2.0.0
   typescript: ^4.8.4
   vitest: ^0.24.5
   vue-lite-youtube-embed: ^1.0.4
@@ -47,6 +48,7 @@ dependencies:
   hast-util-to-html: 8.0.3
   motion: 10.14.3
   rss: 1.2.2
+  simple-json-db: 2.0.0
   vue-lite-youtube-embed: 1.0.4
 
 devDependencies:
@@ -7512,6 +7514,11 @@ packages:
   /signal-exit/3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
     dev: true
+
+  /simple-json-db/2.0.0:
+    resolution: {integrity: sha512-oTh7gFQzqAe0E8RN3EkisPo0CojkzcKCKibTcJncg0yt47hWTaNwwjX/FsxfXSTDxfMjBFXFVnZe/EskAlJr7w==}
+    engines: {node: '>=10.0'}
+    dev: false
 
   /slash/3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
