@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image-edge',
   ],
+  image: {
+    provider: 'netlify',
+  },
   dayjs: {},
   tailwindcss: {
     cssPath: '~/assets/main.css',
