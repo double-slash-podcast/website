@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nathanchase/nuxt-dayjs-module',
     '@pinia/nuxt',
+    '@nuxt/image-edge',
   ],
   dayjs: {},
   tailwindcss: {

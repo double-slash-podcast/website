@@ -4,9 +4,12 @@
       class="w-full px-4 py-8 space-y-12 sm:px-0 md:space-y-0 lg:divide-x-2 lg:flex divide-purpleDs divide-dashed"
     >
       <div class="flex w-1/2">
-        <img
-          src="https://avatars.githubusercontent.com/u/46760?v=4"
-          alt=""
+        <nuxt-img
+          src="/assets/pat_picture.jpg"
+          alt="Photo Patrick Faramaz"
+          width="160px"
+          height="160px"
+          sizes="xs:128px sm:160px"
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />
         <div class="pl-6 uppercase font-brand">
@@ -52,8 +55,8 @@
       <div
         class="flex flex-row-reverse justify-end w-full lg:w-1/2 lg:flex-row lg:pl-12"
       >
-        <img
-          src="https://avatars.githubusercontent.com/u/13418668?v=4"
+        <nuxt-img
+          src="/assets/alex_picture.jpg"
           alt=""
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />
