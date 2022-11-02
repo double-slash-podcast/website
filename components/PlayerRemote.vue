@@ -1,6 +1,10 @@
 <template>
   <div class="flex items-center justify-end space-x-3 text-yellowDs">
-    <button @click.stop.prevent="tooglePlayer">
+    <button
+      :aria-label="getStatus"
+      :title="getStatus"
+      @click.stop.prevent="tooglePlayer"
+    >
       <Icon
         v-if="
           (store.currentTitle === episode.title &&
@@ -38,4 +42,21 @@ const tooglePlayer = () => {
     store.setStatusPlayer(store.statusPlayer === 'pause' ? 'play' : 'pause');
   }
 };
+
+// title for button
+const getStatus = computed(() => {
+  if (
+    store.currentTitle === props.episode.title &&
+    store.statusPlayer === 'play'
+  ) {
+    return `mettre en pause ${props.episode.title}`;
+  } else if (
+    store.currentTitle === props.episode.title &&
+    store.statusPlayer === 'pause'
+  ) {
+    return `mettre en lecture ${props.episode.title}`;
+  } else {
+    return `mettre en lecture ${props.episode.title}`;
+  }
+});
 </script>
