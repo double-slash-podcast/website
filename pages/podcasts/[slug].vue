@@ -147,7 +147,7 @@ useHead({
             {{ episode.description }}
             <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
           </TabPanel>
-          <TabPanel v-if="episode.links.length > 0" links>
+          <TabPanel v-if="episode?.links?.length > 0" links>
             <ul class="space-y-3">
               <li
                 v-for="link in episode.links"

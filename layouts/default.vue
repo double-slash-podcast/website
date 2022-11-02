@@ -30,14 +30,6 @@ useHead({
       type: 'font/woff2',
     },
     {
-      hid: 'preload-font-dank',
-      rel: 'preload',
-      as: 'font',
-      // i don't know how to import this dynamically
-      href: '/_nuxt/DankMono.ceca8ae3.woff2',
-      type: 'font/woff2',
-    },
-    {
       hid: 'canonical',
       rel: 'canonical',
       href: `${siteUrl}${path}`,

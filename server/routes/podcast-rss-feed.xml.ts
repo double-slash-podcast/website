@@ -5,6 +5,7 @@ import RSS from 'rss';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import {serverQueryContent} from '#content/server';
+import DB from '~/cache';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -110,8 +111,15 @@ const getFeedBase = (infos: PodcastInfosType) =>
  */
 const getRemoteFileInfos = async (url: string) => {
   let estimate;
+  // from cache
+  const dbEstimate = DB.get(url);
+  if (dbEstimate) {
+    return dbEstimate;
+  }
   try {
     estimate = await estimateMP3DurationAxios(url);
+    // save in DB
+    DB.set(url, estimate);
   } catch (e) {
     throw new Error((e as Error).message);
   }

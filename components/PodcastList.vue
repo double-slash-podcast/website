@@ -10,19 +10,27 @@ const plateforms = [
   {
     href: 'https://podcasts.google.com/?feed=aHR0cHM6Ly9zbGFzaC1wb2RjYXN0LmZyL3BvZGNhc3QtcnNzLWZlZWQueG1s&ved=2ahUKEwigiuTNrNTpAhUR8hoKHTJnDIQQ4aUDegQIARAC&hl=fr',
     icon: 'GoogleIcon',
+    title: 'Google Podcast',
   },
   {
     href: 'https://open.spotify.com/show/539N9WvnUguUzMWluPp2UK',
     icon: 'SpotifyIcon',
+    title: 'Spotify',
   },
-  {href: 'https://www.deezer.com/fr/show/1245532', icon: 'DeezerIcon'},
+  {
+    href: 'https://www.deezer.com/fr/show/1245532',
+    icon: 'DeezerIcon',
+    title: 'Deezer',
+  },
   {
     href: 'https://podcasts.apple.com/fr/podcast/double-slash/id1513703178',
     icon: 'AppleIcon',
+    title: 'Apple Podcast',
   },
   {
     href: 'https://tunein.com/podcasts/Technology-Podcasts/Double-Slash-p1325678/',
     icon: 'TuneinIcon',
+    title: 'Tunein',
   },
 ];
 </script>
@@ -34,7 +42,7 @@ const plateforms = [
   >
     <ul class="flex justify-center mt-4 space-x-8">
       <li v-for="plateform in plateforms" :key="plateform.icon">
-        <a href="plateform.href">
+        <a :href="plateform.href" :title="plateform.title" target="_blank">
           <Icon
             class="w-12 h-12 text-white duration-300 fill-white hover:text-gray-400 hover:-translate-y-2 sm:h-14 sm:w-14"
             :class="{'text-haiti': dark}"
