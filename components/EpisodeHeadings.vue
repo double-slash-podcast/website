@@ -29,7 +29,7 @@ const props = withDefaults(
         class="text-xl text-white sm:text-2xl font-headings"
         >{{ props.episode.title }}</component
       >
-      <div class="italic font-light text-gray-400">
+      <div class="text-sm italic font-light text-gray-400">
         {{ $dayjs(props.episode.publicationDate).format('DD MMM YY') }}
       </div>
       <PlayerRemote :episode="props.episode" />

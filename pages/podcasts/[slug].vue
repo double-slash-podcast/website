@@ -43,7 +43,7 @@ if (transcription.value) {
   linksTab.value.push('Transcription');
 }
 
-if (!episode) {
+if (!episode.value) {
   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
@@ -118,7 +118,7 @@ useHead({
         <EpisodeHeadings :episode="episode" level="1"></EpisodeHeadings>
       </template>
       <template #title>
-        <Brand />
+        <Brand class="mt-6" />
       </template>
     </Header>
 

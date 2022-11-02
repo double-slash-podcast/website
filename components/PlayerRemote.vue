@@ -8,14 +8,14 @@
           store.currentTitle !== episode.title
         "
         name="ic:baseline-play-circle-filled-white"
-        size="30"
+        size="36"
       />
       <Icon
         v-else-if="
           store.currentTitle === episode.title && store.statusPlayer === 'play'
         "
         name="ic:baseline-pause-circle-filled"
-        size="30"
+        size="36"
       />
     </button>
     <p class="cursor-pointer" @click.stop.prevent="tooglePlayer">
