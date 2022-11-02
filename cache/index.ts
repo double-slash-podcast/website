@@ -1,7 +1,7 @@
 import path from 'path';
 import JSONdb from 'simple-json-db';
 
-// from .nuxt/prerender direc
+// create DB instance
 const DB = new JSONdb(path.resolve(`./`, `cache/db/storage.json`));
 
 export default DB;

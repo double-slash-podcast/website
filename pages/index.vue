@@ -3,8 +3,12 @@ import {animate, scroll} from 'motion';
 const bigSlash = ref();
 const tinySlash = ref();
 onMounted(() => {
-  scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
-  scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
+  if (bigSlash.value) {
+    scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
+  }
+  if (tinySlash.value) {
+    scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
+  }
 });
 
 const {path} = useRoute();
@@ -106,13 +110,13 @@ useHead({
     <LazySlashIcon
       ref="bigSlash"
       size="350"
-      class="fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
+      class="hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
       inside-class="fill-purple-800"
     />
     <LazySlashIcon
       ref="tinySlash"
       size="200"
-      class="fixed top-[10%] right-0 z-8 opacity-20"
+      class="hidden md:block fixed top-[10%] right-0 z-8 opacity-20"
       inside-class="fill-purple-800"
     />
   </div>
