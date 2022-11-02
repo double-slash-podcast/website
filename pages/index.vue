@@ -86,10 +86,15 @@ useHead({
           <a
             href="https://www.youtube.com/channel/UCp5DGBAX2XNJXeOVAo7bICQ"
             target="_blank"
+            title="Chaine YouTube"
           >
             <Icon name="logos:youtube-icon" size="100" />
           </a>
-          <a href="https://www.twitch.tv/doubleslash_dev" target="_blank">
+          <a
+            href="https://www.twitch.tv/doubleslash_dev"
+            target="_blank"
+            title="Chaine Twitch"
+          >
             <Icon name="fa-brands:twitch" size="90" class="text-[#9146ff]" />
           </a>
         </div>

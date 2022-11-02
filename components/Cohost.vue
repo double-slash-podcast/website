@@ -13,21 +13,33 @@
           <p class="text-5xl text-white">Patrick</p>
           <p class="text-3xl text-gray-400">FARAMAZ</p>
           <div class="space-x-4">
-            <NuxtLink to="https://twitter.com/PatrickFaramaz" target="_blank">
+            <NuxtLink
+              to="https://twitter.com/PatrickFaramaz"
+              target="_blank"
+              title="Twitter"
+            >
               <Icon
                 name="mdi:twitter"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
             </NuxtLink>
-            <NuxtLink to="https://github.com/ipatate" target="_blank">
+            <NuxtLink
+              to="https://github.com/ipatate"
+              target="_blank"
+              title="Github"
+            >
               <Icon
                 name="mdi:github"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
             </NuxtLink>
-            <NuxtLink to="https://www.goodmotion.fr/" target="_blank">
+            <NuxtLink
+              to="https://www.goodmotion.fr/"
+              target="_blank"
+              title="Goodmotion"
+            >
               <Icon
                 name="iconoir:www"
                 size="20"
@@ -51,21 +63,33 @@
           <p class="text-5xl text-white">Alex</p>
           <p class="text-3xl text-gray-400">DUVAL</p>
           <div class="space-x-4">
-            <NuxtLink to="https://twitter.com/xlanex6" target="_blank">
+            <NuxtLink
+              to="https://twitter.com/xlanex6"
+              target="_blank"
+              title="Twitter"
+            >
               <Icon
                 name="mdi:twitter"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
             </NuxtLink>
-            <NuxtLink to="https://github.com/xlanex6" target="_blank">
+            <NuxtLink
+              to="https://github.com/xlanex6"
+              target="_blank"
+              title="Github"
+            >
               <Icon
                 name="mdi:github"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
               ></Icon>
             </NuxtLink>
-            <NuxtLink to="https://www.alexduval.fr/" target="_blank">
+            <NuxtLink
+              to="https://www.alexduval.fr/"
+              target="_blank"
+              title="alexduval.fr"
+            >
               <Icon
                 name="iconoir:www"
                 size="20"
