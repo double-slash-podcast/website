@@ -17,13 +17,13 @@ const props = withDefaults(
     class="flex w-full md:min-w-[600px] px-1 py-10 text-center text-white uppercase justify-between"
   >
     <nuxt-link
-      :to="episode._path"
+      :to="`${episode._path}/`"
       class="flex items-center w-1/5 text-6xl sm:w-1/4 font-brand text-yellowDs"
     >
       <span class="text-haiti text-outline">0</span
       >{{ props.episode.episodeNumber }}
     </nuxt-link>
-    <nuxt-link :to="episode._path" class="w-2/3 text-right">
+    <nuxt-link :to="`${episode._path}/`" class="w-2/3 text-right">
       <component
         :is="`h${level}`"
         class="text-xl text-white sm:text-2xl font-headings"
