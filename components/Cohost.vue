@@ -13,6 +13,8 @@ const config = useRuntimeConfig();
           alt="Photo Patrick Faramaz"
           width="160px"
           height="160px"
+          loading="lazy"
+          decoding="async"
           sizes="xs:128px sm:160px"
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />
@@ -64,6 +66,8 @@ const config = useRuntimeConfig();
           alt="Photo Alex Duval"
           width="160px"
           height="160px"
+          loading="lazy"
+          decoding="async"
           sizes="xs:128px sm:160px"
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />

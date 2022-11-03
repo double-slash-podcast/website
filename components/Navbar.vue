@@ -5,7 +5,7 @@
 const links = [
   {
     title: 'podcasts',
-    url: '/podcasts',
+    url: '/podcasts/',
   },
   // {
   //   title: 'contact',

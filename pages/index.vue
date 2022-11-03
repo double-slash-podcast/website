@@ -102,7 +102,7 @@ useHead({
 
       <HeadingsSection title="Les épisodes précédents" class="mb-24">
         <div class="text-center">
-          <nuxt-link to="/podcasts" class="text-xs text-white uppercase"
+          <nuxt-link to="/podcasts/" class="text-xs text-white uppercase"
             >Voir tous les épisodes -></nuxt-link
           >
         </div>
