@@ -1,3 +1,7 @@
+<script setup>
+const config = useRuntimeConfig();
+</script>
+
 <template>
   <HeadingsSection title="Les animateurs">
     <div
@@ -5,7 +9,7 @@
     >
       <div class="flex w-1/2">
         <nuxt-img
-          src="/assets/pat_picture.jpg"
+          :src="`${config.siteUrl}/assets/pat_picture.jpg`"
           alt="Photo Patrick Faramaz"
           width="160px"
           height="160px"
@@ -56,7 +60,7 @@
         class="flex flex-row-reverse justify-end w-full lg:w-1/2 lg:flex-row lg:pl-12"
       >
         <nuxt-img
-          src="/assets/alex_picture.jpg"
+          :src="`${config.siteUrl}/assets/alex_picture.jpg`"
           alt="Photo Alex Duval"
           width="160px"
           height="160px"
