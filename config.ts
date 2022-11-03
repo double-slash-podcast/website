@@ -1,5 +1,5 @@
 export const baseInfos: BaseInfosType = {
-  siteUrl: 'https://www.double-slash.dev',
+  siteUrl: 'https://double-slash.dev',
   email: 'info@slash-podcast.fr',
   titleDefault: 'Double Slash',
   imageDefault:
