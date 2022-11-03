@@ -10,7 +10,18 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nathanchase/nuxt-dayjs-module',
     '@pinia/nuxt',
+    '@nuxt/image-edge',
   ],
+  image: {
+    provider: 'cloudinary',
+    cloudinary: {
+      baseURL: 'https://res.cloudinary.com/doubleslash/image/fetch/',
+      modifiers: {
+        effect: 'sharpen:100',
+        quality: 'auto:best',
+      },
+    },
+  },
   dayjs: {},
   tailwindcss: {
     cssPath: '~/assets/main.css',

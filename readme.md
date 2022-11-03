@@ -1,10 +1,15 @@
 # Double Slash Podcast Website
 
-WIP...
+[![Netlify Status](https://api.netlify.com/api/v1/badges/790566ad-de5b-494f-9a91-e285f98080e5/deploy-status)](https://app.netlify.com/sites/double-slash-website/deploys)
+
+## Website
+
+[https://double-slash.dev/](https://double-slash.dev/)
 
 ## Quick Start
 
 We use [pnpm](https://pnpm.io) on package management.
+
 
 #### Install dependencies
 
@@ -54,54 +59,11 @@ pnpm build
 - [Typescript](https://www.typescriptlang.org/)
 
 
+## Todo
 
-## Roadmap for new website
-
-- [x] RSS creation for episodes
-  - Rss creation by plugin / module
-  - [Validate by](https://podba.se/validate/)
-- [ ] Config for SSR with serverless
-- [ ] Config export on Netlify Org
-  - [ ] sitemap
-  - [ + / - ] refacto link comp + :after seo hack
-  - [ ] build on netlify 
-  - [ ] SEO best practices
-  - [ ] `head`
-  - [ ] Social share
-  - [ ] new domain name redirection
-  - [ ] social share
-
-  - [ ] Transcription for `SEO`
-- Components
-- Episode page
-  - [x] Footer
-  - [x] Audio player as remote 
-  - [X] player as dedicated store
-  - [x] one layout
-  - [x] import content
-  - [X] RSS GUID
-  - [x] Mp3 player / Video player
-  - [x] add episodeArtwork into RSS
-  - [x] 301 redirection
-
-- []
-
-### post pone
+- [ ] Transcription for `SEO`
 - [ ] Sponsoring page => redirection
 - [ ] Contact Form
 - [ ] Live page ?
 - [ ] Blog for SEO content ?
-<!-- - [ ]
-- [ ]
-- [ ] -->
-<!-- - 
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ]
-- [ ] -->
+
