@@ -15,7 +15,7 @@ import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
 const {path} = useRoute();
 const {
   $config: {
-    public: {siteUrl},
+    public: {siteUrl, titleDefault, twitterUrl},
   },
 } = useNuxtApp();
 useHead({
@@ -55,4 +55,17 @@ useHead({
     {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5'},
   ],
 });
+
+useSchemaOrg([
+  // @todo Select Identity: https://vue-schema-org.netlify.app/guide/guides/identity
+  defineOrganization({
+    name: titleDefault,
+    logo: '/logo.png',
+    sameAs: [twitterUrl],
+  }),
+  defineWebSite({
+    name: titleDefault,
+  }),
+  defineWebPage(),
+]);
 </script>

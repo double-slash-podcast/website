@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nathanchase/nuxt-dayjs-module',
     '@pinia/nuxt',
     '@nuxt/image-edge',
+    'nuxt-schema-org',
   ],
   image: {
     provider: 'cloudinary',
@@ -21,6 +22,9 @@ export default defineNuxtConfig({
         quality: 'auto:best',
       },
     },
+  },
+  schemaOrg: {
+    canonicalHost: baseInfos.siteUrl,
   },
   dayjs: {},
   tailwindcss: {
