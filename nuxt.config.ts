@@ -12,6 +12,13 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image-edge',
   ],
+  content: {
+    watch: {
+      ws: {
+        port: 5000,
+      },
+    },
+  },
   image: {
     provider: 'cloudinary',
     cloudinary: {
