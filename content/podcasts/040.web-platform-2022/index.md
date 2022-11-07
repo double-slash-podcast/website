@@ -13,7 +13,7 @@ season: 1
 title: Les Web Platforms en 2022
 subtitle: Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
 guid: ab1b72df509cb2a1ec871478816c4223
-description: "Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple. Retrouvez la vidéo de l'enregistrement sur le Youtube de DoubleSlash Les slides utilisés pour l'épisode https://slides.com/goodmotion/state-of-web-platform Pour la toute première fois, tous les principaux fournisseurs de navigateurs se sont réunis pour..."
+description: Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
 videoLink: 41oHH_opXKg
 links:
   [
@@ -38,8 +38,6 @@ links:
   ]
 ---
 
-## Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
-
 **Les slides utilisés pour l'épisode [https://slides.com/goodmotion/state-of-web-platform](https://slides.com/goodmotion/state-of-web-platform)**
 
 Pour la toute première fois, tous les principaux fournisseurs de navigateurs se sont réunis pour résoudre les principaux problèmes de compatibilité des navigateurs identifiés par les développeurs Web.
@@ -56,4 +54,4 @@ Nous avons visionné ces vidéos pour vous faire un résumé des principales fon
 
 Bonne écoute !
 
-:Authors
+::authors

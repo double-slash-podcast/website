@@ -53,7 +53,7 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: episode.value.description.slice(0, 160),
+      content: episode.value?.description?.slice(0, 160),
     },
     {
       hid: 'og:title',
@@ -144,7 +144,9 @@ useHead({
         </TabList>
         <TabPanels class="pt-4 border-t-2 border-gray">
           <TabPanel notes>
-            {{ episode.description }}
+            <p class="mb-3">
+              {{ episode.description }}
+            </p>
             <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
           </TabPanel>
           <TabPanel v-if="episode?.links?.length > 0" links>

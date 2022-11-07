@@ -13,15 +13,14 @@ explicit: false
 categories:
   - Technology
 guid: eab1b245f897d185b62b958e12ecee0b
-description: "Dans cet épisode, on retrouve Patrick et Alex qui échange sur le framework CSS Tailwind. Quels sont les avantages à utiliser encore un framework CSS ? Quel est le fonctionnement de Tailwind ? Tailwind est différent des frameworks CSS existants et Alex va vous expliquer pourquoi. Voici les liens donnés dans l'épisode : Le site de TailwindCSS. Plus d'infos sur Post CSS Le livre Best Practices Design Refactoring UI. Le repo AWESOME TailwindCSS. Le Color shade generator. Podcast présenté par : Alexandre Duval @xlanex6 Patrick Faramaz @PatrickFaramaz"
-videoLink: 
+description: Dans cet épisode, on retrouve Patrick et Alex qui échange sur le framework CSS Tailwind. Quels sont les avantages à utiliser encore un framework CSS ? Quel est le fonctionnement de Tailwind ?
+videoLink:
 links: []
 ---
 
-Dans cet épisode, on retrouve Patrick et Alex qui échange sur le framework CSS **Tailwind**. Quels sont les avantages à utiliser encore un framework CSS ? Quel est le fonctionnement de **Tailwind** ?
 Tailwind est différent des frameworks CSS existants et Alex va vous expliquer pourquoi.
 
-Voici les liens donnés dans l'épisode :
+## Voici les liens donnés dans l'épisode :
 
 - Le site de [TailwindCSS](https://tailwindcss.com/).
 
@@ -33,7 +32,4 @@ Voici les liens donnés dans l'épisode :
 
 - Le [Color shade generator](https://javisperez.github.io/tailwindcolorshades/#/).
 
-Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+::authors

@@ -92,7 +92,4 @@ Toutes les stats de la newsletter : [https://www.indiehackers.com/product/frenc
 
 Bonne écoute !
 
-### Podcast présenté par
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+::authors

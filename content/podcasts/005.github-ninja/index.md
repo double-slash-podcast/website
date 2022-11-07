@@ -13,12 +13,10 @@ explicit: false
 categories:
   - Technology
 guid: 3bec175544dbf2be451962b6645868df
-description: "Petit retour sur la conférence annuelle de GitHub, les nouvelles fonctionnalités et autres outils liés à GitHub. GitHub Satellite Vidéos en ligne GITHUB SATELLITE Nouvelle version de la CLI https://cli.github.com/ Github Actions https://github.com/features/actions Extensions octoTree Enhanced GitHub Sur le site du repo t pour faire une recherche , nom , extension de fichier y pour transformer l'URL en permalink b pour trouver qui blamer, git blame ! Podcast présenté par : Alexandre Duval @xlanex6 Patrick Faramaz @PatrickFaramaz"
-videoLink: 
+description: Petit retour sur la conférence annuelle de GitHub, les nouvelles fonctionnalités et autres outils liés à GitHub.
+videoLink:
 links: []
 ---
-
-Petit retour sur la conférence annuelle de GitHub, les nouvelles fonctionnalités et autres outils liés à GitHub.
 
 ### GitHub Satellite
 
@@ -50,7 +48,4 @@ https://github.com/features/actions
 - `y` pour transformer l'URL en permalink
 - `b` pour trouver qui blamer, git blame !
 
-Podcast présenté par :
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+::authors

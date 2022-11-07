@@ -28,18 +28,18 @@ const {data} = await useAsyncData('lastOne', () => {
 });
 
 useHead({
-  title: 'Double Slash, le Podcast des développeur web modernes',
+  title: 'Double Slash, le Podcast des développeurs web modernes',
   meta: [
     {
       hid: 'description',
       name: 'description',
       content:
-        "Double Slash, c'est le Podcast des développeur web modernes. Patrick et Alex racontent leurs visions des technos, des lib , des tendances du dévelopement Web.",
+        "Double Slash, c'est le Podcast des développeurs web modernes. Patrick et Alex racontent leurs visions des technos, des libs , des tendances du développement Web.",
     },
     {
       hid: 'og:title',
       name: 'og:title',
-      content: 'Double Slash, le Podcast des développeur web modernes',
+      content: 'Double Slash, le Podcast des développeurs web modernes',
     },
     {
       hid: 'og:url',
