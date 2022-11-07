@@ -148,6 +148,8 @@ export default defineEventHandler(
       // create url of file
       const url = `${prefixAudio}/${dsSlug}.mp3`;
 
+      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${siteUrl}${path}/`;
+
       // generate guid
       const guidFresh = crypto
         .createHash('md5')
@@ -188,8 +190,8 @@ export default defineEventHandler(
         guid: guid || guidFresh,
         title: title || '',
         date: publicationDate,
-        description,
-        url: `${siteUrl}${path}`,
+        description: _description,
+        url: `${siteUrl}${path}/`,
         categories,
         author,
         custom_elements,
