@@ -18,26 +18,6 @@ const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
     .where({_partial: false})
     .find();
 
-  // test add transcript in doc
-  //   docs.forEach(doc => {
-  //     const {_path} = doc;
-  //     if (_path?.includes('/transcript')) {
-  //       // find name of dir
-  //       const [, , name] = _path.split('/');
-  //       if (name) {
-  //         // find index of podcast
-  //         const i = docs.findIndex(
-  //           d =>
-  //             d._path?.includes(`/${name}`) && !d._path?.includes('/transcript'),
-  //         );
-  //         if (i) {
-  //           // add transcript in doc podcast
-  //           docs[i].transcript = doc;
-  //         }
-  //       }
-  //     }
-  //   });
-
   // filter for keep only podcast content
   return docs
     .filter(doc => doc?._path?.includes('/podcasts'))
