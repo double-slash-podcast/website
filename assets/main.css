@@ -59,7 +59,11 @@ h2 {
 }
 
 .prose p {
-  @apply mb-6 leading-5 font-base;
+  @apply mb-6 leading-6 font-base;
+}
+
+.prose a[target='_blank'] {
+  @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-0.5 after:relative;
 }
 
 @tailwind utilities;
