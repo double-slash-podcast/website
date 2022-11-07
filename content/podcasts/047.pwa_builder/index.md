@@ -34,7 +34,4 @@ Nous allons également parler de la gestion des projets open-sources, comment in
 - [https://www.davrous.com/](https://www.davrous.com/)
 
 
-### Podcast présenté par
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+::authors

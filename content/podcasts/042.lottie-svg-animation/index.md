@@ -13,7 +13,7 @@ title: Lottie, une solution pour les animations
 subtitle: Lottie, une solution pour les animations svg avancées [Animation Serie]
 dsSlug: DS_042_lottie
 guid: 8216e840e11ff0c76bc7207324afc1fa
-description: Cet épisode fait partie d'une série de quelques épisodes dédiés à l'animation. Nous recevons Charly Martin pour parler de Lottie, une solution pour créer des animations SVG très avancées
+description: Cet épisode fait partie d'une série de quelques épisodes dédiés à l'animation. Nous recevons Charly Martin pour parler de Lottie, une solution pour créer des animations SVG très avancées.
 videoLink : p0jcwBJOOpY
 links:
   [
@@ -57,4 +57,4 @@ Par contre, si vous avez un Motion Designer dans votre équipe, vous allez pouvo
 
 Bonne écoute !
 
-:Authors
+::authors

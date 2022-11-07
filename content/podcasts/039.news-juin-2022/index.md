@@ -13,11 +13,9 @@ season: 1
 title: Spécial news - Juin 2022
 subtitle: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
 guid: 0f919ee6ee5c883b1253f2c584915dc9
-description: "Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines Retrouvez la vidéo de l'enregistrement sur le Youtube de DoubleSlash Les news évoquées durant l'épisode."
+description: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
 videoLink: eTBTWDVQ8EQ
 ---
-
-## Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
 
 #### Les news évoquées durant l'épisode :
 
@@ -35,4 +33,4 @@ videoLink: eTBTWDVQ8EQ
 
 Bonne écoute !
 
-:Authors
+::authors
