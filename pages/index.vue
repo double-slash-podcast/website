@@ -100,17 +100,20 @@ useHead({
         </div>
       </HeadingsSection>
 
-      <HeadingsSection title="Les épisodes précédents" class="mb-24">
-        <div class="text-center">
-          <nuxt-link to="/podcasts/" class="text-xs text-white uppercase"
-            >Voir tous les épisodes -></nuxt-link
-          >
-        </div>
-      </HeadingsSection>
-
-      <LastEpisodes class="mb-24" />
-
-      <Cohost class="mb-24" />
+      <HeadingsSection title="Les épisodes précédents" class="mb-8" />
+      <LastEpisodes class="mb-8" />
+      <div class="mb-24 text-center">
+        <nuxt-link
+          to="/podcasts/"
+          class="flex items-center justify-center text-xl uppercase group text-yellowDs"
+          >Voir tous les épisodes
+          <Icon
+            class="ml-1 transition-all group-hover:translate-x-1"
+            name="mdi:arrow-right"
+            :size="24"
+        /></nuxt-link>
+      </div>
+      <Cohost class="mb-28" />
     </main>
     <LazySlashIcon
       ref="bigSlash"
