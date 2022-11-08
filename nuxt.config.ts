@@ -13,6 +13,13 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     'nuxt-schema-org',
   ],
+  content: {
+    watch: {
+      ws: {
+        port: 5000,
+      },
+    },
+  },
   image: {
     provider: 'cloudinary',
     cloudinary: {
@@ -48,6 +55,11 @@ export default defineNuxtConfig({
       ...baseInfos,
       podcastInfos,
       isDev: process.env.NODE_ENV === 'development',
+      content: {
+        anchorLinks: {
+          exclude: [1, 2, 3, 4, 5, 6],
+        },
+      },
     },
   },
 });

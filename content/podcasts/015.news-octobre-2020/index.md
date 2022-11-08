@@ -13,12 +13,10 @@ season: 1
 title: Épisode spécial news avec React 17, Webpack 5, Next JS 10, Gatsby...
 subtitle: Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique.
 guid: 085209868df93d54ab3b514a48b426d8
-description: 'Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d''un article comparatif sur les générateurs de site statique : Hugo, Eleventy, Jekyll, Gatsby, Next, Nuxt. Webpack 5 Whats new in webpack 5 Doc migration 4 to 5 React 17 Annonce de la version 17 Next JS 10 Whats new in Next JS 10 Annonce de Next JS 10 Next JS analytics Next JS Commerce Gatsby File system Route API Gatsby Admin Gatsby Function New Gatsby Image API Angular Scully MDN en mode JAMStack article Article: "comparaison des temps de compilation des GSS" article fr article original Podcast présenté par : Alexandre Duval @xlanex6 Patrick Faramaz @PatrickFaramaz'
-videoLink: 
+description: "Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique : Hugo, Eleventy, Jekyll, Gatsby, Next, Nuxt."
+videoLink:
 links: []
 ---
-
-Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique : Hugo, Eleventy, Jekyll, Gatsby, Next, Nuxt.
 
 ## Webpack 5
 
@@ -56,4 +54,4 @@ Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur l
 - [article fr](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/)
 - [article original](https://css-tricks.com/comparing-static-site-generator-build-times/)
 
-:Authors
+::authors

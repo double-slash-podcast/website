@@ -61,7 +61,4 @@ Chaque pilier a son importance. Avec Dan, nous allons voir les principaux pilier
 - Article [https://blog-fr.orson.io/referencer-son-site-seo/32-experts-seo-livrent-3-techniques-de-referencement-2017](https://blog-fr.orson.io/referencer-son-site-seo/32-experts-seo-livrent-3-techniques-de-referencement-2017)
 - Article [https://seosly.com/blog/seo-audit/](https://seosly.com/blog/seo-audit/)
 
-### Podcast présenté par
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+::authors

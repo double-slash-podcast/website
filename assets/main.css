@@ -13,77 +13,16 @@
   src: url('~/assets/fonts/DankMono.woff2') format('woff2');
 }
 
-/* @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 100;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format("woff2");
-} */
-
-/* @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 200;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format('woff2');
-} */
-
-/* @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format("woff2");
-} */
-
-/* @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format('woff2');
-} */
-
-/* @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 500;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format("woff2");
-} */
-
-/* @font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format('woff2');
-} */
-
-/* @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 700;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format("woff2");
-}
-
 @font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 800;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format("woff2");
+  font-family: 'Inter';
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 800;
+  font-display: swap;
+  src: local(Inter),
+    url('~/assets/fonts/Inter-VariableFont.woff2') format('woff2');
+  font-stretch: 25% 151%;
+  unicode-range: U+000-5FF;
 }
-
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 900;
-  font-display: block;
-  src: url('~/assets/fonts/.woff2') format("woff2");
-} */
 
 @tailwind base;
 @tailwind components;
@@ -97,7 +36,7 @@ main {
 }
 
 h1 {
- @apply font-base;
+  @apply font-base;
 }
 .brand {
   @apply text-5xl text-white uppercase font-brand drop-shadow shadow-white;
@@ -113,18 +52,19 @@ h2 {
 }
 /* PROSE ONLY */
 .prose h2 {
-  @apply text-purple-700 font-bold text-lg my-8 font-base normal-case ;
+  @apply my-8 text-lg font-bold text-purple-700 normal-case font-base;
 }
 .prose h3 {
-  @apply text-purple-700 font-bold text-sm my-8 uppercase font-base;
+  @apply my-8 text-sm font-bold text-purple-700 uppercase font-base;
 }
 
 .prose p {
-  @apply mb-6 font-base leading-8;
+  @apply mb-6 leading-6 font-base;
 }
-/* .prose p a {
-  @apply
-} */
+
+.prose a[target='_blank'] {
+  @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-0.5 after:relative;
+}
 
 @tailwind utilities;
 

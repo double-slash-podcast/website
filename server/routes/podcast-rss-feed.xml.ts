@@ -18,26 +18,6 @@ const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
     .where({_partial: false})
     .find();
 
-  // test add transcript in doc
-  //   docs.forEach(doc => {
-  //     const {_path} = doc;
-  //     if (_path?.includes('/transcript')) {
-  //       // find name of dir
-  //       const [, , name] = _path.split('/');
-  //       if (name) {
-  //         // find index of podcast
-  //         const i = docs.findIndex(
-  //           d =>
-  //             d._path?.includes(`/${name}`) && !d._path?.includes('/transcript'),
-  //         );
-  //         if (i) {
-  //           // add transcript in doc podcast
-  //           docs[i].transcript = doc;
-  //         }
-  //       }
-  //     }
-  //   });
-
   // filter for keep only podcast content
   return docs
     .filter(doc => doc?._path?.includes('/podcasts'))
@@ -168,6 +148,8 @@ export default defineEventHandler(
       // create url of file
       const url = `${prefixAudio}/${dsSlug}.mp3`;
 
+      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${siteUrl}${path}/`;
+
       // generate guid
       const guidFresh = crypto
         .createHash('md5')
@@ -208,8 +190,8 @@ export default defineEventHandler(
         guid: guid || guidFresh,
         title: title || '',
         date: publicationDate,
-        description,
-        url: `${siteUrl}${path}`,
+        description: _description,
+        url: `${siteUrl}${path}/`,
         categories,
         author,
         custom_elements,

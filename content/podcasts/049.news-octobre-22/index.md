@@ -80,7 +80,4 @@ The Universal UI Library
 - [https://jsoncrack.com/](https://jsoncrack.com/)
 - [https://jsonhero.io/](https://jsonhero.io/)
 
-### Podcast présenté par
-
-- Alexandre Duval [@xlanex6](https://twitter.com/xlanex6)
-- Patrick Faramaz [@PatrickFaramaz](https://twitter.com/PatrickFaramaz)
+::authors
