@@ -19,7 +19,7 @@ const {
   },
 } = useNuxtApp();
 useHead({
-  htmlAttrs: {lang: 'FR'},
+  htmlAttrs: {lang: 'fr-FR'},
   link: [
     {
       hid: 'preload-font-mono',
@@ -57,7 +57,6 @@ useHead({
 });
 
 useSchemaOrg([
-  // @todo Select Identity: https://vue-schema-org.netlify.app/guide/guides/identity
   defineOrganization({
     name: titleDefault,
     logo: '/logo.png',

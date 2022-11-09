@@ -109,6 +109,7 @@ useHead({
     },
   ],
 });
+useSchemaOrg([defineWebPage()]);
 </script>
 
 <template>
