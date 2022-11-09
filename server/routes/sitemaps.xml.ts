@@ -35,7 +35,7 @@ export default defineEventHandler(async event => {
 
   // list podcasts
   sitemap.write({
-    url: '/podcasts',
+    url: '/podcasts/',
     changefreq: 'monthly',
     priority: 0.7,
   });
