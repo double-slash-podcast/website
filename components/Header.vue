@@ -30,6 +30,7 @@ const headerHeight = computed(() => {
     </div>
     <!-- player -->
     <slot name="player"></slot>
+    <LazyAnimateBackground class="col-start-1 row-start-1" :height="height" />
   </header>
 </template>
 
