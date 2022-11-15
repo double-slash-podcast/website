@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2611
+duration: 3334
 episodeNumber: 52
 episodeType: full
 explicit: false
@@ -13,7 +13,8 @@ title: Les News pour novembre 2022
 subtitle: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont eu lieu dernièrement.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
 description: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont eu lieu dernièrement.
-videoLink : xzB3TGeENEU
+dsSlug: DS_052_news_nov22
+videoLink : 
 links:
   [
     {
