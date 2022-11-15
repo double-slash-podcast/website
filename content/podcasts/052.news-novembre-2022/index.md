@@ -11,7 +11,7 @@ explicit: false
 season: 1
 title: Les News pour novembre 2022
 subtitle: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont eu lieu dernièrement.
-episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1668525076/episode/Square_news_52_jaxnyp.png
 description: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont eu lieu dernièrement.
 dsSlug: DS_052_news_nov22
 videoLink : Pze8XficOfA
