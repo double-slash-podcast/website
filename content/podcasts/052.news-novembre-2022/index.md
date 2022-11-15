@@ -14,7 +14,7 @@ subtitle: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
 description: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont eu lieu dernièrement.
 dsSlug: DS_052_news_nov22
-videoLink : 
+videoLink : Pze8XficOfA
 links:
   [
     {
