@@ -110,7 +110,7 @@ useHead({
           <Icon
             class="ml-1 transition-all group-hover:translate-x-1"
             name="mdi:arrow-right"
-            :size="24"
+            size="24"
         /></nuxt-link>
       </div>
       <Cohost class="mb-28" />
