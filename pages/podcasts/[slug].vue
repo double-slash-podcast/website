@@ -3,12 +3,6 @@ import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
 import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
-const {
-  $config: {
-    public: {siteUrl, prefixAudioDev, prefixAudio, isDev, titleDefault},
-  },
-} = useNuxtApp();
-
 const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
 const {data: episode} = await useAsyncData(
@@ -48,90 +42,8 @@ if (!episode.value) {
   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
-const getImg = () =>
-  `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value?.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value?.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`;
+useHeadPodcast({episode, path});
 
-const getMediaUrl = () =>
-  `${isDev ? prefixAudioDev : prefixAudio}/${episode.value?.dsSlug}.mp3`;
-
-useHead({
-  title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: episode.value?.description?.slice(0, 160),
-    },
-    {
-      hid: 'og:title',
-      name: 'og:title',
-      content: episode.value.title,
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: getImg(),
-    },
-    {
-      hid: 'og:image:alt',
-      property: 'og:image:alt',
-      content: `${episode.value.episodeNumber} - ${episode.value.title}`,
-    },
-    {
-      hid: 'og:description',
-      property: 'og:description',
-      content: episode.value.description,
-    },
-    {
-      hid: 'og:url',
-      property: 'og:url',
-      content: `${siteUrl}${path}`,
-    },
-    {name: 'twitter:site', content: '@doubleslash_dev'},
-    {name: 'twitter:card', content: 'summary_large_image'},
-    {
-      hid: 'twitter:url',
-      name: 'twitter:url',
-      content: siteUrl,
-    },
-    {
-      hid: 'twitter:title',
-      name: 'twitter:title',
-      content: episode.value.title,
-    },
-    {
-      hid: 'twitter:description',
-      name: 'twitter:description',
-      content: episode.value.description,
-    },
-    {
-      hid: 'twitter:image',
-      name: 'twitter:image',
-      content: getImg(),
-    },
-    {
-      hid: 'twitter:image:alt',
-      property: 'twitter:image:alt',
-      content: `${episode.value.episodeNumber} - ${episode.value.title}`,
-    },
-  ],
-  script: [
-    {
-      type: 'application/ld+json',
-      children: `{ "@context": "http://schema.org/", "@type": "PodcastEpisode",
-    "description": "${
-      episode.value?.description
-    }", "image": { "@type": "ImageObject",
-    "url": "${getImg()}", "height": "630px", "width": "1200px" }, "name":
-    "${episode.value?.title}", "url": "${siteUrl}${path}", "about": { "@id":
-    "https://double-slash.dev/#identity" }, "isPartOf": { "@id":
-    "https://double-slash.dev/#website" }, "publisher": { "@id":
-    "https://double-slash.dev/#identity" }, "associatedMedia": { "@type":
-    "MediaObject", "contentUrl": "${getMediaUrl()}"}, "partOfSeries": {
-    "@type": "PodcastSeries", "name": "${titleDefault}", "url": "${siteUrl}" } }`,
-    },
-  ],
-});
 useSchemaOrg([defineWebPage()]);
 </script>
 

@@ -1,0 +1,121 @@
+const getImgPodcast = ({
+  episodeNumber,
+  title,
+}: {
+  episodeNumber: number;
+  title: string;
+}): string =>
+  `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`;
+
+/**
+ * compose head for page podcast
+ *
+ * @param episode {object}
+ * @param path {string}
+ */
+const useHeadPodcast = ({
+  episode,
+  path,
+}: {
+  episode: {value: PodcastContentType};
+  path: string;
+}) => {
+  const {
+    $config: {
+      public: {siteUrl, prefixAudioDev, prefixAudio, isDev, titleDefault},
+    },
+  } = useNuxtApp();
+
+  const getMediaUrl = () =>
+    `${isDev ? prefixAudioDev : prefixAudio}/${episode.value?.dsSlug}.mp3`;
+
+  useHead({
+    title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: episode.value?.description?.slice(0, 160),
+      },
+      {
+        hid: 'og:title',
+        name: 'og:title',
+        content: episode.value.title,
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: getImgPodcast({
+          episodeNumber: episode.value?.episodeNumber,
+          title: episode.value?.title,
+        }),
+      },
+      {
+        hid: 'og:image:alt',
+        property: 'og:image:alt',
+        content: `${episode.value.episodeNumber} - ${episode.value.title}`,
+      },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: episode.value.description,
+      },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: `${siteUrl}${path}`,
+      },
+      {name: 'twitter:site', content: '@doubleslash_dev'},
+      {name: 'twitter:card', content: 'summary_large_image'},
+      {
+        hid: 'twitter:url',
+        name: 'twitter:url',
+        content: siteUrl,
+      },
+      {
+        hid: 'twitter:title',
+        name: 'twitter:title',
+        content: episode.value.title,
+      },
+      {
+        hid: 'twitter:description',
+        name: 'twitter:description',
+        content: episode.value.description,
+      },
+      {
+        hid: 'twitter:image',
+        name: 'twitter:image',
+        content: getImgPodcast({
+          episodeNumber: episode.value?.episodeNumber,
+          title: episode.value?.title,
+        }),
+      },
+      {
+        hid: 'twitter:image:alt',
+        property: 'twitter:image:alt',
+        content: `${episode.value.episodeNumber} - ${episode.value.title}`,
+      },
+    ],
+    script: [
+      {
+        type: 'application/ld+json',
+        children: `{ "@context": "http://schema.org/", "@type": "PodcastEpisode",
+        "description": "${
+          episode.value?.description
+        }", "image": { "@type": "ImageObject",
+        "url": "${getImgPodcast({
+          episodeNumber: episode.value?.episodeNumber,
+          title: episode.value?.title,
+        })}", "height": "630px", "width": "1200px" }, "name":
+        "${episode.value?.title}", "url": "${siteUrl}${path}", "about": { "@id":
+        "https://double-slash.dev/#identity" }, "isPartOf": { "@id":
+        "https://double-slash.dev/#website" }, "publisher": { "@id":
+        "https://double-slash.dev/#identity" }, "associatedMedia": { "@type":
+        "MediaObject", "contentUrl": "${getMediaUrl()}"}, "partOfSeries": {
+        "@type": "PodcastSeries", "name": "${titleDefault}", "url": "${siteUrl}" } }`,
+      },
+    ],
+  });
+};
+
+export default useHeadPodcast;
