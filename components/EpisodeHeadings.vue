@@ -26,10 +26,10 @@ const props = withDefaults(
     <nuxt-link :to="`${episode._path}/`" class="w-2/3 text-right">
       <component
         :is="`h${level}`"
-        class="text-xl text-white sm:text-2xl font-headings"
+        class="text-xl text-white sm:leading-6 sm:text-2xl font-headings"
         >{{ props.episode.title }}</component
       >
-      <div class="text-sm italic font-light text-gray-400">
+      <div class="mt-1 text-sm italic font-light text-gray-400">
         {{ $dayjs(props.episode.publicationDate).format('DD MMM YY') }}
       </div>
       <PlayerRemote :episode="props.episode" />

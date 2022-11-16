@@ -1,5 +1,4 @@
 <script setup>
-import {TabGroup, TabList, Tab, TabPanels, TabPanel} from '@headlessui/vue';
 import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
 import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
@@ -9,7 +8,9 @@ const {
     public: {siteUrl},
   },
 } = useNuxtApp();
+
 const linksTab = ref(['Description']);
+const selected = ref(linksTab.value[0]);
 const {data: episode} = await useAsyncData(
   `${path.replace(/\/+$/, '')}`,
   () => {
@@ -23,7 +24,7 @@ const {data: transcription} = await useAsyncData(
   `${path}/transcription`,
   () => {
     return queryContent()
-      .where({_path: {$eq: `${path}/transcript`}})
+      .where({_path: {$eq: `${path}transcript`}})
       .findOne();
   },
 );
@@ -124,33 +125,44 @@ useSchemaOrg([defineWebPage()]);
     </Header>
 
     <main class="w-full">
-      <!-- navbart TAB -->
-      <TabGroup :default-index="0">
-        <TabList class="flex mb-8">
-          <Tab
+      <div class="tabs">
+        <nav class="flex mt-4 mb-4 md:mb-4" role="tablist">
+          <button
             v-for="link in linksTab"
-            v-slot="{selected}"
+            :id="`tab-${link}`"
             :key="link"
-            as="template"
+            role="tab"
+            :aria-selected="selected == link"
+            :aria-controls="`panel-${link}`"
+            :class="{
+              'text-purple-700 font-bold underline': selected == link,
+            }"
+            type="button"
+            class="flex-1 pt-2 pb-1 mx-2 text-base md:text-lg marker:px-2 text-haiti underline-offset-4 focus:outline-none"
+            @click="() => (selected = link)"
           >
-            <button
-              :class="{
-                'text-purple-700 font-bold underline': selected,
-              }"
-              class="flex-1 pt-2 pb-1 mx-2 text-lg xs:text-xl marker:px-2 text-haiti underline-offset-4 focus:outline-none"
-            >
-              {{ link }}
-            </button>
-          </Tab>
-        </TabList>
-        <TabPanels class="pt-4 border-t-2 border-gray">
-          <TabPanel notes>
+            {{ link }}
+          </button>
+        </nav>
+        <div class="pt-8 border-t-2 border-gray">
+          <div
+            id="panel-Description"
+            :hidden="selected !== 'Description'"
+            role="tabpanel"
+            aria-labelledby="tab-Description"
+          >
             <p class="mb-3">
               {{ episode.description }}
             </p>
             <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
-          </TabPanel>
-          <TabPanel v-if="episode?.links?.length > 0" links>
+          </div>
+          <div
+            v-if="episode?.links?.length > 0"
+            id="panel-Liens"
+            :hidden="selected !== 'Liens'"
+            role="tabpanel"
+            aria-labelledby="tab-Liens"
+          >
             <ul class="space-y-3">
               <li
                 v-for="link in episode.links"
@@ -170,19 +182,30 @@ useSchemaOrg([defineWebPage()]);
                 </NuxtLink>
               </li>
             </ul>
-          </TabPanel>
-          <TabPanel v-if="episode.videoLink" video>
+          </div>
+          <div
+            v-if="episode.videoLink"
+            id="panel-Video"
+            :hidden="selected !== 'Video'"
+            role="tabpanel"
+            aria-labelledby="tab-Video"
+          >
             <LiteYouTubeEmbed :id="episode.videoLink" :title="episode.title" />
-          </TabPanel>
-          <TabPanel v-if="transcription" transcription>
+          </div>
+          <div
+            v-if="transcription"
+            id="panel-Transcription"
+            :hidden="selected !== 'Transcription'"
+            role="tabpanel"
+            aria-labelledby="tab-Transcription"
+          >
             <div class="prose">
               {{ transcription.results.channels[0].alternatives[0].transcript }}
             </div>
-          </TabPanel>
-        </TabPanels>
-      </TabGroup>
+          </div>
+        </div>
+      </div>
     </main>
-
     <Wrapper class="my-16">
       <PodcastList dark />
     </Wrapper>

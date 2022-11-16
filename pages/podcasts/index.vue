@@ -17,7 +17,10 @@ useSchemaOrg([defineWebPage()]);
   <div class="bg-haiti">
     <Header :height="90"></Header>
     <main>
-      <HeadingsSection title="Tous les épisodes" level="1"></HeadingsSection>
+      <HeadingsSection
+        title="Tous les épisodes du podcast double slash"
+        level="1"
+      ></HeadingsSection>
 
       <!-- <div class="sm:max-w-md sm:m-auto">
         <label for="search" class="block m-auto text-sm font-medium text-white"

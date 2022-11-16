@@ -51,6 +51,7 @@ h2 {
   @apply text-2xl tracking-wider uppercase text-yellowDs;
 }
 /* PROSE ONLY */
+
 .prose h2 {
   @apply my-8 text-lg font-bold text-purple-700 normal-case font-base;
 }
@@ -60,6 +61,10 @@ h2 {
 
 .prose p {
   @apply mb-6 leading-6 font-base;
+}
+
+.prose a {
+  @apply break-words;
 }
 
 .prose a[target='_blank'] {

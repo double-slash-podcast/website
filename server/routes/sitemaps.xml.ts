@@ -19,6 +19,10 @@ export default defineEventHandler(async event => {
 
   // Fetch all documents
   const docs = await serverQueryContent(event).find();
+  const _docs = docs
+    .filter(doc => doc?._path?.includes('/podcasts'))
+    .filter(doc => !doc?._path?.includes('/transcript'));
+
   const sitemap = new SitemapStream({
     hostname: siteUrl,
   });
@@ -31,16 +35,16 @@ export default defineEventHandler(async event => {
 
   // list podcasts
   sitemap.write({
-    url: '/podcasts',
+    url: '/podcasts/',
     changefreq: 'monthly',
     priority: 0.7,
   });
 
   // podcasts
-  for (const doc of docs) {
+  for (const doc of _docs) {
     const {lastmod} = getModifiedDate(doc._id);
     sitemap.write({
-      url: doc._path,
+      url: `${doc._path}/`,
       changefreq: 'monthly',
       lastmod,
       priority: 1.0,
