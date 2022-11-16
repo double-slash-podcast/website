@@ -76,7 +76,7 @@ devDependencies:
   lint-staged: 13.0.3
   nuxt: 3.0.0-rc.13_e3uo4sehh4zr4i6m57mkkxxv7y
   nuxt-icon: 0.1.7
-  nuxt-schema-org: 1.1.0-beta.5_typescript@4.8.4
+  nuxt-schema-org: 1.1.0-beta.5_typescript@4.9.3
   pinia: 2.0.23_typescript@4.9.3
   postcss-custom-properties: 13.0.0
   prettier: 2.7.1
@@ -2008,20 +2008,20 @@ packages:
       - vue
     dev: true
 
-  /@vueuse/schema-org-vite/1.1.0-beta.5_typescript@4.8.4:
+  /@vueuse/schema-org-vite/1.1.0-beta.5_typescript@4.9.3:
     resolution: {integrity: sha512-EX9HdslxontHxjh9lbFVB1sVfDuerDZmQ0wgnSDrnu40wlQ2h3HXk2vM47ggiefU3qsFZBzkRuWMNF0XEeeLrw==}
     peerDependencies:
       '@vueuse/head': '>=0.7'
       vite: '*'
     dependencies:
-      '@vueuse/schema-org': 1.1.0-beta.5_typescript@4.8.4
-      schema-dts: 1.1.0_typescript@4.8.4
+      '@vueuse/schema-org': 1.1.0-beta.5_typescript@4.9.3
+      schema-dts: 1.1.0_typescript@4.9.3
     transitivePeerDependencies:
       - typescript
       - vue
     dev: true
 
-  /@vueuse/schema-org/1.1.0-beta.5_typescript@4.8.4:
+  /@vueuse/schema-org/1.1.0-beta.5_typescript@4.9.3:
     resolution: {integrity: sha512-Q4V4zBzF0iytb/IUjDDP+ZQLWdVY8oiFTsc3ziNn4biOrV2bzOEPYROQzehaUybdTPSOJKhTzOZ/al0Z2UpdKw==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -2032,8 +2032,8 @@ packages:
       mlly: 0.5.16
       pathe: 0.3.9
       pkg-types: 0.3.6
-      schema-dts: 1.1.0_typescript@4.8.4
-      schema-org-graph-js: 0.5.1_typescript@4.8.4
+      schema-dts: 1.1.0_typescript@4.9.3
+      schema-org-graph-js: 0.5.1_typescript@4.9.3
       unplugin: 0.9.6
       unplugin-ast: 0.5.5
     transitivePeerDependencies:
@@ -6639,14 +6639,14 @@ packages:
       - vue
     dev: true
 
-  /nuxt-schema-org/1.1.0-beta.5_typescript@4.8.4:
+  /nuxt-schema-org/1.1.0-beta.5_typescript@4.9.3:
     resolution: {integrity: sha512-OtGPSRxVLX79u2CMqtDlpbvqsBQnwJ7fbgSFwIxjcANC5uAkEdidgehBGkcxfzT1gmVK/F6vgyqi+d+eZ0+Cjg==}
     dependencies:
       '@nuxt/kit': 3.0.0-rc.11
-      '@vueuse/schema-org': 1.1.0-beta.5_typescript@4.8.4
-      '@vueuse/schema-org-vite': 1.1.0-beta.5_typescript@4.8.4
+      '@vueuse/schema-org': 1.1.0-beta.5_typescript@4.9.3
+      '@vueuse/schema-org-vite': 1.1.0-beta.5_typescript@4.9.3
       pathe: 0.3.9
-      schema-org-graph-js: 0.5.1_typescript@4.8.4
+      schema-org-graph-js: 0.5.1_typescript@4.9.3
     transitivePeerDependencies:
       - '@vueuse/head'
       - supports-color
@@ -7741,7 +7741,7 @@ packages:
   /rc9/1.2.2:
     resolution: {integrity: sha512-zbe8+HR2X28eZepAwohuKkebbEsA67h0DO9I7g12QrHa2CQopR9gztOLPIPXXGTvcxeUjAN4wZ+b29t3m/u05g==}
     dependencies:
-      defu: 6.1.0
+      defu: 6.1.1
       destr: 1.1.1
       flat: 5.0.2
 
@@ -8141,20 +8141,20 @@ packages:
       xmlchars: 2.2.0
     dev: true
 
-  /schema-dts/1.1.0_typescript@4.8.4:
+  /schema-dts/1.1.0_typescript@4.9.3:
     resolution: {integrity: sha512-vdmbs/5ycj4zyKpZIDqTcy+IZi4s7c38RVAYuDmRi7zgxUT8wRWPMLzg0jr7FjdVunYu9yZ00F3+XcZTTFcTOQ==}
     peerDependencies:
       typescript: '>=4.1.0'
     dependencies:
-      typescript: 4.8.4
+      typescript: 4.9.3
     dev: true
 
-  /schema-org-graph-js/0.5.1_typescript@4.8.4:
+  /schema-org-graph-js/0.5.1_typescript@4.9.3:
     resolution: {integrity: sha512-Fo3MWh2JMe8OFIgsKJlJGxEcV0PIbf7LgoX12Gb8gzPoVPAOHD4R7Lz1OSnSpsPVopUQNwlRGqvx19llfgjVDg==}
     dependencies:
       defu: 6.1.0
       ohash: 0.1.5
-      schema-dts: 1.1.0_typescript@4.8.4
+      schema-dts: 1.1.0_typescript@4.9.3
       ufo: 0.8.6
       utility-types: 3.10.0
     transitivePeerDependencies:
