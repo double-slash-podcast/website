@@ -3,12 +3,6 @@ import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
 import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
-const {
-  $config: {
-    public: {siteUrl},
-  },
-} = useNuxtApp();
-
 const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
 const {data: episode} = await useAsyncData(
@@ -48,68 +42,9 @@ if (!episode.value) {
   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
-useHead({
-  title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: episode.value?.description?.slice(0, 160),
-    },
-    {
-      hid: 'og:title',
-      name: 'og:title',
-      content: episode.value.title,
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`,
-    },
-    {
-      hid: 'og:image:alt',
-      property: 'og:image:alt',
-      content: `${episode.value.episodeNumber} - ${episode.value.title}`,
-    },
-    {
-      hid: 'og:description',
-      property: 'og:description',
-      content: episode.value.description,
-    },
-    {
-      hid: 'og:url',
-      property: 'og:url',
-      content: `${siteUrl}${path}`,
-    },
-    {name: 'twitter:site', content: '@doubleslash_dev'},
-    {name: 'twitter:card', content: 'summary_large_image'},
-    {
-      hid: 'twitter:url',
-      name: 'twitter:url',
-      content: siteUrl,
-    },
-    {
-      hid: 'twitter:title',
-      name: 'twitter:title',
-      content: episode.value.title,
-    },
-    {
-      hid: 'twitter:description',
-      name: 'twitter:description',
-      content: episode.value.description,
-    },
-    {
-      hid: 'twitter:image',
-      name: 'twitter:image',
-      content: `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`,
-    },
-    {
-      hid: 'twitter:image:alt',
-      property: 'twitter:image:alt',
-      content: `${episode.value.episodeNumber} - ${episode.value.title}`,
-    },
-  ],
-});
+useHeadPodcast({episode, path});
+
+useSchemaOrg([defineWebPage()]);
 </script>
 
 <template>
@@ -199,7 +134,9 @@ useHead({
             aria-labelledby="tab-Transcription"
           >
             <div class="prose">
-              {{ transcription.results.channels[0].alternatives[0].transcript }}
+              {{
+                transcription.results?.channels[0].alternatives[0].transcript
+              }}
             </div>
           </div>
         </div>

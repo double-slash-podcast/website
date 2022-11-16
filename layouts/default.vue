@@ -15,11 +15,11 @@ import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
 const {path} = useRoute();
 const {
   $config: {
-    public: {siteUrl},
+    public: {siteUrl, titleDefault, twitterUrl},
   },
 } = useNuxtApp();
 useHead({
-  htmlAttrs: {lang: 'FR'},
+  htmlAttrs: {lang: 'fr-FR'},
   link: [
     {
       hid: 'preload-font-mono',
@@ -55,4 +55,16 @@ useHead({
     {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5'},
   ],
 });
+
+useSchemaOrg([
+  defineOrganization({
+    name: 'Double Slash Dev',
+    logo: '/logo.png',
+    sameAs: [twitterUrl],
+  }),
+  defineWebSite({
+    name: titleDefault,
+  }),
+  defineWebPage(),
+]);
 </script>

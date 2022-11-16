@@ -9,6 +9,7 @@ type BaseInfosType = {
   prefixAudio: string;
   prefixAudioDev: string;
   youtubeChannelId: string;
+  twitterUrl: string;
 };
 
 type PodcastInfosType = {

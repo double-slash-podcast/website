@@ -1,7 +1,7 @@
 export const baseInfos: BaseInfosType = {
   siteUrl: 'https://double-slash.dev',
   email: 'info@slash-podcast.fr',
-  titleDefault: 'Double Slash',
+  titleDefault: 'Double Slash Podcast',
   imageDefault:
     'https://res.cloudinary.com/doubleslash/image/upload/v1597260128/doubleSlashDefault_kyl8s9.png',
   descriptionDefault:
@@ -11,6 +11,7 @@ export const baseInfos: BaseInfosType = {
   prefixAudioDev: 'https://double-slash.ams3.cdn.digitaloceanspaces.com',
   // https://www.youtube.com/feeds/videos.xml?channel_id=
   youtubeChannelId: 'UCp5DGBAX2XNJXeOVAo7bICQ',
+  twitterUrl: 'https://twitter.com/doubleslash_dev',
 };
 
 export const podcastInfos: PodcastInfosType = {
