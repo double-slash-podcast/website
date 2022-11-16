@@ -134,7 +134,9 @@ useSchemaOrg([defineWebPage()]);
             aria-labelledby="tab-Transcription"
           >
             <div class="prose">
-              {{ transcription.results.channels[0].alternatives[0].transcript }}
+              {{
+                transcription.results?.channels[0].alternatives[0].transcript
+              }}
             </div>
           </div>
         </div>
