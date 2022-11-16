@@ -32,9 +32,8 @@ if (episode?.value?.links?.length > 0) {
 if (episode.value?.videoLink) {
   linksTab.value.push('Video');
 }
-
 // transcript
-if (transcription.value) {
+if (transcription.value.results) {
   linksTab.value.push('Transcription');
 }
 
@@ -127,7 +126,7 @@ useSchemaOrg([defineWebPage()]);
             <LiteYouTubeEmbed :id="episode.videoLink" :title="episode.title" />
           </div>
           <div
-            v-if="transcription"
+            v-if="transcription.results"
             id="panel-Transcription"
             :hidden="selected !== 'Transcription'"
             role="tabpanel"
