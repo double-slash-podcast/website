@@ -1,3 +1,9 @@
+const getDescription = (string: string, length: number = 160): string => {
+  if (!string) return '';
+  const lg = string.length;
+  return `${string.substring(0, length)}${lg > 159 ? '...' : ''}`;
+};
+
 const getImgPodcast = ({
   episodeNumber,
   title,
@@ -35,7 +41,7 @@ const useHeadPodcast = ({
       {
         hid: 'description',
         name: 'description',
-        content: episode.value?.description?.slice(0, 160),
+        content: getDescription(episode.value?.description),
       },
       {
         hid: 'og:title',

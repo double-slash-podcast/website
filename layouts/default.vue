@@ -58,7 +58,7 @@ useHead({
 
 useSchemaOrg([
   defineOrganization({
-    name: titleDefault,
+    name: 'Double Slash Dev',
     logo: '/logo.png',
     sameAs: [twitterUrl],
   }),
