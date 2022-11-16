@@ -62,8 +62,12 @@ links:
       url: 'https://component.gallery/',
     },
     {
-      title: 'DevToys',
+      title: 'DevToys (window)',
       url: 'https://devtoys.app/',
+    },
+    {
+      title: 'DevUtils (mac)',
+      url: 'https://devutils.com/',
     },
     {
       title: 'Trash CLI',
