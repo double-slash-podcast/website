@@ -33,7 +33,7 @@ if (episode.value?.videoLink) {
   linksTab.value.push('Video');
 }
 // transcript
-if (transcription.value.results) {
+if (transcription.value?.results) {
   linksTab.value.push('Transcription');
 }
 
