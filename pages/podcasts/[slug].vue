@@ -5,7 +5,7 @@ const {path} = useRoute();
 
 const {
   $config: {
-    public: {siteUrl},
+    public: {siteUrl, prefixAudioDev, prefixAudio, isDev, titleDefault},
   },
 } = useNuxtApp();
 
@@ -48,6 +48,12 @@ if (!episode.value) {
   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
+const getImg = () =>
+  `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value?.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value?.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`;
+
+const getMediaUrl = () =>
+  `${isDev ? prefixAudioDev : prefixAudio}/${episode.value?.dsSlug}.mp3`;
+
 useHead({
   title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
   meta: [
@@ -64,7 +70,7 @@ useHead({
     {
       hid: 'og:image',
       property: 'og:image',
-      content: `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`,
+      content: getImg(),
     },
     {
       hid: 'og:image:alt',
@@ -101,12 +107,28 @@ useHead({
     {
       hid: 'twitter:image',
       name: 'twitter:image',
-      content: `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episode.value.episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${episode.value.title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`,
+      content: getImg(),
     },
     {
       hid: 'twitter:image:alt',
       property: 'twitter:image:alt',
       content: `${episode.value.episodeNumber} - ${episode.value.title}`,
+    },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: `{ "@context": "http://schema.org/", "@type": "PodcastEpisode",
+    "description": "${
+      episode.value?.description
+    }", "image": { "@type": "ImageObject",
+    "url": "${getImg()}", "height": "630px", "width": "1200px" }, "name":
+    "${episode.value?.title}", "url": "${siteUrl}${path}", "about": { "@id":
+    "https://double-slash.dev/#identity" }, "isPartOf": { "@id":
+    "https://double-slash.dev/#website" }, "publisher": { "@id":
+    "https://double-slash.dev/#identity" }, "associatedMedia": { "@type":
+    "MediaObject", "contentUrl": "${getMediaUrl()}"}, "partOfSeries": {
+    "@type": "PodcastSeries", "name": "${titleDefault}", "url": "${siteUrl}" } }`,
     },
   ],
 });
