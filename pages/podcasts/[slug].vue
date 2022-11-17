@@ -37,8 +37,10 @@ if (transcription.value?.results) {
   linksTab.value.push('Transcription');
 }
 
-if (!episode.value) {
-  throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
+if (!episode.value?.title) {
+  // redirect to 404 page
+  navigateTo('/404/pagenotfound');
+  //   throw createError({statusCode: 404, fatal: 'Page Not Found'});
 }
 
 useHeadPodcast({episode, path});
