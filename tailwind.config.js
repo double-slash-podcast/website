@@ -18,9 +18,9 @@ module.exports = {
           'url(data:image/svg+xml;base64,PHN2ZyBpZD0iZXh0ZXJuYWwiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciIGNsYXNzPSJpY29uIiB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGRhdGEtdi0xMDg5NWM5MT0iIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMCA2djJINXYxMWgxMXYtNWgydjZhMSAxIDAgMCAxLTEgMUg0YTEgMSAwIDAgMS0xLTFWN2ExIDEgMCAwIDEgMS0xaDZ6bTExLTN2OGgtMlY2LjQxM2wtNy43OTMgNy43OTRsLTEuNDE0LTEuNDE0TDE3LjU4NSA1SDEzVjNoOHoiLz48L3N2Zz4=);',
       },
       fontFamily: {
-        brand: ['Mono45', 'Arial', 'sans-serif'],
-        headings: ['Dank', 'Arial', 'sans-serif'],
-        base: ['Inter', 'Arial', 'sans-serif'],
+        brand: ['Mono45', 'Mono45 Fallback', 'Arial', 'sans-serif'],
+        headings: ['Dank', 'Dank Fallback', 'Arial', 'sans-serif'],
+        base: ['Inter', 'Inter Fallback', 'Arial', 'sans-serif'],
       },
       animation: {
         slideLeft1: 'slideLeft1 40s linear infinite',

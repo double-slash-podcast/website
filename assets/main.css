@@ -5,12 +5,35 @@
   font-display: swap;
   src: url('~/assets/fonts/mono45.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Mono45 Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial');
+  ascent-override: 80.06%;
+  descent-override: 23.64%;
+  line-gap-override: 0%;
+  size-adjust: 96.43%;
+}
+
 @font-face {
   font-family: 'Dank';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url('~/assets/fonts/DankMono.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Dank Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial');
+  ascent-override: 64.63%;
+  descent-override: 18.34%;
+  line-gap-override: 16.59%;
+  size-adjust: 120.53%;
 }
 
 @font-face {
@@ -22,6 +45,17 @@
     url('~/assets/fonts/Inter-VariableFont.woff2') format('woff2');
   font-stretch: 25% 151%;
   unicode-range: U+000-5FF;
+}
+
+@font-face {
+  font-family: 'Inter Fallback';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial');
+  ascent-override: 90%;
+  descent-override: 22.43%;
+  line-gap-override: 0%;
+  size-adjust: 107.64%;
 }
 
 @tailwind base;
