@@ -40,7 +40,7 @@ if (transcription.value?.results) {
 if (!episode.value?.title) {
   // redirect to 404 page
   navigateTo('/404/pagenotfound');
-  //   throw createError({statusCode: 404, fatal: 'Page Not Found'});
+  throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
 useHeadPodcast({episode, path});
