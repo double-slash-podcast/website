@@ -10,7 +10,7 @@ episodeNumber: 15
 episodeType: full
 explicit: false
 season: 1
-title: Épisode spécial news avec React 17, Webpack 5, Next JS 10, Gatsby...
+title: Épisode news avec React 17, Webpack 5, NextJS 10, Gatsby...
 subtitle: Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique.
 guid: 085209868df93d54ab3b514a48b426d8
 description: "Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique : Hugo, Eleventy, Jekyll, Gatsby, Next, Nuxt."

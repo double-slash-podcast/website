@@ -10,7 +10,7 @@ episodeNumber: 20
 episodeType: full
 explicit: false
 season: 1
-title: Fastify, le framework rapide pour Node JS avec Vincent Le Goff
+title: Fastify, framework rapide Node JS avec Vincent Le Goff
 subtitle: Un épisode avec notre invité Vincent Le Goff qui contribue activement au projet Fastify. Un framework pour Node JS orienté vitesse et légèreté
 guid: c0ab9fa68657a38131e5007e376d1b09
 description: Un épisode avec notre invité Vincent Le Goff qui contribue activement au projet Fastify. Un framework pour Node JS orienté vitesse et légèreté.

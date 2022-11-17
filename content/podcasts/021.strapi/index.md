@@ -10,7 +10,7 @@ episodeNumber: 21
 episodeType: full
 explicit: false
 season: 1
-title: Strapi, le CMS headless open source 100% JavaScript avec Jim Laurie
+title: Strapi, le CMS headless 100% JavaScript avec Jim Laurie
 subtitle: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur de Strapi, un CMS open source 100% JavaScript
 guid: 3e7174a89bd28661bfaa8bbb11022eb2
 description: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur de Strapi, un CMS open source 100% JavaScript
