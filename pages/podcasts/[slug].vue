@@ -43,7 +43,14 @@ if (!episode.value) {
 
 useHeadPodcast({episode, path});
 
-useSchemaOrg([defineWebPage()]);
+useSchemaOrg([
+  defineWebPage(),
+  defineArticle({
+    '@type': 'TechArticle',
+    datePublished: episode.value?.publicationDate,
+    description: episode.value?.description,
+  }),
+]);
 </script>
 
 <template>
