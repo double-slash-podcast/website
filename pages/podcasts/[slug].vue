@@ -117,7 +117,7 @@ useSchemaOrg([defineWebPage()]);
             </ul>
           </div>
           <div
-            v-if="episode.videoLink"
+            v-if="episode?.videoLink"
             id="panel-Video"
             :hidden="selected !== 'Video'"
             role="tabpanel"
@@ -126,7 +126,7 @@ useSchemaOrg([defineWebPage()]);
             <LiteYouTubeEmbed :id="episode.videoLink" :title="episode.title" />
           </div>
           <div
-            v-if="transcription.results"
+            v-if="transcription?.results"
             id="panel-Transcription"
             :hidden="selected !== 'Transcription'"
             role="tabpanel"
