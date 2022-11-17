@@ -14,6 +14,11 @@ const {data: episode} = await useAsyncData(
   },
 );
 
+if (!episode.value?.title) {
+  // redirect to 404 page
+  navigateTo('/404/pagenotfound');
+}
+
 const {data: transcription} = await useAsyncData(
   `${path}/transcription`,
   () => {
@@ -35,12 +40,6 @@ if (episode.value?.videoLink) {
 // transcript
 if (transcription.value?.results) {
   linksTab.value.push('Transcription');
-}
-
-if (!episode.value?.title) {
-  // redirect to 404 page
-  navigateTo('/404/pagenotfound');
-  throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
 useHeadPodcast({episode, path});
