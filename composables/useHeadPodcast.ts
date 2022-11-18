@@ -106,19 +106,23 @@ const useHeadPodcast = ({
       {
         type: 'application/ld+json',
         children: `{ "@context": "http://schema.org/", "@type": "PodcastEpisode",
-        "description": "${
-          episode.value?.description
-        }", "image": { "@type": "ImageObject",
+        "description": ${JSON.stringify(
+          episode.value?.description,
+        )}, "image": { "@type": "ImageObject",
         "url": "${getImgPodcast({
           episodeNumber: episode.value?.episodeNumber,
           title: episode.value?.title,
         })}", "height": "630px", "width": "1200px" }, "name":
-        "${episode.value?.title}", "url": "${siteUrl}${path}", "about": { "@id":
+        ${JSON.stringify(
+          episode.value?.title,
+        )}, "url": "${siteUrl}${path}", "about": { "@id":
         "https://double-slash.dev/#identity" }, "isPartOf": { "@id":
         "https://double-slash.dev/#website" }, "publisher": { "@id":
         "https://double-slash.dev/#identity" }, "associatedMedia": { "@type":
         "MediaObject", "contentUrl": "${getMediaUrl()}"}, "partOfSeries": {
-        "@type": "PodcastSeries", "name": "${titleDefault}", "url": "${siteUrl}" } }`,
+        "@type": "PodcastSeries", "name": ${JSON.stringify(
+          titleDefault,
+        )}, "url": "${siteUrl}" } }`,
       },
     ],
   });
