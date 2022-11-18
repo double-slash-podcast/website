@@ -9,6 +9,8 @@ const {data} = await useAsyncData('podcasts', () => {
 
 useHead({
   title: 'Tous les épisodes du podcast Double Slash',
+  description:
+    'Retrouvez la liste de tous les podcasts publiés par Double Slash',
 });
 useSchemaOrg([defineWebPage()]);
 </script>

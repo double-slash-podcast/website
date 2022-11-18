@@ -14,6 +14,11 @@ const {data: episode} = await useAsyncData(
   },
 );
 
+if (!episode.value?.title) {
+  // redirect to 404 page
+  navigateTo('/404/pagenotfound');
+}
+
 const {data: transcription} = await useAsyncData(
   `${path}/transcription`,
   () => {
@@ -37,13 +42,16 @@ if (transcription.value?.results) {
   linksTab.value.push('Transcription');
 }
 
-if (!episode.value) {
-  throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
-}
-
 useHeadPodcast({episode, path});
 
-useSchemaOrg([defineWebPage()]);
+useSchemaOrg([
+  defineWebPage(),
+  defineArticle({
+    '@type': 'TechArticle',
+    datePublished: episode.value?.publicationDate,
+    description: episode.value?.description,
+  }),
+]);
 </script>
 
 <template>
@@ -117,7 +125,7 @@ useSchemaOrg([defineWebPage()]);
             </ul>
           </div>
           <div
-            v-if="episode.videoLink"
+            v-if="episode?.videoLink"
             id="panel-Video"
             :hidden="selected !== 'Video'"
             role="tabpanel"
@@ -126,7 +134,7 @@ useSchemaOrg([defineWebPage()]);
             <LiteYouTubeEmbed :id="episode.videoLink" :title="episode.title" />
           </div>
           <div
-            v-if="transcription.results"
+            v-if="transcription?.results"
             id="panel-Transcription"
             :hidden="selected !== 'Transcription'"
             role="tabpanel"
