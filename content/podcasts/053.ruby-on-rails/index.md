@@ -71,6 +71,11 @@ Les 2 principes de base du framework :
 - Don't repeat yourself : Ne pas répéter plusieurs fois le même code
 - Convention over configuration : configurer uniquement si c'est nécessaire. Tous les éléments ont un comportement par défaut
 
+## HotWire
+
+Hotwire est une approche alternative pour créer des applications Web sans utiliser beaucoup de JavaScript en envoyant du HTML au lieu de JSON sur le réseau.
+Cela permet aux pages un premier chargement rapide et cela conserve le rendu des modèles sur le serveur et permet une expérience de développement plus simple et plus productive dans n'importe quel langage de programmation, sans sacrifier la vitesse ou la réactivité associées à une application traditionnelle à page unique.
+
 
 ## Notre invité : Guillaume Briday
 
