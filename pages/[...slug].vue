@@ -1,5 +1,6 @@
 <script setup>
 const {path} = useRoute();
+// custom page are in content/custom
 const {data} = await useAsyncData(`custom${path}`, () =>
   queryContent()
     .where({_path: {$eq: `/custom${path.replace(/\/+$/, '')}`}})
@@ -9,6 +10,11 @@ if (!data.value?.title) {
   // redirect to 404 page
   navigateTo('/_404');
 }
+useHead({
+  title: data.value?.title,
+  description: data.value?.description,
+});
+useSchemaOrg([defineWebPage()]);
 </script>
 <template>
   <div class="">
