@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2611
+duration: 
 episodeNumber: 53
 episodeType: full
 explicit: false
@@ -13,7 +13,7 @@ title: Ruby on rails, le développement intuitif
 subtitle: Un épisode sur Ruby on Rails, la philosophie du framework et le retour du monolithique.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
 description: Nous recevons Guillaume Briday, lead Developer chez Per Angusta. Avec lui, nous allons échanger sur Ruby on Rails, la philosophie du framework et le retour en force du monolithique dans le monde du web.
-videoLink : xzB3TGeENEU
+videoLink : y_LfDYbzcYk
 links:
   [
     {
@@ -53,7 +53,7 @@ links:
       url: 'https://hotwired.dev',
     },
     {
-      title: 'DHR',
+      title: 'DHH',
       url: 'https://fr.wikipedia.org/wiki/David_Heinemeier_Hansson',
     },
   ]
