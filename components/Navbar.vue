@@ -9,7 +9,7 @@ const links = [
   },
   {
     title: 'Soutenir',
-    url: '/content/nous-soutenir',
+    url: '/nous-soutenir/',
   },
   // {
   //   title: 'contact',

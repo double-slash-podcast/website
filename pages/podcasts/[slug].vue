@@ -16,7 +16,8 @@ const {data: episode} = await useAsyncData(
 
 if (!episode.value?.title) {
   // redirect to 404 page
-  navigateTo('/404/pagenotfound');
+  navigateTo('/_404');
+  //   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
 const {data: transcription} = await useAsyncData(
