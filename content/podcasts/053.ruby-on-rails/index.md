@@ -1,5 +1,5 @@
 ---
-publicationDate: 2022-11-23
+publicationDate: 2022-11-21
 status: published
 author: Double Slash
 categories:
@@ -9,7 +9,7 @@ episodeNumber: 53
 episodeType: full
 explicit: false
 season: 1
-title: Ruby on rails et le monolithique
+title: Ruby on rails, le développement intuitif
 subtitle: Un épisode sur Ruby on Rails, la philosophie du framework et le retour du monolithique.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
 description: Nous recevons Guillaume Briday, lead Developer chez Per Angusta. Avec lui, nous allons échanger sur Ruby on Rails, la philosophie du framework et le retour en force du monolithique dans le monde du web.
@@ -31,6 +31,14 @@ links:
     {
       title: 'https://www.per-angusta.com/fr/',
       url: 'https://www.per-angusta.com/fr/',
+    },
+    {
+        title: 'Modern datatables',
+        url: 'https://github.com/guillaumebriday/modern-datatables',
+    },
+    {
+        title: 'Introduction à Hotwire',
+        url: 'https://www.youtube.com/playlist?list=PLZnobmDTM15k9rKN00BlvaNM-jUQSlS2S',
     },
     {
       title: 'Ruby on Rails',
@@ -67,6 +75,8 @@ Les 2 principes de base du framework :
 ## Notre invité : Guillaume Briday
 
 - [@guillaumebriday](https://twitter.com/guillaumebriday)
+- [Vidéos : Introduction à Hotwire](https://www.youtube.com/playlist?list=PLZnobmDTM15k9rKN00BlvaNM-jUQSlS2S)
+- [Modern datatables](https://github.com/guillaumebriday/modern-datatables)
 
 Bonne écoute !
 
