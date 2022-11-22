@@ -11,7 +11,7 @@ explicit: false
 season: 1
 title: Ruby on rails, le développement intuitif
 subtitle: Un épisode sur Ruby on Rails, la philosophie du framework et le retour du monolithique.
-episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
+episodeArtwork: 
 description: Nous recevons Guillaume Briday, lead Developer chez Per Angusta. Avec lui, nous allons échanger sur Ruby on Rails, la philosophie du framework et le retour en force du monolithique dans le monde du web.
 videoLink : y_LfDYbzcYk
 links:
