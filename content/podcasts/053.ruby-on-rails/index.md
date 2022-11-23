@@ -4,11 +4,12 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 3140
 episodeNumber: 53
 episodeType: full
 explicit: false
 season: 1
+dsSlug: DS_053_ror
 title: Ruby on rails, le développement intuitif
 subtitle: Un épisode sur Ruby on Rails, la philosophie du framework et le retour du monolithique.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1669149502/episode/53_artwork_xft7uy.png
