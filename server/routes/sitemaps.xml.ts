@@ -20,7 +20,7 @@ export default defineEventHandler(async event => {
   // Fetch all documents
   const docs = await serverQueryContent(event).find();
   const _docs = docs
-    .filter(doc => doc?._path?.includes('/podcasts'))
+    // .filter(doc => doc?._path?.includes('/podcasts'))
     .filter(doc => !doc?._path?.includes('/transcript'));
 
   const sitemap = new SitemapStream({
@@ -43,8 +43,10 @@ export default defineEventHandler(async event => {
   // podcasts
   for (const doc of _docs) {
     const {lastmod} = getModifiedDate(doc._id);
+    // remove custom for content page
+    const _path = `${doc._path}/`.replace(/^\/custom/, '');
     sitemap.write({
-      url: `${doc._path}/`,
+      url: `${_path}`,
       changefreq: 'monthly',
       lastmod,
       priority: 1.0,

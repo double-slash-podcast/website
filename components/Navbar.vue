@@ -7,6 +7,10 @@ const links = [
     title: 'podcasts',
     url: '/podcasts/',
   },
+  {
+    title: 'Soutenir',
+    url: '/nous-soutenir/',
+  },
   // {
   //   title: 'contact',
   //   url: '#',
