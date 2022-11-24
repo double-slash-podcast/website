@@ -51,6 +51,7 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
+    github_auth: process.env.GITHUB_AUTH,
     public: {
       ...baseInfos,
       podcastInfos,
