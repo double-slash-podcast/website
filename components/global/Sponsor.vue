@@ -53,12 +53,13 @@ const listSponsor = computed(
         class="flex flex-wrap items-center justify-center object-cover w-1/5"
       >
         <img
-          :src="sponsor.node.avatarUrl"
-          loading="lazy"
           width="100px"
           height="100px"
+          loading="lazy"
+          decoding="async"
+          :src="sponsor.node.avatarUrl"
           :alt="sponsor.node.name"
-          class="m-0 rounded-full"
+          class="m-0 rounded-full w-28 h-28"
         />
         <strong class="mt-2 text-xs text-gray-500">{{
           sponsor.node.name
