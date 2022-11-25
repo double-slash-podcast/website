@@ -46,6 +46,6 @@ const getSponsors = async () => {
   return response;
 };
 
-export default defineEventHandler(async () => ({
-  api: await getSponsors(),
-}));
+export default defineEventHandler(async () =>
+  JSON.stringify(await getSponsors()),
+);

@@ -17,5 +17,6 @@ Avec GitHub Sponsor, vous pouvez soutenir le podcast et nous aidez à financer l
 
 Merci d'avance.
 
-<iframe src="https://github.com/sponsors/double-slash-podcast/card" title="Sponsor double-slash-podcast" height="230px" width="100%" style="border: 0;"></iframe>
+## GitHub Sponsor @double-slash-podcast
 
+::Sponsor
