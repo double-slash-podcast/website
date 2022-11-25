@@ -1,4 +1,4 @@
-export default async () => {
+const getSponsors = async () => {
   const config = useRuntimeConfig();
 
   const response = await $fetch(`https://api.github.com/graphql`, {
@@ -45,3 +45,7 @@ export default async () => {
 
   return response;
 };
+
+export default defineEventHandler(async () => ({
+  api: await getSponsors(),
+}));
