@@ -1,4 +1,10 @@
 <script setup lang="ts">
+withDefaults(
+  defineProps<{
+    withList?: boolean;
+  }>(),
+  {withList: true},
+);
 const organizationSponsors = ref();
 const {data} = await useAsyncData('github-sponsor', () =>
   $fetch('/github-sponsor.json'),
@@ -14,7 +20,7 @@ const listSponsor = computed(
 </script>
 
 <template>
-  <div class="leading-5" v-html="organizationSponsors.fullDescriptionHTML" />
+  <!-- <div class="leading-5" v-html="organizationSponsors.fullDescriptionHTML" /> -->
   <div class="border-t border-gray-300">
     <h2>
       {{ organizationSponsors.activeGoal.percentComplete }}% vers l'objectif de
@@ -41,7 +47,7 @@ const listSponsor = computed(
       Soutenir Double Slash</a
     >
   </div>
-  <div class="pb-8 mt-8 border-t border-gray-300">
+  <div v-if="withList === true" class="pb-8 mt-8 border-t border-gray-300">
     <h2>Ils nous soutiennent !</h2>
     <div class="flex flex-wrap items-stretch justify-start">
       <a

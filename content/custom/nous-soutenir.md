@@ -17,6 +17,9 @@ Avec GitHub Sponsor, vous pouvez soutenir le podcast et nous aidez à financer l
 
 Merci d'avance.
 
-## GitHub Sponsor @double-slash-podcast
 
 ::Sponsor
+---
+withList: true
+---
+::
