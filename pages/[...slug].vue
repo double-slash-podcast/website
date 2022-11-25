@@ -1,11 +1,12 @@
 <script setup>
 const {path} = useRoute();
 // custom page are in content/custom
-const {data} = await useAsyncData(`custom${path}`, () =>
+const {data} = await useAsyncData(`${path.replace(/\/+$/, '')}`, () =>
   queryContent()
     .where({_path: {$eq: `/custom${path.replace(/\/+$/, '')}`}})
     .findOne(),
 );
+
 if (!data.value?.title) {
   // redirect to 404 page
   navigateTo('/_404');

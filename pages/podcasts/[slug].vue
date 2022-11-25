@@ -5,7 +5,7 @@ const {path} = useRoute();
 
 const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
-const {data: episode, pending} = await useAsyncData(
+const {data: episode} = await useAsyncData(
   `${path.replace(/\/+$/, '')}`,
   () => {
     return queryContent()
@@ -14,7 +14,7 @@ const {data: episode, pending} = await useAsyncData(
   },
 );
 
-if (!episode.value?.title && pending === false) {
+if (!episode.value?.title) {
   // redirect to 404 page
   navigateTo('/_404');
   //   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
