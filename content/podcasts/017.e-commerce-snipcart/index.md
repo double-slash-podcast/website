@@ -51,3 +51,10 @@ Dans l'épisode, nous discutons avec François du monde de la JAMStack, des soci
 - [Un exemple de site](https://www.mercredibiscuiterie.com/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

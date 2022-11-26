@@ -40,3 +40,10 @@ Nous vous laissons découvrir le CMS Strapi plus en détail en écoutant l'épis
 -
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

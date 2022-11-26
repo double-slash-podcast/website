@@ -179,3 +179,10 @@ C’est souvent un problème de définition de type un peu trop poussé.
 Bonne écoute !
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

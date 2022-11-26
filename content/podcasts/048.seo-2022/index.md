@@ -62,3 +62,10 @@ Chaque pilier a son importance. Avec Dan, nous allons voir les principaux pilier
 - Article [https://seosly.com/blog/seo-audit/](https://seosly.com/blog/seo-audit/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

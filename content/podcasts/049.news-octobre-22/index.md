@@ -81,3 +81,10 @@ The Universal UI Library
 - [https://jsonhero.io/](https://jsonhero.io/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

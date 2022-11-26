@@ -42,3 +42,10 @@ Pourquoi avons-nous besoin d'utiliser graphQL dans nos projets, quels sont les a
 - [Apollo GraphQL](https://github.com/apollographql)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

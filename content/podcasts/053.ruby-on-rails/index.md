@@ -87,3 +87,10 @@ Cela permet aux pages un premier chargement rapide et cela conserve le rendu des
 Bonne écoute !
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

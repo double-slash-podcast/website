@@ -60,3 +60,10 @@ Bonne écoute :)
 - [Tutorial redwoodjs](https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

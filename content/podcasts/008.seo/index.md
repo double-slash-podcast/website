@@ -45,3 +45,10 @@ Pour savoir quels mots-clés choisir, on utilise des outils comme :
 - [Seo Mofo Snippet Optimizer](https://seomofo.com/snippet-optimizer.html)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

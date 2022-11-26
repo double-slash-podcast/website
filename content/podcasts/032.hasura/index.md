@@ -41,3 +41,10 @@ Bonne écoute.
 - [https://www.nhost.io/](https://www.nhost.io/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

@@ -31,3 +31,10 @@ Nous vous laissons découvrir Alpine JS plus en détail en écoutant l'épisode 
 - [Article sur Alpine JS](https://pixenjoy.com/notes/le-framework-alpinejs/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

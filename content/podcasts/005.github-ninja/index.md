@@ -49,3 +49,10 @@ https://github.com/features/actions
 - `b` pour trouver qui blamer, git blame !
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

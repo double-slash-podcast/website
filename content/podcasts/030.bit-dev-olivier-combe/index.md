@@ -56,3 +56,10 @@ Dans cet épisode, nous profitons de l’expertise d’olivier pour parler rapid
 - [NGX Translate](http://www.ngx-translate.com/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

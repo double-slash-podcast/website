@@ -128,3 +128,10 @@ Réserver l'espace pour les éléments dynamiques, utiliser des skeletons pour l
 - [Ligthouse](https://developers.google.com/web/tools/lighthouse)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

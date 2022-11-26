@@ -149,3 +149,10 @@ On peut donc concentrer plusieurs sources de différents services pour l’inter
 Bonne écoute !
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::
