@@ -20,14 +20,16 @@ if (!episode.value?.title) {
   //   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
-const {data: transcription} = await useAsyncData(
-  `${path}/transcription`,
-  () => {
-    return queryContent()
-      .where({_path: {$eq: `${path}transcript`}})
-      .findOne();
-  },
-);
+// disable transcription for the moment
+const transcription = ref(null);
+// const {data: transcription} = await useAsyncData(
+//   `${path}/transcription`,
+//   () => {
+//     return queryContent()
+//       .where({_path: {$eq: `${path}transcript`}})
+//       .findOne();
+//   },
+// );
 
 // links
 if (episode?.value?.links?.length > 0) {
@@ -57,7 +59,7 @@ useSchemaOrg([
 
 <template>
   <div>
-    <Header :height="180" class="">
+    <Header :height="220" class="">
       <template #baseline>
         <EpisodeHeadings :episode="episode" level="1"></EpisodeHeadings>
       </template>
