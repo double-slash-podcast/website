@@ -17,7 +17,7 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="bg-haiti">
-    <Header :height="90"></Header>
+    <Header :height="160"></Header>
     <main>
       <HeadingsSection
         title="Tous les épisodes du podcast double slash"
