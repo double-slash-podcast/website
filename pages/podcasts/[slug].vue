@@ -70,7 +70,7 @@ useSchemaOrg([
 
     <main class="w-full">
       <div class="tabs">
-        <nav class="flex mt-4 mb-4 md:mb-4" role="tablist">
+        <nav class="flex" role="tablist">
           <button
             v-for="link in linksTab"
             :id="`tab-${link}`"
@@ -79,16 +79,18 @@ useSchemaOrg([
             :aria-selected="selected == link"
             :aria-controls="`panel-${link}`"
             :class="{
-              'text-purple-700 font-bold underline': selected == link,
+              'text-purple-700 focus:text-purple-900  after:bg-purpleDs bg-purple-100/40':
+                selected == link,
+              'text-gray-600 after:bg-gray-200': selected !== link,
             }"
             type="button"
-            class="flex-1 pt-2 pb-1 mx-2 text-base md:text-lg marker:px-2 text-haiti underline-offset-4 focus:outline-none"
+            class="flex flex-col items-center flex-1 pt-4 text-base after:h-0.5 md:text-lg underline-offset-4 transition-color focus:text-gray-900 focus:outline-none after:w-full after:mt-3"
             @click="() => (selected = link)"
           >
             {{ link }}
           </button>
         </nav>
-        <div class="pt-8 border-t-2 border-gray">
+        <div class="pt-8">
           <div
             id="panel-Description"
             :hidden="selected !== 'Description'"
