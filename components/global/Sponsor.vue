@@ -56,7 +56,7 @@ const listSponsor = computed(
         :href="sponsor.node.url"
         target="_blank"
         :title="sponsor.node.name"
-        class="flex flex-wrap items-center justify-center object-cover w-1/5"
+        class="flex flex-wrap items-center justify-center object-cover w-1/3 md:w-1/5"
       >
         <img
           width="100px"
@@ -65,7 +65,7 @@ const listSponsor = computed(
           decoding="async"
           :src="sponsor.node.avatarUrl"
           :alt="sponsor.node.name"
-          class="m-0 rounded-full w-28 h-28"
+          class="w-20 h-20 m-0 rounded-full md:w-28 md:h-28"
         />
         <strong class="mt-2 text-xs text-gray-500">{{
           sponsor.node.name
