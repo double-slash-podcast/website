@@ -103,3 +103,10 @@ Encore en version bêta, il semble très prometteur.
 - [Fig](https://fig.io/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

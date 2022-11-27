@@ -40,3 +40,10 @@ links: []
 Bonne écoute !
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

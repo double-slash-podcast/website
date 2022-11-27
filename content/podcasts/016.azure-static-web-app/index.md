@@ -41,3 +41,10 @@ Wassim Chegham, **Senior Developer Advocate spécialisé JavaScript**
 - [Acheter un arbre sur Ecologi](https://ecologi.com/wassimchegham?r=5facf70521660a001d024120)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

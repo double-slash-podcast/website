@@ -68,3 +68,10 @@ Bref, le futur est en marche et il semble prometteur.
 Bonne écoute !
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

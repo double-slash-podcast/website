@@ -55,3 +55,10 @@ Nous avons visionné ces vidéos pour vous faire un résumé des principales fon
 Bonne écoute !
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

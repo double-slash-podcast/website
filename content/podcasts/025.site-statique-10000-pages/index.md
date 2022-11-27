@@ -34,3 +34,10 @@ Cet épisode fait suite à un article publié sur le site [jamstatic.fr](https:/
 - [https://nuxtjs.org/](https://nuxtjs.org/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

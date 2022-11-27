@@ -106,3 +106,10 @@ export default ...;
 - WMR: [https://github.com/preactjs/wmr](https://github.com/preactjs/wmr)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

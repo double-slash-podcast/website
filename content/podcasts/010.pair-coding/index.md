@@ -57,3 +57,10 @@ Un service équivalent à Netlify pour déployer vos sites statique ou SPA autom
 [Stormkit](https://www.stormkit.io/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

@@ -55,3 +55,10 @@ links: []
 - [article original](https://css-tricks.com/comparing-static-site-generator-build-times/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

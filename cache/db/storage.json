@@ -206,5 +206,9 @@
     "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_052_news_nov22.mp3": {
         "duration": 6668,
         "size": 53344526
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_053_ror.mp3": {
+        "duration": 6401,
+        "size": 51209157
     }
 }

@@ -1,7 +1,5 @@
 <script setup>
-// defineNuxtLink({
-//   exactActiveClass: 'bg-red-500',
-// });
+const {path} = useRoute();
 const links = [
   {
     title: 'podcasts',
@@ -31,6 +29,10 @@ const links = [
       :key="url"
       :to="url"
       class="px-2 py-2 hover:bg-gray-200 sm:hover:bg-yellowDs sm:hover:text-darkPurple"
+      :class="{
+        'router-link-active router-link-exact-active':
+          title === 'podcasts' && path.search('podcasts') > 0,
+      }"
       >{{ title }}</nuxt-link
     >
   </div>

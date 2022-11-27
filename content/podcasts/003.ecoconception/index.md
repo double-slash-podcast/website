@@ -44,3 +44,10 @@ links: []
 - Ecologie et numérique: [https://www.youtube.com/watch?v=zmE0X2KKRjc&list=PL4piaFbHOpRc6jtB450EOo-6cc91sUzzz&index=2&t=0s](https://www.youtube.com/watch?v=zmE0X2KKRjc&list=PL4piaFbHOpRc6jtB450EOo-6cc91sUzzz&index=2&t=0s)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

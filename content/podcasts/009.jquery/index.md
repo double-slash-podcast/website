@@ -81,3 +81,10 @@ jQuery, est-ce que vous en avez encore besoin dans vos projets en 2020 ?
 - [https://w3techs.com/technologies/comparison/js-bootstrap,js-jquery](https://w3techs.com/technologies/comparison/js-bootstrap,js-jquery)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

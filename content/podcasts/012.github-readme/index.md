@@ -36,3 +36,10 @@ Pour l'automatisation:
 - [Pipedream](https://pipedream.com/)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

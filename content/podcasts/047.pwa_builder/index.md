@@ -35,3 +35,10 @@ Nous allons également parler de la gestion des projets open-sources, comment in
 
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

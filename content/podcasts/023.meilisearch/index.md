@@ -46,3 +46,10 @@ Nous vous laissons découvrir MeiliSearch et Rust plus en détail en écoutant l
 - [twitter](https://twitter.com/meilisearch)
 
 ::authors
+::
+
+::Sponsor
+---
+withList: false
+---
+::

@@ -47,10 +47,15 @@ export default defineNuxtConfig({
   },
   nitro: {
     prerender: {
-      routes: ['/podcast-rss-feed.xml', '/sitemaps.xml'],
+      routes: [
+        '/podcast-rss-feed.xml',
+        '/sitemaps.xml',
+        '/github-sponsor.json',
+      ],
     },
   },
   runtimeConfig: {
+    github_auth: process.env.GITHUB_AUTH,
     public: {
       ...baseInfos,
       podcastInfos,
