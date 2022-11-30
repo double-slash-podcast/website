@@ -1,6 +1,7 @@
 {
   "name": "double-slash-website",
   "scripts": {
+    "plop": "plop",
     "build": "nuxi build",
     "dev": "nuxi dev",
     "start": "node .output/server/index.mjs",
@@ -36,6 +37,7 @@
     "nuxt-icon": "0.1.7",
     "nuxt-schema-org": "1.1.0-beta.5",
     "pinia": "2.0.23",
+    "plop": "^3.1.1",
     "postcss-custom-properties": "13.0.0",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
