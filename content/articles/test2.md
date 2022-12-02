@@ -1,7 +1,8 @@
 ---
-publicationDate: 23/11/22
+publicationDate: 2022-11-21
 title: Next.js 13, le nouveau système en détails novembre
 description: Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022. Quand on supprime tous les subterfuges marketings et la présentation à la Apple, il reste l'essentiel. C'est-à-dire, une nouvelle structure pour nos applications Next.js.
+author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
 Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022.

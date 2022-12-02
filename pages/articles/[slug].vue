@@ -1,0 +1,39 @@
+<script setup lang="ts">
+const {path} = useRoute();
+
+const {data: article} = await useAsyncData(`${path.replace(/\/+$/, '')}`, () =>
+  queryContent()
+    .where({_path: {$eq: path.replace(/\/+$/, '')}})
+    .findOne(),
+);
+
+if (!article.value?.title) {
+  // redirect to 404 page
+  navigateTo('/_404');
+}
+useHead({
+  title: article.value?.title,
+  description: article.value?.description,
+});
+useSchemaOrg([defineWebPage()]);
+</script>
+<template>
+  <div class="">
+    <Header :height="160"></Header>
+    <main>
+      <h1 class="mt-10 text-3xl font-bold">{{ article?.title }}</h1>
+      <div class="py-4 text-gray-500">
+        <i>Le {{ $dayjs(article?.publicationDate).format('DD MMM. YY') }}</i
+        ><span class="px-2">|</span>Par
+        <a class="text-purpleDs" :href="article?.author.url" target="_blank">{{
+          article?.author.name
+        }}</a>
+      </div>
+      <ContentRenderer
+        v-if="article"
+        :value="article"
+        class="prose min-h-[500px] py-6"
+      />
+    </main>
+  </div>
+</template>

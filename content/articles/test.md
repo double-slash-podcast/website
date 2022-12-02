@@ -1,15 +1,25 @@
 ---
-publicationDate: 2/12/22
+publicationDate: 2022-12-01
 title: Next.js 13, le nouveau système en détails
 description: Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022. Quand on supprime tous les subterfuges marketings et la présentation à la Apple, il reste l'essentiel. C'est-à-dire, une nouvelle structure pour nos applications Next.js.
+author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
-Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022.
+## Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022.
+
+### un titre h3
+
+#### un titre h4
 
 Quand on supprime tous les subterfuges marketings et la présentation à la Apple, il reste l'essentiel. C'est-à-dire, une nouvelle structure pour nos applications Next.js.
 Alors, je vous arrête tout de suite, vos applications développées sous le format classique (dossier pages) vont continuer à fonctionner sans souci. Pas de panique !
 
 Personnellement, j'ai attendu que le tumulte retombe et j'ai enfin pris le temps de bien lire la doc (une bonne journée) et de tester un peu.
+
+```
+// un peu de code
+console.log('hello world')
+```
 
 D'où l'idée de faire un retour sur cette nouvelle structure et tout ce qui va avec.
 Il y aura donc des vidéos et des articles.
@@ -25,3 +35,12 @@ Mais il faut comprendre que l'on rentre dans une nouvelle ère pour les framewor
 On pourrait dire, l'âge de raison. Une nouvelle ère, où nous allons envoyer beaucoup moins de JS dans les navigateurs, où uniquement les éléments interactifs le seront.
 
 Bref, un changement obligatoire et peut-être un peu contraignant mais pour le bien de tous !
+
+![my image](/articles/nextjs13.jpg)
+
+::VideoPlayer
+---
+videoLink: xzB3TGeENEU
+videTitle: BlaBla
+---
+::
