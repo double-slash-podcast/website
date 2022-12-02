@@ -41,6 +41,6 @@ Bref, un changement obligatoire et peut-être un peu contraignant mais pour le b
 ::VideoPlayer
 ---
 videoLink: xzB3TGeENEU
-videTitle: BlaBla
+videoTitle: BlaBla
 ---
 ::
