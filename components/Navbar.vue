@@ -6,6 +6,10 @@ const links = [
     url: '/podcasts/',
   },
   {
+    title: 'Blog',
+    url: '/articles/',
+  },
+  {
     title: 'Soutenir',
     url: '/nous-soutenir/',
   },
