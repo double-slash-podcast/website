@@ -5,17 +5,19 @@ defineProps<{article: ArticleType}>();
 <template>
   <div class="mb-24">
     <NuxtLink :to="`${article._path}/`">
-      <h2>{{ article.title }}</h2>
+      <h2 class="text-3xl normal-case">{{ article.title }}</h2>
     </NuxtLink>
-    <i class="py-4 text-gray-400"
-      >Le {{ $dayjs(article.publicationDate).format('DD MMM. YY') }}</i
-    >
-    <p class="py-4 text-gray-100">{{ article.description }}</p>
-    <NuxtLink
+    <ArticleDetails :article="article" :is-list="true" />
+    <p class="pt-4 text-gray-100">{{ article.description }}</p>
+    <nuxt-link
       :title="`Lire l'article : ${article.title}`"
       :to="`${article._path}/`"
-      class="text-xl font-brand text-yellowDs"
-      >Lire l'article</NuxtLink
-    >
+      class="flex items-center justify-end text-lg group text-yellowDs"
+      >Lire l'article
+      <Icon
+        class="ml-1 transition-all group-hover:translate-x-1"
+        name="mdi:arrow-right"
+        size="24"
+    /></nuxt-link>
   </div>
 </template>

@@ -2,7 +2,7 @@
 const {path} = useRoute();
 
 const {data: article} = await useAsyncData(`${path.replace(/\/+$/, '')}`, () =>
-  queryContent()
+  queryContent<ArticleType>()
     .where({_path: {$eq: path.replace(/\/+$/, '')}})
     .findOne(),
 );
@@ -29,14 +29,8 @@ useSchemaOrg([
   <div class="">
     <Header :height="160"></Header>
     <main>
-      <h1 class="mt-10 text-3xl font-bold">{{ article?.title }}</h1>
-      <div class="py-4 text-gray-500">
-        <i>Le {{ $dayjs(article?.publicationDate).format('DD MMM. YY') }}</i
-        ><span class="px-2">|</span>Par
-        <a class="text-purpleDs" :href="article?.author.url" target="_blank">{{
-          article?.author.name
-        }}</a>
-      </div>
+      <h1 class="mt-10 text-4xl font-bold">{{ article?.title }}</h1>
+      <ArticleDetails :article="article" />
       <ContentRenderer
         v-if="article"
         :value="article"
