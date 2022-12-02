@@ -15,7 +15,15 @@ useHead({
   title: article.value?.title,
   description: article.value?.description,
 });
-useSchemaOrg([defineWebPage()]);
+
+useSchemaOrg([
+  defineWebPage(),
+  defineArticle({
+    '@type': 'TechArticle',
+    datePublished: article.value?.publicationDate,
+    description: article.value?.description,
+  }),
+]);
 </script>
 <template>
   <div class="">
