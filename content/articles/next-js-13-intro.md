@@ -1,6 +1,6 @@
 ---
-publicationDate: 2022-12-02
-title: Next.js 13, introduction
+publicationDate: 2022-12-01
+title: Next.js 13, introduction (1/3)
 description: Vous le savez certainement, Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022.Alors, quand on supprime tous les subterfuges marketings et la présentation (presque risible) à la Apple, c'est une annonce très importante dans la communauté React.js. Des grands changements à commencer par le principal, une nouvelle structure pour nos applications Next.js !
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
@@ -25,9 +25,9 @@ Personnellement, j'ai attendu que l'effervescence retombe un petit peu et j'ai e
 
 D'où l'idée de faire un retour par écrit et en vidéo sur cette nouvelle structure et tout ce qui va avec.
 
-- Dans un premier article, nous allons refaire le point sur la façon que je nommerai **"classique"** de construire des applications depuis quelques versions avec Next.js. Pour être plus précis, "getStaticProps" et la notion d'hybride a été introduite dans la version [9.3](https://nextjs.org/blog/next-9-3) de Next.js.
+- Dans un premier [article](/articles/next-js-13-pages/), nous allons refaire le point sur la façon que je nommerai **"classique"** de construire des applications depuis quelques versions avec Next.js. Pour être plus précis, "getStaticProps" et la notion d'hybride a été introduite dans la version [9.3](https://nextjs.org/blog/next-9-3) de Next.js.
 Ce premier article se concentra sur les points bloquants de la méthode "classique".
-- S'en suivra, un deuxième article sur cette nouvelle structure via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout regarder si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
+- S'en suivra, un deuxième [article](/articles/next-js-13-app/) sur cette nouvelle structure via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout regarder si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
 
 Avant que vous passiez au premier article, je voulais revenir sur le fait que Next.js était quasiment obligé **d'évoluer**.
 
@@ -41,3 +41,6 @@ On pourrait même dire, que l'on entre dans l'âge de raison. Une nouvelle ère,
 
 Bref, un changement obligatoire, peut-être un peu contraignant mais pour le bien de tous !
 
+## Lire le premier article
+
+- **[Next.js, l'API "pages" (2/3)](/articles/next-js-13-pages/)**

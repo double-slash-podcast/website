@@ -1,6 +1,6 @@
 <script setup>
-const {data} = await useAsyncData('bloglists', () => {
-  return queryContent('articles').sort({date: 1}).find();
+const {data} = await useAsyncData('bloglist', () => {
+  return queryContent('articles').sort({publicationDate: -1}).find();
 });
 
 useHead({
@@ -19,7 +19,7 @@ useSchemaOrg([defineWebPage()]);
         title="Tous les articles du blog double slash"
         level="1"
       ></HeadingsSection>
-      <section class="min-h-screen pt-8">
+      <section class="min-h-screen pt-8 pb-20">
         <ArticleList
           v-for="article in data"
           :key="article.path"

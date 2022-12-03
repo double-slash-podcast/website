@@ -59,8 +59,21 @@ h2 {
   @apply my-8 text-sm font-bold text-purple-700 uppercase font-base;
 }
 
+.prose.article-content h2 {
+  @apply text-xl normal-case;
+}
+
+.prose.article-content h3 {
+  @apply text-xl text-gray-700 normal-case;
+}
+
 .prose p {
   @apply mb-6 leading-6 font-base;
+}
+
+.prose .info-block > p,
+.prose .info-block > ul {
+  @apply my-0;
 }
 
 .prose a {

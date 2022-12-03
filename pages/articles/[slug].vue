@@ -34,7 +34,7 @@ useSchemaOrg([
       <ContentRenderer
         v-if="article"
         :value="article"
-        class="prose min-h-[500px] py-6"
+        class="prose article-content min-h-[500px] py-6"
       />
     </main>
   </div>

@@ -5,7 +5,7 @@ defineProps<{article: ArticleType}>();
 <template>
   <div class="mb-24">
     <NuxtLink :to="`${article._path}/`">
-      <h2 class="text-3xl normal-case">{{ article.title }}</h2>
+      <h2 class="text-3xl tracking-tighter normal-case">{{ article.title }}</h2>
     </NuxtLink>
     <ArticleDetails :article="article" :is-list="true" />
     <p class="pt-4 text-gray-100">{{ article.description }}</p>
