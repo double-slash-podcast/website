@@ -1,7 +1,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    type: 'info' | 'warning' | 'danger';
+    type?: 'info' | 'warning' | 'danger';
   }>(),
   {type: 'info'},
 );
