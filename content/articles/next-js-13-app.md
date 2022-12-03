@@ -12,7 +12,7 @@ type: warning
 Cet article fait partie d'une série :
 
 - [Next.js 13, introduction (1/3)](articles/next-js-13-intro/)
-- [Next.js, l'API "pages" (2/3)](/articles/next-js-13-pages/)
+- [Next.js, le point sur l'API "pages" (2/3)](/articles/next-js-13-pages/)
 ::
 
 

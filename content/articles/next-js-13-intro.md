@@ -25,9 +25,9 @@ Personnellement, j'ai attendu que l'effervescence retombe un petit peu et j'ai e
 
 D'où l'idée de faire un retour par écrit et en vidéo sur cette nouvelle structure et tout ce qui va avec.
 
-- Dans un premier [article](/articles/next-js-13-pages/), nous allons refaire le point sur la façon que je nommerai **"classique"** de construire des applications depuis quelques versions avec Next.js. Pour être plus précis, "getStaticProps" et la notion d'hybride a été introduite dans la version [9.3](https://nextjs.org/blog/next-9-3) de Next.js.
-Ce premier article se concentra sur les points bloquants de la méthode "classique".
-- S'en suivra, un deuxième [article](/articles/next-js-13-app/) sur cette nouvelle structure via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout regarder si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
+- Dans un [premier article](/articles/next-js-13-pages/), nous allons refaire le point sur la façon que je nommerai **"classique"** de construire des applications depuis quelques versions avec Next.js.
+Ce premier article se concentra sur la méthode "classique" qui utilise l'API "page".
+- S'en suivra, un [deuxième article](/articles/next-js-13-app/) sur cette nouvelle structure via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout regarder si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
 
 Avant que vous passiez au premier article, je voulais revenir sur le fait que Next.js était quasiment obligé **d'évoluer**.
 
@@ -41,6 +41,8 @@ On pourrait même dire, que l'on entre dans l'âge de raison. Une nouvelle ère,
 
 Bref, un changement obligatoire, peut-être un peu contraignant mais pour le bien de tous !
 
-## Lire le premier article
+::Info
+**Lire le premier article**
 
-- **[Next.js, l'API "pages" (2/3)](/articles/next-js-13-pages/)**
+- **[Next.js, le point sur l'API "pages" (2/3)](/articles/next-js-13-pages/)**
+::

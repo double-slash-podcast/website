@@ -1,6 +1,6 @@
 ---
 publicationDate: 2022-12-02
-title: Next.js, l'API "pages" (2/3)
+title: Next.js, le point sur l'API "pages" (2/3)
 description: Nous sommes nombreux à avoir développé des applications plus ou moins complexes. À s'être accoutumé au fonctionnement de Next.js. Ensemble nous allons faire le tour des points bloquants sur la version "classique".
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
@@ -15,12 +15,25 @@ Cet article fait partie d'une série :
 - [Next.js 13, la nouvelle API 'app' (3/3)](/articles/next-js-13-app/)
 ::
 
+## Bref historique
+
 Pour rappel, **getStaticProps**, **getStaticPath** et la notion **d'hybride** ont été introduits sur la version [9.3](https://nextjs.org/blog/next-9-3) de Next.js le 9 mars 2020.
 
 S'en sont suivies, plusieurs évolutions sur le mode statique hybride dont la dernière grosse feature (sur la [12.2](https://nextjs.org/blog/next-12-2#on-demand-incremental-static-regeneration-stable)) :
 - la possibilité d'invalider une url pour forcer la régénération de la page sans redéployer toute l'application. Pour les grosses applications, c'est une révolution.
 
 **A noter que c'était une demande de la part des gros acteurs.**
+
+## Statique Hybride
+
+En mars 2021, j'écrivais un article sur [Jamstatic.fr](https://jamstatic.fr/2021/03/09/11000-pages-statiques/) concernant la problématique de faire du statique avec un site qui comporte beaucoup de pages.
+
+Depuis, l'écosystème m'a donné raison puisqu'une majorité de framework a sorti une solution pour contourner cette problématique. Le problème existait bien !
+
+Cependant, Next.js reste la seule solution simple qui permet en production de générer à la demande une page statique et donc de déployer une app sans générer toutes les pages.
+
+On parle donc de statique hybride car il est nécessaire de faire tourner une runtime pour gérer tout ça contrairement à du pur statique qui une fois généré se pose sur un CDN et basta.
+
 
 ## Les points bloquants de l'API "pages"
 
@@ -49,12 +62,11 @@ L'inconvénient, c'est que l'on obtient une cascade de data entre les components
 Autre inconvénient, les requêtes sont répétées pour chaque page générée même si elles sont identiques. Pas de système de cache en natif.
 
 Cela peut très vite, mettre à mal votre API via de très nombreuses requêtes lors d'un déploiement.
+Mais ce n'est pas tout, même lors du fonctionnement en production, il peut y avoir des frictions.
 
-- Premier dommage collatéral : le système de prefetch des liens dans les pages peut ralentir votre API. En effet, sur une page de liste, cela peut rapidement ralentir la page s'il s'agit de pages générées à la demande.
+- Première friction : le système de prefetch des liens dans les pages peut ralentir votre API. En effet, sur une page de liste, cela peut rapidement ralentir la page s'il s'agit de pages générées à la demande. Un grand nombre de pages est généré et donc beaucoup d'appels à un instant T.
 
-Dans l'idéal, il faudrait avoir la possibilité de faire des queries dans les components ou au moins dans le layout mais techniquement, cela n'est pas possible.
-
-- Autre dommage collatéral : sur une page générée à la demande en réglant le callback sur true ou blocking, après avoir cliqué sur un lien interne, on peut parfois observer une transition de page assez lente où il ne se passe rien. Jusqu'à avoir l'impression que le clic n'a pas fonctionné.
+- Deuxième friction : sur une page générée à la demande en réglant le callback sur true ou blocking, après avoir cliqué sur un lien interne, on peut parfois observer une transition de page assez lente où il ne se passe rien. Jusqu'à avoir l'impression que le clic n'a pas fonctionné.
 C'est un comportement que l'on retrouve parfois quand on a des fonctions getStaticProps assez conséquentes.
 
 ::Image
@@ -84,3 +96,8 @@ Actuellement l'API de rendu React, par sa conception, ne fonctionne pas comme ç
 
 Bonne nouvelle ! **React 18**, introduit de nouveau concept de rendu et c'est justement ce que nous allons voir dans le prochain article :
 
+::Info
+**Lire le dernier article**
+
+- **[Next.js 13, la nouvelle API 'app' (3/3)](/articles/next-js-13-app/)**
+::

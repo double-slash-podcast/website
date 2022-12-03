@@ -72,8 +72,13 @@ h2 {
 }
 
 .prose .info-block > p,
+.prose .info-block strong,
+.prose .info-block a,
 .prose .info-block > ul {
-  @apply my-0;
+  @apply my-0 text-gray-600;
+}
+.prose .info-block > ul li {
+  @apply text-gray-600;
 }
 
 .prose a {
