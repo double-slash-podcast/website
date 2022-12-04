@@ -19,6 +19,10 @@ export default defineNuxtConfig({
         port: 5000,
       },
     },
+    highlight: {
+      // Theme used in all color schemes.
+      theme: 'github-dark',
+    },
   },
   image: {
     provider: 'cloudinary',
