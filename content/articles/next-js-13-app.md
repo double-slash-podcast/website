@@ -149,6 +149,14 @@ En plus du fichier ```page.[js|tsx|jsx]```, il existe d'autres [fichiers spécia
 
 En dehors de ces fichiers, vous pouvez mettre ce que vous voulez.
 
+## Layout
+
+Le layout à la racine remplace les fichiers ```_app.js``` et ```_document.js```.
+Il est obligatoire si vous voulez utiliser d'autres layouts dans les dossiers enfants.
+Les layouts, comme le reste, sont par défaut des server components. Nous pouvons donc faire des requêtes dedans.
+Un détail à bien assimiler : les layouts dans les répertoires enfants, sont incorporés dans les autres layouts, ils sont nested.
+L'intérêt ? Ajouter des éléments correspondant à la section affichée. PAr exemple, une sidebar, un menu de gestion de compte, etc.
+
 
 ## Statique par défaut.
 
