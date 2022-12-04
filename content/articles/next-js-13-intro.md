@@ -26,7 +26,7 @@ Personnellement, j'ai attendu que l'effervescence retombe un peu et j'ai enfin p
 D'où l'idée de faire un retour par écrit et en vidéo sur cette nouvelle structure et tout ce qui va avec.
 
 - Dans un [premier article](/articles/next-js-13-pages/), nous allons refaire le point sur la façon que je nommerai **"classique"** de construire des applications depuis quelques versions avec Next.js.
-Ce premier article se concentra sur la méthode "classique" qui utilise l'API "pages".
+Ce premier article se concentra sur la méthode "classique" qui utilise la structure "pages".
 - S'en suivra, un [deuxième article](/articles/next-js-13-app/) sur cette nouvelle structure via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout regarder si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
 
 Avant que vous passiez au premier article, je voulais revenir sur le fait que Next.js était quasiment obligé **d'évoluer**.
@@ -54,5 +54,5 @@ Bref, un changement obligatoire, peut-être un peu contraignant mais pour le bie
 ::Info
 **Lire la suite**
 
-- **[Next.js, le point sur l'API "pages" (2/3)](/articles/next-js-13-pages/)**
+- **[Next.js, le point sur la structure "pages" (2/3)](/articles/next-js-13-pages/)**
 ::

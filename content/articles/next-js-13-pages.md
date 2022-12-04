@@ -1,6 +1,6 @@
 ---
 publicationDate: 2022-12-02
-title: Next.js, le point sur l'API "pages" (2/3)
+title: Next.js, le point sur la structure "pages" (2/3)
 description: Nous sommes nombreux à avoir développé des applications plus ou moins complexes. À s'être accoutumé au fonctionnement de Next.js. Ensemble nous allons faire le tour des points bloquants sur la version "classique".
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
@@ -9,10 +9,10 @@ author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 type: warning
 ---
-Cet article fait partie d'une série :
+Cet article fait partie d'une série de 3 articles :
 
 - [Next.js 13, introduction (1/3)](/articles/next-js-13-intro/)
-- [Next.js 13, la nouvelle API 'app' (3/3)](/articles/next-js-13-app/)
+- [Next.js 13, la nouvelle structure 'app' (3/3)](/articles/next-js-13-app/)
 ::
 
 ## Bref historique
@@ -33,7 +33,7 @@ En mars 2021, j'écrivais un article sur [Jamstatic.fr](https://jamstatic.fr/202
 Et c'est pour cela que l'on parle de statique "hybride" car il est nécessaire de faire tourner une runtime pour permettre ce fonctionnement contrairement à du pur statique qui une fois généré se pose sur un CDN et basta.
 
 
-## Les points bloquants de l'API "pages"
+## Les points bloquants de la structure "pages"
 
 Nous sommes nombreux à avoir développé des applications plus ou moins complexes. À s'être accoutumé au fonctionnement de Next.js.
 
@@ -146,5 +146,5 @@ Bonne nouvelle ! **React 18**, introduit de nouveau concept de rendu et nous all
 ::Info
 **Lire le dernier article**
 
-- **[Next.js 13, la nouvelle API 'app' (3/3)](/articles/next-js-13-app/)**
+- **[Next.js 13, la nouvelle structure 'app' (3/3)](/articles/next-js-13-app/)**
 ::
