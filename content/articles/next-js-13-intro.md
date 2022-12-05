@@ -1,5 +1,5 @@
 ---
-publicationDate: 2022-12-01
+publicationDate: 2022-12-03
 title: Next.js 13, introduction (1/3)
 description: Vous le savez certainement, Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022.Alors, quand on supprime tous les subterfuges marketings et la présentation à la Apple, c'est une annonce très importante dans la communauté React.js. Des grands changements à commencer par le principal, une nouvelle structure pour nos applications Next.js !
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
