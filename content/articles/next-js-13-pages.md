@@ -1,5 +1,5 @@
 ---
-publicationDate: 2022-12-02
+publicationDate: 2022-12-04
 title: Next.js, le point sur la structure "pages" (2/3)
 description: Nous sommes nombreux à avoir développé des applications plus ou moins complexes. À s'être accoutumé au fonctionnement de Next.js. Ensemble nous allons faire le tour des points bloquants sur la version "classique".
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
@@ -62,7 +62,7 @@ Ce layout ne changera pas au fil des navigations dans le browser et seul le cont
 
 - Première limitation : on ne peut pas faire de requête dans ce layout. Pas moyen de récupérer les data de navigation ou autre directement dedans. Il est dépendant de la page qui le contient.
 
-- Deuxième limitation : si je veux plusieurs layouts, pour créer des espaces différents dans la même app (espace client ou shop), ça devient compliqué. Ce n'est pas impossible à faire mais ça demande plus de code pour gérer tout ça, ce n'est donc pas natif.
+- Deuxième limitation : si je veux avoir des variantes de mon layouts, ce n'est pas natif, il faudra jouer d'astuce pour parser l'url et déterminer quelle est la page courante.
 
 ### "getStaticProps", la seule source de data et la cascade
 
