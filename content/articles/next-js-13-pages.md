@@ -28,7 +28,13 @@ S'en sont suivies, plusieurs évolutions sur le mode statique hybride dont la de
 
 En mars 2021, j'écrivais un article sur [Jamstatic.fr](https://jamstatic.fr/2021/03/09/11000-pages-statiques/) concernant la problématique de faire du statique avec un site qui comporte beaucoup de pages.
 
-À ce jour, Next.js reste une seule solution simple qui permet en production de générer à la demande une page statique et donc de déployer une app sans générer toutes les pages. Nous parlons de génération incrémentale.
+Depuis, plusieurs meta-framework, ont implémenté des méthodes pour les sites avec un grand nombre de pages :
+
+- [Gatsby DSG](https://www.gatsbyjs.com/docs/reference/rendering-options/deferred-static-generation/)
+- [Eleventy Serverless](https://www.11ty.dev/docs/plugins/serverless/)
+- ...
+
+Mais à ce jour, Next.js reste une seule solution simple qui permet en production de générer à la demande une page statique et donc de déployer une app sans générer toutes les pages. Nous parlons de génération incrémentale.
 
 Et c'est pour cela que l'on parle de statique "hybride" car il est nécessaire de faire tourner une runtime pour permettre ce fonctionnement contrairement à du pur statique qui une fois généré se pose sur un CDN et basta.
 

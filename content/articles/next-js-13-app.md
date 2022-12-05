@@ -31,7 +31,9 @@ Si on utilise une majorité de **server component** dans son app, le poids du bu
 Exemple de format d'un server component :
 
 ```js
-J0:[[["",{"children":["blog",{"children":[["params","948D24C5-725A-2046-19E5-E21F59C6D815","oc"],{"children":["",{}]}]}]},null,null,true],"@1",[["$","title",null,{"children":"Create Next App"}],["$","meta",null,{"content":"width=device-width, initial-scale=1","name":"viewport"}], ... enim nisl elementum purus, accumsan interdum libero dui nec ipsum."}]]
+J0:[[["",{"children":["blog",{"children":[["params","948D24C5-725A-2046-19E5-E21F59C6D815","oc"],
+{"children":["",{}]}]}]},null,null,true],"@1",[["$","title",null,{"children":"Create Next App"}],
+["$","meta",null,{"content":"width=device-width, initial-scale=1","name":"viewport"}], ... enim nisl elementum purus, accumsan interdum libero dui nec ipsum."}]]
 ```
 
 **Autre avantage des server components, nous pouvons faire des requêtes à l'intérieur des components. Puisque nous sommes cotés serveur \o/.**
@@ -161,7 +163,7 @@ C'est désormais facile et natif.
 ## Statique par défaut.
 
 Comme avec la version classique, le rendu est **statique** par défaut.
-Pour avoir un rendu **"serveur"**, sans fichier statique, il faut :
+Pour avoir un rendu **"serveur"**, sans fichier statique généré donc, il faut :
 
 - avoir une fonction dynamique. Qui utilise ```cookies()``` ou ```header()```
 - ou un fetch dynamique. Avec un ```cache : 'no-store'``` ou ```revalidate: 0```
