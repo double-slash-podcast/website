@@ -1,6 +1,4 @@
 <script setup>
-import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
-import 'vue-lite-youtube-embed/dist/style.css';
 const {path} = useRoute();
 
 const linksTab = ref(['Description']);
@@ -136,7 +134,10 @@ useSchemaOrg([
             role="tabpanel"
             aria-labelledby="tab-Video"
           >
-            <LiteYouTubeEmbed :id="episode.videoLink" :title="episode.title" />
+            <VideoPlayer
+              :video-link="episode.videoLink"
+              :video-title="episode.title"
+            />
           </div>
           <div
             v-if="transcription?.results"
