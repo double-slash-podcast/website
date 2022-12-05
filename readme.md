@@ -65,5 +65,3 @@ pnpm build
 - [ ] Sponsoring page => redirection
 - [ ] Contact Form
 - [ ] Live page ?
-- [ ] Blog for SEO content ?
-
