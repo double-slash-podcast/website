@@ -54,5 +54,5 @@ Bref, un changement obligatoire, peut-être un peu contraignant mais pour le bie
 ::Info
 **Lire la suite**
 
-- **[Next.js, le point sur la structure "pages" (2/3)](/articles/next-js-13-pages/)**
+- **[Next.js 13, pourquoi il était nécessaire d'évoluer (2/3)](/articles/next-js-13-pages/)**
 ::

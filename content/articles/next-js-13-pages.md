@@ -1,6 +1,6 @@
 ---
 publicationDate: 2022-12-04
-title: Next.js, le point sur la structure "pages" (2/3)
+title: Next.js 13, pourquoi il était nécessaire d'évoluer (2/3)
 description: Nous sommes nombreux à avoir développé des applications plus ou moins complexes. À s'être accoutumé au fonctionnement de Next.js. Ensemble nous allons faire le tour des points bloquants sur la version "classique".
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
@@ -12,8 +12,20 @@ type: warning
 Cet article fait partie d'une série de 3 articles :
 
 - [Next.js 13, introduction (1/3)](/articles/next-js-13-intro/)
-- [Next.js 13, la nouvelle structure 'app' (3/3)](/articles/next-js-13-app/)
+- [Next.js 13, on fait le point de la nouvelle structure "app" (3/3)](/articles/next-js-13-app/)
 ::
+
+## Vidéo liée à l'article : Next.js 13, pourquoi il était nécessaire d'évoluer ! [1/2]
+
+::VideoPlayer
+---
+
+videoLink: -aTYacf9JWo
+videoTitle: Next.js 13, pourquoi il était nécessaire d'évoluer ! [1/2]
+---
+
+::
+
 
 ## Bref historique
 
@@ -152,5 +164,5 @@ Bonne nouvelle ! **React 18**, introduit de nouveau concept de rendu et nous all
 ::Info
 **Lire le dernier article**
 
-- **[Next.js 13, la nouvelle structure 'app' (3/3)](/articles/next-js-13-app/)**
+- **[Next.js 13, on fait le point de la nouvelle structure "app" (3/3)](/articles/next-js-13-app/)**
 ::
