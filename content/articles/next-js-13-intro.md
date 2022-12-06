@@ -1,7 +1,7 @@
 ---
 publicationDate: 2022-12-03
 title: Next.js 13, introduction (1/3)
-description: Vous le savez certainement, Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022.Alors, quand on supprime tous les subterfuges marketings et la présentation à la Apple, c'est une annonce très importante dans la communauté React.js. Des grands changements à commencer par le principal, une nouvelle structure pour nos applications Next.js !
+description: Vous le savez certainement, Next.js 13 a été annoncé lors de la Next.js Conf le 25 octobre 2022. Alors, quand on supprime tous les subterfuges marketings et la présentation à la Apple, c'est une annonce très importante dans la communauté React.js. Des grands changements à commencer par le principal, une nouvelle structure pour nos applications Next.js !
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
@@ -21,13 +21,20 @@ Alors, quand on supprime tous les subterfuges marketings et la présentation  à
 
 Alors, je vous arrête tout de suite, vos applications développées précédemment sous le format classique (dossier pages) vont continuer à fonctionner sans souci. Pas de panique !
 
-Personnellement, j'ai attendu que l'effervescence retombe un peu et j'ai enfin pris le temps de bien lire la doc (une bonne journée) et de tester un peu en codant.
+Personnellement, j'ai attendu que l'effervescence retombe un peu et j'ai enfin pris le temps de bien lire la doc (une bonne journée) et de tester un peu en faisant 2 applications de test.
+
+::Info
+**Les codes source des 2 applications :**
+
+- [Version pages](https://github.com/double-slash-podcast/nextjs-example)
+- [Version app](https://github.com/double-slash-podcast/nextjs-13-app-example)
+::
 
 D'où l'idée de faire un retour par écrit et en vidéo sur cette nouvelle structure et tout ce qui va avec.
 
 - Dans un [premier article](/articles/next-js-13-pages/), nous allons refaire le point sur la façon que je nommerai **"classique"** de construire des applications depuis quelques versions avec Next.js.
 Ce premier article se concentra sur la méthode "classique" qui utilise la structure "pages".
-- S'en suivra, un [deuxième article](/articles/next-js-13-app/) sur cette nouvelle structure via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout regarder si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
+- S'en suivra, un [deuxième article](/articles/next-js-13-app/) sur cette nouvelle structure via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout vérifier si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
 
 Avant que vous passiez au premier article, je voulais revenir sur le fait que Next.js était quasiment obligé **d'évoluer**.
 

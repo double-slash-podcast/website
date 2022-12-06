@@ -1,7 +1,7 @@
 ---
 publicationDate: 2022-12-05
 title: Next.js 13, on fait le point de la nouvelle structure "app" (3/3)
-description: Le nouveau système de Next.js 13 est entièrement basé sur les server components. Dans la structure "app" de Next.JS, tous les components sont des server components par défaut. Mais c'est quoi un server components ?
+description: Ce deuxième article se concentre sur la nouvelle structure de Next.js via de dossier "app". Nous regarderons ensemble ce que cela change et nous allons surtout vérifier si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
@@ -15,7 +15,11 @@ Cet article fait partie d'une série de 3 articles :
 - [Next.js 13, pourquoi il était nécessaire d'évoluer (2/3)](/articles/next-js-13-pages/)
 ::
 
-## Vidéo liée à l'article : Next.js 13, on fait le point de la nouvelle structure "app" [2/2]
+Ce deuxième article se concentre sur la nouvelle structure de **Next.js** via de dossier **"app"**. Nous regarderons ensemble ce que cela change et nous allons surtout vérifier si nos applications continueront à fonctionner de la même façon avec cette nouvelle version.
+
+Une vidéo est liée à cet article, disponible ci-dessous.
+
+## Next.js 13, on fait le point de la nouvelle structure "app" [2/2]
 
 ::VideoPlayer
 ---
