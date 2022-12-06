@@ -1,7 +1,7 @@
 ---
 publicationDate: 2022-12-04
 title: Next.js 13, pourquoi il était nécessaire d'évoluer (2/3)
-description: Nous sommes nombreux à avoir développé des applications plus ou moins complexes. À s'être accoutumé au fonctionnement de Next.js. Ensemble nous allons faire le tour des points bloquants sur la version "classique".
+description: Dans ce premier article, nous allons refaire le point sur la façon que je nommerai "classique" de construire des applications depuis quelques versions avec Next.js. Ensemble, nous allons revoir le fonctionnement de la structure "pages" dans Next.js et ensuite dévoiler quelques points bloquants sur cette version.
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
@@ -15,12 +15,17 @@ Cet article fait partie d'une série de 3 articles :
 - [Next.js 13, on fait le point de la nouvelle structure "app" (3/3)](/articles/next-js-13-app/)
 ::
 
-## Vidéo liée à l'article : Next.js 13, pourquoi il était nécessaire d'évoluer ! [1/2]
+Dans ce premier article, nous allons refaire le point sur la façon que je nommerai **"classique"** de construire des applications depuis quelques versions avec **Next.js**.
+Ensemble, nous allons revoir le fonctionnement de la structure "pages" dans **Next.js** et ensuite dévoiler quelques points bloquants sur cette version.
+
+Une vidéo est liée à cet article, disponible ci-dessous.
+
+## Next.js 13, pourquoi il était nécessaire d'évoluer ! [1/2]
 
 ::VideoPlayer
 ---
 
-videoLink: -aTYacf9JWo
+videoLink: btOxeMg9gqY
 videoTitle: Next.js 13, pourquoi il était nécessaire d'évoluer ! [1/2]
 ---
 
