@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration: 3366
-episodeNumber: 0054
+episodeNumber: 54
 episodeType: full
 explicit: false
 season: 1
