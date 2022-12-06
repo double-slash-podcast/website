@@ -1,4 +1,3 @@
-/* eslint-disable n/handle-callback-err */
 // import {fileURLToPath} from 'node:url';
 import fs from 'fs';
 import path from 'path';
