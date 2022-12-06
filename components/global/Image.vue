@@ -1,9 +1,9 @@
 <script setup lang="ts">
-// const {
-//   $config: {
-//     public: {siteUrl},
-//   },
-// } = useNuxtApp();
+const {
+  $config: {
+    public: {siteUrl},
+  },
+} = useNuxtApp();
 
 withDefaults(
   defineProps<{
@@ -19,7 +19,7 @@ withDefaults(
 
 <template>
   <nuxt-img
-    :src="`https://deploy-preview-90--double-slash-website.netlify.app/${src}`"
+    :src="`${siteUrl}${src}`"
     :alt="alt"
     :width="width"
     :height="height"
