@@ -99,3 +99,12 @@ h2 {
     @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs;
   }
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
