@@ -56,7 +56,7 @@ useSchemaOrg([
 </script>
 
 <template>
-  <div>
+  <div class="bg-gradient-to-b from-purple-50 to-purple-100">
     <Header :height="220" class="">
       <template #baseline>
         <EpisodeHeadings :episode="episode" level="1"></EpisodeHeadings>

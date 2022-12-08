@@ -26,7 +26,7 @@ useSchemaOrg([
 ]);
 </script>
 <template>
-  <div class="">
+  <div class="bg-gradient-to-b from-purple-50 to-purple-100">
     <Header :height="160"></Header>
     <main class="pb-20">
       <h1 class="mt-10 text-4xl font-bold">{{ article?.title }}</h1>

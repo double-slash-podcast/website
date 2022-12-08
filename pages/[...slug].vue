@@ -18,7 +18,7 @@ useHead({
 useSchemaOrg([defineWebPage()]);
 </script>
 <template>
-  <div class="">
+  <div class="bg-gradient-to-b from-purple-50 to-purple-100">
     <Header :height="160"></Header>
     <main>
       <ContentRenderer :value="data" class="prose min-h-[500px] py-6" />
