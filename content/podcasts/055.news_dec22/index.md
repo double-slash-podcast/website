@@ -97,7 +97,7 @@ Graphql via pg_graphql
 - Tuto Tailwind avancé : [https://www.protailwind.com/tutorials](https://www.protailwind.com/tutorials)
 - Tuto Typescript : [https://www.totaltypescript.com/tutorials](https://www.totaltypescript.com/tutorials)
 - Tuto Git : [https://www.youtube.com/@DeliciousInsights/playlists](https://www.youtube.com/@DeliciousInsights/playlists)
-
+- Tuto Angular de Lior Chamla : [https://youtu.be/vr8-bSIT9iE](https://youtu.be/vr8-bSIT9iE)
 
 ## News en vrac
 
@@ -124,8 +124,6 @@ Graphql via pg_graphql
 
 - [components.ai](https://components.ai/u/system/cl5a97rxe001209ldetuczj0x)
 
-
-
 Bonne écoute !
 
 ::authors
@@ -133,6 +131,8 @@ Bonne écoute !
 
 ::Sponsor
 ---
+
 withList: false
 ---
+
 ::
