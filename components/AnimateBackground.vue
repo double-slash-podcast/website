@@ -6,6 +6,7 @@
     <IconsRows
       v-for="i in rowCount"
       :key="i"
+      :size="size"
       :icons="iconImages"
       class="opacity-20"
     />
@@ -22,7 +23,7 @@ const props = defineProps({
   },
 });
 
-const size = 60;
+const size = 100;
 
 // list logos
 const logos = [
@@ -83,6 +84,6 @@ onMounted(async () => {
 });
 
 const rowCount = computed(() => {
-  return Math.round(props.height / size);
+  return Math.round(props.height / size) + 2;
 });
 </script>

@@ -5,14 +5,14 @@
         class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideLeft1"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconImg :name="logo" size="40" classes="grayscale icon" />
+          <IconImg :name="logo" :size="size / 2.4" classes="grayscale icon" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideLeft2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconImg :name="logo" size="40" classes="grayscale icon" />
+          <IconImg :name="logo" :size="size / 2.4" classes="grayscale icon" />
         </li>
       </ul>
     </div>
@@ -22,14 +22,14 @@
         class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideRight1"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconImg :name="logo" size="40" classes="grayscale icon" />
+          <IconImg :name="logo" :size="size / 2.4" classes="grayscale icon" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideRight2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconImg :name="logo" size="40" classes="grayscale icon" />
+          <IconImg :name="logo" :size="size / 2.4" classes="grayscale icon" />
         </li>
       </ul>
     </div>
@@ -39,6 +39,7 @@
 <script setup lang="ts">
 const props = defineProps<{
   icons?: string[];
+  size: number;
 }>();
 
 const shuffleLogos = computed(() => {
