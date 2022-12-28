@@ -3,13 +3,15 @@
     <div
       class="absolute top-0 bottom-0 left-0 right-0 w-full bg-gradient-radial from-[#7D459A] to-darkPurple"
     ></div>
-    <IconsRows
-      v-for="i in rowCount"
-      :key="i"
-      :size="size"
-      :icons="iconImages"
-      class="opacity-20"
-    />
+    <ClientOnly>
+      <IconsRows
+        v-for="i in rowCount"
+        :key="i"
+        :size="size"
+        :icons="iconImages"
+        class="opacity-20"
+      />
+    </ClientOnly>
     <div
       class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-to-r from-darkPurple to-darkPurple via-transparent"
     ></div>
@@ -23,7 +25,7 @@ const props = defineProps({
   },
 });
 
-const size = 100;
+const size = 50;
 
 // list logos
 const logos = [
@@ -84,6 +86,6 @@ onMounted(async () => {
 });
 
 const rowCount = computed(() => {
-  return Math.round(props.height / size) + 2;
+  return Math.round(props.height / size);
 });
 </script>

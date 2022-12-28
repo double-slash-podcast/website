@@ -7,7 +7,7 @@ defineProps<{
 </script>
 <template>
   <span
-    :style="`width: ${size}px;height: ${size}px;background-image:url(${name});`"
-    :class="`block bg-no-repeat bg-contain ${classes}`"
+    :style="`min-width: ${size}px;min-height: ${size}px;background-image:url(${name});`"
+    :class="`flex bg-no-repeat bg-contain ${classes}`"
   ></span>
 </template>
