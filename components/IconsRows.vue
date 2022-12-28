@@ -5,14 +5,19 @@
         class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideLeft1"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <Icon
+          <IconBg
             v-if="isFirst"
-            :id="logo"
+            :key="`${logo}:first`"
             :name="logo"
             size="40"
-            class="grayscale"
           />
-          <IconsUse v-else :id="logo" size="40" class="grayscale icon" />
+          <IconsUse
+            v-else
+            :key="`${logo}:second`"
+            :id="logo"
+            size="40"
+            class="grayscale icon"
+          />
         </li>
       </ul>
       <ul
