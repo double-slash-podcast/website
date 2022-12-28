@@ -65,7 +65,7 @@ onMounted(async () => {
   const icons = await Promise.all(
     logos.map(async logo => {
       // slow query
-      await new Promise(() => setTimeout(r, 300));
+      await new Promise(resolve => setTimeout(resolve, 300));
       const path = `${logo.replace(':', '/')}.svg`;
       // load icon
       const {data: svgIcon} = await useFetch(
