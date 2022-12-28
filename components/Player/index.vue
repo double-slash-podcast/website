@@ -47,7 +47,7 @@
         :current-position="
           isNaN(state.currentPosition) ? 0 : state.currentPosition
         "
-        @updateCurrentTime="updateCurrentTime"
+        @update-current-time="updateCurrentTime"
       />
       <div class="flex items-center justify-between w-full">
         <div class="flex">

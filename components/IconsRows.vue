@@ -5,26 +5,14 @@
         class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideLeft1"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconBg
-            v-if="isFirst"
-            :key="`${logo}:first`"
-            :name="logo"
-            size="40"
-          />
-          <IconsUse
-            v-else
-            :key="`${logo}:second`"
-            :id="logo"
-            size="40"
-            class="grayscale icon"
-          />
+          <IconImg :name="logo" size="40" classes="grayscale icon" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideLeft2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconsUse :id="logo" size="40" class="grayscale icon" />
+          <IconImg :name="logo" size="40" classes="grayscale icon" />
         </li>
       </ul>
     </div>
@@ -34,14 +22,14 @@
         class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideRight1"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconsUse :id="logo" size="40" class="grayscale icon" />
+          <IconImg :name="logo" size="40" classes="grayscale icon" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideRight2"
       >
         <li v-for="logo in shuffleLogos" :key="logo">
-          <IconsUse :id="logo" size="40" class="grayscale icon" />
+          <IconImg :name="logo" size="40" classes="grayscale icon" />
         </li>
       </ul>
     </div>
@@ -49,48 +37,11 @@
 </template>
 
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    isFirst: boolean;
-  }>(),
-  {isFirst: false},
-);
-
-const logos = [
-  'logos:vitejs',
-  'logos:pnpm',
-  'logos:fastify-icon',
-  'logos:javascript',
-  'logos:nextjs-icon',
-  'logos:nodejs-icon',
-  'logos:css-3-official',
-  'logos:html-5',
-  'logos:vue',
-  'logos:react',
-  'logos:bun',
-  'logos:deno',
-  'logos:pwa',
-  'logos:php',
-  'logos:symfony',
-  'logos:graphql',
-  'logos:astro',
-  'logos:angular-icon',
-  'logos:visual-studio-code',
-  'logos:docker-icon',
-  'logos:hasura-icon',
-  'logos:nuxt-icon',
-  'logos:rust',
-  'logos:tailwindcss-icon',
-  'logos:redis',
-  'logos:postgresql',
-  'logos:mongodb-icon',
-  'logos:wordpress-icon',
-  'logos:webpack',
-  'logos:alpinejs-icon',
-  'logos:solidity',
-];
+const props = defineProps<{
+  icons?: string[];
+}>();
 
 const shuffleLogos = computed(() => {
-  return logos.sort(() => Math.random() - 0.5);
+  return props.icons ? [...props.icons].sort(() => Math.random() - 0.5) : [];
 });
 </script>

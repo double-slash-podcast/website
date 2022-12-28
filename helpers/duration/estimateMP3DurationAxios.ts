@@ -6,7 +6,6 @@ import createEstimateMP3Duration, {
 } from './createEstimateMP3Duration';
 
 export class AxiosDataReader implements DataReader<string> {
-  // eslint-disable-next-line prettier/prettier
   private contentRangeHeaderRegex =
     /([^\s]+)\s((([\d]+)-([\d]+))|\*)\/([\d]+|\*)/;
 
