@@ -10,6 +10,7 @@
         :size="size"
         :icons="iconImages"
         class="opacity-20"
+        aria-hidden="true"
       />
     </ClientOnly>
     <div
@@ -45,21 +46,21 @@ const logos = [
   'logos:php',
   'logos:symfony',
   'logos:graphql',
-  'logos:astro',
-  'logos:angular-icon',
-  'logos:visual-studio-code',
-  'logos:docker-icon',
-  'logos:hasura-icon',
-  'logos:nuxt-icon',
-  'logos:rust',
-  'logos:tailwindcss-icon',
-  'logos:redis',
-  'logos:postgresql',
-  'logos:mongodb-icon',
-  'logos:wordpress-icon',
-  'logos:webpack',
-  'logos:alpinejs-icon',
-  'logos:solidity',
+  //   'logos:astro',
+  //   'logos:angular-icon',
+  //   'logos:visual-studio-code',
+  //   'logos:docker-icon',
+  //   'logos:hasura-icon',
+  //   'logos:nuxt-icon',
+  //   'logos:rust',
+  //   'logos:tailwindcss-icon',
+  //   'logos:redis',
+  //   'logos:postgresql',
+  //   'logos:mongodb-icon',
+  //   'logos:wordpress-icon',
+  //   'logos:webpack',
+  //   'logos:alpinejs-icon',
+  //   'logos:solidity',
 ];
 
 // create array of url
