@@ -2,41 +2,48 @@
   <div>
     <div class="relative flex space-x-2 overflow-hidden select-none">
       <ul
-        class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideLeft1"
+        :style="`height: ${size}px`"
+        class="flex min-w-full space-x-4 shrink-0 animate-slideLeft1"
       >
-        <li v-for="logo in shuffleLogos" :key="logo">
+        <li v-for="logo in getRandomElements" :key="logo">
           <Icon
             v-if="isFirst"
             :id="logo"
             :name="logo"
-            size="40"
+            :size="`${size * 0.8}`"
             class="grayscale"
           />
-          <IconsUse v-else :id="logo" size="40" class="grayscale icon" />
+          <IconsUse
+            v-else
+            :id="logo"
+            :size="`${size * 0.8}`"
+            class="grayscale icon"
+          />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideLeft2"
       >
-        <li v-for="logo in shuffleLogos" :key="logo">
-          <IconsUse :id="logo" size="40" class="grayscale icon" />
+        <li v-for="logo in getRandomElements" :key="logo">
+          <IconsUse :id="logo" :size="`${size * 0.8}`" class="grayscale icon" />
         </li>
       </ul>
     </div>
     <!-- 2 eme ligne -->
     <div class="relative flex space-x-2 overflow-hidden select-none">
       <ul
-        class="flex h-[55px] min-w-full space-x-4 shrink-0 animate-slideRight1"
+        :style="`height: ${size}px`"
+        class="flex min-w-full space-x-4 shrink-0 animate-slideRight1"
       >
-        <li v-for="logo in shuffleLogos" :key="logo">
-          <IconsUse :id="logo" size="40" class="grayscale icon" />
+        <li v-for="logo in getRandomElements" :key="logo">
+          <IconsUse :id="logo" :size="`${size * 0.8}`" class="grayscale icon" />
         </li>
       </ul>
       <ul
         class="absolute top-0 flex min-w-full space-x-2 shrink-0 animate-slideRight2"
       >
-        <li v-for="logo in shuffleLogos" :key="logo">
-          <IconsUse :id="logo" size="40" class="grayscale icon" />
+        <li v-for="logo in getRandomElements" :key="logo">
+          <IconsUse :id="logo" :size="`${size * 0.8}`" class="grayscale icon" />
         </li>
       </ul>
     </div>
@@ -47,9 +54,12 @@
 withDefaults(
   defineProps<{
     isFirst: boolean;
+    size: number;
   }>(),
   {isFirst: false},
 );
+
+const numberOfElements = 31;
 
 const logos = [
   'logos:vitejs',
@@ -85,7 +95,19 @@ const logos = [
   'logos:solidity',
 ];
 
-const shuffleLogos = computed(() => {
-  return logos.sort(() => Math.random() - 0.5);
+const getRandomElements = computed(() => {
+  const workArray = logos.slice();
+  const randomElements = [];
+  for (let i = 0; i < numberOfElements; i++) {
+    const randomIndex = Math.floor(Math.random() * workArray.length);
+    const randomElement = workArray[randomIndex];
+    randomElements.push(randomElement);
+    workArray.splice(randomIndex, 1);
+  }
+  return randomElements;
 });
+
+// const shuffleLogos = computed(() => {
+//   return logos.sort(() => Math.random() - 0.5);
+// });
 </script>
