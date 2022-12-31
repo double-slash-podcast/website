@@ -30,11 +30,11 @@ const headerHeight = computed(() => {
     </div>
     <!-- player -->
     <slot name="player"></slot>
-    <LazyAnimateBackground class="col-start-1 row-start-1" :height="height" />
   </header>
 </template>
 
 <style scoped>
+/** <LazyAnimateBackground class="col-start-1 row-start-1" :height="height" />*/
 header {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
   height: v-bind('headerHeight');
