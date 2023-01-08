@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2961
+duration: 2921
 episodeNumber: 56
 episodeType: full
 explicit: false
