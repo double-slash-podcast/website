@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import LiteYouTubeEmbed from 'vue-lite-youtube-embed';
-import 'vue-lite-youtube-embed/dist/style.css';
+import 'vue-lite-youtube-embed/style.css';
 
 defineProps<{
   videoLink: string;
