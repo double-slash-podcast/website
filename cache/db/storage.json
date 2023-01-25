@@ -210,5 +210,21 @@
     "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_053_ror.mp3": {
         "duration": 6401,
         "size": 51209157
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_055_news_dec22.mp3": {
+        "duration": 5471,
+        "size": 38298739
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_054_cecil.mp3": {
+        "duration": 6730,
+        "size": 53845651
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_056_medusa.mp3": {
+        "duration": 5823,
+        "size": 46589040
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_057_news0123.mp3": {
+        "duration": 7308,
+        "size": 51156872
     }
 }

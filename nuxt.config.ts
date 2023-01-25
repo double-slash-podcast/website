@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image-edge',
     'nuxt-schema-org',
+    '@nuxtjs/fontaine',
   ],
   content: {
     watch: {
