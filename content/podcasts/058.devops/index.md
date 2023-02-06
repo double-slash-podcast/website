@@ -12,7 +12,7 @@ season: 1
 dsSlug: DS_058_devops
 title: Culture DevOps
 subtitle: avec Les Compagnons du DevOps
-episodeArtwork: xxxxx
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,h_200/v1675722040/episode/ART_58_devops_qm268q.png
 description: 
 videoLink : j0h-hI_2ixU
 links:
