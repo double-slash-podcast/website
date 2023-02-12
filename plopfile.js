@@ -48,7 +48,7 @@ module.exports = function (plop) {
     actions: [
       {
         type: 'add',
-        path: 'content/podcasts/{{episodeNumber}}.{{dsSlug}}/index.md',
+        path: 'content/podcasts/0{{episodeNumber}}.{{dsSlug}}/index.md',
         templateFile: 'template/episode.hbs',
       },
     ],
