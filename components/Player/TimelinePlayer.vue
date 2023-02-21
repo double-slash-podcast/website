@@ -62,7 +62,7 @@ const props = defineProps<{
 }
 
 ::-webkit-progress-value {
-  @apply bg-yellowDs rounded-full h-2 relative -top-0.5;
+  @apply bg-yellowDs rounded-full h-2 relative -top-0.5 py-1;
 }
 
 ::-moz-progress-bar {
