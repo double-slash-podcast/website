@@ -82,7 +82,7 @@ Oui, le risque d'infection existe et il faut en avoir conscience.
 Tout comme la sécurité, si le site WordPress n'a pas été correctement codé et si l'équipe n'a pas respecté les bonnes pratiques, un site WordPress peut être très lent.
 
 Il n'est pas rare, de voir des sites avec 200 requêtes sur une page et un score en dessous des 20 sur le Page Speed Insight.
-Des sites qui traînent plus d'une cinquantaine de plugin et construit avec un page builder tel qu'Elementor.
+Des sites qui traînent plus d'une cinquantaine de plugin, construit avec un page builder tel qu'Elementor et un thème acheté 50$ sur thèmes Forest.
 
 Mais en suivant les bonnes pratiques, il est possible d'avoir un très bon score avec un site WordPress. Personnellement, j'ai des sites à plus de 95 au test Page Speed Insight.
 
@@ -151,25 +151,54 @@ En 2023, il est indispensable de connaître et de savoir coder pour Gutenberg po
 
 L'éditeur est vraiment agréable à utiliser. Il faut savoir que dans la vision, à terme, il sera (est) utilisable en dehors de WordPress.
 
-### Fonctionnement de Gutenberg
+::Image
+---
 
-Gutenberg est basé sur React.js et JavaScript.
+src: /assets/articles/gutenberg.gif
+alt: WordPress Gutenberg
+align: 'center'
+---
+
+::
+
+#### Fonctionnement de Gutenberg
+
+Gutenberg est basé sur **React.js** et **JavaScript**.
 
 L’éditeur sauve le contenu sous forme de html. Dans ce HTML, il y a des commentaires spéciaux (html) pour identifier les blocs. Coté front, les commentaires ne sont pas rendus. Côté éditeur, Gutenberg parse le html et reconstruit les différents blocs via les commentaires.
 
+```html
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Convertir une font ttf en woff2</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Nous allons utiliser un outil de compression dont le code source se trouve ici : <a rel="noreferrer noopener" href="https://github.com/google/woff2" target="_blank">https://github.com/google/woff2</a></p>
+<!-- /wp:paragraph -->
+```
+
 Les blocs que l'on peut créer soi-même, sont basés sur du JS, React et PHP.
+
 ::Info
 À noter, ACF permet de faire des blocs Gutenberg. Pratique pour les allergiques à React :)
 ::
 
-### Les évolutions depuis le début
+#### Les évolutions depuis le début
 
 - Arrivé des patterns (compositions). Des blocs HTML simples. Comme des blocs natifs sans réglages. Plus rapide à créer.
 - Full Site Editing (comme les pages builder, on peut contrôler les éléments du site avec Gutenberg)
 - Évolution constante de l'éditeur :
-  - interface
-  - vitesse
-  - accessibilité
+  	 
+	 - interface
+	 - vitesse
+    - accessibilité
+
+
+#### Customisation des blocs
+
+Il est possible via des hooks, de customiser des styles de blocs natifs et d'étendre les blocs natifs en ajoutant des propriétés.
+Le bloc query loop peut être aussi modifier. Notamment pour modifier la query spécifiquement au besoin.
+
 
 ### Theme.json
 
