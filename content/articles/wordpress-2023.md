@@ -28,7 +28,7 @@ Alors une question se pose en ce début d'année quand on est développeur :
 - **90%** des sites avec CMS piratés en 2018 étaient sur WordPress.
 
 ::Info
-La fuite des Panama Paper a été causée par une extension WordPress pas à jour.
+La fuite des Panama Papers a été causée par une extension WordPress pas à jour.
 ::
 
 ### Une communauté active
