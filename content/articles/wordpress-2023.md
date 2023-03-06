@@ -1,5 +1,5 @@
 ---
-publicationDate: 2023-03-04
+publicationDate: 2023-03-07
 title: Faut-il utiliser WordPress en 2023 ?
 description: WordPress fêtera ses 20 ans le 27 mai de cette année ! Oui, 20 ans déjà ! Bon nombre de CMS aussi anciens que lui ont rejoint le cimetière des CMS depuis bien longtemps. WordPress, quand a lui, est toujours présent. Et bien présent ! Il évolue toujours et sa part de marché ne fait qu'augmenter.
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
@@ -48,7 +48,7 @@ Organisation d'évènements, notamment les **WordCamps**, où se regroupent les 
 #### PHP c'est mort
 
 Ce n'est pas un vrai langage, c'est lent, etc.. On peut tout entendre depuis des années sur ce langage. Alors, oui, à la base ce n'était pas vraiment un langage de programmation. Si vous regardez les premières versions de PHP, c'était assez basique.
- 
+
 Cependant, aujourd'hui PHP vient de sortir sa version 6.2 et il n'a plus à rougir face à d'autres langages de programmation.  Il y a également de nombreux frameworks PHP populaires tels que Laravel, Symfony et CodeIgniter qui offrent des fonctionnalités avancées pour les développeurs et qui sont utilisés sur des gors projets professionnels.
 
 En résumé, PHP est toujours une technologie de programmation pertinente et qui est utilisé par de nombreuses entreprises et développeurs pour construire des applications web.
@@ -71,7 +71,7 @@ Pour les clients, il est difficile de faire le tri et il y a une grosse disparit
 
 Effectivement, un WordPress peut être un danger pour les data si on ne suit pas les bonnes pratiques de base. Les mises à jour sont la première chose à effectuer régulièrement.
 
-Installer un plugin de sécurité est aussi une bonne pratique.  
+Installer un plugin de sécurité est aussi une bonne pratique.
 
 Avec une grosse part de marché, WordPress est forcément la cible favorite des hackers. Il est donc nécessaire d'avoir des sauvegardes pour pouvoir réinstaller rapidement une version non hackée de son site.
 
@@ -100,15 +100,17 @@ Apparemment ce n'est pas ce que se sont dit les créateurs des sites suivants :
 - [https://www.nationalarchives.gov.uk/](https://www.nationalarchives.gov.uk/)
 - [https://techcrunch.com/](https://techcrunch.com/)
 
-et la liste continue.
+et la liste est longue...
 
 ## La vérité sur WordPress
 
-- Beaucoup de sites mal conçus. Et beaucoup viennent d'agence web.
+- Beaucoup de sites mal conçus. Et beaucoup viennent malheureusement d'agences web.
 - Mélange PHP/HTML toujours aussi horrible (cela change avec le FSE)
 - Beaucoup de code legacy dû à une rétrocompatibilité et une dette technique (et oui, 20 ans).
 - Uniquement MySQL en base de données. SQLite arrive.
 - Structure de dossier (de base) qui donne accès à tout via le navigateur.
+- Pas d'outils modernes de base comme composer, etc..
+- Pas de structure MVC.
 - CMS plus attaqué que les autres. Logique, il est le plus installé.
 - Non un site WordPress professionnel n'est pas gratuit. Si l'on a besoin de fonctionnalités (cache, sécurité, multilingue). Il faut rapidement payer des plugins.
 - Non, on ne peut pas tout faire avec WordPress. Comme avec les autres solutions d'ailleurs !
@@ -123,6 +125,7 @@ Un seul conseil : évitez d'utiliser un site builder (autre que Gutenberg). Malg
 - 12% des sites avec CMS, utilisent Elementor
 
 On le voit, il est énormément utilisé, il fait partie du paysage et ils ont une grosse force marketing.
+C'est un outil no-code qui a son utilité pour certaines personnes. Malheureusement, la qualité des sites qui en sortent, quoi qu'en disent les personnes qui l'utilisent, est très moyenne.
 
 ### ACF (Advanced Custom Field)
 
@@ -132,7 +135,8 @@ Pour rappel, cela permet de créer des champs custom (pour insérer des valeurs)
 
 Évidemment, c'est aussi faisable en programmant. Mais c'est tellement plus simple avec ACF.
 
-Certains développeurs utilisent la partie "flexible content" pour créer l'édition des pages. Cela devient de moins en moins pertinent avec Gutenberg.
+Certains développeurs utilisent la partie "flexible content" pour créer l'édition des pages. Cela devient de moins en moins pertinent avec Gutenberg. Cela peut être utile pour des utilisations **headless**
+
 - [https://www.advancedcustomfields.com/](https://www.advancedcustomfields.com/)
 
 ### Gutenberg
@@ -188,17 +192,15 @@ Les blocs que l'on peut créer soi-même, sont basés sur du JS, React et PHP.
 - Arrivé des patterns (compositions). Des blocs HTML simples. Comme des blocs natifs sans réglages. Plus rapide à créer.
 - Full Site Editing (comme les pages builder, on peut contrôler les éléments du site avec Gutenberg)
 - Évolution constante de l'éditeur :
-  	 
-	 - interface
-	 - vitesse
-    - accessibilité
 
+  - interface
+  - vitesse
+  - accessibilité
 
 #### Customisation des blocs
 
 Il est possible via des hooks, de customiser des styles de blocs natifs et d'étendre les blocs natifs en ajoutant des propriétés.
 Le bloc query loop peut être aussi modifier. Notamment pour modifier la query spécifiquement au besoin.
-
 
 ### Theme.json
 
@@ -267,13 +269,14 @@ En local, pour développer, certains utilisent Docker avec un système du type B
 
 Mais vous avez également des outils super pratiques :
 
+- [Trellis](https://roots.io/trellis)
 - [Local by Flywheel](https://localwp.com/)
 - [DevKinsta](https://kinsta.com/fr/devkinsta/)
 
 ### Gestion d'un parc de site
 
 Si vous avez plusieurs sites à gérer, il peut devenir fastidieux de passer sur tous les sites pour effectuer les mises à jour, etc..
-Évidemment, il existe des outils pour ça. 
+Évidemment, il existe des outils pour ça.
 
 Petit favori parce que récent et français, [WP Umbrella](https://wp-umbrella.com/fr/) permet de gérer un site WordPress à distance, d'effectuer les updates, des backups, etc..
 
@@ -290,5 +293,4 @@ En 2023, WordPress reste une solution très utilisée pour concevoir des sites.
 
 WordPress est un outil qui peut correspondre à pas mal de projet. De plus, il bénéficie d'une communauté très active, toujours prête à aider.
 
-Pour ma part, étant donné que l'on ne peut pas lutter contre l’hégémonie de plate-forme, j'ai décidé de diffuser les bonnes pratiques pour essayer de faire remonter la qualité globale du parc de site WordPress via des vidéos et le site [wp-performance](https://wp-performance.com/).
-
+Pour ma part, étant donné que l'on ne peut pas lutter contre l’hégémonie de plate-forme, j'ai décidé de diffuser les bonnes pratiques pour essayer de faire remonter la qualité globale des sites WordPress via des vidéos et des exemples. Tout est dispo sur  le site [wp-performance](https://wp-performance.com/) ou le repo [GitHub](https://github.com/WP-Performance).
