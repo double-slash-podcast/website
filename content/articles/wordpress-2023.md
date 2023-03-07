@@ -265,11 +265,15 @@ Système super pratique pour tout un tas de chose, [wp-cli](https://wp-cli.org/f
 
 ### Développer en local
 
-En local, pour développer, certains utilisent Docker avec un système du type Bedrock.
+En local, pour développer, certains utilisent Docker avec un système du type Bedrock et construisent eux-mêmes  la config.
 
-Mais vous avez également des outils super pratiques :
+Pour éviter les configs, il existe des tools qui facilitent la création d'environnements virtuels :
 
+- [DDev](https://ddev.readthedocs.io/en/latest/users/quickstart/) **mon favori**
 - [Trellis](https://roots.io/trellis)
+
+Mais vous avez également des outils super pratiques avec une interface :
+
 - [Local by Flywheel](https://localwp.com/)
 - [DevKinsta](https://kinsta.com/fr/devkinsta/)
 
