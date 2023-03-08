@@ -13,8 +13,7 @@ dsSlug: DS_060_wordpress
 title: WordPress en 2023
 subtitle:
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,w_400/v1678223532/episode/ART_60_wordpress_bi52j9.png
-description: Un épisode spécial WordPress. Nous allons parler de l'outil, faire un état des lieux sur l'utilisation de WordPress. Puis nous allons essayer de comprendre pourquoi WordPress est tellement détesté par des développeurs en général.
-Dans la seconde partie de l'épisode, nous allons regarder ensemble comment developper avec WordPress en 2023 d'une façon plus moderne. Quelles sont les outils pour mieux travailler.
+description: Un épisode spécial WordPress. Nous allons parler de l'outil, faire un état des lieux sur l'utilisation de WordPress. Puis nous allons essayer de comprendre pourquoi WordPress est tellement détesté par des développeurs en général. Dans la seconde partie de l'épisode, nous allons regarder ensemble comment developper avec WordPress en 2023 d'une façon plus moderne. Quelles sont les outils pour mieux travailler.
 videoLink : DrGIoa8pp84
 links: []
 ---

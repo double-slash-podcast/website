@@ -5,6 +5,11 @@ description: WordPress fêtera ses 20 ans le 27 mai de cette année ! Oui, 20 an
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
+::Info
+Retrouvez et écoutez l'épisode lié à l'article : [https://double-slash.dev/podcasts/wordpress/](https://double-slash.dev/podcasts/wordpress/)
+::
+<br />
+
 # WordPress en 2023
 
 WordPress fêtera ses 20 ans le 27 mai de cette année ! Oui, 20 ans déjà !
