@@ -267,6 +267,8 @@ Pour les développeurs habitués a utiliser composer et qui aime déployer autom
 - Utiliser la puissance de Laravel dans WordPress : [Acorn](https://roots.io/acorn/)
 - Utiliser Blade (templating Laravel) : [Sage](https://roots.io/sage/)
 
+- Pour deployer : [https://buddy.works/](https://buddy.works/)
+
 ### Commander WordPress en ligne de commande
 
 Système super pratique pour tout un tas de chose, [wp-cli](https://wp-cli.org/fr/) est un script qui permet d'effectuer des taches en ligne de commande. Créer des utilisateurs, installer WordPress, installer des plugins, etc..
