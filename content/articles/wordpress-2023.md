@@ -59,7 +59,7 @@ Organisation d'évènements, notamment les **WordCamps**, où se regroupent les 
 
 Ce n'est pas un vrai langage, c'est lent, etc.. On peut tout entendre depuis des années sur ce langage. Alors, oui, à la base ce n'était pas vraiment un langage de programmation. Si vous regardez les premières versions de PHP, c'était assez basique.
 
-Cependant, aujourd'hui PHP vient de sortir sa version 6.2 et il n'a plus à rougir face à d'autres langages de programmation.  Il y a également de nombreux frameworks PHP populaires tels que Laravel, Symfony et CodeIgniter qui offrent des fonctionnalités avancées pour les développeurs et qui sont utilisés sur des gors projets professionnels.
+Cependant, aujourd'hui PHP vient de sortir sa version 8.2 et il n'a plus à rougir face à d'autres langages de programmation.  Il y a également de nombreux frameworks PHP populaires tels que Laravel, Symfony et CodeIgniter qui offrent des fonctionnalités avancées pour les développeurs et qui sont utilisés sur des gors projets professionnels.
 
 En résumé, PHP est toujours une technologie de programmation pertinente et qui est utilisé par de nombreuses entreprises et développeurs pour construire des applications web.
 
