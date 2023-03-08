@@ -1,5 +1,5 @@
 ---
-publicationDate: 2023-03-07
+publicationDate: 2023-03-08
 title: Faut-il utiliser WordPress en 2023 ?
 description: WordPress fêtera ses 20 ans le 27 mai de cette année ! Oui, 20 ans déjà ! Bon nombre de CMS aussi anciens que lui ont rejoint le cimetière des CMS depuis bien longtemps. WordPress, quand a lui, est toujours présent. Et bien présent ! Il évolue toujours et sa part de marché ne fait qu'augmenter.
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
@@ -288,6 +288,14 @@ D'autres outils :
 
 - [Main WP](https://mainwp.com/)
 - [Manage WP](https://managewp.com/)
+
+## Starter theme
+
+Un starter thème est disponible pour développer vos propres thèmes.
+Il utilise **vite.js**, **Post CSS**, **Tailwind CSS**.
+Plus d'infos sur la doc du projet : [https://presswind-doc.wp-performance.com/](https://presswind-doc.wp-performance.com/)
+
+Greg Sullivan a également développé un thème qui utilise Tailwind CSS, il est disponible ici : [https://underscoretw.com/](https://underscoretw.com/)
 
 ## Conclusion
 
