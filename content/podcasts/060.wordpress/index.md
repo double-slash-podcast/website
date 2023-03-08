@@ -19,9 +19,16 @@ links: []
 ---
 **Erratum : Dans l'épisode, Patrick parle de PHP 6.2, c'est évidemment une erreur. Il voulait parler de PHP 8.2. Sachant que PHP 6 n'a jamais existé. C'est WordPress qui sort en version 6.2 prochainement.**
 
-Un article a été écrit parallèlement à cet épisode. Toutes les infos sont dans l'article.
-Vous pouvez retrouver cet article ici : [https://double-slash.dev/articles/wordpress-2023/](https://double-slash.dev/articles/wordpress-2023/)
+::Info
+---
 
+type: warning
+---
+
+Un article a été écrit parallèlement à cet épisode. Toutes les infos sont dans l'article.<br />
+Vous pouvez retrouver cet article ici :<br /> [https://double-slash.dev/articles/wordpress-2023/](https://double-slash.dev/articles/wordpress-2023/)
+::
+<br />
 Bonne écoute !
 
 ::authors

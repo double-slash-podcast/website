@@ -6,6 +6,11 @@ author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
 ::Info
+---
+
+type: warning
+---
+
 Retrouvez et écoutez l'épisode lié à l'article : [https://double-slash.dev/podcasts/wordpress/](https://double-slash.dev/podcasts/wordpress/)
 ::
 <br />
