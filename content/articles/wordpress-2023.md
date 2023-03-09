@@ -17,11 +17,11 @@ Retrouvez et écoutez l'épisode lié à l'article : [https://double-slash.dev/p
 
 # WordPress en 2023
 
-WordPress fêtera ses 20 ans le 27 mai de cette année ! Oui, 20 ans déjà !
+**WordPress** fêtera ses 20 ans le 27 mai de cette année ! Oui, 20 ans déjà !
 
 Bon nombre de CMS aussi anciens que lui ont rejoint le cimetière des CMS depuis bien longtemps. Certains, je pense à Joomla par exemple, ont déjà  un pied dans la tombe (j'entends déjà grincer les fans).
 
-WordPress, quand a lui, est toujours présent. Et bien présent ! Il évolue toujours et sa part de marché ne fait qu'augmenter.
+**WordPress**, quand a lui, est toujours présent. Et bien présent ! Il évolue toujours et sa part de marché ne fait qu'augmenter.
 
 Alors une question se pose en ce début d'année quand on est développeur :
 
@@ -32,7 +32,7 @@ Alors une question se pose en ce début d'année quand on est développeur :
 ### Quelques chiffres
 
 - Plus de **40%** des sites dans le monde utilisent WordPress
-- Plus de **60 000** plugins. Certains dépassent les 5 millions d'installations.
+- Plus de **60 000** plugins. Certains dépassent les **5 millions** d'installations.
 - **20%** des WordPress utilisent WooCommerce
 - Plus de **60%** des sites qui utilisent un CMS sont sur WordPress
 - **90%** des sites avec CMS piratés en 2018 étaient sur WordPress.
@@ -59,7 +59,7 @@ Organisation d'évènements, notamment les **WordCamps**, où se regroupent les 
 
 Ce n'est pas un vrai langage, c'est lent, etc.. On peut tout entendre depuis des années sur ce langage. Alors, oui, à la base ce n'était pas vraiment un langage de programmation. Si vous regardez les premières versions de PHP, c'était assez basique.
 
-Cependant, aujourd'hui PHP vient de sortir sa version 8.2 et il n'a plus à rougir face à d'autres langages de programmation.  Il y a également de nombreux frameworks PHP populaires tels que Laravel, Symfony et CodeIgniter qui offrent des fonctionnalités avancées pour les développeurs et qui sont utilisés sur des gors projets professionnels.
+Cependant, aujourd'hui **PHP** vient de sortir sa version **8.2** et il n'a plus à rougir face à d'autres langages de programmation.  Il y a également de nombreux frameworks **PHP** populaires tels que Laravel, Symfony et CodeIgniter qui offrent des fonctionnalités avancées pour les développeurs et qui sont utilisés sur des gors projets professionnels.
 
 En résumé, PHP est toujours une technologie de programmation pertinente et qui est utilisé par de nombreuses entreprises et développeurs pour construire des applications web.
 
@@ -257,7 +257,7 @@ Les plugins utiles :
 - [FaustJS](https://faustjs.org/)
 - ...
 
-### WordPress moderne en mode CI/CD
+### WordPress en mode dev moderne
 
 Pour les développeurs habitués a utiliser composer et qui aime déployer automatiquement, il existe des outils pour ça.
 
@@ -267,7 +267,7 @@ Pour les développeurs habitués a utiliser composer et qui aime déployer autom
 - Utiliser la puissance de Laravel dans WordPress : [Acorn](https://roots.io/acorn/)
 - Utiliser Blade (templating Laravel) : [Sage](https://roots.io/sage/)
 
-- Pour deployer : [https://buddy.works/](https://buddy.works/)
+- Pour deployer : [https://buddy.works/](https://buddy.works/) Pas forcement WordPress mai tellement simple à utiliser.
 
 ### Commander WordPress en ligne de commande
 
