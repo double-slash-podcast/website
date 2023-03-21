@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: xxxx
+duration: 2509
 episodeNumber: 61
 episodeType: full
 explicit: false
@@ -13,7 +13,7 @@ dsSlug: DS_061_news_03_23
 title: Les News pour mars 2023
 subtitle: Épisode spécial news pour mars 2023, nous évoquons un retour d'expérience
  avec Astro, Strapi qui sort une version cloud et ajuste ses prix, TypeScript 5.0, WordPress Radicle...
-episodeArtwork: XXXXX
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,q_80:444,w_300/v1679433180/episode/ART_61_news03_h42zrh.png
 description: Dans cet épisode spécial news pour mars 2023, nous évoquons un retour d'expérience avec Astro, Strapi qui sort une version cloud et ajuste ses prix, TypeScript 5.0, WordPress Radicle, la nouvelle doc React, etc..
 videoLink : PifnPdrBiXU
 links: []
