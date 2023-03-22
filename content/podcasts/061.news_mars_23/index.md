@@ -36,17 +36,18 @@ Après avoir refait le site [https://www.goodmotion.fr](https://www.goodmotion.f
 
 [https://strapi.io/pricing-cloud](https://strapi.io/pricing-cloud)
 
-Mise à jour des prix pour la version self-hosted
-Après un échange avec Jim Laurie (avec qui nous avons fait l’épisode 21 en mars 2021), voici son retour :
-Cloud : il ne faut pas la comparer à un PaaS. La version Cloud se place en face d’un contentfull. Sauf que tu gardes le contrôle de ton code source et le contrôle de la customisation. Puis un hosting solide avec CDN, mail et CI/CD en natif. + Accès au support car automatiquement Entreprise.
-Strapi Self-hosted : changement de prix, release RBAC (Role based Access Control) dans la 4.8
-La Community édition devient super intéressante et l’offre cloud est complète.
+Mise à jour des prix pour la version self-hosted  
+Après un échange avec Jim Laurie (avec qui nous avons fait l’épisode 21 en mars 2021), voici son retour :  
+
+- Cloud : il ne faut pas la comparer à un PaaS. La version Cloud se place en face d’un contentfull. Sauf que tu gardes le contrôle de ton code source et le contrôle de la customisation. Puis un hosting solide avec CDN, mail et CI/CD en natif. + Accès au support car automatiquement Entreprise.
+- Strapi Self-hosted : changement de prix, release RBAC (Role based Access Control) dans la 4.8
+La Community édition devient super intéressante.
 
 ## Rust Bundler
 
 [https://www.rspack.dev/](https://www.rspack.dev/)
 
-Bundler compatible Webpack
+Bundler écrit en Rust compatible Webpack
 
 ## Chrome 111
 
@@ -67,40 +68,45 @@ Netlify CMS devient Decap CMS et passe chez une agence partenaire de Netlify
 
 [https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/](https://devblogs.microsoft.com/typescript/announcing-typescript-5-0/)
 
-Restructuration autour des modules ECMAScript. Conséquence, npm install 46% plus petit en moyenne, temps de build 10 à 25% plus rapide.
-
+Restructuration autour des modules ECMAScript. Conséquence, npm install 46% plus petit en moyenne, temps de build 10 à 25% plus rapide.  
 Les décorateurs deviennent la norme ECMAScript.
 
 ## Arrow JS
 
-Librairie de 2kb pour ajouter de la réactivité
+Librairie de 2kb pour ajouter de la réactivité et créer des components avec 2 fonctions.  
 [https://www.arrow-js.com/](https://www.arrow-js.com/)
 
 ## Nouvel Doc React JS
 
+La nouvelle doc de React sort de la beta !
 [https://react.dev/](https://react.dev/)
 
 ## Cheatsheet Pinia
 
+Un petit cheatsheet Pinia, le store officiel pour Vue.js 3.
 [https://pbs.twimg.com/media/FrgsHvqWcAEN9Ka?format=jpg&name=4096x4096](https://pbs.twimg.com/media/FrgsHvqWcAEN9Ka?format=jpg&name=4096x4096)
 
 ## Histoire de la réactivité
 
+MIŠKO HEVERY écrit un article sur l'histoire de la réactivité.  
+Ça passe par Flex, backbone.js, Angular 1, Knockout, React...  
 [https://www.builder.io/blog/history-of-reactivity](https://www.builder.io/blog/history-of-reactivity)
 
 ## Don't be fooled by serverless
 
+DAVID HEINEMEIER HANSSON explique que comme toujours, il n'y a pas une solution pour tous les projets. Et donc le serverless, n'est pas la réponse à tout !  
 [https://world.hey.com/dhh/don-t-be-fooled-by-serverless-776cd730](https://world.hey.com/dhh/don-t-be-fooled-by-serverless-776cd730)
 
 ## WordPress Radicle
 
+Starter projet WordPress qui embarque une structure avancée de projet et aussi tous les outils : Acorn, Bedrock, Bud, Sage et Trellis  
 [https://roots.io/radicle/](https://roots.io/radicle/)
 
 Sort à la fin du mois. Dispo pour 80$
-Tout dans un système : Acorn, Bedrock, Bud, Sage et Trellis
 
 ## Web API Check
 
+Verifier les API directement dans son navigateur :    
 [https://webapicheck.com/](https://webapicheck.com/)
 
 Bonne écoute !
