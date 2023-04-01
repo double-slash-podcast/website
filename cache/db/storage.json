@@ -226,5 +226,21 @@
     "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_057_news0123.mp3": {
         "duration": 7308,
         "size": 51156872
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_059_newsFev23.mp3": {
+        "duration": 5643,
+        "size": 39505565
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_061_news_03_23.mp3": {
+        "duration": 5018,
+        "size": 40150825
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_058_devops.mp3": {
+        "duration": 6982,
+        "size": 48874441
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_060_wordpress.mp3": {
+        "duration": 7803,
+        "size": 54625298
     }
 }
