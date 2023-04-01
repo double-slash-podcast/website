@@ -18,6 +18,7 @@
         "@nuxt/image-edge": "1.0.0-27827328.bc9ddc0",
         "@nuxt/test-utils": "3.2.0",
         "@nuxt/test-utils-edge": "3.1.1-rc.0-27911047.7d812db",
+        "@nuxthq/studio": "^0.10.0",
         "@nuxtjs/color-mode": "3.2.0",
         "@nuxtjs/eslint-config-typescript": "12.0.0",
         "@nuxtjs/fontaine": "^0.2.4",

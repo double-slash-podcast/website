@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/image-edge',
     'nuxt-schema-org',
     '@nuxtjs/fontaine',
+    '@nuxthq/studio',
   ],
   content: {
     watch: {
