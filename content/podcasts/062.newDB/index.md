@@ -9,7 +9,7 @@ episodeNumber: epiosde
 episodeType: full
 explicit: false
 season: 1
-dsSlug: DS_062_newDB
+dsSlug: DS_062_newBD
 title: Les nouvelles DB
 subtitle: Bien choisir sa DB
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1681120716/episode/ART_62_newDB_da5svz.png
