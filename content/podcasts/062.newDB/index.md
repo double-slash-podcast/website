@@ -14,7 +14,7 @@ title: Les nouvelles DB
 subtitle: Bien choisir sa DB
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1681120716/episode/ART_62_newDB_da5svz.png
 description: 
-videoLink : XXXX
+videoLink : FlhMns5KsiU
 links:
   [
     {
