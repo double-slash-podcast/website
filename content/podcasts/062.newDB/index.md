@@ -13,7 +13,7 @@ dsSlug: DS_062_newBD
 title: Les nouvelles DB
 subtitle: Comprendre et bien choisir sa base de données en 2023
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1681120716/episode/ART_62_newDB_da5svz.png
-description:
+description: Bienvenue dans notre épisode de podcast consacré aux bases de données en 2023 ! Rejoignez-nous pour découvrir les dernières tendances dans le monde des bases de données, de SQL à NoSQL, en passant par les bases de données distribuées et les nouvelles générations de bases de données comme NewSQL.
 videoLink : FlhMns5KsiU
 links:
   [
@@ -120,10 +120,6 @@ links:
   ]
 ---
 ## Comprendre et bien choisir sa base de données en 2023
-
-Bienvenue dans notre épisode de podcast consacré aux bases de données en 2023 !
-
-Rejoignez-nous pour découvrir les dernières tendances dans le monde des bases de données, de SQL à NoSQL, en passant par les bases de données distribuées et les nouvelles générations de bases de données comme NewSQL.
 
 Nous discuterons des avantages et des inconvénients de chaque approche, des tendances émergentes, ainsi que des défis et opportunités auxquels les développeurs et les entreprises font face dans le paysage en constante évolution des bases de données. Ne manquez pas cet épisode passionnant rempli d'idées novatrices et de perspectives sur l'avenir des bases de données en 2023 !
 
