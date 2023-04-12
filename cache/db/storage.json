@@ -242,5 +242,9 @@
     "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_060_wordpress.mp3": {
         "duration": 7803,
         "size": 54625298
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_062_newBD.mp3": {
+        "duration": 6817,
+        "size": 54539471
     }
 }
