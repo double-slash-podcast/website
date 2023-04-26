@@ -1,5 +1,5 @@
 ---
-publicationDate: 27 Avril 2023
+publicationDate: 27 Apr 2023
 status: published
 author: Double Slash
 categories:
@@ -10,7 +10,7 @@ episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_063_new4-23
-title: News Avril 2023
+title: News Apr 2023
 subtitle: 
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1682523484/episode/ART_63_news4-23_cphonc.png
 description: 
