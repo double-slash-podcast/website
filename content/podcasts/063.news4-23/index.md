@@ -9,7 +9,7 @@ episodeNumber: 63
 episodeType: full
 explicit: false
 season: 1
-dsSlug: DS_063_news4-23
+dsSlug: DS_063_new4-23
 title: News Avril 2023
 subtitle: 
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1682523484/episode/ART_63_news4-23_cphonc.png
