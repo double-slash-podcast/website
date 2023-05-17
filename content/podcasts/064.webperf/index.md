@@ -37,6 +37,25 @@ Eroan Boyer de la société [Agence Web Performance](https://agencewebperformanc
 
 Bonne écoute !
 
+Sommaire :
+
+- 00:00:00 : Intro et présentation
+- 00:02:50 : Doit-on faire de la Web Performance ?
+- 00:04:50 : Est-ce que c'est important d'avoir un site rapide ?
+- 00:06:30 : Quels sont les indicateurs de performance ?
+- 00:11:30 : Quel est le niveau technique général des dev sur la Web Performance ?
+- 00:15:40 : Les interventions de l'agence Web Performance
+- 00:19:00 : Les erreurs courantes des développeurs sur la Web Performance
+- 00:23:45 : Le TTFB
+- 00:25:30 : Un CDN ou pas ?
+- 00:31:20 : Les scripts tiers !!
+- 00:39:40 : Party Town
+- 00:43:20 : Les outils pour mesurer la Web Performance
+- 00:50:00 : S'informer sur la Web Performance
+- 00:57:00 : La performance côté back et DB
+- 01:04:00 : Over engineering les dernières années ?
+
+
 ::authors
 ::
 
