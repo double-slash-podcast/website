@@ -57,11 +57,12 @@ Next 13.4 version App est stable !! Documentation mise à jour, on peut désorma
 
 ## Wordpress World
 
-Le 27 mai 2033, WordPress est né !! Joyeux anniversaire !! 20 ans déjà !!
+Le 27 mai 2003, WordPress est né !! Joyeux anniversaire !! 20 ans déjà !!
 
 ## Laravel World
 
 - [Nouvelle landing page sur Laravel pour rappeler que Laravel c'est aussi bien que des applications JS](https://laravel.com/frontend)
+- [Inertia en V1](https://inertiajs.com/)
 
 ## Code sandbox World
 
@@ -81,6 +82,21 @@ Le 27 mai 2033, WordPress est né !! Joyeux anniversaire !! 20 ans déjà !!
 - [Figma pour la 3D](https://spline.design/)
 
 Bonne écoute !
+
+Sommaire :
+
+00:00 Intro
+02:50 Nouveautés Navigateurs
+10:30 Qwik World
+16:20 Vercel World
+26:00 Cloudflare Worker DB
+28:00 Nuxt/Vue World
+39:56 Astro World
+41:20 WordPress World
+42:30 Laravel World
+45:12 Boxy CodeSandBox
+47:20 Deno World
+54:19 Tools
 
 ::authors
 ::
