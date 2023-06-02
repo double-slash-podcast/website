@@ -47,6 +47,7 @@ export default defineNuxtConfig({
   experimental: {
     reactivityTransform: true,
     viteNode: false,
+    componentIslands: true,
   },
   colorMode: {
     classSuffix: '',
