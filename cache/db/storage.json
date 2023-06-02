@@ -246,5 +246,17 @@
     "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_062_newBD.mp3": {
         "duration": 6817,
         "size": 54539471
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_064_webperf.mp3": {
+        "duration": 8583,
+        "size": 68717955
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_063_new4-23.mp3": {
+        "duration": 6320,
+        "size": 50610641
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_065_news05_23.mp3": {
+        "duration": 7203,
+        "size": 57674994
     }
 }
