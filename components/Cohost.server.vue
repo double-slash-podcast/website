@@ -1,5 +1,9 @@
-<script setup>
-const config = useRuntimeConfig();
+<script setup lang="ts">
+const {
+  $config: {
+    public: {siteUrl},
+  },
+} = useNuxtApp();
 </script>
 
 <template>
@@ -9,7 +13,7 @@ const config = useRuntimeConfig();
     >
       <div class="flex w-1/2">
         <nuxt-img
-          :src="`${config.siteUrl}/assets/pat_picture.jpg`"
+          :src="`${siteUrl}/assets/pat_picture.jpg`"
           alt="Photo Patrick Faramaz"
           width="160px"
           height="160px"
@@ -62,7 +66,7 @@ const config = useRuntimeConfig();
         class="flex flex-row-reverse justify-end w-full lg:w-1/2 lg:flex-row lg:pl-12"
       >
         <nuxt-img
-          :src="`${config.siteUrl}/assets/alex_picture.jpg`"
+          :src="`${siteUrl}/assets/alex_picture.jpg`"
           alt="Photo Alex Duval"
           width="160px"
           height="160px"
