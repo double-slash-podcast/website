@@ -10,7 +10,7 @@ episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_066_laravel
-title: Laravel avec LaravelJustu
+title: Laravel avec LaravelJutsu
 subtitle: Laravel, le framework PHP élégant et productif.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1686595809/episode/ART_66_laravel_qnkp0z.png
 description: Dans cet épisode, nous avons le plaisir de recevoir Ludovic Guénet qui est le créateur passionné de la chaine YouTube @LaravelJutsu. Dans ses vidéos, Ludovic parle principalement de Laravel et de son écosystème. Avec lui, nous allons découvrir le framework Laravel qui dès le départ à adopté une philosophie proche du framework Ruby on Rails.
