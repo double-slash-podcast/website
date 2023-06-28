@@ -34,7 +34,7 @@ Une vidéo pour comprendre l'utilisation ⇒ <https://developer.apple.com/videos
 - Arrivé du format ****HEIC**** dans Safari 17, format utilisé dans IOS pour les photos.
 - ****Image set dans**** Safari 17. Propriété CSS pour permettre de choisir l’image la plus adaptée
 - ****Popover attribute****
-- <hr> dans les select, ok !
+- ```<hr>``` dans les select, ok !
 - ****Counter styles.**** Définir des styles de liste
 - Developper Tools améliorations
 - etc…
