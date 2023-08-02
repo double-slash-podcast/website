@@ -101,23 +101,23 @@ Générer 61 000 dollars avec un site fait avec PHP/HTML CSS et jQuery
 
 ## Sommaire
 
-00:00:00 Intro
-00:01:50 Laracon US 2023
-00:19:50 Astro 2.9 Views Transitions
-00:21:50 Valibot
-00:25:38 Turso Sqlite Edge
-00:28:42 Prisma 5
-00:31:00 Drizzle ORM
-00:36:00 Bun V1.0
-00:38:30 Tailwind Connect
-00:53:18 Vite JS + Lightning CSS
-00:55:00 61 000 $ avec un site PHP / Jquery
-00:57:30 Railway
-01:00:30 Hop
-01:03:00 Arc Browser
-01:09:20 CDN ESM
-01:13:20 Prompt AI
-01:15:00 Fin !
+- 00:00:00 Intro
+- 00:01:50 Laracon US 2023
+- 00:19:50 Astro 2.9 Views Transitions
+- 00:21:50 Valibot
+- 00:25:38 Turso Sqlite Edge
+- 00:28:42 Prisma 5
+- 00:31:00 Drizzle ORM
+- 00:36:00 Bun V1.0
+- 00:38:30 Tailwind Connect
+- 00:53:18 Vite JS + Lightning CSS
+- 00:55:00 61 000 $ avec un site PHP / Jquery
+- 00:57:30 Railway
+- 01:00:30 Hop
+- 01:03:00 Arc Browser
+- 01:09:20 CDN ESM
+- 01:13:20 Prompt AI
+- 01:15:00 Fin !
 
 Bonne écoute !
 
