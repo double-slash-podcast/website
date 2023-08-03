@@ -2,5 +2,16 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base"
+  ],
+  "prHourlyLimit": 3,
+  "prHeader": "Alex Auto update Dep TEST",
+  "assignees": [
+    "xlanex6"
+  ]
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "dependencyDashboardApproval": true
+    }
   ]
 }
