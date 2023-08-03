@@ -7,7 +7,7 @@
   "prHeader": "Alex Auto update Dep TEST",
   "assignees": [
     "xlanex6"
-  ]
+  ],
   "packageRules": [
     {
       "matchUpdateTypes": ["major"],
