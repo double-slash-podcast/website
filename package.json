@@ -57,7 +57,7 @@
         ]
     },
     "volta": {
-        "node": "16.17.0"
+        "node": "18.17.1"
     },
     "dependencies": {
         "@headlessui/vue": "1.7.14",
