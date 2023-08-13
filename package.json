@@ -21,7 +21,7 @@
         "@nuxthq/studio": "0.13.4",
         "@nuxtjs/color-mode": "3.3.0",
         "@nuxtjs/eslint-config-typescript": "12.0.0",
-        "@nuxtjs/fontaine": "0.4.0",
+        "@nuxtjs/fontaine": "0.4.1",
         "@nuxtjs/tailwindcss": "6.8.0",
         "@pinia/nuxt": "0.4.11",
         "@tailwindcss/typography": "0.5.9",
