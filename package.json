@@ -30,7 +30,7 @@
         "@vueuse/nuxt": "10.2.1",
         "consola": "^3.2.2",
         "eslint": "8.43.0",
-        "eslint-config-prettier": "8.8.0",
+        "eslint-config-prettier": "8.10.0",
         "eslint-plugin-nuxt": "4.0.0",
         "eslint-plugin-prettier": "4.2.1",
         "husky": "8.0.3",
