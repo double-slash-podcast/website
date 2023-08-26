@@ -35,7 +35,7 @@
         "eslint-plugin-prettier": "4.2.1",
         "husky": "8.0.3",
         "jsdom": "22.1.0",
-        "lint-staged": "13.2.3",
+        "lint-staged": "13.3.0",
         "nuxt": "3.6.1",
         "nuxt-icon": "0.4.2",
         "nuxt-schema-org": "2.2.0",
