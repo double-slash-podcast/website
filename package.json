@@ -65,7 +65,7 @@
         "@tailwindcss/forms": "0.5.6",
         "axios": "1.5.0",
         "crypto": "1.0.1",
-        "motion": "10.16.2",
+        "motion": "10.16.4",
         "rss": "1.2.2",
         "simple-json-db": "2.0.0",
         "vue-lite-youtube-embed": "1.2.0"
