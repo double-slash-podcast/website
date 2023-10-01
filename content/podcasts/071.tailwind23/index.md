@@ -44,7 +44,7 @@ En résumé, Tailwind CSS est un framework CSS qui mise sur des classes utilitai
 
 Article qui regroupe une liste de plugins : [Medevel](https://medevel.com/50-os-tailwind-plugins/)
 
-- [https://tailwindcss.com/docs/typography-plugin](https://tailwindcss.com/docs/typography-plugin)
+- [Typography](https://tailwindcss.com/docs/typography-plugin)
 - [Forms](https://github.com/tailwindlabs/tailwindcss-forms)
 - [Aspect Ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio)
 - [Container Queries](https://github.com/tailwindlabs/tailwindcss-container-queries)
@@ -53,7 +53,7 @@ Article qui regroupe une liste de plugins : [Medevel](https://medevel.com/50-os-
 
 ### Tips and tricks
 
-Article qui regroupe des bonnes pratiques :
+Articles qui regroupent des bonnes pratiques :
 
 - [https://www.builder.io/blog/tailwind-css-tips-and-tricks](https://www.builder.io/blog/tailwind-css-tips-and-tricks)
 - [https://www.hyperui.dev/blog/how-to-write-better-tailwindcss](https://www.hyperui.dev/blog/how-to-write-better-tailwindcss)
