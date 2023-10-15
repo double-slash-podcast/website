@@ -24,7 +24,7 @@ links: []
 
 ## Survey HTML
 
-Une survey pour connaître le niveau des developpeurs.trices sur le HTML et les nouvelles features :  [https://survey.devographics.com/en-US/survey/state-of-html/2023](https://survey.devographics.com/en-US/survey/state-of-html/2023?source=state_of_js_email)
+Une survey pour connaître le niveau des développeurs.trices sur le HTML et les nouvelles features :  [https://survey.devographics.com/en-US/survey/state-of-html/2023](https://survey.devographics.com/en-US/survey/state-of-html/2023?source=state_of_js_email)
 
 ## Conf Web Flow
 
