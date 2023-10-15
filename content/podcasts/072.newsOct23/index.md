@@ -12,7 +12,7 @@ season: 1
 dsSlug: DS_072_newsOct23
 title: Les News Web Dev pour Octobre 2023
 subtitle: Actulité du dev web
-episodeArtwork: 
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1697378489/episode/ART_72_newOct_vswtwu.png
 description: 
 videoLink : B9K93MvlDRc
 links: []
