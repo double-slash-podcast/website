@@ -115,6 +115,8 @@ Générateur d’emoji https://emojis.sh/
 
 La conférence Vite JS 2023 était axée sur des sujets techniques avancés. Elle comprenait des présentations et des démonstrations sur divers sujets tels que les nouvelles fonctionnalités de Vite, la reconstruction, Rollup, le bundling avec RollDown, l'intégration de Figma et Storybook, ainsi que des discussions sur Nuxt, NitroJS, Astro et RedwoodJS. La conférence a également abordé des sujets liés aux outils de développement, aux monorepos avec NX, et a proposé des démonstrations du Transition API d'Astro. C'était une conférence très technique destinée aux développeurs de différents niveaux.
 
+- [Replay de la conférence](https://viteconf.org/23/replay)
+
 ## Conf à venir
 
 Netlify Compose conférence 18, 19 octobre 2023  https://www.netlify.com/conference/
