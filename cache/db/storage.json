@@ -274,5 +274,17 @@
     "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_069_sumNews23.mp3": {
         "duration": 9248,
         "size": 74038417
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_070_newsSept23.mp3": {
+        "duration": 9797,
+        "size": 78430469
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_072_newsOct23.mp3": {
+        "duration": 9830,
+        "size": 78697655
+    },
+    "https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_071_tailwind23.mp3": {
+        "duration": 8888,
+        "size": 71105682
     }
 }
