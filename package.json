@@ -25,7 +25,7 @@
         "@nuxtjs/tailwindcss": "6.8.0",
         "@pinia/nuxt": "0.5.0",
         "@tailwindcss/typography": "0.5.10",
-        "@types/rss": "0.0.30",
+        "@types/rss": "0.0.31",
         "@types/xml2json": "0.11.4",
         "@vueuse/nuxt": "10.5.0",
         "consola": "^3.2.3",
