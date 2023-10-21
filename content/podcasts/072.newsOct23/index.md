@@ -12,7 +12,7 @@ season: 1
 dsSlug: DS_072_newsOct23
 title: Les News Web Dev pour octobre 2023
 subtitle: Épisode de news pour ce début d'automne où l'on revient sur les dernières conférences.  
-episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1697378489/episode/ART_72_newOct_vswtwu.png
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1697869551/episode/ART_72_newOct_mzzj8y.png
 description: Un épisode news pour octobre 2023. On parle des dernières avancées en matière de navigateur. Mais aussi des conférences WebFlow, Vite JS et Ruby on Rails. On mentionne également les dernières versions de Remix, Front Commerce et Surreal DB. Bien entendu, on ne peut pas faire un épisode sans parler d'IA. Et nous terminerons par les prochaines conférences à suivre.
 videoLink : B9K93MvlDRc
 links: []
