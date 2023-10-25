@@ -13,7 +13,7 @@ title: SEO 2022 avec Dan Bernier
 subtitle: Faire du SEO en 2022 avec Dan Bernier
 dsSlug: DS_048_SE0_22
 guid: b27962835b47b85a2bb5ed7d1b066a38
-description: Un épisode avec un invité, Dan Bernier, consultant SEO et cofondateur de 410 Gone "Alsace". Avec lui, nous allons parler de SEO et comprendre comment rendre son site indexable et référencé dans les résultats de recherche.
+description: Un épisode avec un invité, Dan Bernier, consultant SEO Inéolab. Avec lui, nous allons parler de SEO et comprendre comment rendre son site indexable et référencé dans les résultats de recherche.
 videoLink : rnJgwpqcB7M
 links:
   []
@@ -29,7 +29,7 @@ Chaque pilier a son importance. Avec Dan, nous allons voir les principaux pilier
 
 - [https://twitter.com/danYdan_fr](https://twitter.com/danYdan_fr)
 - [https://www.danbernier.fr/](https://www.danbernier.fr/)
-- [https://www.410-gone.fr/](https://www.410-gone.fr/)
+- [https://www.ineolab.fr/](https://www.ineolab.fr/)
 
 ### Les liens
 
