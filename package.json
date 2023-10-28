@@ -37,7 +37,7 @@
         "jsdom": "22.1.0",
         "lint-staged": "15.0.1",
         "nuxt": "3.7.4",
-        "nuxt-icon": "0.5.0",
+        "nuxt-icon": "0.6.1",
         "nuxt-schema-org": "3.0.1",
         "pinia": "2.1.7",
         "plop": "4.0.0",
