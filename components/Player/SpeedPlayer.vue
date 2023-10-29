@@ -13,7 +13,7 @@
         :value="spe.value"
         class="px-4 py-2 rounded hover:bg-purple-200"
       >
-        x{{ spe.label }}
+        {{ spe.label }}x
       </ListboxOption>
     </ListboxOptions>
   </Listbox>
