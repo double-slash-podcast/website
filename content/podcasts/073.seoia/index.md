@@ -15,13 +15,6 @@ subtitle: Avec Dan Bernier
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1698610790/episode/ART_73_bxnjbq.png
 description: 
 videoLink : HF-707ZQlyU
-links:
-  # [
-  #   {
-  #     title: '',
-  #     url: '',
-  #   },
-  # ]
 ---
 ## Seo et IA
 
