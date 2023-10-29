@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nathanchase/nuxt-dayjs-module',
     '@pinia/nuxt',
-    '@nuxt/image-edge',
+    '@nuxt/image',
     'nuxt-schema-org',
     '@nuxtjs/fontaine',
     '@nuxthq/studio',
