@@ -38,7 +38,10 @@ const props = withDefaults(
 </template>
 <style scoped>
 .text-outline {
-  text-shadow: -2px -2px 0 #9123cb, 2px 2px 0 #9123cb, 2px -2px 0 #9123cb,
+  text-shadow:
+    -2px -2px 0 #9123cb,
+    2px 2px 0 #9123cb,
+    2px -2px 0 #9123cb,
     -2px 2px 0 #9123cb;
 }
 </style>

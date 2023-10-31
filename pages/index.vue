@@ -1,5 +1,6 @@
 <script setup>
 import {animate, scroll} from 'motion';
+
 const bigSlash = ref();
 const tinySlash = ref();
 onMounted(() => {

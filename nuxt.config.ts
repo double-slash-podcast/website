@@ -68,6 +68,8 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     github_auth: process.env.GITHUB_AUTH,
+    REDIS_URL: process.env.REDIS_URL,
+    REDIS_TOKEN: process.env.REDIS_TOKEN,
     public: {
       ...baseInfos,
       podcastInfos,

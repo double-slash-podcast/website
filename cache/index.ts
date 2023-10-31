@@ -1,3 +1,6 @@
+/**
+ * old cache system for duration. Changing the 31/10/23
+ */
 import path from 'path';
 import JSONdb from 'simple-json-db';
 
