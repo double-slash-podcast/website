@@ -13,10 +13,10 @@ dependencies:
     version: 1.0.15
   '@nuxt/image':
     specifier: ^1.0.0
-    version: 1.0.0
+    version: 1.0.0(@upstash/redis@1.24.2)
   '@tailwindcss/forms':
     specifier: 0.5.6
-    version: 0.5.6(tailwindcss@3.3.3)
+    version: 0.5.6(tailwindcss@3.3.5)
   '@upstash/redis':
     specifier: ^1.24.2
     version: 1.24.2
@@ -42,7 +42,7 @@ dependencies:
 devDependencies:
   '@nuxt/content':
     specifier: 2.9.0
-    version: 2.9.0(nuxt@3.8.0)(vue@3.3.4)
+    version: 2.9.0(@upstash/redis@1.24.2)(nuxt@3.8.0)(vue@3.3.4)
   '@nuxt/image-edge':
     specifier: 1.0.0-rc.3-28282346.a10323e
     version: 1.0.0-rc.3-28282346.a10323e(@upstash/redis@1.24.2)
@@ -108,7 +108,7 @@ devDependencies:
     version: 15.0.2
   nuxt:
     specifier: 3.8.0
-    version: 3.8.0(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
+    version: 3.8.0(@upstash/redis@1.24.2)(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
   nuxt-icon:
     specifier: 0.6.1
     version: 0.6.1(vue@3.3.4)
@@ -1364,7 +1364,7 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/content@2.9.0(nuxt@3.8.0)(vue@3.3.4):
+  /@nuxt/content@2.9.0(@upstash/redis@1.24.2)(nuxt@3.8.0)(vue@3.3.4):
     resolution: {integrity: sha512-//mt++/AgOmjT6TpanugNJpJfx6q8g7wV8/vnk7vSSrrgki8tG6jpupuJmxHHB8DcqqTJfuBWFIdaLhv/Z9Gzg==}
     dependencies:
       '@nuxt/kit': 3.8.0
@@ -1428,7 +1428,7 @@ packages:
       '@nuxt/kit': 3.8.0
       '@nuxt/schema': 3.8.0
       execa: 7.2.0
-      nuxt: 3.8.0(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
+      nuxt: 3.8.0(@upstash/redis@1.24.2)(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
       vite: 4.5.0
     transitivePeerDependencies:
       - rollup
@@ -1451,7 +1451,7 @@ packages:
       semver: 7.5.4
     dev: true
 
-  /@nuxt/devtools@1.0.0(nuxt@3.8.0)(vite@4.5.0):
+  /@nuxt/devtools@1.0.0(@upstash/redis@1.24.2)(nuxt@3.8.0)(vite@4.5.0):
     resolution: {integrity: sha512-pM5AvystXlFPYOsGbH8PBxEYkttiEWHsZnGw660iMw8QedB6mAweT21XX9LDS69cqnRY5uTFqVOmO9Y4EYL3hg==}
     hasBin: true
     peerDependencies:
@@ -1478,8 +1478,8 @@ packages:
       launch-editor: 2.6.1
       local-pkg: 0.5.0
       magicast: 0.3.0
-      nitropack: 2.7.2
-      nuxt: 3.8.0(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
+      nitropack: 2.7.2(@upstash/redis@1.24.2)
+      nuxt: 3.8.0(@upstash/redis@1.24.2)(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
       nypm: 0.3.3
       ofetch: 1.3.3
       ohash: 1.1.3
@@ -1519,16 +1519,16 @@ packages:
       - xml2js
     dev: true
 
-  /@nuxt/image-edge@1.0.0-rc.3-28282346.a10323e:
+  /@nuxt/image-edge@1.0.0-rc.3-28282346.a10323e(@upstash/redis@1.24.2):
     resolution: {integrity: sha512-x7F5M8PrCcoHCclPD0jJMiVut8vpN5roFZ4g76l7M8rPm+OGZKQVRwAyHiZTTvEVmCIuV0mXwH6OUrU4koy4ag==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
-      '@nuxt/kit': 3.7.4
+      '@nuxt/kit': 3.8.0
       consola: 3.2.3
-      defu: 6.1.2
+      defu: 6.1.3
       h3: 1.8.2
       image-meta: 0.1.1
-      node-fetch-native: 1.4.0
+      node-fetch-native: 1.4.1
       ohash: 1.1.3
       pathe: 1.1.1
       std-env: 3.4.3
@@ -1551,7 +1551,7 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/image@1.0.0:
+  /@nuxt/image@1.0.0(@upstash/redis@1.24.2):
     resolution: {integrity: sha512-tiNyerofmMs5JKW5erSoHNE6opsftdORWvANkqLissTiQFwGJxmfskjcJo/hJDCy/LT0VurW8wcuK/2wB3JX3Q==}
     engines: {node: ^14.16.0 || >=16.11.0}
     dependencies:
@@ -1566,7 +1566,7 @@ packages:
       std-env: 3.4.3
       ufo: 1.3.1
     optionalDependencies:
-      ipx: 2.0.0
+      ipx: 2.0.0(@upstash/redis@1.24.2)
     transitivePeerDependencies:
       - '@azure/app-configuration'
       - '@azure/cosmos'
@@ -3152,7 +3152,7 @@ packages:
       '@vueuse/core': 10.5.0(vue@3.3.4)
       '@vueuse/metadata': 10.5.0
       local-pkg: 0.5.0
-      nuxt: 3.8.0(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
+      nuxt: 3.8.0(@upstash/redis@1.24.2)(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0)
       vue-demi: 0.14.6(vue@3.3.4)
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -6647,7 +6647,44 @@ packages:
     resolution: {integrity: sha512-WKa+XuLG1A1R0UWhl2+1XQSi+fZWMsYKffMZTTYsiZaUD8k2yDAj5atimTUD2TZkyCkNEeYE5NhFZmupOGtjYQ==}
     dev: true
 
-  /ipx@2.0.0-1:
+  /ipx@2.0.0(@upstash/redis@1.24.2):
+    resolution: {integrity: sha512-JUD8CRIzBlGRKJxTinOR6QIVhp+bIUBrZajDIJwUC+ndoIxURrx834Ju6uxSnGvbw7WoMsmF0jnCLsaRHDaXDg==}
+    hasBin: true
+    requiresBuild: true
+    dependencies:
+      '@fastify/accept-negotiator': 1.1.0
+      citty: 0.1.4
+      consola: 3.2.3
+      defu: 6.1.3
+      destr: 2.0.2
+      etag: 1.8.1
+      h3: 1.8.2
+      image-meta: 0.2.0
+      listhen: 1.5.5
+      ofetch: 1.3.3
+      pathe: 1.1.1
+      sharp: 0.32.6
+      svgo: 3.0.2
+      ufo: 1.3.1
+      unstorage: 1.9.0(@upstash/redis@1.24.2)
+      xss: 1.0.14
+    transitivePeerDependencies:
+      - '@azure/app-configuration'
+      - '@azure/cosmos'
+      - '@azure/data-tables'
+      - '@azure/identity'
+      - '@azure/keyvault-secrets'
+      - '@azure/storage-blob'
+      - '@capacitor/preferences'
+      - '@planetscale/database'
+      - '@upstash/redis'
+      - '@vercel/kv'
+      - idb-keyval
+      - supports-color
+    dev: false
+    optional: true
+
+  /ipx@2.0.0-1(@upstash/redis@1.24.2):
     resolution: {integrity: sha512-aAQ0sB1c2y77Zu72q+rV+wriTF4e1fKnoRClo5LRgmxWSV2HSXqHk+N+ly76EjRr6Zgk44aN2ikMzs9ISJH2Iw==}
     hasBin: true
     requiresBuild: true
@@ -6655,8 +6692,8 @@ packages:
       '@fastify/accept-negotiator': 1.1.0
       citty: 0.1.4
       consola: 3.2.3
-      defu: 6.1.2
-      destr: 2.0.1
+      defu: 6.1.3
+      destr: 2.0.2
       etag: 1.8.1
       h3: 1.8.2
       image-meta: 0.1.1
@@ -8543,7 +8580,7 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /nitropack@2.7.2:
+  /nitropack@2.7.2(@upstash/redis@1.24.2):
     resolution: {integrity: sha512-6vQbGdBNR20N8wTChzIQUZQmNVhWVDrjUdpOYD68u2hlyUiJembth2fQuoWw3KlsoNYWFvcyqL9X3DPjjnoEUQ==}
     engines: {node: ^16.11.0 || >=17.0.0}
     hasBin: true
@@ -8962,7 +8999,7 @@ packages:
       - vue
     dev: true
 
-  /nuxt@3.8.0(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0):
+  /nuxt@3.8.0(@upstash/redis@1.24.2)(eslint@8.52.0)(typescript@5.2.2)(vite@4.5.0):
     resolution: {integrity: sha512-ZnisJYx5AcUl7xlw18m6zfINBpNhld+ZF+jdTLRZxkLjKSFZeFMGqKxOR1jNVSmxfIXM/guK0uV9GPm6HK/z7g==}
     engines: {node: ^14.18.0 || >=16.10.0}
     hasBin: true
@@ -8976,7 +9013,7 @@ packages:
         optional: true
     dependencies:
       '@nuxt/devalue': 2.0.2
-      '@nuxt/devtools': 1.0.0(nuxt@3.8.0)(vite@4.5.0)
+      '@nuxt/devtools': 1.0.0(@upstash/redis@1.24.2)(nuxt@3.8.0)(vite@4.5.0)
       '@nuxt/kit': 3.8.0
       '@nuxt/schema': 3.8.0
       '@nuxt/telemetry': 2.5.2
@@ -9005,7 +9042,7 @@ packages:
       knitwork: 1.0.0
       magic-string: 0.30.5
       mlly: 1.4.2
-      nitropack: 2.7.2
+      nitropack: 2.7.2(@upstash/redis@1.24.2)
       nuxi: 3.9.1
       nypm: 0.3.3
       ofetch: 1.3.3
@@ -10278,7 +10315,7 @@ packages:
   /rc9@2.1.1:
     resolution: {integrity: sha512-lNeOl38Ws0eNxpO3+wD1I9rkHGQyj1NU1jlzv4go2CtEnEQEUfqnIvZG7W+bC/aXdJ27n5x/yUjb6RoT9tko+Q==}
     dependencies:
-      defu: 6.1.2
+      defu: 6.1.3
       destr: 2.0.1
       flat: 5.0.2
 
