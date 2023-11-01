@@ -3,9 +3,9 @@ import crypto from 'crypto';
 import {H3Event, NodeIncomingMessage} from 'h3';
 import RSS from 'rss';
 import {ParsedContent} from '@nuxt/content/dist/runtime/types';
+import {useRedis} from '../../composables/useRedis';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import {serverQueryContent} from '#content/server';
-import DB from '~/cache/index';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -90,16 +90,18 @@ const getFeedBase = (infos: PodcastInfosType) =>
  * @returns
  */
 const getRemoteFileInfos = async (url: string) => {
+  const redis = useRedis();
   let estimate;
   // from cache
-  const dbEstimate = DB.get(url);
+  const dbEstimate = await redis.get(url);
+
   if (dbEstimate) {
     return dbEstimate;
   }
   try {
     estimate = await estimateMP3DurationAxios(url);
     // save in DB
-    DB.set(url, estimate);
+    await redis.set(url, estimate);
   } catch (e) {
     throw new Error((e as Error).message);
   }
