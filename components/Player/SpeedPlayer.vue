@@ -11,9 +11,9 @@
         v-for="spe in selectedSpeeds"
         :key="spe.label"
         :value="spe.value"
-        class="px-2 rounded hover:bg-purple-200"
+        class="px-4 py-2 rounded hover:bg-purple-200"
       >
-        {{ spe.label }}
+        {{ spe.label }}x
       </ListboxOption>
     </ListboxOptions>
   </Listbox>
