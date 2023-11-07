@@ -74,8 +74,8 @@ devDependencies:
     specifier: 0.5.10
     version: 0.5.10(tailwindcss@3.3.5)
   '@types/rss':
-    specifier: 0.0.31
-    version: 0.0.31
+    specifier: 0.0.32
+    version: 0.0.32
   '@types/xml2json':
     specifier: 0.11.5
     version: 0.11.5
@@ -2718,8 +2718,8 @@ packages:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
     dev: true
 
-  /@types/rss@0.0.31:
-    resolution: {integrity: sha512-iW6iqXCU1+t61uMkwIQQ4/TOq4QelIo9SfRJ717niStG5Z09B0pWhHkKujo2a0jsjHlga3yhGiemukLPYdl6iQ==}
+  /@types/rss@0.0.32:
+    resolution: {integrity: sha512-2oKNqKyUY4RSdvl5eZR1n2Q9yvw3XTe3mQHsFPn9alaNBxfPnbXBtGP8R0SV8pK1PrVnLul0zx7izbm5/gF5Qw==}
     dev: true
 
   /@types/sax@1.2.5:
