@@ -4,12 +4,12 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4900
+duration: 4617
 episodeNumber: 74
 episodeType: full
 explicit: false
 season: 1
-dsSlug: DS_074_newsNov23
+dsSlug: DS_074_new11_23
 title: Les News Web Dev pour Novembre 2023
 subtitle: Un épisode news pour novembre 2023 sur les dernières conférences et des tips CSS.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1694509731/episode/ART_70_newsSept_ttfzcs.png
