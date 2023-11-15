@@ -14,7 +14,7 @@ title: Les News Web Dev pour Novembre 2023
 subtitle: Un épisode news pour novembre 2023 sur les dernières conférences et des tips CSS.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1694509731/episode/ART_70_newsSept_ttfzcs.png
 description: Un épisode news pour novembre 2023. On parle des dernières conférences en cette fin d'année, la Next JS Conf, Open AI. Mais aussi le retour en force d'Angular. Et aussi des tools et des tips CSS.
-videoLink : t5aNLrepTiY
+videoLink : Bx_358U49Xg
 links: []
 ---
 ### Next JS Conf
