@@ -27,7 +27,7 @@ links: []
     - Partial prerendering (Page statique avec quelques éléments dynamiques chargé en parallèle) https://nextjs.org/learn/dashboard-app/partial-prerendering
     - NextJS Lean https://nextjs.org/learn
 
-Meme generator pour les serveurs actions => https://samgen.vercel.app/GYVwdgxgLglg9mABAITnA1gWwIYCd0AUA3ogM4A2IA5ogL4CUiRAUIorgKZQi5IGttEAHgBGIKFAQDBiYHFyYAgtHhgAvEWykAnpEQFGagHxNpMxACIQpDmQ64AbvYsBuMzOwB3bDChkAjuQABgCSAHIAygCiAEoAKojhcQDyKGhYeOik%2BhTUjABqigAyAKpREfoAJES5VAwuQW7mdLRmRu7CqBg4%2BCEQCIgA9O0yQoNiEggjiPTMtEA
+[Meme generator pour les serveurs actions](https://samgen.vercel.app/GYVwdgxgLglg9mABAITnA1gWwIYCd0AUA3ogM4A2IA5ogL4CUiRAUIorgKZQi5IGttEAHgBGIKFAQDBiYHFyYAgtHhgAvEWykAnpEQFGagHxNpMxACIQpDmQ64AbvYsBuMzOwB3bDChkAjuQABgCSAHIAygCiAEoAKojhcQDyKGhYeOik%2BhTUjABqigAyAKpREfoAJES5VAwuQW7mdLRmRu7CqBg4%2BCEQCIgA9O0yQoNiEggjiPTMtEA)
 
 - Kent C. Dodds https://www.epicweb.dev/why-i-wont-use-nextjs
     - Plusieurs critiques :
@@ -53,10 +53,8 @@ Angular 17 :
 - Signal est stable
 - Performance améliorée
 
-  ![twitter_F-bdiuSWsAA6GlK.jpg](https://prod-files-secure.s3.us-west-2.amazonaws.com/9ec25243-535a-49a0-95d2-ed6516d3a1e6/188fa132-8408-4b54-906c-9ac0d4f35a6e/twitter_F-bdiuSWsAA6GlK.jpg)
 
-
-## OPEN AI DEVDAY
+## OPEN AI Dev Days
 
 https://devday.openai.com/
 
