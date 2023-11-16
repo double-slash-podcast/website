@@ -21,8 +21,8 @@ dependencies:
     specifier: ^1.24.2
     version: 1.24.2
   axios:
-    specifier: 1.6.0
-    version: 1.6.0
+    specifier: 1.6.2
+    version: 1.6.2
   crypto:
     specifier: 1.0.1
     version: 1.0.1
@@ -114,7 +114,7 @@ devDependencies:
     version: 0.6.6(nuxt@3.8.0)(vite@4.5.0)(vue@3.3.4)
   nuxt-schema-org:
     specifier: 3.2.0
-    version: 3.2.0(@nuxt/devtools@1.0.2)(@unhead/shared@1.8.4)(@vue/compiler-core@3.3.7)(axios@1.6.0)(nuxt@3.8.0)(postcss@8.4.31)(unhead@1.8.4)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0)
+    version: 3.2.0(@nuxt/devtools@1.0.2)(@unhead/shared@1.8.4)(@vue/compiler-core@3.3.7)(axios@1.6.2)(nuxt@3.8.0)(postcss@8.4.31)(unhead@1.8.4)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0)
   pinia:
     specifier: 2.1.7
     version: 2.1.7(typescript@5.2.2)(vue@3.3.4)
@@ -1517,7 +1517,7 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxt/devtools-ui-kit@1.0.2(@nuxt/devtools@1.0.2)(@vue/compiler-core@3.3.7)(axios@1.6.0)(nuxt@3.8.0)(postcss@8.4.31)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0):
+  /@nuxt/devtools-ui-kit@1.0.2(@nuxt/devtools@1.0.2)(@vue/compiler-core@3.3.7)(axios@1.6.2)(nuxt@3.8.0)(postcss@8.4.31)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0):
     resolution: {integrity: sha512-x7BNCrVYD2HHeDV9IL9w/G4IgNIBRmpwjMDjKoQ1F4ioMEQVEYzXFeC/u2l6JBOy2/lb0FbGInLVcxF9+QTTFg==}
     peerDependencies:
       '@nuxt/devtools': 1.0.2
@@ -1537,7 +1537,7 @@ packages:
       '@unocss/preset-mini': 0.57.4
       '@unocss/reset': 0.57.4
       '@vueuse/core': 10.6.1(vue@3.3.4)
-      '@vueuse/integrations': 10.6.1(axios@1.6.0)(focus-trap@7.5.4)(vue@3.3.4)
+      '@vueuse/integrations': 10.6.1(axios@1.6.2)(focus-trap@7.5.4)(vue@3.3.4)
       '@vueuse/nuxt': 10.6.1(nuxt@3.8.0)(vue@3.3.4)
       defu: 6.1.3
       focus-trap: 7.5.4
@@ -2003,7 +2003,7 @@ packages:
       postcss-import-resolver: 2.0.0
       std-env: 3.4.3
       ufo: 1.3.1
-      unimport: 3.4.0
+      unimport: 3.5.0(rollup@3.29.4)
       untyped: 1.4.0
     transitivePeerDependencies:
       - rollup
@@ -3691,7 +3691,7 @@ packages:
       vue: 3.3.4
     dev: true
 
-  /@vueuse/integrations@10.6.1(axios@1.6.0)(focus-trap@7.5.4)(vue@3.3.4):
+  /@vueuse/integrations@10.6.1(axios@1.6.2)(focus-trap@7.5.4)(vue@3.3.4):
     resolution: {integrity: sha512-mPDupuofMJ4DPmtX/FfP1MajmWRzYDv8WSaTCo8LQ5kFznjWgmUQ16ApjYqgMquqffNY6+IRMdMgosLDRZOSZA==}
     peerDependencies:
       async-validator: '*'
@@ -3734,7 +3734,7 @@ packages:
     dependencies:
       '@vueuse/core': 10.6.1(vue@3.3.4)
       '@vueuse/shared': 10.6.1(vue@3.3.4)
-      axios: 1.6.0
+      axios: 1.6.2
       focus-trap: 7.5.4
       vue-demi: 0.14.6(vue@3.3.4)
     transitivePeerDependencies:
@@ -4280,8 +4280,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /axios@1.6.0:
-    resolution: {integrity: sha512-EZ1DYihju9pwVB+jg67ogm+Tmqc6JmhamRN6I4Zt8DfZu5lbcQGw3ozH9lFejSJgs/ibaef3A9PMXPLeefFGJg==}
+  /axios@1.6.2:
+    resolution: {integrity: sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==}
     dependencies:
       follow-redirects: 1.15.3
       form-data: 4.0.0
@@ -9617,11 +9617,11 @@ packages:
       - vue
     dev: true
 
-  /nuxt-schema-org@3.2.0(@nuxt/devtools@1.0.2)(@unhead/shared@1.8.4)(@vue/compiler-core@3.3.7)(axios@1.6.0)(nuxt@3.8.0)(postcss@8.4.31)(unhead@1.8.4)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0):
+  /nuxt-schema-org@3.2.0(@nuxt/devtools@1.0.2)(@unhead/shared@1.8.4)(@vue/compiler-core@3.3.7)(axios@1.6.2)(nuxt@3.8.0)(postcss@8.4.31)(unhead@1.8.4)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0):
     resolution: {integrity: sha512-2AkZ0u8kSj7bSfF+4SRKnkP8Wk4C9takO6I2HhkcqKBzYW5bB9uK55P1Ntqo+iyYhG+rj6TKvuRU6IdWGLlCmQ==}
     dependencies:
       '@nuxt/devtools-kit': 1.0.2(nuxt@3.8.0)(vite@4.5.0)
-      '@nuxt/devtools-ui-kit': 1.0.2(@nuxt/devtools@1.0.2)(@vue/compiler-core@3.3.7)(axios@1.6.0)(nuxt@3.8.0)(postcss@8.4.31)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0)
+      '@nuxt/devtools-ui-kit': 1.0.2(@nuxt/devtools@1.0.2)(@vue/compiler-core@3.3.7)(axios@1.6.2)(nuxt@3.8.0)(postcss@8.4.31)(vite@4.5.0)(vue@3.3.4)(webpack@5.89.0)
       '@nuxt/kit': 3.8.1
       '@unhead/schema-org': 1.8.4(@unhead/shared@1.8.4)(unhead@1.8.4)
       nuxt-site-config: 1.5.5(vue@3.3.4)
