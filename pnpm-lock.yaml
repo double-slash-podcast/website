@@ -77,8 +77,8 @@ devDependencies:
     specifier: 0.0.31
     version: 0.0.31
   '@types/xml2json':
-    specifier: 0.11.5
-    version: 0.11.5
+    specifier: 0.11.6
+    version: 0.11.6
   '@vueuse/nuxt':
     specifier: 10.5.0
     version: 10.5.0(nuxt@3.8.0)(vue@3.3.4)
@@ -2893,7 +2893,7 @@ packages:
   /@types/sax@1.2.5:
     resolution: {integrity: sha512-9jWta97bBVC027/MShr3gLab8gPhKy4l6qpb+UJLF5pDm3501NvA7uvqVCW+REFtx00oTi6Cq9JzLwgq6evVgw==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.8.6
     dev: true
 
   /@types/semver@7.5.3:
@@ -2922,8 +2922,8 @@ packages:
     resolution: {integrity: sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==}
     dev: true
 
-  /@types/xml2json@0.11.5:
-    resolution: {integrity: sha512-dH7j0Ph0QU7LZSdvrvhfuP/dE7ggdeusn8MvVCKtG6G4gGF4eQVKha8TQrUd8wyLtQ8Q03GTsupadPpSpatqwg==}
+  /@types/xml2json@0.11.6:
+    resolution: {integrity: sha512-OYZ5cB4zctk4JdK1MGdLmeBMdmg+/AClCUspQ6KtQ2vZLJkSpm0XWE9H0vCfCGlXvbqn9CBqIda2dXX2KAE/5w==}
     dependencies:
       '@types/node': 20.8.6
     dev: true
