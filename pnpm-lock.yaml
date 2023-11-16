@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  mlly: 1.4.0
+  mlly: 1.4.2
 
 dependencies:
   '@headlessui/vue':
@@ -1654,7 +1654,7 @@ packages:
       jiti: 1.21.0
       knitwork: 1.0.0
       lodash.template: 4.5.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
@@ -1681,7 +1681,7 @@ packages:
       jiti: 1.20.0
       knitwork: 1.0.0
       lodash.template: 4.5.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
@@ -1707,7 +1707,7 @@ packages:
       ignore: 5.2.4
       jiti: 1.20.0
       knitwork: 1.0.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
@@ -1734,7 +1734,7 @@ packages:
       ignore: 5.2.4
       jiti: 1.21.0
       knitwork: 1.0.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
@@ -1760,7 +1760,7 @@ packages:
       ignore: 5.2.4
       jiti: 1.21.0
       knitwork: 1.0.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
@@ -1997,7 +1997,7 @@ packages:
       h3: 1.8.2
       knitwork: 1.0.0
       magic-string: 0.30.5
-      mlly: 1.4.0
+      mlly: 1.4.2
       ohash: 1.1.3
       pathe: 1.1.1
       perfect-debounce: 1.0.0
@@ -4233,7 +4233,7 @@ packages:
       dotenv: 16.3.1
       giget: 1.1.3
       jiti: 1.21.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       ohash: 1.1.3
       pathe: 1.1.1
       perfect-debounce: 1.0.0
@@ -4250,8 +4250,8 @@ packages:
       defu: 6.1.3
       dotenv: 16.3.1
       giget: 1.1.3
-      jiti: 1.20.0
-      mlly: 1.4.0
+      jiti: 1.21.0
+      mlly: 1.4.2
       ohash: 1.1.3
       pathe: 1.1.1
       perfect-debounce: 1.0.0
@@ -5999,7 +5999,7 @@ packages:
     resolution: {integrity: sha512-LyExtJWKxtgVzmgtEHyQtLFpw1KFhQphF9nTG8TpAIVkiI/xQ3FJh75tRFLYl4hkn7BNIIdLJInuDAavX35pMw==}
     dependencies:
       enhanced-resolve: 5.15.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       ufo: 1.3.1
     dev: true
@@ -7813,7 +7813,7 @@ packages:
       h3: 1.8.2
       http-shutdown: 1.2.2
       jiti: 1.21.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       node-forge: 1.3.1
       pathe: 1.1.1
       std-env: 3.4.3
@@ -7855,7 +7855,7 @@ packages:
     resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
     engines: {node: '>=14'}
     dependencies:
-      mlly: 1.4.0
+      mlly: 1.4.2
       pkg-types: 1.0.3
 
   /locate-path@5.0.0:
@@ -7991,7 +7991,7 @@ packages:
     dependencies:
       estree-walker: 3.0.3
       magic-string: 0.30.5
-      mlly: 1.4.0
+      mlly: 1.4.2
       type-level-regexp: 0.1.17
       ufo: 1.3.1
       unplugin: 1.5.0
@@ -8910,8 +8910,8 @@ packages:
     hasBin: true
     dev: true
 
-  /mlly@1.4.0:
-    resolution: {integrity: sha512-ua8PAThnTwpprIaU47EPeZ/bPUVp2QYBbWMphUQpVdBI3Lgqzm5KZQ45Agm3YJedHXaIHl6pBGabaLSUPPSptg==}
+  /mlly@1.4.2:
+    resolution: {integrity: sha512-i/Ykufi2t1EZ6NaPLdfnZk2AX8cs0d+mTzVKuPfqPKPatxLApaBoxJQ9x1/uckXtrS/U5oisPMDkNs0yQTaBRg==}
     dependencies:
       acorn: 8.11.2
       pathe: 1.1.1
@@ -9050,7 +9050,7 @@ packages:
       listhen: 1.5.5
       magic-string: 0.30.5
       mime: 3.0.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       mri: 1.2.0
       node-fetch-native: 1.4.1
       ofetch: 1.3.3
@@ -9486,7 +9486,7 @@ packages:
       klona: 2.0.6
       knitwork: 1.0.0
       magic-string: 0.30.5
-      mlly: 1.4.0
+      mlly: 1.4.2
       nitropack: 2.7.2(@upstash/redis@1.25.1)
       nuxi: 3.9.1
       nypm: 0.3.3
@@ -10062,7 +10062,7 @@ packages:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
     dependencies:
       jsonc-parser: 3.2.0
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
 
   /plop@4.0.0:
@@ -12271,7 +12271,7 @@ packages:
       '@antfu/utils': 0.7.6
       defu: 6.1.3
       jiti: 1.21.0
-      mlly: 1.4.0
+      mlly: 1.4.2
     dev: true
 
   /uncrypto@0.1.3:
@@ -12365,7 +12365,7 @@ packages:
       fast-glob: 3.3.1
       local-pkg: 0.4.3
       magic-string: 0.30.5
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
@@ -12382,7 +12382,7 @@ packages:
       fast-glob: 3.3.2
       local-pkg: 0.5.0
       magic-string: 0.30.5
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.0.0
@@ -12547,7 +12547,7 @@ packages:
       fast-glob: 3.3.2
       json5: 2.2.3
       local-pkg: 0.4.3
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       scule: 1.0.0
       unplugin: 1.5.0
@@ -12640,7 +12640,7 @@ packages:
       '@babel/standalone': 7.23.2
       '@babel/types': 7.23.0
       defu: 6.1.3
-      jiti: 1.20.0
+      jiti: 1.21.0
       mri: 1.2.0
       scule: 1.0.0
     transitivePeerDependencies:
@@ -12786,7 +12786,7 @@ packages:
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       picocolors: 1.0.0
       vite: 4.5.0
@@ -12808,7 +12808,7 @@ packages:
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
-      mlly: 1.4.0
+      mlly: 1.4.2
       pathe: 1.1.1
       picocolors: 1.0.0
       vite: 4.4.11(@types/node@20.8.6)
