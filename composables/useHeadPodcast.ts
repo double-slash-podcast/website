@@ -11,8 +11,9 @@ const getImgPodcast = ({
   episodeNumber: number;
   title: string;
 }): string =>
-  `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${title},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`;
-
+  `https://res.cloudinary.com/doubleslash/image/upload/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:%23${episodeNumber},x_54/co_rgb:a700ff,g_east,l_text:mono.otf_120_letter_spacing_-5:${encodeURIComponent(
+    title,
+  )},x_54,y_150,w_1000/v1597238012/FACEBOOK_-_OG_Card_RAW_eu5xdv.png`;
 /**
  * compose head for page podcast
  *
@@ -48,14 +49,14 @@ const useHeadPodcast = ({
         name: 'og:title',
         content: episode.value.title,
       },
-      {
-        hid: 'og:image',
-        property: 'og:image',
-        content: getImgPodcast({
-          episodeNumber: episode.value?.episodeNumber,
-          title: episode.value?.title,
-        }),
-      },
+      //   {
+      //     hid: 'og:image',
+      //     property: 'og:image',
+      //     content: getImgPodcast({
+      //       episodeNumber: episode.value?.episodeNumber,
+      //       title: episode.value?.title,
+      //     }),
+      //   },
       {
         hid: 'og:image:alt',
         property: 'og:image:alt',
