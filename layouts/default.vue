@@ -55,11 +55,10 @@ useHead({
     {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5'},
   ],
 });
-
 useSchemaOrg([
   defineOrganization({
     name: 'Double Slash Dev',
-    logo: '/logo.png',
+    logo: `${siteUrl}/logo.png`,
     sameAs: [twitterUrl],
   }),
   defineWebSite({

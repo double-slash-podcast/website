@@ -36,19 +36,31 @@ const useHeadPodcast = ({
   const getMediaUrl = () =>
     `${isDev ? prefixAudioDev : prefixAudio}/${episode.value?.dsSlug}.mp3`;
 
-  useHead({
+  useSeoMeta({
     title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
+    ogTitle: `//${episode.value.episodeNumber} - ${episode.value.title}`,
+    description: getDescription(episode.value?.description),
+    ogDescription: getDescription(episode.value?.description),
+    ogImage: getImgPodcast({
+      episodeNumber: episode.value?.episodeNumber,
+      title: episode.value?.title,
+    }),
+    twitterCard: 'summary_large_image',
+  });
+
+  useHead({
+    // title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
     meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: getDescription(episode.value?.description),
-      },
-      {
-        hid: 'og:title',
-        name: 'og:title',
-        content: episode.value.title,
-      },
+      //   {
+      //     hid: 'description',
+      //     name: 'description',
+      //     content: getDescription(episode.value?.description),
+      //   },
+      //   {
+      //     hid: 'og:title',
+      //     name: 'og:title',
+      //     content: episode.value.title,
+      //   },
       //   {
       //     hid: 'og:image',
       //     property: 'og:image',
@@ -62,18 +74,18 @@ const useHeadPodcast = ({
         property: 'og:image:alt',
         content: `${episode.value.episodeNumber} - ${episode.value.title}`,
       },
-      {
-        hid: 'og:description',
-        property: 'og:description',
-        content: episode.value.description,
-      },
+      //   {
+      //     hid: 'og:description',
+      //     property: 'og:description',
+      //     content: episode.value.description,
+      //   },
       {
         hid: 'og:url',
         property: 'og:url',
         content: `${siteUrl}${path}`,
       },
       {name: 'twitter:site', content: '@doubleslash_dev'},
-      {name: 'twitter:card', content: 'summary_large_image'},
+      //   {name: 'twitter:card', content: 'summary_large_image'},
       {
         hid: 'twitter:url',
         name: 'twitter:url',
