@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxthq/studio',
   ],
-
   alias: {
     'micromark/lib/preprocess.js': 'micromark',
     'micromark/lib/postprocess.js': 'micromark',
@@ -40,9 +39,6 @@ export default defineNuxtConfig({
         quality: 'auto:best',
       },
     },
-  },
-  schemaOrg: {
-    canonicalHost: baseInfos.siteUrl,
   },
   dayjs: {},
   tailwindcss: {
