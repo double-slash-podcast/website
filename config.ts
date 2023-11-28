@@ -1,6 +1,6 @@
 export const baseInfos: BaseInfosType = {
   siteUrl: 'https://double-slash.dev',
-  email: 'info@slash-podcast.fr',
+  email: 'contact@double-slash.dev',
   titleDefault: 'Double Slash Podcast',
   imageDefault:
     'https://res.cloudinary.com/doubleslash/image/upload/v1597260128/doubleSlashDefault_kyl8s9.png',
@@ -25,7 +25,7 @@ export const podcastInfos: PodcastInfosType = {
       Retrouvez-nous régulièrement pour parler de sujets variés tels que la JAMStack, l’accessibilité, l’écoconception, React JS, Vue JS et des retours d’expériences sur des implémentations.
       Également, des débats autour de sujets polémiques tels que la communication entre développeurs/designers ou comment avoir un discours compréhensible par les clients.
       Nous serons accompagnés de temps en temps par des invités experts dans leur domaine pour approfondir un sujet et avoir des retours d’expériences.
-      Faites-nous vos retours par mail sur <a href="mailto:info@slash-podcast.fr">info@slash-podcast.fr</a>
+      Faites-nous vos retours par mail sur <a href="mailto:contact@double-slash.dev">contact@double-slash.dev</a>
       `,
   // episodic || serial
   podcastType: `episodic`,
@@ -36,7 +36,7 @@ export const podcastInfos: PodcastInfosType = {
     'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
   feedUrl: `${baseInfos.siteUrl}/pocast-rss-feed.xml`,
   language: `fr-FR`,
-  copyright: `Copyright © 2022 Double Slash`,
+  copyright: `Copyright © 2023 Double Slash`,
   authorName: `Alex Duval/Patrick Faramaz`,
   ownerName: `Double Slash`,
   ownerEmail: baseInfos.email,
