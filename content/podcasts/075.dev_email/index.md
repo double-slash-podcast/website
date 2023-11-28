@@ -11,13 +11,12 @@ explicit: false
 season: 1
 dsSlug: DS_075_dev_email
 title: Coder des emails
-subtitle: Méthodes et outils
+subtitle: Méthodes et outils pour la création et l'envoi d'emails
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1701157471/ART_75_email_mytqlw.png
-description: 
+description: Dans cet épisode, nous allons évoquer le côté obscur de notre métier. Faire du développement à destination des emails ! Nous allons commencer par la partie templating, puis nous évoquerons les plateformes en lignes, les frameworks, les pièges à éviter et nous finirons par un retour d’expérience dans le secteur du e-commerce.
 videoLink : uc6vJ7ujlLE
 links: []
 ---
-## Coder des emails
 
 ## La problématique concernant le templating des emails
 
@@ -34,7 +33,7 @@ links: []
 - emails promotions et communication
     - newsletters
 
-## Une multitude d’outil très complet.
+## Une multitude d’outils très complets.
 
 Quelques exemples :
 
@@ -42,11 +41,11 @@ Quelques exemples :
 - MailJet
 - MailCHIMP
 
-Avantages : Prise en main facile pour des non-techs. Editeur d’emails à nase de WISIWIG
+Avantages : Prise en main facile pour des non-techs. Éditeurs d’emails à base de WYSIWYG
 
 Inconvénients : Difficile à piloter depuis le CMS ou le service développé.
 
-Solution bien adaptée pour la gestion des newsletters mais pas forcément pour du transactionnel.
+Solution bien adaptée pour la gestion des newsletters, mais pas forcément pour du transactionnel.
 Parfois compliqué d’automatiser ou de variabiliser.
 
 ## Allez plus loin que les plateformes d’emailing
@@ -54,7 +53,7 @@ Parfois compliqué d’automatiser ou de variabiliser.
 ### 1 - Créer des templates en mode no-code
 
 - Achat de templates https://unlayer.com/templates
-- Service de création de template en ligne : [https://stripo.email/](https://stripo.email/?fpr=stripo-ppc&fp_sid=18286717430)
+- Service de création de template en ligne : [https://stripo.email/](https://stripo.email/)
 
 ### 2 - Créer des templates en mode dev
 
@@ -81,26 +80,39 @@ Via son propre serveur :
 
 - [RESEND](https://resend.com/)
 - https://mailpace.com/
-- https://aws.amazon.com/ses/ Le moins cher !!!!
-
-      US / EU réglementation 
+- https://aws.amazon.com/ses/ (Le moins cher, mais attention US / EU réglementations)
 
 **Envoyer par paquet :**
 
 - Pourquoi :
     - pas passer pour un spammer
     - Charge serveur
-- Solutions:
+  
+- Solutions :
     - queue (Laravel Mail, nodemailer + kue,…)
     - Les services d’envois proposent toujours cette option
 
 ### 5- Faire en sorte que les emails arrivent
 
 - Attacher son nom de domaine
-- Réglages DNS :  **MX**  - **SPF  ( éviter les spam )**
+- Réglages DNS : **MX**  - **SPF  ( éviter les spams )**
 - Réglages Sécurité : **DKIM et DMARC**
 
 Outil pratique : [https://www.mail-tester.com](https://www.mail-tester.com/?lang=fr)
+
+## Vidéo :
+
+- https://www.youtube.com/watch?v=MHnTpN0g7ko
+
+## Personne à suivre :
+
+https://twitter.com/HTeuMeuLeu
+
+## Site référence
+
+https://www.caniemail.com/
+
+
 
 Bonne écoute !
 
