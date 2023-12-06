@@ -45,7 +45,7 @@
         "prettier": "3.1.0",
         "prettier-plugin-tailwindcss": "0.5.7",
         "sitemap": "7.1.1",
-        "typescript": "5.2.2",
+        "typescript": "5.3.3",
         "vitest": "0.34.6",
         "xml2json": "0.12.0"
     },
