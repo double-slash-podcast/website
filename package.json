@@ -29,7 +29,7 @@
         "@types/xml2json": "0.11.6",
         "@vueuse/nuxt": "10.6.1",
         "consola": "3.2.3",
-        "eslint": "8.53.0",
+        "eslint": "8.56.0",
         "eslint-config-prettier": "9.0.0",
         "eslint-plugin-nuxt": "4.0.0",
         "eslint-plugin-prettier": "5.0.1",
