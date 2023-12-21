@@ -45,6 +45,6 @@ et bien d'autres encore dans la liste des podcasts.
 
 
 
-Évidemment, ceci est une liste exhaustive de quelques épisodes. Tous les épisodes valent le coup d’être écouté. Encore merci à tous nos invités d’avoir participés. Retrouvez tous les podcasts à écouter sur la page <https://double-slash.dev/podcasts/>.
+Évidemment, ceci est une liste non exhaustive de quelques épisodes. Tous les épisodes valent le coup d’être écouté. Encore merci à tous nos invités d’avoir participés. Retrouvez tous les podcasts à écouter sur la page <https://double-slash.dev/podcasts/>.
 
 Merci à tous nos auditeurs et auditrices. Nous vous souhaitons de bonnes fêtes de fin d’année et à l’année prochaine pour de nouveaux épisodes.
