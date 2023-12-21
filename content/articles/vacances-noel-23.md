@@ -1,11 +1,11 @@
 ---
 publicationDate: 2023-12-21
-title: Réécoutez nos podcasts pendant les vacances de Noël
-description: Réécoutez nos podcasts pendant les vacances de Noël. Nous vous proposons une sélection de nos meilleurs podcasts pour vous accompagner pendant les vacances de Noël.
+title: Réécoutez nos épisodes de podcast pendant les vacances de Noël
+description: Réécoutez nos épisodes de podcast pendant les vacances de Noël. Nous vous proposons une sélection de nos meilleurs podcasts pour vous accompagner pendant les vacances de Noël.
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
-Réécoutez nos podcasts pendant les vacances de Noël. Nous vous proposons une sélection de quelques podcasts pour vous accompagner pendant les vacances de Noël.
+Réécoutez nos épisodes de podcast pendant les vacances de Noël. Nous vous proposons une sélection de quelques podcasts pour vous accompagner pendant les vacances de Noël.
 
 ## Les épisodes inspirants
 
