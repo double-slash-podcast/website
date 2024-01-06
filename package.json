@@ -62,7 +62,7 @@
         "@nuxt/image": "^1.1.0",
         "@tailwindcss/forms": "0.5.7",
         "@upstash/redis": "^1.27.1",
-        "axios": "1.6.4",
+        "axios": "1.6.5",
         "crypto": "1.0.1",
         "motion": "10.16.4",
         "rss": "1.2.2",
