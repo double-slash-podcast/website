@@ -39,6 +39,8 @@
 </template>
 
 <script setup lang="ts">
+defineEmits(['updateCurrentTime']);
+
 const props = defineProps<{
   currentPosition: number;
   currentTime: number;

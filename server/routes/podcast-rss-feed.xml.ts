@@ -2,7 +2,7 @@
 import crypto from 'crypto';
 import {H3Event, NodeIncomingMessage} from 'h3';
 import RSS from 'rss';
-import {ParsedContent} from '@nuxt/content/dist/runtime/types';
+import type {ParsedContent} from '@nuxt/content/dist/runtime/types';
 import {useRedis} from '../../composables/useRedis';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import {serverQueryContent} from '#content/server';

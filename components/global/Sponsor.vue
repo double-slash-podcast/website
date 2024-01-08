@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// eslint-disable vue/no-v-html
 withDefaults(
   defineProps<{
     withList?: boolean;
@@ -21,19 +22,24 @@ const listSponsor = computed(
 
 <template>
   <!-- <div class="leading-5" v-html="organizationSponsors.fullDescriptionHTML" /> -->
-  <div class="border-t border-gray-300">
+  <div
+    v-if="organizationSponsors.activeGoal != null"
+    class="border-t border-gray-300"
+  >
     <h2>
-      {{ organizationSponsors.activeGoal.percentComplete }}% vers l'objectif de
-      {{ organizationSponsors.activeGoal.targetValue }}$ par mois
+      {{ organizationSponsors.activeGoal?.percentComplete }}% vers l'objectif de
+      {{ organizationSponsors.activeGoal?.targetValue }}$ par mois
     </h2>
     <div class="w-full h-1.5 mb-4 rounded-full bg-yellowDs">
       <div
         class="rounded-full h-1.5 bg-purpleDs text-[10px] font-medium text-blue-100 text-center p-0.5 leading-none"
-        :style="`width: ${organizationSponsors.activeGoal.percentComplete}%`"
+        :style="`width: ${organizationSponsors.activeGoal?.percentComplete}%`"
       ></div>
     </div>
   </div>
-  <div class="leading-5" v-html="organizationSponsors.activeGoal.description" />
+  <div class="leading-5">
+    {{ organizationSponsors.activeGoal?.description }}
+  </div>
   <div class="py-4 mt-6 text-center">
     <a
       target="_blank"
@@ -49,9 +55,10 @@ const listSponsor = computed(
   </div>
   <div v-if="withList === true" class="pb-8 mt-8 border-t border-gray-300">
     <h2>Ils nous soutiennent !</h2>
-    <div class="flex flex-wrap items-stretch justify-start">
+    <div class="flex flex-wrap items-stretch justify-start gap-7">
       <a
         v-for="sponsor of listSponsor"
+        v-show="sponsor.node.name !== null"
         :key="sponsor.node.id"
         :href="sponsor.node.url"
         target="_blank"
@@ -59,15 +66,15 @@ const listSponsor = computed(
         class="flex flex-wrap items-center justify-center object-cover w-1/3 md:w-1/5"
       >
         <img
-          width="100px"
-          height="100px"
+          width="80px"
+          height="80px"
           loading="lazy"
           decoding="async"
           :src="sponsor.node.avatarUrl"
           :alt="sponsor.node.name"
-          class="w-20 h-20 m-0 rounded-full md:w-28 md:h-28"
+          class="w-20 h-20 m-0 border-4 border-purple-500 rounded-full md:w-28 md:h-28"
         />
-        <strong class="mt-2 text-xs text-gray-500">{{
+        <strong class="mt-2 text-xs text-gray-500 text-wrap">{{
           sponsor.node.name
         }}</strong>
       </a>

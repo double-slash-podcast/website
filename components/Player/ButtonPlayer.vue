@@ -54,6 +54,8 @@
 </template>
 
 <script setup lang="ts">
+defineEmits(['click']);
+
 const props = withDefaults(
   defineProps<{
     status: typeStatusPlayer;

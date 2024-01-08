@@ -9,6 +9,6 @@ const store = usePlayerStore();
     :src="store.src || ''"
     :title="store.currentTitle || ''"
     :status="store.statusPlayer || ''"
-    @statusChange="store.setStatusPlayer"
+    @status-change="store.setStatusPlayer"
   />
 </template>
