@@ -159,6 +159,8 @@ Route.get('/', () => {
 })
 ```
 
+Plus d'infos sur AdonisJS : <https://adonisjs.com/>
+
 ## A voir aussi
 
 - Koa : <https://koajs.com/>
