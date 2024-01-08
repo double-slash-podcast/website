@@ -40,7 +40,7 @@ Qu'est ce qui fait que la plupart des développeurs Node.js utilisent encore Exp
 - les ressources ? il y a beaucoup de tuto disponible sur internet
 
 On ne sait pas vraiment. Malgré cela, il existe aujourd'hui des vraies alternatives à ExpressJS.
-Nous allons vous présenter 10 alternatives à ExpressJS.
+Nous allons vous présenter 6 alternatives à ExpressJS.
 
 ## Les frameworks minimalistes
 
