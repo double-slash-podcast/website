@@ -1,7 +1,7 @@
 ---
 publicationDate: 2024-01-08
-title: 5 alternatives à ExpressJS, la 3ème va vous surprendre !
-description: ExpressJS a été créé en 2010 par TJ Holowaychuk. Il a été conçu pour être un "framework" minimaliste et flexible pour les applications web et mobiles.
+title: 6 alternatives à ExpressJS, la 4ème va vous surprendre !
+description: ExpressJS a été créé en 2010 par TJ Holowaychuk. Il a été conçu pour être un "framework" minimaliste et flexible pour les applications web et mobiles.ExpressJS a été créé pour faciliter la vie des développeurs avec des fonctions simples pour créer un serveur web.
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---
 
@@ -27,7 +27,11 @@ app.listen(port, () => {
 })
 ```
 
-Aujourd'hui encore, 13 ans après sa première version, il est encore le framework Node.js le plus populaire.
+Aujourd'hui encore, 13 ans après sa première version, il est encore le framework Node.js le plus populaire malgré les reproches qu'on lui fait :
+
+- lenteur
+- plus maintenu
+- pas de support natif de TypeScript
 
 Qu'est ce qui fait que la plupart des développeurs Node.js utilisent encore ExpressJS en 2023 ?
 
@@ -93,7 +97,31 @@ fastify.listen({ port: 3000 }, (err) => {
 
 Plus d'infos sur Fastify : <https://fastify.dev/>
 
-### 3. Nitro
+### 3. Hono
+
+Hono est un framework minimaliste qui se veut rapide et léger.
+
+Il a l'avantage d'être compatible avec une multitude d'environnements : Cloudflare, Fastly, Deno, Bun, AWS, Lagon, etc.
+
+Il dispose de toutes les fonctionnalités de base : routing, middleware, etc. et il supporte nativement TypeScript.
+
+Exemple de code Hono :
+
+```javascript
+import { Hono } from 'hono'
+const app = new Hono()
+
+app.get('/', (c) => c.text('Hono!'))
+
+export default app
+```
+
+Plus d'infos sur Hono : <https://hono.dev/>
+
+## Les frameworks plus complets
+
+
+### 4. Nitro
 
 Nitro est un framework 100% Typescript. Tout comme H3, il nous vient de l'écosystème UnJS.
 
@@ -114,9 +142,8 @@ export default defineEventHandler(() => {
 
 Plus d'infos sur Nitro : <https://unjs.io/packages/nitro>
 
-## Les frameworks plus complets
 
-### 4. Nest JS
+### 5. Nest JS
 
 NestJS est un framework Node.js qui se veut robuste et performant. Il supporte nativement TypeScript. Avec lui vous pouvez faire de l'orienté objet, du fonctionnal et de la programmation réactive.
 
@@ -139,7 +166,7 @@ export class AppService {
 
 Plus d'infos sur NestJS : <https://nestjs.com/>
 
-### 5. AdonisJS
+### 6. AdonisJS
 
 AdonisJS est un framework très complet qui vous permet de créer toutes sortes de projets, de l'application web complète à l'API.
 
@@ -163,6 +190,7 @@ Plus d'infos sur AdonisJS : <https://adonisjs.com/>
 
 ## A voir aussi
 
+-
 - Koa : <https://koajs.com/>
 - Sails : <https://sailsjs.com/>
 - Hapi : <https://hapi.dev/>
