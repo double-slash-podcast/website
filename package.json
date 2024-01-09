@@ -64,7 +64,7 @@
         "@upstash/redis": "^1.27.1",
         "axios": "1.6.4",
         "crypto": "1.0.1",
-        "motion": "10.16.4",
+        "motion": "10.17.0",
         "rss": "1.2.2",
         "simple-json-db": "2.0.0",
         "vue-lite-youtube-embed": "1.2.1"
