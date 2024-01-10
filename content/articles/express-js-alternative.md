@@ -131,6 +131,8 @@ Tout comme H3, il est compatible avec les environnements serverless, workers et 
 
 C'est notre framework préféré dans cette liste !
 
+Vidéo de Daniel Roe sur Nitro. Construire un framework React avec Nitro durant une présentation : https://www.youtube.com/watch?v=hdHLU0qHKhA
+
 Exemple de code Nitro :
 
 ```javascript
