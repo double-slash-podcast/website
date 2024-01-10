@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: xxxxxxx
+duration: 2683
 episodeNumber: 79
 episodeType: full
 explicit: false
@@ -14,7 +14,7 @@ title: News semaine 2
 subtitle: 
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1704833013/episode/ART_79_bhk2bt.png
 description: 
-videoLink : XXXXXXX
+videoLink : EQd8lZQOUow
 links:
   [
     {
