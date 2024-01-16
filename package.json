@@ -38,7 +38,7 @@
         "lint-staged": "15.2.0",
         "nuxt": "3.9.1",
         "nuxt-icon": "0.6.8",
-        "nuxt-schema-org": "3.3.2",
+        "nuxt-schema-org": "3.3.3",
         "pinia": "2.1.7",
         "plop": "4.0.1",
         "postcss-custom-properties": "13.3.4",
