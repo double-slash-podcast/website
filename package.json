@@ -36,7 +36,7 @@
         "husky": "8.0.3",
         "jsdom": "23.2.0",
         "lint-staged": "15.2.0",
-        "nuxt": "3.9.1",
+        "nuxt": "3.9.3",
         "nuxt-icon": "0.6.8",
         "nuxt-schema-org": "3.3.2",
         "pinia": "2.1.7",
