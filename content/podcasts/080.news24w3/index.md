@@ -25,7 +25,7 @@ links:
 ## Version 6 du framework JS Adonis sort le 24 janvier 2024
 
 Au moment où vous allez écouter ce podcast, la version 6 du framework JS Adonis sera sortie.
-- https://adonisjs.com/
+- https://adonisjs.com/road-to-v6
 
 Le tweet d'annonce:
 - https://twitter.com/amanvirk1/status/1748594799693746449?s=61&t=YYf8KAndGuh64i-gZKPISQ
