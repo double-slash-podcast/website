@@ -34,6 +34,7 @@
     </div>
     <button
       v-else
+      class="relative z-[1]"
       :aria-label="props.status === 'pause' ? 'play' : 'pause'"
       :title="props.status === 'pause' ? 'play' : 'pause'"
       @click="$emit('click')"
