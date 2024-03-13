@@ -31,21 +31,35 @@ https://github.com/rolldown/rolldown
 
 https://tailwindcss.com/blog/tailwindcss-v4-alpha
 
-🚫 No postcss.config.js file 
-🚫 No tailwind.config.js file
-🚫 No configuring content globs 
-🚫 No @tailwind` directives in your CSS
+🚫 No postcss.config.js file  
+🚫 No tailwind.config.js file. 
+🚫 No configuring content globs. 
+🚫 No @tailwind` directives in your CSS. 
 
 Exemple de Simon (Pro Tailwind)
 
 ```
-/* app/styles.css */@import 'tailwindcss'@theme {  --color-primary: #aab9ff;}
+/* app/styles.css */
+
+@import 'tailwindcss'
+
+@theme {  
+  --color-primary: #aab9ff;
+}
 ```
 
 This is the equivalent of doing the following in Tailwind CSS v3:
 
 ```
-// tailwind.config.tsexport default {  theme: {		colors: {			primary: '#aab9ff'		}  }}
+// tailwind.config.ts
+
+export default {  
+  theme: {		
+    colors: {			
+      primary: '#aab9ff'		
+    }  
+  }
+}
 ```
 
 In v4, the CSS variables are also exposed in your CSS output, which means you can “consume” those variables anywhere you need it:
