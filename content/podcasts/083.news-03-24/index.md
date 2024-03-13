@@ -12,7 +12,7 @@ season: 1
 dsSlug: DS_083_news-03-24
 title: News Mars 2023
 subtitle: L&#x27;actu de dev web
-episodeArtwork: X
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1710311967/episode/ART_83_srvzdf.png
 description: 
 videoLink : khiumNmZf4o
 links:
