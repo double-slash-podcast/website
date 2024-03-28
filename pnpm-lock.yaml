@@ -68,8 +68,8 @@ devDependencies:
     specifier: 0.4.1
     version: 0.4.1
   '@nuxtjs/tailwindcss':
-    specifier: 6.11.3
-    version: 6.11.3
+    specifier: 6.11.4
+    version: 6.11.4
   '@pinia/nuxt':
     specifier: 0.5.1
     version: 0.5.1(typescript@5.3.3)(vue@3.4.15)
@@ -2388,17 +2388,16 @@ packages:
       - supports-color
     dev: true
 
-  /@nuxtjs/tailwindcss@6.11.3:
-    resolution: {integrity: sha512-l2iww/zOiHMuNERo6XB9MTJ8MEcq3NHFW/TPWmwPLGdOobV9zYUZ75otqi+mTK+/vgzQTtNXpIe2V0DLuTeb4A==}
+  /@nuxtjs/tailwindcss@6.11.4:
+    resolution: {integrity: sha512-09cksgZD4seQj054Z/BeiwFg1bzQTol8KPulLDLGnmMTkEi21vj/z+WlXQRpVbN1GS9+oU9tcSsu2ufXCM3DBg==}
     dependencies:
       '@nuxt/kit': 3.10.1
       autoprefixer: 10.4.17(postcss@8.4.33)
       chokidar: 3.5.3
       clear-module: 4.1.2
-      colorette: 2.0.20
       consola: 3.2.3
       defu: 6.1.4
-      h3: 1.10.0
+      h3: 1.10.1
       micromatch: 4.0.5
       pathe: 1.1.2
       postcss: 8.4.33
