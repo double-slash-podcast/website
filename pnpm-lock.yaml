@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  mlly: 1.4.0
+  mlly: 1.7.0
 
 dependencies:
   '@headlessui/vue':
@@ -1008,7 +1008,7 @@ packages:
       debug: 4.3.4
       espree: 9.6.1
       globals: 13.24.0
-      ignore: 5.3.0
+      ignore: 5.3.1
       import-fresh: 3.3.0
       js-yaml: 4.1.0
       minimatch: 3.1.2
@@ -1859,7 +1859,7 @@ packages:
       jiti: 1.21.0
       knitwork: 1.0.0
       lodash.template: 4.5.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       pathe: 1.1.2
       pkg-types: 1.0.3
       scule: 1.3.0
@@ -1885,7 +1885,7 @@ packages:
       ignore: 5.3.1
       jiti: 1.21.0
       knitwork: 1.0.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       pathe: 1.1.2
       pkg-types: 1.0.3
       scule: 1.3.0
@@ -1912,7 +1912,7 @@ packages:
       jiti: 1.21.0
       knitwork: 1.0.0
       lodash.template: 4.5.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.1.1
@@ -1935,10 +1935,10 @@ packages:
       defu: 6.1.4
       globby: 14.0.0
       hash-sum: 2.0.0
-      ignore: 5.3.0
+      ignore: 5.3.1
       jiti: 1.21.0
       knitwork: 1.0.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       pathe: 1.1.2
       pkg-types: 1.0.3
       scule: 1.3.0
@@ -1965,7 +1965,7 @@ packages:
       ignore: 5.3.0
       jiti: 1.21.0
       knitwork: 1.0.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       pathe: 1.1.1
       pkg-types: 1.0.3
       scule: 1.1.1
@@ -2070,13 +2070,13 @@ packages:
       consola: 3.2.3
       defu: 6.1.4
       hookable: 5.5.3
-      pathe: 1.1.1
+      pathe: 1.1.2
       pkg-types: 1.0.3
-      scule: 1.1.1
+      scule: 1.3.0
       std-env: 3.7.0
       ufo: 1.3.2
       unimport: 3.7.1(rollup@4.9.2)
-      untyped: 1.4.0
+      untyped: 1.4.2
     transitivePeerDependencies:
       - rollup
       - supports-color
@@ -2227,7 +2227,7 @@ packages:
       h3: 1.10.1
       knitwork: 1.0.0
       magic-string: 0.30.7
-      mlly: 1.4.0
+      mlly: 1.7.0
       ohash: 1.1.3
       pathe: 1.1.2
       perfect-debounce: 1.0.0
@@ -3451,7 +3451,7 @@ packages:
       colorette: 2.0.20
       consola: 3.2.3
       fast-glob: 3.3.2
-      magic-string: 0.30.5
+      magic-string: 0.30.7
       pathe: 1.1.2
       perfect-debounce: 1.0.0
     transitivePeerDependencies:
@@ -3521,7 +3521,7 @@ packages:
       '@unocss/rule-utils': 0.58.3
       css-tree: 2.3.1
       fast-glob: 3.3.2
-      magic-string: 0.30.5
+      magic-string: 0.30.7
       postcss: 8.4.33
     dev: true
 
@@ -3595,7 +3595,7 @@ packages:
     engines: {node: '>=14'}
     dependencies:
       '@unocss/core': 0.58.3
-      magic-string: 0.30.5
+      magic-string: 0.30.7
     dev: true
 
   /@unocss/scope@0.58.3:
@@ -3653,7 +3653,7 @@ packages:
       '@unocss/transformer-directives': 0.58.3
       chokidar: 3.5.3
       fast-glob: 3.3.2
-      magic-string: 0.30.5
+      magic-string: 0.30.7
       vite: 5.0.12
     transitivePeerDependencies:
       - rollup
@@ -3670,7 +3670,7 @@ packages:
       '@unocss/core': 0.58.3
       chokidar: 3.5.3
       fast-glob: 3.3.2
-      magic-string: 0.30.5
+      magic-string: 0.30.7
       unplugin: 1.6.0
       webpack: 5.89.0
       webpack-sources: 3.2.3
@@ -3750,7 +3750,7 @@ packages:
   /@vitest/snapshot@1.2.2:
     resolution: {integrity: sha512-SmGY4saEw1+bwE1th6S/cZmPxz/Q4JWsl7LvbQIky2tKE35US4gd0Mjzqfr84/4OD0tikGWaWdMja/nWL5NIPA==}
     dependencies:
-      magic-string: 0.30.5
+      magic-string: 0.30.7
       pathe: 1.1.2
       pretty-format: 29.7.0
     dev: true
@@ -4245,16 +4245,10 @@ packages:
     engines: {node: '>=0.4.0'}
     dev: true
 
-  /acorn@8.11.2:
-    resolution: {integrity: sha512-nc0Axzp/0FILLEVsm4fNwLCwMttvhEI263QtVPQcbpfZZ3ts0hLsZGOpE6czNlid7CJ9MlyH8reXkpsf3YUY4w==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
-
   /acorn@8.11.3:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /agent-base@6.0.2:
     resolution: {integrity: sha512-RZNwNclF7+MS/8bDg70amg32dyeZGZxiDuQmZxKLAlQjr3jGyLx+4Kkk58UO7D2QdgFIQCovuSuZESne6RG6XQ==}
@@ -4702,7 +4696,7 @@ packages:
       dotenv: 16.3.1
       giget: 1.2.1
       jiti: 1.21.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       ohash: 1.1.3
       pathe: 1.1.2
       perfect-debounce: 1.0.0
@@ -5118,6 +5112,9 @@ packages:
   /concat-map@0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
     dev: true
+
+  /confbox@0.1.7:
+    resolution: {integrity: sha512-uJcB/FKZtBMCJpK8MQji6bJHgu1tixKPxRLeGkNzBoOZzpnZUJm0jm2/sBDWcuBx1dYgxV4JU+g5hmNxCyAmdA==}
 
   /consola@2.15.3:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
@@ -6053,7 +6050,7 @@ packages:
       eslint: 8.56.0
       eslint-plugin-es: 4.1.0(eslint@8.56.0)
       eslint-utils: 3.0.0(eslint@8.56.0)
-      ignore: 5.3.0
+      ignore: 5.3.1
       is-core-module: 2.13.1
       minimatch: 3.1.2
       resolve: 1.22.8
@@ -6069,7 +6066,7 @@ packages:
       eslint: 8.56.0
       eslint-plugin-es: 3.0.1(eslint@8.56.0)
       eslint-utils: 2.1.0
-      ignore: 5.3.0
+      ignore: 5.3.1
       minimatch: 3.1.2
       resolve: 1.22.8
       semver: 6.3.1
@@ -6379,7 +6376,7 @@ packages:
     resolution: {integrity: sha512-LyExtJWKxtgVzmgtEHyQtLFpw1KFhQphF9nTG8TpAIVkiI/xQ3FJh75tRFLYl4hkn7BNIIdLJInuDAavX35pMw==}
     dependencies:
       enhanced-resolve: 5.15.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       pathe: 1.1.2
       ufo: 1.3.2
     dev: true
@@ -6550,7 +6547,7 @@ packages:
       '@capsizecss/metrics': 1.2.0
       '@capsizecss/unpack': 1.0.0
       magic-regexp: 0.7.0
-      magic-string: 0.30.5
+      magic-string: 0.30.7
       pathe: 1.1.2
       ufo: 1.3.2
       unplugin: 1.6.0
@@ -6903,7 +6900,7 @@ packages:
     dependencies:
       '@sindresorhus/merge-streams': 1.0.0
       fast-glob: 3.3.2
-      ignore: 5.3.0
+      ignore: 5.3.1
       path-type: 5.0.0
       slash: 5.1.0
       unicorn-magic: 0.1.0
@@ -8096,7 +8093,7 @@ packages:
       h3: 1.10.1
       http-shutdown: 1.2.2
       jiti: 1.21.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       node-forge: 1.3.1
       pathe: 1.1.2
       std-env: 3.7.0
@@ -8120,7 +8117,7 @@ packages:
       h3: 1.10.1
       http-shutdown: 1.2.2
       jiti: 1.21.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       node-forge: 1.3.1
       pathe: 1.1.2
       std-env: 3.7.0
@@ -8142,7 +8139,7 @@ packages:
     resolution: {integrity: sha512-ok6z3qlYyCDS4ZEU27HaU6x/xZa9Whf8jD4ptH5UZTQYZVYeb9bnZ3ojVhiJNLiXK1Hfc0GNbLXcmZ5plLDDBg==}
     engines: {node: '>=14'}
     dependencies:
-      mlly: 1.4.0
+      mlly: 1.7.0
       pkg-types: 1.0.3
 
   /locate-path@5.0.0:
@@ -8258,8 +8255,8 @@ packages:
     resolution: {integrity: sha512-C9m5/JqFV1/CMrMFDf1PqmvMc8ohrssmlF5bdgea7nUqqn6D9xzKVTa6DIm0LReCqvEPS35o1UElmb7PmoSfHQ==}
     dependencies:
       estree-walker: 3.0.3
-      magic-string: 0.30.5
-      mlly: 1.4.0
+      magic-string: 0.30.7
+      mlly: 1.7.0
       type-level-regexp: 0.1.17
       ufo: 1.3.2
       unplugin: 1.6.0
@@ -8277,6 +8274,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
 
   /magic-string@0.30.7:
     resolution: {integrity: sha512-8vBuFF/I/+OSLRmdf2wwFCJCz+nSn0m6DPvGH1fS/KiQoSaR+sETbov0eIk9KhEKy8CYqIkIAnbohxT/4H0kuA==}
@@ -8925,13 +8923,13 @@ packages:
     hasBin: true
     dev: true
 
-  /mlly@1.4.0:
-    resolution: {integrity: sha512-ua8PAThnTwpprIaU47EPeZ/bPUVp2QYBbWMphUQpVdBI3Lgqzm5KZQ45Agm3YJedHXaIHl6pBGabaLSUPPSptg==}
+  /mlly@1.7.0:
+    resolution: {integrity: sha512-U9SDaXGEREBYQgfejV97coK0UL1r+qnF2SyO9A3qcI8MzKnsIFKHNVEkrDyNncQTKQQumsasmeq84eNMdBfsNQ==}
     dependencies:
-      acorn: 8.11.2
+      acorn: 8.11.3
       pathe: 1.1.2
-      pkg-types: 1.0.3
-      ufo: 1.3.2
+      pkg-types: 1.1.0
+      ufo: 1.5.3
 
   /motion@10.17.0:
     resolution: {integrity: sha512-yBHYkrnJRiomuo88YQzG/v+nzFXKNlKw/Hh7uy8AV7nrYHnE07O6PEECShGbFmZvLrAOGc9qKzEDYmspDYjNWw==}
@@ -9059,7 +9057,7 @@ packages:
       listhen: 1.5.5
       magic-string: 0.30.7
       mime: 3.0.0
-      mlly: 1.4.0
+      mlly: 1.7.0
       mri: 1.2.0
       node-fetch-native: 1.6.1
       ofetch: 1.3.3
@@ -9499,7 +9497,7 @@ packages:
       klona: 2.0.6
       knitwork: 1.0.0
       magic-string: 0.30.7
-      mlly: 1.4.0
+      mlly: 1.7.0
       nitropack: 2.8.1(@upstash/redis@1.28.3)
       nuxi: 3.10.0
       nypm: 0.3.6
@@ -10087,7 +10085,14 @@ packages:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
     dependencies:
       jsonc-parser: 3.2.0
-      mlly: 1.4.0
+      mlly: 1.7.0
+      pathe: 1.1.2
+
+  /pkg-types@1.1.0:
+    resolution: {integrity: sha512-/RpmvKdxKf8uILTtoOhAgf30wYbP2Qw+L9p3Rvshx1JZVX+XQNZQFjlbmGHEGIm4CkVPlSn+NXmIM8+9oWQaSA==}
+    dependencies:
+      confbox: 0.1.7
+      mlly: 1.7.0
       pathe: 1.1.2
 
   /plop@4.0.1:
@@ -11656,7 +11661,7 @@ packages:
   /strip-literal@1.3.0:
     resolution: {integrity: sha512-PugKzOsyXpArk0yWmUwqOZecSO0GH0bPoctLcqNDH9J04pVW3lflYE0ujElBGTloevcxF5MofAOZ7C5l2b+wLg==}
     dependencies:
-      acorn: 8.11.2
+      acorn: 8.11.3
 
   /strip-literal@2.0.0:
     resolution: {integrity: sha512-f9vHgsCWBq2ugHAkGMiiYY+AYG0D/cbloKKg0nhaaaSNsujdGIpVXCNsrJpCKr5M0f4aI31mr13UjY6GAuXCKA==}
@@ -12113,6 +12118,9 @@ packages:
   /ufo@1.3.2:
     resolution: {integrity: sha512-o+ORpgGwaYQXgqGDwd+hkS4PuZ3QnmqMMxRuajK/a38L6fTpcE5GPIfrf+L/KemFzfUpeUQc1rRS1iDBozvnFA==}
 
+  /ufo@1.5.3:
+    resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
+
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
@@ -12145,7 +12153,7 @@ packages:
       '@antfu/utils': 0.7.7
       defu: 6.1.4
       jiti: 1.21.0
-      mlly: 1.4.0
+      mlly: 1.7.0
     dev: true
 
   /uncrypto@0.1.3:
@@ -12154,9 +12162,9 @@ packages:
   /unctx@2.3.1:
     resolution: {integrity: sha512-PhKke8ZYauiqh3FEMVNm7ljvzQiph0Mt3GBRve03IJm7ukfaON2OBK795tLwhbyfzknuRRkW0+Ze+CQUmzOZ+A==}
     dependencies:
-      acorn: 8.11.2
+      acorn: 8.11.3
       estree-walker: 3.0.3
-      magic-string: 0.30.5
+      magic-string: 0.30.7
       unplugin: 1.6.0
 
   /undici-types@5.26.5:
@@ -12236,13 +12244,13 @@ packages:
     resolution: {integrity: sha512-V9HpXYfsZye5bPPYUgs0Otn3ODS1mDUciaBlXljI4C2fTwfFpvFZRywmlOu943puN9sncxROMZhsZCjNXEpzEQ==}
     dependencies:
       '@rollup/pluginutils': 5.1.0(rollup@4.9.2)
-      acorn: 8.11.2
+      acorn: 8.11.3
       escape-string-regexp: 5.0.0
       estree-walker: 3.0.3
       fast-glob: 3.3.2
       local-pkg: 0.5.0
-      magic-string: 0.30.5
-      mlly: 1.4.0
+      magic-string: 0.30.7
+      mlly: 1.7.0
       pathe: 1.1.2
       pkg-types: 1.0.3
       scule: 1.3.0
@@ -12370,7 +12378,7 @@ packages:
       fast-glob: 3.3.2
       json5: 2.2.3
       local-pkg: 0.4.3
-      mlly: 1.4.0
+      mlly: 1.7.0
       pathe: 1.1.2
       scule: 1.3.0
       unplugin: 1.6.0
@@ -12384,7 +12392,7 @@ packages:
   /unplugin@1.6.0:
     resolution: {integrity: sha512-BfJEpWBu3aE/AyHx8VaNE/WgouoQxgH9baAiH82JjX8cqVyi3uJQstqwD5J+SZxIK326SZIhsSZlALXVBCknTQ==}
     dependencies:
-      acorn: 8.11.2
+      acorn: 8.11.3
       chokidar: 3.5.3
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.6.1
@@ -12489,8 +12497,8 @@ packages:
   /unwasm@0.3.7:
     resolution: {integrity: sha512-+s4iWvHHYnLuwNo+9mqVFLBmBzGc3gIuzkVZ8fdMN9K/kWopCnfaUVnDagd2OX3It5nRR5EenI5nSQb8FOd0fA==}
     dependencies:
-      magic-string: 0.30.5
-      mlly: 1.4.0
+      magic-string: 0.30.7
+      mlly: 1.7.0
       pathe: 1.1.2
       pkg-types: 1.0.3
       unplugin: 1.6.0
