@@ -13,7 +13,7 @@ dsSlug: DS_086_news05-2
 title: Les news web dev pour Mai 2024 - partie 2
 subtitle: 
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1715962149/episode/ART_86_sscbe2.png
-description: Dans cet épisode, nous revenons sur une sélection de conférences en vidéo de l'évènement Devoxx France. Nous parlons également de Tabby, une IA pour coder open-source. D'un retour sur WordPress headless couplé à NextJS. Nous allons également jouer à Doom dans le navigateur. Et nous finirons par quelques outils de développement.
+description: Dans cet épisode, nous revenons sur une sélection de conférences en vidéo de l'évènement Devoxx France. Nous parlons également de Tabby, une IA open-source pour coder. Nous discuterons d’un retour sur WordPress headless couplé à NextJS. Nous allons aussi jouer à Doom dans le navigateur. Et nous finirons par quelques outils de développement.
 videoLink : sNBeqwJ8hPE
 ---
 
