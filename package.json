@@ -23,7 +23,7 @@
         "@nuxtjs/fontaine": "0.4.1",
         "@nuxtjs/tailwindcss": "6.11.3",
         "@pinia/nuxt": "0.5.1",
-        "@tailwindcss/typography": "0.5.10",
+        "@tailwindcss/typography": "0.5.13",
         "@types/rss": "0.0.32",
         "@types/xml2json": "0.11.6",
         "@vueuse/nuxt": "10.7.2",
