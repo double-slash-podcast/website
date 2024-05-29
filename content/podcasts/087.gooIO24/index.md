@@ -13,7 +13,7 @@ dsSlug: DS_087_gooIO24
 title: Google I/O coté web développement
 subtitle: Le nouveau CSS / HTML  dans les navigateurs
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1716974875/episode/ART_87_emwadf.png
-description: 
+description: Un épisode spécial pour parler de la Google IO 2024 coté Web développement. Nous vous faisons un résumé des vidéos et nous faisons le point sur les nouveautés et le niveau d'implémentation dans les navigateurs Web. Avec nous, tenez vous à jour sur les nouvelles feature pour coder toujours mieux et propre !
 videoLink : XXXX
 links: []
 ---
