@@ -135,6 +135,14 @@ Prise en charge : chrome 120, edge 120, firefox 117, safari 17.2
 
 ### Search element
 
+```
+<search>
+  <label for="site-search">Search Site:</label>
+  <input type="search" id="site-search" name="q">
+  <button type="submit">Search</button>
+</search>
+```
+
 Prise en charge : chrome 118, edge 118, firefox 118, safari 17
 
 ### Responsive vidéo
