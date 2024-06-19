@@ -10,8 +10,8 @@ episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_088_newsJuin24
-title: News juin
-subtitle: Les news web dev pour Juin 2024
+title: Les news web dev pour Juin 2024
+subtitle: Épisode new web développement pour juin 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1718790912/episode/ART_88_mok0yn.png
 description: Dans cet épisode de news pour juin 2024, nous allons évoquer un éditeur boosté à l'IA, une alternative à copilot, un tout petit paas, les nouveautés de Safari 18, un peu de CSS et 2 utilisations insolites de SQLite.
 videoLink : H8ULF_TUf9Y
