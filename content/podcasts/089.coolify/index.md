@@ -1,5 +1,5 @@
 ---
-publicationDate: 3 Jul 2024
+publicationDate: 1 Jul 2024
 status: published
 author: Double Slash
 categories:
@@ -10,27 +10,31 @@ episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_089_coolify
-title: Coolify, la solution d'auto-hébergement ultime ?
-subtitle: Dites adieu aux PAAS payant
+title: PaaS, déployer et héberger les Web Applications avec Coolify
+subtitle: Prenez le contrôle avec votre propre Paas
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1719681217/episode/ART_89_ypup7l.png
-description: 
+description: Un épisode dans lequel nous allons aborder dans un premier temps la définition d'un PaaS, ses avantages et ses inconvénients. Ensuite, nous orienterons rapidement la discussion vers une solution auto-hébergeable permettant de déployer et de contrôler ses applications Web. Coolify est une solution open-source pour la gestion des applications et leur déploiement. La solution propose également une version cloud pour éviter la partie installation. Découvrons ensemble Coolify.
 videoLink : _bOr0sKMzcs
-links:
-  []
+links: []
 ---
-## Coolify, la solution d'auto-hébergement ultime ?
+## Première partie sur la définition d'un PaaS
 
-### Découverte de Coolify : La Solution Open Source pour Auto-héberger vos Applications
+Un Platform as a Service (PaaS) est un modèle de service cloud qui fournit aux développeurs une plateforme complète pour créer, déployer et gérer des applications sans se soucier de l'infrastructure sous-jacente. Il offre des outils de développement, de test et de déploiement intégrés, permettant un gain de temps et une meilleure collaboration. Les avantages incluent la facilité d'évolutivité et la réduction des coûts d'infrastructure, tandis que les inconvénients peuvent inclure une dépendance accrue au fournisseur et des possibilités de personnalisation limitées.
 
 Dans l'univers du développement web, la facilité de déploiement des applications est cruciale. Les Plateformes en tant que Service (PaaS) comme Vercel ou Netlify ont simplifié cette tâche, permettant aux développeurs de lancer rapidement leurs projets sans se soucier de la configuration des serveurs. Cependant, ces solutions présentent des limitations, notamment en termes de coûts qui peuvent rapidement s'accumuler à mesure que vos projets grandissent.
 
 Dans notre dernier épisode de Double Slash, nous avons exploré une alternative prometteuse : Coolify. Cette plateforme open source offre la possibilité d'auto-héberger vos applications, vous donnant le contrôle total tout en gardant une simplicité d'utilisation grâce à une interface graphique intuitive.
 
-#### Qu'est-ce que Coolify ?
+## Qu'est-ce que Coolify ?
 
-Coolify est une solution qui se positionne entre les services PaaS traditionnels et la gestion complète de vos serveurs. Elle permet de déployer et gérer vos applications de manière autonome sur votre propre serveur, sans les complications habituelles liées à cette approche. L'installation de Coolify se fait via une simple commande SSH, et une fois en place, elle offre une expérience utilisateur comparable à celle des plateformes PaaS populaires.
+Coolify est une solution qui se positionne entre les services PaaS traditionnels et la gestion complète de vos serveurs. Elle permet de déployer et gérer vos applications de manière autonome sur votre propre serveur, sans les complications habituelles liées à cette approche. 
 
-#### Avantages de Coolify
+Pour la version self-hosted (auto-hébergée), l'installation de Coolify se fait via une simple commande SSH, et une fois en place, elle offre une expérience utilisateur comparable à celle des plateformes PaaS populaires.
+
+Coolify propose également une version Cloud pour une somme modique. 5 dollars pour pouvoir gérer 2 serveur. Cela supprime la gestion de Coolify et permet également de supporter le projet.
+
+
+## Avantages de Coolify
 
 1. **Contrôle Complet :** Contrairement aux PaaS où vous êtes souvent limité par les configurations et les prix imposés, Coolify vous permet d'utiliser votre propre serveur. Cela signifie que vous pouvez optimiser les coûts et les performances selon vos besoins réels.
 
@@ -42,11 +46,11 @@ Coolify est une solution qui se positionne entre les services PaaS traditionnels
 
 5. **Sécurité et Conformité :** Héberger vos applications sur votre propre serveur vous donne également un contrôle complet sur la sécurité et la conformité, un aspect crucial surtout si vous gérez des données sensibles.
 
-#### Comment ça marche ?
+## Comment ça marche ?
 
 Le processus est simple : après avoir installé Coolify sur votre serveur, vous connectez vos dépôts GitHub (ou tout autre gestionnaire de version). Coolify automatise le processus de déploiement chaque fois que vous poussez de nouveaux changements. De plus, il gère les certificats SSL, les noms de domaine et même les aperçus des pull requests, rendant le processus de développement et de déploiement transparent et efficace.
 
-#### Conclusion
+## Conclusion
 
 Coolify représente une excellente alternative pour ceux qui cherchent à combiner la simplicité des PaaS avec la flexibilité et le contrôle de l'auto-hébergement. Que vous soyez une petite startup ou un développeur indépendant, Coolify offre les outils nécessaires pour gérer efficacement vos applications sans les coûts prohibitifs des plateformes traditionnelles.
 
