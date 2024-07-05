@@ -15,8 +15,7 @@ subtitle: Actualité du dev web
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1714581775/episode/ART_85_xvcybj.png
 description: Dans cette épisode, nous allons évoquer un site qui vous permet de comparer le code des principaux frameworks front, de la sortie de ReactJS 19 en bêta, du changement de licence de Redis, de la sortie de node.js 22, d'un nouveau registre de package nommé JSR, d'une librairie de component React et Tailwind et de comment transformer un vieux site WordPress en simple site statique.
 videoLink : E_5a_-KqxyY
-links:
-  []
+tags: ["react","redis","remix","jsr"]
 ---
 ### Comparer le code des frameworks
 

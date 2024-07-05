@@ -15,7 +15,7 @@ subtitle: Épisode de Noël 2023 spécial news.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1703095706/episode/ART_77_newsnoel23_dltycu.png
 description: Un épisode de news pour Noël 2023. Nous évoquons dans cet épisode plus court que d'habitude. La version 3.4 de Tailwind CSS. Storybook qui prend en charge les RSC dans sa version 8 alpha. Tastejs, une app développée sous différents frameworks. Enhance, un framework méconnu tout mignon ! Et json Hero, un outil pour visualiser les données JSON.
 videoLink : ezoC4vessZs
-links: []
+tags: [storybook,tailwindcss,sshx]
 ---
 
 ## Tailwind CSS

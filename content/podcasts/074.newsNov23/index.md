@@ -15,7 +15,7 @@ subtitle: Un épisode news pour novembre 2023 sur les dernières conférences et
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1700291224/ec4f4ef3-ad08-4945-8aab-cae563411170_nabun7.jpg
 description: Un épisode news pour novembre 2023. On parle des dernières conférences en cette fin d'année, la Next JS Conf, Open AI. Mais aussi le retour en force d'Angular. Et aussi des tools et des tips CSS.
 videoLink : Bx_358U49Xg
-links: []
+tags: [next,remix,angular,ia,laravel,animation css,rust,linter]
 ---
 ### Next JS Conf
 

@@ -15,8 +15,7 @@ subtitle: Actu
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1702466435/episode/ART_76_news12_23_elckdx.png
 description: Un épisode de news pour décembre 2023, le dernier de l’année 2023. Nous évoquons dans cet épisode les dernières sorties, Vite JS, Astro, PHP. Nous parlons des écosystèmes JS et PHP. Vous retrouverez également des articles et outils à utiliser au quotidien pour vos développements.
 videoLink : EJB4Po5s7ak
-links:
-  []
+tags: [vite,astro,php,rust]
 ---
 
 ## Vite !!

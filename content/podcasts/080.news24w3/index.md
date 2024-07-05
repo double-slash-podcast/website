@@ -15,8 +15,8 @@ subtitle: Épisode news numéro 3 pour janvier 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1706043639/episode/ART_80_yfrelp.png
 description: Troisième épisode de news pour janvier 2024 ! Nous évoquons les nouveautés CSS, la sortie de la version 6 du framework JS Adonis, la version 14.1 de NextJS, le support de scrollbar width et color dans Chrome 121 et les inquiétudes de la communauté React pour l’avenir de React.
 videoLink : R3x-SSX3KBU
-links:
-  []
+tags: [css,adonis,nextjs]
+
 ---
 ## Les 5 nouveautés CSS qu'un dev front doit maîtriser en 2024
 

@@ -16,6 +16,7 @@ episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1716974875/
 description: Un épisode spécial pour parler de la Google IO 2024 coté Web développement. Nous vous faisons un résumé des vidéos et nous faisons le point sur les nouveautés et le niveau d'implémentation dans les navigateurs Web. Avec nous, tenez vous à jour sur les nouvelles feature pour coder toujours mieux et propre !
 videoLink : SZo8EnAEM4k
 links: []
+tags: ["googleIO","navigateurs", "api web"]
 ---
 # Retour sur la Google IO coté web développement :
 

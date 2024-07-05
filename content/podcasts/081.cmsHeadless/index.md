@@ -15,7 +15,8 @@ subtitle: Comment bien choisir son CMS
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1707292580/episode/ART_81_vtawjb.png
 description: Le sujet des CMS Headless est très vaste. Les solutions disponibles sont impressionnantes. Il y a une quantité d’acteurs importants. Et surtout, les offres sont toutes différentes. En mode Saas, auto-hébergé, Git based ! Comment faire son choix.
 videoLink : OrpmNlsQvXo
-links: []
+tags: ["cms","cms headless"]
+
 ---
 Sans parler des fonctionnalités, multilingue, gestion des accès, preview…
 

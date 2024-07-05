@@ -15,7 +15,7 @@ subtitle: Un épisode news pour septembre 2023 avec un nouveau gros acteur dans 
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1694509731/episode/ART_70_newsSept_ttfzcs.png
 description: Un épisode news pour septembre 2023. On parle de la sortie de Bun, la grosse bombe de la rentrée. Mais aussi de la V3 d'Astro, de la fin probable de Gatsby, de React encore et toujours, de Meilisearch qui intègre la puissance de l'AI, des prochaines versions des browsers, de librairies de components.
 videoLink : t5aNLrepTiY
-links: []
+tags: [bun,astro,gatsby,vercel,react,ia,search]
 ---
 ## Bun, le toolkit tout en un !
 

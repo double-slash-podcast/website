@@ -15,7 +15,7 @@ subtitle: Méthodes et outils pour la création et l'envoi d'emails
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1701157471/ART_75_email_mytqlw.png
 description: Dans cet épisode, nous allons évoquer le côté obscur de notre métier. Faire du développement à destination des emails ! Nous allons commencer par la partie templating, puis nous évoquerons les plateformes en lignes, les frameworks, les pièges à éviter et nous finirons par un retour d’expérience dans le secteur du e-commerce.
 videoLink : uc6vJ7ujlLE
-links: []
+tags: [email,design]
 ---
 
 ## La problématique concernant le templating des emails
