@@ -27,6 +27,7 @@ links:
     { title: 'Sveltkit 1.0', url: 'https://svelte.dev/blog/announcing-sveltekit-1.0'},
     { title: 'Supabase Launch Week 6', url: 'https://supabase.com/blog/launch-week-6-wrap-up'}
   ]
+tags: [tuto, vite,svelte]
 ---
 ## Les dernières releases
 

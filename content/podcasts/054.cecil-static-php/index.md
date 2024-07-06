@@ -26,6 +26,7 @@ links:
       url: 'https://arnaudligny.fr',
     },
   ]
+tags: [php, static, jamstack]
 ---
 
 ## Cecil PHP

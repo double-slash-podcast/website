@@ -58,6 +58,7 @@ links:
       url: 'https://fr.wikipedia.org/wiki/David_Heinemeier_Hansson',
     },
   ]
+tags: [ruby, rubyonrails]
 ---
 ## Ruby on Rails
 

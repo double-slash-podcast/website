@@ -66,6 +66,7 @@ links:
       url: 'https://zod.dev',
     },
   ]
+tags: [static,devops,css,devtools]
 ---
 
 ## Quoi de neuf dernièrement ?

@@ -16,8 +16,7 @@ guid: d8ed6a024ed27ed3ea1b218ff3714763
 episodeArtwork:
 description: Un épisode en format "news". Nous revenons sur les différentes news des dernières semaines que nous avons retenues
 videoLink : jJT14P0u5E8
-links:
-  []
+tags: [php, css,js,typescript,devops]
 ---
 
 ## TypeScript fête ses 10 ans

@@ -54,6 +54,7 @@ links:
       url: 'https://tutorial.docusaurus.io/',
     },
   ]
+tags: [docusaurus,documentation]
 ---
 ## Docusaurus
 
