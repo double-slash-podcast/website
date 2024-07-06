@@ -118,6 +118,7 @@ links:
       url: 'https://upstash.com/',
     }
   ]
+tags: [devops,database]
 ---
 ## Comprendre et bien choisir sa base de données en 2023
 

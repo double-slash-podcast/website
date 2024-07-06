@@ -15,7 +15,7 @@ subtitle: Un épisode news pour juin 2023 un peu plus long que d'habitude pour p
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1687790575/episode/ART_65_news_juin_23_x7lgq4.png
 description: Un épisode news pour juin 2023 un peu plus long que d'habitude pour prolonger le plaisir. Nous allons évoquer Apple qui s'occupe enfin de Webkit (Safari), de React.js qui se retrouve dans la polémique avec les servers components. Évidemment de CSS. De services d'envoi d'emails. De Netlify connect. De PHP qui prépare sa version 8.3. De Zod, de Javascript, etc.. Un épisode riche en news !
 videoLink : vIf3cOQnI1Y
-tags: []
+tags: [devtools,css,php,devops,js]
 ---
 ### Safari et Apple APNS
 
