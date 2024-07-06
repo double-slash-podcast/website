@@ -15,7 +15,7 @@ subtitle: Snipcart est une solution qui vous permet de mettre en place rapidemen
 guid: 314ab0a29bfe296e6123d984df41c97b
 description: Dans cet épisode, nous allons parler d'un service ecommerce qui vous permet de mettre en place rapidement une boutique en ligne sur n'importe quel système. Snipcart est une solution qui se place entre les systèmes monolithiques du type Prestashop ou Magento et les services API First du type Commerce JS ou Swell.
 videoLink:
-links: []
+tags: [ecommerce,devtools,static]
 ---
 
 Lancé il y a environ 7 ans, Snipcart en est à sa troisième version. Cette troisième version lancée début 2020 offre une solution complète pour mettre en place rapidement une solution ecommerce.

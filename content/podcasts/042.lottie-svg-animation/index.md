@@ -34,6 +34,8 @@ links:
       url: 'https://lottielab.com/',
     }
   ]
+tags: [animation,lottie]
+
 ---
 
 

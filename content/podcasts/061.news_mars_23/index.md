@@ -16,7 +16,7 @@ subtitle: Épisode spécial news pour mars 2023, nous évoquons un retour d'exp�
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,q_80:444,w_300/v1679433180/episode/ART_61_news03_h42zrh.png
 description: Dans cet épisode spécial news pour mars 2023, nous évoquons un retour d'expérience avec Astro, Strapi qui sort une version cloud et ajuste ses prix, TypeScript 5.0, WordPress Radicle, la nouvelle doc React, etc..
 videoLink : PifnPdrBiXU
-links: []
+tags: []
 ---
 
 ## Astro, retour d'expérience

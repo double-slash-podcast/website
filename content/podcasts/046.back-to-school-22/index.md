@@ -15,8 +15,7 @@ dsSlug: DS_046_news_sept22
 guid: 7e81ee153d82fb165e2112919c1b9bba
 description: Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2022.
 videoLink : D1IJ08_pYhA
-links:
-  []
+tags: [bun,deno,devops]
 ---
 ## Chrome support Web Framework
 

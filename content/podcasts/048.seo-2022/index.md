@@ -15,8 +15,7 @@ dsSlug: DS_048_SE0_22
 guid: b27962835b47b85a2bb5ed7d1b066a38
 description: Un épisode avec un invité, Dan Bernier, consultant SEO Inéolab. Avec lui, nous allons parler de SEO et comprendre comment rendre son site indexable et référencé dans les résultats de recherche.
 videoLink : rnJgwpqcB7M
-links:
-  []
+tags: [seo]
 ---
 
 Dans cet épisode nous allons parler de SEO. Dan Bernier va nous expliquer comment bien faire du SEO en 2022.

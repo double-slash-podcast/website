@@ -15,7 +15,7 @@ subtitle: Un épisode "explore" dans lequel Alex nous présente l'ORM Prisma.
 guid: e5cc08fb14a96639f9b6a98f199d47f8
 description: Un épisode "explore" dans lequel Alex nous présente l'ORM Prisma.
 videoLink:
-links: []
+tags: [prisma,orm,node]
 ---
 
 - Le son de Patrick est pas terrible, toutes nos escuses pour ça. Nous allons améliorer ça dans les prochains épisodes.

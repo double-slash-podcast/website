@@ -15,7 +15,7 @@ subtitle: Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe pou
 guid: e8fead5a9f5e8f1d4ae779d654509d3b
 description: Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe pour parler du service Bitdev. Un service qui vous facilite le quotidien pour la gestion de vos components.
 videoLink:
-links: []
+tags: [bit,angular,web component]
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://www.youtube.com/watch?v=3TFpuKHMdb4) et [Twitch](https://www.twitch.tv/doubleslashpodcast/video/1221756050)

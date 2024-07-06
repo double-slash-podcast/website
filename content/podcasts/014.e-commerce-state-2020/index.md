@@ -15,7 +15,7 @@ subtitle: État des lieux des différentes plateformes et solutions e-commerce e
 guid: 3dff15e6db69929b871c5393172a91d8
 description: Dans ce nouvel épisode, nous allons faire un état des lieux des différentes plateformes et solutions e-commerce en 2020. Faut-il encore utiliser les CMS les plus connus (Magento, Prestashop, WooCommerce) ou passer sur des solutions SASS (Shopify..).
 videoLink:
-links: []
+tags: [ecommerce]
 ---
 
 Notre invité, Aurélien Lavorel, est un expert e-commerce. Il nous donne ses avis sur les plateformes disponibles, vers quelle forme de plateforme va se diriger le e-commerce et des conseils pour lancer un e-commerce en 2020.

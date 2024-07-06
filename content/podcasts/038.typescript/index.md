@@ -34,6 +34,7 @@ links:
       url: "https://www.typescriptlang.org/cheatsheets"
     }
   ]
+tags: [js,TypeScript]
 ---
 
 

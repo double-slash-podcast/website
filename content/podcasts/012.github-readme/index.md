@@ -15,7 +15,7 @@ subtitle: Comment créer un portfolio automatiquement avec la nouvelle fonctionn
 guid: d938da08dcb61e54ab6ae1c9706c80e2
 description: Dans cet épisode, nous allons parler d'une fonctionnalité sur github.com qui permet d'améliorer sa page d'accueil GitHub.
 videoLink:
-links: []
+tags: [git,github,devtools]
 ---
 
 En créant un repository avec le même nom que votre profil et en y ajoutant un fichier README, vous pouvez améliorer votre profil GitHub.

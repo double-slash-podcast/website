@@ -14,7 +14,7 @@ categories:
   - Technology
 guid: d6d49d9bf21bc895cc67e4af72016743
 description: Le premier épidode double slash, l'épisode "Pilote", qui présente l'équipe et le podcast. Pourquoi un podcast, quels sujets allons-nous développer et les thèmes principaux du podcast.
-links: []
+tags: [presentation,alex,patrick]
 ---
 
 ::authors

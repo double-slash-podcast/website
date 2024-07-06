@@ -21,6 +21,7 @@ links: [
     url:'https://tsh.io/state-of-frontend/'
   }
 ]
+tags: [state of front, js, css]
 ---
 
 Sinon, vous pouvez vous rendre directement sur le lien de la page dédiée aux résultats : [State of Front-end](https://tsh.io/state-of-frontend/)

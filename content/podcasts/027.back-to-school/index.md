@@ -15,7 +15,7 @@ subtitle: Un épisode de rentrée en format "news". Nous revenons sur les annonc
 guid: 8c99b7f6333d2d920abfa786ffb827c9
 description: Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2021.
 videoLink:
-links: []
+tags: [github,vue,nuxt,astro]
 ---
 
 ## GitHub Copilot

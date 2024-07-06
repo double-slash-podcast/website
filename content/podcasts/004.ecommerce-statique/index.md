@@ -15,7 +15,7 @@ categories:
 guid: d7c3aec02d1fd799875c4cc1143a1f68
 description: Dans ce podcast, nous parlons d'un retour d'expérience sur la création d'un site ecommerce avec SnipCart et Gatsby JS. Avec le confinement, les commerçants ont dû fermer leurs portes subitement mi-mars. Avec le confinement qui traîne en longueur, certaines boutiques essayent de s’adapter et de rebondir en tentant le commerce en ligne. Retour sur un site ecommerce statique développé pour une boutique/Salon de thé de Lyon.
 videoLink:
-links: []
+tags: [static,ecommerce]
 ---
 
 [SnipCart](https://snipcart.com/)

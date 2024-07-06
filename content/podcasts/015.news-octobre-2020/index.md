@@ -15,7 +15,7 @@ subtitle: Nous allons revenir sur les dernières sorties. Sur le passage de la d
 guid: 085209868df93d54ab3b514a48b426d8
 description: "Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique : Hugo, Eleventy, Jekyll, Gatsby, Next, Nuxt."
 videoLink:
-links: []
+tags: [webpack,react,next,angular]
 ---
 
 ## Webpack 5

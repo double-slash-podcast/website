@@ -22,6 +22,8 @@ links:
       url: 'https://threejs-journey.com'
     },
   ]
+tags: [animation,threejs]
+
 ---
 ## Three.js
 

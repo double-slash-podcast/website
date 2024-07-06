@@ -15,7 +15,7 @@ subtitle: Comment faire un audit des core web vitals en 2021 et comment amélior
 guid: 53da8f3c8d7ba2c6130e200960c65de3
 description: En juin 2021, Google introduit de nouveaux indicateurs de performance pour les sites web. Ils annoncent qu'ils sont désormais pris en compte dans les critères pour le classement dans le résultat de recherches. On constate une panique générale des propriétaires de site web alors que Google avait prévenu depuis un moment que la vitesse de chargement serait de plus en plus prise en compte.
 videoLink:
-links: []
+tags: [core web vitals, seo, performance]
 ---
 
 Si vous êtes propriétaire d'un site WordPress créé avec un builder, vous pouvez vous inquiéter ! Mais attention, cela peut toucher tous les sites. N'oubliez jamais, rien n'est automatique et votre site sera rapide uniquement si vous faites en sorte qu'il le soit !

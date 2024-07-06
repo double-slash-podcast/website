@@ -26,6 +26,8 @@ links:
       url: 'https://developers.cloudflare.com/workers/learning/how-workers-works'
     }
   ]
+tags: [serverless,edge,devops]
+
 ---
 
 ## Le serverless

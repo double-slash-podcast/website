@@ -15,7 +15,7 @@ subtitle: Alpine JS est un framework léger (moins de 9kb) qui vient se placer e
 guid: 7de0a7e693b772b0615747c7c5e3a0f8
 description: Dans cet épisode, nous allons parler d'un framework innovant qui apporte un peu de nouveauté dans le monde des frameworks Javascript. Alpine JS est un framework léger (moins de 9kb) qui vient se placer entre les frameworks/libraries complets type Vue JS et jQuery/Vanilla JS.
 videoLink:
-links: []
+tags: [js, alpine]
 ---
 
 On peut l'utiliser facilement en insérant le script Javascript dans la page ou en installant le package npm.

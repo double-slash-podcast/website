@@ -15,7 +15,7 @@ subtitle: Découvrez les nouveautés de Svelte 4, Meilisearch, Playwright, AWS C
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1682523484/episode/ART_63_news4-23_cphonc.png
 description: Bienvenue dans cet épisode de notre podcast dédié aux dernières actualités en développement web et technologie. Nous allons notamment parler de l'annonce de Svelte 4 passant sur pnpm au lieu de npm, du nouveau site de Meilisearch basé sur Next.JS 13, TailwindCSS et Radix_UI, ainsi que de la sortie de Playwright en mode UI. Nous verrons également comment AWS CodeWhisperer se positionne par rapport à GitHub Copilot et découvrirons de nouveaux outils tels que Infisical et FFFuel. Enfin, nous examinerons deux articles récents qui proposent une réflexion intéressante sur l'avenir du développement web "The End of Frontend Development" de Josh Comeau et "Is React the New WordPress?" de Sean C. Davis.
 videoLink : SbBrvUfOR1c
-links: []
+tags: []
 ---
 
 ## Les news rapides

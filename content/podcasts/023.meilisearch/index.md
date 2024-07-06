@@ -15,7 +15,7 @@ subtitle: 'Un épisode avec 2 invités : Thomas cofondateur et Marin développeu
 guid: e514d4fc0073c9bb7ad8625d7a190e9a
 description: 'Un épisode avec 2 invités : Thomas cofondateur et Marin développeur Core de MeiliSearch. Nous allons parler de ce moteur de recherche open source et du langage Rust.'
 videoLink:
-links: []
+tags: [meilisearch,search]
 ---
 
 [MeiliSearch](https://www.meilisearch.com/) est un moteur de recherche open source.

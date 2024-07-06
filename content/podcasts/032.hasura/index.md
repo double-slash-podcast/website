@@ -15,7 +15,7 @@ subtitle: Alex nous fait découvrir Hasura, un service qui permet de monter une 
 guid: 232290c1a57fb93aac34811ec55f41ca
 description: Alex nous parle d'Hasura, un service qui permet de monter une API GraphQL à partir d'une base de données.
 videoLink:
-links: []
+tags: [hasura, graphql]
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://youtu.be/0fK57NRHqPY)

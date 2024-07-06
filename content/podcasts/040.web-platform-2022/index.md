@@ -36,6 +36,7 @@ links:
       url: 'https://developer.apple.com/videos/play/wwdc2022/10048',
     },
   ]
+tags: [googleIO,WWDC]
 ---
 
 **Les slides utilisés pour l'épisode [https://slides.com/goodmotion/state-of-web-platform](https://slides.com/goodmotion/state-of-web-platform)**

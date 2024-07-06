@@ -15,7 +15,7 @@ subtitle: Dans cet épisode, nous allons faire le point sur les Progressive Web 
 guid: 505f20a07aab6d5fdfa9e3bdd41ec676
 description: Dans cet épisode assez technique, nous allons faire le point sur les Progressive Web App en 2020. Définir ce qu'est une PWA, les principales features d'une PWA. Puis, pourquoi choisir une PWA au lieu d'une application native. Et enfin, revenir sur les blocages de Safari par rapport aux PWA
 videoLink:
-links: []
+tags: [pwa]
 ---
 
 ## Notre invitée pour l'épisode :
