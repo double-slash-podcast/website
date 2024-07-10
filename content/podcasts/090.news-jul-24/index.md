@@ -72,7 +72,7 @@ Server Island = HTML + partial server part
 
 ## Alert Polyfill
 
-- [https://blog.cloudflare.com/automatically-replacing-polyfill-io-links-with-cloudflares-mirror-for-a-safer-internet/](Cloudflare)
+- https://blog.cloudflare.com/automatically-replacing-polyfill-io-links-with-cloudflares-mirror-for-a-safer-internet/
 - https://twitter.com/d_feldman/status/1806079491833270773?s=61&t=D14HgGkUervOKSGk3xETlQ
 
 ## Article sur Laravel vs Symfony
