@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: XXXX
+duration: 1938
 episodeNumber: 91
 episodeType: full
 explicit: false
@@ -15,13 +15,6 @@ subtitle: News de l&#x27;été
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1721816714/episode/ART_91_tbfxmf.png
 description: 
 videoLink : SXbx-AR5h3o
-links:
-  [
-    {
-      title: '',
-      url: '',
-    },
-  ]
 ---
 ## Summer News 24
 
