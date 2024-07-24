@@ -15,7 +15,7 @@ subtitle: Un passage en revue des news et releases de nos outils et technologies
 guid: 0479679fbfac701b8757a41fb3422d20
 description: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines.
 videoLink:
-links: []
+tags: [devops,react,astro,cms]
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [le Youtube de DoubleSlash](https://youtu.be/qH6m3WxUq9k)

@@ -15,7 +15,7 @@ subtitle: VueJS et NuxtJS, nous offres des nouvelles versions pour Noël !
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1704349539/episode/ART_78_mute8q.png
 description: Le premier épisode de l'année 2024 ! La première série de nos épisodes codés en Rust. Des épisodes plus rapides mais beaucoup plus frais ! On évoque dans cet épisode, les mises à jour de Vue et de Nuxt entre les fêtes de fin d’année. Next qui teste LightningCSS. Et les framework monolithes qui se remettent au front.
 videoLink : 8GQ1Yg-jjW8
-links: []
+tags: [vue,nuxt,nextjs,php,symphony,rails,linter]
 ---
 ### Une nouvelle version de VueJS quelques jours avant la fin de l'année :
 

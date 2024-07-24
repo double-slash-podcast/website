@@ -16,6 +16,7 @@ episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1719681217/
 description: Un épisode dans lequel nous allons aborder dans un premier temps la définition d'un PaaS, ses avantages et ses inconvénients. Ensuite, nous orienterons rapidement la discussion vers une solution auto-hébergeable permettant de déployer et de contrôler ses applications Web. Coolify est une solution open-source pour la gestion des applications et leur déploiement. La solution propose également une version cloud pour éviter la partie installation. Découvrons ensemble Coolify.
 videoLink : _bOr0sKMzcs
 links: []
+tags: ["coolify", "hébergement", "PaaS"]
 ---
 ## Première partie sur la définition d'un PaaS
 

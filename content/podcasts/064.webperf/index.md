@@ -15,7 +15,7 @@ subtitle: La Web performance et son impact en 2023.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1684265659/episode/ART_64_webperf_btpfzd.png
 description: Nous avions déjà fait des épisodes où nous parlions de Web Performance par rapport aux Core Web Vitals de Google et également des épisodes sur les animations CSS et JS. Mais il nous manquait un épisode dédié sur la Web Performance en général. C'est chose faite avec cet épisode.
 videoLink : oe_aFmDoScU
-links: []
+tags: [performance,core web Vitals]
 ---
 Dans cet épisode, nous avons le plaisir de recevoir Eroan Boyer qui est spécialisé en Web Performance. Eroan est le fondateur de l'agence [Agence Web Performance](https://agencewebperformance.fr/).
 

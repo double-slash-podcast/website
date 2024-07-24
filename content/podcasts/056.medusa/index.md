@@ -26,6 +26,7 @@ links:
       url: 'https://github.com/medusajs',
     },
   ]
+tags: [medusajs,ecoomerce,headless]
 ---
 
 ## Medusa JS

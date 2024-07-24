@@ -15,7 +15,7 @@ subtitle: Alex nous fait découvrir le Web3 et nous explique les fondamentaux de
 guid: 86f360be3ff581e2236173ba0ed482d3
 description: Alex nous fait découvrir le Web3 et nous explique les fondamentaux de ce web décentralisé prometteur.
 videoLink:
-links: []
+tags: [web3,blockchain]
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://youtu.be/A8yk7NT__HM)

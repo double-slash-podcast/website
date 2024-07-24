@@ -15,7 +15,7 @@ categories:
 guid: 3bec175544dbf2be451962b6645868df
 description: Petit retour sur la conférence annuelle de GitHub, les nouvelles fonctionnalités et autres outils liés à GitHub.
 videoLink:
-links: []
+tags: [github,git,devtools]
 ---
 
 ### GitHub Satellite

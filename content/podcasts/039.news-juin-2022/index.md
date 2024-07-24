@@ -15,6 +15,7 @@ subtitle: Un passage en revue des news et releases de nos outils et technologies
 guid: 0f919ee6ee5c883b1253f2c584915dc9
 description: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
 videoLink: eTBTWDVQ8EQ
+tags: [tauri, cypress,fastify,deno,wordpress]
 ---
 
 #### Les news évoquées durant l'épisode :

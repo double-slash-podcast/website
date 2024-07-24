@@ -15,7 +15,7 @@ subtitle: L'actualité du développement Web
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1710311967/episode/ART_83_srvzdf.png
 description: Un épisode pour parler d’Apple qui fait marche arrière devant la commission européenne, de Rust de plus en plus présent dans nos outils, de la version de Tailwind 4 qui arrive en version alpha, de Laravel 11, d’Astro qui n’arrête plus de nous surprendre et pleins d’autres choses.
 videoLink : khiumNmZf4o
-links: []
+tags: ["pwa","tailwindcss","astro","nuxt","shiki", "web core vitals"]
 ---
 ### PWA et Apple
 

@@ -15,7 +15,7 @@ subtitle: Dans cet épisode, nous avons le plaisir de recevoir Sébastien Chopin
 guid: 24879b619ab1bc5eb3a7aabe2bbeb354
 description: Dans cet épisode, nous avons le plaisir de recevoir Sébastien Chopin pour parler du framework Nuxt.JS qui arrive dans sa 3e version prochainement Sébastien Chopin est le cocréateur de Nuxt.JS (l'autre personne est son frère ;)). Avec lui, nous revenons sur l’histoire de la création de Nuxt.JS. Comment, pourquoi il a été créé et l’évolution du framework.
 videoLink:
-links: []
+tags: [nuxt,vue]
 ---
 
 Comment aujourd’hui, la société **NuxtLab**, qui est derrière le projet open source, réussit à se financer pour continuer à développer et promouvoir **Nuxt.JS**.

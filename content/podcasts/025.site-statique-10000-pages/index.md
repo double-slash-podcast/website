@@ -15,7 +15,7 @@ subtitle: Un retour d'expérience sur un projet de site statique qui doit compor
 guid: 2cd0208a7d3c92a5b087e46c77caf5f8
 description: Dans cet épisode, nous allons parler d'un retour d'expérience sur un projet de site statique qui doit comporter un grand nombre de pages.
 videoLink:
-links: []
+tags: [next,static]
 ---
 
 ## Le context

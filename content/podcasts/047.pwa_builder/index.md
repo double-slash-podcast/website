@@ -22,6 +22,8 @@ links:
       url: 'https://www.pwabuilder.com',
     }
   ]
+tags: [pwa]
+
 ---
 Dans cet épisode nous allons parler de PWA Builder, un service qui permet de "compiler" une Progressive Web App dans un package prêt à être publié sur un store d'application mobile.
 

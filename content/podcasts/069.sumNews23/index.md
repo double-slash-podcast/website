@@ -15,7 +15,7 @@ subtitle: Un épisode news été 2023 a écouter sur la plage !
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1690984129/episode/ART_69_summerNews23_z397w5.png
 description: Dans cet épisode spécial news de l’été, nous allons revenir sur la Laracon US 2023 et les principales annonces sur l’écosystème Laravel. Nous évoquerons également Astro 2.9 qui intègre les Views Transition. Nous parlerons de Bases de données avec des services compatibles Edge et des ORM. Nous passerons rapidement sur la Tailwind Connect et les annonces de cette conférence. Nous finirons par quelques news rapides avant de prendre quelques vacances en août. Bonnes vacances et on se retrouve en septembre.
 videoLink : Z-5SxLKhiUY
-links: []
+tags: [php, laravel,js, sqlite,bun, vite,ts]
 ---
 
 ## Laracon US

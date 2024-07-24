@@ -16,6 +16,7 @@ episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1718790912/
 description: Dans cet épisode de news pour juin 2024, nous allons évoquer un éditeur boosté à l'IA, une alternative à copilot, un tout petit paas, les nouveautés de Safari 18, un peu de CSS et 2 utilisations insolites de SQLite.
 videoLink : H8ULF_TUf9Y
 links: []
+tags: ["astro", "cursor", "safari", "tailwind", "nuxt"]
 ---
 ### Cursor, un IDE survitaminé à l’IA, innovation ou bullshit artificiel ?
 

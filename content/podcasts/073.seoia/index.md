@@ -15,6 +15,8 @@ subtitle: Avec Dan Bernier
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1698610790/episode/ART_73_bxnjbq.png
 description: Un épisode dédié au SEO et plus particulièrement sur l’arrivée des IA dans le SEO. Qu’est-ce que cela change. Peut-on tirer parti des IA pour améliorer son SEO. Pouvons-nous générer du contenu de qualité avec les IA ?
 videoLink : HF-707ZQlyU
+tags: [seo,ia]
+
 ---
 ## Les algorithmes lancés par Google en 2023
 - En 2023, il y a eu les confirmations de HelpFull Content avec de nouvelles MAJ.

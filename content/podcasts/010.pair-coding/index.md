@@ -15,7 +15,7 @@ subtitle: Un retour sur l'utilisation de l'extension Live Share pour Visual Stud
 guid: 4a41f9e18d40f062964c77e641140c76
 description: Dans cet épisode, nous faisons un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance. Nous revenons sur quelques actualités concernant les outils web diffusés durant l'été.
 videoLink:
-links: []
+tags: [devtools,ide]
 ---
 
 Notamment la sortie de WordPress 5.5, les évolutions de Next et Nuxt sur la génération de site statique. Petite découverte également, avec Stormkit, un service d'hébergement équivalent à Netlify.

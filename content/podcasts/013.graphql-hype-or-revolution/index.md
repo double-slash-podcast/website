@@ -15,7 +15,7 @@ subtitle: GraphQL est un langage de requête basé sur le protocole HTTP qui a �
 guid: e52e7d625a9a2113b1163230a11925d6
 description: Dans cet épisode, nous allons parler de GraphQL et de REST. GraphQL est un langage de requête basé sur le protocole HTTP qui a été pensé pour une utilisation adapté aux usages actuels.
 videoLink:
-links: []
+tags: [api,graphql]
 ---
 
 Pourquoi avons-nous besoin d'utiliser graphQL dans nos projets, quels sont les avantages et inconvénients par rapport à REST.

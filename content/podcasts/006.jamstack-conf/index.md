@@ -15,7 +15,7 @@ categories:
 guid: b96116a9e855f7620515c606f1464738
 description: JAMStack Conf London 27 mai 2020 Cette année, la conférence JAMStack de Londres est passée complètement online du à la crise du COVID-19. Nous avons assisté à la conférence le 27 mai 2020 et nous vous faisons un petit résumé sur l’événement et les annonces des acteurs présents.
 videoLink:
-links: []
+tags: [statis,jamstack,conference]
 ---
 
 # JAMStack Conf London 27 mai 2020

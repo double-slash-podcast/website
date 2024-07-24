@@ -15,7 +15,7 @@ subtitle: Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en d
 guid: 22904a35fe6a2350abd743a6d02b743b
 description: Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en direct de Montréal (Canada) pour parler de RedwoodJS.
 videoLink:
-links: []
+tags: [redwoodjs]
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://www.youtube.com/watch?v=eEY03v7RBy0)

@@ -15,7 +15,7 @@ subtitle: Découvrez les news CSS, React, Vue, Laravel, WordPress, Deno, etc. du
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1685476143/episode/ART_65_news5_vjvwpr.png
 description: Dans cet épisode de notre podcast, nous abordons les dernières nouveautés dans le monde des navigateurs, telles que la nouvelle propriété CSS `text-wrap balance`, l'exécution des WebContainers sur Safari, iOS et iPadOS, ainsi que la fonctionnalité CSS nesting dans Safari TP et Chrome. Nous discutons également des mises à jour de Qwik, de l'amélioration du support pour Nuxt chez Vercel, des nouvelles fonctionnalités de Next.js et des réactions aux React Server Components. De plus, nous mentionnons les anniversaires de WordPress (20 ans) et les nouvelles ressources dans les mondes de Laravel, CodeSandbox et Deno. Enfin, nous présentons des outils intéressants tels que le pense-bête pour les commandes Git et Spline, une sorte de Figma pour la 3D.
 videoLink : M20SfpkoW7U
-links: []
+tags: [next,vue,deno,devtools]
 ---
 ## Nouveautés Navigateurs
 

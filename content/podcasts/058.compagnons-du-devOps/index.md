@@ -38,6 +38,7 @@ links:
       url: 'https://froggit.fr/',
     },
   ]
+tags: [devops]
 ---
 Avec notre invité, nous allons dans un premier temps, définir ce qu'est le DevOps. Quel est l'intérêt d'avoir un DevOps dans son équipe. Comment se former au DevOps.
 Nous évoquerons également la place actuelle des GAFAM dans nos infrastructures.

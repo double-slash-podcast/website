@@ -15,7 +15,7 @@ subtitle: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur 
 guid: 3e7174a89bd28661bfaa8bbb11022eb2
 description: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur de Strapi, un CMS open source 100% JavaScript
 videoLink:
-links: []
+tags: [cms,strapi,headless]
 ---
 
 [Strapi](https://strapi.io/) est un CMS open source créé il y a environ 7 ans par 3 personnes lors de leurs études. Créé pour des besoins clients à la base, le projet a rapidement vu sa communauté augmentée et suscité un réel intérêt. Ce qui a poussé les créateurs a tenté l'aventure et continué le projet à la fin de leurs études.

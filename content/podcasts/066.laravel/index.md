@@ -34,6 +34,7 @@ links:
       url: 'https://laravel-livewire.com/',
     },
   ]
+tags: [php,laravel]
 ---
 
 ## Laravel, rapide historique

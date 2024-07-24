@@ -14,8 +14,7 @@ subtitle: Un épisode spécial en live pour le cinquantième
 dsSlug: DS_050_live50
 description: Un épisode spécial en live pour le cinquantième épisode du Podcast. Nous revenons sur l'évolution depuis le début et le futur du podcast. Nous répondons aux questions posées sur le chat en direct et les questions posées via twitter.
 videoLink : BIOsPqlePZM
-links:
-  []
+tags: ['50', double slash]
 ---
 
 Un épisode spécial en live pour le cinquantième épisode du Podcast !

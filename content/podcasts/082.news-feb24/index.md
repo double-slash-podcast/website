@@ -15,8 +15,7 @@ subtitle: Actualité du Web
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1708463465/episode/ART_82_fdid7q.png
 description: Épisode news pour février 2024, nous évoquons jQuery en version 4, si, si ! Remix JS sort un mode SPA, Million.js, une nouvelle lib pour gérer les dates, un retour d'expérience sur Next.js et Apple qui veut tuer les PWA.
 videoLink : zbHSRWzczIE
-links:
-  []
+tags: ["jquery","remix","react","pwa"]
 ---
 ## jQuery 4
 

@@ -15,7 +15,7 @@ subtitle: Pourquoi et comment
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1696020556/episode/ART_71_qltppk.png
 description: Un épisode [Remix] sur TailwindCSS. Nous avions déjà fait un épisode sur l'outil TailwindCSS, le numéro 7, sorti en 2020. Comme ce magnifique outil a évolué depuis, nous voulions refaire un épisode dédié pour réexpliquer le fonctionnement et l’écosystème autour de ce dernier.
 videoLink : vAhiMb7YAoo
-links: []
+tags: [css,tailwindcss]
 ---
 
 ## Description de TailwindCSS

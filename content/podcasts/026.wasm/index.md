@@ -15,7 +15,7 @@ subtitle: Découvrir WebAssembly avec Ivan Enderlin
 guid: 23fe8555c6839d85bbcebb7cc21ff48b
 description: Un épisode avec un invité, Ivan Enderlin, co-fondateur de Wasmer. Une runtime open-source pour executer Web Assembly coté serveur.
 videoLink:
-links: []
+tags: [wasm,rust]
 ---
 
 WebAssembly est un type de code qui peut être exécuté dans un navigateur web. Langage de bas niveau, il est proche de l'assembleur et il permet d'atteindre des performances proches des applications natives (par exemple écrites en C/C++) tout en fonctionnant sur le Web. WebAssembly est pensé et conçu pour fonctionner en lien avec JavaScript.

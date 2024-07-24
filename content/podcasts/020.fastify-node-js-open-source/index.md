@@ -15,7 +15,7 @@ subtitle: Un épisode avec notre invité Vincent Le Goff qui contribue activemen
 guid: c0ab9fa68657a38131e5007e376d1b09
 description: Un épisode avec notre invité Vincent Le Goff qui contribue activement au projet Fastify. Un framework pour Node JS orienté vitesse et légèreté.
 videoLink:
-links: []
+tags: [nodejs,fastify,js]
 ---
 
 [Fastify](https://www.fastify.io/) est un framework pour Node JS qui est principalement orienté sur la légèreté et la rapidité.

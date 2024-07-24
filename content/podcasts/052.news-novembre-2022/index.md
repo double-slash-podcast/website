@@ -78,6 +78,7 @@ links:
       url: 'https://www.contentlayer.dev/',
     },
   ]
+tags: [next,bundler,wordpress]
 ---
 ## Next 13
 

@@ -15,7 +15,7 @@ subtitle: Un épisode avec notre invité Frank Taillandier qui a créé la commu
 guid: e920b97fca291002903e32ea3aefff46
 description: Un épisode avec notre invité Frank Taillandier qui a créé la communauté Jamstatic FR et qui travaille pour Forestry.io. Un épisode orienté statique !
 videoLink:
-links: []
+tags: [static,jamstack,forestry]
 ---
 
 ## Dans la première partie, nous allons parler de la communauté "Jamstatic FR"

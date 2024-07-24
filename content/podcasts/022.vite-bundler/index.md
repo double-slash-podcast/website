@@ -15,7 +15,7 @@ subtitle: Un épisode dédié aux bundlers. On passe en revue les différents bu
 guid: b558c0c66f61e51ad282d0827fb11c3a
 description: Les bundlers (générateur de bundle), on les utilise au quotidien. Ils sont indispensables dans les outils des développeurs front et ils ont beaucoup évolué. Nous passons en revue les principaux bundlers les plus utilisés et surtout nous parlons des nouvelles générations de bundler.
 videoLink:
-links: []
+tags: [vite,bundler]
 ---
 
 ## Pourquoi on utilise des bundlers :

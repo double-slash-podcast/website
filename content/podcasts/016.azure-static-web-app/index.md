@@ -15,7 +15,7 @@ subtitle:
 guid: e3a620e47a0c34dcf64503211d1b5ea6
 description: Dans cet épisode, nous allons parler du nouveau service de Microsoft avec notre invité, Wassim Chegham. Présenté en mai 2020, Azure static Web Apps permet d'héberger vos projets destinés à être compilés pour générer un site ou une web app statique.
 videoLink:
-links: []
+tags: [azure,swa,devops]
 ---
 
 Il suffit de créer votre projet avec un outil tel que Nuxt, Next, Gatsby ou Eleventy. Ensuite, vous l'hébergez sur GitHub. Puis, vous déclarez votre repository Github sur votre compte Azure et ce dernier, se chargera de compiler et publier automatiquement votre projet en ligne.

@@ -24,6 +24,8 @@ links:
     { title: 'React Framer Motion',url: 'https://www.framer.com/motion'},
     { title: 'VueUse Motion',url: 'https://motion.vueuse.org'}
   ]
+tags: [animation,js]
+
 ---
 
 Pour finir la série sur les animations dans le navigateur, on termine avec un tour d'horizon des solutions avec du JavaScript. 

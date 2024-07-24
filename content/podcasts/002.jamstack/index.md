@@ -15,7 +15,7 @@ categories:
 guid: 72b1aeca6ea293f3fa30d4003404be07
 description: Dans ce podcast, nous parlons de la JAMStack. Comment la JAMStack fonctionne, quelle est la différence avec les sites dynamiques du type PHP/WordPress. Quelles sont les limites et quels sont les avantages.
 videoLink:
-links: []
+tags: [jamstack, static]
 ---
 
 - [https://jamstack.org/](https://jamstack.org/)

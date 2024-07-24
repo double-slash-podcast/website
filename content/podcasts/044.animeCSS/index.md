@@ -16,9 +16,7 @@ dsSlug: DS_044_animeCSS
 guid: b97a06a7fb0055a583db9b41f8fdcf7b
 description: Dans cet épisode, nous allons expliquer comment faire des animations avec CSS et comment optimiser les performances de vos animations
 videoLink : opO05lQNKYA
-links:
-  [
-  ]
+tags: [animation,css]
 
 ---
 
