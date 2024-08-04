@@ -15,7 +15,7 @@ subtitle: Comprendre les monorepo
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1721816710/episode/ART_92_ybrrpb.png
 description: 
 videoLink : vbTitHGcVDs
-tags: [monorepo,git,devpos]
+tags: ["monorepo","git","devpos"]
 ---
 ## Monorepo ou pas ?
 

@@ -15,7 +15,7 @@ subtitle: Épisode new web développement pour juillet 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1720611285/episode/ART_90_weynbo.png
 description: Dans cet épisode de news pour juillet 2024, nous allons évoquer des gestionnaires de packages, des systèmes pour contrôler son site, des outils de développement, le futur d'Astro et des articles.
 videoLink : -DgCoSIUWeg
-links: []
+tags: ["tailwindcss", "devtools", "pkg", "python", "github"]
 ---
 ## PKG PR
 
