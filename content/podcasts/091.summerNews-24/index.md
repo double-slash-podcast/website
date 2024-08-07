@@ -15,6 +15,7 @@ subtitle: News de l&#x27;été 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1721816714/episode/ART_91_tbfxmf.png
 description: Dans ce premier épisode de news pour l'été 2024, nous allons évoquer le partenariat entre Netlify et Astro, Les librairies JS pour faire du drag and drop et des masques pour les champs de formulaire, les scripts tiers dans Nuxt, BackboneJS si si et l’arrivée d'un nouvel acteur dans le monde des navigateurs web.
 videoLink : SXbx-AR5h3o
+tags: ["astro", "nuxt", "backbone", "browser"]
 ---
 ## Astro
 
