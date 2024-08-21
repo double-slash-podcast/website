@@ -9,7 +9,7 @@ episodeNumber: 93
 episodeType: full
 explicit: false
 season: 1
-dsSlug:
+dsSlug: DS_093_news-aout-24
 title: Les news web dev pour août 2024
 subtitle: Épisode new web développement pour août 2024
 episodeArtwork:
