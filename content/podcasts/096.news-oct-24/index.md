@@ -87,7 +87,7 @@ align: 'center'
 
 ## Open Source
 
-### Drama WordPress vs WPServer
+### Drama WordPress vs WP Engine
 
 Beaucoup de contenu en 1 semaine mais voici un article de Korben
 
