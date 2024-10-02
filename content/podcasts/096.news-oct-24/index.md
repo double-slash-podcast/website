@@ -24,7 +24,7 @@ videoLink: 0Cqksl85_4M
 - https://youtu.be/-cEn_83zRFw
 - https://kyrylo.org/rails/2024/09/27/notes-from-the-opening-keynote-by-david-heinemeier-hansson-at-rails-world-2024.html
 
-::Image
+## ::Image
 
 src: /assets/articles/aws-vercel.jpg
 alt: AWS Vercel
@@ -79,7 +79,7 @@ Pour les présentations
 
 Un exemple que j’ai généré :
 
-::Image
+## ::Image
 
 src: /assets/articles/rendermodesnapkin.png
 alt: Napkin IA
