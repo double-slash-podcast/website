@@ -162,8 +162,8 @@ Bonne écoute !
 ::authors
 ::
 
-## ::Sponsor
+::Sponsor
 
-## withList: false
+withList: false
 
 ::
