@@ -10,13 +10,13 @@ episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_097_tools
-title: Slection des apps 2024
-subtitle: Nos meileurs applications pour dev
+title: Sélection des outils pour le développement web
+subtitle: Nos meileurs applications
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1728464953/episode/ART_97_nggffh.png
 description: 
 videoLink : 2wOBWVrccKE
 ---
-## Selection des apps 2024
+## Sélection des apps 2024
 
 ### Orbstack 
 Gestion docker
