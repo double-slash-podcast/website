@@ -52,6 +52,10 @@ https://www.jetbrains.com/webstorm/
 
 https://turso.tech/launch-week
 
+### SURREAL DB - University
+
+https://surrealdb.com/learn
+
 ::authors
 ::
 
