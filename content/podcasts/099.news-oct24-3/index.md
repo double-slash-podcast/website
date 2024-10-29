@@ -13,7 +13,7 @@ dsSlug: DS_099_new_oct24-3
 title: Les news web dev pour octobre 2024 - RC 3.0
 subtitle: RC 3.0 - Épisode new web développement pour octobre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1730052692/episode/ART_99_sdc5ap.png
-description: Le podcast présente les nouveautés en développement web : Next.js 15 et ses optimisations, la beta de React Compiler, la refonte e-commerce Medusa.js V2, le framework Pieces.js pour les web components, et des avancées avec Turso en base de données "Local First". WebStorm devient gratuit pour usage non commercial.
+description: Le podcast présente les nouveautés en développement web. Next.js 15 et ses optimisations, la beta de React Compiler, la refonte e-commerce Medusa.js V2, le framework Pieces.js pour les web components, et des avancées avec Turso en base de données "Local First". WebStorm devient gratuit pour usage non commercial.
 videoLink : aHjrmrcNIPk
 ---
 
@@ -103,7 +103,7 @@ L'équipe souhaite apporter des évolutions, mais les utilisateurs actuels sont 
 
 ## Editeur WebStorm - Free.
 
-WebStorm devient gratuit pour un usage "non commercial". 
+WebStorm devient gratuit pour un usage "non commercial".
 
 https://www.jetbrains.com/webstorm/
 

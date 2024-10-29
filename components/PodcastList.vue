@@ -8,11 +8,6 @@ defineProps({
 
 const plateforms = [
   {
-    href: 'https://podcasts.google.com/?feed=aHR0cHM6Ly9zbGFzaC1wb2RjYXN0LmZyL3BvZGNhc3QtcnNzLWZlZWQueG1s&ved=2ahUKEwigiuTNrNTpAhUR8hoKHTJnDIQQ4aUDegQIARAC&hl=fr',
-    icon: 'GoogleIcon',
-    title: 'Google Podcast',
-  },
-  {
     href: 'https://open.spotify.com/show/539N9WvnUguUzMWluPp2UK',
     icon: 'SpotifyIcon',
     title: 'Spotify',

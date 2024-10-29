@@ -15,10 +15,12 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxthq/studio',
   ],
+
   alias: {
     'micromark/lib/preprocess.js': 'micromark',
     'micromark/lib/postprocess.js': 'micromark',
   },
+
   content: {
     watch: {
       ws: {
@@ -30,6 +32,7 @@ export default defineNuxtConfig({
       theme: 'github-dark',
     },
   },
+
   image: {
     provider: 'cloudinary',
     cloudinary: {
@@ -40,19 +43,25 @@ export default defineNuxtConfig({
       },
     },
   },
+
   dayjs: {},
+
   tailwindcss: {
     cssPath: '~/assets/main.css',
   },
+
   buildModules: [],
+
   experimental: {
     reactivityTransform: true,
     viteNode: false,
     componentIslands: true,
   },
+
   colorMode: {
     classSuffix: '',
   },
+
   nitro: {
     prerender: {
       routes: [
@@ -62,6 +71,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   runtimeConfig: {
     github_auth: process.env.GITHUB_AUTH,
     REDIS_URL: process.env.REDIS_URL,
@@ -77,4 +87,6 @@ export default defineNuxtConfig({
       },
     },
   },
+
+  compatibilityDate: '2024-10-29',
 });
