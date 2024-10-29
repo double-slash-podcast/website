@@ -9,7 +9,7 @@ episodeNumber: 99
 episodeType: full
 explicit: false
 season: 1
-dsSlug: DS_099_new_oct24-3
+dsSlug: DS_099_new_oct24rc3
 title: Les news web dev pour octobre 2024 - RC 3.0
 subtitle: RC 3.0 - Épisode new web développement pour octobre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1730052692/episode/ART_99_sdc5ap.png
