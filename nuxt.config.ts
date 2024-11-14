@@ -1,4 +1,4 @@
-import {baseInfos, podcastInfos} from './config';
+import { baseInfos, podcastInfos } from './config';
 
 export default defineNuxtConfig({
   modules: [
@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-schema-org',
     '@nuxtjs/fontaine',
-    '@nuxthq/studio',
   ],
 
   alias: {
