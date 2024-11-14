@@ -6,8 +6,7 @@ export const baseInfos: BaseInfosType = {
     'https://res.cloudinary.com/doubleslash/image/upload/v1597260128/doubleSlashDefault_kyl8s9.png',
   descriptionDefault:
     'Le podcast sur le code, le développement web et les outils modernes.',
-  prefixAudio:
-    'https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com',
+  prefixAudio: 'https://double-slash.ams3.cdn.digitaloceanspaces.com',
   prefixAudioDev: 'https://double-slash.ams3.cdn.digitaloceanspaces.com',
   // https://www.youtube.com/feeds/videos.xml?channel_id=
   youtubeChannelId: 'UCp5DGBAX2XNJXeOVAo7bICQ',
