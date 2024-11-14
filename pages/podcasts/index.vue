@@ -16,7 +16,7 @@ useSchemaOrg([defineWebPage()]);
 </script>
 
 <template>
-  <div class="bg-haiti">
+  <div class="pb-20 bg-haiti">
     <Header></Header>
     <main>
       <HeadingsSection

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const {$dayjs} = useNuxtApp();
+const {public: config} = useRuntimeConfig();
 
 const props = withDefaults(
   defineProps<{
@@ -19,11 +20,13 @@ const props = withDefaults(
     class="grid sm:grid-cols-episode-heading w-full md:min-w-[768px] px-4 md:px-1 text-center text-white gap-9 uppercase relative z-10"
   >
     <div class="relative">
-      <img
-        :src="episode.episodeArtwork"
+      <nuxt-img
+        :src="episode.episodeArtwork || config.podcastInfos.imageUrl"
         class="w-full md:w-11/12"
         loading="lazy"
         decoding="async"
+        width="500"
+        height="500"
         :alt="episode.title"
       />
       <span

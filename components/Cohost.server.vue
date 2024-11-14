@@ -9,9 +9,9 @@ const {
 <template>
   <HeadingsSection title="Les animateurs">
     <div
-      class="w-full px-4 py-8 space-y-12 sm:px-0 md:space-y-0 lg:divide-x-2 lg:flex divide-purpleDs divide-dashed"
+      class="flex flex-col items-center w-full px-4 py-8 space-y-12 md:gap-20 md:grid-cols-2 md:space-y-0 md:grid"
     >
-      <div class="flex w-1/2">
+      <div class="flex w-10/12 md:w-full md:justify-start">
         <nuxt-img
           :src="`${siteUrl}/assets/pat_picture.jpg`"
           alt="Photo Patrick Faramaz"
@@ -22,7 +22,7 @@ const {
           sizes="xs:128px sm:160px"
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />
-        <div class="pl-6 uppercase font-brand">
+        <div class="pl-6 text-left uppercase font-brand">
           <p class="text-5xl text-white">Patrick</p>
           <p class="text-3xl text-gray-400">FARAMAZ</p>
           <div class="space-x-4">
@@ -62,9 +62,7 @@ const {
           </div>
         </div>
       </div>
-      <div
-        class="flex flex-row-reverse justify-end w-full lg:w-1/2 lg:flex-row lg:pl-12"
-      >
+      <div class="flex w-10/12 md:w-full md:justify-end md:flex-row-reverse">
         <nuxt-img
           :src="`${siteUrl}/assets/alex_picture.jpg`"
           alt="Photo Alex Duval"
@@ -76,7 +74,7 @@ const {
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-yellowDs shadow-purple-500"
         />
         <div
-          class="flex-1 pr-6 text-right uppercase lg:pl-6 font-brand lg:text-left"
+          class="flex-1 pl-6 text-left uppercase md:pr-6 md:pl-0 md:text-right lg:pl-6 font-brand"
         >
           <p class="text-5xl text-white">Alex</p>
           <p class="text-3xl text-gray-400">DUVAL</p>
