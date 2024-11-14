@@ -1,5 +1,8 @@
 <template>
   <div class="flex items-center justify-end space-x-3 text-yellowDs">
+    <p class="cursor-pointer" @click.stop.prevent="tooglePlayer">
+      Ecouter l'episode
+    </p>
     <button
       :aria-label="getStatus"
       :title="getStatus"
@@ -12,19 +15,16 @@
           store.currentTitle !== episode.title
         "
         name="ic:baseline-play-circle-filled-white"
-        size="36"
+        size="42"
       />
       <Icon
         v-else-if="
           store.currentTitle === episode.title && store.statusPlayer === 'play'
         "
         name="ic:baseline-pause-circle-filled"
-        size="36"
+        size="42"
       />
     </button>
-    <p class="cursor-pointer" @click.stop.prevent="tooglePlayer">
-      Ecouter l'episode //
-    </p>
   </div>
 </template>
 

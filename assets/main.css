@@ -18,7 +18,8 @@
   font-style: oblique 0deg 10deg;
   font-weight: 100 800;
   font-display: swap;
-  src: local(Inter),
+  src:
+    local(Inter),
     url('~/assets/fonts/Inter-VariableFont.woff2') format('woff2');
   font-stretch: 25% 151%;
   unicode-range: U+000-5FF;
@@ -32,7 +33,7 @@ body {
 }
 
 main {
-  @apply lg:max-w-[700px] max-w-lg m-auto px-2 sm:px-0;
+  @apply md:max-w-[768px] m-auto px-2 sm:px-0;
 }
 
 h1 {

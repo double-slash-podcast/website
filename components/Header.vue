@@ -4,12 +4,23 @@ const props = defineProps({
     type: Number,
     default: 300,
   },
+  heightMobile: {
+    type: Number,
+    default: 700,
+  },
 });
 
 // predict height with animated background loaded
 const headerHeight = computed(() => {
   // total row icons
   const total = Math.round(props.height / 60);
+  // 110px is real size for row
+  return `${total * 110}px`;
+});
+
+const headerHeightMobile = computed(() => {
+  // total row icons
+  const total = Math.round(props.heightMobile / 60);
   // 110px is real size for row
   return `${total * 110}px`;
 });
@@ -37,6 +48,11 @@ const headerHeight = computed(() => {
 <style scoped>
 header {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-  height: v-bind('headerHeight');
+  /* height: v-bind('headerHeight'); */
+}
+@media screen and (max-width: 640px) {
+  header {
+    /* height: v-bind('headerHeightMobile'); */
+  }
 }
 </style>

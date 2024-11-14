@@ -46,6 +46,9 @@ module.exports = {
           '100%': {transform: 'translateX(100%)'},
         },
       },
+      gridTemplateColumns: {
+        "episode-heading": "200px auto",
+      }
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],

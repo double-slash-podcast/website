@@ -64,7 +64,7 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="relative bg-haiti">
-    <Header :height="300" class="z-10">
+    <Header :height="300" class="z-10" :height-mobile="500">
       <template #title>
         <Brand slash />
       </template>
@@ -78,7 +78,7 @@ useSchemaOrg([defineWebPage()]);
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data[0]" class="mt-4"></EpisodeHeadings>
+        <EpisodeHeadings :episode="data[0]" class="mt-10"></EpisodeHeadings>
       </template>
     </Header>
     <main class="relative z-10 pb-24">

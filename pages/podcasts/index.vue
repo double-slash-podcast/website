@@ -45,7 +45,7 @@ useSchemaOrg([defineWebPage()]);
         </div>
       </div> -->
 
-      <div class="">
+      <div class="flex flex-col gap-16">
         <EpisodeHeadings
           v-for="episode in data"
           :key="episode._id"
