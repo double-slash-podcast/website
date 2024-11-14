@@ -78,7 +78,10 @@ useSchemaOrg([defineWebPage()]);
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data[0]" class="mt-20"></EpisodeHeadings>
+        <EpisodeHeadings
+          :episode="data[0]"
+          class="mt-20 max-w-[768px]"
+        ></EpisodeHeadings>
       </template>
     </Header>
     <main class="relative z-10 pb-24">

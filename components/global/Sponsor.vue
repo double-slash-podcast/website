@@ -55,7 +55,7 @@ const listSponsor = computed(
   </div>
   <div v-if="withList === true" class="pb-8 mt-8 border-t border-gray-300">
     <h2>Ils nous soutiennent !</h2>
-    <div class="flex flex-wrap items-stretch justify-start gap-7">
+    <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
       <a
         v-for="sponsor of listSponsor"
         v-show="sponsor.node.name !== null"
@@ -63,7 +63,7 @@ const listSponsor = computed(
         :href="sponsor.node.url"
         target="_blank"
         :title="sponsor.node.name"
-        class="flex flex-wrap items-center justify-center object-cover w-1/3 md:w-1/5"
+        class="flex flex-col items-center justify-center object-cover"
       >
         <img
           width="80px"
@@ -72,7 +72,7 @@ const listSponsor = computed(
           decoding="async"
           :src="sponsor.node.avatarUrl"
           :alt="sponsor.node.name"
-          class="w-20 h-20 m-0 border-4 border-purple-500 rounded-full md:w-28 md:h-28"
+          class="m-0 border-4 border-purple-500 rounded-full w-28 h-28"
         />
         <strong class="mt-2 text-xs text-gray-500 text-wrap">{{
           sponsor.node.name

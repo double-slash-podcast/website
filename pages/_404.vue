@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <Header :height="100">
+  <Header>
     <template #title>
       <h1 class="text-5xl text-yellowDs font-brand">Erreur 404 !</h1>
     </template>

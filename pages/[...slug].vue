@@ -19,7 +19,7 @@ useSchemaOrg([defineWebPage()]);
 </script>
 <template>
   <div class="">
-    <Header :height="160"></Header>
+    <Header></Header>
     <main>
       <ContentRenderer :value="data" class="prose min-h-[500px] py-6" />
     </main>

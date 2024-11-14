@@ -52,7 +52,7 @@ const props = withDefaults(
       >
         <component
           :is="`h${level}`"
-          class="text-xl text-white sm:leading-8 sm:text-4xl font-headings"
+          class="text-xl text-white sm:leading-8 sm:text-3xl font-headings"
           >{{ props.episode.title }}</component
         >
       </nuxt-link>

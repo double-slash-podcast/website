@@ -57,7 +57,7 @@ useSchemaOrg([
 
 <template>
   <div>
-    <Header :height="220" class="">
+    <Header class="">
       <template #baseline>
         <span class="block h-10"></span>
         <EpisodeHeadings
@@ -103,7 +103,8 @@ useSchemaOrg([
             <p class="mb-3">
               {{ episode.description }}
             </p>
-            <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
+            <ContentRenderer :value="episode" class="max-w-full prose">
+            </ContentRenderer>
           </div>
           <div
             v-if="episode?.links?.length > 0"
