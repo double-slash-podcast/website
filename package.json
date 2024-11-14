@@ -61,8 +61,5 @@
   },
   "resolutions": {
     "mlly": "1.4.0"
-  },
-  "volta": {
-    "node": "20.18.0"
   }
 }
