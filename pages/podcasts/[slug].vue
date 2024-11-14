@@ -59,7 +59,7 @@ useSchemaOrg([
   <div>
     <Header :height="220" class="">
       <template #baseline>
-        <span class="block h-6"></span>
+        <span class="block h-10"></span>
         <EpisodeHeadings
           :has-link="false"
           :episode="episode"

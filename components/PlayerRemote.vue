@@ -1,5 +1,8 @@
 <template>
-  <div class="flex items-center justify-end space-x-3 text-yellowDs">
+  <div
+    class="flex items-center space-x-3 text-yellowDs"
+    :class="`${end ? 'justify-end' : 'md:justify-end justify-start'}`"
+  >
     <p class="cursor-pointer" @click.stop.prevent="tooglePlayer">
       Ecouter l'episode
     </p>
@@ -15,14 +18,14 @@
           store.currentTitle !== episode.title
         "
         name="ic:baseline-play-circle-filled-white"
-        size="42"
+        size="50"
       />
       <Icon
         v-else-if="
           store.currentTitle === episode.title && store.statusPlayer === 'play'
         "
         name="ic:baseline-pause-circle-filled"
-        size="42"
+        size="50"
       />
     </button>
   </div>
@@ -30,9 +33,13 @@
 
 <script setup lang="ts">
 import {usePlayerStore} from '~~/stores/player';
-const props = defineProps<{
-  episode: PodcastContentType;
-}>();
+const props = withDefaults(
+  defineProps<{
+    episode: PodcastContentType;
+    end: boolean;
+  }>(),
+  {end: true},
+);
 
 const store = usePlayerStore();
 const tooglePlayer = () => {

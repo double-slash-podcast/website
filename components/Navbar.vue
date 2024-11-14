@@ -21,7 +21,7 @@ const links = [
 </script>
 <template>
   <div
-    class="absolute top-0 z-20 flex space-x-4 text-white uppercase bg-transparent left-[50%] -translate-x-[50%]"
+    class="z-20 flex justify-center w-full space-x-4 text-white uppercase bg-transparent"
   >
     <nuxt-link
       to="/"

@@ -16,7 +16,7 @@ const props = withDefaults(
 
 <template>
   <div
-    class="grid sm:grid-cols-episode-heading w-full md:min-w-[768px] px-4 md:px-1 text-center text-white gap-9 uppercase relative"
+    class="grid sm:grid-cols-episode-heading w-full md:min-w-[768px] px-4 md:px-1 text-center text-white gap-9 uppercase relative z-10"
   >
     <div class="relative">
       <img
@@ -42,8 +42,8 @@ const props = withDefaults(
       </span>
     </div>
     <div class="flex flex-col justify-start gap-1 text-left sm:text-right">
-      <div class="mt-1 text-sm italic font-light text-gray-400">
-        {{ $dayjs(props.episode.publicationDate).format('DD MMM YY') }}
+      <div class="mt-1 text-sm text-gray-400">
+        {{ $dayjs(props.episode.publicationDate).format('DD MMMM YYYY') }}
       </div>
       <nuxt-link
         :to="`${episode._path}/`"
@@ -52,7 +52,7 @@ const props = withDefaults(
       >
         <component
           :is="`h${level}`"
-          class="text-xl text-white sm:leading-8 sm:text-2xl font-headings"
+          class="text-xl text-white sm:leading-8 sm:text-4xl font-headings"
           >{{ props.episode.title }}</component
         >
       </nuxt-link>
@@ -62,8 +62,8 @@ const props = withDefaults(
         class="text-xl text-white sm:leading-6 sm:text-2xl font-headings"
         >{{ props.episode.title }}</component
       >
-      <div class="relative z-20 mt-auto">
-        <PlayerRemote :episode="props.episode" />
+      <div class="relative z-20 pt-5 mt-auto">
+        <PlayerRemote :episode="props.episode" :end="false" />
       </div>
     </div>
   </div>

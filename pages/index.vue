@@ -64,13 +64,13 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="relative bg-haiti">
-    <Header :height="300" class="z-10" :height-mobile="500">
+    <Header class="z-10">
       <template #title>
         <Brand slash />
       </template>
       <template #baseline>
         <h1
-          class="text-2xl tracking-wider text-center uppercase text-yellowDs font-headings"
+          class="relative z-10 mt-2 text-2xl tracking-wider text-center uppercase text-yellowDs font-headings"
         >
           le podcast <br class="sm:hidden" />des developpeurs web
         </h1>
@@ -78,7 +78,7 @@ useSchemaOrg([defineWebPage()]);
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data[0]" class="mt-10"></EpisodeHeadings>
+        <EpisodeHeadings :episode="data[0]" class="mt-20"></EpisodeHeadings>
       </template>
     </Header>
     <main class="relative z-10 pb-24">
