@@ -47,7 +47,8 @@ module.exports = {
         },
       },
       gridTemplateColumns: {
-        "episode-heading": "200px auto",
+        "episode-heading": "140px auto",
+        "episode-heading-mobile": "70px auto",
       }
     },
   },

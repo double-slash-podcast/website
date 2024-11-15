@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
     '@nuxtjs/color-mode',
-    '@nathanchase/nuxt-dayjs-module',
     '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
@@ -42,8 +41,6 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  dayjs: {},
 
   tailwindcss: {
     cssPath: '~/assets/main.css',

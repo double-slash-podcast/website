@@ -1,3 +1,10 @@
+<script setup lang="ts">
+const options = {
+  year: 'numeric',
+};
+const dt = new Date(Date.now());
+</script>
+
 <template>
   <footer class="relative h-12 bg-purple-800 border-t-4 border-yellowDs">
     <SlashIcon
@@ -7,8 +14,9 @@
     <div
       class="flex items-center justify-center h-full max-w-2xl m-auto text-xs text-center text-gray-50"
     >
-      Copyright DOUBLE-SLASH 2020 - {{ $dayjs(Date.now()).format('YYYY') }} -
-      Tous les droits sont réservés.
+      Copyright DOUBLE-SLASH 2020 -
+      {{ dt.toLocaleDateString('fr-FR', options) }} - Tous les droits sont
+      réservés.
     </div>
   </footer>
 </template>

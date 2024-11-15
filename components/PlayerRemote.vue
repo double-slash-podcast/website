@@ -1,11 +1,5 @@
 <template>
-  <div
-    class="flex items-center space-x-3 text-yellowDs"
-    :class="`${end ? 'justify-end' : 'md:justify-end justify-start'}`"
-  >
-    <p class="cursor-pointer" @click.stop.prevent="tooglePlayer">
-      Ecouter l'episode
-    </p>
+  <div class="flex items-center justify-end space-x-3 text-yellowDs">
     <button
       :aria-label="getStatus"
       :title="getStatus"
@@ -33,13 +27,9 @@
 
 <script setup lang="ts">
 import {usePlayerStore} from '~~/stores/player';
-const props = withDefaults(
-  defineProps<{
-    episode: PodcastContentType;
-    end: boolean;
-  }>(),
-  {end: true},
-);
+const props = defineProps<{
+  episode: PodcastContentType;
+}>();
 
 const store = usePlayerStore();
 const tooglePlayer = () => {
