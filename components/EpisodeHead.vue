@@ -10,7 +10,7 @@ const date = useLocalDate(props.episode.publicationDate);
 
 <template>
   <div
-    class="grid grid-cols-episode-head-mobile md:grid-cols-episode-head episode-head w-full md:max-w-[768px] px-4 md:px-1 text-center text-white gap-x-6 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
+    class="grid grid-cols-episode-head-mobile md:grid-cols-episode-head episode-head w-full max-w-full md:max-w-[768px] px-4 md:px-1 text-center text-white gap-x-6 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
     <div>
       <nuxt-img
@@ -23,7 +23,7 @@ const date = useLocalDate(props.episode.publicationDate);
         :alt="episode.title"
       />
     </div>
-    <div class="flex flex-col h-full gap-3">
+    <div class="flex flex-col justify-end h-full gap-3">
       <nuxt-link
         :to="`${episode._path}/`"
         class="text-left after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
@@ -39,7 +39,7 @@ const date = useLocalDate(props.episode.publicationDate);
       </div>
     </div>
     <div
-      class="relative left-0 flex items-center justify-end col-start-1 col-end-3 row-start-2 gap-3 -top-5 md:col-start-2 md:justify-end md:-top-10 md:-left-10"
+      class="relative flex items-center justify-between col-start-1 col-end-3 row-start-2 gap-3 md:right-5 md:col-start-2 sm:justify-end"
     >
       <Duration :slug="props.episode.dsSlug" />
       <PlayerRemote
