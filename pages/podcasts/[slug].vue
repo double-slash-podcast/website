@@ -59,12 +59,8 @@ useSchemaOrg([
   <div>
     <Header class="">
       <template #baseline>
-        <span class="block h-10"></span>
-        <EpisodeHeadings
-          :has-link="false"
-          :episode="episode"
-          level="1"
-        ></EpisodeHeadings>
+        <span class="block h-16"></span>
+        <EpisodeHead :episode="episode"></EpisodeHead>
       </template>
       <template #title>
         <Brand class="mt-6" />
