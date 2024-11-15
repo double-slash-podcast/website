@@ -52,6 +52,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: false,
     componentIslands: true,
+    viewTransition: true
   },
 
   colorMode: {
