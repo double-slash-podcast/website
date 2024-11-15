@@ -11,12 +11,7 @@ const props = withDefaults(
   },
 );
 
-const options = {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-};
-const dt = new Date(props.episode.publicationDate);
+const date = useLocalDate(props.episode.publicationDate);
 </script>
 
 <template>
@@ -48,7 +43,7 @@ const dt = new Date(props.episode.publicationDate);
       {{ props.episode.description.substring(0, 120) }}...
     </p>
     <div class="col-start-1 col-end-3 mt-1 text-sm text-left md:col-start-2">
-      {{ dt.toLocaleDateString('fr-FR', options) }}
+      {{ date }}
     </div>
     <div class="flex items-center justify-between col-span-2 md:pt-2">
       <span class="flex items-center text-4xl font-brand text-yellowDs">
@@ -64,7 +59,10 @@ const dt = new Date(props.episode.publicationDate);
         >
         {{ props.episode.episodeNumber }}
       </span>
-      <PlayerRemote :episode="props.episode" class="relative z-20 -mt-2" />
+      <div class="flex items-center gap-x-2">
+        <Duration :slug="props.episode.dsSlug" />
+        <PlayerRemote :episode="props.episode" class="relative z-20 -mt-1" />
+      </div>
     </div>
   </div>
 </template>

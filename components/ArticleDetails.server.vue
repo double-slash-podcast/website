@@ -5,12 +5,8 @@ const props = withDefaults(
     isList: false,
   },
 );
-const options = {
-  year: 'numeric',
-  month: 'long',
-  day: 'numeric',
-};
-const dt = new Date(props.article?.publicationDate);
+
+const date = useLocalDate(props.article?.publicationDate);
 </script>
 
 <template>
@@ -22,7 +18,7 @@ const dt = new Date(props.article?.publicationDate);
       'text-gray-500': !isList,
     }"
   >
-    <span>Le {{ dt.toLocaleDateString('fr-FR', options) }}</span
+    <span>Le {{ date }}</span
     ><span class="px-0.5">|</span>
     <a class="hover:underline" :href="article?.author.url" target="_blank">{{
       article?.author.name

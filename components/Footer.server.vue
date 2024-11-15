@@ -1,8 +1,7 @@
 <script setup lang="ts">
-const options = {
+const date = useLocalDate(Date.now(), {
   year: 'numeric',
-};
-const dt = new Date(Date.now());
+});
 </script>
 
 <template>
@@ -15,8 +14,7 @@ const dt = new Date(Date.now());
       class="flex items-center justify-center h-full max-w-2xl m-auto text-xs text-center text-gray-50"
     >
       Copyright DOUBLE-SLASH 2020 -
-      {{ dt.toLocaleDateString('fr-FR', options) }} - Tous les droits sont
-      réservés.
+      {{ date }} - Tous les droits sont réservés.
     </div>
   </footer>
 </template>

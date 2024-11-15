@@ -105,9 +105,13 @@ useSchemaOrg([defineWebPage()]);
         </div>
       </HeadingsSection>
 
-      <HeadingsSection title="Les épisodes précédents" class="mb-8" />
+      <HeadingsSection
+        title="Les épisodes précédents"
+        class="mb-14"
+        level="2"
+      />
       <LastEpisodes class="mb-8" />
-      <div class="mb-24 text-center">
+      <div class="mt-12 mb-24 text-center">
         <nuxt-link
           to="/podcasts/"
           class="flex items-center justify-center text-xl uppercase group text-yellowDs"

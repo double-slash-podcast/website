@@ -1,4 +1,5 @@
 <script setup>
+const {public: config} = useRuntimeConfig();
 defineProps({
   dark: {
     type: Boolean,
@@ -26,6 +27,11 @@ const plateforms = [
     href: 'https://tunein.com/podcasts/Technology-Podcasts/Double-Slash-p1325678/',
     icon: 'TuneinIcon',
     title: 'Tunein',
+  },
+  {
+    href: `${config.siteUrl}/podcast-rss-feed.xml`,
+    icon: 'vscode-icons:file-type-rss',
+    title: 'RSS Feed',
   },
 ];
 </script>
