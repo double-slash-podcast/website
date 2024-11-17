@@ -46,7 +46,7 @@ const date = useLocalDate(props.episode.publicationDate);
       {{ date }}
     </div>
     <div class="flex items-center justify-between col-span-2 md:pt-2">
-      <div class="flex items-center gap-x-4">
+      <div class="flex items-center gap-x-2">
         <EpisodeNumber :episode-number="props.episode.episodeNumber" />
         <NewEpisode :publication-date="props.episode.publicationDate" />
       </div>

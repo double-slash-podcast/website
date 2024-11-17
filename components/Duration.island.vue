@@ -21,7 +21,7 @@ const seconds = computed(() =>
 </script>
 
 <template>
-  <span class="font-light text-white">
+  <span class="font-light text-yellowDs">
     <span v-show="hours > 0">{{ hours }}h</span>
     {{ minutes.toString().padStart(2, '0') }}mn
     {{ seconds.toString().padStart(2, '0') }}s

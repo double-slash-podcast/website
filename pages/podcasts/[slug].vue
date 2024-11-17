@@ -86,7 +86,7 @@ useSchemaOrg([
             class="flex flex-col items-center flex-1 pt-4 text-base after:h-0.5 md:text-lg underline-offset-4 transition-color focus:text-gray-900 focus:outline-none after:w-full after:mt-3"
             @click="() => (selected = link)"
           >
-            {{ link }}
+            {{ link === 'Video' ? 'Vidéo' : link }}
           </button>
         </nav>
         <div class="pt-8">

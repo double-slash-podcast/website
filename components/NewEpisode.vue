@@ -12,16 +12,20 @@ const isNewEpisode = computed(() => {
 </script>
 
 <template>
-  <span v-if="isNewEpisode" class="flex items-center gap-2 neonText"
-    ><span class="text-3xl">&#8226;</span>Nouveau</span
+  <span v-if="isNewEpisode" class="flex items-center neonText"
+    ><span class="pr-1 text-3xl">&#8226;</span>Ne<span class="neonTextBug"
+      >w</span
+    ></span
   >
 </template>
 
 <style scoped>
 @keyframes flicker {
   0%,
-  18%,
-  22%,
+  /* 10%, */
+  /* 18%, */
+  /* 22%, */
+  15%,
   25%,
   53%,
   57%,
@@ -31,6 +35,9 @@ const isNewEpisode = computed(() => {
       0 0 4px #9123cb,
       0 0 7px #ffe40f;
   }
+  2%,
+  /* 9%,
+  14%, */
   20%,
   24%,
   55% {
@@ -38,6 +45,13 @@ const isNewEpisode = computed(() => {
   }
 }
 .neonText {
+  color: #ffe40f;
+  text-shadow:
+    0 0 3px #9123cb,
+    0 0 4px #9123cb,
+    0 0 7px #ffe40f;
+}
+.neonTextBug {
   color: #ffe40f;
   animation: flicker 1.5s infinite alternate;
 }

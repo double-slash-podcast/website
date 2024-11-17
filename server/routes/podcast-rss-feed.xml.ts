@@ -117,10 +117,19 @@ export default defineEventHandler(
     // podcast items
     const podcasts = await getPodcasts(event);
 
+    // sort by date
+    const _podcasts = podcasts.sort((a, b) => {
+      const _a = new Date(a.publicationDate);
+      const _b = new Date(b.publicationDate);
+      if (_a.getTime() > _b.getTime()) return 1;
+      if (_a.getTime() < _b.getTime()) return -1;
+      return 0;
+    })
+
     // create the rss feed
     const feed = new RSS(getFeedBase(podcastInfos));
 
-    for await (const podcast of await podcasts) {
+    for await (const podcast of await _podcasts) {
       const {
         title,
         subtitle,

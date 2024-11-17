@@ -49,7 +49,7 @@ module.exports = {
       gridTemplateColumns: {
         "episode-heading": "140px auto",
         "episode-heading-mobile": "70px auto",
-        "episode-head": "180px auto",
+        "episode-head": "200px auto",
         "episode-head-mobile": "140px auto",
       }
     },
