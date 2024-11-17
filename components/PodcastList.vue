@@ -1,5 +1,8 @@
 <script setup>
-const {public: config} = useRuntimeConfig();
+const {
+  baseInfos: {siteUrl},
+} = useAppConfig();
+
 defineProps({
   dark: {
     type: Boolean,
@@ -29,7 +32,7 @@ const plateforms = [
     title: 'Tunein',
   },
   {
-    href: `${config.siteUrl}/podcast-rss-feed.xml`,
+    href: `${siteUrl}/podcast-rss-feed.xml`,
     icon: 'vscode-icons:file-type-rss',
     title: 'RSS Feed',
   },

@@ -3,11 +3,11 @@ const props = defineProps<{
   slug: string;
 }>();
 
-const {public: config} = useRuntimeConfig();
+const {
+  baseInfos: {prefixAudio},
+} = useAppConfig();
 
-const {duration} = await useRemoteDuration(
-  `${config.prefixAudio}/${props.slug}.mp3`,
-);
+const {duration} = await useRemoteDuration(`${prefixAudio}/${props.slug}.mp3`);
 
 const hours = computed(() => (duration ? Math.floor(duration / 3600) : 0));
 const minutes = computed(() =>

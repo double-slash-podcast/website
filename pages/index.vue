@@ -15,10 +15,8 @@ onMounted(() => {
 const {path} = useRoute();
 
 const {
-  $config: {
-    public: {siteUrl},
-  },
-} = useNuxtApp();
+  baseInfos: {siteUrl},
+} = useAppConfig();
 
 const {data} = await useAsyncData('lastOne', () => {
   return queryContent('podcasts')

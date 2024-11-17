@@ -1,9 +1,7 @@
 <script setup lang="ts">
 const {
-  $config: {
-    public: {siteUrl},
-  },
-} = useNuxtApp();
+  baseInfos: {siteUrl},
+} = useAppConfig();
 
 withDefaults(
   defineProps<{

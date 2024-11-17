@@ -1,8 +1,12 @@
-import {defineStore} from 'pinia';
+import { defineStore } from 'pinia';
+import type { baseInfos } from '~/config';
 
 export const usePlayerStore = defineStore('player', () => {
   const config = useRuntimeConfig();
-  const {prefixAudioDev, prefixAudio, isDev} = config.public;
+  const { isDev } = config.public;
+  const {
+    baseInfos: { prefixAudioDev, prefixAudio },
+  } = useAppConfig();
 
   // source for player
   const src = ref<string | undefined>(undefined);
@@ -30,5 +34,5 @@ export const usePlayerStore = defineStore('player', () => {
     statusPlayer.value = status;
   }
 
-  return {src, currentTitle, statusPlayer, setDsSlug, setStatusPlayer};
+  return { src, currentTitle, statusPlayer, setDsSlug, setStatusPlayer };
 });

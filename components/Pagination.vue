@@ -3,12 +3,12 @@ const {public: config} = useRuntimeConfig();
 const props = withDefaults(
   defineProps<{
     count: number;
-    page?: number;
+    page?: string;
     path?: string;
   }>(),
   {
     count: 0,
-    page: 1,
+    page: '1',
     path: 'podcasts',
   },
 );

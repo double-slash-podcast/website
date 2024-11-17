@@ -1,4 +1,3 @@
-import { baseInfos, podcastInfos } from './config';
 
 export default defineNuxtConfig({
   modules: [
@@ -74,8 +73,6 @@ export default defineNuxtConfig({
     REDIS_URL: process.env.REDIS_URL,
     REDIS_TOKEN: process.env.REDIS_TOKEN,
     public: {
-      ...baseInfos,
-      podcastInfos,
       numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',
       content: {

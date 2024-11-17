@@ -6,6 +6,7 @@ import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 import { useRedis } from '../../composables/useRedis';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import { serverQueryContent } from '#content/server';
+import type { baseInfos } from '~/config';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -110,9 +111,10 @@ const getRemoteFileInfos = async (url: string) => {
 
 export default defineEventHandler(
   async (event: H3Event | NodeIncomingMessage) => {
-    // global info from config app
-    const config = useRuntimeConfig();
-    const { podcastInfos, siteUrl, prefixAudio } = config.public;
+    const {
+      baseInfos: { siteUrl, prefixAudio },
+      podcastInfos,
+    } = useAppConfig();
 
     // podcast items
     const podcasts = await getPodcasts(event);

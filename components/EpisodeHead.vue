@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const {public: config} = useRuntimeConfig();
+const {podcastInfos} = useAppConfig();
 
 const props = defineProps<{
   episode: PodcastContentType;
@@ -14,7 +14,7 @@ const date = useLocalDate(props.episode.publicationDate);
   >
     <div>
       <nuxt-img
-        :src="episode.episodeArtwork || config.podcastInfos.imageUrl"
+        :src="episode.episodeArtwork || podcastInfos.imageUrl"
         class="w-full rounded-lg md:row-span-3"
         loading="eager"
         decoding="async"

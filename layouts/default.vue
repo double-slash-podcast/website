@@ -14,10 +14,9 @@
 import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
 const {path} = useRoute();
 const {
-  $config: {
-    public: {siteUrl, titleDefault, twitterUrl},
-  },
-} = useNuxtApp();
+  baseInfos: {siteUrl, titleDefault, twitterUrl},
+} = useAppConfig();
+
 useHead({
   htmlAttrs: {lang: 'fr-FR'},
   link: [
