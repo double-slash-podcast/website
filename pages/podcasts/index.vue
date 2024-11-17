@@ -38,6 +38,9 @@ useSchemaOrg([defineWebPage()]);
         title="Tous les épisodes du podcast double slash"
         level="1"
       ></HeadingsSection>
+      <div class="flex items-center justify-end mt-5 text-white">
+        Page {{ page }} sur {{ Math.ceil(count / config.numberEpisodesList) }}
+      </div>
 
       <!-- <div class="sm:max-w-md sm:m-auto">
         <label for="search" class="block m-auto text-sm font-medium text-white"

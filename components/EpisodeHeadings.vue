@@ -46,19 +46,10 @@ const date = useLocalDate(props.episode.publicationDate);
       {{ date }}
     </div>
     <div class="flex items-center justify-between col-span-2 md:pt-2">
-      <span class="flex items-center text-4xl font-brand text-yellowDs">
-        <span
-          v-show="+props.episode.episodeNumber < 10"
-          class="text-haiti text-outline"
-          >0</span
-        >
-        <span
-          v-show="+props.episode.episodeNumber < 100"
-          class="text-haiti text-outline"
-          >0</span
-        >
-        {{ props.episode.episodeNumber }}
-      </span>
+      <div class="flex items-center gap-x-4">
+        <EpisodeNumber :episode-number="props.episode.episodeNumber" />
+        <NewEpisode :publication-date="props.episode.publicationDate" />
+      </div>
       <div class="flex items-center gap-x-2">
         <Duration :slug="props.episode.dsSlug" />
         <PlayerRemote :episode="props.episode" class="relative z-20 -mt-1" />
@@ -66,12 +57,3 @@ const date = useLocalDate(props.episode.publicationDate);
     </div>
   </div>
 </template>
-<style scoped>
-.text-outline {
-  text-shadow:
-    -2px -2px 0 #9123cb,
-    2px 2px 0 #9123cb,
-    2px -2px 0 #9123cb,
-    -2px 2px 0 #9123cb;
-}
-</style>

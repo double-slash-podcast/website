@@ -39,14 +39,20 @@ const date = useLocalDate(props.episode.publicationDate);
       </div>
     </div>
     <div
-      class="relative flex items-center justify-between col-start-1 col-end-3 row-start-2 gap-3 md:right-5 md:col-start-2 sm:justify-end"
+      class="relative flex items-center justify-between col-start-1 col-end-3 row-start-2 gap-3 md:right-5"
     >
-      <Duration :slug="props.episode.dsSlug" />
-      <PlayerRemote
-        :episode="props.episode"
-        size="80"
-        class="relative z-20 -mt-1"
-      />
+      <div class="flex items-center pl-4 gap-x-4">
+        <EpisodeNumber :episode-number="props.episode.episodeNumber" />
+        <NewEpisode :publication-date="props.episode.publicationDate" />
+      </div>
+      <div class="flex items-center gap-x-2">
+        <Duration :slug="props.episode.dsSlug" />
+        <PlayerRemote
+          :episode="props.episode"
+          size="80"
+          class="relative z-20 -mt-1"
+        />
+      </div>
     </div>
   </div>
 </template>
