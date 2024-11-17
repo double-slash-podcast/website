@@ -18,11 +18,27 @@ const isNewEpisode = computed(() => {
 </template>
 
 <style scoped>
+@keyframes flicker {
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
+    text-shadow:
+      0 0 3px #9123cb,
+      0 0 4px #9123cb,
+      0 0 7px #ffe40f;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
 .neonText {
   color: #ffe40f;
-  text-shadow:
-    0 0 3px #9123cb,
-    0 0 4px #9123cb,
-    0 0 7px #ffe40f;
+  animation: flicker 1.5s infinite alternate;
 }
 </style>
