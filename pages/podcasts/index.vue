@@ -23,9 +23,9 @@ const {data} = await useAsyncData(`podcasts-${page}`, () => {
 });
 
 useHead({
-  title: 'Tous les épisodes du podcast Double Slash',
+  title: `Tous les épisodes du podcast Double Slash ${page > 1 ? ` - page ${page}` : ''}`,
   description:
-    'Retrouvez la liste de tous les podcasts publiés par Double Slash',
+    "Retrouvez la liste de tous les podcasts publiés par Double Slash depuis le début de l'aventure en avril 2020",
 });
 useSchemaOrg([defineWebPage()]);
 </script>
