@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const {public: config} = useRuntimeConfig();
 const route = useRoute();
-const page = (route.params.page as string) || 1;
+const page = (route.params.page as string) || '1';
 
 // total episodes
 const {data: count} = await useAsyncData(`podcasts-count-${page}`, () => {
