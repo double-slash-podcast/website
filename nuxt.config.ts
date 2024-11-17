@@ -76,6 +76,7 @@ export default defineNuxtConfig({
     public: {
       ...baseInfos,
       podcastInfos,
+      numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',
       content: {
         anchorLinks: {
@@ -84,6 +85,15 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  hooks: {
+    'pages:extend'(pages) {
+      // add a route
+      pages.push({
+        name: 'podcasts-index',
+        path: '/podcasts/:page(\\d+)?',
+        file: '~/pages/podcasts/index.vue',
+      });
+    },
+  },
   compatibilityDate: '2024-10-29',
 });

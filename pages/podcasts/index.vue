@@ -1,9 +1,24 @@
-<script setup>
-// should be a composable useLastEpisode(9)
-const {data} = await useAsyncData('podcasts', () => {
+<script setup lang="ts">
+const {public: config} = useRuntimeConfig();
+const route = useRoute();
+const page = (route.params.page as string) || 1;
+
+// total episodes
+const {data: count} = await useAsyncData(`podcasts-count-${page}`, () => {
   return queryContent('podcasts')
     .where({_extension: {$eq: 'md'}})
     .sort({episodeNumber: -1, $numeric: true})
+    .count();
+});
+// define skip
+const skip = +page < 2 ? 0 : (page - 1) * config.numberEpisodesList;
+
+const {data} = await useAsyncData(`podcasts-${page}`, () => {
+  return queryContent('podcasts')
+    .where({_extension: {$eq: 'md'}})
+    .sort({episodeNumber: -1, $numeric: true})
+    .limit(config.numberEpisodesList)
+    .skip(skip)
     .find();
 });
 
@@ -51,6 +66,9 @@ useSchemaOrg([defineWebPage()]);
           :key="episode._id"
           v-bind="{episode}"
         />
+        <div class="flex justify-center">
+          <Pagination :count="count" :page="page" />
+        </div>
       </div>
     </main>
   </div>
