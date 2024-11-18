@@ -13,8 +13,8 @@ const isNewEpisode = computed(() => {
 
 <template>
   <span v-if="isNewEpisode" class="flex items-center neonText"
-    ><span class="pr-1 text-3xl">&#8226;</span>Ne<span class="neonTextBug"
-      >w</span
+    ><span class="pr-1 text-3xl">&#8226;</span>NE<span class="neonTextBug"
+      >W</span
     ></span
   >
 </template>
