@@ -27,14 +27,14 @@ useSchemaOrg([
 </script>
 <template>
   <div class="">
-    <Header :height="160"></Header>
+    <Header></Header>
     <main class="pb-20">
       <h1 class="mt-10 text-4xl font-bold">{{ article?.title }}</h1>
       <ArticleDetails :article="article" />
       <ContentRenderer
         v-if="article"
         :value="article"
-        class="prose article-content min-h-[500px] py-6"
+        class="prose article-content min-h-[500px] py-6 max-w-full"
       />
     </main>
   </div>

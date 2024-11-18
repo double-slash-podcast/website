@@ -7,7 +7,7 @@ defineProps({
 });
 </script>
 <template>
-  <div class="relative">
+  <div class="relative z-10">
     <svg
       v-show="slash"
       xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@ defineProps({
         font-family="Mono45"
         letter-spacing="-0.26em"
       >
-        <tspan x="0" y="0">//</tspan>
+        <tspan x="0" y="0" opacity="0.5">//</tspan>
       </text>
     </svg>
     <p class="text-center brand sm:text-[80px] text-[50px]">DOUBLE SLASH</p>

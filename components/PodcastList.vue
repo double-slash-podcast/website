@@ -1,4 +1,8 @@
 <script setup>
+const {
+  baseInfos: {siteUrl},
+} = useAppConfig();
+
 defineProps({
   dark: {
     type: Boolean,
@@ -27,6 +31,11 @@ const plateforms = [
     icon: 'TuneinIcon',
     title: 'Tunein',
   },
+  {
+    href: `${siteUrl}/podcast-rss-feed.xml`,
+    icon: 'vscode-icons:file-type-rss',
+    title: 'RSS Feed',
+  },
 ];
 </script>
 
@@ -35,7 +44,7 @@ const plateforms = [
     :dark="dark"
     title="Abonnez-vous sur votre plateforme de podcast préférée"
   >
-    <ul class="flex justify-center mt-4 space-x-8">
+    <ul class="flex items-center justify-center mt-4 space-x-8 space-y-3">
       <li v-for="plateform in plateforms" :key="plateform.icon">
         <a :href="plateform.href" :title="plateform.title" target="_blank">
           <Icon

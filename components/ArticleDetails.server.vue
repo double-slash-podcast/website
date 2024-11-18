@@ -1,7 +1,12 @@
 <script setup lang="ts">
-withDefaults(defineProps<{article: ArticleType | null; isList?: boolean}>(), {
-  isList: false,
-});
+const props = withDefaults(
+  defineProps<{article: ArticleType | null; isList?: boolean}>(),
+  {
+    isList: false,
+  },
+);
+
+const date = useLocalDate(props.article?.publicationDate);
 </script>
 
 <template>
@@ -13,7 +18,7 @@ withDefaults(defineProps<{article: ArticleType | null; isList?: boolean}>(), {
       'text-gray-500': !isList,
     }"
   >
-    <span>Le {{ $dayjs(article?.publicationDate).format('DD MMM. YY') }}</span
+    <span>Le {{ date }}</span
     ><span class="px-0.5">|</span>
     <a class="hover:underline" :href="article?.author.url" target="_blank">{{
       article?.author.name

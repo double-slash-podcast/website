@@ -21,18 +21,18 @@ const links = [
 </script>
 <template>
   <div
-    class="absolute top-0 z-20 flex space-x-4 text-white uppercase bg-transparent left-[50%] -translate-x-[50%]"
+    class="z-20 flex justify-center w-full space-x-1 text-white uppercase bg-transparent"
   >
     <nuxt-link
       to="/"
-      class="px-2 py-2 hover:bg-gray-200 sm:hover:bg-yellowDs sm:hover:text-darkPurple"
+      class="px-4 pt-4 pb-2 border-b-2 border-transparent hover:border-yellowDs"
       >HOME</nuxt-link
     >
     <nuxt-link
       v-for="{title, url} in links"
       :key="url"
       :to="url"
-      class="px-2 py-2 hover:bg-gray-200 sm:hover:bg-yellowDs sm:hover:text-darkPurple"
+      class="px-4 pt-4 pb-2 border-b-2 border-transparent hover:border-yellowDs"
       :class="{
         'router-link-active router-link-exact-active':
           title === 'podcasts' && path.search('podcasts') > 0,
@@ -44,6 +44,6 @@ const links = [
 
 <style scoped>
 .router-link-exact-active {
-  @apply bg-yellowDs text-darkPurple;
+  @apply border-yellowDs text-yellowDs;
 }
 </style>

@@ -1,21 +1,23 @@
 import path from 'path';
 import fs from 'fs';
-import {SitemapStream, streamToPromise} from 'sitemap';
-import {serverQueryContent} from '#content/server';
+import { SitemapStream, streamToPromise } from 'sitemap';
+import { serverQueryContent } from '#content/server';
+import type { baseInfos } from '~/config';
 
 // find file and get stats
-const getModifiedDate = (id: string | undefined): {lastmod: Date | null} => {
-  if (!id) return {lastmod: null};
+const getModifiedDate = (id: string | undefined): { lastmod: Date | null } => {
+  if (!id) return { lastmod: null };
   // use id for get complete path, format id is content:podcasts:051.docusaurus:index.md
   const _path = id.replace(/[:]+/g, '/');
   const stats = fs.statSync(path.resolve(`./`, _path));
-  return {lastmod: stats.mtime};
+  return { lastmod: stats.mtime };
 };
 
 export default defineEventHandler(async event => {
   // global info from config app
-  const config = useRuntimeConfig();
-  const {siteUrl} = config.public;
+  const {
+    baseInfos: { siteUrl },
+  } = useAppConfig();
 
   // Fetch all documents
   const docs = await serverQueryContent(event).find();
@@ -49,7 +51,7 @@ export default defineEventHandler(async event => {
 
   // podcasts
   for (const doc of _docs) {
-    const {lastmod} = getModifiedDate(doc._id);
+    const { lastmod } = getModifiedDate(doc._id);
     // remove custom for content page
     const _path = `${doc._path}/`.replace(/^\/custom/, '');
     sitemap.write({

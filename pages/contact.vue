@@ -1,5 +1,5 @@
 <template>
-  <Header :height="400">
+  <Header>
     <template #title>
       <h1>Mon titre</h1>
     </template>

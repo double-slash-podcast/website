@@ -57,9 +57,10 @@ useSchemaOrg([
 
 <template>
   <div>
-    <Header :height="220" class="">
+    <Header class="">
       <template #baseline>
-        <EpisodeHeadings :episode="episode" level="1"></EpisodeHeadings>
+        <span class="block h-16"></span>
+        <EpisodeHead :episode="episode"></EpisodeHead>
       </template>
       <template #title>
         <Brand class="mt-6" />
@@ -85,7 +86,7 @@ useSchemaOrg([
             class="flex flex-col items-center flex-1 pt-4 text-base after:h-0.5 md:text-lg underline-offset-4 transition-color focus:text-gray-900 focus:outline-none after:w-full after:mt-3"
             @click="() => (selected = link)"
           >
-            {{ link }}
+            {{ link === 'Video' ? 'Vidéo' : link }}
           </button>
         </nav>
         <div class="pt-8">
@@ -98,7 +99,8 @@ useSchemaOrg([
             <p class="mb-3">
               {{ episode.description }}
             </p>
-            <ContentRenderer :value="episode" class="prose"> </ContentRenderer>
+            <ContentRenderer :value="episode" class="max-w-full prose">
+            </ContentRenderer>
           </div>
           <div
             v-if="episode?.links?.length > 0"

@@ -1,4 +1,3 @@
-import { baseInfos, podcastInfos } from './config';
 
 export default defineNuxtConfig({
   modules: [
@@ -8,7 +7,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
     '@nuxtjs/color-mode',
-    '@nathanchase/nuxt-dayjs-module',
     '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
@@ -43,8 +41,6 @@ export default defineNuxtConfig({
     },
   },
 
-  dayjs: {},
-
   tailwindcss: {
     cssPath: '~/assets/main.css',
   },
@@ -55,6 +51,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: false,
     componentIslands: true,
+    viewTransition: true
   },
 
   colorMode: {
@@ -76,8 +73,7 @@ export default defineNuxtConfig({
     REDIS_URL: process.env.REDIS_URL,
     REDIS_TOKEN: process.env.REDIS_TOKEN,
     public: {
-      ...baseInfos,
-      podcastInfos,
+      numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',
       content: {
         anchorLinks: {
@@ -86,6 +82,15 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  hooks: {
+    'pages:extend'(pages) {
+      // add a route
+      pages.push({
+        name: 'podcasts-index',
+        path: '/podcasts/:page(\\d+)?',
+        file: '~/pages/podcasts/index.vue',
+      });
+    },
+  },
   compatibilityDate: '2024-10-29',
 });

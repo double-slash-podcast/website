@@ -1,3 +1,5 @@
+import type { baseInfos } from "~/config";
+
 const getDescription = (string: string, length: number = 160): string => {
   if (!string) return '';
   const lg = string.length;
@@ -24,14 +26,18 @@ const useHeadPodcast = ({
   episode,
   path,
 }: {
-  episode: {value: PodcastContentType};
+  episode: { value: PodcastContentType };
   path: string;
 }) => {
   const {
     $config: {
-      public: {siteUrl, prefixAudioDev, prefixAudio, isDev, titleDefault},
+      public: { isDev },
     },
   } = useNuxtApp();
+
+  const {
+    baseInfos: { siteUrl, prefixAudioDev, prefixAudio, titleDefault },
+  } = useAppConfig();
 
   const getMediaUrl = () =>
     `${isDev ? prefixAudioDev : prefixAudio}/${episode.value?.dsSlug}.mp3`;
@@ -84,7 +90,7 @@ const useHeadPodcast = ({
         property: 'og:url',
         content: `${siteUrl}${path}`,
       },
-      {name: 'twitter:site', content: '@doubleslash_dev'},
+      { name: 'twitter:site', content: '@doubleslash_dev' },
       //   {name: 'twitter:card', content: 'summary_large_image'},
       {
         hid: 'twitter:url',

@@ -12,27 +12,30 @@
           store.currentTitle !== episode.title
         "
         name="ic:baseline-play-circle-filled-white"
-        size="36"
+        :size="size"
       />
       <Icon
         v-else-if="
           store.currentTitle === episode.title && store.statusPlayer === 'play'
         "
         name="ic:baseline-pause-circle-filled"
-        size="36"
+        :size="size"
       />
     </button>
-    <p class="cursor-pointer" @click.stop.prevent="tooglePlayer">
-      Ecouter l'episode //
-    </p>
   </div>
 </template>
 
 <script setup lang="ts">
 import {usePlayerStore} from '~~/stores/player';
-const props = defineProps<{
-  episode: PodcastContentType;
-}>();
+const props = withDefaults(
+  defineProps<{
+    episode: PodcastContentType;
+    size?: string;
+  }>(),
+  {
+    size: '50',
+  },
+);
 
 const store = usePlayerStore();
 const tooglePlayer = () => {

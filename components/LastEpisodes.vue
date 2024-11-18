@@ -11,7 +11,7 @@ const {data: last3} = await useAsyncData('last3', () => {
 </script>
 
 <template>
-  <div class="divide-y divide-dashed divide-purpleDs">
+  <div class="flex flex-col gap-20">
     <EpisodeHeadings
       v-for="episode in last3"
       :key="episode._id"
