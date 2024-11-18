@@ -56,12 +56,3 @@ const date = useLocalDate(props.episode.publicationDate);
     </div>
   </div>
 </template>
-<style scoped>
-.text-outline {
-  text-shadow:
-    -2px -2px 0 #9123cb,
-    2px 2px 0 #9123cb,
-    2px -2px 0 #9123cb,
-    -2px 2px 0 #9123cb;
-}
-</style>
