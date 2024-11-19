@@ -156,6 +156,7 @@ useSchemaOrg([
           </div>
         </div>
       </div>
+      <ShareBtn :text="episode.title" />
     </main>
     <Wrapper class="my-16">
       <PodcastList dark />

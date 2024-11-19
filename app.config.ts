@@ -1,7 +1,7 @@
 const baseInfos: BaseInfosType = {
   siteUrl: 'https://double-slash.dev',
   email: 'contact@double-slash.dev',
-  titleDefault: 'Double Slash Podcast',
+  titleDefault: 'Double Slash',
   imageDefault:
     'https://res.cloudinary.com/doubleslash/image/upload/v1597260128/doubleSlashDefault_kyl8s9.png',
   descriptionDefault:
