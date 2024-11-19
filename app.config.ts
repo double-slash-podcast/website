@@ -50,5 +50,22 @@ export default defineAppConfig({
     publicationDate: `April 01, 2020 10:00:00 GMT`,
     category1: `Technology`,
     timeToLive: 60,
-  }
+  },
+  socialList: [
+    {
+      href: 'https://x.com/doubleslash_dev',
+      icon: 'fa6-brands:square-x-twitter',
+      title: 'X'
+    },
+    {
+      href: 'https://bsky.app/profile/double-slash.dev',
+      icon: 'logos:bluesky',
+      title: 'Blue Sky',
+    },
+    {
+      href: 'https://github.com/double-slash-podcast',
+      icon: 'mdi:github',
+      title: 'Github',
+    },
+  ]
 });

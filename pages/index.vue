@@ -121,6 +121,7 @@ useSchemaOrg([defineWebPage()]);
         /></nuxt-link>
       </div>
       <Cohost class="mb-28" />
+      <SocialList class="mb-28" />
     </main>
     <LazySlashIcon
       ref="bigSlash"
