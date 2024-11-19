@@ -21,8 +21,10 @@ const list = Array.from(
 
 <template>
   <div class="flex flex-col w-full gap-4">
-    <div class="flex items-center justify-end">
-      <span class="text-gray-400">{{ props.count }} épisodes</span>
+    <div class="flex items-center justify-end mb-4">
+      <span class="text-gray-400"
+        >{{ config.numberEpisodesList }} épisodes sur {{ props.count }}</span
+      >
     </div>
     <div class="flex items-center justify-center gap-x-2">
       <NuxtLink

@@ -4,17 +4,19 @@ import {debounce} from 'throttle-debounce';
 const header = ref();
 const headerHeight = ref();
 
+const updateHeaderHeight = () => {
+  headerHeight.value = header.value.getBoundingClientRect().height;
+};
+
 onMounted(() => {
   // only client side
-  headerHeight.value = header.value.getBoundingClientRect().height;
-
+  updateHeaderHeight();
   // resize window
-  window.addEventListener(
-    'resize',
-    debounce(300, () => {
-      headerHeight.value = header.value.getBoundingClientRect().height;
-    }),
-  );
+  window.addEventListener('resize', debounce(300, updateHeaderHeight));
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', debounce(300, updateHeaderHeight));
 });
 </script>
 

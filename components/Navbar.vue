@@ -32,7 +32,7 @@ const links = [
       v-for="{title, url} in links"
       :key="url"
       :to="url"
-      class="px-4 pt-4 pb-2 border-b-2 border-transparent hover:border-yellowDs"
+      class="px-4 pt-4 pb-2 text-sm border-b-2 border-transparent sm:text-base hover:border-yellowDs"
       :class="{
         'router-link-active router-link-exact-active':
           title === 'podcasts' && path.search('podcasts') > 0,

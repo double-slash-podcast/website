@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import {debounce} from 'throttle-debounce';
 const {podcastInfos} = useAppConfig();
+
+const title = ref(null);
 
 const props = withDefaults(
   defineProps<{
@@ -12,6 +15,24 @@ const props = withDefaults(
 );
 
 const date = useLocalDate(props.episode.publicationDate);
+
+const setTitlePosition = () => {
+  const height = title.value.getBoundingClientRect().height;
+  if (height > 68 && window.innerWidth < 640) {
+    title.value.style.top = '-5px';
+  } else if (height < 30 && window.innerWidth < 640) {
+    title.value.style.top = '20px';
+  }
+};
+
+onMounted(() => {
+  setTitlePosition();
+  window.addEventListener('resize', debounce(300, setTitlePosition));
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', debounce(300, setTitlePosition));
+});
 </script>
 
 <template>
@@ -32,8 +53,9 @@ const date = useLocalDate(props.episode.publicationDate);
       class="text-left md:col-start-2 md:col-end-3 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
     >
       <component
+        ref="title"
         :is="`h${level}`"
-        class="text-xl text-white capitalize tracking-normal sm:leading-[2.2rem] sm:text-2xl font-headings font-bold pt-2 md:pt-0"
+        class="text-xl text-white capitalize tracking-normal sm:leading-[2.2rem] sm:text-2xl font-headings font-bold top-2 sm:top-0 relative"
         >{{ props.episode.title }}</component
       >
     </nuxt-link>

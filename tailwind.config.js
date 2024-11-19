@@ -50,7 +50,8 @@ module.exports = {
         "episode-heading": "140px auto",
         "episode-heading-mobile": "70px auto",
         "episode-head": "200px auto",
-        "episode-head-mobile": "140px auto",
+        "episode-head-mobile": "110px auto",
+        "episode-head-phablette": "140px auto",
       }
     },
   },
