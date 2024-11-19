@@ -1,9 +1,10 @@
 <script setup>
 const {socialList} = useAppConfig();
+const dark = true;
 </script>
 
 <template>
-  <HeadingsSection :dark="true" title="Rejoignez-nous sur les réseaux sociaux">
+  <HeadingsSection :dark="dark" title="Rejoignez-nous sur les réseaux sociaux">
     <ul
       class="flex items-center justify-center mt-4 space-x-5 space-y-3 sm:space-x-8"
     >
