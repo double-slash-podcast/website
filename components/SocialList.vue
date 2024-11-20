@@ -1,6 +1,6 @@
 <script setup>
 const {socialList} = useAppConfig();
-const dark = true;
+const dark = false;
 </script>
 
 <template>
