@@ -43,12 +43,11 @@ type PodcastContentType = {
   _path: string;
   title: string;
   description: string;
-  excerpt: {type: string; children: [][]};
+  excerpt: { type: string; children: [][] };
   publicationDate: string;
   status: string;
   author: string;
   categories: string[];
-  duration: number;
   dsSlug?: string;
   videoID?: string;
   url?: string;
@@ -60,14 +59,13 @@ type PodcastContentType = {
   description: string;
   guid?: string;
   episodeArtwork?: string;
-  body: {type: string; children: [][]; toc: {}[]};
+  body: { type: string; children: [][]; toc: {}[] };
 };
 
 type PodcastItems = {
   title: string;
   subtitle: string;
   url: string;
-  duration: number;
   body: string;
   slug: string;
   season: string;
@@ -85,7 +83,7 @@ declare module '@nuxt/schema' {
   }
 }
 
-type typeDuration = {hours: number; minutes: number; seconds: number};
+type typeDuration = { hours: number; minutes: number; seconds: number };
 
 type typeStatusPlayer = 'play' | 'pause';
 
@@ -96,6 +94,6 @@ type ArticleType = {
   title: string;
   description: string;
   publicationDate: string;
-  author: {name: string; url: string};
+  author: { name: string; url: string };
   body: string;
 };

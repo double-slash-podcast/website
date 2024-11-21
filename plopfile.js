@@ -16,11 +16,6 @@ module.exports = function (plop) {
       },
       {
         type: 'input',
-        name: 'duration',
-        message: 'Duration episode in seconds',
-      },
-      {
-        type: 'input',
         name: 'publicationDate',
         message: 'Publication episode date',
       },
