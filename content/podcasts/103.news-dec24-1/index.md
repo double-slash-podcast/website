@@ -8,7 +8,7 @@ episodeNumber: 103
 episodeType: full
 explicit: false
 season: 2
-dsSlug: DS_102_newsDec
+dsSlug: DS_101_newsNov
 title: Les news web dev pour décembre 2024 - RC 1.0
 subtitle: RC 1.0 - Épisode new web développement pour décembre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1732181644/episode/ART_101_evr0de.png
