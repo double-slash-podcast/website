@@ -55,7 +55,7 @@ onUnmounted(() => {
       <component
         ref="title"
         :is="`h${level}`"
-        class="text-xl text-white capitalize tracking-normal sm:leading-[2.2rem] sm:text-2xl font-headings font-bold top-2 sm:top-0 relative"
+        class="text-xl text-white normal-case tracking-normal sm:leading-[2.2rem] sm:text-2xl font-headings font-bold top-2 sm:top-0 relative"
         >{{ props.episode.title }}</component
       >
     </nuxt-link>
