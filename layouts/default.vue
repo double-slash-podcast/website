@@ -20,14 +20,14 @@ const {
 useHead({
   htmlAttrs: {lang: 'fr-FR'},
   link: [
-    {
-      hid: 'preload-font-mono',
-      rel: 'preload',
-      as: 'font',
-      // i don't know how to import this dynamically
-      href: '/_nuxt/mono45.90bc7bc8.woff2',
-      type: 'font/woff2',
-    },
+    // {
+    //   hid: 'preload-font-mono',
+    //   rel: 'preload',
+    //   as: 'font',
+    //   // i don't know how to import this dynamically
+    //   href: '/_nuxt/mono45.90bc7bc8.woff2',
+    //   type: 'font/woff2',
+    // },
     {
       hid: 'canonical',
       rel: 'canonical',
