@@ -64,9 +64,9 @@ onUnmounted(() => {
     >
       {{ props.episode.description.substring(0, 120) }}...
     </p>
-    <div class="col-start-1 col-end-3 mt-1 text-sm text-left md:col-start-2">
+    <time :datetime="new Date(props.episode.publicationDate)" class="col-start-1 col-end-3 mt-1 text-sm text-left text-gray-500 md:col-start-2">
       {{ date }}
-    </div>
+    </time>
     <div class="flex items-center justify-between col-span-2 md:pt-2">
       <div class="flex items-center gap-x-2">
         <EpisodeNumber :episode-number="props.episode.episodeNumber" />

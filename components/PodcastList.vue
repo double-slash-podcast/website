@@ -18,7 +18,7 @@ const plateforms = [
   },
   {
     href: 'https://www.deezer.com/fr/show/1245532',
-    icon: 'DeezerIcon',
+    icon: 'cbi:deezer-logo',
     title: 'Deezer',
   },
   {
@@ -50,9 +50,10 @@ const plateforms = [
       <li v-for="plateform in plateforms" :key="plateform.icon">
         <a :href="plateform.href" :title="plateform.title" target="_blank">
           <Icon
-            class="w-12 h-12 text-white duration-300 fill-white hover:text-gray-400 hover:-translate-y-2 sm:h-14 sm:w-14"
-            :class="{'text-haiti': dark}"
+            class="w-12 h-12 duration-300 hover:-translate-y-2 sm:h-14 sm:w-14"
+            :class="{'text-[#a238ff]' :plateform.title === 'Deezer'}"
             :name="plateform.icon"
+            :title="plateform.title"
           />
         </a>
       </li>
