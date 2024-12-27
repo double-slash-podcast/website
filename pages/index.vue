@@ -27,18 +27,18 @@ const {data} = await useAsyncData('lastOne', () => {
 });
 
 useHead({
-  title: 'Double Slash, le Podcast des développeurs web modernes',
+  title: 'Double Slash, le podcast sur le développement web en français',
   meta: [
     {
       hid: 'description',
       name: 'description',
       content:
-        "Double Slash, c'est le Podcast des développeurs web modernes. Patrick et Alex racontent leurs visions des technos, des libs , des tendances du développement Web.",
+        "Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.",
     },
     {
       hid: 'og:title',
       name: 'og:title',
-      content: 'Double Slash, le Podcast des développeurs web modernes',
+      content: 'Double Slash, le podcast sur le développement web en français',
     },
     {
       hid: 'og:url',

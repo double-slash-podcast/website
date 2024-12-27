@@ -43,8 +43,8 @@ const useHeadPodcast = ({
     `${isDev ? prefixAudioDev : prefixAudio}/${episode.value?.dsSlug}.mp3`;
 
   useSeoMeta({
-    title: `//${episode.value.episodeNumber} - ${episode.value.title}`,
-    ogTitle: `//${episode.value.episodeNumber} - ${episode.value.title}`,
+    title: `Épisode de podcast //${episode.value.episodeNumber} - ${episode.value.title}`,
+    ogTitle: `Épisode de podcast //${episode.value.episodeNumber} - ${episode.value.title}`,
     description: getDescription(episode.value?.description),
     ogDescription: getDescription(episode.value?.description),
     ogImage: getImgPodcast({
