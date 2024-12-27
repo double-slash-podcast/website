@@ -25,13 +25,15 @@ const links = [
   >
     <nuxt-link
       to="/"
+      title="accueil"
       class="px-4 pt-4 pb-2 border-b-2 border-transparent hover:border-yellowDs"
-      >HOME</nuxt-link
+      ><Icon class="relative w-5 h-5 mr-1 -top-0.5" name="material-symbols:home" title="Accueil" />//</nuxt-link
     >
     <nuxt-link
       v-for="{title, url} in links"
       :key="url"
       :to="url"
+      :title="title"
       class="px-4 pt-4 pb-2 text-sm border-b-2 border-transparent sm:text-base hover:border-yellowDs"
       :class="{
         'router-link-active router-link-exact-active':

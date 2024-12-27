@@ -25,7 +25,8 @@ const setTitlePosition = () => {
   }
 };
 
-onMounted(() => {
+onMounted(async () => {
+  await nextTick();
   setTitlePosition();
   window.addEventListener('resize', debounce(300, setTitlePosition));
 });
@@ -60,11 +61,11 @@ onUnmounted(() => {
       >
     </nuxt-link>
     <p
-      class="col-start-1 col-end-3 text-left text-gray-300 md:row-start-2 md:col-start-2"
+      class="col-start-1 col-end-3 text-left text-white/80 md:row-start-2 md:col-start-2"
     >
       {{ props.episode.description.substring(0, 120) }}...
     </p>
-    <time :datetime="new Date(props.episode.publicationDate)" class="col-start-1 col-end-3 mt-1 text-sm text-left text-gray-500 md:col-start-2">
+    <time :datetime="new Date(props.episode.publicationDate)" class="col-start-1 col-end-3 mt-1 text-sm text-left text-white/60 md:col-start-2">
       {{ date }}
     </time>
     <div class="flex items-center justify-between col-span-2 md:pt-2">

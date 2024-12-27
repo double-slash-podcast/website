@@ -8,8 +8,9 @@ const updateHeaderHeight = () => {
   headerHeight.value = header.value.getBoundingClientRect().height;
 };
 
-onMounted(() => {
+onMounted(async () => {
   // only client side
+  await nextTick();
   updateHeaderHeight();
   // resize window
   window.addEventListener('resize', debounce(300, updateHeaderHeight));
