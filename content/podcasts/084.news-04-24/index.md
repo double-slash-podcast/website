@@ -15,7 +15,7 @@ subtitle: L&#x27;actualité du Dev
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1713027183/episode/ART_84_vskr3u.png
 description: Heureux de vous retrouver pour ce nouvel épisode. Nous allons parler d'un documentaire sur Node.JS, de Bun qui passe en version 1.1 et qui fonctionne avec désormais sur Windows, d'Angular et Wiz qui mergent pour le meilleur et pour le pire, de comment debugger dans le navigateur avec Copilot. Mais aussi de Solito, un mélange entre React Native et Next.JS, de Strapi 5 avec sa beta déjà disponible; De WebAwesome, une librairie de Web Components, d'une librairie Drag and Drop, de Laravel Herd enfin disponible sur Windows, de l'Interactivity API dans WordPress 6.5. Puis de Vito, une interface de déploiement pour gérer ses serveurs facilement, d'un défi pour créer un jeux de mini-golf lancé par Vjeux et enfin, une tendance web back pour éviter d'écrire du JS. Bonne écoute !
 videoLink : cjT4or8Jwds
-links: ["node","bun","angularJS","analogjs","React", "Laravel"]
+tags: ["node","bun","angularJS","analogjs","React", "Laravel"]
 ---
 ### Documentaire vidéo sur l’histoire de Node.JS
 

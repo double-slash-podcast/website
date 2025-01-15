@@ -33,7 +33,7 @@ useHead({
       hid: 'description',
       name: 'description',
       content:
-        "Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.",
+        'Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.',
     },
     {
       hid: 'og:title',
