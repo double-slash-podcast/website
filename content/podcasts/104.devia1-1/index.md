@@ -10,7 +10,7 @@ episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_104_devia1
-title: Dev + IA - introduction
+title: Développer des projets IA - introduction
 subtitle: Développer des services en IA, on s’y met ?
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1736889833/episode/ART_104_x5pfdi.png
 description: Dans ce premier épisode de la série IA et dev, nous allons évoquer les différentes possibilités, outils et lexique de l'IA pour les projets de développement IA. En effet, il est aujourd'hui indispensable de s'intéresser aux possibilités d'intégrer l'IA dans nos développements. La demande est croissante tant de la part des entreprises qui ne veulent pas rater le train que des utilisateurs qui commencent à avoir l'habitude de retrouver de l'IA dans tous leurs outils. Nous commencerons par le plus basique, simplement utiliser les API des plus grands modèles (OpenAI, Anthropic, etc.), nous passerons par Hugging Face, nous survolerons les RAG (un épisode entier y sera consacré) et nous évoquerons également les questions de déploiement et d'hébergement.
