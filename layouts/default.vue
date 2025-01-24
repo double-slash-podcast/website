@@ -29,6 +29,11 @@ useHead({
     //   type: 'font/woff2',
     // },
     {
+      rel: "alternate",
+      type: "application/rss+xml",
+      href: "/podcast-rss-feed.xml"
+    },
+    {
       hid: 'canonical',
       rel: 'canonical',
       href: `${siteUrl}${path}`,
