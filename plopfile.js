@@ -7,7 +7,7 @@ module.exports = function (plop) {
       {
         type: 'input',
         name: 'episodeNumber',
-        message: 'Episode number 0XX',
+        message: 'Episode number 1XX',
       },
       {
         type: 'input',
@@ -43,7 +43,7 @@ module.exports = function (plop) {
     actions: [
       {
         type: 'add',
-        path: 'content/podcasts/0{{episodeNumber}}.{{dsSlug}}/index.md',
+        path: 'content/podcasts/1{{episodeNumber}}.{{dsSlug}}/index.md',
         templateFile: 'template/episode.hbs',
       },
     ],
