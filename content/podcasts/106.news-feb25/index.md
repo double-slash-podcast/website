@@ -5,7 +5,7 @@ author: Double Slash
 categories:
   - Technology
 duration:
-episodeNumber: 06
+episodeNumber: 106
 episodeType: full
 explicit: false
 season: 1
