@@ -100,8 +100,8 @@ Bonne écoute !
 ::authors
 ::
 
-## ::Sponsor
-
-## withList: false
-
+::Sponsor
+---
+withList: false
+---
 ::
