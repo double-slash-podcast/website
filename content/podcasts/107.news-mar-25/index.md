@@ -8,7 +8,7 @@ duration:
 episodeNumber: 107
 episodeType: full
 explicit: false
-season: 1
+season: 2
 dsSlug: DS_107_news-mar-25
 title: Les news web dev pour mars 2025
 subtitle: Épisode news web développement pour mars 2025
@@ -123,8 +123,8 @@ Bonne écoute !
 ::authors
 ::
 
-::Sponsor
----
-withList: false
----
+## ::Sponsor
+
+## withList: false
+
 ::

@@ -8,7 +8,7 @@ duration:
 episodeNumber: 109
 episodeType: full
 explicit: false
-season: 1
+season: 2
 dsSlug: DS_109_rag
 title: Développer des projets IA - Comprendre les RAG
 subtitle: Développer des services en IA, les RAG (Retrieval Augmented Generation)

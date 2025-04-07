@@ -8,22 +8,24 @@ duration:
 episodeNumber: 106
 episodeType: full
 explicit: false
-season: 1
+season: 2
 dsSlug: DS_106_news02-25
 title: Les news web dev pour février 2025
 subtitle: Épisode new web développement pour février 2025
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1739444914/episode/ART_106_b7gdmc.png
 description: Un épisode news dans lequel nous évoquons ExpressJS 5, un documentaire sur Angular, de nouvelles versions d'Astro, PrestaShop et Pinia. Également le states of React en 2024, du PHP dans des fichiers VueJS ! Quelques outils et évidemment nous parlons de quelques nouvelles IA..
-videoLink : tISW6Iizmgw
-tags: ["ia","prestashop","js","react"]
+videoLink: tISW6Iizmgw
+tags: ['ia', 'prestashop', 'js', 'react']
 ---
 
 ## Free JavaScript
 
 Oracle ! Liberez JavaScript !
+
 - https://deno.com/blog/deno-v-oracle2
 
 ## NestJS passe ExpressJS 5 par défaut
+
 - https://wanago.io/2025/02/10/api-nestjs-express-5/
 
 ## Documentaire Angular
@@ -105,8 +107,8 @@ Bonne écoute !
 ::authors
 ::
 
-::Sponsor
----
-withList: false
----
+## ::Sponsor
+
+## withList: false
+
 ::
