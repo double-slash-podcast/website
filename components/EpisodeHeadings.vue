@@ -63,7 +63,7 @@ onUnmounted(() => {
     <p
       class="col-start-1 col-end-3 text-left text-white/80 md:row-start-2 md:col-start-2"
     >
-      {{ props.episode.description.substring(0, 120) }}...
+      {{ props.episode.description?.substring(0, 120) }}...
     </p>
     <time :datetime="new Date(props.episode.publicationDate)" class="col-start-1 col-end-3 mt-1 text-sm text-left text-white/60 md:col-start-2">
       {{ date }}
