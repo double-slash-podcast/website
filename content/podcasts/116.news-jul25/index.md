@@ -22,7 +22,7 @@ tags: [Vite, Nuxt, Tailwind, AI, WordPress, Docker, Cloudflare, Figma, Payload, 
 Minimum NodeJS 20. Le browser target change (chrome 87 → 107, etc..)
 Et possibilité de tester “rolldown-vite” (rust)
 
-https://vite.dev/blog/announcing-vite7.html
+- https://vite.dev/blog/announcing-vite7.html
 
 ## Containers CloudFlare
 
@@ -30,15 +30,15 @@ Simple à déployer, intégré avec les workers, gestion automatique du provisio
 
 Image Docker compatible.
 
-https://blog.cloudflare.com/containers-are-available-in-public-beta-for-simple-global-and-programmable
+- https://blog.cloudflare.com/containers-are-available-in-public-beta-for-simple-global-and-programmable
 
 ## Nuxt 4
 
-https://nuxt.com/blog/v4
+- https://nuxt.com/blog/v4
 
 ## Payload rejoint Figma (site ?)
 
-https://payloadcms.com/posts/blog/payload-is-joining-figma
+- https://payloadcms.com/posts/blog/payload-is-joining-figma
 
 
 ## NuxtLabs rejoint Vercel !
