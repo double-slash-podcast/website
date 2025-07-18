@@ -12,7 +12,7 @@ season: 2
 dsSlug: DS_116_news-jul25
 title: News Juillet 2025
 subtitle: 
-episodeArtwork: 
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1752845703/episode/ART_116_mzdjbh.png
 description:
 videoLink : Z31EBQIOfug
 tags: []
