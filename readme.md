@@ -54,8 +54,6 @@ pnpm build
 
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
-- [Husky](https://github.com/typicode/husky)
-- [Lint-staged](https://github.com/okonet/lint-staged)
 - [Typescript](https://www.typescriptlang.org/)
 
 

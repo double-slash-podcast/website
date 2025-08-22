@@ -26,7 +26,7 @@ useSchemaOrg([defineWebPage()]);
   <div class="">
     <Header></Header>
     <main>
-      <ContentRenderer :value="data" class="prose min-h-[500px] py-6" />
+      <ContentRenderer v-if="data" :value="data" class="prose min-h-[500px] py-6" />
     </main>
   </div>
 </template>

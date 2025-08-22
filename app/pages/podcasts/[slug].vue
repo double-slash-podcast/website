@@ -3,7 +3,6 @@ const {path} = useRoute();
 
 const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
-console.log(path.replace(/\/+$/, ''));
 
 const {data: episode} = await useAsyncData(
   `${path.replace(/\/+$/, '')}`,
@@ -13,6 +12,7 @@ const {data: episode} = await useAsyncData(
       .first();
   },
 );
+
 
 if (!episode.value?.title) {
   // redirect to 404 page
@@ -101,8 +101,7 @@ useSchemaOrg([
             <p class="mb-3">
               {{ episode.description }}
             </p>
-            <ContentRenderer :value="episode" class="max-w-full prose">
-            </ContentRenderer>
+            <ContentRenderer v-if="episode" :value="episode" class="max-w-full prose" />
           </div>
           <div
             v-if="episode?.links?.length > 0"
