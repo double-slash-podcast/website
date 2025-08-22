@@ -26,7 +26,7 @@
     "@tailwindcss/typography": "0.5.16",
     "@types/rss": "0.0.32",
     "@types/xml2json": "0.11.6",
-    "@vueuse/nuxt": "11.2.0",
+    "@vueuse/nuxt": "13.7.0",
     "consola": "3.4.2",
     "eslint": "9.33.0",
     "eslint-config-prettier": "10.1.8",
