@@ -13,7 +13,12 @@ if (!data.value?.title) {
 }
 useHead({
   title: data.value?.title,
-  description: data.value?.description,
+  meta: [
+  {
+      name: 'description',
+      content: data.value?.description,
+  }
+],
 });
 useSchemaOrg([defineWebPage()]);
 </script>

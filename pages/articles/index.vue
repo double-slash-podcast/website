@@ -5,8 +5,12 @@ const {data} = await useAsyncData('bloglist', () => {
 
 useHead({
   title: 'Tous les articles du blog Double Slash',
-  description:
-    'Retrouvez la liste de tous les articles publiés par Double Slash',
+  meta: [
+  {
+      name: 'description',
+      content: 'Retrouvez la liste de tous les articles publiés par Double Slash',
+  }
+  ],
 });
 useSchemaOrg([defineWebPage()]);
 </script>
