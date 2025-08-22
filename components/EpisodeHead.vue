@@ -25,7 +25,7 @@ const date = useLocalDate(props.episode.publicationDate);
     </div>
     <div class="flex flex-col justify-end gap-3">
       <nuxt-link
-        :to="`${episode._path}/`"
+        :to="`${episode.path}/`"
         class="text-left after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
       >
         <h1

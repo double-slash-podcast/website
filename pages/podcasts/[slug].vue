@@ -3,12 +3,14 @@ const {path} = useRoute();
 
 const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
+console.log(path.replace(/\/+$/, ''));
+
 const {data: episode} = await useAsyncData(
   `${path.replace(/\/+$/, '')}`,
   () => {
-    return queryContent()
-      .where({_path: {$eq: path.replace(/\/+$/, '')}})
-      .findOne();
+    return queryCollection('podcasts')
+      .where('path', '=', path.replace(/\/+$/, ''))
+      .first();
   },
 );
 

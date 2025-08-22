@@ -19,11 +19,7 @@ const {
 } = useAppConfig();
 
 const {data} = await useAsyncData('lastOne', () => {
-  return queryContent('podcasts')
-    .where({_extension: {$eq: 'md'}})
-    .sort({episodeNumber: -1, $numeric: true})
-    .limit(1)
-    .find();
+  return queryCollection('podcasts').order('id', 'DESC').first();
 });
 
 useHead({
@@ -77,7 +73,7 @@ useSchemaOrg([defineWebPage()]);
           <span class="font-normal">ALEX DUVAL</span>
         </p>
         <EpisodeHeadings
-          :episode="data[0]"
+          :episode="data"
           class="mt-20 max-w-[768px]"
         ></EpisodeHeadings>
       </template>

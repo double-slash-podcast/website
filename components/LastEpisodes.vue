@@ -1,12 +1,7 @@
 <script setup>
 // should be a composable useLastEpisode(3)
 const {data: last3} = await useAsyncData('last3', () => {
-  return queryContent('podcasts')
-    .sort({episodeNumber: -1, $numeric: true})
-    .where({_extension: {$eq: 'md'}})
-    .limit(3)
-    .skip(1)
-    .find();
+  return queryCollection('podcasts').order('id', 'DESC').limit(3).all();
 });
 </script>
 

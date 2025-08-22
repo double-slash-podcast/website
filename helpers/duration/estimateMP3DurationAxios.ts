@@ -1,9 +1,10 @@
-import axios, {AxiosInstance} from 'axios';
-
-import createEstimateMP3Duration, {
+import type { AxiosInstance } from 'axios';
+import axios from 'axios';
+import type {
   DataReader,
   BytesRangeResponse,
 } from './createEstimateMP3Duration';
+import createEstimateMP3Duration from './createEstimateMP3Duration';
 
 export class AxiosDataReader implements DataReader<string> {
   private contentRangeHeaderRegex =
@@ -19,7 +20,7 @@ export class AxiosDataReader implements DataReader<string> {
     const res = await this.axios.head(resource);
     if (res.headers['Content-Length']) {
       let totalContentSize: number | undefined = parseInt(
-        res.headers['Content-Length'],
+        `${res.headers['Content-Length']}`,
         10,
       );
       if (isNaN(totalContentSize)) {

@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   },
 
   content: {
+    experimental: { nativeSqlite: true },
     watch: {
       ws: {
         port: 5000,
@@ -61,8 +62,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: [
-        '/podcast-rss-feed.xml',
-        '/sitemaps.xml',
+        // '/podcast-rss-feed.xml',
+        // '/sitemaps.xml',
         '/github-sponsor.json',
       ],
     },

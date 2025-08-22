@@ -2,9 +2,9 @@
 const {path} = useRoute();
 
 const {data: article} = await useAsyncData(`${path.replace(/\/+$/, '')}`, () =>
-  queryContent<ArticleType>()
-    .where({_path: {$eq: path.replace(/\/+$/, '')}})
-    .findOne(),
+    queryCollection('articles')
+    .where('path', '=', path.replace(/\/+$/, ''))
+    .first(),
 );
 
 if (!article.value?.title) {
@@ -13,7 +13,9 @@ if (!article.value?.title) {
 }
 useHead({
   title: article.value?.title,
-  description: article.value?.description,
+  meta: [
+    { name: 'description', content: article.value?.description ?? '' }
+  ],
 });
 
 useSchemaOrg([

@@ -5,27 +5,28 @@ const page = (route.params.page as string) || '1';
 
 // total episodes
 const {data: count} = await useAsyncData(`podcasts-count-${page}`, () => {
-  return queryContent('podcasts')
-    .where({_extension: {$eq: 'md'}})
-    .sort({episodeNumber: -1, $numeric: true})
-    .count();
+    return queryCollection('podcasts').count();
 });
 // define skip
-const skip = +page < 2 ? 0 : (page - 1) * config.numberEpisodesList;
+const skip = +page < 2 ? 0 : (+page - 1) * config.numberEpisodesList;
 
 const {data} = await useAsyncData(`podcasts-${page}`, () => {
-  return queryContent('podcasts')
-    .where({_extension: {$eq: 'md'}})
-    .sort({episodeNumber: -1, $numeric: true})
+  return queryCollection('podcasts')
+    .order('id', 'DESC')
     .limit(config.numberEpisodesList)
     .skip(skip)
-    .find();
+    .all();
 });
 
 useHead({
-  title: `Tous les épisodes du podcast Double Slash ${page > 1 ? ` - page ${page}` : ''}`,
-  description:
-    "Retrouvez la liste de tous les podcasts publiés par Double Slash depuis le début de l'aventure en avril 2020",
+  title: `Tous les épisodes du podcast Double Slash ${+page > 1 ? ` - page ${page}` : ''}`,
+  meta: [
+    {
+      name: 'description',
+      content:
+        "Retrouvez la liste de tous les podcasts publiés par Double Slash depuis le début de l'aventure en avril 2020",
+    },
+  ],
 });
 useSchemaOrg([defineWebPage()]);
 </script>

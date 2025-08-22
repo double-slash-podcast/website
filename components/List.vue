@@ -7,5 +7,5 @@
 </template>
 
 <script setup>
-const podcasts = await queryContent('/podcasts').find();
+const podcasts = await queryCollection('content').path('/podcasts').find();
 </script>

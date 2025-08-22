@@ -1,6 +1,6 @@
 <script setup>
 const {data} = await useAsyncData('bloglist', () => {
-  return queryContent('articles').sort({publicationDate: -1}).find();
+  return queryCollection('articles').order('publicationDate', 'DESC').all();
 });
 
 useHead({
