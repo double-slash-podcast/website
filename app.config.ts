@@ -38,7 +38,7 @@ export default defineAppConfig({
       'https://res.cloudinary.com/doubleslash/image/upload/v1666362854/ArtworkPodcastMain_w6nuaf.png',
     facebookImage:
       'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
-    feedUrl: `${baseInfos.siteUrl}/pocast-rss-feed.xml`,
+    feedUrl: `${baseInfos.siteUrl}/podcast-rss-feed.xml`,
     language: `fr-FR`,
     copyright: `Copyright © 2023 Double Slash`,
     authorName: `Alex Duval/Patrick Faramaz`,

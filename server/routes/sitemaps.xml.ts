@@ -1,66 +1,65 @@
-// import path from 'path';
-// import fs from 'fs';
-// import { SitemapStream, streamToPromise } from 'sitemap';
-// import { serverQueryContent } from '#content/server';
-// import type { baseInfos } from '~/config';
+import path from 'path';
+import fs from 'fs';
+import { SitemapStream, streamToPromise } from 'sitemap';
 
-// // find file and get stats
-// const getModifiedDate = (id: string | undefined): { lastmod: Date | null } => {
-//   if (!id) return { lastmod: null };
-//   // use id for get complete path, format id is content:podcasts:051.docusaurus:index.md
-//   const _path = id.replace(/[:]+/g, '/');
-//   const stats = fs.statSync(path.resolve(`./`, _path));
-//   return { lastmod: stats.mtime };
-// };
+// find file and get stats
+const getModifiedDate = (id: string | undefined): { lastmod: Date | null } => {
+  if (!id) return { lastmod: null };
+  // use id for get complete path, format id is content:podcasts:051.docusaurus:index.md
+  const _path = id.replace(/[:]+/g, '/').replace('podcasts/', '').replace('articles/', '').replace('custom/', '');
+  const stats = fs.statSync(path.resolve(`./content/`, _path));
+  return { lastmod: stats.mtime };
+};
 
-// export default defineEventHandler(async event => {
-//   // global info from config app
-//   const {
-//     baseInfos: { siteUrl },
-//   } = useAppConfig();
+export default defineEventHandler(async event => {
+  // global info from config app
+  const {
+    baseInfos: { siteUrl },
+  } = useAppConfig();
 
-//   // Fetch all documents
-//   const docs = await serverQueryContent(event).find();
-//   const _docs = docs
-//     // .filter(doc => doc?._path?.includes('/podcasts'))
-//     .filter(doc => !doc?._path?.includes('/transcript'));
+  // Fetch all documents
+  const pod = await queryCollection(event, 'podcasts').all();
+  const art = await queryCollection(event, 'articles').all();
+  const cus = await queryCollection(event, 'custom').all();
 
-//   const sitemap = new SitemapStream({
-//     hostname: siteUrl,
-//   });
+  const docs = [...pod, ...art, ...cus];
 
-//   // homepage
-//   sitemap.write({
-//     url: '',
-//     changefreq: 'monthly',
-//   });
+  const sitemap = new SitemapStream({
+    hostname: siteUrl,
+  });
 
-//   // list podcasts
-//   sitemap.write({
-//     url: '/articles/',
-//     changefreq: 'monthly',
-//     priority: 0.7,
-//   });
+  // homepage
+  sitemap.write({
+    url: '',
+    changefreq: 'monthly',
+  });
 
-//   // list podcasts
-//   sitemap.write({
-//     url: '/podcasts/',
-//     changefreq: 'monthly',
-//     priority: 0.7,
-//   });
+  // list podcasts
+  sitemap.write({
+    url: '/articles/',
+    changefreq: 'monthly',
+    priority: 0.7,
+  });
 
-//   // podcasts
-//   for (const doc of _docs) {
-//     const { lastmod } = getModifiedDate(doc._id);
-//     // remove custom for content page
-//     const _path = `${doc._path}/`.replace(/^\/custom/, '');
-//     sitemap.write({
-//       url: `${_path}`,
-//       changefreq: 'monthly',
-//       lastmod,
-//       priority: 1.0,
-//     });
-//   }
-//   sitemap.end();
-//   return streamToPromise(sitemap);
-// });
+  // list podcasts
+  sitemap.write({
+    url: '/podcasts/',
+    changefreq: 'monthly',
+    priority: 0.7,
+  });
+
+  // podcasts
+  for (const doc of docs) {
+    const { lastmod } = getModifiedDate(doc.id);
+    // remove custom for content page
+    const _path = `${doc.path}/`.replace(/^\/custom/, '');
+    sitemap.write({
+      url: `${_path}`,
+      changefreq: 'monthly',
+      lastmod,
+      priority: 1.0,
+    });
+  }
+  sitemap.end();
+  return streamToPromise(sitemap);
+});
