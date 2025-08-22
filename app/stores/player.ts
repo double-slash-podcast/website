@@ -1,5 +1,4 @@
 import { defineStore } from 'pinia';
-import type { baseInfos } from '~/config';
 
 export const usePlayerStore = defineStore('player', () => {
   const config = useRuntimeConfig();

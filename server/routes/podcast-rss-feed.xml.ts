@@ -3,7 +3,7 @@ import crypto from 'node:crypto';
 import { H3Event, NodeIncomingMessage } from 'h3';
 import RSS from 'rss';
 // import type { ParsedContent } from '@nuxt/content';
-import { useRedis } from '../../composables/useRedis';
+import { useRedis } from '../../app/composables/useRedis';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 
 /**

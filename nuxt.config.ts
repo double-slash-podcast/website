@@ -1,16 +1,15 @@
-
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    'nuxt-icon',
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
     '@nuxtjs/fontaine',
+    '@nuxt/icon',
   ],
 
   alias: {

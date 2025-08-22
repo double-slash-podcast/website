@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import {usePlayerStore} from '~~/stores/player';
+import {usePlayerStore} from '~/stores/player';
 const props = withDefaults(
   defineProps<{
     episode: PodcastContentType;

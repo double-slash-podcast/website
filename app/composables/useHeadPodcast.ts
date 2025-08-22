@@ -1,4 +1,3 @@
-import type { baseInfos } from "~/config";
 
 const getDescription = (string: string, length: number = 160): string => {
   if (!string) return '';
