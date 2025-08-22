@@ -140,7 +140,7 @@ h2 {
 }
 
 /* the thumb */
-::-webkit-slider-thumb {
+.wrapper-range ::-webkit-slider-thumb {
   @apply thumbTimeline -mt-0.5;
 }
 
