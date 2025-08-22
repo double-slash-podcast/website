@@ -131,7 +131,7 @@ export default defineEventHandler(
         title,
         subtitle,
         dsSlug,
-        _path,
+        path,
         season,
         episodeNumber,
         episodeType,
@@ -151,12 +151,12 @@ export default defineEventHandler(
         throw new Error(`not found dsSlug for episode "${title}"`);
       }
       // remove end slash
-      const path =
-        _path?.charAt(_path.length - 1) === '/' ? _path.slice(0, -1) : _path;
+      const _path =
+        path?.charAt(path.length - 1) === '/' ? path.slice(0, -1) : path;
       // create url of file
       const url = `${prefixAudio}/${dsSlug}.mp3`;
 
-      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${siteUrl}${path}/`;
+      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${siteUrl}${_path}/`;
 
       // generate guid
       const guidFresh = crypto
@@ -198,7 +198,7 @@ export default defineEventHandler(
         title: title || '',
         date: publicationDate,
         description: _description,
-        url: `${siteUrl}${path}/`,
+        url: `${siteUrl}${_path}/`,
         categories,
         author,
         custom_elements,
