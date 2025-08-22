@@ -9,7 +9,7 @@ const {data: last3} = await useAsyncData('last3', () => {
   <div class="flex flex-col gap-20">
     <EpisodeHeadings
       v-for="episode in last3"
-      :key="episode._id"
+      :key="episode.id"
       v-bind="{episode}"
     />
   </div>
