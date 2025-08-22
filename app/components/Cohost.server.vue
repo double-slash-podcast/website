@@ -23,7 +23,7 @@ const {
         <div class="pl-6 text-left uppercase font-brand">
           <p class="text-5xl text-white">Patrick</p>
           <p class="text-3xl text-gray-400">FARAMAZ</p>
-          <div class="space-x-4">
+          <div class="flex items-center mt-2 space-x-4">
             <NuxtLink
               to="https://twitter.com/PatrickFaramaz"
               target="_blank"
@@ -76,7 +76,7 @@ const {
         >
           <p class="text-5xl text-white">Alex</p>
           <p class="text-3xl text-gray-400">DUVAL</p>
-          <div class="space-x-4">
+          <div class="flex items-center mt-2 space-x-4 lg:justify-end">
             <NuxtLink
               to="https://twitter.com/xlanex6"
               target="_blank"

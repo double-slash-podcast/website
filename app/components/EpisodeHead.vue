@@ -42,7 +42,7 @@ const date = useLocalDate(props.episode.publicationDate);
       class="flex items-center justify-between col-start-1 col-end-3 row-start-2 gap-3"
     >
       <div class="flex items-center gap-x-2">
-        <EpisodeNumber :episode-number="props.episode.episodeNumber" />
+        <EpisodeNumber :episode-number="+props.episode.episodeNumber" />
         <NewEpisode :publication-date="props.episode.publicationDate" />
       </div>
       <div class="flex items-center gap-x-2">

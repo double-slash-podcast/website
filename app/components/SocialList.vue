@@ -11,7 +11,7 @@ const dark = false;
       <li v-for="(plateform, index) in socialList" :key="plateform.icon">
         <a :href="plateform.href" :title="plateform.title" target="_blank">
           <Icon
-            class="w-12 h-12 text-white duration-300 fill-white hover:text-gray-400 hover:-translate-y-2 sm:h-14 sm:w-14"
+            class="w-12 h-12 text-white duration-300 fill-white hover:text-gray-400 hover:-translate-y-2 sm:h-12 sm:w-12"
             :class="{'text-haiti': dark, 'mt-3': index === 0}"
             :name="plateform.icon"
           />

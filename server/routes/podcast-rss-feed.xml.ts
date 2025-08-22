@@ -2,7 +2,6 @@
 import crypto from 'node:crypto';
 import { H3Event, NodeIncomingMessage } from 'h3';
 import RSS from 'rss';
-// import type { ParsedContent } from '@nuxt/content';
 import { useRedis } from '../../app/composables/useRedis';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 
@@ -12,12 +11,9 @@ import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxio
  * @returns array
  */
 const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
+  // @ts-ignore
   const docs = await queryCollection(event, 'podcasts').order('id', 'DESC').all();
-
-  // filter for keep only podcast content
   return docs
-  // .filter(doc => doc?._path?.includes('/podcasts'))
-  // .filter(doc => !doc?._path?.includes('/transcript'));
 };
 
 const getFeedBase = (infos: PodcastInfosType) =>
@@ -142,7 +138,7 @@ export default defineEventHandler(
         description,
         guid,
         episodeArtwork,
-      }: ParsedContent = podcast;
+      } = podcast;
 
       if (!title) {
         throw new Error(`not found title for episode "${dsSlug}"`);

@@ -17,6 +17,9 @@ export default defineNuxtConfig({
     'micromark/lib/postprocess.js': 'micromark',
   },
 
+  icon: {
+    mode: 'svg',
+  },
   content: {
     experimental: { nativeSqlite: true },
     watch: {

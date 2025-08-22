@@ -43,7 +43,7 @@ type PodcastContentType = {
   path: string;
   title: string;
   description: string;
-  excerpt: { type: string; children: [][] };
+  excerpt?: { type: string; children: [][] };
   publicationDate: string;
   status: string;
   author: string;
@@ -51,10 +51,10 @@ type PodcastContentType = {
   dsSlug?: string;
   videoID?: string;
   url?: string;
-  episodeNumber: number;
+  episodeNumber: string;
   episodeType: string;
   explicit: boolean;
-  season: number;
+  season: string;
   subtitle: string;
   description: string;
   guid?: string;

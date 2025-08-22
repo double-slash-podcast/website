@@ -81,20 +81,20 @@ useSchemaOrg([defineWebPage()]);
     <main class="relative z-10 pb-24">
       <PodcastList class="mb-24" />
       <HeadingsSection title="et en vidéo" class="mb-24">
-        <div class="flex items-center justify-center mt-4 space-x-12">
+        <div class="flex items-center justify-center mt-6 space-x-12">
           <a
             href="https://www.youtube.com/channel/UCp5DGBAX2XNJXeOVAo7bICQ"
             target="_blank"
             title="Chaine YouTube"
           >
-            <Icon name="logos:youtube-icon" size="70" />
+            <Icon name="logos:youtube-icon" size="45" />
           </a>
           <a
             href="https://www.twitch.tv/doubleslash_dev"
             target="_blank"
             title="Chaine Twitch"
           >
-            <Icon name="fa-brands:twitch" size="60" class="text-[#9146ff]" />
+            <Icon name="fa-brands:twitch" size="50" class="text-[#9146ff]" />
           </a>
         </div>
       </HeadingsSection>

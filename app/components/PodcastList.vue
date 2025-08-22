@@ -15,26 +15,31 @@ const plateforms = [
     href: 'https://open.spotify.com/show/539N9WvnUguUzMWluPp2UK',
     icon: 'SpotifyIcon',
     title: 'Spotify',
+    className: 'w-10 h-10 sm:h-11 sm:w-11 mt-2.5',
   },
   {
     href: 'https://www.deezer.com/fr/show/1245532',
     icon: 'cbi:deezer-logo',
     title: 'Deezer',
+    className: 'w-10 h-10 sm:h-12 sm:w-12 text-[#a238ff]',
   },
   {
     href: 'https://podcasts.apple.com/fr/podcast/double-slash/id1513703178',
     icon: 'AppleIcon',
     title: 'Apple Podcast',
+    className: 'w-10 h-10 sm:h-12 sm:w-12',
   },
   {
     href: 'https://tunein.com/podcasts/Technology-Podcasts/Double-Slash-p1325678/',
     icon: 'TuneinIcon',
     title: 'Tunein',
+    className: 'w-10 h-10 sm:h-12 sm:w-12',
   },
   {
     href: `${siteUrl}/podcast-rss-feed.xml`,
     icon: 'vscode-icons:file-type-rss',
     title: 'RSS Feed',
+    className: 'w-10 h-10 sm:h-12 sm:w-12',
   },
 ];
 </script>
@@ -50,8 +55,8 @@ const plateforms = [
       <li v-for="plateform in plateforms" :key="plateform.icon">
         <a :href="plateform.href" :title="plateform.title" target="_blank">
           <Icon
-            class="w-12 h-12 duration-300 hover:-translate-y-2 sm:h-14 sm:w-14"
-            :class="{'text-[#a238ff]' :plateform.title === 'Deezer'}"
+            class="duration-300 hover:-translate-y-2"
+            :class="plateform.className"
             :name="plateform.icon"
             :title="plateform.title"
           />

@@ -44,7 +44,7 @@ const listSponsor = computed(
     <a
       target="_blank"
       :href="organizationSponsors.url"
-      class="px-4 py-3 text-gray-800 no-underline transition-all bg-gray-100 border border-gray-300 rounded-md hover:opacity-80 duration-400 group"
+      class="inline-flex items-center px-4 py-3 text-gray-800 no-underline transition-all bg-gray-100 border border-gray-300 rounded-md hover:opacity-80 duration-400 group"
       ><Icon
         name="ri:heart-3-fill"
         size="24"
