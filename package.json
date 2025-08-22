@@ -33,9 +33,9 @@
     "eslint-plugin-nuxt": "4.0.0",
     "eslint-plugin-prettier": "5.5.4",
     "jsdom": "26.1.0",
-    "nuxt": "3.15.3",
+    "nuxt": "3.18.1",
     "nuxt-icon": "0.6.10",
-    "nuxt-schema-org": "3.4.2",
+    "nuxt-schema-org": "5.0.6",
     "pinia": "3.0.3",
     "plop": "4.0.1",
     "postcss-custom-properties": "14.0.6",
@@ -62,5 +62,6 @@
   },
   "resolutions": {
     "mlly": "1.4.0"
-  }
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }
