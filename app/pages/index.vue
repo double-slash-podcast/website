@@ -75,7 +75,7 @@ useSchemaOrg([defineWebPage()]);
         <EpisodeHeadings
           :episode="data"
           class="mt-20 max-w-[768px]"
-        ></EpisodeHeadings>
+        />
       </template>
     </Header>
     <main class="relative z-10 pb-24">

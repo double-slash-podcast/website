@@ -67,11 +67,11 @@ useSchemaOrg([defineWebPage()]);
       <div class="flex flex-col gap-20 mt-20">
         <EpisodeHeadings
           v-for="episode in data"
-          :key="episode._id"
+          :key="episode.id"
           v-bind="{episode}"
         />
         <div class="flex justify-center">
-          <Pagination :count="count" :page="page" />
+          <Pagination :count="count || 0" :page="page" />
         </div>
       </div>
     </main>
