@@ -3,7 +3,6 @@ const {path} = useRoute();
 
 const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
-console.log(path.replace(/\/+$/, ''));
 
 const {data: episode} = await useAsyncData(
   `${path.replace(/\/+$/, '')}`,
