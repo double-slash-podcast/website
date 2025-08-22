@@ -40,7 +40,7 @@ export default defineAppConfig({
       'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
     feedUrl: `${baseInfos.siteUrl}/podcast-rss-feed.xml`,
     language: `fr-FR`,
-    copyright: `Copyright © 2023 Double Slash`,
+    copyright: `Copyright © 2025 Double Slash`,
     authorName: `Alex Duval/Patrick Faramaz`,
     ownerName: `Double Slash`,
     ownerEmail: baseInfos.email,
