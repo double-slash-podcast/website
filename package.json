@@ -10,7 +10,8 @@
     "format-write": "npx prettier --write ./",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "generate": "pnpm run build && npx nuxi generate"
+    "generate": "pnpm run build && npx nuxi generate",
+    "clean": "rm -rf .output node_modules pnpm-lock.yaml dist .nuxt"
   },
   "devDependencies": {
     "@nuxt/content": "2.13.4",
