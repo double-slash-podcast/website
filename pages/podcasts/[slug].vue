@@ -14,6 +14,7 @@ const {data: episode} = await useAsyncData(
   },
 );
 
+
 if (!episode.value?.title) {
   // redirect to 404 page
   navigateTo('/_404');
@@ -101,8 +102,7 @@ useSchemaOrg([
             <p class="mb-3">
               {{ episode.description }}
             </p>
-            <ContentRenderer :value="episode" class="max-w-full prose">
-            </ContentRenderer>
+            <ContentRenderer v-if="episode" :value="episode" class="max-w-full prose" />
           </div>
           <div
             v-if="episode?.links?.length > 0"
