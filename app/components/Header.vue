@@ -27,7 +27,7 @@ onUnmounted(() => {
     class="relative flex flex-col items-center gap-20 pb-20 overflow-hidden bg-darkPurple"
   >
     <Navbar />
-    <div class="z-10 flex flex-col justify-center">
+    <div class="z-10 flex flex-col justify-center w-full md:max-w-[768px] max-w-[calc(100vw - 2rem)]">
       <!-- titre -->
       <slot name="title">
         <Brand />

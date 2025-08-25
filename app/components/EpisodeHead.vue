@@ -2,7 +2,7 @@
 const {podcastInfos} = useAppConfig();
 
 const props = defineProps<{
-  episode: PodcastContentType;
+  episode: PodcastsCollectionItem;
 }>();
 
 const date = useLocalDate(props.episode.publicationDate);
