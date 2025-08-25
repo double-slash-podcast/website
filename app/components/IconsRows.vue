@@ -112,8 +112,6 @@ const logos = [
   'logos:webpack',
   'logos:alpinejs-icon',
   'logos:solidity',
-  'logos:alpinejs-icon',
-  'logos:wordpress-icon',
   'logos:claude-icon',
   'logos:github-copilot'
 ];

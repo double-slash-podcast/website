@@ -1,4 +1,3 @@
-
 const getDescription = (string: string, length: number = 160): string => {
   if (!string) return '';
   const lg = string.length;
@@ -25,7 +24,7 @@ const useHeadPodcast = ({
   episode,
   path,
 }: {
-  episode: { value: PodcastContentType };
+  episode: { value: PodcastsCollectionItem };
   path: string;
 }) => {
   const {
@@ -47,7 +46,7 @@ const useHeadPodcast = ({
     description: getDescription(episode.value?.description),
     ogDescription: getDescription(episode.value?.description),
     ogImage: getImgPodcast({
-      episodeNumber: episode.value?.episodeNumber,
+      episodeNumber: +episode.value?.episodeNumber,
       title: episode.value?.title,
     }),
     twitterCard: 'summary_large_image',
@@ -75,7 +74,7 @@ const useHeadPodcast = ({
       //     }),
       //   },
       {
-        hid: 'og:image:alt',
+        key: 'og:image:alt',
         property: 'og:image:alt',
         content: `${episode.value.episodeNumber} - ${episode.value.title}`,
       },
@@ -85,29 +84,29 @@ const useHeadPodcast = ({
       //     content: episode.value.description,
       //   },
       {
-        hid: 'og:url',
+        key: 'og:url',
         property: 'og:url',
         content: `${siteUrl}${path}`,
       },
       { name: 'twitter:site', content: '@doubleslash_dev' },
       //   {name: 'twitter:card', content: 'summary_large_image'},
       {
-        hid: 'twitter:url',
+        key: 'twitter:url',
         name: 'twitter:url',
         content: siteUrl,
       },
       {
-        hid: 'twitter:title',
+        key: 'twitter:title',
         name: 'twitter:title',
         content: episode.value.title,
       },
       {
-        hid: 'twitter:description',
+        key: 'twitter:description',
         name: 'twitter:description',
         content: episode.value.description,
       },
       {
-        hid: 'twitter:image',
+        key: 'twitter:image',
         name: 'twitter:image',
         content: getImgPodcast({
           episodeNumber: episode.value?.episodeNumber,
@@ -115,7 +114,7 @@ const useHeadPodcast = ({
         }),
       },
       {
-        hid: 'twitter:image:alt',
+        key: 'twitter:image:alt',
         property: 'twitter:image:alt',
         content: `${episode.value.episodeNumber} - ${episode.value.title}`,
       },
@@ -123,7 +122,7 @@ const useHeadPodcast = ({
     script: [
       {
         type: 'application/ld+json',
-        children: `{ "@context": "http://schema.org/", "@type": "PodcastEpisode",
+        innerHTML: `{ "@context": "http://schema.org/", "@type": "PodcastEpisode",
         "description": ${JSON.stringify(
           episode.value?.description,
         )}, "image": { "@type": "ImageObject",

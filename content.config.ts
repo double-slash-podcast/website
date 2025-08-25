@@ -14,23 +14,27 @@ export default defineContentConfig({
       type: 'page',
       source: 'podcasts/**/*.md',
       schema: z.object({
-        publicationDate: z.string().min(1, 'publicationDate requis'),
+        publicationDate: z.date(),
         status: PodcastStatus,
         author: z.string().min(1),
         categories: z.array(z.string()).nonempty(),
         duration: z.union([z.string(), z.number()]).optional().nullable(),
-        episodeNumber: z.number().int().nonnegative(),
+        episodeNumber: z.number().nonnegative(),
         episodeType: EpisodeType,
         explicit: z.boolean(),
-        season: z.number().int().nonnegative(),
+        season: z.number().nonnegative(),
         dsSlug: z.string().min(1),
         title: z.string().min(1),
         subtitle: z.string().min(1),
         episodeArtwork: z.string().url(),
         description: z.string().min(1),
-        videoLink: z.string().min(1),
+        videoLink: z.string().min(1).optional().nullable(),
         tags: z.array(z.string()).default([]),
-      })
+        links: z.array(
+          z.object({ title: z.string().min(1), url: z.string().url() })
+        ).default([]),
+        guid: z.string().optional().nullable(),
+      }),
     }),
     articles: defineCollection({
       type: 'page',

@@ -1,5 +1,7 @@
 // declare module 'read-markdown';
 
+import type { PodcastsCollectionItem } from "@nuxt/content";
+
 type BaseInfosType = {
   siteUrl: string;
   email: string;
@@ -39,28 +41,30 @@ type PodcastInfosType = {
   facebookImage: string;
 };
 
-type PodcastContentType = {
-  path: string;
-  title: string;
-  description: string;
-  excerpt?: { type: string; children: [][] };
-  publicationDate: string;
-  status: string;
-  author: string;
-  categories: string[];
-  dsSlug?: string;
-  videoID?: string;
-  url?: string;
-  episodeNumber: string;
-  episodeType: string;
-  explicit: boolean;
-  season: string;
-  subtitle: string;
-  description: string;
-  guid?: string;
-  episodeArtwork?: string;
-  body: { type: string; children: [][]; toc: {}[] };
-};
+// type PodcastContentType = {
+//   path: string;
+//   title: string;
+//   description: string;
+//   excerpt?: { type: string; children: [][] };
+//   publicationDate: string;
+//   status: string;
+//   author: string;
+//   categories: string[];
+//   dsSlug?: string;
+//   videoID?: string;
+//   url?: string;
+//   episodeNumber: string;
+//   episodeType: string;
+//   explicit: boolean;
+//   season: string;
+//   subtitle: string;
+//   description: string;
+//   guid?: string;
+//   episodeArtwork?: string;
+//   // body: { type: string; children: [][]; toc: {}[] };
+// };
+
+interface PodcastContentType extends PodcastsCollectionItem { }
 
 type PodcastItems = {
   title: string;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const {public: config} = useRuntimeConfig();
+const { public: config } = useRuntimeConfig() as any;
 const route = useRoute();
 const page = (route.params.page as string) || '1';
 
@@ -39,7 +39,7 @@ useSchemaOrg([defineWebPage()]);
         title="Tous les épisodes du podcast double slash"
         level="1"
       ></HeadingsSection>
-      <div class="flex items-center justify-end mt-5 text-white">
+      <div v-if="count" class="flex items-center justify-end mt-5 text-white">
         Page {{ page }} sur {{ Math.ceil(count / config.numberEpisodesList) }}
       </div>
 

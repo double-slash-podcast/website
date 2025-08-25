@@ -11,7 +11,6 @@ import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxio
  * @returns array
  */
 const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
-  // @ts-ignore
   const docs = await queryCollection(event, 'podcasts').order('id', 'DESC').all();
   return docs
 };

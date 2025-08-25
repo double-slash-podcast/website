@@ -65,7 +65,11 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
+  // debug: true,
   nitro: {
+    // logLevel: 4, // Verbose logging
+    // debug: true,
+    // Activer les logs détaillés
     prerender: {
       routes: [
         '/podcast-rss-feed.xml',

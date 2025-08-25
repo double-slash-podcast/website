@@ -10,7 +10,7 @@
     "format-write": "npx prettier --write ./",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "generate": "pnpm run build && npx nuxi generate",
+    "generate": "nuxi generate",
     "clean": "rm -rf .output node_modules pnpm-lock.yaml dist .nuxt"
   },
   "devDependencies": {
@@ -37,6 +37,7 @@
     "@pinia/nuxt": "0.11.2",
     "@tailwindcss/typography": "0.5.16",
     "@types/rss": "0.0.32",
+    "@types/throttle-debounce": "^5.0.2",
     "@types/xml2json": "0.11.6",
     "@vueuse/nuxt": "13.7.0",
     "consola": "3.4.2",

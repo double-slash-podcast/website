@@ -1,23 +1,22 @@
-<script setup>
-const {path} = useRoute();
+<script setup lang="ts">
+import type { PodcastContentType } from '~~/declaration';
 
+const {path} = useRoute();
+const pathStr = path.replace(/\/+$/, '');
+/** tab links */
 const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
 
-const {data: episode} = await useAsyncData(
-  `${path.replace(/\/+$/, '')}`,
-  () => {
-    return queryCollection('podcasts')
-      .where('path', '=', path.replace(/\/+$/, ''))
-      .first();
-  },
-);
+// get episode data
+const { data } = await useAsyncData(
+  `episode-${pathStr}`,
+  () => queryCollection('podcasts').path(pathStr)
+    .first()
+)
 
-
-if (!episode.value?.title) {
+if (!data.value?.title) {
   // redirect to 404 page
   navigateTo('/_404');
-  //   throw createError({statusCode: 404, statusMessage: 'Page Not Found'});
 }
 
 // disable transcription for the moment
@@ -32,27 +31,28 @@ const transcription = ref(null);
 // );
 
 // links
-if (episode?.value?.links?.length > 0) {
+if (data.value?.links && data.value?.links?.length > 0) {
   linksTab.value.push('Liens');
 }
 
 // video
-if (episode.value?.videoLink) {
+if (data.value?.videoLink) {
   linksTab.value.push('Video');
 }
-// transcript
-if (transcription.value?.results) {
-  linksTab.value.push('Transcription');
-}
 
-useHeadPodcast({episode, path});
+// transcript
+// if (transcription.value?.results) {
+//   linksTab.value.push('Transcription');
+// }
+
+useHeadPodcast({ episode: data as { value: PodcastContentType }, path });
 
 useSchemaOrg([
   defineWebPage(),
   defineArticle({
     '@type': 'TechArticle',
-    datePublished: episode.value?.publicationDate,
-    description: episode.value?.description,
+    datePublished: data.value?.publicationDate,
+    description: data.value?.description,
   }),
 ]);
 </script>
@@ -62,7 +62,7 @@ useSchemaOrg([
     <Header class="">
       <template #baseline>
         <span class="block h-16"></span>
-        <EpisodeHead :episode="episode"></EpisodeHead>
+        <EpisodeHead v-if="data" :episode="data"></EpisodeHead>
       </template>
       <template #title>
         <Brand class="mt-6" />
@@ -93,18 +93,24 @@ useSchemaOrg([
         </nav>
         <div class="pt-8">
           <div
+            v-if="data"
             id="panel-Description"
             :hidden="selected !== 'Description'"
             role="tabpanel"
             aria-labelledby="tab-Description"
           >
             <p class="mb-3">
-              {{ episode.description }}
+              {{ data.description }}
             </p>
-            <ContentRenderer v-if="episode" :value="episode" class="max-w-full prose" />
+            <!-- error 500 with this component -->
+            <ContentRenderer v-if="data" :value="data" class="max-w-full prose" />
+            <!-- <div class="prose">
+              <Authors />
+              <Sponsor :withList="false" />
+            </div> -->
           </div>
           <div
-            v-if="episode?.links?.length > 0"
+            v-if="data?.links && data?.links?.length > 0"
             id="panel-Liens"
             :hidden="selected !== 'Liens'"
             role="tabpanel"
@@ -112,7 +118,7 @@ useSchemaOrg([
           >
             <ul class="space-y-3">
               <li
-                v-for="link in episode.links"
+                v-for="link in data.links"
                 :key="link.title"
                 class="hover:underline underline-offset-4"
               >
@@ -131,18 +137,18 @@ useSchemaOrg([
             </ul>
           </div>
           <div
-            v-if="episode?.videoLink"
+            v-if="data?.videoLink"
             id="panel-Video"
             :hidden="selected !== 'Video'"
             role="tabpanel"
             aria-labelledby="tab-Video"
           >
             <VideoPlayer
-              :video-link="episode.videoLink"
-              :video-title="episode.title"
+              :video-link="typeof data.videoLink === 'string' ? data.videoLink : ''"
+              :video-title="data.title"
             />
           </div>
-          <div
+          <!-- <div
             v-if="transcription?.results"
             id="panel-Transcription"
             :hidden="selected !== 'Transcription'"
@@ -154,10 +160,10 @@ useSchemaOrg([
                 transcription.results?.channels[0].alternatives[0].transcript
               }}
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
-      <ShareBtn :text="episode.title" />
+      <ShareBtn :text="data?.title || ''" />
     </main>
     <Wrapper class="my-16">
       <PodcastList dark />

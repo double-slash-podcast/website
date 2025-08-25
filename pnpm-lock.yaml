@@ -114,6 +114,9 @@ importers:
       '@types/rss':
         specifier: 0.0.32
         version: 0.0.32
+      '@types/throttle-debounce':
+        specifier: ^5.0.2
+        version: 5.0.2
       '@types/xml2json':
         specifier: 0.11.6
         version: 0.11.6
@@ -1805,6 +1808,9 @@ packages:
 
   '@types/semver@7.7.0':
     resolution: {integrity: sha512-k107IF4+Xr7UHjwDc7Cfd6PRQfbdkiRabXGRjo07b4WyPahFBZCZ1sE+BNxYIJPPg73UkfOsVOLwqVc/6ETrIA==}
+
+  '@types/throttle-debounce@5.0.2':
+    resolution: {integrity: sha512-pDzSNulqooSKvSNcksnV72nk8p7gRqN8As71Sp28nov1IgmPKWbOEIwAWvBME5pPTtaXJAvG3O4oc76HlQ4kqQ==}
 
   '@types/through@0.0.33':
     resolution: {integrity: sha512-HsJ+z3QuETzP3cswwtzt2vEIiHBk/dCcHGhbmG5X3ecnwFD/lPrMpliGXxSCg03L9AhrdwA4Oz/qfspkDW+xGQ==}
@@ -9342,6 +9348,8 @@ snapshots:
       '@types/node': 17.0.45
 
   '@types/semver@7.7.0': {}
+
+  '@types/throttle-debounce@5.0.2': {}
 
   '@types/through@0.0.33':
     dependencies:

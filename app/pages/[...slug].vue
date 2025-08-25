@@ -1,9 +1,10 @@
 <script setup>
 const {path} = useRoute();
+const pathStr = path.replace(/\/+$/, '');
 // custom page are in content/custom
-const {data} = await useAsyncData(`${path.replace(/\/+$/, '')}`, () =>
+const {data} = await useAsyncData(`${pathStr}`, () =>
     queryCollection('custom')
-    .where('path', '=', `/custom${path.replace(/\/+$/, '')}`)
+    .where('path', '=', `/custom${pathStr}`)
     .first(),
 );
 
