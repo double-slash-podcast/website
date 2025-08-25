@@ -36,7 +36,7 @@ pnpm build
 ### Interface
 
 - [Vue](https://vuejs.org/)
-- [Nuxt](https://v3.nuxtjs.org/)
+- [Nuxt](https://nuxtjs.org/)
 
 ### Store
 
