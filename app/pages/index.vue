@@ -66,7 +66,7 @@ useSchemaOrg([defineWebPage()]);
         <h1
           class="relative z-10 mt-2 text-2xl tracking-wider text-center uppercase text-yellowDs font-headings"
         >
-          le podcast <br class="sm:hidden" />des developpeurs web
+          le podcast <br class="sm:hidden" >des developpeurs web
         </h1>
         <p class="font-light text-center text-white">
           par <span class="font-normal">PATRICK FARAMAZ</span> et

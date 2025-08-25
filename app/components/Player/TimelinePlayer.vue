@@ -21,7 +21,7 @@
       )}`"
       :seek-value="props.currentPosition"
       @input.stop="event => $emit('updateCurrentTime', event)"
-    />
+    >
     <progress
       min="0"
       :value="

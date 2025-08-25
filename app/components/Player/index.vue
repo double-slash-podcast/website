@@ -1,6 +1,6 @@
 <template>
   <audio ref="audioPlayerElement" preload="auto">
-    <source :src="props.src" :type="type" />
+    <source :src="props.src" :type="type" >
   </audio>
   <div
     v-if="props.src"

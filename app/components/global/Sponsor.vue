@@ -54,11 +54,11 @@ const listSponsor = computed(
       <a
         target="_blank"
         :href="organizationSponsors.url"
-        class="inline-flex items-center px-4 py-3 text-gray-800 no-underline transition-all bg-gray-100 border border-gray-300 rounded-md hover:opacity-80 duration-400 group"
+        class="inline-flex items-center px-4 py-3 text-gray-800 no-underline transition-all bg-gray-100 border border-gray-300 rounded-md hover:opacity-80 duration-400 group no-arrow"
         ><Icon
           name="ri:heart-3-fill"
           size="24"
-          class="mr-1 transition-color group-hover:text-red-700"
+          class="mr-3 transition-color group-hover:text-red-700"
         />
         Soutenir Double Slash</a
       >
@@ -84,7 +84,7 @@ const listSponsor = computed(
           :src="sponsor.node.avatarUrl"
           :alt="sponsor.node.name"
           class="m-0 border-4 border-purple-500 rounded-full w-28 h-28"
-        />
+        >
         <strong class="mt-2 text-xs text-gray-500 text-wrap">{{
           sponsor.node.name
         }}</strong>
