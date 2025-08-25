@@ -6,10 +6,11 @@ const {data} = await useAsyncData('bloglist', () => {
 useHead({
   title: 'Tous les articles du blog Double Slash',
   meta: [
-  {
+    {
       name: 'description',
-      content: 'Retrouvez la liste de tous les articles publiés par Double Slash',
-  }
+      content:
+        'Retrouvez la liste de tous les articles publiés par Double Slash',
+    },
   ],
 });
 useSchemaOrg([defineWebPage()]);
@@ -17,12 +18,12 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="bg-haiti">
-    <Header :height="160"></Header>
+    <Header :height="160" />
     <main>
       <HeadingsSection
         title="Tous les articles du blog double slash"
         level="1"
-      ></HeadingsSection>
+      />
       <section class="min-h-screen pt-8 pb-20">
         <ArticleList
           v-for="article in data"

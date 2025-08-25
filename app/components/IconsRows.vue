@@ -1,9 +1,7 @@
 <template>
   <div>
     <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul
-        class="flex min-w-full space-x-4 h-14 shrink-0 animate-slideLeft1"
-      >
+      <ul class="flex min-w-full space-x-4 h-14 shrink-0 animate-slideLeft1">
         <li v-for="logo in shuffleLogos" :key="logo" class="w-10 h-14">
           <Icon
             :id="logo"
@@ -40,9 +38,7 @@
     </div>
     <!-- 2 eme ligne -->
     <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul
-        class="flex min-w-full space-x-4 h-14 shrink-0 animate-slideRight1"
-      >
+      <ul class="flex min-w-full space-x-4 h-14 shrink-0 animate-slideRight1">
         <li v-for="logo in shuffleLogos" :key="logo" class="w-10 h-14">
           <!-- <IconsUse :id="logo" size="40" class="grayscale icon" /> -->
           <Icon
@@ -74,7 +70,7 @@
 <script setup lang="ts">
 withDefaults(
   defineProps<{
-    isFirst: boolean;
+    isFirst?: boolean;
   }>(),
   {isFirst: false},
 );
@@ -113,10 +109,10 @@ const logos = [
   'logos:alpinejs-icon',
   'logos:solidity',
   'logos:claude-icon',
-  'logos:github-copilot'
+  'logos:github-copilot',
 ];
 
 const shuffleLogos = computed(() => {
-  return logos.sort(() => Math.random() - 0.5);
+  return [...logos].sort(() => Math.random() - 0.5);
 });
 </script>

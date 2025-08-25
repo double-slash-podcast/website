@@ -29,7 +29,7 @@ import {
 
 const props = withDefaults(
   defineProps<{
-    speed: typeSpeedPlayer;
+    speed?: typeSpeedPlayer;
   }>(),
   {speed: 1.0},
 );

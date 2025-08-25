@@ -1,5 +1,4 @@
 <script setup lang="ts">
-
 // eslint-disable vue/no-v-html
 withDefaults(
   defineProps<{
@@ -15,7 +14,10 @@ const {data} = await useAsyncData('github-sponsor', () =>
 if (data.value) {
   try {
     // Validate JSON format before parsing
-    const prs = typeof data.value === 'object' ? data.value : JSON.parse(data.value as string);
+    const prs =
+      typeof data.value === 'object'
+        ? data.value
+        : JSON.parse(data.value as string);
     organizationSponsors.value = prs.data.organization.sponsorsListing;
   } catch (error) {
     console.error('Error parsing GitHub Sponsors data:', error);
@@ -35,14 +37,14 @@ const listSponsor = computed(
       class="border-t border-gray-300"
     >
       <h2>
-        {{ organizationSponsors.activeGoal?.percentComplete }}% vers l'objectif de
-        {{ organizationSponsors.activeGoal?.targetValue }}$ par mois
+        {{ organizationSponsors.activeGoal?.percentComplete }}% vers l'objectif
+        de {{ organizationSponsors.activeGoal?.targetValue }}$ par mois
       </h2>
       <div class="w-full h-1.5 mb-4 rounded-full bg-yellowDs">
         <div
           class="rounded-full h-1.5 bg-purpleDs text-[10px] font-medium text-blue-100 text-center p-0.5 leading-none"
           :style="`width: ${organizationSponsors.activeGoal?.percentComplete}%`"
-        ></div>
+        />
       </div>
     </div>
     <div class="leading-5">

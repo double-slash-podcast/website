@@ -2,7 +2,7 @@
 const {public: config} = useRuntimeConfig();
 const props = withDefaults(
   defineProps<{
-    count: number;
+    count?: number;
     page?: string;
     path?: string;
   }>(),

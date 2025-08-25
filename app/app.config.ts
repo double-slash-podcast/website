@@ -55,7 +55,7 @@ export default defineAppConfig({
     {
       href: 'https://x.com/doubleslash_dev',
       icon: 'fa6-brands:square-x-twitter',
-      title: 'X'
+      title: 'X',
     },
     {
       href: 'https://bsky.app/profile/double-slash.dev',
@@ -67,5 +67,5 @@ export default defineAppConfig({
       icon: 'mdi:github',
       title: 'Github',
     },
-  ]
+  ],
 });

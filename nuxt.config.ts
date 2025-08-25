@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxtjs/fontaine',
     '@nuxt/icon',
+    '@nuxt/eslint',
   ],
 
   alias: {
@@ -21,7 +22,7 @@ export default defineNuxtConfig({
     mode: 'svg',
   },
   content: {
-    experimental: { nativeSqlite: true },
+    experimental: {nativeSqlite: true},
     watch: {
       ws: {
         port: 5000,
@@ -32,9 +33,9 @@ export default defineNuxtConfig({
         highlight: {
           // Theme used in all color schemes.
           theme: 'synthwave-84',
-        }
-      }
-    }
+        },
+      },
+    },
   },
 
   image: {
@@ -58,7 +59,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: false,
     componentIslands: true,
-    viewTransition: true
+    viewTransition: true,
   },
 
   colorMode: {

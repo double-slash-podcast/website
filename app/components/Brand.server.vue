@@ -29,4 +29,3 @@ defineProps({
     <p class="text-center brand sm:text-[80px] text-[50px]">DOUBLE SLASH</p>
   </div>
 </template>
->

@@ -70,7 +70,7 @@ onMounted(() => {
           </span>
         </div>
       </div>
-      <div></div>
+      <div />
       <div
         id="success-message"
         class="sib-form-message-panel"
@@ -98,7 +98,7 @@ onMounted(() => {
           </span>
         </div>
       </div>
-      <div></div>
+      <div />
       <div
         id="sib-container"
         class="sib-container--large sib-container--vertical"
@@ -140,10 +140,10 @@ onMounted(() => {
 
                   <div class="entry__field">
                     <input
+                      id="NOM"
                       class="input"
                       maxlength="200"
                       type="text"
-                      id="NOM"
                       name="NOM"
                       autocomplete="off"
                       placeholder="NOM"
@@ -164,8 +164,7 @@ onMounted(() => {
                     border-radius: 3px;
                     border-color: #ff4949;
                   "
-                >
-                </label>
+                />
               </div>
             </div>
           </div>
@@ -191,10 +190,10 @@ onMounted(() => {
 
                   <div class="entry__field">
                     <input
+                      id="PRENOM"
                       class="input"
                       maxlength="200"
                       type="text"
-                      id="PRENOM"
                       name="PRENOM"
                       autocomplete="off"
                       placeholder="PRENOM"
@@ -215,8 +214,7 @@ onMounted(() => {
                     border-radius: 3px;
                     border-color: #ff4949;
                   "
-                >
-                </label>
+                />
               </div>
             </div>
           </div>
@@ -243,9 +241,9 @@ onMounted(() => {
 
                   <div class="entry__field">
                     <input
+                      id="EMAIL"
                       class="input"
                       type="text"
-                      id="EMAIL"
                       name="EMAIL"
                       autocomplete="off"
                       placeholder="EMAIL"
@@ -266,8 +264,7 @@ onMounted(() => {
                     border-radius: 3px;
                     border-color: #ff4949;
                   "
-                >
-                </label>
+                />
               </div>
             </div>
           </div>

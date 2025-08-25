@@ -27,7 +27,11 @@ const links = [
       to="/"
       title="accueil"
       class="flex items-center px-4 pt-4 pb-2 border-b-2 border-transparent hover:border-yellowDs"
-      ><Icon class="relative w-5 h-5 mr-1 top-[-1px]" name="material-symbols:home" title="Accueil" />//</nuxt-link
+      ><Icon
+        class="relative w-5 h-5 mr-1 top-[-1px]"
+        name="material-symbols:home"
+        title="Accueil"
+      />//</nuxt-link
     >
     <nuxt-link
       v-for="{title, url} in links"

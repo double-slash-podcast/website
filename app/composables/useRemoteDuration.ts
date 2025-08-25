@@ -1,5 +1,5 @@
-import { useRedis } from "#imports";
-import estimateMP3DurationAxios from "~/helpers/duration/estimateMP3DurationAxios";
+import {useRedis} from '#imports';
+import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 
 /**
  * get the size of remote file
@@ -9,7 +9,7 @@ import estimateMP3DurationAxios from "~/helpers/duration/estimateMP3DurationAxio
 const useRemoteDuration = async (url: string) => {
   const redis = useRedis();
 
-  const remoteEstimate = ref({ duration: 0, size: 0 });
+  const remoteEstimate = ref({duration: 0, size: 0});
 
   let estimate;
   // from cache
@@ -23,7 +23,7 @@ const useRemoteDuration = async (url: string) => {
     // save in DB
     await redis.set(url, estimate);
     if (estimate?.duration) {
-      remoteEstimate.value = estimate as { duration: number; size: number };
+      remoteEstimate.value = estimate as {duration: number; size: number};
     }
   } catch (e) {
     console.log(e);

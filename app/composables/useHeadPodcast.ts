@@ -24,17 +24,17 @@ const useHeadPodcast = ({
   episode,
   path,
 }: {
-  episode: { value: PodcastsCollectionItem };
+  episode: {value: PodcastsCollectionItem};
   path: string;
 }) => {
   const {
     $config: {
-      public: { isDev },
+      public: {isDev},
     },
   } = useNuxtApp();
 
   const {
-    baseInfos: { siteUrl, prefixAudioDev, prefixAudio, titleDefault },
+    baseInfos: {siteUrl, prefixAudioDev, prefixAudio, titleDefault},
   } = useAppConfig();
 
   const getMediaUrl = () =>
@@ -88,7 +88,7 @@ const useHeadPodcast = ({
         property: 'og:url',
         content: `${siteUrl}${path}`,
       },
-      { name: 'twitter:site', content: '@doubleslash_dev' },
+      {name: 'twitter:site', content: '@doubleslash_dev'},
       //   {name: 'twitter:card', content: 'summary_large_image'},
       {
         key: 'twitter:url',

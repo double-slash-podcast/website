@@ -95,10 +95,7 @@ function createEstimateMP3Duration<ResourceLocationT = string>(
     return out;
   }
 
-  // eslint-disable-next-line prettier/prettier
-  async function readID3V2Header(
-    resource: ResourceLocationT,
-  ): Promise<{
+  async function readID3V2Header(resource: ResourceLocationT): Promise<{
     header?: ID3V2Header;
     data: Uint8Array;
     totalContentSize?: number;

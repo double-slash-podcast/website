@@ -105,8 +105,6 @@ h2 {
   }
 }
 
-
-
 /** move here for avoid error compilation */
 .wrapper-range {
   @apply relative w-full h-4 p-0 m-0;

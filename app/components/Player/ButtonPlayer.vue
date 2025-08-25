@@ -66,7 +66,7 @@ const props = withDefaults(
     height?: number;
     value?: number;
     size?: number;
-    load: boolean;
+    load?: boolean;
   }>(),
   {
     width: 100,

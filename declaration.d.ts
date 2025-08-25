@@ -1,6 +1,6 @@
 // declare module 'read-markdown';
 
-import type { PodcastsCollectionItem } from "@nuxt/content";
+import type {PodcastsCollectionItem} from '@nuxt/content';
 
 type BaseInfosType = {
   siteUrl: string;
@@ -64,7 +64,7 @@ type PodcastInfosType = {
 //   // body: { type: string; children: [][]; toc: {}[] };
 // };
 
-interface PodcastContentType extends PodcastsCollectionItem { }
+type PodcastContentType = PodcastsCollectionItem;
 
 type PodcastItems = {
   title: string;
@@ -87,7 +87,7 @@ declare module '@nuxt/schema' {
   }
 }
 
-type typeDuration = { hours: number; minutes: number; seconds: number };
+type typeDuration = {hours: number; minutes: number; seconds: number};
 
 type typeStatusPlayer = 'play' | 'pause';
 
@@ -98,6 +98,6 @@ type ArticleType = {
   title: string;
   description: string;
   publicationDate: string;
-  author: { name: string; url: string };
+  author: {name: string; url: string};
   body: string;
 };

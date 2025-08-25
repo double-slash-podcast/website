@@ -1,11 +1,11 @@
 <script setup lang="ts">
-const { public: config } = useRuntimeConfig() as any;
+const {public: config} = useRuntimeConfig();
 const route = useRoute();
 const page = (route.params.page as string) || '1';
 
 // total episodes
 const {data: count} = await useAsyncData(`podcasts-count-${page}`, () => {
-    return queryCollection('podcasts').count();
+  return queryCollection('podcasts').count();
 });
 // define skip
 const skip = +page < 2 ? 0 : (+page - 1) * config.numberEpisodesList;
@@ -33,12 +33,12 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="pb-20 bg-haiti">
-    <Header></Header>
+    <Header />
     <main>
       <HeadingsSection
         title="Tous les épisodes du podcast double slash"
         level="1"
-      ></HeadingsSection>
+      />
       <div v-if="count" class="flex items-center justify-end mt-5 text-white">
         Page {{ page }} sur {{ Math.ceil(count / config.numberEpisodesList) }}
       </div>

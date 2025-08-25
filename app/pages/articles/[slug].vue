@@ -2,7 +2,7 @@
 const {path} = useRoute();
 
 const {data: article} = await useAsyncData(`${path.replace(/\/+$/, '')}`, () =>
-    queryCollection('articles')
+  queryCollection('articles')
     .where('path', '=', path.replace(/\/+$/, ''))
     .first(),
 );
@@ -13,9 +13,7 @@ if (!article.value?.title) {
 }
 useHead({
   title: article.value?.title,
-  meta: [
-    { name: 'description', content: article.value?.description ?? '' }
-  ],
+  meta: [{name: 'description', content: article.value?.description ?? ''}],
 });
 
 useSchemaOrg([
@@ -29,7 +27,7 @@ useSchemaOrg([
 </script>
 <template>
   <div class="">
-    <Header></Header>
+    <Header />
     <main class="pb-20">
       <h1 class="mt-10 text-4xl font-bold">{{ article?.title }}</h1>
       <ArticleDetails :article="article" />

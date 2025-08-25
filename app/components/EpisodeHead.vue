@@ -34,7 +34,10 @@ const date = useLocalDate(props.episode.publicationDate);
           {{ props.episode.title }}
         </h1>
       </nuxt-link>
-      <time :datetime="new Date(props.episode.publicationDate)" class="mt-1 text-sm text-left">
+      <time
+        :datetime="new Date(props.episode.publicationDate)"
+        class="mt-1 text-sm text-left"
+      >
         {{ date }}
       </time>
     </div>

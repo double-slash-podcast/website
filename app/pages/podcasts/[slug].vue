@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PodcastContentType } from '~~/declaration';
+import type {PodcastContentType} from '~~/declaration';
 
 const {path} = useRoute();
 const pathStr = path.replace(/\/+$/, '');
@@ -8,11 +8,9 @@ const linksTab = ref(['Description']);
 const selected = ref(linksTab.value[0]);
 
 // get episode data
-const { data } = await useAsyncData(
-  `episode-${pathStr}`,
-  () => queryCollection('podcasts').path(pathStr)
-    .first()
-)
+const {data} = await useAsyncData(`episode-${pathStr}`, () =>
+  queryCollection('podcasts').path(pathStr).first(),
+);
 
 if (!data.value?.title) {
   // redirect to 404 page
@@ -20,7 +18,6 @@ if (!data.value?.title) {
 }
 
 // disable transcription for the moment
-const transcription = ref(null);
 // const {data: transcription} = await useAsyncData(
 //   `${path}/transcription`,
 //   () => {
@@ -45,7 +42,7 @@ if (data.value?.videoLink) {
 //   linksTab.value.push('Transcription');
 // }
 
-useHeadPodcast({ episode: data as { value: PodcastContentType }, path });
+useHeadPodcast({episode: data as {value: PodcastContentType}, path});
 
 useSchemaOrg([
   defineWebPage(),
@@ -61,8 +58,8 @@ useSchemaOrg([
   <div>
     <Header class="">
       <template #baseline>
-        <span class="block h-16"></span>
-        <EpisodeHead v-if="data" :episode="data"></EpisodeHead>
+        <span class="block h-16" />
+        <EpisodeHead v-if="data" :episode="data" />
       </template>
       <template #title>
         <Brand class="mt-6" />
@@ -103,7 +100,11 @@ useSchemaOrg([
               {{ data.description }}
             </p>
             <!-- error 500 with this component -->
-            <ContentRenderer v-if="data" :value="data" class="max-w-full prose" />
+            <ContentRenderer
+              v-if="data"
+              :value="data"
+              class="max-w-full prose"
+            />
             <!-- <div class="prose">
               <Authors />
               <Sponsor :withList="false" />
@@ -144,7 +145,9 @@ useSchemaOrg([
             aria-labelledby="tab-Video"
           >
             <VideoPlayer
-              :video-link="typeof data.videoLink === 'string' ? data.videoLink : ''"
+              :video-link="
+                typeof data.videoLink === 'string' ? data.videoLink : ''
+              "
               :video-title="data.title"
             />
           </div>

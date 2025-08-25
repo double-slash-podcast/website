@@ -1,9 +1,6 @@
-import type { AxiosInstance } from 'axios';
+import type {AxiosInstance} from 'axios';
 import axios from 'axios';
-import type {
-  DataReader,
-  BytesRangeResponse,
-} from './createEstimateMP3Duration';
+import type {DataReader, BytesRangeResponse} from './createEstimateMP3Duration';
 import createEstimateMP3Duration from './createEstimateMP3Duration';
 
 export class AxiosDataReader implements DataReader<string> {

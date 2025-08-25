@@ -72,8 +72,8 @@ import SpeedPlayer from './SpeedPlayer.vue';
 
 const props = withDefaults(
   defineProps<{
-    src: string | undefined;
-    title: string | undefined;
+    src?: string | undefined;
+    title?: string | undefined;
     status: typeStatusPlayer;
   }>(),
   {

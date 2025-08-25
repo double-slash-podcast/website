@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import type { PodcastsCollectionItem } from '@nuxt/content';
+import type {PodcastsCollectionItem} from '@nuxt/content';
 import {debounce} from 'throttle-debounce';
 const {podcastInfos} = useAppConfig();
 
-const title = ref<HTMLHeadingElement|null>(null);
+const title = ref<HTMLHeadingElement | null>(null);
 
 const props = withDefaults(
   defineProps<{
@@ -18,7 +18,7 @@ const props = withDefaults(
 const date = useLocalDate(props.episode.publicationDate);
 
 const setTitlePosition = () => {
-  if(!title.value) return;
+  if (!title.value) return;
   const height = title.value.getBoundingClientRect().height;
   if (height > 68 && window.innerWidth < 640) {
     title.value.style.top = '-5px';
@@ -36,8 +36,6 @@ onMounted(async () => {
 onUnmounted(() => {
   window.removeEventListener('resize', debounce(300, setTitlePosition));
 });
-
-
 </script>
 
 <template>
@@ -58,8 +56,8 @@ onUnmounted(() => {
       class="text-left md:col-start-2 md:col-end-3 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
     >
       <component
-        ref="title"
         :is="`h${level}`"
+        ref="title"
         class="text-xl text-white normal-case tracking-normal sm:leading-[2.2rem] sm:text-2xl font-headings font-bold top-2 sm:top-0 relative"
         >{{ props.episode.title }}</component
       >
@@ -69,7 +67,10 @@ onUnmounted(() => {
     >
       {{ props.episode.description?.substring(0, 120) }}...
     </p>
-    <time :datetime="`${new Date(props.episode.publicationDate).toLocaleDateString('fr-FR', {})}`" class="col-start-1 col-end-3 mt-1 text-sm text-left text-white/60 md:col-start-2">
+    <time
+      :datetime="`${new Date(props.episode.publicationDate).toLocaleDateString('fr-FR', {})}`"
+      class="col-start-1 col-end-3 mt-1 text-sm text-left text-white/60 md:col-start-2"
+    >
       {{ date }}
     </time>
     <div class="flex items-center justify-between col-span-2 md:pt-2">

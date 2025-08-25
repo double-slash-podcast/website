@@ -14,7 +14,7 @@
         keyTimes="0;0.5;1"
         values="30;70;30"
         begin="-0.5s"
-      ></animate>
+      />
     </circle>
     <circle cx="63.3441" cy="50" class="fill-purpleDs" r="20">
       <animate
@@ -24,7 +24,7 @@
         keyTimes="0;0.5;1"
         values="30;70;30"
         begin="0s"
-      ></animate>
+      />
     </circle>
     <circle cx="36.6559" cy="50" class="fill-yellowDs" r="20">
       <animate
@@ -34,7 +34,7 @@
         keyTimes="0;0.5;1"
         values="30;70;30"
         begin="-0.5s"
-      ></animate>
+      />
       <animate
         attributeName="fill-opacity"
         values="0;0;1;1"
@@ -42,7 +42,7 @@
         keyTimes="0;0.499;0.5;1"
         dur="1s"
         repeatCount="indefinite"
-      ></animate>
+      />
     </circle>
   </svg>
 </template>

@@ -33,7 +33,7 @@ const {
                 name="mdi:twitter"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
-              ></Icon>
+              />
             </NuxtLink>
             <NuxtLink
               to="https://github.com/ipatate"
@@ -44,7 +44,7 @@ const {
                 name="mdi:github"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
-              ></Icon>
+              />
             </NuxtLink>
             <NuxtLink
               to="https://www.goodmotion.fr/"
@@ -55,7 +55,7 @@ const {
                 name="iconoir:www"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
-              ></Icon>
+              />
             </NuxtLink>
           </div>
         </div>
@@ -86,7 +86,7 @@ const {
                 name="mdi:twitter"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
-              ></Icon>
+              />
             </NuxtLink>
             <NuxtLink
               to="https://github.com/xlanex6"
@@ -97,7 +97,7 @@ const {
                 name="mdi:github"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
-              ></Icon>
+              />
             </NuxtLink>
             <NuxtLink
               to="https://www.alexduval.fr/"
@@ -108,7 +108,7 @@ const {
                 name="iconoir:www"
                 size="20"
                 class="text-gray-400 duration-100 transform fill-gray-400 hover:text-yellowDs hover:scale-125"
-              ></Icon>
+              />
             </NuxtLink>
           </div>
         </div>
