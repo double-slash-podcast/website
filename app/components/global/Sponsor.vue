@@ -1,4 +1,5 @@
 <script setup lang="ts">
+
 // eslint-disable vue/no-v-html
 withDefaults(
   defineProps<{
@@ -10,9 +11,15 @@ const organizationSponsors = ref();
 const {data} = await useAsyncData('github-sponsor', () =>
   $fetch('/github-sponsor.json'),
 );
+
 if (data.value) {
-  const prs = JSON.parse(data.value as string);
-  organizationSponsors.value = prs.data.organization.sponsorsListing;
+  try {
+    // Validate JSON format before parsing
+    const prs = typeof data.value === 'object' ? data.value : JSON.parse(data.value as string);
+    organizationSponsors.value = prs.data.organization.sponsorsListing;
+  } catch (error) {
+    console.error('Error parsing GitHub Sponsors data:', error);
+  }
 }
 // list person
 const listSponsor = computed(
@@ -22,36 +29,38 @@ const listSponsor = computed(
 
 <template>
   <!-- <div class="leading-5" v-html="organizationSponsors.fullDescriptionHTML" /> -->
-  <div
-    v-if="organizationSponsors.activeGoal != null"
-    class="border-t border-gray-300"
-  >
-    <h2>
-      {{ organizationSponsors.activeGoal?.percentComplete }}% vers l'objectif de
-      {{ organizationSponsors.activeGoal?.targetValue }}$ par mois
-    </h2>
-    <div class="w-full h-1.5 mb-4 rounded-full bg-yellowDs">
-      <div
-        class="rounded-full h-1.5 bg-purpleDs text-[10px] font-medium text-blue-100 text-center p-0.5 leading-none"
-        :style="`width: ${organizationSponsors.activeGoal?.percentComplete}%`"
-      ></div>
-    </div>
-  </div>
-  <div class="leading-5">
-    {{ organizationSponsors.activeGoal?.description }}
-  </div>
-  <div class="py-4 mt-6 text-center">
-    <a
-      target="_blank"
-      :href="organizationSponsors.url"
-      class="inline-flex items-center px-4 py-3 text-gray-800 no-underline transition-all bg-gray-100 border border-gray-300 rounded-md hover:opacity-80 duration-400 group"
-      ><Icon
-        name="ri:heart-3-fill"
-        size="24"
-        class="mr-1 transition-color group-hover:text-red-700"
-      />
-      Soutenir Double Slash</a
+  <div v-if="organizationSponsors">
+    <div
+      v-if="organizationSponsors.activeGoal != null"
+      class="border-t border-gray-300"
     >
+      <h2>
+        {{ organizationSponsors.activeGoal?.percentComplete }}% vers l'objectif de
+        {{ organizationSponsors.activeGoal?.targetValue }}$ par mois
+      </h2>
+      <div class="w-full h-1.5 mb-4 rounded-full bg-yellowDs">
+        <div
+          class="rounded-full h-1.5 bg-purpleDs text-[10px] font-medium text-blue-100 text-center p-0.5 leading-none"
+          :style="`width: ${organizationSponsors.activeGoal?.percentComplete}%`"
+        ></div>
+      </div>
+    </div>
+    <div class="leading-5">
+      {{ organizationSponsors.activeGoal?.description }}
+    </div>
+    <div class="py-4 mt-6 text-center">
+      <a
+        target="_blank"
+        :href="organizationSponsors.url"
+        class="inline-flex items-center px-4 py-3 text-gray-800 no-underline transition-all bg-gray-100 border border-gray-300 rounded-md hover:opacity-80 duration-400 group"
+        ><Icon
+          name="ri:heart-3-fill"
+          size="24"
+          class="mr-1 transition-color group-hover:text-red-700"
+        />
+        Soutenir Double Slash</a
+      >
+    </div>
   </div>
   <div v-if="withList === true" class="pb-8 mt-8 border-t border-gray-300">
     <h2>Ils nous soutiennent !</h2>

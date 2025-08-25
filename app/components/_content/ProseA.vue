@@ -1,17 +1,19 @@
 <script setup lang="ts">
-/* eslint  no-useless-escape:0 */
+import type { PropType } from 'vue'
+
 const reg =
   /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 
 const props = defineProps({
   href: {
     type: String,
-    default: '',
+    default: ''
   },
-  blank: {
-    type: Boolean,
-    default: false,
-  },
+  target: {
+    type: String as PropType<'_blank' | '_parent' | '_self' | '_top' | (string & object) | null | undefined>,
+    default: undefined,
+    required: false
+  }
 });
 
 const isExternal = computed((): boolean => reg.test(props.href));

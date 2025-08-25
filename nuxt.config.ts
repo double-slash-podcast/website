@@ -67,7 +67,7 @@ export default defineNuxtConfig({
 
   // debug: true,
   nitro: {
-    // logLevel: 4, // Verbose logging
+    // logLevel: 1, // Verbose logging
     // debug: true,
     // Activer les logs détaillés
     prerender: {

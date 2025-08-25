@@ -54,7 +54,7 @@ onUnmounted(() => {
       :alt="episode.title"
     />
     <nuxt-link
-      :to="`${episode.path}`"
+      :to="`${episode.path}/`"
       class="text-left md:col-start-2 md:col-end-3 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
     >
       <component
