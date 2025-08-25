@@ -1,5 +1,7 @@
 // declare module 'read-markdown';
 
+import type {PodcastsCollectionItem} from '@nuxt/content';
+
 type BaseInfosType = {
   siteUrl: string;
   email: string;
@@ -39,28 +41,30 @@ type PodcastInfosType = {
   facebookImage: string;
 };
 
-type PodcastContentType = {
-  _path: string;
-  title: string;
-  description: string;
-  excerpt: { type: string; children: [][] };
-  publicationDate: string;
-  status: string;
-  author: string;
-  categories: string[];
-  dsSlug?: string;
-  videoID?: string;
-  url?: string;
-  episodeNumber: number;
-  episodeType: string;
-  explicit: boolean;
-  season: number;
-  subtitle: string;
-  description: string;
-  guid?: string;
-  episodeArtwork?: string;
-  body: { type: string; children: [][]; toc: {}[] };
-};
+// type PodcastContentType = {
+//   path: string;
+//   title: string;
+//   description: string;
+//   excerpt?: { type: string; children: [][] };
+//   publicationDate: string;
+//   status: string;
+//   author: string;
+//   categories: string[];
+//   dsSlug?: string;
+//   videoID?: string;
+//   url?: string;
+//   episodeNumber: string;
+//   episodeType: string;
+//   explicit: boolean;
+//   season: string;
+//   subtitle: string;
+//   description: string;
+//   guid?: string;
+//   episodeArtwork?: string;
+//   // body: { type: string; children: [][]; toc: {}[] };
+// };
+
+type PodcastContentType = PodcastsCollectionItem;
 
 type PodcastItems = {
   title: string;
@@ -83,17 +87,17 @@ declare module '@nuxt/schema' {
   }
 }
 
-type typeDuration = { hours: number; minutes: number; seconds: number };
+type typeDuration = {hours: number; minutes: number; seconds: number};
 
 type typeStatusPlayer = 'play' | 'pause';
 
 type typeSpeedPlayer = 0.5 | 0.75 | 1.0 | 1.25 | 1.5 | 1.75 | 2.0;
 
 type ArticleType = {
-  _path: string;
+  path: string;
   title: string;
   description: string;
   publicationDate: string;
-  author: { name: string; url: string };
+  author: {name: string; url: string};
   body: string;
 };

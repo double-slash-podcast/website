@@ -1,16 +1,16 @@
-
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    'nuxt-icon',
     '@nuxtjs/color-mode',
     '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
     '@nuxtjs/fontaine',
+    '@nuxt/icon',
+    '@nuxt/eslint',
   ],
 
   alias: {
@@ -18,15 +18,23 @@ export default defineNuxtConfig({
     'micromark/lib/postprocess.js': 'micromark',
   },
 
+  icon: {
+    mode: 'svg',
+  },
   content: {
+    experimental: {nativeSqlite: true},
     watch: {
       ws: {
         port: 5000,
       },
     },
-    highlight: {
-      // Theme used in all color schemes.
-      theme: 'github-dark',
+    build: {
+      markdown: {
+        highlight: {
+          // Theme used in all color schemes.
+          theme: 'synthwave-84',
+        },
+      },
     },
   },
 
@@ -51,14 +59,18 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     viteNode: false,
     componentIslands: true,
-    viewTransition: true
+    viewTransition: true,
   },
 
   colorMode: {
     classSuffix: '',
   },
 
+  // debug: true,
   nitro: {
+    // logLevel: 1, // Verbose logging
+    // debug: true,
+    // Activer les logs détaillés
     prerender: {
       routes: [
         '/podcast-rss-feed.xml',

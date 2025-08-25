@@ -1,29 +1,32 @@
 import path from 'path';
 import fs from 'fs';
-import { SitemapStream, streamToPromise } from 'sitemap';
-import { serverQueryContent } from '#content/server';
-import type { baseInfos } from '~/config';
+import {SitemapStream, streamToPromise} from 'sitemap';
 
 // find file and get stats
-const getModifiedDate = (id: string | undefined): { lastmod: Date | null } => {
-  if (!id) return { lastmod: null };
+const getModifiedDate = (id: string | undefined): {lastmod: Date | null} => {
+  if (!id) return {lastmod: null};
   // use id for get complete path, format id is content:podcasts:051.docusaurus:index.md
-  const _path = id.replace(/[:]+/g, '/');
-  const stats = fs.statSync(path.resolve(`./`, _path));
-  return { lastmod: stats.mtime };
+  const _path = id
+    .replace(/[:]+/g, '/')
+    .replace('podcasts/', '')
+    .replace('articles/', '')
+    .replace('custom/', '');
+  const stats = fs.statSync(path.resolve(`./content/`, _path));
+  return {lastmod: stats.mtime};
 };
 
 export default defineEventHandler(async event => {
   // global info from config app
   const {
-    baseInfos: { siteUrl },
+    baseInfos: {siteUrl},
   } = useAppConfig();
 
   // Fetch all documents
-  const docs = await serverQueryContent(event).find();
-  const _docs = docs
-    // .filter(doc => doc?._path?.includes('/podcasts'))
-    .filter(doc => !doc?._path?.includes('/transcript'));
+  const pod = await queryCollection(event, 'podcasts').all();
+  const art = await queryCollection(event, 'articles').all();
+  const cus = await queryCollection(event, 'custom').all();
+
+  const docs = [...pod, ...art, ...cus];
 
   const sitemap = new SitemapStream({
     hostname: siteUrl,
@@ -50,10 +53,10 @@ export default defineEventHandler(async event => {
   });
 
   // podcasts
-  for (const doc of _docs) {
-    const { lastmod } = getModifiedDate(doc._id);
+  for (const doc of docs) {
+    const {lastmod} = getModifiedDate(doc.id);
     // remove custom for content page
-    const _path = `${doc._path}/`.replace(/^\/custom/, '');
+    const _path = `${doc.path}/`.replace(/^\/custom/, '');
     sitemap.write({
       url: `${_path}`,
       changefreq: 'monthly',

@@ -2,19 +2,19 @@
 import fs from 'fs';
 import path from 'path';
 // import {setup, $fetch} from '@nuxt/test-utils-edge';
-import { XMLParser } from 'fast-xml-parser';
-import { describe, expect, test } from 'vitest';
+import {XMLParser} from 'fast-xml-parser';
+import {describe, expect, test} from 'vitest';
 
 type GuidNode =
   | string
   | {
-    '#text'?: string;
-    '@_isPermaLink'?: string;
-    $t?: string; // legacy shape fallback
-    _?: string; // legacy shape fallback
-  };
+      '#text'?: string;
+      '@_isPermaLink'?: string;
+      $t?: string; // legacy shape fallback
+      _?: string; // legacy shape fallback
+    };
 
-type Item = { title?: string; guid?: GuidNode | null };
+type Item = {title?: string; guid?: GuidNode | null};
 
 type Feed = {
   rss?: {
@@ -111,15 +111,11 @@ describe('compare guid in markdown file episode and the old feed', () => {
 
   test('getGuidValue normalizes different guid shapes', () => {
     expect(getGuidValue('abc')).toBe('abc');
-    expect(getGuidValue({ '#text': 'xyz' })).toBe('xyz');
-    expect(getGuidValue({ $t: 'legacy' })).toBe('legacy');
-    expect(getGuidValue({ _: 'inner' })).toBe('inner');
-    expect(getGuidValue({ '#text': ' v ', '@_isPermaLink': 'false' })).toBe('v');
+    expect(getGuidValue({'#text': 'xyz'})).toBe('xyz');
+    expect(getGuidValue({$t: 'legacy'})).toBe('legacy');
+    expect(getGuidValue({_: 'inner'})).toBe('inner');
+    expect(getGuidValue({'#text': ' v ', '@_isPermaLink': 'false'})).toBe('v');
     expect(getGuidValue(undefined)).toBeUndefined();
     expect(getGuidValue(null)).toBeUndefined();
   });
 });
-const data = fs.readFileSync(
-  path.join(__dirname, '/assets/old-podcast-feed.xml'),
-);
-
