@@ -1,12 +1,9 @@
-/* eslint-disable camelcase */
-import crypto from 'crypto';
-import { H3Event, NodeIncomingMessage } from 'h3';
+import crypto from 'node:crypto';
+import type {H3Event, NodeIncomingMessage} from 'h3';
 import RSS from 'rss';
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
-import { useRedis } from '../../composables/useRedis';
+import {useRedis} from '../../app/composables/useRedis';
 import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
-import { serverQueryContent } from '#content/server';
-import type { baseInfos } from '~/config';
+import type {PodcastsCollectionItem} from '@nuxt/content';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -14,76 +11,71 @@ import type { baseInfos } from '~/config';
  * @returns array
  */
 const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
-  const docs = await serverQueryContent(event)
-    .sort({ publicationDate: 1 })
-    .where({ _partial: false })
-    .find();
-
-  // filter for keep only podcast content
-  return docs
-    .filter(doc => doc?._path?.includes('/podcasts'))
-    .filter(doc => !doc?._path?.includes('/transcript'));
+  const docs = await queryCollection(event, 'podcasts')
+    .order('id', 'DESC')
+    .all();
+  return docs;
 };
 
 const getFeedBase = (infos: PodcastInfosType) =>
-// get the options for the podcast iteself
-({
-  title: infos.title,
-  description: infos.description,
-  generator: 'double slash',
-  site_url: infos.siteUrl,
-  feed_url: infos.feedUrl,
-  image_url: infos.imageUrl,
-  language: infos.language,
-  copyright: infos.copyright,
-  docs: `https://help.apple.com/itc/podcasts_connect/#/itcb54353390`,
-  author: infos.authorName,
-  managingEditor: infos.managingEditor,
-  webMaster: infos.webMaster,
-  categories: [
-    infos.category1,
-    //   infos.category2,
-    //   infos.category3,
-  ],
-  pubDate: infos.publicationDate,
+  // get the options for the podcast iteself
+  ({
+    title: infos.title,
+    description: infos.description,
+    generator: 'double slash',
+    site_url: infos.siteUrl,
+    feed_url: infos.feedUrl,
+    image_url: infos.imageUrl,
+    language: infos.language,
+    copyright: infos.copyright,
+    docs: `https://help.apple.com/itc/podcasts_connect/#/itcb54353390`,
+    author: infos.authorName,
+    managingEditor: infos.managingEditor,
+    webMaster: infos.webMaster,
+    categories: [
+      infos.category1,
+      //   infos.category2,
+      //   infos.category3,
+    ],
+    pubDate: infos.publicationDate,
 
-  ttl: +infos.timeToLive,
-  custom_namespaces: {
-    itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
-    googleplay: 'http://www.google.com/schemas/play-podcasts/1.0',
-  },
-  custom_elements: [
-    { 'itunes:title': infos.title },
-    { 'itunes:subtitle': infos.subtitle },
-    { 'itunes:summary': infos.summary.substring(0, 3999) },
-    { 'itunes:type': infos.podcastType },
-    { 'itunes:explicit': infos.explicit },
-    { 'itunes:author': infos.authorName },
-    {
-      'itunes:owner': [
-        { 'itunes:name': infos.ownerName },
-        { 'itunes:email': infos.ownerEmail },
-      ],
+    ttl: +infos.timeToLive,
+    custom_namespaces: {
+      itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
+      googleplay: 'http://www.google.com/schemas/play-podcasts/1.0',
     },
-    {
-      'itunes:image': {
-        _attr: {
-          href: infos.imageUrl,
+    custom_elements: [
+      {'itunes:title': infos.title},
+      {'itunes:subtitle': infos.subtitle},
+      {'itunes:summary': infos.summary.substring(0, 3999)},
+      {'itunes:type': infos.podcastType},
+      {'itunes:explicit': infos.explicit},
+      {'itunes:author': infos.authorName},
+      {
+        'itunes:owner': [
+          {'itunes:name': infos.ownerName},
+          {'itunes:email': infos.ownerEmail},
+        ],
+      },
+      {
+        'itunes:image': {
+          _attr: {
+            href: infos.imageUrl,
+          },
         },
       },
-    },
-    {
-      'itunes:category': {
-        _attr: {
-          text: infos.category1,
+      {
+        'itunes:category': {
+          _attr: {
+            text: infos.category1,
+          },
         },
       },
-    },
-    { 'googleplay:author': infos.authorName },
-    { 'googleplay:description': infos.summary.substring(0, 999) },
-    { 'googleplay:explicit': infos.explicit },
-  ],
-});
+      {'googleplay:author': infos.authorName},
+      {'googleplay:description': infos.summary.substring(0, 999)},
+      {'googleplay:explicit': infos.explicit},
+    ],
+  });
 
 /**
  * get the size of remote file
@@ -106,13 +98,13 @@ const getRemoteFileInfos = async (url: string) => {
   } catch (e) {
     throw new Error((e as Error).message);
   }
-  return estimate || { duration: undefined, size: undefined };
+  return estimate || {duration: undefined, size: undefined};
 };
 
 export default defineEventHandler(
   async (event: H3Event | NodeIncomingMessage) => {
     const {
-      baseInfos: { siteUrl, prefixAudio },
+      baseInfos: {siteUrl, prefixAudio},
       podcastInfos,
     } = useAppConfig();
 
@@ -126,7 +118,7 @@ export default defineEventHandler(
       if (_a.getTime() > _b.getTime()) return 1;
       if (_a.getTime() < _b.getTime()) return -1;
       return 0;
-    })
+    });
 
     // create the rss feed
     const feed = new RSS(getFeedBase(podcastInfos));
@@ -136,7 +128,7 @@ export default defineEventHandler(
         title,
         subtitle,
         dsSlug,
-        _path,
+        path,
         season,
         episodeNumber,
         episodeType,
@@ -147,7 +139,7 @@ export default defineEventHandler(
         description,
         guid,
         episodeArtwork,
-      }: ParsedContent = podcast;
+      }: PodcastsCollectionItem = podcast;
 
       if (!title) {
         throw new Error(`not found title for episode "${dsSlug}"`);
@@ -156,12 +148,12 @@ export default defineEventHandler(
         throw new Error(`not found dsSlug for episode "${title}"`);
       }
       // remove end slash
-      const path =
-        _path?.charAt(_path.length - 1) === '/' ? _path.slice(0, -1) : _path;
+      const _path =
+        path?.charAt(path.length - 1) === '/' ? path.slice(0, -1) : path;
       // create url of file
       const url = `${prefixAudio}/${dsSlug}.mp3`;
 
-      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${siteUrl}${path}/`;
+      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${siteUrl}${_path}/`;
 
       // generate guid
       const guidFresh = crypto
@@ -170,14 +162,14 @@ export default defineEventHandler(
         .digest('hex');
 
       const custom_elements = [
-        { 'itunes:title': title },
-        { 'itunes:subtitle': subtitle },
-        season && { 'itunes:season': season },
-        episodeNumber && { 'itunes:episode': episodeNumber },
-        { 'itunes:episodeType': episodeType },
-        { 'itunes:explicit': explicit },
-        { 'itunes:summary': description },
-        { 'itunes:author': author },
+        {'itunes:title': title},
+        {'itunes:subtitle': subtitle},
+        season && {'itunes:season': season},
+        episodeNumber && {'itunes:episode': episodeNumber},
+        {'itunes:episodeType': episodeType},
+        {'itunes:explicit': explicit},
+        {'itunes:summary': description},
+        {'itunes:author': author},
         {
           'itunes:image': {
             _attr: {
@@ -185,16 +177,16 @@ export default defineEventHandler(
             },
           },
         },
-        { 'googleplay:description': description },
-        { 'googleplay:explicit': explicit },
+        {'googleplay:description': description},
+        {'googleplay:explicit': explicit},
       ];
 
       // get size of audio files
 
-      const { duration, size } = await getRemoteFileInfos(url);
+      const {duration, size} = await getRemoteFileInfos(url);
 
       if (duration) {
-        custom_elements.push({ 'itunes:duration': duration });
+        custom_elements.push({'itunes:duration': duration});
       }
 
       // add an episode item to the feed using the options
@@ -203,7 +195,7 @@ export default defineEventHandler(
         title: title || '',
         date: publicationDate,
         description: _description,
-        url: `${siteUrl}${path}/`,
+        url: `${siteUrl}${_path}/`,
         categories,
         author,
         custom_elements,
