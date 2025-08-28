@@ -48,11 +48,6 @@ https://github.com/features/actions
 - `y` pour transformer l'URL en permalink
 - `b` pour trouver qui blamer, git blame !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

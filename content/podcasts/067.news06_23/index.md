@@ -140,13 +140,6 @@ Zod avec les vars d’env <https://www.jacobparis.com/content/type-safe-env>
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
 
-withList: false
----
 
-::

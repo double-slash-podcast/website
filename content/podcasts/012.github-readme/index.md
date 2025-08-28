@@ -35,11 +35,6 @@ Pour l'automatisation:
 - [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)
 - [Pipedream](https://pipedream.com/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -97,11 +97,6 @@ https://www.usine-digitale.fr/article/deepseek-cette-start-up-chinoise-qui-fait-
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

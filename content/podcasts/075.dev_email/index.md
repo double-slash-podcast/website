@@ -87,7 +87,7 @@ Via son propre serveur :
 - Pourquoi :
     - pas passer pour un spammer
     - Charge serveur
-  
+
 - Solutions :
     - queue (Laravel Mail, nodemailer + kue,…)
     - Les services d’envois proposent toujours cette option
@@ -116,11 +116,6 @@ https://www.caniemail.com/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

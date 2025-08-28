@@ -49,11 +49,6 @@ Entre temps, Gatsby a annoncé l'incremental builds :
 - site web (billets originaux et traductions) : [https://jamstatic.fr/](https://jamstatic.fr/)
 - Slack avec beaucoup de sujets abordés et une communauté active (et accueillante) : [https://jamstatic.fr/slack/](https://jamstatic.fr/slack/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

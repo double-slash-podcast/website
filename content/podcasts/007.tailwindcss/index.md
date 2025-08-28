@@ -32,11 +32,6 @@ Tailwind est différent des frameworks CSS existants et Alex va vous expliquer p
 
 - Le [Color shade generator](https://javisperez.github.io/tailwindcolorshades/#/).
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -121,13 +121,6 @@ Générer 61 000 dollars avec un site fait avec PHP/HTML CSS et jQuery
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
 
-withList: false
----
 
-::

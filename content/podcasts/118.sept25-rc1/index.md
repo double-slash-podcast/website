@@ -4,21 +4,19 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration:
 episodeNumber: 118
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_118_sept25-rc1
-title: News de la rentree
-subtitle: RC1
+title: Les news sur le développement web et l'IA pour septembre 2025 RC1
+subtitle: Toutes les dernières news sur le développement web et l'IA pour septembre 2025 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1756369528/episode/ART_118_no3sns.png
-description:
+description: 'Un épisode news dans lequel nous évoquons : Gel DB, Laracon US 2025 (Inertia 2.1, Livewire 4, Pest 4), CSS Layout generator, Nuxt UI theme builder. Un article sur "Pourquoi les LLM ne peuvent pas écrire de logiciel complet" et un autre sur "Les entreprises traînent à adopter l’IA". Côté IA, Prism PHP (librairie pour LLM), Browser Echo MCP, Agents.md et Lumo AI.'
 videoLink : tOkjJ82DkZo
-tags: []
+tags: ['malt','laravel','livewire','inertia','pest','laracon','nuxt','google fonts','llm','geldb','prismphp','browser echo','agents.md','lumo ai']
 ---
-## News de la rentree
-
 ### Attention Malt
 
 **Schéma d’attaque identifié**
@@ -30,9 +28,8 @@ tags: []
 
 • Ne téléchargez pas, ni n’exécutez de fichiers dont l’origine ou le contenu vous semblent suspect
 
-## Les dernières sorties
 
-### Gel DB
+## Gel DB
 
 https://www.geldata.com/blog/edgedb-is-now-gel-and-postgres-is-the-future
 
@@ -52,13 +49,12 @@ Points clés :
 - **Compatibilité** : Gel sera compatible avec divers outils et bibliothèques.
 - **Pas de changement** : La mission de l'entreprise, son équipe et ses outils restent inchangés.
 
-## On développe !
 
-### Laracon US 2025
+## Laracon US 2025
 
 - Laravel Forge : refresh interface, ameliorations déploiement.
 - Laravel Cloud : Mysql, Tarifs simplifiés, preview PR…
-- Starter Kits : https://laravel.com/starter-kits 
+- Starter Kits : https://laravel.com/starter-kits
 Des starters basés sur 3 environnements : React et Vue (Inertia) ou Livewire.
 
 ### Inertia 2.1.0
@@ -95,11 +91,6 @@ https://www.youtube.com/watch?v=f5gAgwwwwOI
 - Emulation Mobile, etc..
 - Exécution en parallèle et sharding.
 
-## Tools !
-
-## JS File uploader
-
-https://uppy.io/
 
 ## CSS Layout generator (encore..)
 
@@ -111,15 +102,10 @@ https://uppy.io/
 
 https://github.com/Rareer/nuxt-ui-theme-builder
 
-### Laravel Hub
-
-[https://laravel-hub.com](https://laravel-hub.com/) 
-
 ## Font pour le code from Google
 
 https://github.com/googlefonts/googlesans-code
 
-## Les articles
 
 ## Pourquoi les LLM ne peuvent pas écrire de logiciel complet
 
@@ -132,9 +118,12 @@ Ils sont doués pour écrire du code. Mais ils échouent à maintenir une cohér
 
 Pour être plus tard mais uniquement si l’architecture et l’entraînement des models évoluent  fondamentalement.
 
-## Rubrique IA
+## Les entreprises traînent à adopter l’IA
 
-### Prism PHP, Lib pour LLM
+https://fredcavazza.net/2025/08/27/des-limites-de-la-capacite-dabsorption-du-marche-avec-lia
+
+
+## Prism PHP, Lib pour LLM
 
 https://www.youtube.com/watch?v=TsEeIjWrPhI
 
@@ -144,41 +133,25 @@ https://www.youtube.com/watch?v=TsEeIjWrPhI
 - Conçu autour du **pattern “driver”** : chaque fournisseur possède son propre driver, mais l’API que vous utilisez reste la même, ce qui facilite le **switch** entre fournisseurs ou l’ajout de nouveaux services.
 - Disponible sur GitHub : https://github.com/prism-php/prism et sur le site officiel https://prismphp.com/
 
-### FireCrawl V2
 
-https://www.firecrawl.dev/blog/firecrawl-v2-series-a-announcement
-
-### Browser Echo MCP
+## Browser Echo MCP
 
 https://github.com/instructa/browser-echo
 
 Corriger les erreurs grâce aux logs du navigateur
 
-### Agend.md
+## Agend.md
 
 [https://agents.md](https://agents.md/)
 
-### Lumo AI
+## Lumo AI
 
 https://proton.me/blog/fr/lumo-ai
 
-### GPT OSS
 
-https://openai.com/fr-FR/index/introducing-gpt-oss
-
-- OpenAI annonce deux nouveaux modèles à poids ouverts (**open-weight**) : **gpt‑oss‑120b** et **gpt‑oss‑20b**, sous licence **Apache 2.0** [cdn.openai.com+15OpenAI+15OpenAI+15](https://openai.com/index/introducing-gpt-oss/?utm_source=chatgpt.com).
-- Ces modèles sont des transformeurs à architecture **Mixture‑of‑Experts (MoE)**, optimisés pour le raisonnement avancé, l’utilisation d’outils externes et un déploiement efficace sur du matériel avec ressources limitées [arXiv+6OpenAI+6Cinco Días+6](https://openai.com/index/introducing-gpt-oss/?utm_source=chatgpt.com).
-- **gpt‑oss‑120b** s’avère quasi à égalité avec le modèle propriétaire **OpenAI o4‑mini** sur des benchmarks de raisonnement, tout en tournant efficacement sur un unique GPU de 80 GB [OpenAI Cookbook+15OpenAI+15IT Pro+15](https://openai.com/index/introducing-gpt-oss/?utm_source=chatgpt.com).
-- **gpt‑oss‑20b** offre une performance comparable à **o3‑mini** et peut s’exécuter sur des appareils avec seulement 16 GB de mémoire, ce qui le rend idéal pour des usages embarqués ou à faible coût [Hugging Face+9OpenAI+9IT Pro+9](https://openai.com/index/introducing-gpt-oss/?utm_source=chatgpt.com).
-- Ces modèles sont conçus pour être facilement déployés et personnalisés par les développeurs, chercheurs et entreprises, grâce à leur transparence (poids accessibles, documentation, modèles d’exemple…)
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

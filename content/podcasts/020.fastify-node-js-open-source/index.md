@@ -27,11 +27,6 @@ Nous vous laissons découvrir le framework plus en détail en écoutant l'épiso
 - Vincent Le Goff,
   - [https://github.com/zekth](https://github.com/zekth)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -17,15 +17,15 @@ description: Dans cet épisode, nous allons vous présenter des outils que nous 
 videoLink : 2wOBWVrccKE
 ---
 
-### Orbstack 
+### Orbstack
 Gestion docker
 - https://orbstack.dev/
 
-### DDEV 
-Développement PHP local (Mac, Windows, Linux) 
+### DDEV
+Développement PHP local (Mac, Windows, Linux)
 - https://ddev.com/
 
-### SequelPro 
+### SequelPro
 - https://sequelpro.com/
 
 ### Table plus
@@ -74,11 +74,6 @@ Développement PHP local (Mac, Windows, Linux)
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

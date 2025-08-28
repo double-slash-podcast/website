@@ -77,11 +77,6 @@ https://x.com/supabase/status/1869427407003812135?s=61
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

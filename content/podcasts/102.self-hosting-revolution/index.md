@@ -36,11 +36,6 @@ videoLink: AtqSucD8WlM
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

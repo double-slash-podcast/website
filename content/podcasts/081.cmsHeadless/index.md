@@ -262,11 +262,6 @@ A noter pour Directus, Alexandre Chopin est le Director of engineering
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

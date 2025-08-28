@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration:
 episodeNumber: 117
 episodeType: full
 explicit: false
@@ -94,11 +94,6 @@ Les développeurs web disposent de plusieurs technologies et solutions pour impl
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

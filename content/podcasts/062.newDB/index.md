@@ -197,13 +197,6 @@ Et nous finirons par les bases de données newSQL. Qu'est-ce que c'est ? Quels s
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
 
-withList: false
----
 
-::

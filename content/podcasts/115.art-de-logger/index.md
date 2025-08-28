@@ -27,11 +27,5 @@ tags: ['log', 'evenement', 'observabilité']
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+

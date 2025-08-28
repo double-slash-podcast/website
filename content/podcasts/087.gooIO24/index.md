@@ -49,7 +49,7 @@ Animation entre les routes
 
 Prise en charge : chrome 111, edge 111, firefox No, safari STP
 
-### View transitions classes 
+### View transitions classes
 
 Pour les micro interactions
 
@@ -64,7 +64,7 @@ Prise en charge : chrome 126, edge 126, firefox No, safari No
 
 ### Popover API
 
-https://codepen.io/goodmotion/pen/jOoMYBN 
+https://codepen.io/goodmotion/pen/jOoMYBN
 
 Prise en charge : chrome 114, edge 114, firefox 125, safari 17
 
@@ -173,7 +173,7 @@ Lien des résultats : https://2023.stateofhtml.com/en-US/features/
 9. Resource Hints (preload, etc..) **29% jamais entendu parler**
 10. FormData **32% jamais entendu parler**
 11. Datalist **41% jamais entendu parler** https://developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist
-12. Popover API **53% jamais entendu parler** 
+12. Popover API **53% jamais entendu parler**
 13. Search input attribut **60% jamais entendu parler**
 14. File System API **62% jamais entendu parler**
 15. Fetch priority attribut **64% jamais entendu parler**
@@ -187,11 +187,6 @@ Lien des résultats : https://2023.stateofhtml.com/en-US/features/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

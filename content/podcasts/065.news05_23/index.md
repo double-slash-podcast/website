@@ -98,13 +98,6 @@ Sommaire :
 47:20 Deno World
 54:19 Tools
 
-::authors
-::
 
-::Sponsor
----
 
-withList: false
----
 
-::

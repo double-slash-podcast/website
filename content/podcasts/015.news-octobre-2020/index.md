@@ -54,11 +54,6 @@ tags: [webpack,react,next,angular]
 - [article fr](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/)
 - [article original](https://css-tricks.com/comparing-static-site-generator-build-times/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

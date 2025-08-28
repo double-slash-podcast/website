@@ -40,11 +40,6 @@ Bonne écoute.
 - [https://hasura.io/](https://hasura.io/)
 - [https://www.nhost.io/](https://www.nhost.io/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

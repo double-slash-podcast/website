@@ -127,13 +127,4 @@ Graphql via pg_graphql
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-
-withList: false
----
-
-::

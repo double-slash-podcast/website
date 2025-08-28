@@ -18,16 +18,16 @@ videoLink : Jgwh1w42Opo
 ---
 ### Vite Conf
 
-- Creation d’une nouvelle toolchain et d’une nouvelle organisation pour remplacer esbuild et rollup. https://voidzero.dev/ 
+- Creation d’une nouvelle toolchain et d’une nouvelle organisation pour remplacer esbuild et rollup. https://voidzero.dev/
 Actuellement dans le capot de ViteJS, on a 3 outils esbuild, rollup et SWR. Chacun a ses force et se trouve là pour combler les faiblesses des autres.
 
 > **Void Zero**
-> 
-> 
+>
+>
 > We are on a mission to build a next-generation toolchain for JavaScript that is unified, high-performance, composable, and runtime-agnostic.
-> 
+>
 > We are excited to announce our $4.6m seed funding led by @Accel
-> 
+>
 - Nitro 3 [https://nitro-viteconf-2024.pages.dev](https://nitro-viteconf-2024.pages.dev/3)
     - H3 V2 : complètement réécrit. 10x plus rapide pour les réponses, bundle 60% plus petit.  Basé sur les web standards. Nouveau moteur pour les routes.
     - Nitro v3 : output plus petit. nitropack NPM devient nitro
@@ -46,7 +46,7 @@ Le code de l’app est open-source sous licence MIT. C’est basé sur Remix.
 
 ### Tauri 2.0
 
-App IOS, Android, Linux, Apple, PC ! 
+App IOS, Android, Linux, Apple, PC !
 
 https://tauri.app/blog/tauri-20/
 
@@ -113,11 +113,6 @@ En résumé, Deno 2 cherche à combiner la simplicité et la puissance en étant
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

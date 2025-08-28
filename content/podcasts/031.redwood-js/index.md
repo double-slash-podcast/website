@@ -59,11 +59,6 @@ Bonne écoute :)
 - [Discord redwoodjs](https://discord.com/invite/jjSYEQd)
 - [Tutorial redwoodjs](https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

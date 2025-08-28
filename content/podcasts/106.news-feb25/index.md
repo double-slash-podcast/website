@@ -104,11 +104,6 @@ https://huggingface.co/blog/inference-providers
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -96,11 +96,6 @@ https://aiagentsdirectory.com/landscape
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+
