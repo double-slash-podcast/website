@@ -59,11 +59,6 @@ Par contre, si vous avez un Motion Designer dans votre équipe, vous allez pouvo
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

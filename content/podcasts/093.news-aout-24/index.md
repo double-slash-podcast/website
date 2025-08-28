@@ -93,11 +93,6 @@ Un générateur de CSS pour créer des formes géométriques.
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -21,11 +21,6 @@ videoLink : IcfdF9NaSCQ
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

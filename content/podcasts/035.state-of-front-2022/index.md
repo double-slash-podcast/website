@@ -28,11 +28,6 @@ Sinon, vous pouvez vous rendre directement sur le lien de la page dédiée aux r
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -132,11 +132,6 @@ Durant l'enregistrement de cet épisode, l'équipe de Nuxt a publié la version 
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

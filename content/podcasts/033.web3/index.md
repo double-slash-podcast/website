@@ -34,11 +34,6 @@ On parle de blockchain, et de toutes les technos sous-jacentes (NFT,...). Commen
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

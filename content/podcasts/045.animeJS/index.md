@@ -28,7 +28,7 @@ tags: [animation,js]
 
 ---
 
-Pour finir la série sur les animations dans le navigateur, on termine avec un tour d'horizon des solutions avec du JavaScript. 
+Pour finir la série sur les animations dans le navigateur, on termine avec un tour d'horizon des solutions avec du JavaScript.
 
 On évoque les concepts de **keyFrames**, de **Staggering**, les **Timelines** ou autres **Triggers**
 
@@ -37,4 +37,3 @@ Puis on brosse le panel des solutions les plus connues et utilisées sur le Web.
 
 Bonne écoute !
 
-:Authors

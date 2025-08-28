@@ -60,11 +60,6 @@ Chaque pilier a son importance. Avec Dan, nous allons voir les principaux pilier
 - Article [https://blog-fr.orson.io/referencer-son-site-seo/32-experts-seo-livrent-3-techniques-de-referencement-2017](https://blog-fr.orson.io/referencer-son-site-seo/32-experts-seo-livrent-3-techniques-de-referencement-2017)
 - Article [https://seosly.com/blog/seo-audit/](https://seosly.com/blog/seo-audit/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -19,7 +19,7 @@ tags: ["tailwindcss", "devtools", "pkg", "python", "github"]
 ---
 ## PKG PR
 
-Installer des dépendances en sélectionnant le commit 🔥 
+Installer des dépendances en sélectionnant le commit 🔥
 
 - https://github.com/stackblitz-labs/pkg.pr.new
 
@@ -92,11 +92,6 @@ Server Island = HTML + partial server part
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

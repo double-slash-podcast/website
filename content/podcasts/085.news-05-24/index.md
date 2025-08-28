@@ -59,17 +59,17 @@ https://nodejs.org/en/blog/announcements/v22-release-announce
 
 - WebSocket client activé par défaut
 - require et import pour la vie !
-    
+
     If **`--experimental-require-module`** is enabled, and the ECMAScript module being loaded by **`require()`** meets the following requirements:
-    - Explicitly marked as an ES module with a "type": "module" field in the closest package.json or a .mjs extension. 
+    - Explicitly marked as an ES module with a "type": "module" field in the closest package.json or a .mjs extension.
     - Fully synchronous (contains no top-level await).
-    
+
 - watch mode stable
 - Moteur V8 upgradé
 
 ### JSR, un package registry de plus ?
 
-https://jsr.io/ 
+https://jsr.io/
 
 - TypeScript natif
 - ECMAScript only
@@ -91,11 +91,6 @@ https://www.youtube.com/embed/7MfPpIKc8I0
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

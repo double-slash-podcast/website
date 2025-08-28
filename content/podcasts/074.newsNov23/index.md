@@ -154,8 +154,4 @@ https://twitter.com/stackblitz/status/1717902407437373458?s=61&t=UwPamSaFma8DyQE
 
 https://codepen.io/jh3y/pen/JjxPKXz
 
-::Sponsor
----
-withList: false
----
-::
+

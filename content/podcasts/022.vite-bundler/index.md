@@ -105,11 +105,6 @@ export default ...;
 - ESBuild (Go) vraiment jeune pas encore prêt pour la production. Par contre extrêmement rapide et très prometteur. [https://esbuild.github.io/](https://esbuild.github.io/)
 - WMR: [https://github.com/preactjs/wmr](https://github.com/preactjs/wmr)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

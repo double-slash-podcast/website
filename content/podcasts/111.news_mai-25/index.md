@@ -94,11 +94,6 @@ https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-buildi
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

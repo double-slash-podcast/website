@@ -49,4 +49,3 @@ La solution analytics de notre invité : [https://chiffre.io](https://chiffre.io
 
 Bonne écoute !
 
-:Authors

@@ -28,11 +28,6 @@ tags: [static,ecommerce]
 
 [Netlify](https://www.netlify.com/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

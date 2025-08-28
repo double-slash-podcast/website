@@ -31,13 +31,6 @@ Vous pouvez retrouver cet article ici :<br /> [https://double-slash.dev/articles
 <br />
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
 
-withList: false
----
 
-::

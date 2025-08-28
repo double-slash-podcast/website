@@ -46,11 +46,6 @@ Pour retrouver Bruno Simon :
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

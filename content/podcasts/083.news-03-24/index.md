@@ -31,10 +31,10 @@ https://github.com/rolldown/rolldown
 
 https://tailwindcss.com/blog/tailwindcss-v4-alpha
 
-🚫 No postcss.config.js file  
-🚫 No tailwind.config.js file. 
-🚫 No configuring content globs. 
-🚫 No @tailwind` directives in your CSS. 
+🚫 No postcss.config.js file
+🚫 No tailwind.config.js file.
+🚫 No configuring content globs.
+🚫 No @tailwind` directives in your CSS.
 
 Exemple de Simon (Pro Tailwind)
 
@@ -43,7 +43,7 @@ Exemple de Simon (Pro Tailwind)
 
 @import 'tailwindcss'
 
-@theme {  
+@theme {
   --color-primary: #aab9ff;
 }
 ```
@@ -53,11 +53,11 @@ This is the equivalent of doing the following in Tailwind CSS v3:
 ```
 // tailwind.config.ts
 
-export default {  
-  theme: {		
-    colors: {			
-      primary: '#aab9ff'		
-    }  
+export default {
+  theme: {
+    colors: {
+      primary: '#aab9ff'
+    }
   }
 }
 ```
@@ -116,11 +116,6 @@ https://lamplightdev.com/blog/2024/01/10/streaming-html-out-of-order-without-jav
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

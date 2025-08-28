@@ -50,11 +50,6 @@ Senior Software Engineer pour Medusa JS
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

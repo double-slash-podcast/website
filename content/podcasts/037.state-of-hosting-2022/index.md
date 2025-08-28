@@ -138,5 +138,3 @@ Les Startups et entreprises sans grosse équipe technique. Ou équipe qui ne veu
 [https://www.flightcontrol.dev/](https://www.flightcontrol.dev/) (US)
 
 Bonne écoute !
-
-:Authors

@@ -30,11 +30,6 @@ tags: ["monorepo","git","devpos"]
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

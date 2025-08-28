@@ -25,12 +25,12 @@ Non c’est pas une blague, le développement de jQuery continue !
 ## Le Framework Remix en mode SPA
 
 Le premier article : https://remix.run/docs/en/main/future/spa-mode
-En même temps que l'enregistrement, l'équipe Remix annonce avec la v2.7.0, la stabilisation du mode SPA et Vite. 
+En même temps que l'enregistrement, l'équipe Remix annonce avec la v2.7.0, la stabilisation du mode SPA et Vite.
 - https://remix.run/blog/remix-vite-stable
 
 ## Million.js 3.0
 
-La librairie qui rend React 70% plus rapide sort une version 3.0 plus stable. 
+La librairie qui rend React 70% plus rapide sort une version 3.0 plus stable.
 - https://million.dev/blog/million-3
 
 ## Tempo
@@ -51,7 +51,7 @@ Objectif : App Web en mode SPA (avec export statique) en multilingue et data via
 
 ## Vite PWA
 
-Le générateur PWA pour vite évolue :  
+Le générateur PWA pour vite évolue :
 - https://vite-pwa-org.netlify.app/assets-generator/integrations.html
 
 
@@ -59,7 +59,7 @@ Le générateur PWA pour vite évolue :
 
 Apple désactive une partie des fonctionnalités PWA dans la future version IOS.
 
-Quelques articles :  
+Quelques articles :
 - https://www.theregister.com/2024/02/08/apple_web_apps_eu/
 - https://itnext.io/apple-wants-to-kill-pwas-0895be2e497b
 - https://www.igen.fr/ios/2024/02/ios-174-grosse-inquietude-sur-le-sort-des-web-apps-pwa-en-europe-141895
@@ -69,11 +69,6 @@ Quelques articles :
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

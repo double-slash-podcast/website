@@ -105,10 +105,10 @@ useSchemaOrg([
               :value="data"
               class="max-w-full prose"
             />
-            <!-- <div class="prose">
+            <div class="prose">
               <Authors />
               <Sponsor :withList="false" />
-            </div> -->
+            </div>
           </div>
           <div
             v-if="data?.links && data?.links?.length > 0"

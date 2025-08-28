@@ -59,11 +59,6 @@ Un service en early stage pour gérer un DB via une interface cloud.
 
 - [syncinc.so](https://syncinc.so)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

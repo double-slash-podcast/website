@@ -44,11 +44,6 @@ Pour savoir quels mots-clés choisir, on utilise des outils comme :
 - [Xenu](http://home.snafu.de/tilman/xenulink.html)
 - [Seo Mofo Snippet Optimizer](https://seomofo.com/snippet-optimizer.html)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

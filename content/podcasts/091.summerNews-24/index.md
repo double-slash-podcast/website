@@ -28,7 +28,7 @@ tags: ["astro", "nuxt", "backbone", "browser"]
 
 ## Drag and Drop Librairie JS
 
-- https://swapy.tahazsh.com/ 
+- https://swapy.tahazsh.com/
 
 ## Mask JS
 
@@ -60,11 +60,6 @@ Totalement from scratch !
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

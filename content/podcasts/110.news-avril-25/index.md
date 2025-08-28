@@ -112,11 +112,6 @@ https://www.youtube.com/watch?v=vOgI_3CyRWU
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

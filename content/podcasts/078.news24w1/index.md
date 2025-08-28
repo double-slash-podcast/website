@@ -54,11 +54,6 @@ tags: [vue,nuxt,nextjs,php,symphony,rails,linter]
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

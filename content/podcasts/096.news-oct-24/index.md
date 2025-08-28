@@ -159,11 +159,4 @@ https://uiverse.io/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
-
-withList: false
-
-::

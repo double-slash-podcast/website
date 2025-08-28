@@ -63,11 +63,6 @@ Bonne écoute et bonnes fêtes !
 00:20:38 Fin
 
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

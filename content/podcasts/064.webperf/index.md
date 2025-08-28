@@ -26,7 +26,7 @@ Nous évoquerons également les outils qui permettent de mesurer la performance 
 Bref, si vous voulez en savoir plus sur la Web Performance, cet épisode est fait pour vous !
 
 
-## Notre invité : 
+## Notre invité :
 
 Eroan Boyer de la société [Agence Web Performance](https://agencewebperformance.fr/)
 
@@ -56,11 +56,6 @@ Sommaire :
 - 01:04:00 : Over engineering les dernières années ?
 
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

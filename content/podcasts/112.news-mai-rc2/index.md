@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration:
 episodeNumber: 112
 episodeType: full
 explicit: false
@@ -71,7 +71,7 @@ https://github.com/altcha-org/altcha
 https://protonurl.ch/
 
 Outil de partage de données sensibles. Très utiles pour les accès et clés API !
-- Chiffrement de bout en bout. 
+- Chiffrement de bout en bout.
 - Durée de vie réglable (1h, 3j, 1semaine,..)
 - Autodestructions après première lecture
 - dispo en 16 langues.
@@ -132,11 +132,6 @@ Pour les abonnés, 1 an sur Perplexity Pro gratuit.
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

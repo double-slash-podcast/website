@@ -39,11 +39,6 @@ Nous vous laissons découvrir le CMS Strapi plus en détail en écoutant l'épis
 - [Le forum](https://forum.strapi.io/)
 -
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

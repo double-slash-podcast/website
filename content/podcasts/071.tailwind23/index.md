@@ -78,11 +78,6 @@ Articles qui regroupent des bonnes pratiques :
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

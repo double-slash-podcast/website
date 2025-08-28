@@ -35,8 +35,8 @@ La discussion sur Github:
 
 ## NextJS en version 14.1
 
-Pas de grosse révolution mais quelques améliorations intéressantes : 
-- https://nextjs.org/blog/next-14-1 
+Pas de grosse révolution mais quelques améliorations intéressantes :
+- https://nextjs.org/blog/next-14-1
 
 ## Chrome 121 supporte scrollbar width et color.
 
@@ -59,7 +59,7 @@ il s’inquiète de la collaboration accrue entre l’équipe React et Vercel.
 Suggère la création d’un framework communautaire sans entreprise privée derrière.
 
 > **I fell in love with React in 2016** when Angular announced Angular 2 and we were worried about the breaking changes.
-> 
+>
 
 ## Tool
 
@@ -69,11 +69,6 @@ https://lucide.dev/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

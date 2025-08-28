@@ -35,7 +35,7 @@ Bun sait lire le JSX
 
 ### Bundler
 
-Bun fait aussi Bundler. 
+Bun fait aussi Bundler.
 ```bun build ./index.tsx --outdir ./out```
 
 ### Packages
@@ -137,11 +137,11 @@ MOJO le language pour l’IA https://www.modular.com/mojo
 
 ## Meilisearch
 
-Meilisearch, le document crawler. 
+Meilisearch, le document crawler.
 
 Le système va crawler les pages et les indexer. Comme le ferais Google Bot : https://blog.meilisearch.com/documentation-crawler-release/
 
-Connecteur Vercel pour Meilisearch Cloud : https://vercel.com/integrations/meilisearch-cloud 
+Connecteur Vercel pour Meilisearch Cloud : https://vercel.com/integrations/meilisearch-cloud
 LE GROS STEP EST SUR LA RECHERCHE SEMANTIQUE : https://blog.meilisearch.com/introducing-vector-search/
 
 ## Browser
@@ -177,8 +177,4 @@ Créer des slides pour vos talks ou vos réunions.
 
 
 
-::Sponsor
----
-withList: false
----
-::
+

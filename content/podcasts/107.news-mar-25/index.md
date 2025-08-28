@@ -120,11 +120,6 @@ https://www.zdnet.com/article/perplexity-ai-teases-a-new-browser-for-agentic-sea
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

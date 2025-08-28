@@ -129,11 +129,6 @@ https://www.ikea.com/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

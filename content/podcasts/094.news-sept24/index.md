@@ -35,7 +35,7 @@ Dispo d’ici la fin de l’année 2024
     - Diagnostiques
     - ….
 - **Laravel Inertia V2**
-Dispo en Octobre 2024 
+Dispo en Octobre 2024
 https://pascalbaljet.dev/taylor-otwell-announces-inertia-v2-at-laracon-us-2024-heres-whats-new
     - Async Request
     - Pooling (appel régulier pour rafraîchir les data)
@@ -58,10 +58,10 @@ Il existe Forge, un système pour gérer un serveur depuis un dashboard. Laravel
 - **Pinkary** devient open-source https://laravel-news.com/pinkary-open-source
 https://pinkary.com/@PatrickFaramaz
 - **Livewire Flux**
-Librairie de composant LiveWire. https://fluxui.dev/. 
-https://www.youtube.com/watch?v=31pBMi0UdYE. 
-Design par un français https://x.com/ashugeo !  
-A priori, plusieurs réaction par rapport au prix et donc Caleb revient en vidéo sur le pourquoi 99 dollars  
+Librairie de composant LiveWire. https://fluxui.dev/.
+https://www.youtube.com/watch?v=31pBMi0UdYE.
+Design par un français https://x.com/ashugeo !
+A priori, plusieurs réaction par rapport au prix et donc Caleb revient en vidéo sur le pourquoi 99 dollars
 https://x.com/calebporzio/status/1829188535066472506?s=61
 
 ## Web Chaos Graph (JS)
@@ -104,11 +104,6 @@ Il faut aller dans le chat https://v0.dev/chat
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

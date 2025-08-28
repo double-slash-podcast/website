@@ -93,11 +93,6 @@ Toutes les stats de la newsletter : [https://www.indiehackers.com/product/frenc
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

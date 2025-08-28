@@ -37,7 +37,7 @@ ViteJS toujours attaqué par les détracteurs !
 
 ## Revenant
 
-- https://www.producthunt.com/products/lottielab 
+- https://www.producthunt.com/products/lottielab
 
 - [https://www.figma.com/community/plugin/1307008445393559148/lottielab-figma-to-lottie-animation](https://www.figma.com/community/plugin/1307008445393559148/lottielab-figma-to-lottie-animation?ref=producthunt)
 
@@ -128,11 +128,6 @@ Sommaire :
 01:08:45 ShowCode
 
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+
