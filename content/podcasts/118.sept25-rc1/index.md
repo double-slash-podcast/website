@@ -14,7 +14,7 @@ title: News de la rentree
 subtitle: RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1756369528/episode/ART_118_no3sns.png
 description:
-videoLink : XXXX
+videoLink : tOkjJ82DkZo
 tags: []
 ---
 ## News de la rentree
