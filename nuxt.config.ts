@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxt/icon',
     '@nuxt/eslint',
+    '@browser-echo/nuxt'
   ],
 
   alias: {
@@ -22,12 +23,8 @@ export default defineNuxtConfig({
     mode: 'svg',
   },
   content: {
-    experimental: {nativeSqlite: true},
-    watch: {
-      ws: {
-        port: 5000,
-      },
-    },
+    experimental: { nativeSqlite: true },
+    // anchorLinks: { h1: false, h2: false, h3: false, h4: false, h5: false, h6: false },
     build: {
       markdown: {
         highlight: {
@@ -53,11 +50,8 @@ export default defineNuxtConfig({
     cssPath: '~/assets/main.css',
   },
 
-  buildModules: [],
-
   experimental: {
     reactivityTransform: true,
-    viteNode: false,
     componentIslands: true,
     viewTransition: true,
   },
@@ -66,11 +60,7 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
 
-  // debug: true,
   nitro: {
-    // logLevel: 1, // Verbose logging
-    // debug: true,
-    // Activer les logs détaillés
     prerender: {
       routes: [
         '/podcast-rss-feed.xml',
@@ -87,11 +77,6 @@ export default defineNuxtConfig({
     public: {
       numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',
-      content: {
-        anchorLinks: {
-          exclude: [1, 2, 3, 4, 5, 6],
-        },
-      },
     },
   },
   hooks: {
@@ -104,5 +89,13 @@ export default defineNuxtConfig({
       });
     },
   },
-  compatibilityDate: '2024-10-29',
+  browserEcho: {
+    route: '/__client-logs',
+    include: ['log', 'warn', 'error'],
+    tag: '[web]',
+    batch: { size: 20, interval: 300 },
+    preserveConsole: true,
+    stackMode: 'condensed', // 'full' | 'condensed' | 'none'
+  },
+  compatibilityDate: '2025-08-29'
 });

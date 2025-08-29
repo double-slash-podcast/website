@@ -5,7 +5,8 @@ const header = ref();
 const headerHeight = ref();
 
 const updateHeaderHeight = () => {
-  headerHeight.value = header.value.getBoundingClientRect().height;
+  if (!header.value) return;
+  headerHeight.value = header.value?.getBoundingClientRect().height || 0;
 };
 
 onMounted(async () => {

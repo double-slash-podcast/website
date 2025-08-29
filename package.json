@@ -17,6 +17,7 @@
     "clean": "rm -rf .output node_modules pnpm-lock.yaml dist .nuxt"
   },
   "devDependencies": {
+    "@browser-echo/nuxt": "^1.0.1",
     "@iconify-json/ant-design": "^1.2.5",
     "@iconify-json/cbi": "^1.2.20",
     "@iconify-json/fa-brands": "^1.2.2",
