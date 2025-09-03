@@ -39,11 +39,6 @@ tags: [devops,react,astro,cms]
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

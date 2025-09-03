@@ -55,11 +55,6 @@ Dans cet épisode, nous profitons de l’expertise d’olivier pour parler rapid
 - [Angular 13](https://blog.angular.io/angular-v13-is-now-available-cce66f7bc296)
 - [NGX Translate](http://www.ngx-translate.com/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

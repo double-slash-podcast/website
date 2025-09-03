@@ -66,11 +66,6 @@ Heureusement, il y a des systèmes automatisés pour cela que vous pouvez mettre
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

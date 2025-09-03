@@ -53,11 +53,6 @@ Aurélien Lavorel : [https://lumao.eu/](https://lumao.eu/) et [@LavoWeb](https:/
 - Exemple d'une solution GatsbyJS/Sylius https://github.com/Gatsbylius/Gatsbylius
 - Solution de tracking de livraison https://www.shipup.co/
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

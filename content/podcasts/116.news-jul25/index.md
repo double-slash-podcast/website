@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration:
 episodeNumber: 116
 episodeType: full
 explicit: false
@@ -78,7 +78,7 @@ https://github.com/fairpm
 avant c’était Elastic 2.0. Changement majeure :
 **Apache 2.0** n’impose **aucune** restriction d’usage (commercial ou service cloud) en dehors de la préservation des notices et de la licence.
 
-https://mastra.ai/blog/apache-license 
+https://mastra.ai/blog/apache-license
 
 ## Comet, le browser de perplexity
 
@@ -108,11 +108,6 @@ ChatGPT serait passé de Bing à Google.
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

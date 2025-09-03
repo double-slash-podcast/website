@@ -43,11 +43,6 @@ tags: [ecoconception,green]
 - "Combattre la complexité" - Rémi Guyot [https://www.youtube.com/watch?v=4lfW48_oDxo](https://www.youtube.com/watch?v=4lfW48_oDxo)
 - Ecologie et numérique: [https://www.youtube.com/watch?v=zmE0X2KKRjc&list=PL4piaFbHOpRc6jtB450EOo-6cc91sUzzz&index=2&t=0s](https://www.youtube.com/watch?v=zmE0X2KKRjc&list=PL4piaFbHOpRc6jtB450EOo-6cc91sUzzz&index=2&t=0s)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -72,6 +72,4 @@ tags: [bun,deno,devops]
 - [GraphQL Cache](https://stellate.co/graphql-edge-caching)
 
 
-### Podcast présenté par :
 
-:Authors

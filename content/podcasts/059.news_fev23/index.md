@@ -89,11 +89,6 @@ Suite à l’épisode news décembre Thibault Barrat qui bosse chez Marmelab, no
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

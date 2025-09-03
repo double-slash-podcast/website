@@ -50,11 +50,6 @@ La version 3 est une grosse refonte du framework qui nécessite un gros travail 
 - [GitHub Nuxt](https://github.com/nuxt)
 - [GitHub NuxtLabs](https://github.com/nuxtlabs)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

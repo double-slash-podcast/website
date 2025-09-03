@@ -52,11 +52,6 @@ Bref, si vous voulez en savoir plus sur le DevOps, cet épisode est fait pour vo
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

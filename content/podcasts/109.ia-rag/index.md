@@ -129,11 +129,6 @@ https://dify.ai/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

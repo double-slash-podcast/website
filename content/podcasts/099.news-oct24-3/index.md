@@ -126,11 +126,6 @@ https://surrealdb.com/learn
 
 Surreal DB university pour apprendre comment utiliser Surreal DB.
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -100,11 +100,6 @@ NuxtJS donne la possibilité d’utiliser `NUXT_PUBLIC_` pour placer une variabl
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

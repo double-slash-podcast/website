@@ -17,11 +17,6 @@ description: Le premier épidode double slash, l'épisode "Pilote", qui présent
 tags: [presentation,alex,patrick]
 ---
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

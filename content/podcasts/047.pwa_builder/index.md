@@ -36,11 +36,6 @@ Nous allons également parler de la gestion des projets open-sources, comment in
 - [https://www.davrous.com/](https://www.davrous.com/)
 
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

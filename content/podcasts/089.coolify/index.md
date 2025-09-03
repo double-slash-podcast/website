@@ -28,7 +28,7 @@ Dans notre dernier épisode de Double Slash, nous avons exploré une alternative
 
 ## Qu'est-ce que Coolify ?
 
-Coolify est une solution qui se positionne entre les services PaaS traditionnels et la gestion complète de vos serveurs. Elle permet de déployer et gérer vos applications de manière autonome sur votre propre serveur, sans les complications habituelles liées à cette approche. 
+Coolify est une solution qui se positionne entre les services PaaS traditionnels et la gestion complète de vos serveurs. Elle permet de déployer et gérer vos applications de manière autonome sur votre propre serveur, sans les complications habituelles liées à cette approche.
 
 Pour la version self-hosted (auto-hébergée), l'installation de Coolify se fait via une simple commande SSH, et une fois en place, elle offre une expérience utilisateur comparable à celle des plateformes PaaS populaires.
 
@@ -59,11 +59,6 @@ Pour ceux intéressés par une démonstration plus approfondie, nous envisageons
 
 Coolify pourrait bien être la solution que vous cherchiez pour prendre en main le déploiement et la gestion de vos applications. Explorez cette option et découvrez comment elle peut s'intégrer dans votre flux de travail de développement.
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -90,34 +90,27 @@ Laravel offre différentes options pour la gestion du côté front de vos applic
 
 ## Sommaire
 
-00:00 Intro. 
-01:00 Présentation de Ludovic. 
-03:00 Qu'est-ce que Laravel ?  
-06:40 La gestion du projet Laravel, les contributeurs. 
-09:20 Laravel proche de la philosophie Ruby on Rails ?  
-12:00 Les packages autours de Laravel. 
-17:30 Les PSR et conventions de code. 
-18:20 Facilité de prise en main de Laravel. 
-23:45 Analyse de code avec PHPStan et LaraStan. 
-24:58 L'écosystème Laravel. 
-28:10 Quel projet pour Laravel ?  
-30:30 le rythme de sortie des versions et évolutions de Laravel. 
-31:40 Les tests dans Laravel  
-37:00 Laravel coté front. 
-44:30 La communauté Laravel. 
-45:40 Les ressources pour apprendre Laravel. 
-47:00 Fin...  
+00:00 Intro.
+01:00 Présentation de Ludovic.
+03:00 Qu'est-ce que Laravel ?
+06:40 La gestion du projet Laravel, les contributeurs.
+09:20 Laravel proche de la philosophie Ruby on Rails ?
+12:00 Les packages autours de Laravel.
+17:30 Les PSR et conventions de code.
+18:20 Facilité de prise en main de Laravel.
+23:45 Analyse de code avec PHPStan et LaraStan.
+24:58 L'écosystème Laravel.
+28:10 Quel projet pour Laravel ?
+30:30 le rythme de sortie des versions et évolutions de Laravel.
+31:40 Les tests dans Laravel
+37:00 Laravel coté front.
+44:30 La communauté Laravel.
+45:40 Les ressources pour apprendre Laravel.
+47:00 Fin...
 
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
 
-withList: false
----
 
-::

@@ -34,11 +34,6 @@ tags: [tauri, cypress,fastify,deno,wordpress]
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

@@ -79,11 +79,6 @@ The Universal UI Library
 - [https://jsoncrack.com/](https://jsoncrack.com/)
 - [https://jsonhero.io/](https://jsonhero.io/)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

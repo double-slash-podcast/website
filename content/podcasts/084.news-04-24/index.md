@@ -110,11 +110,6 @@ HotWired (ROR et Symfony) [https://turbo.hotwired.dev/](https://turbo.hotwired.d
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

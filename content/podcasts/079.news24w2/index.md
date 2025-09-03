@@ -52,11 +52,6 @@ Les projets remarqués :
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

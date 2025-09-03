@@ -26,11 +26,6 @@ Un épisode un peu différent et en live.
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

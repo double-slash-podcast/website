@@ -20,7 +20,7 @@ tags: ["astro", "cursor", "safari", "tailwind", "nuxt"]
 ---
 ### Cursor, un IDE survitaminé à l’IA, innovation ou bullshit artificiel ?
 
-https://cursor.sh/ 
+https://cursor.sh/
 
 
 ### Alternative IA pour le dev
@@ -98,7 +98,7 @@ https://uicolors.app/create
 
 ### Article sur les couleurs CSS par Lea Verou
 
-Lea Verou fait le point sur la génération de couleur CSS et l’accessibilité 
+Lea Verou fait le point sur la génération de couleur CSS et l’accessibilité
 
 https://lea.verou.me/blog/2024/contrast-color/
 
@@ -131,11 +131,6 @@ https://twitter.com/jasonleowsg/status/1801182816740520227?s=61&t=oJp8skN0Iydkcw
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

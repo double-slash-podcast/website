@@ -73,11 +73,6 @@ Les blocages de la part de safari :
 Apple interdit de développer un navigateur pour IOS avec un moteur de rendu différent de WebKit. Donc les navigateurs disponibles sur IOS sont en réalité des applications composées de WebViews WebKit.
 Ils n'ont donc pas les fonctionnalités PWA (ex: impossible d'ajouter la PWA à l'écran d'accueil via iOS chrome ou d'utiliser les Services Workers)
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

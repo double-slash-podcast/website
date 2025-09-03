@@ -98,11 +98,6 @@ Les majors :
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

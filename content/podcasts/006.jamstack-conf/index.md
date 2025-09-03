@@ -91,11 +91,6 @@ Le site est en anglais.
 
 React, GraphQL and Prisma pour faire le Ruby on Rails du JS.
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

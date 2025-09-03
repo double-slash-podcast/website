@@ -24,11 +24,6 @@ Le fameux projet sur GitHub : https://github.com/ipatate/UniversalAppReact/tree/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

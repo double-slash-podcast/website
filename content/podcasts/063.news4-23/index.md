@@ -59,11 +59,6 @@ tags: [git,devops,devtools]
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

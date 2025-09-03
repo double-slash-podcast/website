@@ -94,11 +94,6 @@ Les développeurs web disposent de plusieurs technologies et solutions pour impl
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+

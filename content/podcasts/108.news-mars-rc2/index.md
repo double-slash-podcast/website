@@ -106,11 +106,6 @@ https://openai.com/index/new-tools-for-building-agents/
 
 Bonne écoute !
 
-::authors
-::
 
-::Sponsor
----
-withList: false
----
-::
+
+
