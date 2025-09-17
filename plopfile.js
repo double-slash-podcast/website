@@ -1,6 +1,6 @@
 // import { NodePlopAPI } from 'plop';
 
-module.exports = function (plop) {
+export default function (plop) {
   plop.setGenerator('episode', {
     description: 'Generate a new podcast episode',
     prompts: [
