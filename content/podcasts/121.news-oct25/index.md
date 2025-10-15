@@ -10,8 +10,8 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: news-oct25
-title: Les news Web Dev d’octobre 2025 : Adonis, Laravel, React, Vite plus et plus encore !
-subtitle: Les news Web Dev d’octobre 2025 : Adonis, Laravel, React, Vite plus et plus encore !
+title: Les news Web Dev d’octobre 2025 : Adonis, Laravel, React Compiler, Vite+ et bien plus encore !
+subtitle: Les news Web Dev d’octobre 2025 : Adonis, Laravel, React Compiler, Vite+ et bien plus encore !
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1759324754/episode/ART_121_haob60.png
 description: Les 30 ans du premier navigateur qui embarquait JavaScript, les 10 ans d'Adonis, Craft CMS qui passe sur Laravel, la sortie de React Compiler V1, les annonces sur Vite+, Cursor CLI et GitHub CLI pour répondre à Claude CLI. Et comment vérifier les packages npm avant de les installer. Bonne écoute !
 videoLink : wsSz_iUU9j4
