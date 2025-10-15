@@ -110,11 +110,11 @@ Pricing :
 - Browser control
 - Bugbot (summary of the PR)
 
-## GitHub CLI en bêta
+## GitHub Copilot CLI en bêta
 
 - https://github.blog/changelog/2025-09-25-github-copilot-cli-is-now-in-public-preview/
 
-## Scanner les packages avant leurs installations
+## Scanner les packages avant leur installation
 
 - [https://github.com/lirantal/npq](https://github.com/lirantal/npq)
 
