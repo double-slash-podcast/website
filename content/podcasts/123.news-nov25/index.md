@@ -10,7 +10,7 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_123_news-nov25
-title: 🔥 News Novembre 2025 : 1an de MCP, Vercel Workflow, AI SDK et Mastra V1
+title: "🔥 News Novembre 2025 : 1an de MCP, Vercel Workflow, AI SDK et Mastra V1"
 subtitle: Les news sur le développement web et l'IA pour novembre 2025 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1763134132/episode/ART_123_csirmf.png
 description: Dans cet épisode, nous évoquons la React Foundation, PHP 8.5, le document ViteJS, la gestion des workflows avec Vercel, Mastra et AI SDK, Composer PHP et le nouveau modèle de Cursor. Le premier anniversaire du MCP, Cloudflare qui fait la guerre aux bots et quelques outils et articles.
