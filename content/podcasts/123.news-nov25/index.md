@@ -12,7 +12,7 @@ season: 2
 dsSlug: DS_123_news-nov25
 title: News 25 RC1
 subtitle: 
-episodeArtwork: 
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1763134132/episode/ART_123_csirmf.png
 description:
 videoLink : klfTSelCOTw
 tags: []
