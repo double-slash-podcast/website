@@ -101,7 +101,7 @@ WebGPU représente la prochaine génération d’API graphique pour le web, appo
 
 ### Les alternatives européennes
 
-- [bunny.net](bunny.net)
+- [bunny.net](https://bunny.net)
 - [keycdn](https://www.keycdn.com)
 - [https://www.myrasecurity.com](https://www.myrasecurity.com/)
 - https://gcore.com/
