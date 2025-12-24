@@ -62,7 +62,15 @@
 
 @layer components {
   .trackTimeline {
-    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+    height: 0.25rem;
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background-color: transparent;
+    background-position: left top;
+    border-width: 0;
+    border-radius: 9999px;
+    user-select: none;
   }
   .thumbTimeline {
     @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs;
@@ -70,7 +78,15 @@
 
   /* the track */
   .wrapper-range ::-webkit-slider-runnable-track {
-    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+    height: 0.25rem;
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background-color: transparent;
+    background-position: left top;
+    border-width: 0;
+    border-radius: 9999px;
+    user-select: none;
   }
 
   /* the thumb */
@@ -80,7 +96,15 @@
 
   /* Mozilla */
   .wrapper-range ::-moz-range-track {
-    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+    height: 0.25rem;
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background-color: transparent;
+    background-position: left top;
+    border-width: 0;
+    border-radius: 9999px;
+    user-select: none;
   }
 
   .wrapper-range ::-moz-range-thumb {
@@ -91,7 +115,15 @@
   .wrapper-range ::-ms-fill-upper,
   .wrapper-range ::-ms-fill-lower,
   .wrapper-range ::-ms-track {
-    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+    height: 0.25rem;
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background-color: transparent;
+    background-position: left top;
+    border-width: 0;
+    border-radius: 9999px;
+    user-select: none;
   }
 
   .wrapper-range ::-ms-thumb {

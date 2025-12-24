@@ -83,7 +83,8 @@ const val = computed(() => 100 - props.value);
 
 <style scoped>
 svg.progressCircle {
-  @apply -rotate-90 absolute;
+  transform: rotate(-90deg);
+  position: absolute;
 }
 
 svg.progressCircle circle:first-child {
