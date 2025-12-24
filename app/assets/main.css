@@ -1,3 +1,104 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Colors - kebab-case for Tailwind v4 */
+  --color-dark-purple: #3C0C55;
+  --color-yellow-ds: #FFE40F;
+  --color-purple-ds: #9123CB;
+  --color-haiti: #1A0724;
+  
+  /* Colors - camelCase aliases for backward compatibility */
+  --color-darkPurple: #3C0C55;
+  --color-yellowDs: #FFE40F;
+  --color-purpleDs: #9123CB;
+  
+  /* Fonts */
+  --font-brand: Mono45, Arial, sans-serif;
+  --font-headings: Dank, Arial, sans-serif;
+  --font-base: Inter, Arial, sans-serif;
+  
+  /* Background Images */
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-external-link: url(data:image/svg+xml;base64,PHN2ZyBpZD0iZXh0ZXJuYWwiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciIGNsYXNzPSJpY29uIiB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGRhdGEtdi0xMDg5NWM5MT0iIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMCA2djJINXYxMWgxMXYtNWgydjZhMSAxIDAgMCAxLTEgMUg0YTEgMSAwIDAgMS0xLTFWN2ExIDEgMCAwIDEgMS0xaDZ6bTExLTN2OGgtMlY2LjQxM2wtNy43OTMgNy43OTRsLTEuNDE0LTEuNDE0TDE3LjU4NSA1SDEzVjNoOHoiLz48L3N2Zz4=);
+  
+  /* Fill Colors */
+  --fill-yellowDs: #FFE40F;
+  
+  /* Animations */
+  --animate-slideLeft1: slideLeft1 40s linear infinite;
+  --animate-slideLeft2: slideLeft2 40s linear infinite;
+  --animate-slideRight1: slideRight1 40s linear infinite;
+  --animate-slideRight2: slideRight2 40s linear infinite;
+  
+  /* Grid Template Columns */
+  --grid-cols-episode-heading: 140px auto;
+  --grid-cols-episode-heading-mobile: 70px auto;
+  --grid-cols-episode-head: 200px auto;
+  --grid-cols-episode-head-mobile: 110px auto;
+  --grid-cols-episode-head-phablette: 140px auto;
+}
+
+@keyframes slideLeft1 {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes slideLeft2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideRight1 {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideRight2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+@layer components {
+  .trackTimeline {
+    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+  }
+  .thumbTimeline {
+    @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs;
+  }
+
+  /* the track */
+  .wrapper-range ::-webkit-slider-runnable-track {
+    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+  }
+
+  /* the thumb */
+  .wrapper-range ::-webkit-slider-thumb {
+    @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs -mt-0.5;
+  }
+
+  /* Mozilla */
+  .wrapper-range ::-moz-range-track {
+    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+  }
+
+  .wrapper-range ::-moz-range-thumb {
+    @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs;
+  }
+
+  /* Microsoft */
+  .wrapper-range ::-ms-fill-upper,
+  .wrapper-range ::-ms-fill-lower,
+  .wrapper-range ::-ms-track {
+    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
+  }
+
+  .wrapper-range ::-ms-thumb {
+    @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs;
+  }
+}
+
 @font-face {
   font-family: 'Mono45';
   font-style: normal;
@@ -24,9 +125,6 @@
   font-stretch: 25% 151%;
   unicode-range: U+000-5FF;
 }
-
-@tailwind base;
-@tailwind components;
 
 body {
   @apply font-base scroll-smooth;
@@ -94,17 +192,6 @@ h2 {
   @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-[3px] after:relative;
 }
 
-@tailwind utilities;
-
-@layer components {
-  .trackTimeline {
-    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
-  }
-  .thumbTimeline {
-    @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs;
-  }
-}
-
 /** move here for avoid error compilation */
 .wrapper-range {
   @apply relative w-full h-4 p-0 m-0;
@@ -130,36 +217,6 @@ h2 {
 
 .wrapper-range input[type='range'] {
   @apply appearance-none bg-left-top border-none rounded-full text-purpleDs h-1 m-0 p-0 w-full bg-transparent absolute top-[0%] z-10 focus:outline-none block transition-shadow cursor-pointer;
-}
-
-/* the track */
-.wrapper-range ::-webkit-slider-runnable-track {
-  @apply trackTimeline;
-}
-
-/* the thumb */
-.wrapper-range ::-webkit-slider-thumb {
-  @apply thumbTimeline -mt-0.5;
-}
-
-/* Mozilla */
-.wrapper-range ::-moz-range-track {
-  @apply trackTimeline;
-}
-
-.wrapper-range ::-moz-range-thumb {
-  @apply thumbTimeline;
-}
-
-/* Microsoft */
-.wrapper-range ::-ms-fill-upper,
-.wrapper-range ::-ms-fill-lower,
-.wrapper-range ::-ms-track {
-  @apply trackTimeline;
-}
-
-.wrapper-range ::-ms-thumb {
-  @apply thumbTimeline;
 }
 
 .wrapper-range ::-ms-ticks-after {

@@ -87,11 +87,11 @@ svg.progressCircle {
 }
 
 svg.progressCircle circle:first-child {
-  @apply stroke-yellowDs;
+  stroke: #FFE40F;
 }
 
 svg.progressCircle circle:last-child {
-  @apply stroke-purpleDs;
+  stroke: #9123CB;
   stroke-dasharray: 100;
   stroke-dashoffset: v-bind('val');
   transition: stroke-dashoffset 0.5s linear;

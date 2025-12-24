@@ -50,6 +50,7 @@ const links = [
 
 <style scoped>
 .router-link-exact-active {
-  @apply border-yellowDs text-yellowDs;
+  border-color: #FFE40F;
+  color: #FFE40F;
 }
 </style>

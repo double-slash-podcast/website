@@ -1,6 +1,7 @@
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
@@ -13,6 +14,8 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@browser-echo/nuxt'
   ],
+
+  css: ['assets/main.css'],
 
   alias: {
     'micromark/lib/preprocess.js': 'micromark',
@@ -46,8 +49,10 @@ export default defineNuxtConfig({
     },
   },
 
-  tailwindcss: {
-    cssPath: '~/assets/main.css',
+  vite: {
+    plugins: [
+      tailwindcss()
+    ]
   },
 
   experimental: {
