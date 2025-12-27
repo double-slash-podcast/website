@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxt/icon',
     '@nuxt/eslint',
-    '@browser-echo/nuxt'
+    '@browser-echo/nuxt',
+    '@nuxtjs/mcp-toolkit'
   ],
 
   alias: {
@@ -54,6 +55,7 @@ export default defineNuxtConfig({
     reactivityTransform: true,
     componentIslands: true,
     viewTransition: true,
+    asyncContext: true
   },
 
   colorMode: {
@@ -97,5 +99,10 @@ export default defineNuxtConfig({
     preserveConsole: true,
     stackMode: 'condensed', // 'full' | 'condensed' | 'none'
   },
+  mcp: {
+    name: 'double-slash',
+    version: '1.0.0',
+  },
+  devtools: { enabled: true },
   compatibilityDate: '2025-08-29'
 });
