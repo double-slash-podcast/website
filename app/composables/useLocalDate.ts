@@ -1,5 +1,5 @@
 const useLocalDate = (
-  date: string,
+  date: string | number | Date,
   options: Intl.DateTimeFormatOptions = {
     year: 'numeric',
     month: 'long',

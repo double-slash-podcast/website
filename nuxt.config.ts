@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     '@nuxtjs/fontaine',
     '@nuxt/icon',
     '@nuxt/eslint',
-    '@browser-echo/nuxt'
+    '@browser-echo/nuxt',
+    'nuxt-llms'
   ],
 
   alias: {
@@ -96,6 +97,11 @@ export default defineNuxtConfig({
     batch: { size: 20, interval: 300 },
     preserveConsole: true,
     stackMode: 'condensed', // 'full' | 'condensed' | 'none'
+  },
+  llms: {
+    domain: 'https://double-slash.dev',
+    title: 'Double Slash Podcast',
+    description: 'Le podcast sur le code, le développement web et les outils modernes.',
   },
   compatibilityDate: '2025-08-29'
 });
