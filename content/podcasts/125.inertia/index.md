@@ -12,7 +12,7 @@ season: 2
 dsSlug: DS_125_inertiaJS_frontBack
 title: "Inertia JS, le front et le back unifiés"
 subtitle: Construire des applications web modernes avec Inertia JS
-episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1765313645/episode/ART_124_wf0qcz.png
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1768479819/episode/ART_125_o7rqog.png
 description: Inertia est un système qui permet de construire des applications web modernes en utilisant des frameworks front-end comme Vue.js ou React, tout en conservant une architecture back-end traditionnelle avec Laravel ou d'autres frameworks similaires.
 videoLink : MYNWK94LUxA
 tags: ['laravel', 'php', 'typescript', 'vue', 'inertia']
