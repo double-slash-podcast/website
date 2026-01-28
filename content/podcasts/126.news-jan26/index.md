@@ -17,7 +17,7 @@ description: Dans cet épisode, nous évoquons du côté de l'IA, Claude Code av
 videoLink : IH4317UsceY
 tags: ['skills', 'cloudflare', 'astro', 'claude code', 'open code', 'qwen code', 'ai', 'qwen']
 ---
-## Astro rejoint Clouflare
+## Astro rejoint Cloudflare
 
 Bonne nouvelle ou mauvaise, seul l'avenir nous le dira !
 - https://astro.build/blog/joining-cloudflare/
