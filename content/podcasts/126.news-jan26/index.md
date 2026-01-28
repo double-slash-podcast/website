@@ -14,7 +14,7 @@ title: "🤖 News Janvier 2026 : Open Code, Qwen Code et un peu de code"
 subtitle: Les news sur le développement web et l'IA pour janvier 2026 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1769619232/episode/ART_126_ekvo7l.png
 description: Dans cet épisode, nous évoquons du côté de l'IA, Claude Code avec Ollama, Open Code, Qwen Code et les compétences. L'équipe d'Astro qui migre vers Cloudflare. jQuery 4, Livewire 4 et une superbe librairie pour afficher vos chiffres.
-videoLink : IH4317UsceY
+videoLink : u3I9I1q8iSA
 tags: ['skills', 'cloudflare', 'astro', 'claude code', 'open code', 'qwen code', 'ai', 'qwen']
 ---
 ## Astro rejoint Cloudflare
