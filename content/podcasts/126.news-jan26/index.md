@@ -9,7 +9,7 @@ episodeNumber: 126
 episodeType: full
 explicit: false
 season: 2
-dsSlug: DS_126_newsJan26
+dsSlug: DS_124_newsDec25
 title: "🤖 News Janvier 2026 : Open Code, Qwen Code et un peu de code"
 subtitle: Les news sur le développement web et l'IA pour janvier 2026 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1765313645/episode/ART_124_wf0qcz.png
