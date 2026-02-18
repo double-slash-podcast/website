@@ -65,7 +65,7 @@ Fournir des outils aux agents pour interagir avec un site web.
 
 ### Article
 
-- https://medium.com/reading-sh/chromes-webmcp-makes-ai-agents-stop-pretending-e8c7da1ba650
+- [https://medium.com/reading-sh/chromes-webmcp-makes-ai-agents-stop-pretending-e8c7da1ba650?sk=f729fbaf4c5b2a973fef3e64bda46956](https://medium.com/reading-sh/chromes-webmcp-makes-ai-agents-stop-pretending-e8c7da1ba650)
 
 ## Projet Open-source spammés par des agents IA
 
