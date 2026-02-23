@@ -1,5 +1,5 @@
-import { describe, expect, test } from 'vitest';
-import { useCalculateTotalValue } from '../app/composables/useCalculateTotalValue';
+import {describe, expect, test} from 'vitest';
+import {useCalculateTotalValue} from '../app/composables/useCalculateTotalValue';
 
 describe('test duration detail', () => {
   test('get object with detailed duration 1:08:55', () => {

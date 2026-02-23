@@ -33,7 +33,6 @@ onMounted(() => {
     },
   };
 });
-
 </script>
 
 <template>
@@ -146,7 +145,7 @@ onMounted(() => {
                       placeholder="NOM"
                       data-required="true"
                       required
-                    >
+                    />
                   </div>
                 </div>
 
@@ -194,7 +193,7 @@ onMounted(() => {
                       placeholder="PRENOM"
                       data-required="true"
                       required
-                    >
+                    />
                   </div>
                 </div>
 
@@ -242,7 +241,7 @@ onMounted(() => {
                       placeholder="EMAIL"
                       data-required="true"
                       required
-                    >
+                    />
                   </div>
                 </div>
 
@@ -296,8 +295,8 @@ onMounted(() => {
             name="email_address_check"
             value=""
             class="input--hidden"
-          >
-          <input type="hidden" name="locale" value="fr" >
+          />
+          <input type="hidden" name="locale" value="fr" />
         </form>
       </div>
     </div>

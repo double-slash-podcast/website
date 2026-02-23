@@ -107,7 +107,7 @@ useSchemaOrg([
             />
             <div class="prose">
               <Authors />
-              <Sponsor :withList="false" />
+              <Sponsor :with-list="false" />
             </div>
           </div>
           <div

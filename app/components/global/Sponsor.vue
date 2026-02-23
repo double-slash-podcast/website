@@ -84,7 +84,7 @@ const listSponsor = computed(
           :src="sponsor.node.avatarUrl"
           :alt="sponsor.node.name"
           class="m-0 border-4 border-purple-500 rounded-full w-28 h-28"
-        >
+        />
         <strong class="mt-2 text-xs text-gray-500 text-wrap">{{
           sponsor.node.name
         }}</strong>
