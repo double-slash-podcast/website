@@ -61,6 +61,8 @@ const date = useLocalDate(props.episode.publicationDate);
 </template>
 
 <style scoped>
+@import "~/assets/main.css";
+
 .episode-head {
   hyphenate-limit-chars: 13 auto auto;
 }

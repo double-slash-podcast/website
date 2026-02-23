@@ -17,6 +17,8 @@ const props = defineProps<{
 </template>
 
 <style scoped>
+@import "~/assets/main.css";
+
 .text-outline {
   text-shadow:
     -2px -2px 0 #9123cb,

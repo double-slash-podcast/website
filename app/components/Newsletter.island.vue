@@ -312,6 +312,8 @@ onMounted(() => {
 </template>
 
 <style>
+@import "~/assets/main.css";
+
 #sib-container input:-ms-input-placeholder {
   text-align: left;
   font-family: Inter, Arial, sans-serif;

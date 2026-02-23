@@ -83,15 +83,16 @@ const val = computed(() => 100 - props.value);
 
 <style scoped>
 svg.progressCircle {
-  @apply -rotate-90 absolute;
+  transform: rotate(-90deg);
+  position: absolute;
 }
 
 svg.progressCircle circle:first-child {
-  @apply stroke-yellowDs;
+  stroke: theme('colors.yellowDs');
 }
 
 svg.progressCircle circle:last-child {
-  @apply stroke-purpleDs;
+  stroke: theme('colors.purpleDs');
   stroke-dasharray: 100;
   stroke-dashoffset: v-bind('val');
   transition: stroke-dashoffset 0.5s linear;

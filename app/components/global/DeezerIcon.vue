@@ -54,6 +54,8 @@
   </svg>
 </template>
 <style>
+@import "~/assets/main.css";
+
 .st0 {
   fill: #b1e3fa;
 }

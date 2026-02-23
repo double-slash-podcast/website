@@ -1,6 +1,5 @@
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
@@ -14,6 +13,11 @@ export default defineNuxtConfig({
     '@browser-echo/nuxt',
     'nuxt-llms'
   ],
+  vite: {
+    plugins: [
+      require('tailwindcss/vite')
+    ]
+  },
 
   alias: {
     'micromark/lib/preprocess.js': 'micromark',
@@ -47,15 +51,14 @@ export default defineNuxtConfig({
     },
   },
 
-  tailwindcss: {
-    cssPath: '~/assets/main.css',
-  },
+
 
   experimental: {
     reactivityTransform: true,
     componentIslands: true,
     viewTransition: true,
   },
+  css: ['~/assets/css/main.css'],
 
   colorMode: {
     classSuffix: '',
