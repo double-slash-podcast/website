@@ -22,7 +22,7 @@
         :r="width / 2 - size - 0.2"
         fill="none"
         :stroke-width="size"
-        path-length="100"
+        pathLength="100"
       />
     </svg>
     <div
