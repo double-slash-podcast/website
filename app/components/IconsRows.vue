@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul class="flex min-w-full space-x-4 h-14 shrink-0 animate-slideLeft1">
-        <li v-for="logo in shuffleLogos" :key="logo" class="w-10 h-14">
+    <div class="relative flex gap-8 overflow-hidden select-none">
+      <ul class="flex min-w-full gap-4 h-12 shrink-0 animate-slideLeft1 mb-2">
+        <li
+          v-for="logo in shuffleLogos"
+          :key="logo"
+          class="w-12 h-12 flex items-center justify-center"
+        >
           <Icon
             :id="logo"
             :name="logo"
-            size="40"
-            class="w-10 h-14 grayscale"
+            size="38"
+            class="w-12 h-12 max-w-full grayscale object-contain object-center"
             mode="css"
           />
           <!-- <Icon
@@ -22,43 +26,55 @@
         </li>
       </ul>
       <ul
-        class="absolute top-0 flex min-w-full space-x-4 shrink-0 animate-slideLeft2"
+        class="absolute top-0 flex min-w-full gap-4 shrink-0 animate-slideLeft2 mb-2"
       >
-        <li v-for="logo in shuffleLogos" :key="logo" class="w-10 h-14">
+        <li
+          v-for="logo in shuffleLogos"
+          :key="logo"
+          class="w-12 h-12 flex items-center justify-center"
+        >
           <!-- <IconsUse :id="logo" size="40" class="grayscale icon" /> -->
           <Icon
             :id="logo"
             :name="logo"
-            size="40"
-            class="w-10 h-14 grayscale"
+            size="38"
+            class="w-12 h-12 max-w-full grayscale object-contain object-center"
             mode="css"
           />
         </li>
       </ul>
     </div>
     <!-- 2 eme ligne -->
-    <div class="relative flex space-x-2 overflow-hidden select-none">
-      <ul class="flex min-w-full space-x-4 h-14 shrink-0 animate-slideRight1">
-        <li v-for="logo in shuffleLogos" :key="logo" class="w-10 h-14">
+    <div class="relative flex gap-4 overflow-hidden select-none">
+      <ul class="flex min-w-full gap-4 h-12 shrink-0 animate-slideRight1 mb-2">
+        <li
+          v-for="logo in shuffleLogos"
+          :key="logo"
+          class="w-12 h-12 flex items-center justify-center"
+        >
           <!-- <IconsUse :id="logo" size="40" class="grayscale icon" /> -->
           <Icon
             :id="logo"
             :name="logo"
-            size="40"
-            class="w-10 h-14 grayscale"
+            size="38"
+            class="w-12 h-12 max-w-full grayscale object-contain object-center"
             mode="css"
           />
         </li>
       </ul>
       <ul
-        class="absolute top-0 flex min-w-full space-x-4 shrink-0 animate-slideRight2"
+        class="absolute top-0 flex min-w-full gap-4 shrink-0 animate-slideRight2 mb-2"
       >
-        <li v-for="logo in shuffleLogos" :key="logo" class="w-10 h-14">
+        <li
+          v-for="logo in shuffleLogos"
+          :key="logo"
+          class="w-12 h-12 flex items-center justify-center"
+        >
           <Icon
             :id="logo"
             :name="logo"
-            size="40"
-            class="w-10 h-14 grayscale"
+            size="38"
+            class="w-12 h-12 max-w-full grayscale object-contain object-center"
             mode="css"
           />
         </li>

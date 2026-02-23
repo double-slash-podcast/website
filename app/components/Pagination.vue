@@ -31,11 +31,11 @@ const list = Array.from(
         v-for="pg in list"
         :key="pg"
         :to="`/${path}/${pg > 1 ? pg : ''}`"
-        class="px-4 py-2 font-bold transition-opacity rounded hover:opacity-70"
+        class="px-4 py-2 font-bold transition-opacity rounded-sm hover:opacity-70"
         :class="{
-          'bg-purpleDs': pg === +page,
+          'bg-secondary': pg === +page,
           'text-white': pg === +page,
-          'bg-yellowDs': pg !== +page,
+          'bg-primary': pg !== +page,
         }"
         >{{ pg }}</NuxtLink
       >

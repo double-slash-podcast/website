@@ -39,9 +39,9 @@
     "@nuxtjs/color-mode": "4.0.0",
     "@nuxtjs/eslint-config-typescript": "12.1.0",
     "@nuxtjs/fontaine": "0.5.0",
-    "@nuxtjs/tailwindcss": "6.14.0",
     "@pinia/nuxt": "0.11.3",
     "@tailwindcss/typography": "0.5.19",
+    "@tailwindcss/vite": "^4.2.1",
     "@types/node": "^25.2.3",
     "@types/rss": "0.0.32",
     "@types/throttle-debounce": "^5.0.2",
@@ -77,6 +77,7 @@
     "nuxt-llms": "^0.2.0",
     "rss": "1.2.2",
     "simple-json-db": "2.0.0",
+    "tailwindcss": "^4.2.1",
     "throttle-debounce": "^5.0.2",
     "vue-lite-youtube-embed": "1.2.4"
   },

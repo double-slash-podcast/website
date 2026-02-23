@@ -12,7 +12,7 @@ defineProps<{article: ArticleType}>();
     <nuxt-link
       :title="`Lire l'article : ${article.title}`"
       :to="`${article.path}/`"
-      class="flex items-center justify-end text-lg group text-yellowDs"
+      class="flex items-center justify-end text-lg group text-primary"
       >Lire l'article
       <Icon
         class="ml-1 transition-all group-hover:translate-x-1"

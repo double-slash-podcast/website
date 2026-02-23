@@ -24,7 +24,7 @@ const share = async () => {
 <template>
   <div class="relative flex justify-end mt-10">
     <button
-      class="flex items-center justify-center gap-1 px-4 py-2 text-white rounded-md bg-purpleDs hover:bg-purpleDs/90"
+      class="flex items-center justify-center gap-1 px-4 py-2 text-white rounded-md bg-secondary hover:bg-secondary/90"
       @click="share"
     >
       <span>Partager</span>

@@ -6,7 +6,7 @@
     viewBox="0 0 100 100"
     preserveAspectRatio="xMidYMid"
   >
-    <circle cx="36.6559" cy="50" class="fill-yellowDs" r="20">
+    <circle cx="36.6559" cy="50" class="fill-primary" r="20">
       <animate
         attributeName="cx"
         repeatCount="indefinite"
@@ -16,7 +16,7 @@
         begin="-0.5s"
       />
     </circle>
-    <circle cx="63.3441" cy="50" class="fill-purpleDs" r="20">
+    <circle cx="63.3441" cy="50" class="fill-secondary" r="20">
       <animate
         attributeName="cx"
         repeatCount="indefinite"
@@ -26,7 +26,7 @@
         begin="0s"
       />
     </circle>
-    <circle cx="36.6559" cy="50" class="fill-yellowDs" r="20">
+    <circle cx="36.6559" cy="50" class="fill-primary" r="20">
       <animate
         attributeName="cx"
         repeatCount="indefinite"

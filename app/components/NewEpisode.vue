@@ -20,6 +20,7 @@ const isNewEpisode = computed(() => {
 </template>
 
 <style scoped>
+@reference "../assets/main.css";
 @keyframes flicker {
   0%,
   /* 10%, */

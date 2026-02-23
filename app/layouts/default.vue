@@ -1,10 +1,10 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-purple-50 to-purple-100">
+  <div class="min-h-screen bg-linear-to-b from-purple-50 to-purple-100">
     <div class="">
       <slot />
     </div>
     <Footer />
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-darkPurple">
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
       <LazyWrapperPlayer />
     </div>
   </div>

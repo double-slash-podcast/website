@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-end space-x-3 text-yellowDs">
+  <div class="flex items-center justify-end space-x-3 text-primary">
     <button
       :aria-label="getStatus"
       :title="getStatus"

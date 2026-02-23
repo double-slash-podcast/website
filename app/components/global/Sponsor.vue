@@ -40,9 +40,9 @@ const listSponsor = computed(
         {{ organizationSponsors.activeGoal?.percentComplete }}% vers l'objectif
         de {{ organizationSponsors.activeGoal?.targetValue }}$ par mois
       </h2>
-      <div class="w-full h-1.5 mb-4 rounded-full bg-yellowDs">
+      <div class="w-full h-1.5 mb-4 rounded-full bg-primary">
         <div
-          class="rounded-full h-1.5 bg-purpleDs text-[10px] font-medium text-blue-100 text-center p-0.5 leading-none"
+          class="rounded-full h-1.5 bg-secondary text-[10px] font-medium text-blue-100 text-center p-0.5 leading-none"
           :style="`width: ${organizationSponsors.activeGoal?.percentComplete}%`"
         />
       </div>
