@@ -10,7 +10,7 @@ const date = useLocalDate(props.episode.publicationDate);
 
 <template>
   <div
-    class="grid grid-cols-episode-head-mobile sm:grid-cols-episode-head-phablette md:grid-cols-episode-head episode-head w-full max-w-[calc(100vw - 2rem)] md:max-w-3xl px-4 md:px-1 text-center text-white gap-x-4 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
+    class="grid grid-cols-episode-head-mobile sm:grid-cols-episode-head-phablette md:grid-cols-episode-head episode-head w-full max-w-[calc(100vw-2rem)] md:max-w-3xl px-4 md:px-1 text-center text-white gap-x-4 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
     <div>
       <nuxt-img
