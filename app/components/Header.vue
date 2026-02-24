@@ -23,11 +23,11 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <Navbar />
   <header
     ref="header"
-    class="relative flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
+    class="relative pt-33 flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
   >
-    <Navbar />
     <div
       class="z-10 flex flex-col justify-center w-full md:max-w-3xl max-w-[calc(100vw - 2rem)]"
     >

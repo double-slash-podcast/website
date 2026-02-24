@@ -1,5 +1,8 @@
 <script setup>
 const {path} = useRoute();
+
+const {scrollDirection, scrollPosition} = useScrollDirection();
+
 const links = [
   {
     title: 'podcasts',
@@ -21,7 +24,12 @@ const links = [
 </script>
 <template>
   <div
-    class="z-20 flex justify-center w-full space-x-1 text-white uppercase bg-transparent"
+    class="z-20 flex justify-center w-full space-x-1 text-white uppercase fixed top-0 left-0 right-0 pb-3 transition-[colors_transform] duration-300"
+    :class="{
+      'bg-dark/90': scrollPosition > 70,
+      '-translate-y-full': scrollDirection === 'down' && scrollPosition > 140,
+      'bg-transparent': scrollPosition <= 70,
+    }"
   >
     <nuxt-link
       to="/"
