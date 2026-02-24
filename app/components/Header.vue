@@ -26,10 +26,10 @@ onUnmounted(() => {
   <Navbar />
   <header
     ref="header"
-    class="relative pt-33 flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
+    class="relative z-10 pt-33 flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
   >
     <div
-      class="z-10 flex flex-col justify-center w-full md:max-w-3xl max-w-[calc(100vw - 2rem)]"
+      class="flex flex-col justify-center w-full md:max-w-3xl max-w-[calc(100vw - 2rem)]"
     >
       <!-- titre -->
       <slot name="title">
