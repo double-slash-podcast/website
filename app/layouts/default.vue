@@ -8,10 +8,12 @@
       <LazyWrapperPlayer />
     </div>
   </div>
+  <UpButton />
 </template>
 
 <script setup>
 import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
+import UpButton from '~/components/global/UpButton.vue';
 const {path} = useRoute();
 const {
   baseInfos: {siteUrl, titleDefault, twitterUrl},
