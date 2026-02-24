@@ -144,50 +144,49 @@
   h2 {
     @apply text-2xl tracking-wider uppercase text-primary;
   }
-
 }
-  /* PROSE ONLY */
+/* PROSE ONLY */
 
-  .prose h2 {
-    @apply my-8 text-lg font-bold text-purple-700 normal-case font-base;
-  }
-  .prose h3 {
-    @apply my-8 text-sm font-bold text-purple-700 uppercase font-base;
-  }
+.prose h2 {
+  @apply my-8 text-lg font-bold text-purple-700 normal-case font-base;
+}
+.prose h3 {
+  @apply my-8 text-sm font-bold text-purple-700 uppercase font-base;
+}
 
-  .prose.article-content h2 {
-    @apply text-2xl normal-case;
-  }
+.prose.article-content h2 {
+  @apply text-2xl normal-case;
+}
 
-  .prose.article-content h3 {
-    @apply text-xl text-gray-700 normal-case;
-  }
+.prose.article-content h3 {
+  @apply text-xl text-gray-700 normal-case;
+}
 
-  .prose.article-content h4 {
-    @apply text-xl font-bold text-gray-700 normal-case font-base;
-  }
+.prose.article-content h4 {
+  @apply text-xl font-bold text-gray-700 normal-case font-base;
+}
 
-  .prose p {
-    @apply mb-6 leading-6 font-base;
-  }
+.prose p {
+  @apply mb-6 leading-6 font-base;
+}
 
-  .prose .info-block > p,
-  .prose .info-block strong,
-  .prose .info-block a,
-  .prose .info-block > ul {
-    @apply my-0 text-gray-600;
-  }
-  .prose .info-block > ul li {
-    @apply text-gray-600;
-  }
+.prose .info-block > p,
+.prose .info-block strong,
+.prose .info-block a,
+.prose .info-block > ul {
+  @apply my-0 text-gray-600;
+}
+.prose .info-block > ul li {
+  @apply text-gray-600;
+}
 
-  .prose a {
-    @apply wrap-break-word;
-  }
+.prose a {
+  @apply wrap-break-word;
+}
 
-  .prose a[target='_blank']:not(.no-arrow) {
-    @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-0.75 after:relative;
-  }
+.prose a[target='_blank']:not(.no-arrow) {
+  @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-0.75 after:relative;
+}
 
 /** move here for avoid error compilation */
 .wrapper-range {
@@ -256,4 +255,25 @@
 
 .wrapper-range ::-ms-tooltip {
   @apply hidden;
+}
+
+@layer components {
+  .animate-link-underline:after {
+    @apply absolute content-[''] bottom-2 left-0 h-0.5 bg-primary rounded-full md:block;
+    width: var(--underline-width, 55px);
+    transform: translateX(var(--underline-offset-x, 0));
+    transition:
+      transform 0.5s,
+      width 0.5s;
+    animation: opacity-underline 1.4s;
+  }
+
+  @keyframes opacity-underline {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
