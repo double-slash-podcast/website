@@ -76,7 +76,7 @@ useSchemaOrg([defineWebPage()]);
       </template>
     </Header>
     <main class="relative z-10 pb-24">
-      <PodcastList class="mb-24" />
+      <PodcastList class="mb-20" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center mt-6 space-x-12">
           <a

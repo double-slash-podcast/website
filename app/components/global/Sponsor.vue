@@ -83,7 +83,7 @@ const listSponsor = computed(
           decoding="async"
           :src="sponsor.node.avatarUrl"
           :alt="sponsor.node.name"
-          class="m-0 border-4 border-purple-500 rounded-full w-28 h-28"
+          class="border-4 border-purple-500 rounded-full w-28 h-28 mt-0 mb-0"
         />
         <strong class="mt-2 text-xs text-gray-500 text-wrap">{{
           sponsor.node.name
