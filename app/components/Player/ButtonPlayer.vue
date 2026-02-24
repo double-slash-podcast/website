@@ -82,6 +82,8 @@ const val = computed(() => 100 - props.value);
 </script>
 
 <style scoped>
+@reference "~/app/assets/main.css";
+
 svg.progressCircle {
   @apply -rotate-90 absolute;
 }

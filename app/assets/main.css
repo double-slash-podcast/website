@@ -25,8 +25,59 @@
   unicode-range: U+000-5FF;
 }
 
-@tailwind base;
-@tailwind components;
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  /* Colors */
+  --color-darkPurple: #3C0C55;
+  --color-yellowDs: #FFE40F;
+  --color-purpleDs: #9123CB;
+  --color-haiti: #1A0724;
+
+  /* Fonts */
+  --font-family-brand: Mono45, Arial, sans-serif;
+  --font-family-headings: Dank, Arial, sans-serif;
+  --font-family-base: Inter, Arial, sans-serif;
+
+  /* Animations */
+  --animate-slideLeft1: slideLeft1 40s linear infinite;
+  --animate-slideLeft2: slideLeft2 40s linear infinite;
+  --animate-slideRight1: slideRight1 40s linear infinite;
+  --animate-slideRight2: slideRight2 40s linear infinite;
+
+  /* Grid Templates */
+  --grid-template-columns-episode-heading: 140px auto;
+  --grid-template-columns-episode-heading-mobile: 70px auto;
+  --grid-template-columns-episode-head: 200px auto;
+  --grid-template-columns-episode-head-mobile: 110px auto;
+  --grid-template-columns-episode-head-phablette: 140px auto;
+
+  /* Background Images */
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-external-link: url(data:image/svg+xml;base64,PHN2ZyBpZD0iZXh0ZXJuYWwiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciIGNsYXNzPSJpY29uIiB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGRhdGEtdi0xMDg5NWM5MT0iIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMCA2djJINXYxMWgxMXYtNWgydjZhMSAxIDAgMCAxLTEgMUg0YTEgMSAwIDAgMS0xLTFWN2ExIDEgMCAwIDEgMS0xaDZ6bTExLTN2OGgtMlY2LjQxM2wtNy43OTMgNy43OTRsLTEuNDE0LTEuNDE0TDE3LjU4NSA1SDEzVjNoOHoiLz48L3N2Zz4=);
+}
+
+@keyframes slideLeft1 {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes slideLeft2 {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideRight1 {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes slideRight2 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
 
 body {
   @apply font-base scroll-smooth;

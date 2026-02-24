@@ -49,6 +49,8 @@ const links = [
 </template>
 
 <style scoped>
+@reference "~/app/assets/main.css";
+
 .router-link-exact-active {
   @apply border-yellowDs text-yellowDs;
 }
