@@ -1,6 +1,7 @@
+import tailwindcss from '@tailwindcss/vite';
+
 export default defineNuxtConfig({
   modules: [
-    '@nuxtjs/tailwindcss',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
@@ -12,7 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/eslint',
     '@browser-echo/nuxt',
-    'nuxt-llms'
+    'nuxt-llms',
   ],
 
   alias: {
@@ -24,7 +25,7 @@ export default defineNuxtConfig({
     mode: 'svg',
   },
   content: {
-    experimental: { nativeSqlite: true },
+    experimental: {nativeSqlite: true},
     // anchorLinks: { h1: false, h2: false, h3: false, h4: false, h5: false, h6: false },
     build: {
       markdown: {
@@ -35,7 +36,10 @@ export default defineNuxtConfig({
       },
     },
   },
-
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  css: ['./app/assets/main.css'],
   image: {
     provider: 'cloudinary',
     cloudinary: {
@@ -46,21 +50,14 @@ export default defineNuxtConfig({
       },
     },
   },
-
-  tailwindcss: {
-    cssPath: '~/assets/main.css',
-  },
-
   experimental: {
     reactivityTransform: true,
     componentIslands: true,
     viewTransition: true,
   },
-
   colorMode: {
     classSuffix: '',
   },
-
   nitro: {
     prerender: {
       routes: [
@@ -70,7 +67,6 @@ export default defineNuxtConfig({
       ],
     },
   },
-
   runtimeConfig: {
     github_auth: process.env.GITHUB_AUTH,
     REDIS_URL: process.env.REDIS_URL,
@@ -94,14 +90,15 @@ export default defineNuxtConfig({
     route: '/__client-logs',
     include: ['log', 'warn', 'error'],
     tag: '[web]',
-    batch: { size: 20, interval: 300 },
+    batch: {size: 20, interval: 300},
     preserveConsole: true,
     stackMode: 'condensed', // 'full' | 'condensed' | 'none'
   },
   llms: {
     domain: 'https://double-slash.dev',
     title: 'Double Slash Podcast',
-    description: 'Le podcast sur le code, le développement web et les outils modernes.',
+    description:
+      'Le podcast sur le code, le développement web et les outils modernes.',
   },
-  compatibilityDate: '2025-08-29'
+  compatibilityDate: '2025-08-29',
 });

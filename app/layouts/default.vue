@@ -1,17 +1,17 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-b from-purple-50 to-purple-100">
-    <div class="">
-      <slot />
-    </div>
+  <div class="min-h-screen bg-linear-to-b from-purple-50 to-purple-100">
+    <slot />
     <Footer />
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-darkPurple">
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
       <LazyWrapperPlayer />
     </div>
   </div>
+  <UpButton />
 </template>
 
 <script setup>
 import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
+import UpButton from '~/components/global/UpButton.vue';
 const {path} = useRoute();
 const {
   baseInfos: {siteUrl, titleDefault, twitterUrl},

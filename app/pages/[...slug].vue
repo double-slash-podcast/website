@@ -24,7 +24,7 @@ useSchemaOrg([defineWebPage()]);
 <template>
   <div class="">
     <Header />
-    <main>
+    <main class="px-4">
       <ContentRenderer
         v-if="data"
         :value="data"

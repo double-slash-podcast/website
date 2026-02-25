@@ -28,7 +28,7 @@ useSchemaOrg([
 <template>
   <div class="">
     <Header />
-    <main class="pb-20">
+    <main class="pb-20 px-4">
       <h1 class="mt-10 text-4xl font-bold">{{ article?.title }}</h1>
       <ArticleDetails :article="article" />
       <ContentRenderer

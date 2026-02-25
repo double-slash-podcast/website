@@ -10,7 +10,7 @@ const date = useLocalDate(props.episode.publicationDate);
 
 <template>
   <div
-    class="grid grid-cols-episode-head-mobile sm:grid-cols-episode-head-phablette md:grid-cols-episode-head episode-head w-full max-w-[calc(100vw - 2rem)] md:max-w-[768px] px-4 md:px-1 text-center text-white gap-x-4 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
+    class="grid grid-cols-episode-head-mobile sm:grid-cols-episode-head-phablette md:grid-cols-episode-head episode-head w-full max-w-[calc(100vw-2rem)] md:max-w-3xl px-2 text-center text-white gap-x-4 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
     <div>
       <nuxt-img
@@ -29,7 +29,7 @@ const date = useLocalDate(props.episode.publicationDate);
         class="text-left after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
       >
         <h1
-          class="text-2xl text-white normal-case tracking-normal sm:leading-[2.2rem] sm:text-4xl font-headings font-bold md:pt-0 text-balance hyphens-auto sm:hyphens-none"
+          class="text-xl text-balance text-pretty text-white normal-case tracking-normal sm:leading-[2.2rem] sm:text-3xl font-headings font-bold md:pt-0 text-balance hyphens-auto sm:hyphens-none"
         >
           {{ props.episode.title }}
         </h1>
@@ -61,6 +61,7 @@ const date = useLocalDate(props.episode.publicationDate);
 </template>
 
 <style scoped>
+@reference "../assets/main.css";
 .episode-head {
   hyphenate-limit-chars: 13 auto auto;
 }

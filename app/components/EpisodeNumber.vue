@@ -5,7 +5,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <span class="flex items-center text-4xl font-brand text-yellowDs">
+  <span class="flex items-center text-4xl font-brand text-primary">
     <span v-show="+props.episodeNumber < 10" class="text-haiti text-outline"
       >0</span
     >
@@ -17,6 +17,7 @@ const props = defineProps<{
 </template>
 
 <style scoped>
+@reference "../assets/main.css";
 .text-outline {
   text-shadow:
     -2px -2px 0 #9123cb,

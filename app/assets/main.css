@@ -1,55 +1,149 @@
-@font-face {
-  font-family: 'Mono45';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('~/assets/fonts/mono45.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Dank';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('~/assets/fonts/DankMono.woff2') format('woff2');
+@import 'tailwindcss';
+
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-dark: #3c0c55;
+  --color-primary: #ffe40f;
+  --color-secondary: #9123cb;
+  --color-haiti: #1a0724;
+
+  --fill-primary: #ffe40f;
+
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-external-link: url(data:image/svg+xml;base64,PHN2ZyBpZD0iZXh0ZXJuYWwiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGFyaWEtaGlkZGVuPSJ0cnVlIiByb2xlPSJpbWciIGNsYXNzPSJpY29uIiB3aWR0aD0iMTVweCIgaGVpZ2h0PSIxNXB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGRhdGEtdi0xMDg5NWM5MT0iIj48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xMCA2djJINXYxMWgxMXYtNWgydjZhMSAxIDAgMCAxLTEgMUg0YTEgMSAwIDAgMS0xLTFWN2ExIDEgMCAwIDEgMS0xaDZ6bTExLTN2OGgtMlY2LjQxM2wtNy43OTMgNy43OTRsLTEuNDE0LTEuNDE0TDE3LjU4NSA1SDEzVjNoOHoiLz48L3N2Zz4=);
+
+  --font-brand: Mono45, Arial, sans-serif;
+  --font-headings: Dank, Arial, sans-serif;
+  --font-base: Inter, Arial, sans-serif;
+
+  --animate-slideLeft1: slideLeft1 40s linear infinite;
+  --animate-slideLeft2: slideLeft2 40s linear infinite;
+  --animate-slideRight1: slideRight1 40s linear infinite;
+  --animate-slideRight2: slideRight2 40s linear infinite;
+
+  --grid-template-columns-episode-heading: 140px auto;
+  --grid-template-columns-episode-heading-mobile: 70px auto;
+  --grid-template-columns-episode-head: 200px auto;
+  --grid-template-columns-episode-head-mobile: 110px auto;
+  --grid-template-columns-episode-head-phablette: 140px auto;
+
+  @keyframes slideLeft1 {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes slideLeft2 {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideRight1 {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideRight2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
 }
 
-@font-face {
-  font-family: 'Inter';
-  font-style: oblique 0deg 10deg;
-  font-weight: 100 800;
-  font-display: swap;
-  src:
-    local(Inter),
-    url('~/assets/fonts/Inter-clean.woff2') format('woff2');
-  font-stretch: 25% 151%;
-  unicode-range: U+000-5FF;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
 
-@tailwind base;
-@tailwind components;
-
-body {
-  @apply font-base scroll-smooth;
+@utility trackTimeline {
+  @apply h-1 transition-shadow bg-transparent bg-top-left border-0 rounded-full select-none;
 }
 
-main {
-  @apply md:max-w-[768px] m-auto px-2 sm:px-0;
+@utility thumbTimeline {
+  @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-primary;
 }
 
-h1 {
-  @apply font-base;
-}
-.brand {
-  @apply text-5xl text-white uppercase font-brand drop-shadow shadow-white;
+@layer base {
+  @font-face {
+    font-family: 'Mono45';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~/assets/fonts/mono45.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Dank';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~/assets/fonts/DankMono.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    font-style: oblique 0deg 10deg;
+    font-weight: 100 800;
+    font-display: swap;
+    src:
+      local(Inter),
+      url('~/assets/fonts/Inter-clean.woff2') format('woff2');
+    font-stretch: 25% 151%;
+    unicode-range: U+000-5FF;
+  }
 }
 
-h2,
-h3,
-h4 {
-  @apply font-headings;
-}
-h2 {
-  @apply text-2xl tracking-wider uppercase text-yellowDs;
+@layer components {
+  body {
+    @apply font-base scroll-smooth;
+  }
+
+  main {
+    @apply md:max-w-3xl m-auto px-2 sm:px-0;
+  }
+
+  h1 {
+    @apply font-base;
+  }
+
+  .brand {
+    @apply text-5xl text-white uppercase font-brand drop-shadow-sm shadow-white;
+  }
+
+  h2,
+  h3,
+  h4 {
+    @apply font-headings;
+  }
+
+  h2 {
+    @apply text-2xl tracking-wider uppercase text-primary;
+  }
 }
 /* PROSE ONLY */
 
@@ -87,22 +181,11 @@ h2 {
 }
 
 .prose a {
-  @apply break-words;
+  @apply wrap-break-word;
 }
 
 .prose a[target='_blank']:not(.no-arrow) {
-  @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-[3px] after:relative;
-}
-
-@tailwind utilities;
-
-@layer components {
-  .trackTimeline {
-    @apply h-1 transition-shadow bg-transparent bg-left-top border-0 rounded-full select-none;
-  }
-  .thumbTimeline {
-    @apply relative w-2 h-2 transition-all border-none rounded-full appearance-none bg-yellowDs;
-  }
+  @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-0.75 after:relative;
 }
 
 /** move here for avoid error compilation */
@@ -111,25 +194,25 @@ h2 {
 }
 /** progress bar */
 .wrapper-range .progress-bar {
-  @apply appearance-none border-none rounded-full h-1 m-0 p-0 absolute top-[0%] bg-purpleDs w-full focus:outline-none;
+  @apply appearance-none border-none rounded-full h-1 m-0 p-0 absolute top-[0%] bg-secondary w-full focus:outline-hidden;
 }
 
 .wrapper-range ::-webkit-progress-bar {
-  @apply h-1 rounded-full bg-purpleDs;
+  @apply h-1 rounded-full bg-secondary;
 }
 
 .wrapper-range ::-webkit-progress-value {
-  @apply bg-yellowDs rounded-full h-2 relative -top-0.5 py-1;
+  @apply bg-primary rounded-full h-2 relative -top-0.5 py-1;
 }
 
 .wrapper-range ::-moz-progress-bar {
-  @apply bg-yellowDs rounded-full h-2 relative -mt-0.5;
+  @apply bg-primary rounded-full h-2 relative -mt-0.5;
 }
 
 /** range */
 
 .wrapper-range input[type='range'] {
-  @apply appearance-none bg-left-top border-none rounded-full text-purpleDs h-1 m-0 p-0 w-full bg-transparent absolute top-[0%] z-10 focus:outline-none block transition-shadow cursor-pointer;
+  @apply appearance-none bg-top-left border-none rounded-full text-secondary h-1 m-0 p-0 w-full bg-transparent absolute top-[0%] z-10 focus:outline-hidden block transition-shadow cursor-pointer;
 }
 
 /* the track */
@@ -172,4 +255,25 @@ h2 {
 
 .wrapper-range ::-ms-tooltip {
   @apply hidden;
+}
+
+@layer components {
+  .animate-link-underline:after {
+    @apply absolute content-[''] bottom-2 left-0 h-0.5 bg-primary rounded-full md:block;
+    width: var(--underline-width, 55px);
+    transform: translateX(var(--underline-offset-x, 0));
+    transition:
+      transform 0.5s,
+      width 0.5s;
+    animation: opacity-underline 1.4s;
+  }
+
+  @keyframes opacity-underline {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

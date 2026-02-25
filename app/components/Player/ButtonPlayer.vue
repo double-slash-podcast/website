@@ -27,26 +27,26 @@
     </svg>
     <div
       v-if="load === true"
-      class="flex items-center justify-center rounded-full bg-yellowDs"
+      class="flex items-center justify-center rounded-full bg-primary"
       :style="`width: ${width - size}px; height:${height - size}px;`"
     >
       <Loader />
     </div>
     <button
       v-else
-      class="relative z-[1]"
+      class="relative z-1"
       :aria-label="props.status === 'pause' ? 'play' : 'pause'"
       :title="props.status === 'pause' ? 'play' : 'pause'"
       @click="$emit('click')"
     >
       <span v-if="props.status === 'pause'"
         ><Icon
-          class="text-yellowDs"
+          class="text-primary"
           name="ant-design:play-circle-filled"
           :size="`${width - size}px`" /></span
       ><span v-else
         ><Icon
-          class="text-yellowDs"
+          class="text-primary"
           name="ant-design:pause-circle-filled"
           :size="`${width - size}px`"
       /></span>
@@ -82,16 +82,17 @@ const val = computed(() => 100 - props.value);
 </script>
 
 <style scoped>
+@reference "../../assets/main.css";
 svg.progressCircle {
   @apply -rotate-90 absolute;
 }
 
 svg.progressCircle circle:first-child {
-  @apply stroke-yellowDs;
+  @apply stroke-primary;
 }
 
 svg.progressCircle circle:last-child {
-  @apply stroke-purpleDs;
+  @apply stroke-secondary;
   stroke-dasharray: 100;
   stroke-dashoffset: v-bind('val');
   transition: stroke-dashoffset 0.5s linear;

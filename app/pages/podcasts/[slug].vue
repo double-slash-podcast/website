@@ -66,7 +66,7 @@ useSchemaOrg([
       </template>
     </Header>
 
-    <main class="w-full">
+    <main class="w-full px-4">
       <div class="tabs">
         <nav class="flex" role="tablist">
           <button
@@ -77,12 +77,12 @@ useSchemaOrg([
             :aria-selected="selected == link"
             :aria-controls="`panel-${link}`"
             :class="{
-              'text-purple-700 focus:text-purple-900  after:bg-purpleDs bg-purple-100/40':
+              'text-purple-700 focus:text-purple-900  after:bg-secondary bg-purple-100/40':
                 selected == link,
               'text-gray-600 after:bg-gray-200': selected !== link,
             }"
             type="button"
-            class="flex flex-col items-center flex-1 pt-4 text-base after:h-0.5 md:text-lg underline-offset-4 transition-color focus:text-gray-900 focus:outline-none after:w-full after:mt-3"
+            class="flex flex-col items-center flex-1 pt-4 text-base after:h-0.5 md:text-lg underline-offset-4 transition-color focus:text-gray-900 focus:outline-hidden after:w-full after:mt-3"
             @click="() => (selected = link)"
           >
             {{ link === 'Video' ? 'Vidéo' : link }}
@@ -107,7 +107,7 @@ useSchemaOrg([
             />
             <div class="prose">
               <Authors />
-              <Sponsor :withList="false" />
+              <Sponsor :with-list="false" />
             </div>
           </div>
           <div
@@ -125,7 +125,7 @@ useSchemaOrg([
               >
                 <NuxtLink :to="link.url" target="_blank" class="cursor-pointer"
                   ><span
-                    class="font-bold text-purpleDs hover:text-purple-900"
+                    class="font-bold text-secondary hover:text-purple-900"
                     >{{ link.title }}</span
                   >
                   -

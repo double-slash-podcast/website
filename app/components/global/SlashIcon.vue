@@ -29,4 +29,4 @@ defineExpose({
 });
 </script>
 
-<!-- class="absolute -top-[13px] left-[43%] hidden drop-shadow -z-10 sm:block" -->
+<!-- class="absolute -top-[13px] left-[43%] hidden drop-shadow-sm -z-10 sm:block" -->

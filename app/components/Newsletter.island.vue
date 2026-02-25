@@ -33,8 +33,6 @@ onMounted(() => {
     },
   };
 });
-
-// var AUTOHIDE = Boolean(0);
 </script>
 
 <template>
@@ -106,7 +104,7 @@ onMounted(() => {
           text-align: center;
           background-color: rgba(0, 0, 0, 1);
           max-width: 540px;
-          border-width: 0px;
+          border-width: 0;
           border-color: #c0ccd9;
           border-style: solid;
           direction: ltr;
@@ -128,8 +126,6 @@ onMounted(() => {
                       font-weight: 700;
                       text-align: left;
                       font-size: 16px;
-                      text-align: left;
-                      font-weight: 700;
                       font-family: Inter, Arial, sans-serif;
                       color: #ffffff;
                     "
@@ -149,7 +145,7 @@ onMounted(() => {
                       placeholder="NOM"
                       data-required="true"
                       required
-                    >
+                    />
                   </div>
                 </div>
 
@@ -178,8 +174,6 @@ onMounted(() => {
                       font-weight: 700;
                       text-align: left;
                       font-size: 16px;
-                      text-align: left;
-                      font-weight: 700;
                       font-family: Inter, Arial, sans-serif;
                       color: #ffffff;
                     "
@@ -199,7 +193,7 @@ onMounted(() => {
                       placeholder="PRENOM"
                       data-required="true"
                       required
-                    >
+                    />
                   </div>
                 </div>
 
@@ -228,8 +222,6 @@ onMounted(() => {
                       font-weight: 700;
                       text-align: left;
                       font-size: 16px;
-                      text-align: left;
-                      font-weight: 700;
                       font-family: Inter, Arial, sans-serif;
                       color: #ffffff;
                     "
@@ -249,7 +241,7 @@ onMounted(() => {
                       placeholder="EMAIL"
                       data-required="true"
                       required
-                    >
+                    />
                   </div>
                 </div>
 
@@ -280,7 +272,7 @@ onMounted(() => {
                   color: #9123cb;
                   background-color: #ffe40f;
                   border-radius: 20px;
-                  border-width: 0px;
+                  border-width: 0;
                 "
                 form="sib-form"
                 type="submit"
@@ -303,8 +295,8 @@ onMounted(() => {
             name="email_address_check"
             value=""
             class="input--hidden"
-          >
-          <input type="hidden" name="locale" value="fr" >
+          />
+          <input type="hidden" name="locale" value="fr" />
         </form>
       </div>
     </div>

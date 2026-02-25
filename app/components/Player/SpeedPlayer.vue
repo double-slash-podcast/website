@@ -1,17 +1,17 @@
 <template>
   <Listbox v-model="selectedSpeed">
     <ListboxButton
-      class="relative px-2 font-bold rounded bg-yellowDs text-darkPurple hover:bg-yellow-400"
+      class="relative px-2 font-bold rounded-sm bg-primary text-dark hover:bg-yellow-400"
       >{{ selectedSpeed }}x</ListboxButton
     >
     <ListboxOptions
-      class="absolute rounded right-2 bottom-3 bg-purple-50 text-darkPurple"
+      class="absolute rounded-sm right-2 bottom-3 bg-purple-50 text-dark"
     >
       <ListboxOption
         v-for="spe in selectedSpeeds"
         :key="spe.label"
         :value="spe.value"
-        class="px-4 py-2 rounded hover:bg-purple-200"
+        class="px-4 py-2 rounded-sm hover:bg-purple-200"
       >
         {{ spe.label }}x
       </ListboxOption>

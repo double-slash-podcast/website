@@ -65,7 +65,7 @@ export default {
 In v4, the CSS variables are also exposed in your CSS output, which means you can “consume” those variables anywhere you need it:
 
 ```
-<div class="bg-[--color-primary]">
+<div class="bg-(--color-primary)">
 ```
 
 ### Laravel 11

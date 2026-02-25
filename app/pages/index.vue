@@ -64,19 +64,19 @@ useSchemaOrg([defineWebPage()]);
       </template>
       <template #baseline>
         <h1
-          class="relative z-10 mt-2 text-2xl tracking-wider text-center uppercase text-yellowDs font-headings"
+          class="relative z-10 mt-2 text-2xl tracking-wider text-center uppercase text-primary font-headings"
         >
-          le podcast <br class="sm:hidden" >des developpeurs web
+          le podcast <br class="sm:hidden" />des developpeurs web
         </h1>
         <p class="font-light text-center text-white">
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data" class="mt-20 max-w-[768px]" />
+        <EpisodeHeadings :episode="data" class="mt-20 max-w-3xl" />
       </template>
     </Header>
     <main class="relative z-10 pb-24">
-      <PodcastList class="mb-24" />
+      <PodcastList class="mb-20" />
       <HeadingsSection title="et en vidéo" class="mb-24">
         <div class="flex items-center justify-center mt-6 space-x-12">
           <a
@@ -105,7 +105,7 @@ useSchemaOrg([defineWebPage()]);
       <div class="mt-12 mb-24 text-center">
         <nuxt-link
           to="/podcasts/"
-          class="flex items-center justify-center text-xl uppercase group text-yellowDs"
+          class="flex items-center justify-center text-xl uppercase group text-primary"
           >Voir tous les épisodes
           <Icon
             class="ml-1 transition-all group-hover:translate-x-1"
@@ -119,7 +119,7 @@ useSchemaOrg([defineWebPage()]);
     <LazySlashIcon
       ref="bigSlash"
       size="350"
-      class="hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20 md:scale-150"
+      class="hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20"
       inside-class="fill-purple-800"
     />
     <LazySlashIcon

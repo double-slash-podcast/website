@@ -40,7 +40,7 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="grid grid-cols-episode-heading-mobile md:grid-cols-episode-heading episode-heading w-full md:min-w-[768px] px-4 md:px-1 text-center text-white gap-x-3 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
+    class="grid grid-cols-episode-heading-mobile md:grid-cols-episode-heading episode-heading w-full md:min-w-3xl px-3 text-center text-white gap-x-3 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
     <nuxt-img
       :src="episode.episodeArtwork || podcastInfos.imageUrl"
@@ -58,7 +58,7 @@ onUnmounted(() => {
       <component
         :is="`h${level}`"
         ref="title"
-        class="text-xl text-white normal-case tracking-normal sm:leading-[2rem] sm:text-2xl font-headings font-bold top-2 sm:top-0 relative mb-1"
+        class="text-lg leading-6 text-balance text-pretty text-white normal-case tracking-normal sm:leading-8 sm:text-2xl font-headings font-bold top-2 sm:top-0 relative mb-1"
         >{{ props.episode.title }}</component
       >
     </nuxt-link>

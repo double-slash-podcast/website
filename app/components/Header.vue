@@ -23,12 +23,14 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <Navbar />
   <header
     ref="header"
-    class="relative flex flex-col items-center gap-20 pb-20 overflow-hidden bg-darkPurple"
+    class="relative z-10 pt-33 flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
   >
-    <Navbar />
-    <div class="z-10 flex flex-col justify-center w-full md:max-w-[768px] max-w-[calc(100vw - 2rem)]">
+    <div
+      class="flex flex-col justify-center w-full md:max-w-3xl max-w-[calc(100vw-2rem)]"
+    >
       <!-- titre -->
       <slot name="title">
         <Brand />
@@ -46,6 +48,7 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+@reference "../assets/main.css";
 header {
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }

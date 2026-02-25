@@ -14,7 +14,7 @@ defineProps({
       width="90"
       height="125"
       viewBox="0 0 90 144"
-      class="absolute -top-[13px] left-[45%] hidden drop-shadow -z-10 sm:block"
+      class="absolute -top-3.25 left-[45%] hidden drop-shadow-sm -z-10 sm:block"
     >
       <text
         transform="translate(0 111)"
