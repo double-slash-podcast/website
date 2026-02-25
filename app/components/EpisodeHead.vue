@@ -29,7 +29,7 @@ const date = useLocalDate(props.episode.publicationDate);
         class="text-left after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
       >
         <h1
-          class="text-2xl text-white normal-case tracking-normal sm:leading-[2.2rem] sm:text-3xl font-headings font-bold md:pt-0 text-balance hyphens-auto sm:hyphens-none"
+          class="text-xl text-balance text-pretty text-white normal-case tracking-normal sm:leading-[2.2rem] sm:text-3xl font-headings font-bold md:pt-0 text-balance hyphens-auto sm:hyphens-none"
         >
           {{ props.episode.title }}
         </h1>
