@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // stroke width
 const size = 2;
-const mobileSize = 42;
+const mobileSize = 46;
 const desktopSize = 54;
 
 const store = usePlayerStore();
@@ -93,10 +93,10 @@ const getSize = computed(() => {
 <template>
   <div
     ref="circleWrapper"
-    class="fixed z-100 md:bottom-8 right-3 flex items-center justify-center transition-opacity duration-500 ease-in-out"
+    class="fixed z-100 md:bottom-4 right-3 flex items-center justify-center transition-opacity duration-500 ease-in-out"
     :class="{
       'bottom-30 sm:bottom-20': store.src,
-      'bottom-8': !store.src,
+      'bottom-4': !store.src,
       'opacity-0': !showCircle,
       'opacity-100': showCircle,
     }"
@@ -126,7 +126,7 @@ const getSize = computed(() => {
       />
     </svg>
     <button
-      class="text-purple-800 bg-primary relative rounded-full p-2 w-9 h-9 sm:w-12 sm:h-12 rotate-90 up-button flex justify-center items-center cursor-pointer"
+      class="text-purple-800 bg-primary relative rounded-full p-2 w-10 h-10 sm:w-12 sm:h-12 rotate-90 up-button flex justify-center items-center cursor-pointer"
       aria-label="remonter en haut de la page"
       @click="upToTop"
     >
