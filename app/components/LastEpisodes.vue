@@ -6,7 +6,7 @@ const {data: last3} = await useAsyncData('last3', () => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-20">
+  <div class="flex flex-col gap-20 px-3">
     <EpisodeHeadings
       v-for="episode in last3"
       :key="episode.id"

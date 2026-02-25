@@ -34,7 +34,7 @@ useSchemaOrg([defineWebPage()]);
 <template>
   <div class="pb-20 bg-haiti">
     <Header />
-    <main>
+    <main class="px-4">
       <HeadingsSection
         title="Tous les épisodes du podcast double slash"
         level="1"

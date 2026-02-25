@@ -1,8 +1,6 @@
 <template>
   <div class="min-h-screen bg-linear-to-b from-purple-50 to-purple-100">
-    <div class="">
-      <slot />
-    </div>
+    <slot />
     <Footer />
     <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
       <LazyWrapperPlayer />

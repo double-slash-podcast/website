@@ -8,7 +8,7 @@
       <h1 class="text-5xl text-primary font-brand">Erreur 404 !</h1>
     </template>
   </Header>
-  <main class="relative z-10 pb-24 min-h-[350px]">
+  <main class="relative z-10 pb-24 min-h-[350px] px-4">
     <div class="-mt-6 text-center">
       <Icon name="NotFoundIcon" size="250" class="text-secondary" />
     </div>

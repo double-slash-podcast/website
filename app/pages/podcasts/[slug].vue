@@ -66,7 +66,7 @@ useSchemaOrg([
       </template>
     </Header>
 
-    <main class="w-full">
+    <main class="w-full px-4">
       <div class="tabs">
         <nav class="flex" role="tablist">
           <button

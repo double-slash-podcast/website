@@ -1,4 +1,10 @@
 <script setup lang="ts">
+// stroke width
+const size = 2;
+const mobileSize = 42;
+const desktopSize = 54;
+
+const store = usePlayerStore();
 const route = useRoute();
 
 // get height of total scroll
@@ -10,22 +16,20 @@ const showCircle = ref(false);
 const circleWrapper = ref<HTMLDivElement | null>(null);
 const circle = ref<HTMLDivElement | null>(null);
 const progressCircle = ref<SVGElement | null>(null);
-
-const {
-  width = 60,
-  height = 60,
-  size = 4,
-} = defineProps<{
-  width?: number;
-  height?: number;
-  size?: number;
-}>();
+const mq = ref<MediaQueryList | null>(null);
+const isMobile = ref(false);
 
 onMounted(() => {
   scrollHeight.value = document.body.scrollHeight - window.innerHeight;
   vh.value = window.innerHeight;
   window.addEventListener('scroll', onScroll);
   window.addEventListener('resize', onResize);
+
+  mq.value = window.matchMedia('(max-width: 640px)');
+  mq.value.addEventListener('change', e => {
+    isMobile.value = e.matches;
+  });
+  isMobile.value = mq.value.matches;
 });
 
 watch(
@@ -38,6 +42,10 @@ watch(
 onUnmounted(() => {
   window.removeEventListener('scroll', onScroll);
   window.removeEventListener('resize', onResize);
+  mq.value?.removeEventListener('change', e => {
+    isMobile.value = e.matches;
+  });
+  mq.value = null;
 });
 
 const onResize = () =>
@@ -72,36 +80,45 @@ const upToTop = () =>
     top: 0,
     behavior: 'smooth',
   });
+
+const getSize = computed(() => {
+  console.log(isMobile.value);
+  if (isMobile.value) {
+    return mobileSize;
+  }
+  return desktopSize;
+});
 </script>
 
 <template>
   <div
     ref="circleWrapper"
-    class="fixed z-100 md:bottom-2 bottom-26 right-2 flex items-center justify-center transition-opacity duration-500 ease-in-out"
+    class="fixed z-100 md:bottom-8 right-3 flex items-center justify-center transition-opacity duration-500 ease-in-out"
     :class="{
+      'bottom-30 sm:bottom-20': store.src,
+      'bottom-8': !store.src,
       'opacity-0': !showCircle,
       'opacity-100': showCircle,
     }"
-    :style="{width: `${width}px`, height: `${height}px`}"
   >
     <svg
       ref="progressCircle"
-      :width="`${width}px`"
-      :height="`${height}px`"
-      :viewBox="`0 0 ${width} ${height}`"
+      :width="`${getSize}px`"
+      :height="`${getSize}px`"
+      :viewBox="`0 0 ${getSize} ${getSize}`"
     >
       <circle
-        :cx="width / 2"
-        :cy="width / 2"
-        :r="width / 2 - size - 0.2"
+        :cx="getSize / 2"
+        :cy="getSize / 2"
+        :r="getSize / 2 - size - 0.2"
         fill="none"
         :stroke-width="size"
       />
       <circle
         ref="circle"
-        :cx="width / 2"
-        :cy="width / 2"
-        :r="width / 2 - size - 0.2"
+        :cx="getSize / 2"
+        :cy="getSize / 2"
+        :r="getSize / 2 - size - 0.2"
         fill="none"
         :stroke-width="size"
         stroke-dashoffset="0"
@@ -109,11 +126,11 @@ const upToTop = () =>
       />
     </svg>
     <button
-      class="text-purple-800 bg-primary relative rounded-full p-2 w-12 h-12 rotate-90 up-button flex justify-center items-center cursor-pointer"
+      class="text-purple-800 bg-primary relative rounded-full p-2 w-9 h-9 sm:w-12 sm:h-12 rotate-90 up-button flex justify-center items-center cursor-pointer"
       aria-label="remonter en haut de la page"
       @click="upToTop"
     >
-      <Icon name="ic:outline-arrow-upward" class="w-9 h-9" />
+      <Icon name="ic:outline-arrow-upward" class="w-7 h-7 sm:w-9 sm:h-9" />
     </button>
   </div>
 </template>

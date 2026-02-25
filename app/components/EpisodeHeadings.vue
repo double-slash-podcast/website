@@ -40,7 +40,7 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="grid grid-cols-episode-heading-mobile md:grid-cols-episode-heading episode-heading w-full md:min-w-3xl px-4 md:px-1 text-center text-white gap-x-3 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
+    class="grid grid-cols-episode-heading-mobile md:grid-cols-episode-heading episode-heading w-full md:min-w-3xl px-3 text-center text-white gap-x-3 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
     <nuxt-img
       :src="episode.episodeArtwork || podcastInfos.imageUrl"
