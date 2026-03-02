@@ -27,7 +27,6 @@ const useNavAnimation = () => {
     const {target} = e;
     if (!target) return;
 
-    console.log((target as HTMLAnchorElement).offsetLeft);
     wrapperNav.value.style.setProperty(
       '--underline-width',
       `${(target as HTMLAnchorElement).offsetWidth}px`,

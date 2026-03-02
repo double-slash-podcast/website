@@ -16,7 +16,6 @@ useHead({
 
 onMounted(() => {
   window.LOCALE = 'fr';
-  console.log(window);
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Veuillez choisir un code pays';
   window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE =
     'Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.';

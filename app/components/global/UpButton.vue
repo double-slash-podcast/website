@@ -82,7 +82,6 @@ const upToTop = () =>
   });
 
 const getSize = computed(() => {
-  console.log(isMobile.value);
   if (isMobile.value) {
     return mobileSize;
   }
