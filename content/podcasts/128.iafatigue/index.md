@@ -53,5 +53,6 @@ Et aussi un retour d'expérience d'un développeur qui utilise l'IA au quotidien
 Episode du podcast Underscore "L'IA va-t-elle nous rendre tous idiots ?"
 
 - https://open.spotify.com/episode/5LKUDiC3hPrfbGagy8O8xh
+- https://www.youtube.com/watch?v=4xq6bVbS-Pw
 
 Bonne écoute !
