@@ -51,7 +51,7 @@ OpenClaw peut piloter votre ordinateur comme vous le feriez manuellement :
 - Gestion de vos comptes (check-in vols, remboursements santé)
 
 **Gateway multi-canal intégré**
-OpenClaw supporte plus de 20 plateformes de messagerie, incluant :
+OpenClaw supporte plus de 20 plateformes de messagerie, incluant&nbsp;:
 - Telegram, WhatsApp, Slack, Discord
 - Signal, iMessage, Email
 - IRC, LINE, et autres canaux de niche
@@ -150,12 +150,6 @@ C'est le vrai différenciateur. Hermes implémente un système de mémoire en de
 
 **Deep user modeling**
 Hermes construit un profil utilisateur approfondi sur le long terme. Il apprend comment vous préférez vos outputs formatés, les types de décisions que vous prenez habituellement, et les tâches que vous exécutez le plus souvent. Si vous demandez toujours des bullet points courts au lieu de longs paragraphes, l'agent finira par vous les donner automatiquement sans demander.
-
-**Compression de contexte dual-layer**
-
-- **Pré-compression gateway** à 85% d'usage de la fenêtre de contexte
-- **Compression agent** à un seuil configurable (par défaut 50%)
-- L'algorithme protège les 3 premiers et les 4 derniers tours, résume la section intermédiaire
 
 **Subagents avec isolation parent-enfant**
 
