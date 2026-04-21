@@ -8,7 +8,7 @@ author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 Le meilleur agent de coding IA n'est pas celui qui a le plus de fonctionnalités. C'est celui qui s'adapte à votre workflow, votre budget et vos contraintes. Claude Code et OpenCode sont les deux agents de coding en terminal qui dominent le marché en 2026, et ils incarnent des philosophies radicalement différentes. L'un vous donne de la profondeur, l'autre vous donne de la liberté.
 
 La réponse courte:  
-**Choisissez Claude Code si vous êtes déjà abonné à Claude, que vous n'avez pas de contraintes budgétaires et que l'idée de vous enfermer dans un seul écosystème ne vous dérange pas.**. **Choisissez OpenCode si vous souhaitez travailler avec plusieurs providers IA, si vous avez des contraintes de privacy ou de conformité, si vous voulez minimiser vos coûts et que vous favorisez les projet open sources**.
+**Choisissez Claude Code si vous êtes déjà abonné à Claude, que vous n'avez pas de contraintes budgétaires et que l'idée de vous enfermer dans un seul écosystème ne vous dérange pas**. **Choisissez OpenCode si vous souhaitez travailler avec plusieurs providers IA, si vous avez des contraintes de privacy ou de conformité, si vous voulez minimiser vos coûts et que vous favorisez les projet open sources**.
 
 Mais la vraie décision est plus nuancée. Les deux outils ont beaucoup évolué en 2026, et le bon choix dépend de votre situation concrète.
 
