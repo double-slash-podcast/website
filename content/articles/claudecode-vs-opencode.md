@@ -165,6 +165,16 @@ Pour les utilisateurs VS Code, l'intégration de Claude Code est nettement supé
 
 ---
 
+## Les plugins
+
+Claude Code propose une marketplace officielle et communautaire avec des plugins validés par Anthropic et des contributions validées par la communauté. Vous pouvez évidemment créer vos propres plugins. Anthropic met l’accent sur la sécurité, la mémoire persistante et l’intégration avec des outils d’entreprise comme Google Workspace ou Asana.
+
+OpenCode bénéficie d’un écosystème plus large et mature, avec des milliers de plugins et d’extensions disponibles via des dépôts communautaires tels que awesome-opencode et opencode.cafe. Les plugins couvrent un large éventail de cas d’usage, de l’automatisation DevOps à l’analyse de données. L’écosystème est conçu pour être très flexible, avec des plugins open source et une communauté active. Il est possible de créer des plugins personnalisés pour presque tous les besoins.
+
+Dans les deux cas, vous avez accès à bon nombre de plugins avec un côté "sécurité" pour Claude Code et un côté plus communautaire pour OpenCode.
+
+---
+
 ## Utiliser les deux outils ensemble
 
 La réponse la plus pragmatique pour beaucoup de développeurs est: utilisez les deux.
