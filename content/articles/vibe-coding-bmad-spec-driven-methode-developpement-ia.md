@@ -15,7 +15,6 @@ Cet article analyse honnêtement ce paradoxe. On compare les principales méthod
 > **Points clés**
 > - Le vibe coding fonctionne pour les prototypes rapides, pas pour les projets en production: la dette technique et le code spaghetti s'accumulent en 3 mois.
 > - Les frameworks SDD (BMAD, Spec Kit, GSD, Kiro...) compensent les limites des LLMs en déplaçant la complexité vers la documentation et les specs.
-> - Les 4 principaux frameworks SDD totalisent 137 000+ étoiles GitHub: c'est devenu un mouvement industriel à part entière.
 > - Matt Pocock (Ralph Loop) défend l'inverse du vibe coding: les fondamentaux d'ingénierie (TDD, design, revue) comptent plus que jamais avec l'IA.
 > - Les développeurs ne sont pas remplacés: ils sont repositionnés comme architectes, relecteurs de code IA, et concepteurs de specs.
 
@@ -25,9 +24,9 @@ Cet article analyse honnêtement ce paradoxe. On compare les principales méthod
 
 ### Qu'est-ce que le vibe coding, exactement?
 
-Le terme "vibe coding" a été popularisé par Andrej Karpathy, l'un des fondateurs d'OpenAI et ancien directeur de l'IA chez Tesla, début 2025. Sa définition était claire: on interagit avec l'IA en langage naturel, on accepte les suggestions sans trop analyser, on "vibre" avec le flow plutôt que de lire chaque ligne.
+Le terme "vibe coding" a été popularisé par Andrej Karpathy, membre fondateur de l'équipe technique d'OpenAI et ancien directeur de l'IA chez Tesla, début 2025. Sa définition était claire: on interagit avec l'IA en langage naturel, on accepte les suggestions sans trop analyser, on "vibre" avec le flow plutôt que de lire chaque ligne.
 
-L'idée résonnait avec une réalité: les LLMs avaient fait des progrès spectaculaires en génération de code. Pour un développeur solo avec un projet précis et borné, laisser Claude ou GPT-4 écrire les fonctions de base permettait effectivement d'aller beaucoup plus vite.
+L'idée résonnait avec une réalité: les LLMs avaient fait des progrès spectaculaires en génération de code. Pour un développeur solo avec un projet précis et borné, laisser Claude ou GPT écrire les fonctions de base permettait effectivement d'aller beaucoup plus vite.
 
 Mais Karpathy lui-même avait posé une limite importante, souvent oubliée dans les articles enthousiastes: le vibe coding était conçu pour les "throwaway weekend projects". Pas pour la production.
 
@@ -111,7 +110,7 @@ Projet GitHub: [github.com/gsd-build/get-shit-done](https://github.com/gsd-build
 
 Sa clé conceptuelle: "version control for intent". OpenSpec sépare physiquement l'état actuel du projet (dans un répertoire `specs/`) des modifications proposées (dans un répertoire `changes/`). Avant d'écrire une seule ligne de code, on s'accorde sur ce qu'on veut construire. L'IA ne peut pas "dériver" parce que les frontières entre l'existant et le proposé sont explicites.
 
-Pour les agences web qui travaillent sur des sites WordPress ou des applications existantes et veulent commencer à intégrer l'IA sans tout casser, OpenSpec mérite sérieusement d'être évalué.
+Pour les agences web qui travaillent sur des sites WordPress par exemple ou des applications existantes et veulent commencer à intégrer l'IA sans tout casser, OpenSpec mérite sérieusement d'être évalué.
 
 Projet GitHub: [github.com/Fission-AI/OpenSpec](https://github.com/Fission-AI/OpenSpec)
 
@@ -127,7 +126,7 @@ Projet GitHub: [github.com/eyaltoledano/claude-task-master](https://github.com/e
 
 ### AWS Kiro: le seul IDE nativement spec-driven
 
-**Kiro** est une catégorie à part. Ce n'est pas un framework à installer dans votre IDE existant: c'est un IDE complet construit par AWS autour du spec-driven development. Il est motorisé par Claude (Anthropic x AWS).
+**Kiro** est une catégorie à part. Ce n'est pas un framework à installer dans votre IDE existant: c'est un IDE complet construit par AWS autour du spec-driven development.
 
 Son workflow: vous décrivez une fonctionnalité en langage naturel, Kiro génère automatiquement des **requirements formalisés** (en notation EARS, un standard pour les spécifications d'ingénierie), puis une architecture, puis un plan d'implémentation avec des tâches séquencées par dépendances. Vous validez chaque étape avant que le code soit écrit.
 
@@ -212,7 +211,7 @@ Et savoir relire du code reste la compétence numéro un qui sépare un bon dév
 
 ## Conclusion: l'IA a transformé le développement, pas simplifié
 
-Les quatre principaux frameworks SDD totalisent aujourd'hui 137 000 étoiles GitHub. Ce n'est pas une tendance, c'est un mouvement de fond. L'industrie a collectivement reconnu que laisser l'IA "vibe" sans contraintes ne fonctionnait pas à l'échelle.
+Ce n'est pas une tendance, c'est un mouvement de fond. L'industrie a collectivement reconnu que laisser l'IA "vibe" sans contraintes ne fonctionnait pas à l'échelle.
 
 Mais voilà ce qu'il faut retenir: la complexité des frameworks n'est pas un échec de l'IA. C'est la preuve que le développement logiciel est intrinsèquement complexe, et que cette complexité ne disparaît pas, elle se déplace vers la conception, la spécification, la review.
 
