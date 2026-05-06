@@ -10,14 +10,13 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_131_news-mai26
-title: News Mai 2026
-subtitle: 
+title: News Mai 2026, TypeScript 7 en beta, faux package TanStack et agent Cursor destructeur
+subtitle: Les news pour mai 2026, TypeScript 7, sécurité npm, IA et outils du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1778059761/episode/ART_131_yyi6wl.png
-description:
+description: Nous évoquons TypeScript 7 qui débarque en beta, NPMX et son indicateur « You might not need this dependency », un agent Cursor qui détruit une base de prod en neuf secondes, le faux package TanStack qui volait les fichiers .env, Laravel qui glisse des publicités dans le contexte des agents IA, et quelques outils comme React Email 6, Starship ou Patterns.dev.
 videoLink : N4cECyxaZik
-tags: []
+tags: ['typescript', 'cursor', 'tanstack', 'npmx', 'laravel', 'react email', 'starship', 'ai', 'flue', 'security', 'claude']
 ---
-## News Mai 2026
 
 ## NPMX Dev
 
@@ -39,8 +38,6 @@ Un jolie terminal simplement !
 
 [https://starship.rs](https://starship.rs/)
 
-## Les dernières sorties
-
 ## React Email 6
 
 Des templates et un éditeur !
@@ -49,10 +46,7 @@ https://resend.com/blog/react-email-6
 
 ## TypeScript 7 Beta
 
-
 https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-beta
-
-## On développe !
 
 ## Un agent cursor détruit les DB d’une startup
 
@@ -68,9 +62,9 @@ https://www.aikido.dev/blog/fake-tanstack-packages-steal-env-files
 
 [https://guess-the-designer.replit.app](https://guess-the-designer.replit.app/)
 
-## [UI.sh](http://UI.sh) ?
+## UI.sh
 
-[UI sh](https://www.notion.so/UI-sh-358356706a9e80a284b2c5251a6546eb?pvs=21)
+[UI.sh](http://UI.sh) ?
 
 Est-ce que ça vaut le coup ou pas ?
 
@@ -88,8 +82,6 @@ https://php.developpez.com/actu/382285/Laravel-injecte-desormais-des-publicites-
 
 ## Benchmark
 
-[Benchmarks IA : une crise de crédibilité](https://www.notion.so/Benchmarks-IA-une-crise-de-cr-dibilit-357356706a9e8046a002ce1be67ac23a?pvs=21)
-
 https://www.blogdumoderateur.com/benchmarks-ia-evaluations-modeles-crise-credibilite/
 
 ## RTK
@@ -102,13 +94,10 @@ https://github.com/rtk-ai/rtk
 
 https://github.com/withastro/flue
 
-## Tools !
-
 ## Clear site data !
 
 https://x.com/MozDevNet/status/2049458826580267459
 
-## Les articles
 
 ## Claude 500$ par mois
 
@@ -121,9 +110,3 @@ https://www.youtube.com/watch?v=W76woOYHlvY
 ## Matt Pocock - Principles for AI Coding
 
 https://www.youtube.com/watch?v=v4F1gFy-hqg
-
-Bonne écoute !
-
-
-
-
