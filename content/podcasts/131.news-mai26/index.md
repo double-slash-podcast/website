@@ -15,7 +15,7 @@ subtitle:
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1778059761/episode/ART_131_yyi6wl.png
 description:
 videoLink : N4cECyxaZik
-tags: []
+tags: ['npmx', 'patterns', 'starship', 'react email', 'typescript', 'ai style design', 'ui.sh', 'open design', 'rtk', 'flue']
 ---
 ## News Mai 2026
 
