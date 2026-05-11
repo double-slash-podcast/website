@@ -15,7 +15,7 @@ Cet article couvre tout: comment tester votre matériel, quel runtime choisir, q
 
 ### L'IA local progresse rapidement !
 
-En temoigne ce tweet de Clement Delangue (cofondateur et PDG d'HuggingFace) du 11 mai 2026 :
+En temoigne ce tweet de Clement Delangue (cofondateur et PDG d'HuggingFace) du 11 mai 2026&nbsp;:
 
 > L'IA open-weight locale sur un ordinateur portable s'améliore plus du double de vitesse que la loi de Moore !
 >
@@ -312,4 +312,4 @@ Faire tourner une IA en local n'est plus un projet de week-end réservé aux pas
 
 Le chemin pratique est simple: testez votre machine avec [canirun.ai](https://www.canirun.ai) ou [llmfit](https://github.com/AlexsJones/llmfit), installez [Ollama](https://ollama.com) ou [LM Studio](https://lmstudio.ai) selon votre niveau de confort avec la ligne de commande, et choisissez un modèle adapté à votre VRAM. Pour la plupart des configurations, cela signifie Gemma 4 E4B (ordinateurs portables, 5-8 Go VRAM), Mistral Small 3 (usage général, 8-12 Go), ou Qwen3.6-27B (code, 16-17 Go). Pour les équipes avec infrastructure, DeepSeek V4 Flash et Mistral Medium 3.5 représentent l'état de l'art en mai 2026.
 
-Le marché évolue à un rythme inhabituel : de nouveaux modèles importants sortent toutes les 4 à 8 semaines. L'[Open LLM Leaderboard de Hugging Face](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) et [Chatbot Arena](https://lmsys.org/blog/2023-05-03-arena/) restent les références pour suivre ce qui change.
+Le marché évolue à un rythme inhabituel : de nouveaux modèles importants sortent toutes les 4 à 8 semaines. L'[Open LLM Leaderboard de Hugging Face](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) et [Chatbot Arena](https://arena.ai/leaderboard/text) restent les références pour suivre ce qui change.
