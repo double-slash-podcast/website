@@ -10,7 +10,7 @@ Vous le savez certainement, **Next.js 13** a été annoncé lors de la **Next.js
 ::Image
 ---
 
-src: /assets/articles/nextjs-presentation.jpg
+src: https://double-slash.dev/assets/articles/nextjs-presentation.jpg
 alt: nextjs 13
 align: 'center'
 ---
@@ -49,7 +49,7 @@ On pourrait même dire, que l'on entre dans l'âge de raison. Une nouvelle ère,
 ::Image
 ---
 
-src: /assets/articles/bundle-size.jpg
+src: https://double-slash.dev/assets/articles/bundle-size.jpg
 alt: bundle size js
 align: 'center'
 ---

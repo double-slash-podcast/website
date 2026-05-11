@@ -26,7 +26,7 @@ videoLink: 0Cqksl85_4M
 
 ::Image
 ---
-src: /assets/articles/aws-vercel.jpg
+src: https://double-slash.dev/assets/articles/aws-vercel.jpg
 alt: AWS Vercel
 align: 'center'
 ---
@@ -79,7 +79,7 @@ Un exemple que j’ai généré :
 
 ::Image
 ---
-src: /assets/articles/rendermodesnapkin.png
+src: https://double-slash.dev/assets/articles/rendermodesnapkin.png
 alt: Napkin IA
 align: 'center'
 ---
@@ -158,5 +158,3 @@ https://cpx.dev/
 https://uiverse.io/
 
 Bonne écoute !
-
-

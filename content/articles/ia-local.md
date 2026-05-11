@@ -28,7 +28,7 @@ En temoigne ce tweet de Clement Delangue (cofondateur et PDG d'HuggingFace) du 1
 ::Image
 ---
 
-src: /assets/articles/open-weight.jpg
+src: https://double-slash.dev/assets/articles/open-weight.jpg
 alt: Open Weight
 align: 'center'
 ---
@@ -46,7 +46,7 @@ align: 'center'
 ::Image
 ---
 
-src: /assets/articles/ollama.jpg
+src: https://double-slash.dev/assets/articles/ollama.jpg
 alt: Ollama
 align: 'center'
 ---
@@ -72,7 +72,7 @@ L'erreur la plus courante est de télécharger un fichier modèle de 40 Go pour 
 ::Image
 ---
 
-src: /assets/articles/lm-studio-model.jpg
+src: https://double-slash.dev/assets/articles/lm-studio-model.jpg
 alt: 'Choix du model sur LM Studio'
 align: 'center'
 ---

@@ -131,7 +131,7 @@ C'est un comportement que l'on retrouve parfois quand on a des fonctions getStat
 ::Image
 ---
 
-src: /assets/articles/nextjs-lag.gif
+src: https://double-slash.dev/assets/articles/nextjs-lag.gif
 alt: nextjs 13 slow
 align: 'center'
 ---
@@ -147,7 +147,7 @@ Problème, c'est une étape coûteuse en ressource et plus ou moins longue en fo
 ::Image
 ---
 
-src: /assets/articles/blocking-time.jpg
+src: https://double-slash.dev/assets/articles/blocking-time.jpg
 alt: Total blocking time
 align: 'center'
 ---

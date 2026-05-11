@@ -168,7 +168,7 @@ L'éditeur est vraiment agréable à utiliser. Il faut savoir que dans la vision
 ::Image
 ---
 
-src: /assets/articles/gutenberg.gif
+src: https://double-slash.dev/assets/articles/gutenberg.gif
 alt: WordPress Gutenberg
 align: 'center'
 ---
