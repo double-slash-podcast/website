@@ -13,6 +13,17 @@ Les modèles open source ont franchi un seuil décisif. Un modèle de 14 milliar
 
 Cet article couvre tout: comment tester votre matériel, quel runtime choisir, quels modèles open source valent votre temps en 2026, et comment passer de zéro à votre première réponse locale en quelques minutes.
 
+## L'épisode en lien avec l'article
+
+::VideoPlayer
+---
+
+videoLink: bItXp5CWpjs
+videoTitle: "Faire tourner une IA en local: outils, modèles et configuration matérielle"
+---
+
+::
+
 ### L'IA local progresse rapidement !
 
 En temoigne ce tweet de Clement Delangue (cofondateur et PDG d'HuggingFace) du 11 mai 2026&nbsp;:
