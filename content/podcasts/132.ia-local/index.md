@@ -10,7 +10,7 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_132_ia-local
-title: Faire tourner une IA en local
+title: 'Comment faire tourner une IA en local: outils, modèles et configuration matérielle'
 subtitle: 'Faire tourner une IA en local: outils, modèles et configuration matérielle'
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1778599560/episode/ART_132_kg8gzh.png
 description: Le prix des tokens ne cesse de monter et la protection des données devient de plus en plus importante. Alors, pourquoi ne pas faire tourner un modèle d'IA directement sur votre machine, en local ? Dans cet épisode, nous vous expliquons comment procéder, quel modèle choisir en fonction de la puissance de votre machine, et quels logiciels utiliser.
