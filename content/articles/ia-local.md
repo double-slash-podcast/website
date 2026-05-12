@@ -213,6 +213,10 @@ Concrètement:
 
 Cela a deux conséquences distinctes sur votre machine. La **vitesse d'inférence** (tokens par seconde) correspond aux paramètres actifs : un modèle MoE avec 13B actifs génère des tokens aussi vite qu'un modèle dense 13B. En revanche, la **mémoire nécessaire pour charger le modèle** correspond aux paramètres totaux : tous les experts doivent rester en mémoire (VRAM ou RAM), même inactifs. Un DeepSeek V4 Flash à 284B nécessite ainsi environ 160 Go de mémoire totale pour charger l'ensemble des poids, malgré sa rapidité à l'inférence.
 
+### Quantization
+
+La quantization est une technique qui vise à réduire la précision numérique des nombres flottants utilisés comme paramètres des réseaux de neurones profonds qui composent les LLM, afin de diminuer leur empreinte en mémoire GPU. Concrètement, les paramètres encodés en 32 ou 64 bits sont convertis vers des formats plus légers (FP16, BF16, INT8 ou INT4), ce qui permet de diviser par environ 3 la taille du modèle tout en limitant la perte de performance. On distingue le Quantization-Aware Training (QAT), appliqué pendant l'entraînement, et le Post-Training Quantization (PTQ), réalisé après entraînement et plus facile à mettre en œuvre, avec des méthodes populaires comme GPTQ ou NF4. Au final, la quantization réduit la consommation mémoire et énergétique ainsi que les temps d'inférence, au prix d'un compromis à trouver avec la précision du modèle.
+
 ### Meilleur modèle généraliste: Llama 4 Scout (Meta)
 
 [Llama 4 Scout](https://huggingface.co/meta-llama/Llama-4-Scout-17B-16E) (64GB) est un modèle Mixture-of-Experts de 109 milliards de paramètres total avec seulement 17B actifs pendant l'inférence. Sa fenêtre de contexte est de 10 millions de tokens et il est nativement multimodal (texte et images).
@@ -272,6 +276,7 @@ Cela a deux conséquences distinctes sur votre machine. La **vitesse d'inférenc
 | Code haute performanc (cloud Ollama) e | [DeepSeek V4 Flash](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash) | API cloud | MIT |
 | Généraliste + vision (serveur) | [Mistral Medium 3.5](https://ollama.com/library/mistral-medium-3.5) | ~80 Go (multi-GPU) | Modified MIT |
 | Agent autonome (cloud Ollama) | [Kimi K2.6](https://ollama.com/library/kimi-k2.6) | API cloud | Open-source |
+
 
 ## Étape 4: votre première IA locale en pratique
 
