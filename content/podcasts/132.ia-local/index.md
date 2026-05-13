@@ -21,4 +21,4 @@ En 2026, la voie la plus simple pour exécuter une IA localement consiste à ins
 
 Les modèles open source ont franchi un cap décisif : un 14 milliards de paramètres tournant sur un GPU grand public rivalise désormais avec le GPT-4 d'il y a deux ans. Pas étonnant que tant de développeurs, d'équipes et d'utilisateurs attachés à leur vie privée envisagent de rapatrier l'IA du cloud vers leur propre machine.
 
-Cet épisode se base sur cet article : (https://double-slash.dev/articles/ia-local/)[https://double-slash.dev/articles/ia-local/]
+Cet épisode se base sur cet article : https://double-slash.dev/articles/ia-local/
