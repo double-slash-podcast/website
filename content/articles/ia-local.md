@@ -179,9 +179,18 @@ La contrepartie est la complexité: pas de navigateur de modèles, pas de détec
 
 ### Autres outils à connaître
 
+**[LocallyAI](https://locallyai.app)** permet de faire tourner des modèles sur iPhone, iPad et Mac. L'application exploite au maximum les puces Apple.
+
 **[GPT4All](https://www.nomic.ai/gpt4all)** inclut une fonctionnalité LocalDocs permettant de discuter avec vos propres fichiers (PDF, Word, dépôts de code) entièrement sur l'appareil. La version 2026 a ajouté le raisonnement sur l'appareil et les appels d'outils. C'est le meilleur choix pour les workflows RAG privés sans infrastructure supplémentaire.
 
 **[vLLM](https://vllm.ai)** est la référence en production pour les équipes qui font tourner des modèles sur infrastructure GPU à grande échelle. Son architecture PagedAttention et son batching continu supportent les déploiements multi-GPU. Pour servir un modèle à des dizaines d'utilisateurs simultanés, vLLM est le bon outil, mais nettement plus complexe à configurer qu'Ollama ou LM Studio.
+
+::Info
+---
+type: info
+---
+Infomaniak a sorti une série d’articles pour bien utiliser vLLM : https://engineering.infomaniak.com/vllm-ultimate-guide-part-1/
+::
 
 ### Tableau comparatif
 
@@ -202,7 +211,7 @@ Un workflow pratique adopté par beaucoup de développeurs: LM Studio pour la d�
 
 Le paysage des modèles a évolué significativement cette année. Plusieurs sorties entre 7 et 27 milliards de paramètres égalent ou dépassent ce qui nécessitait 70B+ de paramètres en 2024.
 
-> **Note**: le marché des modèles open source évolue extrêmement vite : de nouvelles sorties importantes ont lieu toutes les 4 à 8 semaines. Les recommandations ci-dessous sont à jour en mai 2026. Pour suivre l'évolution en temps réel, consultez l'[Open LLM Leaderboard de Hugging Face](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) et [lmsys.org/chatbot-arena](https://lmsys.org/blog/2023-05-03-arena/) : ils reflètent les benchmarks actuels des modèles disponibles localement.
+> **Note**: le marché des modèles open source évolue extrêmement vite : de nouvelles sorties importantes ont lieu toutes les 4 à 8 semaines. Les recommandations ci-dessous sont à jour en mai 2026. Pour suivre l'évolution en temps réel, consultez l'[Open LLM Leaderboard de Hugging Face](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) et [llm-stats.com/leaderboards](https://llm-stats.com/leaderboards/open-llm-leaderboard) : ils reflètent les benchmarks actuels des modèles disponibles localement.
 
 ### Que signifie "7B", "70B", "235B"?
 
@@ -243,6 +252,13 @@ La quantization est une technique qui vise à réduire la précision numérique 
 **VRAM requise**: 5 Go minimum (Q4_K_M); 6-8 Go recommandés pour un usage confortable au quotidien. Une GPU de 8 Go (RTX 3070, etc.) offre une expérience fluide.
 
 **Licence**: Apache 2.0.
+
+::Info
+---
+type: info
+---
+Un article de Yoandev qui teste le modèle Gemma 4 sur du code https://yoandev.co/gemma4-opencode-benchmark
+::
 
 ### Meilleur pour le code haute performance: DeepSeek V4 Flash (284B/13B actifs)
 
@@ -328,4 +344,4 @@ Faire tourner une IA en local n'est plus un projet de week-end réservé aux pas
 
 Le chemin pratique est simple: testez votre machine avec [canirun.ai](https://www.canirun.ai) ou [llmfit](https://github.com/AlexsJones/llmfit), installez [Ollama](https://ollama.com) ou [LM Studio](https://lmstudio.ai) selon votre niveau de confort avec la ligne de commande, et choisissez un modèle adapté à votre VRAM. Pour la plupart des configurations, cela signifie Gemma 4 E4B (ordinateurs portables, 5-8 Go VRAM), Mistral Small 3 (usage général, 8-12 Go), ou Qwen3.6-27B (code, 16-17 Go). Pour les équipes avec infrastructure, DeepSeek V4 Flash et Mistral Medium 3.5 représentent l'état de l'art en mai 2026.
 
-Le marché évolue à un rythme inhabituel : de nouveaux modèles importants sortent toutes les 4 à 8 semaines. L'[Open LLM Leaderboard de Hugging Face](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard) et [Chatbot Arena](https://arena.ai/leaderboard/text) restent les références pour suivre ce qui change.
+Le marché évolue à un rythme inhabituel : de nouveaux modèles importants sortent toutes les 4 à 8 semaines. L'[Open LLM Leaderboard de Hugging Face](https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard), [llm-stats.com/leaderboards](https://llm-stats.com/leaderboards/open-llm-leaderboard) et [Chatbot Arena](https://arena.ai/leaderboard/text) restent les références pour suivre ce qui change.
