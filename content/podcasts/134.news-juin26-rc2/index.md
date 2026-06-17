@@ -10,7 +10,7 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_134_news-juin26-rc2
-title: News Juin 2026 RC2, React quitte Meta, VoidZero rejoint Cloudflare et l'IA locale prend du muscle
+title: News Juin 2026 RC2, React quitte Meta, VoidZero rejoint Cloudflare et IA locale
 subtitle: Les news pour la deuxième quinzaine de juin 2026, React Foundation, VoidZero x Cloudflare, WordPress Protect The Shire et toujours plus d'IA.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1781689392/episode/ART_134_dmbb8r.png
 description: Nous évoquons React qui passe sous la Linux Foundation avec la React Foundation, VoidZero et Vite qui rejoignent Cloudflare, l'initiative Protect The Shire pour sécuriser les 78 000 plugins WordPress, TanStack AI en beta, Maizzle 6 et sa refonte Tailwind CSS 4, les nouveaux modèles open-weight de Mistral, Mellum2 qui passe en open source, le Ryzen AI Halo d'AMD avec 128 Go de RAM pour faire tourner 200 milliards de paramètres en local, et les nouveautés Chrome comme WebMCP et les Declarative Partial Updates.
@@ -99,6 +99,7 @@ L'article de Chrome aborde les **considérations de sécurité pour les dévelop
 SemiAnalysis a comparé les plans d'abonnement d'Anthropic et d'OpenAI en testant des tâches de codage longues jusqu'à épuisement des limites hebdomadaires. Contrairement à l'idée reçue, les abonnements offrent des marges bien plus généreuses que prévu : un abonnement à 200 $/mois permet d'obtenir une valeur équivalente à bien plus que 2 000 $/mois en tokens (au tarif API). Cependant, les laboratoires d'IA pourraient limiter les nouvelles fonctionnalités ou modèles aux abonnements, pour éviter de réduire explicitement leurs avantages et ainsi éviter un retour de bâton public.
 
 ## Mistral AI annonce un nouveau modèle open-weight et des outils pour l'autonomie des systèmes d'IA
+
 [Lire le thread](https://x.com/arthurmensch/status/2066913353860018596)
 
 Mistral AI prépare un **nouveau modèle** pour cet été, marquant le début d'une famille de modèles grands mais "sparse". Tous les modèles à venir seront **open-weight**, avec un accent sur la confiance des clients et l'autonomie des communautés. **Studio** (déploiement) et **Forge** (entraînement) sont des produits portables, hébergés sur une infrastructure contrôlée par Mistral. L'objectif : permettre aux entreprises et gouvernements de déployer des systèmes d'IA **indépendants**, avec une structure de coûts efficace et un entraînement continu basé sur les interactions humain-IA.
