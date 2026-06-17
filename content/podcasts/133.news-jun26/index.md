@@ -115,9 +115,3 @@ https://formisch.dev
 ## Attention aux Skills
 
 https://www.youtube.com/watch?v=WNJHMoHTrBU
-
-
-
-
-
-
