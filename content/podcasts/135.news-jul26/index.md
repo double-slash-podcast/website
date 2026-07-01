@@ -10,7 +10,7 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_135_news-jul26
-title: News Juillet 2026, TypeScript 7 RC, Astro 7 et les pièges pour agents IA
+title: News Juillet 2026, TypeScript 7 RC, Astro 7 et des pièges pour agents IA
 subtitle: Les news pour juillet 2026, TypeScript 7 RC, Astro 7, agents IA et outils du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1782901023/ART_135_m3vbav.png
 description: Nous évoquons TypeScript 7.0 RC jusqu'à 10 fois plus rapide, Astro 7.0 avec Sätteri et Rolldown, l'astuce de Mitchell Hashimoto pour piéger les PR sans review de code, Cursor sur iOS, Docker sur Vercel, Deno Desktop, Babel 8, le framework d'agents Eve, les modèles IA Fugu et Ornith, le nouveau Mistral OCR 4, Firecrawl Keyless, LightOn, Linkup et Proxae.
