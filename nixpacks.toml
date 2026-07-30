@@ -1,0 +1,9 @@
+# Pin Node via nixpkgs so Coolify/Nixpacks gets >= 22.12 (required by oxc-parser).
+# Archive commit → Node 22.13.1 (Coolify docs).
+# See: https://coolify.io/docs/applications/build-packs/nixpacks/node-versioning
+
+[phases.setup]
+nixpkgsArchive = '51ad838b03a05b1de6f9f2a0fffecee64a9788ee'
+
+[variables]
+NIXPACKS_NODE_VERSION = '22'

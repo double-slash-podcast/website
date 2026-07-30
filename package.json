@@ -2,6 +2,9 @@
   "version": "3.1.0",
   "name": "double-slash-website",
   "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "plop": "plop",
     "build": "nuxi build",
