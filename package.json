@@ -37,9 +37,7 @@
     "@nuxt/test-utils": "4.0.0",
     "@nuxt/test-utils-edge": "3.8.0-28284309.b3d3d7f4",
     "@nuxtjs/color-mode": "4.0.0",
-    "@nuxtjs/eslint-config-typescript": "12.1.0",
     "@nuxtjs/fontaine": "0.5.0",
-    "@oxc-parser/binding-linux-x64-gnu": "^0.142.0",
     "@pinia/nuxt": "0.11.3",
     "@tailwindcss/typography": "0.5.19",
     "@tailwindcss/vite": "^4.2.2",
@@ -52,7 +50,6 @@
     "consola": "3.4.2",
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",
-    "eslint-plugin-nuxt": "4.0.0",
     "eslint-plugin-prettier": "5.5.5",
     "fast-xml-parser": "^5.5.10",
     "jsdom": "29.0.1",
@@ -81,6 +78,13 @@
     "tailwindcss": "^4.2.2",
     "throttle-debounce": "^5.0.2",
     "vue-lite-youtube-embed": "1.2.4"
+  },
+  "optionalDependencies": {
+    "@oxc-parser/binding-linux-x64-gnu": "^0.142.0"
+  },
+  "overrides": {
+    "@vue/composition-api": false,
+    "mlly": "1.4.0"
   },
   "resolutions": {
     "mlly": "1.4.0"
