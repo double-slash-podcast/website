@@ -28,3 +28,8 @@ supportedArchitectures:
   libc:
     - current
     - glibc
+
+# Iconify JSON packs publish often; skip the 24h minimumReleaseAge check so
+# Coolify installs are not blocked by ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION.
+minimumReleaseAgeExclude:
+  - '@iconify-json/*'
