@@ -4,19 +4,26 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3097
+duration: 6195
 episodeNumber: 46
 episodeType: full
 explicit: false
 season: 1
 title: Back to school 2022
-subtitle: Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2022.
+subtitle: Un épisode de rentrée en format "news". Nous revenons sur les annonces
+  qui ont eu lieu durant l'été 2022.
 dsSlug: DS_046_news_sept22
 guid: 7e81ee153d82fb165e2112919c1b9bba
-description: Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2022.
-videoLink : D1IJ08_pYhA
-tags: [bun,deno,devops]
+description: Un épisode de rentrée en format "news". Nous revenons sur les
+  annonces qui ont eu lieu durant l'été 2022.
+videoLink: D1IJ08_pYhA
+tags:
+  - bun
+  - deno
+  - devops
+fileSize: 74389555
 ---
+
 ## Chrome support Web Framework
 
 > Chrome distribue la monnaie !
@@ -70,6 +77,3 @@ tags: [bun,deno,devops]
 - [GraphiQL 2](https://github.com/graphql/graphiql/)
 - [Git Explorer](https://gitexplorer.com/)
 - [GraphQL Cache](https://stellate.co/graphql-edge-caching)
-
-
-

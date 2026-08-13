@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3698
+duration: 8583
 episodeNumber: 64
 episodeType: full
 explicit: false
@@ -13,10 +13,17 @@ dsSlug: DS_064_webperf
 title: La Web Performance en 2023 avec Eroan Boyer
 subtitle: La Web performance et son impact en 2023.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1684265659/episode/ART_64_webperf_btpfzd.png
-description: Nous avions déjà fait des épisodes où nous parlions de Web Performance par rapport aux Core Web Vitals de Google et également des épisodes sur les animations CSS et JS. Mais il nous manquait un épisode dédié sur la Web Performance en général. C'est chose faite avec cet épisode.
-videoLink : oe_aFmDoScU
-tags: [performance,core web Vitals]
+description: Nous avions déjà fait des épisodes où nous parlions de Web
+  Performance par rapport aux Core Web Vitals de Google et également des
+  épisodes sur les animations CSS et JS. Mais il nous manquait un épisode dédié
+  sur la Web Performance en général. C'est chose faite avec cet épisode.
+videoLink: oe_aFmDoScU
+tags:
+  - performance
+  - core web Vitals
+fileSize: 68717955
 ---
+
 Dans cet épisode, nous avons le plaisir de recevoir Eroan Boyer qui est spécialisé en Web Performance. Eroan est le fondateur de l'agence [Agence Web Performance](https://agencewebperformance.fr/).
 
 Nous allons dans un premier temps, définir ce qu'est la Web Performance. Quel est l'intérêt d'avoir un site rapide. Comment mesurer la performance de son site. Comment améliorer la performance de son site. Nous parlerons également de l'impact de la performance sur le référencement naturel
@@ -54,8 +61,3 @@ Sommaire :
 - 00:50:00 : S'informer sur la Web Performance
 - 00:57:00 : La performance côté back et DB
 - 01:04:00 : Over engineering les dernières années ?
-
-
-
-
-

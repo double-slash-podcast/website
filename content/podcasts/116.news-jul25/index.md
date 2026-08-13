@@ -4,19 +4,45 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3254
 episodeNumber: 116
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_116_news-jul25
 title: Les news sur le développement web et l'IA pour juillet 2025 RC1
-subtitle: Toutes les dernières news sur le développement web et l'IA pour juillet 2025 RC1
+subtitle: Toutes les dernières news sur le développement web et l'IA pour
+  juillet 2025 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1752845703/episode/ART_116_mzdjbh.png
-description: Nous évoquons Vite 7, Nuxt 4, NuxtLab qui rejoint Vercel, Figma qui achète Payload, le CERN qui migre tous les sites de Drupal vers WordPress, un nouveau système de gestion des plugins pour WordPress, Comet, le navigateur de Perplexity, WindSurf qui finit finalement chez Cognition, et des outils open source de chez Firecrawl.
-videoLink : Z31EBQIOfug
-tags: [Vite, Nuxt, Tailwind, AI, WordPress, Docker, Cloudflare, Figma, Payload, NuxtLabs, Vercel, CERN, FAIR, Tailwind Animations, Mastra, Comet, Windsurf, Fireplexity, Firegeo]
+description: Nous évoquons Vite 7, Nuxt 4, NuxtLab qui rejoint Vercel, Figma qui
+  achète Payload, le CERN qui migre tous les sites de Drupal vers WordPress, un
+  nouveau système de gestion des plugins pour WordPress, Comet, le navigateur de
+  Perplexity, WindSurf qui finit finalement chez Cognition, et des outils open
+  source de chez Firecrawl.
+videoLink: Z31EBQIOfug
+tags:
+  - Vite
+  - Nuxt
+  - Tailwind
+  - AI
+  - WordPress
+  - Docker
+  - Cloudflare
+  - Figma
+  - Payload
+  - NuxtLabs
+  - Vercel
+  - CERN
+  - FAIR
+  - Tailwind Animations
+  - Mastra
+  - Comet
+  - Windsurf
+  - Fireplexity
+  - Firegeo
+fileSize: 52177821
 ---
+
 ## Vite 7
 
 Minimum NodeJS 20. Le browser target change (chrome 87 → 107, etc..)
@@ -107,7 +133,3 @@ ChatGPT serait passé de Bing à Google.
 - https://github.com/mendableai/firegeo
 
 Bonne écoute !
-
-
-
-

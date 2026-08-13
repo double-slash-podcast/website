@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4316
+duration: 8632
 episodeNumber: 76
 episodeType: full
 explicit: false
@@ -13,9 +13,17 @@ dsSlug: DS_076_news12_23
 title: Les News Web Dev pour Décembre 2023
 subtitle: Actu
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1702466435/episode/ART_76_news12_23_elckdx.png
-description: Un épisode de news pour décembre 2023, le dernier de l’année 2023. Nous évoquons dans cet épisode les dernières sorties, Vite JS, Astro, PHP. Nous parlons des écosystèmes JS et PHP. Vous retrouverez également des articles et outils à utiliser au quotidien pour vos développements.
-videoLink : EJB4Po5s7ak
-tags: [vite,astro,php,rust]
+description: Un épisode de news pour décembre 2023, le dernier de l’année 2023.
+  Nous évoquons dans cet épisode les dernières sorties, Vite JS, Astro, PHP.
+  Nous parlons des écosystèmes JS et PHP. Vous retrouverez également des
+  articles et outils à utiliser au quotidien pour vos développements.
+videoLink: EJB4Po5s7ak
+tags:
+  - vite
+  - astro
+  - php
+  - rust
+fileSize: 69108622
 ---
 
 ## Vite !!
@@ -126,8 +134,3 @@ Sommaire :
 01:00:03 Adresse Data Gouv
 01:03:54 Electric SQL
 01:08:45 ShowCode
-
-
-
-
-

@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3740
 episodeNumber: 112
 episodeType: full
 explicit: false
@@ -13,10 +13,20 @@ dsSlug: DS_112_news-mai-rc2
 title: Les news web dev et IA pour mai 2025 RC2
 subtitle: Épisode news web développement et IA pour mai 2025 - RC2
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1748252690/episode/ART_112_hhrmyg.png
-description: Nous évoquons Devoxx FR 2025, les nouveautés de Strapi V5, la fin de Stack Overflow, des outils pour partager des données sensibles et, évidemment, l'IA avec OpenAI, Copilot et la Google I/O.
-videoLink : azI8XWA1zP0
-tags: ['devoxx', 'strapi', 'openAI', 'copilot', 'altcha', 'google I/O']
+description: Nous évoquons Devoxx FR 2025, les nouveautés de Strapi V5, la fin
+  de Stack Overflow, des outils pour partager des données sensibles et,
+  évidemment, l'IA avec OpenAI, Copilot et la Google I/O.
+videoLink: azI8XWA1zP0
+tags:
+  - devoxx
+  - strapi
+  - openAI
+  - copilot
+  - altcha
+  - google I/O
+fileSize: 59966102
 ---
+
 ## Devoxx 2025
 
 Les vidéos : https://www.youtube.com/@DevoxxFRvideos/videos
@@ -131,7 +141,3 @@ https://www.perplexity.ai/search/donne-moi-les-news-de-la-googl-gpCzDnaCQ5mROqQy
 Pour les abonnés, 1 an sur Perplexity Pro gratuit.
 
 Bonne écoute !
-
-
-
-

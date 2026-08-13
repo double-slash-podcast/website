@@ -4,19 +4,32 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4809
+duration: 9619
 episodeNumber: 67
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_067_news06
 title: Les News Web Dev pour Juin 2023
-subtitle: Un épisode news pour juin 2023 un peu plus long que d'habitude pour prolonger le plaisir !
+subtitle: Un épisode news pour juin 2023 un peu plus long que d'habitude pour
+  prolonger le plaisir !
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1687790575/episode/ART_65_news_juin_23_x7lgq4.png
-description: Un épisode news pour juin 2023 un peu plus long que d'habitude pour prolonger le plaisir. Nous allons évoquer Apple qui s'occupe enfin de Webkit (Safari), de React.js qui se retrouve dans la polémique avec les servers components. Évidemment de CSS. De services d'envoi d'emails. De Netlify connect. De PHP qui prépare sa version 8.3. De Zod, de Javascript, etc.. Un épisode riche en news !
-videoLink : vIf3cOQnI1Y
-tags: [devtools,css,php,devops,js]
+description: Un épisode news pour juin 2023 un peu plus long que d'habitude pour
+  prolonger le plaisir. Nous allons évoquer Apple qui s'occupe enfin de Webkit
+  (Safari), de React.js qui se retrouve dans la polémique avec les servers
+  components. Évidemment de CSS. De services d'envoi d'emails. De Netlify
+  connect. De PHP qui prépare sa version 8.3. De Zod, de Javascript, etc.. Un
+  épisode riche en news !
+videoLink: vIf3cOQnI1Y
+tags:
+  - devtools
+  - css
+  - php
+  - devops
+  - js
+fileSize: 77003305
 ---
+
 ### Safari et Apple APNS
 
 Apple met à disposition une nouvelle console  pour tester les notifications <https://developer.apple.com/notifications/push-notifications-console/>
@@ -139,7 +152,3 @@ Zod avec les vars d’env <https://www.jacobparis.com/content/type-safe-env>
 - Chrome dev tools 115 <https://developer.chrome.com/blog/new-in-devtools-115/>
 
 Bonne écoute !
-
-
-
-

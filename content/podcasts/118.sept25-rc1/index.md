@@ -4,19 +4,40 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 2996
 episodeNumber: 118
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_118_sept25-rc1
 title: Les news sur le développement web et l'IA pour septembre 2025 RC1
-subtitle: Toutes les dernières news sur le développement web et l'IA pour septembre 2025 RC1
+subtitle: Toutes les dernières news sur le développement web et l'IA pour
+  septembre 2025 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1756369528/episode/ART_118_no3sns.png
-description: 'Un épisode news dans lequel nous évoquons : Gel DB, Laracon US 2025 (Inertia 2.1, Livewire 4, Pest 4), CSS Layout generator, Nuxt UI theme builder. Un article sur "Pourquoi les LLM ne peuvent pas écrire de logiciel complet" et un autre sur "Les entreprises traînent à adopter l’IA". Côté IA, Prism PHP (librairie pour LLM), Browser Echo MCP, Agents.md et Lumo AI.'
-videoLink : tOkjJ82DkZo
-tags: ['malt','laravel','livewire','inertia','pest','laracon','nuxt','google fonts','llm','geldb','prismphp','browser echo','agents.md','lumo ai']
+description: 'Un épisode news dans lequel nous évoquons : Gel DB, Laracon US
+  2025 (Inertia 2.1, Livewire 4, Pest 4), CSS Layout generator, Nuxt UI theme
+  builder. Un article sur "Pourquoi les LLM ne peuvent pas écrire de logiciel
+  complet" et un autre sur "Les entreprises traînent à adopter l’IA". Côté IA,
+  Prism PHP (librairie pour LLM), Browser Echo MCP, Agents.md et Lumo AI.'
+videoLink: tOkjJ82DkZo
+tags:
+  - malt
+  - laravel
+  - livewire
+  - inertia
+  - pest
+  - laracon
+  - nuxt
+  - google fonts
+  - llm
+  - geldb
+  - prismphp
+  - browser echo
+  - agents.md
+  - lumo ai
+fileSize: 48056696
 ---
+
 ### Attention Malt
 
 **Schéma d’attaque identifié**
@@ -151,7 +172,3 @@ https://proton.me/blog/fr/lumo-ai
 
 
 Bonne écoute !
-
-
-
-

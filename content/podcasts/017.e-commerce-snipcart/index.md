@@ -4,18 +4,27 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3277
+duration: 6555
 dsSlug: DS_017_snipcart
 episodeNumber: 17
 episodeType: full
 explicit: false
 season: 1
 title: Snipcart avec François Lanthier Nadeau
-subtitle: Snipcart est une solution qui vous permet de mettre en place rapidement une boutique en ligne sur n'importe quel système
+subtitle: Snipcart est une solution qui vous permet de mettre en place
+  rapidement une boutique en ligne sur n'importe quel système
 guid: 314ab0a29bfe296e6123d984df41c97b
-description: Dans cet épisode, nous allons parler d'un service ecommerce qui vous permet de mettre en place rapidement une boutique en ligne sur n'importe quel système. Snipcart est une solution qui se place entre les systèmes monolithiques du type Prestashop ou Magento et les services API First du type Commerce JS ou Swell.
-videoLink:
-tags: [ecommerce,devtools,static]
+description: Dans cet épisode, nous allons parler d'un service ecommerce qui
+  vous permet de mettre en place rapidement une boutique en ligne sur n'importe
+  quel système. Snipcart est une solution qui se place entre les systèmes
+  monolithiques du type Prestashop ou Magento et les services API First du type
+  Commerce JS ou Swell.
+videoLink: null
+tags:
+  - ecommerce
+  - devtools
+  - static
+fileSize: 78691253
 ---
 
 Lancé il y a environ 7 ans, Snipcart en est à sa troisième version. Cette troisième version lancée début 2020 offre une solution complète pour mettre en place rapidement une solution ecommerce.
@@ -49,7 +58,3 @@ Dans l'épisode, nous discutons avec François du monde de la JAMStack, des soci
 - [Documentation Snipcart](https://docs.snipcart.com/v3/)
 - [Blog Snipcart](https://snipcart.com/blog)
 - [Un exemple de site](https://www.mercredibiscuiterie.com/)
-
-
-
-

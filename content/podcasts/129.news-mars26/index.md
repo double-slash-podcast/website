@@ -4,19 +4,29 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 4126
 episodeNumber: 129
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_129_news-mars26
-title: News Mars 2026, Vite+, Void Cloud, du drama et de l'IA 
+title: News Mars 2026, Vite+, Void Cloud, du drama et de l'IA
 subtitle: Les news pour le mois de mars 2026, du dev, du js et de l'IA
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1773850355/ART_129_efsvof.png
-description: Nous évoquons le média L'Équipe qui repasse en MPA, Void Zero qui arrive avec plusieurs sorties. Vite 8, Vite Plus et Void Cloud. Datagouv nous propose du MCP, Mistral vous donne la possibilité d'avoir votre propre modèle, un DB vectoriel embarqué et des études sur l'IA.
-videoLink : v63hhVHonJQ
-tags: ['mcp', 'laravel', 'vite', 'vercel', 'cloudflare']
+description: Nous évoquons le média L'Équipe qui repasse en MPA, Void Zero qui
+  arrive avec plusieurs sorties. Vite 8, Vite Plus et Void Cloud. Datagouv nous
+  propose du MCP, Mistral vous donne la possibilité d'avoir votre propre modèle,
+  un DB vectoriel embarqué et des études sur l'IA.
+videoLink: v63hhVHonJQ
+tags:
+  - mcp
+  - laravel
+  - vite
+  - vercel
+  - cloudflare
+fileSize: 66134474
 ---
+
 ## L’équipe sort de la SPA et revient en MPA
 
 - [https://medium.com/lequipe-tech/de-spa-à-mpa-reprendre-en-main-la-performance-500c506d2983](https://medium.com/lequipe-tech/de-spa-%C3%A0-mpa-reprendre-en-main-la-performance-500c506d2983)
@@ -111,7 +121,3 @@ https://arxiv.org/abs/2603.03823
 
 
 Bonne écoute !
-
-
-
-

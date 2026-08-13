@@ -4,19 +4,36 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3601
+duration: 7203
 episodeNumber: 65
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_065_news05_23
 title: Les news pour Mai 2023
-subtitle: Découvrez les news CSS, React, Vue, Laravel, WordPress, Deno, etc. du mois de Mai 2023
+subtitle: Découvrez les news CSS, React, Vue, Laravel, WordPress, Deno, etc. du
+  mois de Mai 2023
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1685476143/episode/ART_65_news5_vjvwpr.png
-description: Dans cet épisode de notre podcast, nous abordons les dernières nouveautés dans le monde des navigateurs, telles que la nouvelle propriété CSS `text-wrap balance`, l'exécution des WebContainers sur Safari, iOS et iPadOS, ainsi que la fonctionnalité CSS nesting dans Safari TP et Chrome. Nous discutons également des mises à jour de Qwik, de l'amélioration du support pour Nuxt chez Vercel, des nouvelles fonctionnalités de Next.js et des réactions aux React Server Components. De plus, nous mentionnons les anniversaires de WordPress (20 ans) et les nouvelles ressources dans les mondes de Laravel, CodeSandbox et Deno. Enfin, nous présentons des outils intéressants tels que le pense-bête pour les commandes Git et Spline, une sorte de Figma pour la 3D.
-videoLink : M20SfpkoW7U
-tags: [next,vue,deno,devtools]
+description: Dans cet épisode de notre podcast, nous abordons les dernières
+  nouveautés dans le monde des navigateurs, telles que la nouvelle propriété CSS
+  `text-wrap balance`, l'exécution des WebContainers sur Safari, iOS et iPadOS,
+  ainsi que la fonctionnalité CSS nesting dans Safari TP et Chrome. Nous
+  discutons également des mises à jour de Qwik, de l'amélioration du support
+  pour Nuxt chez Vercel, des nouvelles fonctionnalités de Next.js et des
+  réactions aux React Server Components. De plus, nous mentionnons les
+  anniversaires de WordPress (20 ans) et les nouvelles ressources dans les
+  mondes de Laravel, CodeSandbox et Deno. Enfin, nous présentons des outils
+  intéressants tels que le pense-bête pour les commandes Git et Spline, une
+  sorte de Figma pour la 3D.
+videoLink: M20SfpkoW7U
+tags:
+  - next
+  - vue
+  - deno
+  - devtools
+fileSize: 57674994
 ---
+
 ## Nouveautés Navigateurs
 
 - [CSS text-wrap: balance](https://www.notion.so/CSS-text-wrap-balance-Chrome-Developers-be76416b36e248e6a5e9b4cc3931ad9e)
@@ -97,7 +114,3 @@ Sommaire :
 45:12 Boxy CodeSandBox
 47:20 Deno World
 54:19 Tools
-
-
-
-

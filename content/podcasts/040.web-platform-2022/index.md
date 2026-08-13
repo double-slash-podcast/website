@@ -4,39 +4,36 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2773
+duration: 5547
 dsSlug: DS_040_webapi22
 episodeNumber: 40
 episodeType: full
 explicit: false
 season: 1
 title: Les Web Platforms en 2022
-subtitle: Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
+subtitle: Un passage en revue des implémentations futures et actuelles dans les
+  navigateurs après la Google IO et la WWDC Apple.
 guid: ab1b72df509cb2a1ec871478816c4223
-description: Un passage en revue des implémentations futures et actuelles dans les navigateurs après la Google IO et la WWDC Apple.
+description: Un passage en revue des implémentations futures et actuelles dans
+  les navigateurs après la Google IO et la WWDC Apple.
 videoLink: 41oHH_opXKg
 links:
-  [
-    {
-      title: 'Interop 2022: browsers working together to improve the web for developers',
-      url: 'https://web.dev/interop-2022/',
-    },
-    {title: 'State of CSS 2022', url: 'https://web.dev/state-of-css-2022'},
-    {
-      title: "What's new for the web platform",
-      url: 'https://youtu.be/5b4YcLB4DVI',
-    },
-    {
-      title: 'Bringing page transitions to the web',
-      url: 'https://youtu.be/JCJUPJ_zDQ4',
-    },
-    {title: 'State of CSS', url: 'https://youtu.be/Xy9ZXRRgpLk'},
-    {
-      title: "What's new in Safari and WebKit",
-      url: 'https://developer.apple.com/videos/play/wwdc2022/10048',
-    },
-  ]
-tags: [googleIO,WWDC]
+  - title: "Interop 2022: browsers working together to improve the web for developers"
+    url: https://web.dev/interop-2022/
+  - title: State of CSS 2022
+    url: https://web.dev/state-of-css-2022
+  - title: What's new for the web platform
+    url: https://youtu.be/5b4YcLB4DVI
+  - title: Bringing page transitions to the web
+    url: https://youtu.be/JCJUPJ_zDQ4
+  - title: State of CSS
+    url: https://youtu.be/Xy9ZXRRgpLk
+  - title: What's new in Safari and WebKit
+    url: https://developer.apple.com/videos/play/wwdc2022/10048
+tags:
+  - googleIO
+  - WWDC
+fileSize: 66602951
 ---
 
 **Les slides utilisés pour l'épisode [https://slides.com/goodmotion/state-of-web-platform](https://slides.com/goodmotion/state-of-web-platform)**
@@ -54,7 +51,3 @@ Suite à la Google IO 2022, la conférence annuelle Google pour les développeur
 Nous avons visionné ces vidéos pour vous faire un résumé des principales fonctionnalités implémentées ou qui vont être implémentées dans les navigateurs.
 
 Bonne écoute !
-
-
-
-

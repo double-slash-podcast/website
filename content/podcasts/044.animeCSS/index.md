@@ -4,20 +4,24 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2983
+duration: 5967
 url: https://chtbl.com/track/79E812/double-slash.ams3.cdn.digitaloceanspaces.com/DS_044_animeCSS.mp3
 episodeNumber: 44
 episodeType: full
 explicit: false
 season: 1
 title: Les animations avec CSS
-subtitle: Comment faire des animations avec CSS et optimiser les performances de vos animations
+subtitle: Comment faire des animations avec CSS et optimiser les performances de
+  vos animations
 dsSlug: DS_044_animeCSS
 guid: b97a06a7fb0055a583db9b41f8fdcf7b
-description: Dans cet épisode, nous allons expliquer comment faire des animations avec CSS et comment optimiser les performances de vos animations
-videoLink : opO05lQNKYA
-tags: [animation,css]
-
+description: Dans cet épisode, nous allons expliquer comment faire des
+  animations avec CSS et comment optimiser les performances de vos animations
+videoLink: opO05lQNKYA
+tags:
+  - animation
+  - css
+fileSize: 71645219
 ---
 
 ## Animation avec CSS
@@ -249,7 +253,3 @@ Important pour ne pas imposer des mouvements sur l’écran à des personnes qui
 
 
 Bonne écoute !
-
-
-
-

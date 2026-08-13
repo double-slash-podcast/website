@@ -4,18 +4,26 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3885
+duration: 7770
 dsSlug: DS_029_nuxt
 episodeNumber: 29
 episodeType: full
 explicit: false
 season: 1
 title: Nuxt.JS avec Sébastien Chopin
-subtitle: Dans cet épisode, nous avons le plaisir de recevoir Sébastien Chopin pour parler du framework Nuxt.JS qui arrive dans sa 3e version prochainement.
+subtitle: Dans cet épisode, nous avons le plaisir de recevoir Sébastien Chopin
+  pour parler du framework Nuxt.JS qui arrive dans sa 3e version prochainement.
 guid: 24879b619ab1bc5eb3a7aabe2bbeb354
-description: Dans cet épisode, nous avons le plaisir de recevoir Sébastien Chopin pour parler du framework Nuxt.JS qui arrive dans sa 3e version prochainement Sébastien Chopin est le cocréateur de Nuxt.JS (l'autre personne est son frère ;)). Avec lui, nous revenons sur l’histoire de la création de Nuxt.JS. Comment, pourquoi il a été créé et l’évolution du framework.
-videoLink:
-tags: [nuxt,vue]
+description: Dans cet épisode, nous avons le plaisir de recevoir Sébastien
+  Chopin pour parler du framework Nuxt.JS qui arrive dans sa 3e version
+  prochainement Sébastien Chopin est le cocréateur de Nuxt.JS (l'autre personne
+  est son frère ;)). Avec lui, nous revenons sur l’histoire de la création de
+  Nuxt.JS. Comment, pourquoi il a été créé et l’évolution du framework.
+videoLink: null
+tags:
+  - nuxt
+  - vue
+fileSize: 93272026
 ---
 
 Comment aujourd’hui, la société **NuxtLab**, qui est derrière le projet open source, réussit à se financer pour continuer à développer et promouvoir **Nuxt.JS**.
@@ -49,7 +57,3 @@ La version 3 est une grosse refonte du framework qui nécessite un gros travail 
 - [NuxtLabs](https://nuxtlabs.com/)
 - [GitHub Nuxt](https://github.com/nuxt)
 - [GitHub NuxtLabs](https://github.com/nuxtlabs)
-
-
-
-

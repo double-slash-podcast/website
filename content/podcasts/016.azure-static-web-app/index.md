@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3401
+duration: 6803
 dsSlug: DS_016_swa
 episodeNumber: 16
 episodeType: full
 explicit: false
 season: 1
 title: Azure Static Web Apps avec Wassim Chegham
-subtitle:
+subtitle: null
 guid: e3a620e47a0c34dcf64503211d1b5ea6
-description: Dans cet épisode, nous allons parler du nouveau service de Microsoft avec notre invité, Wassim Chegham. Présenté en mai 2020, Azure static Web Apps permet d'héberger vos projets destinés à être compilés pour générer un site ou une web app statique.
-videoLink:
-tags: [azure,swa,devops]
+description: Dans cet épisode, nous allons parler du nouveau service de
+  Microsoft avec notre invité, Wassim Chegham. Présenté en mai 2020, Azure
+  static Web Apps permet d'héberger vos projets destinés à être compilés pour
+  générer un site ou une web app statique.
+videoLink: null
+tags:
+  - azure
+  - swa
+  - devops
+fileSize: 81665857
 ---
 
 Il suffit de créer votre projet avec un outil tel que Nuxt, Next, Gatsby ou Eleventy. Ensuite, vous l'hébergez sur GitHub. Puis, vous déclarez votre repository Github sur votre compte Azure et ce dernier, se chargera de compiler et publier automatiquement votre projet en ligne.
@@ -39,7 +46,3 @@ Wassim Chegham, **Senior Developer Advocate spécialisé JavaScript**
 - [Cours gratuit sur Node JS](https://docs.microsoft.com/fr-fr/learn/paths/build-javascript-applications-nodejs/?WT.mc_id=javascript-00000-wachegha)
 - [Static Web Apps Emulator](https://github.com/manekinekko/swa-emulator)
 - [Acheter un arbre sur Ecologi](https://ecologi.com/wassimchegham?r=5facf70521660a001d024120)
-
-
-
-

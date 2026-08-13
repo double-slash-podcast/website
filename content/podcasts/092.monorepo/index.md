@@ -13,9 +13,16 @@ dsSlug: DS_092_monorepo
 title: Monorepo ou pas ?
 subtitle: Partir sur un monorepo ou pas ?
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1721816710/episode/ART_92_ybrrpb.png
-description: Alex partage son expérience avec les monorepos, mettant en avant leur capacité à simplifier la gestion des dépendances et la synchronisation entre le différentes applications. Il aborde également la gestion des builds, et donne des conseils pour structurer et optimiser un monorepo.
-videoLink : vbTitHGcVDs
-tags: ["monorepo","git","devpos"]
+description: Alex partage son expérience avec les monorepos, mettant en avant
+  leur capacité à simplifier la gestion des dépendances et la synchronisation
+  entre le différentes applications. Il aborde également la gestion des builds,
+  et donne des conseils pour structurer et optimiser un monorepo.
+videoLink: vbTitHGcVDs
+tags:
+  - monorepo
+  - git
+  - devpos
+fileSize: 54817017
 ---
 
 - Alex partage son expérience récente sur l'utilisation d'un monorepo dans un gros projet.
@@ -29,7 +36,3 @@ tags: ["monorepo","git","devpos"]
 - Conclusion sur les avantages du monorepo pour améliorer la collaboration entre développeurs et simplifier la gestion des projets de développement logiciel.
 
 Bonne écoute !
-
-
-
-

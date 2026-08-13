@@ -13,10 +13,19 @@ dsSlug: DS_090_news-jul-24
 title: Les news web dev pour juillet 2024
 subtitle: Épisode new web développement pour juillet 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1720611285/episode/ART_90_weynbo.png
-description: Dans cet épisode de news pour juillet 2024, nous allons évoquer des gestionnaires de packages, des systèmes pour contrôler son site, des outils de développement, le futur d'Astro et des articles.
-videoLink : -DgCoSIUWeg
-tags: ["tailwindcss", "devtools", "pkg", "python", "github"]
+description: Dans cet épisode de news pour juillet 2024, nous allons évoquer des
+  gestionnaires de packages, des systèmes pour contrôler son site, des outils de
+  développement, le futur d'Astro et des articles.
+videoLink: -DgCoSIUWeg
+tags:
+  - tailwindcss
+  - devtools
+  - pkg
+  - python
+  - github
+fileSize: 69168900
 ---
+
 ## PKG PR
 
 Installer des dépendances en sélectionnant le commit 🔥
@@ -91,7 +100,3 @@ Server Island = HTML + partial server part
 
 
 Bonne écoute !
-
-
-
-

@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2611
+duration: 5223
 episodeNumber: 51
 episodeType: full
 explicit: false
@@ -13,49 +13,35 @@ title: Docusaurus et React Hebdo
 subtitle: Le projet Docusaurus et la newsletter React Hebdo avec Sébastien Lorber
 dsSlug: DS_051_docusaurus
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1667301483/episode/51_EpArtwork_ndarop.png
-description: Nous recevons Sébastien Lorber, qui est mandaté par la société Meta (FaceBook) sur le projet docusaurus. Sébastien gère aussi une newsletter hebdomadaire sur React et son écosystème.
-videoLink : xzB3TGeENEU
+description: Nous recevons Sébastien Lorber, qui est mandaté par la société Meta
+  (FaceBook) sur le projet docusaurus. Sébastien gère aussi une newsletter
+  hebdomadaire sur React et son écosystème.
+videoLink: xzB3TGeENEU
 links:
-  [
-    {
-      title: '@sebastienlorber',
-      url: 'https://twitter.com/sebastienlorber',
-    },
-    {
-      title: 'Linkedin',
-      url: 'https://www.linkedin.com/in/sebastienlorber',
-    },
-    {
-      title: 'https://sebastienlorber.com',
-      url: 'https://sebastienlorber.com',
-    },
-    {
-      title: 'Reacthebdo',
-      url: 'http://reacthebdo.fr',
-    },
-    {
-      title: 'ThisWeekInReact',
-      url: 'https://thisweekinreact.com',
-    },
-    {
-      title: 'Docusaurus',
-      url: 'https://docusaurus.io/',
-    },
-    {
-      title: 'Github Docusaurus',
-      url: 'https://github.com/facebook/docusaurus',
-    },
-    {
-      title: 'Showcase Docusaurus',
-      url: 'https://docusaurus.io/showcase',
-    },
-    {
-      title: 'Tuto Docusaurus',
-      url: 'https://tutorial.docusaurus.io/',
-    },
-  ]
-tags: [docusaurus,documentation]
+  - title: "@sebastienlorber"
+    url: https://twitter.com/sebastienlorber
+  - title: Linkedin
+    url: https://www.linkedin.com/in/sebastienlorber
+  - title: https://sebastienlorber.com
+    url: https://sebastienlorber.com
+  - title: Reacthebdo
+    url: http://reacthebdo.fr
+  - title: ThisWeekInReact
+    url: https://thisweekinreact.com
+  - title: Docusaurus
+    url: https://docusaurus.io/
+  - title: Github Docusaurus
+    url: https://github.com/facebook/docusaurus
+  - title: Showcase Docusaurus
+    url: https://docusaurus.io/showcase
+  - title: Tuto Docusaurus
+    url: https://tutorial.docusaurus.io/
+tags:
+  - docusaurus
+  - documentation
+fileSize: 36565607
 ---
+
 ## Docusaurus
 
 La documentation est une chose primordiale dans le succès d'un projet open source (ou pas)
@@ -92,7 +78,3 @@ Toutes les stats de la newsletter : [https://www.indiehackers.com/product/frenc
 - [@sebastienlorber](https://twitter.com/sebastienlorber)
 
 Bonne écoute !
-
-
-
-

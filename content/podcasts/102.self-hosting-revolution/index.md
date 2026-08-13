@@ -12,8 +12,15 @@ dsSlug: DS_102_kamal
 title: Self Hosting et Kamal 2 avec Guillaume Briday
 subtitle: Épisode sur Kamal avec Guillaume Briday
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1733212730/episode/ART_102_c4rpyq.png
-description: Dans cet épisode, nous avons le plaisir d'accueillir Guillaume Briday, développeur Ruby on Rails expérimenté. Ensemble, nous allons revenir sur le self-hosting. Nous comparerons les fournisseurs tels que Vercel et Netlify par rapport à un retour sur son propre serveur. Nous allons aussi parler de Kamal, un outil pour faciliter la gestion de vos applications sur vos serveurs.
+description: Dans cet épisode, nous avons le plaisir d'accueillir Guillaume
+  Briday, développeur Ruby on Rails expérimenté. Ensemble, nous allons revenir
+  sur le self-hosting. Nous comparerons les fournisseurs tels que Vercel et
+  Netlify par rapport à un retour sur son propre serveur. Nous allons aussi
+  parler de Kamal, un outil pour faciliter la gestion de vos applications sur
+  vos serveurs.
 videoLink: AtqSucD8WlM
+duration: 3699
+fileSize: 59191378
 ---
 
 ## Liens utiles :
@@ -35,7 +42,3 @@ videoLink: AtqSucD8WlM
 
 
 Bonne écoute !
-
-
-
-

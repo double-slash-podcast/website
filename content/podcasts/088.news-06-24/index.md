@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: xxxxx
+duration: 3294
 episodeNumber: 88
 episodeType: full
 explicit: false
@@ -13,11 +13,20 @@ dsSlug: DS_088_newsJuin24
 title: Les news web dev pour Juin 2024
 subtitle: Épisode new web développement pour juin 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1718790912/episode/ART_88_mok0yn.png
-description: Dans cet épisode de news pour juin 2024, nous allons évoquer un éditeur boosté à l'IA, une alternative à copilot, un tout petit paas, les nouveautés de Safari 18, un peu de CSS et 2 utilisations insolites de SQLite.
-videoLink : H8ULF_TUf9Y
+description: Dans cet épisode de news pour juin 2024, nous allons évoquer un
+  éditeur boosté à l'IA, une alternative à copilot, un tout petit paas, les
+  nouveautés de Safari 18, un peu de CSS et 2 utilisations insolites de SQLite.
+videoLink: H8ULF_TUf9Y
 links: []
-tags: ["astro", "cursor", "safari", "tailwind", "nuxt"]
+tags:
+  - astro
+  - cursor
+  - safari
+  - tailwind
+  - nuxt
+fileSize: 52705070
 ---
+
 ### Cursor, un IDE survitaminé à l’IA, innovation ou bullshit artificiel ?
 
 https://cursor.sh/
@@ -130,7 +139,3 @@ https://twitter.com/jasonleowsg/status/1801182816740520227?s=61&t=oJp8skN0Iydkcw
 
 
 Bonne écoute !
-
-
-
-

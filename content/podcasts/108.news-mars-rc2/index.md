@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3697
 episodeNumber: 108
 episodeType: full
 explicit: false
@@ -13,9 +13,24 @@ dsSlug: DS_108_news-mars-rc2
 title: Les news web dev pour mars 2025 RC2
 subtitle: Épisode news web développement pour mars 2025 RC2
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1742969025/episode/ART_108_r9k2ed.png
-description: Dans ce deuxième épisode de news pour mars 2025, nous évoquons la réécriture de TypeScript en Go, Electric SQL dans sa version 1, l'arrivée de Lynx JS pour le développement cross-platform, Nuxt v3.16 avec l'hydratation différée, et PGLite qui vous permet d'utiliser Postgres dans le navigateur. Nous aborderons aussi un outil pour créer des Grids avec Tailwind, ainsi qu'un article comparatif entre Next.js et TanStack. Enfin, dans la rubrique IA, nous vous présentons la montée en puissance du MCP, Cline Bot AI, Triplex (2D/3D), la Meilisearch Launch Week, le Vercel AI SDK v4.2, et les toutes nouvelles réponses des APIs d'OpenAI.
+description: Dans ce deuxième épisode de news pour mars 2025, nous évoquons la
+  réécriture de TypeScript en Go, Electric SQL dans sa version 1, l'arrivée de
+  Lynx JS pour le développement cross-platform, Nuxt v3.16 avec l'hydratation
+  différée, et PGLite qui vous permet d'utiliser Postgres dans le navigateur.
+  Nous aborderons aussi un outil pour créer des Grids avec Tailwind, ainsi qu'un
+  article comparatif entre Next.js et TanStack. Enfin, dans la rubrique IA, nous
+  vous présentons la montée en puissance du MCP, Cline Bot AI, Triplex (2D/3D),
+  la Meilisearch Launch Week, le Vercel AI SDK v4.2, et les toutes nouvelles
+  réponses des APIs d'OpenAI.
 videoLink: W2sss9uykoQ
-tags: ['tailwindCSS', 'Typescript', 'LynxJS', 'NuxtJS', 'Postgres', 'MCP']
+tags:
+  - tailwindCSS
+  - Typescript
+  - LynxJS
+  - NuxtJS
+  - Postgres
+  - MCP
+fileSize: 59152926
 ---
 
 **Important ! Patch Next.js CVE-2025-29927**
@@ -105,7 +120,3 @@ Exemple : https://gist.githubusercontent.com/ipatate/74bc54713102e98e4967af7944d
 https://openai.com/index/new-tools-for-building-agents/
 
 Bonne écoute !
-
-
-
-

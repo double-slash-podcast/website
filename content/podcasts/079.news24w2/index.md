@@ -13,10 +13,21 @@ dsSlug: DS_079_news24w2
 title: Les News Web Dev janvier 2024 numéro 2
 subtitle: Épisode news numéro 2 pour janvier 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1704833013/episode/ART_79_bhk2bt.png
-description: Épisode 2 de l'année 2024. Nous évoquons un outil de transformation bien pratique, un générateur d'interfaces pour Vue en mode IA, une web app pour tester les capacités PWA de votre navigateur, les nouveautés NHOST et le classement des projets Github 2023.
-videoLink : EQd8lZQOUow
-tags: [express,vue,copilot,nhost,pwa, devtools]
+description: Épisode 2 de l'année 2024. Nous évoquons un outil de transformation
+  bien pratique, un générateur d'interfaces pour Vue en mode IA, une web app
+  pour tester les capacités PWA de votre navigateur, les nouveautés NHOST et le
+  classement des projets Github 2023.
+videoLink: EQd8lZQOUow
+tags:
+  - express
+  - vue
+  - copilot
+  - nhost
+  - pwa
+  - devtools
+fileSize: 42935274
 ---
+
 Articles sur les alternatives à Express js : <https://double-slash.dev/articles/express-js-alternative/>
 
 
@@ -51,7 +62,3 @@ Les projets remarqués :
 
 
 Bonne écoute !
-
-
-
-

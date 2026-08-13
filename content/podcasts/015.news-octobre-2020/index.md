@@ -4,18 +4,28 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3012
+duration: 6024
 dsSlug: DS_015_newsOCT
 episodeNumber: 15
 episodeType: full
 explicit: false
 season: 1
 title: Épisode news avec React 17, Webpack 5, NextJS 10, Gatsby...
-subtitle: Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique.
+subtitle: Nous allons revenir sur les dernières sorties. Sur le passage de la
+  documentation web MDN en mode JAMStack. Puis parler d'un article comparatif
+  sur les générateurs de site statique.
 guid: 085209868df93d54ab3b514a48b426d8
-description: "Un épisode spécial news. Nous allons revenir sur les dernières sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis parler d'un article comparatif sur les générateurs de site statique : Hugo, Eleventy, Jekyll, Gatsby, Next, Nuxt."
-videoLink:
-tags: [webpack,react,next,angular]
+description: "Un épisode spécial news. Nous allons revenir sur les dernières
+  sorties. Sur le passage de la documentation web MDN en mode JAMStack. Puis
+  parler d'un article comparatif sur les générateurs de site statique : Hugo,
+  Eleventy, Jekyll, Gatsby, Next, Nuxt."
+videoLink: null
+tags:
+  - webpack
+  - react
+  - next
+  - angular
+fileSize: 72316189
 ---
 
 ## Webpack 5
@@ -53,7 +63,3 @@ tags: [webpack,react,next,angular]
 
 - [article fr](https://jamstatic.fr/2020/10/31/comparatif-performance-generateurs-de-site-statique/)
 - [article original](https://css-tricks.com/comparing-static-site-generator-build-times/)
-
-
-
-

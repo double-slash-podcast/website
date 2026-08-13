@@ -4,18 +4,27 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2600
+duration: 5192
 dsSlug: DS_010_pair_coding
 episodeNumber: 10
 episodeType: full
 explicit: false
 season: 1
 title: Live Share pour Visual Studio Code et des news
-subtitle: Un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance. Nous revenons sur quelques actualités concernant les outils web diffusés durant l'été.
+subtitle: Un retour sur l'utilisation de l'extension Live Share pour Visual
+  Studio Code. Une extension qui permet de faire du pair programming à distance.
+  Nous revenons sur quelques actualités concernant les outils web diffusés
+  durant l'été.
 guid: 4a41f9e18d40f062964c77e641140c76
-description: Dans cet épisode, nous faisons un retour sur l'utilisation de l'extension Live Share pour Visual Studio Code. Une extension qui permet de faire du pair programming à distance. Nous revenons sur quelques actualités concernant les outils web diffusés durant l'été.
-videoLink:
-tags: [devtools,ide]
+description: Dans cet épisode, nous faisons un retour sur l'utilisation de
+  l'extension Live Share pour Visual Studio Code. Une extension qui permet de
+  faire du pair programming à distance. Nous revenons sur quelques actualités
+  concernant les outils web diffusés durant l'été.
+videoLink: null
+tags:
+  - devtools
+  - ide
+fileSize: 62333031
 ---
 
 Notamment la sortie de WordPress 5.5, les évolutions de Next et Nuxt sur la génération de site statique. Petite découverte également, avec Stormkit, un service d'hébergement équivalent à Netlify.
@@ -55,7 +64,3 @@ Une mise à jour du contenu lors du rendu via un paramètre (revalidate: 1). Plu
 Un service équivalent à Netlify pour déployer vos sites statique ou SPA automatiquement. Par contre, c'est un service européen (Suisse). Ils utilisent AWS avec des serveurs à Francfort.
 
 [Stormkit](https://www.stormkit.io/)
-
-
-
-
