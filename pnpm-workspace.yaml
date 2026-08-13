@@ -1,3 +1,8 @@
+# Required by pnpm 9 (Coolify/Nixpacks). pnpm 10+ allows config-only
+# workspace files; pnpm 9 fails with "packages field missing or empty".
+packages:
+  - '.'
+
 allowBuilds:
   '@parcel/watcher': true
   esbuild: true
