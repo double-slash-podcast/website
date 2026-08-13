@@ -2,7 +2,7 @@ import {globSync, readFileSync} from 'node:fs';
 import {parseFrontMatter} from 'remark-mdc';
 import {isValidDuration, isValidFileSize} from './mediaMeta';
 
-const PODCASTS_GLOB = 'content/podcasts/**/index.md';
+const PODCASTS_GLOB = 'content/podcasts/**/*.md';
 
 type EpisodeFrontmatter = Record<string, unknown> & {
   dsSlug?: string;

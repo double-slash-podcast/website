@@ -8,7 +8,7 @@ import {
 } from '../app/utils/mediaMeta';
 import estimateMP3DurationAxios from '../app/helpers/duration/estimateMP3DurationAxios';
 
-const PODCASTS_GLOB = 'content/podcasts/**/index.md';
+const PODCASTS_GLOB = 'content/podcasts/**/*.md';
 const CONCURRENCY = 4;
 
 type CliOptions = {
