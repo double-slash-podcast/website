@@ -12,10 +12,19 @@ dsSlug: DS_114_news-juin25
 title: Les news web dev et IA pour juin 2025 RC1
 subtitle: Épisode news web développement et IA pour juin 2025 - RC2
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1750239986/episode/ART_114_cqtlil.png
-description: Nous évoquons Cursor qui passe en V1, NightWatch pour surveiller vos applications Laravel, PHP qui tourne dans Node.js, Prestashop 9 avec une nouvelle Admin API, un nouveau navigateur qui intègre l'IA et évidemment les nouvelles dans le monde de l'IA.
-videoLink : yfDlXHHXmY8
-tags: ['nuxt', 'cursor', 'Dia']
+description: Nous évoquons Cursor qui passe en V1, NightWatch pour surveiller
+  vos applications Laravel, PHP qui tourne dans Node.js, Prestashop 9 avec une
+  nouvelle Admin API, un nouveau navigateur qui intègre l'IA et évidemment les
+  nouvelles dans le monde de l'IA.
+videoLink: yfDlXHHXmY8
+tags:
+  - nuxt
+  - cursor
+  - Dia
+duration: 4122
+fileSize: 66064692
 ---
+
 ## Nuxt 4 alpha
 
 https://nuxt.com/blog/roadmap-v4
@@ -95,7 +104,3 @@ https://aiagentsdirectory.com/landscape
 
 
 Bonne écoute !
-
-
-
-

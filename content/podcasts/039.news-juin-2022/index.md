@@ -4,18 +4,26 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2962
+duration: 5923
 dsSlug: DS_039_news06_22
 episodeNumber: 39
 episodeType: full
 explicit: false
 season: 1
 title: Spécial news - Juin 2022
-subtitle: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
+subtitle: Un passage en revue des news et releases de nos outils et technologies
+  de développement web des dernières semaines
 guid: 0f919ee6ee5c883b1253f2c584915dc9
-description: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
+description: Un passage en revue des news et releases de nos outils et
+  technologies de développement web des dernières semaines
 videoLink: eTBTWDVQ8EQ
-tags: [tauri, cypress,fastify,deno,wordpress]
+tags:
+  - tauri
+  - cypress
+  - fastify
+  - deno
+  - wordpress
+fileSize: 71247983
 ---
 
 #### Les news évoquées durant l'épisode :
@@ -33,7 +41,3 @@ tags: [tauri, cypress,fastify,deno,wordpress]
 - 45:53 🎉🎉 IE11 n'est plus ! 🎉🎉
 
 Bonne écoute !
-
-
-
-

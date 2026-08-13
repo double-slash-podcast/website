@@ -4,27 +4,28 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3070
+duration: 6140
 episodeNumber: 43
 episodeType: full
 explicit: false
 season: 1
 title: Three.js avec Bruno Simon
-subtitle: Bruno Simon va nous parler de Three.JS. Une bibliothèque JavaScript pour créer des animations 3D.
+subtitle: Bruno Simon va nous parler de Three.JS. Une bibliothèque JavaScript
+  pour créer des animations 3D.
 dsSlug: DS_043_threejs
 guid: 2568ae1e37264125f779764907d1c1b2
-description: Un épisode avec un invité, Bruno Simon, qui va nous parler de Three.JS. Une bibliothèque JavaScript pour créer des animations 3D.
-videoLink : _3yR4p-x7QQ
+description: Un épisode avec un invité, Bruno Simon, qui va nous parler de
+  Three.JS. Une bibliothèque JavaScript pour créer des animations 3D.
+videoLink: _3yR4p-x7QQ
 links:
-  [
-    {
-      title: 'https://threejs-journey.com',
-      url: 'https://threejs-journey.com'
-    },
-  ]
-tags: [animation,threejs]
-
+  - title: https://threejs-journey.com
+    url: https://threejs-journey.com
+tags:
+  - animation
+  - threejs
+fileSize: 73724428
 ---
+
 ## Three.js
 
 Three.js est une librairie JavaScript pour créer des animations 3D dans un navigateur web.
@@ -45,7 +46,3 @@ Pour retrouver Bruno Simon :
 
 
 Bonne écoute !
-
-
-
-

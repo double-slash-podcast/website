@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2629
+duration: 5257
 episodeNumber: 42
 episodeType: full
 explicit: false
@@ -13,31 +13,24 @@ title: Lottie, une solution pour les animations
 subtitle: Lottie, une solution pour les animations svg avancées [Animation Serie]
 dsSlug: DS_042_lottie
 guid: 8216e840e11ff0c76bc7207324afc1fa
-description: Cet épisode fait partie d'une série de quelques épisodes dédiés à l'animation. Nous recevons Charly Martin pour parler de Lottie, une solution pour créer des animations SVG très avancées.
-videoLink : p0jcwBJOOpY
+description: Cet épisode fait partie d'une série de quelques épisodes dédiés à
+  l'animation. Nous recevons Charly Martin pour parler de Lottie, une solution
+  pour créer des animations SVG très avancées.
+videoLink: p0jcwBJOOpY
 links:
-  [
-    {
-      title: 'https://airbnb.io/lottie/#/',
-      url: 'https://airbnb.io/lottie/#/',
-    },
-    {
-      title: 'https://github.com/airbnb/lottie-web',
-      url: 'https://github.com/airbnb/lottie-web',
-    },
-    {
-      title: 'https://lottiefiles.com/',
-      url: 'https://lottiefiles.com/',
-    },
-    {
-      title: 'https://lottielab.com/',
-      url: 'https://lottielab.com/',
-    }
-  ]
-tags: [animation,lottie]
-
+  - title: https://airbnb.io/lottie/#/
+    url: https://airbnb.io/lottie/#/
+  - title: https://github.com/airbnb/lottie-web
+    url: https://github.com/airbnb/lottie-web
+  - title: https://lottiefiles.com/
+    url: https://lottiefiles.com/
+  - title: https://lottielab.com/
+    url: https://lottielab.com/
+tags:
+  - animation
+  - lottie
+fileSize: 63120991
 ---
-
 
 ## Lottie
 
@@ -58,7 +51,3 @@ Par contre, si vous avez un Motion Designer dans votre équipe, vous allez pouvo
 - [https://charlymartin.me/](https://charlymartin.me/)
 
 Bonne écoute !
-
-
-
-

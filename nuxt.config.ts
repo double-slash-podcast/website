@@ -36,8 +36,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  sourcemap: false,
   vite: {
     plugins: [tailwindcss()],
+    build: {
+      sourcemap: false,
+    },
   },
   css: ['./app/assets/main.css'],
   image: {
@@ -69,8 +73,6 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     github_auth: process.env.GITHUB_AUTH,
-    REDIS_URL: process.env.REDIS_URL,
-    REDIS_TOKEN: process.env.REDIS_TOKEN,
     public: {
       numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',

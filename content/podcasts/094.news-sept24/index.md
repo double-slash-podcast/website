@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 9999
+duration: 3336
 episodeNumber: 94
 episodeType: full
 explicit: false
@@ -13,10 +13,15 @@ dsSlug: DS_094_news-sept24
 title: Les news web dev pour septembre 2024
 subtitle: Épisode new web développement pour septembre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1725614993/episode/ART_94_t1vybx.png
-description: Nouvel épisode de news pour la rentrée 2024. Nous parlons de l'IA (comme d'habitude), de la Laracon US avec de nombreuses nouveautés sur Laravel et son écosystème. Nous abordons également les dépendances des frameworks JavaScript, ElasticSearch, Vercel et NuxtScript.
-videoLink : NVhq_TvsjmA
+description: Nouvel épisode de news pour la rentrée 2024. Nous parlons de l'IA
+  (comme d'habitude), de la Laracon US avec de nombreuses nouveautés sur Laravel
+  et son écosystème. Nous abordons également les dépendances des frameworks
+  JavaScript, ElasticSearch, Vercel et NuxtScript.
+videoLink: NVhq_TvsjmA
 links: []
+fileSize: 53377148
 ---
+
 ## IA - devs
 
 Supermaven, IA pour le dev.
@@ -103,7 +108,3 @@ Il faut aller dans le chat https://v0.dev/chat
 
 
 Bonne écoute !
-
-
-
-

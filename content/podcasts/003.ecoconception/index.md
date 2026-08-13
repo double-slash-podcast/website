@@ -1,21 +1,26 @@
 ---
 title: Écoconception et écologie
-subtitle: Un point de l'impact de notre utilisation du numérique sur le réchauffement climatique et de l'écoconception
+subtitle: Un point de l'impact de notre utilisation du numérique sur le
+  réchauffement climatique et de l'écoconception
 publicationDate: 2020-04-21
 status: published
 dsSlug: DS_002_eco_conception
 author: Double slash
-duration: 4161
+duration: 8310
 season: 1
-episodeNumber: 03
+episodeNumber: 3
 episodeType: full
 explicit: false
 categories:
   - Technology
 guid: 466f44b0c90f560262f2bde17a2f405a
-description: Dans ce podcast, nous parlons de l'impact de notre utilisation du numérique sur le réchauffement climatique et d'écoconception.
-videoLink:
-tags: [ecoconception,green]
+description: Dans ce podcast, nous parlons de l'impact de notre utilisation du
+  numérique sur le réchauffement climatique et d'écoconception.
+videoLink: null
+tags:
+  - ecoconception
+  - green
+fileSize: 99733209
 ---
 
 ## Invité dans ce podcast :
@@ -42,7 +47,3 @@ tags: [ecoconception,green]
 
 - "Combattre la complexité" - Rémi Guyot [https://www.youtube.com/watch?v=4lfW48_oDxo](https://www.youtube.com/watch?v=4lfW48_oDxo)
 - Ecologie et numérique: [https://www.youtube.com/watch?v=zmE0X2KKRjc&list=PL4piaFbHOpRc6jtB450EOo-6cc91sUzzz&index=2&t=0s](https://www.youtube.com/watch?v=zmE0X2KKRjc&list=PL4piaFbHOpRc6jtB450EOo-6cc91sUzzz&index=2&t=0s)
-
-
-
-

@@ -1,4 +1,5 @@
 import {defineTransformer} from '@nuxt/content';
+import {parseMediaNumber} from '~/utils/mediaMeta';
 
 export default defineTransformer({
   name: 'podcast',
@@ -14,6 +15,8 @@ export default defineTransformer({
           ? Number(file.episodeNumber)
           : undefined,
       season: file.season !== undefined ? Number(file.season) : undefined,
+      duration: parseMediaNumber(file.duration),
+      fileSize: parseMediaNumber(file.fileSize),
     };
   },
 });

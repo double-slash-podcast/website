@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 3548
 episodeNumber: 127
 episodeType: full
 explicit: false
@@ -13,10 +13,24 @@ dsSlug: DS_127_news-fev26
 title: News Février 2026, du WebMCP, des agents spammeurs et du Markdown.
 subtitle: Les news sur le développement web et l'IA pour février 2026 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1771363427/ART_127_fidhxe.png
-description: Nous évoquons l'arrivée des WebMCP, l'option Cloudflare qui permet de retourner du markdown sur une requête, NativePHP qui devient open-source et gratuit, un jeu éducatif pour les enfants, TransformerJS qui arrive en V4, les projets open-source qui se font spammer et la perte de confiance des marchés envers les SaaS.
-videoLink : Uwq-TIg580Q
-tags: ['cloudflare', 'ui', 'php', 'nativephp', 'picoclaw', 'transformerjs', 'souverainete', 'webmcp', ]
+description: Nous évoquons l'arrivée des WebMCP, l'option Cloudflare qui permet
+  de retourner du markdown sur une requête, NativePHP qui devient open-source et
+  gratuit, un jeu éducatif pour les enfants, TransformerJS qui arrive en V4, les
+  projets open-source qui se font spammer et la perte de confiance des marchés
+  envers les SaaS.
+videoLink: Uwq-TIg580Q
+tags:
+  - cloudflare
+  - ui
+  - php
+  - nativephp
+  - picoclaw
+  - transformerjs
+  - souverainete
+  - webmcp
+fileSize: 56890605
 ---
+
 ## Cloudflare markdown for agent
 
 - https://developers.cloudflare.com/fundamentals/reference/markdown-for-agents/

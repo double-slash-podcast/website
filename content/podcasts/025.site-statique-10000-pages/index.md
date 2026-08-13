@@ -4,18 +4,23 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2339
+duration: 4678
 dsSlug: DS_025_static10k
 episodeNumber: 25
 episodeType: full
 explicit: false
 season: 1
 title: Un site statique de 11000 pages
-subtitle: Un retour d'expérience sur un projet de site statique qui doit comporter un grand nombre de pages.
+subtitle: Un retour d'expérience sur un projet de site statique qui doit
+  comporter un grand nombre de pages.
 guid: 2cd0208a7d3c92a5b087e46c77caf5f8
-description: Dans cet épisode, nous allons parler d'un retour d'expérience sur un projet de site statique qui doit comporter un grand nombre de pages.
-videoLink:
-tags: [next,static]
+description: Dans cet épisode, nous allons parler d'un retour d'expérience sur
+  un projet de site statique qui doit comporter un grand nombre de pages.
+videoLink: null
+tags:
+  - next
+  - static
+fileSize: 56164636
 ---
 
 ## Le context
@@ -32,7 +37,3 @@ Cet épisode fait suite à un article publié sur le site [jamstatic.fr](https:/
 - [https://craftcms.com/](https://craftcms.com/)
 - [https://nextjs.org/](https://nextjs.org/)
 - [https://nuxtjs.org/](https://nuxtjs.org/)
-
-
-
-

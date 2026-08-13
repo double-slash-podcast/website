@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2549
+duration: 5098
 episodeNumber: 49
 episodeType: full
 explicit: false
@@ -13,10 +13,17 @@ title: Les News pour octobre 2022
 subtitle: Un épisode en format "news" pour le mois d'octobre 2022
 dsSlug: DS_049_news10_22
 guid: d8ed6a024ed27ed3ea1b218ff3714763
-episodeArtwork:
-description: Un épisode en format "news". Nous revenons sur les différentes news des dernières semaines que nous avons retenues
-videoLink : jJT14P0u5E8
-tags: [php, css,js,typescript,devops]
+episodeArtwork: null
+description: Un épisode en format "news". Nous revenons sur les différentes news
+  des dernières semaines que nous avons retenues
+videoLink: jJT14P0u5E8
+tags:
+  - php
+  - css
+  - js
+  - typescript
+  - devops
+fileSize: 35686825
 ---
 
 ## TypeScript fête ses 10 ans
@@ -78,7 +85,3 @@ The Universal UI Library
 
 - [https://jsoncrack.com/](https://jsoncrack.com/)
 - [https://jsonhero.io/](https://jsonhero.io/)
-
-
-
-

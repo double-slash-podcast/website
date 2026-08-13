@@ -4,18 +4,37 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 2719
 episodeNumber: 121
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_121_news-oct25
-title: Les news Web Dev d’octobre 2025. Adonis, Laravel, React Compiler, Vite+ et bien plus encore !
-subtitle: Les news Web Dev d’octobre 2025. Adonis, Laravel, React Compiler, Vite+ et bien plus encore !
+title: Les news Web Dev d’octobre 2025. Adonis, Laravel, React Compiler, Vite+
+  et bien plus encore !
+subtitle: Les news Web Dev d’octobre 2025. Adonis, Laravel, React Compiler,
+  Vite+ et bien plus encore !
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1760531345/episode/ART_121_f62ytf.png
-description: Les 30 ans du premier navigateur qui embarquait JavaScript, les 10 ans d'Adonis, Craft CMS qui passe sur Laravel, la sortie de React Compiler V1, les annonces sur Vite+, Cursor CLI et GitHub CLI pour répondre à Claude CLI. Et comment vérifier les packages npm avant de les installer. Bonne écoute !
-videoLink : rv5ljnVOWiE
-tags: ['react', 'vite', 'laravel', 'adonis', 'craft cms', 'mcp', 'wordpress', 'javascript', 'typescript', 'nodejs', 'cloudflare', 'github', 'cursor']
+description: Les 30 ans du premier navigateur qui embarquait JavaScript, les 10
+  ans d'Adonis, Craft CMS qui passe sur Laravel, la sortie de React Compiler V1,
+  les annonces sur Vite+, Cursor CLI et GitHub CLI pour répondre à Claude CLI.
+  Et comment vérifier les packages npm avant de les installer. Bonne écoute !
+videoLink: rv5ljnVOWiE
+tags:
+  - react
+  - vite
+  - laravel
+  - adonis
+  - craft cms
+  - mcp
+  - wordpress
+  - javascript
+  - typescript
+  - nodejs
+  - cloudflare
+  - github
+  - cursor
+fileSize: 43617219
 ---
 
 ## Premier navigateur avec JS, 30 ans déjà !
@@ -125,7 +144,3 @@ Bloquer les paquets malveillants *au moment de l’installation*, sur la machine
 https://socket.dev/blog/introducing-socket-firewall
 
 Bonne écoute !
-
-
-
-

@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4165
+duration: 8365
 episodeNumber: 48
 episodeType: full
 explicit: false
@@ -13,9 +13,13 @@ title: SEO 2022 avec Dan Bernier
 subtitle: Faire du SEO en 2022 avec Dan Bernier
 dsSlug: DS_048_SE0_22
 guid: b27962835b47b85a2bb5ed7d1b066a38
-description: Un épisode avec un invité, Dan Bernier, consultant SEO Inéolab. Avec lui, nous allons parler de SEO et comprendre comment rendre son site indexable et référencé dans les résultats de recherche.
-videoLink : rnJgwpqcB7M
-tags: [seo]
+description: Un épisode avec un invité, Dan Bernier, consultant SEO Inéolab.
+  Avec lui, nous allons parler de SEO et comprendre comment rendre son site
+  indexable et référencé dans les résultats de recherche.
+videoLink: rnJgwpqcB7M
+tags:
+  - seo
+fileSize: 100385816
 ---
 
 Dans cet épisode nous allons parler de SEO. Dan Bernier va nous expliquer comment bien faire du SEO en 2022.
@@ -59,7 +63,3 @@ Chaque pilier a son importance. Avec Dan, nous allons voir les principaux pilier
 - Livre pour Wordpress : [https://www.eyrolles.com/Informatique/Livre/optimiser-son-referencement-wordpress-9782212679878/](https://www.eyrolles.com/Informatique/Livre/optimiser-son-referencement-wordpress-9782212679878/)
 - Article [https://blog-fr.orson.io/referencer-son-site-seo/32-experts-seo-livrent-3-techniques-de-referencement-2017](https://blog-fr.orson.io/referencer-son-site-seo/32-experts-seo-livrent-3-techniques-de-referencement-2017)
 - Article [https://seosly.com/blog/seo-audit/](https://seosly.com/blog/seo-audit/)
-
-
-
-

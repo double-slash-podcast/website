@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3380
 episodeNumber: 111
 episodeType: full
 explicit: false
@@ -13,9 +13,20 @@ dsSlug: DS_111_news_mai25
 title: Les news web dev et IA pour mai 2025
 subtitle: Épisode news web développement et IA pour mai 2025
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1747204915/ART_111_i73lbc.png
-description: Dans cet épisode de news pour mai 2025, nous évoquons Redis qui revient à une licence open-source, GSAP qui devient totalement gratuit, Figma Site, le nouveau visual editor de Directus, quelques bibliothèques de composants et des livres blancs sur l'IA.
-videoLink : cmbkSzWsUFE
-tags: ['gsap', 'redis', 'stroybook', 'bootstrap', 'directus', 'figma', 'openai']
+description: Dans cet épisode de news pour mai 2025, nous évoquons Redis qui
+  revient à une licence open-source, GSAP qui devient totalement gratuit, Figma
+  Site, le nouveau visual editor de Directus, quelques bibliothèques de
+  composants et des livres blancs sur l'IA.
+videoLink: cmbkSzWsUFE
+tags:
+  - gsap
+  - redis
+  - stroybook
+  - bootstrap
+  - directus
+  - figma
+  - openai
+fileSize: 54206023
 ---
 
 ## GSAP Free
@@ -93,7 +104,3 @@ https://www.kaggle.com/whitepaper-prompt-engineering
 https://cdn.openai.com/business-guides-and-resources/a-practical-guide-to-building-agents.pdf
 
 Bonne écoute !
-
-
-
-

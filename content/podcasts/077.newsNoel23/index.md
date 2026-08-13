@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 1294
+duration: 2589
 episodeNumber: 77
 episodeType: full
 explicit: false
@@ -13,9 +13,17 @@ dsSlug: DS_077_newsNoel23
 title: Les News Web Dev pour Noël 2023
 subtitle: Épisode de Noël 2023 spécial news.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1703095706/episode/ART_77_newsnoel23_dltycu.png
-description: Un épisode de news pour Noël 2023. Nous évoquons dans cet épisode plus court que d'habitude. La version 3.4 de Tailwind CSS. Storybook qui prend en charge les RSC dans sa version 8 alpha. Tastejs, une app développée sous différents frameworks. Enhance, un framework méconnu tout mignon ! Et json Hero, un outil pour visualiser les données JSON.
-videoLink : ezoC4vessZs
-tags: [storybook,tailwindcss,sshx]
+description: Un épisode de news pour Noël 2023. Nous évoquons dans cet épisode
+  plus court que d'habitude. La version 3.4 de Tailwind CSS. Storybook qui prend
+  en charge les RSC dans sa version 8 alpha. Tastejs, une app développée sous
+  différents frameworks. Enhance, un framework méconnu tout mignon ! Et json
+  Hero, un outil pour visualiser les données JSON.
+videoLink: ezoC4vessZs
+tags:
+  - storybook
+  - tailwindcss
+  - sshx
+fileSize: 20765516
 ---
 
 ## Tailwind CSS
@@ -61,8 +69,3 @@ Bonne écoute et bonnes fêtes !
 00:15:00 SSHX
 00:17:00 Json Hero
 00:20:38 Fin
-
-
-
-
-

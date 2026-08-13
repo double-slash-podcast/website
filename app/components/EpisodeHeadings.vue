@@ -79,7 +79,7 @@ onUnmounted(() => {
         <NewEpisode :publication-date="props.episode.publicationDate" />
       </div>
       <div class="flex items-center gap-x-2">
-        <Duration :slug="props.episode.dsSlug" />
+        <Duration :duration="props.episode.duration" />
         <PlayerRemote :episode="props.episode" class="relative z-20 -mt-1" />
       </div>
     </div>

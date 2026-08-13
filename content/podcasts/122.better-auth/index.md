@@ -4,19 +4,38 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 2926
 episodeNumber: 122
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_122_better-auth
 title: Better Auth, la solution ultime pour l'authentification
-subtitle: Better Auth, la solution ultime pour l'authentification et les autorisations en TypeScript
+subtitle: Better Auth, la solution ultime pour l'authentification et les
+  autorisations en TypeScript
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1760035124/episode/ART_122_hxhaur.png
-description: "Dans cet épisode du podcast, nous plongeons dans un sujet qui touche absolument tous les développeurs : l’authentification. Cette partie de votre application devient vite un cauchemar dès qu’on veut faire plus que “email + mot de passe”. Nous allons parler de Better Auth, une librairie TypeScript qui promet de rendre l’authentification enfin agréable. Framework agnostique, elle vous apporte tout ce qu'il faut : 2FA, passkeys, multi-tenancy, multi-sessions, SSO... bref, tout ce qui fait qu’on finit normalement par pleurer dans la documentation ou à réinventer une roue carrée. Si vous voulez vous concentrer sur votre produit et arrêter de bricoler des flux d’authentification maison, cet épisode est pour vous."
-videoLink : RNUwnZ7OeyU
-tags: ['authentication', 'authorization', 'typescript', 'passkeys', '2FA', 'SSO', 'security']
+description: "Dans cet épisode du podcast, nous plongeons dans un sujet qui
+  touche absolument tous les développeurs : l’authentification. Cette partie de
+  votre application devient vite un cauchemar dès qu’on veut faire plus que
+  “email + mot de passe”. Nous allons parler de Better Auth, une librairie
+  TypeScript qui promet de rendre l’authentification enfin agréable. Framework
+  agnostique, elle vous apporte tout ce qu'il faut : 2FA, passkeys,
+  multi-tenancy, multi-sessions, SSO... bref, tout ce qui fait qu’on finit
+  normalement par pleurer dans la documentation ou à réinventer une roue carrée.
+  Si vous voulez vous concentrer sur votre produit et arrêter de bricoler des
+  flux d’authentification maison, cet épisode est pour vous."
+videoLink: RNUwnZ7OeyU
+tags:
+  - authentication
+  - authorization
+  - typescript
+  - passkeys
+  - 2FA
+  - SSO
+  - security
+fileSize: 46925791
 ---
+
 ## Better Auth : une librairie TypeScript pour l'authentification et les autorisations
 
 - https://www.better-auth.com
