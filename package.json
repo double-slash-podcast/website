@@ -57,6 +57,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-prettier": "5.5.6",
     "fast-xml-parser": "^5.10.1",
+    "jiti": "2.7.0",
     "jsdom": "30.0.1",
     "nuxt": "4.5.2",
     "nuxt-schema-org": "6.2.9",
