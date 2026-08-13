@@ -1,6 +1,25 @@
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true
+
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
   - sharp
   - unrs-resolver
   - vue-demi
+
+# Install oxc-parser native bindings for local dev and Linux deploy targets.
+supportedArchitectures:
+  os:
+    - current
+    - linux
+  cpu:
+    - current
+    - x64
+  libc:
+    - current
+    - glibc

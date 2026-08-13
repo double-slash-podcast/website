@@ -43,7 +43,7 @@ export default defineNuxtConfig({
       sourcemap: false,
     },
   },
-  css: ['./app/assets/main.css'],
+  css: ['~/assets/main.css'],
   image: {
     provider: 'cloudinary',
     cloudinary: {
