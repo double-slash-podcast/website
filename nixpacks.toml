@@ -1,9 +1,14 @@
 # Pin Node via nixpkgs so Coolify/Nixpacks gets >= 22.12 (required by oxc-parser).
 # Archive commit → Node 22.13.1 (Coolify docs).
 # See: https://coolify.io/docs/applications/build-packs/nixpacks/node-versioning
+#
+# Coolify still injects pnpm-9_x + `--install-cmd pnpm install`, which skips
+# Nixpacks Corepack. Activate pnpm 11 in setup so `pnpm install` matches
+# packageManager.
 
 [phases.setup]
 nixpkgsArchive = '51ad838b03a05b1de6f9f2a0fffecee64a9788ee'
+cmds = ['...', 'npm install -g corepack@0.24.1 && corepack enable && corepack prepare pnpm@11.21.0 --activate']
 
 [variables]
 NIXPACKS_NODE_VERSION = '22'

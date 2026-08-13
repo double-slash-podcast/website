@@ -83,12 +83,5 @@
     "throttle-debounce": "^5.0.2",
     "vue-lite-youtube-embed": "1.2.4"
   },
-  "overrides": {
-    "@vue/composition-api": false,
-    "mlly": "1.4.0"
-  },
-  "resolutions": {
-    "mlly": "1.4.0"
-  },
   "packageManager": "pnpm@11.21.0"
 }
