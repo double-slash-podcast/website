@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
-    '@nuxtjs/fontaine',
     '@nuxt/icon',
     '@nuxt/eslint',
     '@browser-echo/nuxt',

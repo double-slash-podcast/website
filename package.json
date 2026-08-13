@@ -42,7 +42,6 @@
     "@nuxt/test-utils": "4.1.0",
     "@nuxt/test-utils-edge": "3.8.0-28284309.b3d3d7f4",
     "@nuxtjs/color-mode": "4.0.1",
-    "@nuxtjs/fontaine": "0.5.0",
     "@pinia/nuxt": "1.0.2",
     "@tailwindcss/typography": "0.5.20",
     "@tailwindcss/vite": "^4.3.3",
