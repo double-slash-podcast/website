@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@browser-echo/nuxt',
     'nuxt-llms',
+    '@nuxtjs/robots',
   ],
 
   alias: {
@@ -100,6 +101,19 @@ export default defineNuxtConfig({
     title: 'Double Slash Podcast',
     description:
       'Le podcast sur le code, le développement web et les outils modernes.',
+  },
+  robots: {
+    sitemap: 'https://double-slash.dev/sitemaps.xml',
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+    ],
   },
   compatibilityDate: '2025-08-29',
 });
