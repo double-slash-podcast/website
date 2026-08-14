@@ -4,18 +4,22 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2776
+duration: 5552
 dsSlug: DS_031_redwood
 episodeNumber: 31
 episodeType: full
 explicit: false
 season: 1
 title: RedwoodJS avec Simon Gagnon
-subtitle: Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en direct de Montréal (Canada) pour parler de RedwoodJS.
+subtitle: Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en
+  direct de Montréal (Canada) pour parler de RedwoodJS.
 guid: 22904a35fe6a2350abd743a6d02b743b
-description: Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en direct de Montréal (Canada) pour parler de RedwoodJS.
-videoLink:
-tags: [redwoodjs]
+description: Dans cet épisode, nous avons le plaisir de recevoir Simon Gagnon en
+  direct de Montréal (Canada) pour parler de RedwoodJS.
+videoLink: null
+tags:
+  - redwoodjs
+fileSize: 66661379
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://www.youtube.com/watch?v=eEY03v7RBy0)
@@ -58,7 +62,3 @@ Bonne écoute :)
 - [Github redwoodjs](https://github.com/redwoodjs/redwood)
 - [Discord redwoodjs](https://discord.com/invite/jjSYEQd)
 - [Tutorial redwoodjs](https://learn.redwoodjs.com/docs/tutorial/welcome-to-redwood/)
-
-
-
-

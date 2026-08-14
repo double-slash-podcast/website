@@ -4,18 +4,24 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4457
+duration: 8914
 dsSlug: DS_021_strapi
 episodeNumber: 21
 episodeType: full
 explicit: false
 season: 1
 title: Strapi, le CMS headless 100% JavaScript avec Jim Laurie
-subtitle: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur de Strapi, un CMS open source 100% JavaScript
+subtitle: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur de
+  Strapi, un CMS open source 100% JavaScript
 guid: 3e7174a89bd28661bfaa8bbb11022eb2
-description: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur de Strapi, un CMS open source 100% JavaScript
-videoLink:
-tags: [cms,strapi,headless]
+description: Un épisode avec notre invité Jim Laurie, cocréateur et cofondateur
+  de Strapi, un CMS open source 100% JavaScript
+videoLink: null
+tags:
+  - cms
+  - strapi
+  - headless
+fileSize: 106998212
 ---
 
 [Strapi](https://strapi.io/) est un CMS open source créé il y a environ 7 ans par 3 personnes lors de leurs études. Créé pour des besoins clients à la base, le projet a rapidement vu sa communauté augmentée et suscité un réel intérêt. Ce qui a poussé les créateurs a tenté l'aventure et continué le projet à la fin de leurs études.
@@ -38,7 +44,3 @@ Nous vous laissons découvrir le CMS Strapi plus en détail en écoutant l'épis
 - [Le github](https://github.com/strapi/)
 - [Le forum](https://forum.strapi.io/)
 -
-
-
-
-

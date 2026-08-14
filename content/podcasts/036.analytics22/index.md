@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4002
+duration: 8003
 dsSlug: DS_036_analytics_privacy
 episodeNumber: 36
 episodeType: full
@@ -13,9 +13,13 @@ season: 1
 title: Outils de web Analytics et Vie privée
 subtitle: Web Analytics, privacy et Open Source avec François Best
 guid: a281e6f01ec88c6c24916751a843e0e9
-description: Dans cet épisode, nous avons le plaisir de recevoir François Best pour des outils de web Analytics et la protection de notre vie privée.
-videoLink:
-tags: [analytics,open source]
+description: Dans cet épisode, nous avons le plaisir de recevoir François Best
+  pour des outils de web Analytics et la protection de notre vie privée.
+videoLink: null
+tags:
+  - analytics
+  - open source
+fileSize: 96070011
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [le Youtube de DoubleSlash](https://youtu.be/AjY6K2WFTD0)
@@ -48,4 +52,3 @@ La solution analytics de notre invité : [https://chiffre.io](https://chiffre.io
 [https://privacyfocusedanalytics.netlify.app/](https://privacyfocusedanalytics.netlify.app/)
 
 Bonne écoute !
-

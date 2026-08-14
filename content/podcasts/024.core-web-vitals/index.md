@@ -4,18 +4,28 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2681
+duration: 5363
 dsSlug: DS_024_audit
 episodeNumber: 24
 episodeType: full
 explicit: false
 season: 1
 title: Audit des Google core web vitals
-subtitle: Comment faire un audit des core web vitals en 2021 et comment améliorer le score d’un site sur chaque critère.
+subtitle: Comment faire un audit des core web vitals en 2021 et comment
+  améliorer le score d’un site sur chaque critère.
 guid: 53da8f3c8d7ba2c6130e200960c65de3
-description: En juin 2021, Google introduit de nouveaux indicateurs de performance pour les sites web. Ils annoncent qu'ils sont désormais pris en compte dans les critères pour le classement dans le résultat de recherches. On constate une panique générale des propriétaires de site web alors que Google avait prévenu depuis un moment que la vitesse de chargement serait de plus en plus prise en compte.
-videoLink:
-tags: [core web vitals, seo, performance]
+description: En juin 2021, Google introduit de nouveaux indicateurs de
+  performance pour les sites web. Ils annoncent qu'ils sont désormais pris en
+  compte dans les critères pour le classement dans le résultat de recherches. On
+  constate une panique générale des propriétaires de site web alors que Google
+  avait prévenu depuis un moment que la vitesse de chargement serait de plus en
+  plus prise en compte.
+videoLink: null
+tags:
+  - core web vitals
+  - seo
+  - performance
+fileSize: 64391552
 ---
 
 Si vous êtes propriétaire d'un site WordPress créé avec un builder, vous pouvez vous inquiéter ! Mais attention, cela peut toucher tous les sites. N'oubliez jamais, rien n'est automatique et votre site sera rapide uniquement si vous faites en sorte qu'il le soit !
@@ -126,7 +136,3 @@ Réserver l'espace pour les éléments dynamiques, utiliser des skeletons pour l
 - [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/?hl=fr)
 - [https://gtmetrix.com/](https://gtmetrix.com/)
 - [Ligthouse](https://developers.google.com/web/tools/lighthouse)
-
-
-
-

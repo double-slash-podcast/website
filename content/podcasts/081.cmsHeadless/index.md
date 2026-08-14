@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 9999
+duration: 5186
 episodeNumber: 81
 episodeType: full
 explicit: false
@@ -13,11 +13,17 @@ dsSlug: DS_081_cmsHeadless
 title: Dans la jungle des CMS Headless
 subtitle: Comment bien choisir son CMS
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1707292580/episode/ART_81_vtawjb.png
-description: Le sujet des CMS Headless est très vaste. Les solutions disponibles sont impressionnantes. Il y a une quantité d’acteurs importants. Et surtout, les offres sont toutes différentes. En mode Saas, auto-hébergé, Git based ! Comment faire son choix.
-videoLink : OrpmNlsQvXo
-tags: ["cms","cms headless"]
-
+description: Le sujet des CMS Headless est très vaste. Les solutions disponibles
+  sont impressionnantes. Il y a une quantité d’acteurs importants. Et surtout,
+  les offres sont toutes différentes. En mode Saas, auto-hébergé, Git based !
+  Comment faire son choix.
+videoLink: OrpmNlsQvXo
+tags:
+  - cms
+  - cms headless
+fileSize: 82991228
 ---
+
 Sans parler des fonctionnalités, multilingue, gestion des accès, preview…
 
 Nous allons essayer de vous aider à faire un choix dans la jungle de CMS Headless. Vous expliquez les choses à vérifier. Nous allons tenter de vous faire comprendre qu’en fonction du client et du projet, il y a des CMS plus adaptés que d’autres.
@@ -261,7 +267,3 @@ A noter pour Directus, Alexandre Chopin est le Director of engineering
 
 
 Bonne écoute !
-
-
-
-

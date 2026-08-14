@@ -5,17 +5,22 @@ publicationDate: 2020-05-19
 status: published
 dsSlug: DS_005_gituhub_ninja
 author: Double slash
-duration: 2917
+duration: 5834
 season: 1
-episodeNumber: 05
+episodeNumber: 5
 episodeType: full
 explicit: false
 categories:
   - Technology
 guid: 3bec175544dbf2be451962b6645868df
-description: Petit retour sur la conférence annuelle de GitHub, les nouvelles fonctionnalités et autres outils liés à GitHub.
-videoLink:
-tags: [github,git,devtools]
+description: Petit retour sur la conférence annuelle de GitHub, les nouvelles
+  fonctionnalités et autres outils liés à GitHub.
+videoLink: null
+tags:
+  - github
+  - git
+  - devtools
+fileSize: 70045505
 ---
 
 ### GitHub Satellite
@@ -47,7 +52,3 @@ https://github.com/features/actions
 - `t` pour faire une recherche , nom , extension de fichier
 - `y` pour transformer l'URL en permalink
 - `b` pour trouver qui blamer, git blame !
-
-
-
-

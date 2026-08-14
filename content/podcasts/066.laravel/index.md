@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2930
+duration: 5860
 episodeNumber: 66
 episodeType: full
 explicit: false
@@ -13,28 +13,25 @@ dsSlug: DS_066_laravel
 title: Laravel avec LaravelJutsu
 subtitle: Laravel, le framework PHP élégant et productif.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1687160917/episode/ART_66_laravel_b8zyxt.png
-description: Dans cet épisode, nous avons le plaisir de recevoir Ludovic Guénet qui est le créateur passionné de la chaine YouTube @LaravelJutsu. Dans ses vidéos, Ludovic parle principalement de Laravel et de son écosystème. Avec lui, nous allons découvrir le framework Laravel qui dès le départ à adopté une philosophie proche du framework Ruby on Rails.
+description: Dans cet épisode, nous avons le plaisir de recevoir Ludovic Guénet
+  qui est le créateur passionné de la chaine YouTube @LaravelJutsu. Dans ses
+  vidéos, Ludovic parle principalement de Laravel et de son écosystème. Avec
+  lui, nous allons découvrir le framework Laravel qui dès le départ à adopté une
+  philosophie proche du framework Ruby on Rails.
 videoLink: Fv8aIey_NdE
 links:
-  [
-    {
-      title: 'Laravel',
-      url: 'https://laravel.com/',
-    },
-    {
-      title: 'Laravel Frontend',
-      url: 'https://laravel.com/frontend',
-    },
-    {
-      title: 'Inertiajs',
-      url: 'https://inertiajs.com/',
-    },
-    {
-      title: 'Livewire',
-      url: 'https://laravel-livewire.com/',
-    },
-  ]
-tags: [php,laravel]
+  - title: Laravel
+    url: https://laravel.com/
+  - title: Laravel Frontend
+    url: https://laravel.com/frontend
+  - title: Inertiajs
+    url: https://inertiajs.com/
+  - title: Livewire
+    url: https://laravel-livewire.com/
+tags:
+  - php
+  - laravel
+fileSize: 46931414
 ---
 
 ## Laravel, rapide historique
@@ -110,7 +107,3 @@ Laravel offre différentes options pour la gestion du côté front de vos applic
 
 
 Bonne écoute !
-
-
-
-

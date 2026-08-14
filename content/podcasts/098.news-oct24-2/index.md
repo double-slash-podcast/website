@@ -13,9 +13,15 @@ dsSlug: DS_098_news-oct24-2
 title: Les news web dev pour octobre 2024 - 2.0
 subtitle: V2 - Épisode new web développement pour octobre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1729068225/episode/ART_96_cqqnbv.png
-description: Dans cet épisode, on revient sur les grandes annonces faites lors de la Vite Conf, avec des nouveautés pour les développeurs JavaScript, des évolutions majeures comme Deno 2, et des avancées en IA avec Bolt AI. On parle aussi des dernières tendances dans l'écosystème Shopify, Tauri, et bien plus encore.
-videoLink : Jgwh1w42Opo
+description: Dans cet épisode, on revient sur les grandes annonces faites lors
+  de la Vite Conf, avec des nouveautés pour les développeurs JavaScript, des
+  évolutions majeures comme Deno 2, et des avancées en IA avec Bolt AI. On parle
+  aussi des dernières tendances dans l'écosystème Shopify, Tauri, et bien plus
+  encore.
+videoLink: Jgwh1w42Opo
+fileSize: 51497168
 ---
+
 ### Vite Conf
 
 - Creation d’une nouvelle toolchain et d’une nouvelle organisation pour remplacer esbuild et rollup. https://voidzero.dev/
@@ -112,7 +118,3 @@ Le **registre JSR** (JavaScript Registry) permet une meilleure gestion des modul
 En résumé, Deno 2 cherche à combiner la simplicité et la puissance en étant rétrocompatible avec l'écosystème Node tout en offrant de nombreuses fonctionnalités modernes pour les développeurs.
 
 Bonne écoute !
-
-
-
-

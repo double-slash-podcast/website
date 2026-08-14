@@ -1,0 +1,14 @@
+# Pin Node via nixpkgs so Coolify/Nixpacks gets >= 22.12 (required by oxc-parser).
+# Archive commit → Node 22.13.1 (Coolify docs).
+# See: https://coolify.io/docs/applications/build-packs/nixpacks/node-versioning
+#
+# Coolify injects pnpm-9_x and `--install-cmd pnpm install`. Corepack cannot
+# run pnpm 11 on this Node 22.13.1 image (ERR_VM_DYNAMIC_IMPORT_CALLBACK_MISSING).
+# Install pnpm 11 via npm and prepend it on PATH so it wins over nix pnpm 9.
+
+[phases.setup]
+nixpkgsArchive = '51ad838b03a05b1de6f9f2a0fffecee64a9788ee'
+cmds = ['...', 'npm install -g pnpm@11.21.0 && echo "export PATH=$(npm prefix -g)/bin:$PATH" >> /root/.profile']
+
+[variables]
+NIXPACKS_NODE_VERSION = '22'

@@ -19,6 +19,7 @@ export default defineContentConfig({
         author: z.string().min(1),
         categories: z.array(z.string()).nonempty(),
         duration: z.union([z.string(), z.number()]).optional().nullable(),
+        fileSize: z.union([z.string(), z.number()]).optional().nullable(),
         episodeNumber: z.number().nonnegative(),
         episodeType: EpisodeType,
         explicit: z.boolean(),

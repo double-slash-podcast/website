@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3375
+duration: 3374
 episodeNumber: 83
 episodeType: full
 explicit: false
@@ -13,10 +13,21 @@ dsSlug: DS_083_news-03-24
 title: Les News Web Dev mars 2024
 subtitle: L'actualité du développement Web
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1710311967/episode/ART_83_srvzdf.png
-description: Un épisode pour parler d’Apple qui fait marche arrière devant la commission européenne, de Rust de plus en plus présent dans nos outils, de la version de Tailwind 4 qui arrive en version alpha, de Laravel 11, d’Astro qui n’arrête plus de nous surprendre et pleins d’autres choses.
-videoLink : khiumNmZf4o
-tags: ["pwa","tailwindcss","astro","nuxt","shiki", "web core vitals"]
+description: Un épisode pour parler d’Apple qui fait marche arrière devant la
+  commission européenne, de Rust de plus en plus présent dans nos outils, de la
+  version de Tailwind 4 qui arrive en version alpha, de Laravel 11, d’Astro qui
+  n’arrête plus de nous surprendre et pleins d’autres choses.
+videoLink: khiumNmZf4o
+tags:
+  - pwa
+  - tailwindcss
+  - astro
+  - nuxt
+  - shiki
+  - web core vitals
+fileSize: 53993220
 ---
+
 ### PWA et Apple
 
 https://twitter.com/i/web/status/1763598540389929313
@@ -115,7 +126,3 @@ https://agencewebperformance.fr/metrique-inp-amelioration/
 https://lamplightdev.com/blog/2024/01/10/streaming-html-out-of-order-without-javascript/
 
 Bonne écoute !
-
-
-
-

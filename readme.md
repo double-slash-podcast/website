@@ -30,6 +30,34 @@ pnpm dev
 pnpm build
 ```
 
+#### Generate static site
+
+```
+pnpm generate
+```
+
+Both `build` and `generate` run `validate-durations` first and fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
+
+### Podcast episode metadata
+
+After adding a new episode, sync `duration` and `fileSize` from the remote MP3 into the markdown frontmatter:
+
+```
+pnpm sync-durations
+```
+
+Options:
+
+- `--dry-run` — preview changes without writing files
+- `--force` — recalculate even when values already exist
+- `--slug <dsSlug>` — sync a single episode
+
+Check that all published episodes have the required metadata (same check used before build):
+
+```
+pnpm validate-durations
+```
+
 
 ## Tools
 

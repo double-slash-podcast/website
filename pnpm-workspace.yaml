@@ -1,6 +1,35 @@
+# Required by pnpm 9 (Coolify/Nixpacks). pnpm 10+ allows config-only
+# workspace files; pnpm 9 fails with "packages field missing or empty".
+packages:
+  - '.'
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true
+  vue-demi: true
+
 onlyBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
   - sharp
   - unrs-resolver
   - vue-demi
+
+# Install oxc-parser native bindings for local dev and Linux deploy targets.
+supportedArchitectures:
+  os:
+    - current
+    - linux
+  cpu:
+    - current
+    - x64
+  libc:
+    - current
+    - glibc
+
+# Iconify JSON packs publish often; skip the 24h minimumReleaseAge check so
+# Coolify installs are not blocked by ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION.
+minimumReleaseAgeExclude:
+  - '@iconify-json/*'

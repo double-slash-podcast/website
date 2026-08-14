@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2799
+duration: 5598
 dsSlug: DS_022_bundler
 episodeNumber: 22
 episodeType: full
 explicit: false
 season: 1
 title: Vite.., un bundler !
-subtitle: Un épisode dédié aux bundlers. On passe en revue les différents bundlers utilisés et pourquoi les nouveaux comme Vite, changent les règles.
+subtitle: Un épisode dédié aux bundlers. On passe en revue les différents
+  bundlers utilisés et pourquoi les nouveaux comme Vite, changent les règles.
 guid: b558c0c66f61e51ad282d0827fb11c3a
-description: Les bundlers (générateur de bundle), on les utilise au quotidien. Ils sont indispensables dans les outils des développeurs front et ils ont beaucoup évolué. Nous passons en revue les principaux bundlers les plus utilisés et surtout nous parlons des nouvelles générations de bundler.
-videoLink:
-tags: [vite,bundler]
+description: Les bundlers (générateur de bundle), on les utilise au quotidien.
+  Ils sont indispensables dans les outils des développeurs front et ils ont
+  beaucoup évolué. Nous passons en revue les principaux bundlers les plus
+  utilisés et surtout nous parlons des nouvelles générations de bundler.
+videoLink: null
+tags:
+  - vite
+  - bundler
+fileSize: 67204865
 ---
 
 ## Pourquoi on utilise des bundlers :
@@ -104,7 +111,3 @@ export default ...;
 - Vite: Fais beaucoup de choses "out of the box”. Le mode dev est en ESM. Divise en 2 modules: le code source de l'app et les dépendances. Il prébundle les dépendances, car elles changent peu lors du dev. Le code source est en ESM. Fais un bundle (sans ESBuild mais avec Rollup) pour la production pour le moment. [https://vitejs.dev/](https://vitejs.dev/)
 - ESBuild (Go) vraiment jeune pas encore prêt pour la production. Par contre extrêmement rapide et très prometteur. [https://esbuild.github.io/](https://esbuild.github.io/)
 - WMR: [https://github.com/preactjs/wmr](https://github.com/preactjs/wmr)
-
-
-
-

@@ -12,9 +12,18 @@ dsSlug: DS_105_news-01-25
 title: Les news web dev pour janvier 2025
 subtitle: Épisode new web développement pour janvier 2025
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1738092330/episode/ART_105_gjjxz4.png
-description: Dans cet épisode de news pour cette nouvelle année 2025, nous allons évoquer Vercel qui achète Tremor et qui parle de la structure de ses projets. Des nouvelles concernant JavaScript Temporal, TailwindCSS 4.0, MedusaJS, quelques articles sur des retours d'expérience, et de l'IA avec 2 outils et un modèle chinois qui vient chambouler le jeu.
+description: Dans cet épisode de news pour cette nouvelle année 2025, nous
+  allons évoquer Vercel qui achète Tremor et qui parle de la structure de ses
+  projets. Des nouvelles concernant JavaScript Temporal, TailwindCSS 4.0,
+  MedusaJS, quelques articles sur des retours d'expérience, et de l'IA avec 2
+  outils et un modèle chinois qui vient chambouler le jeu.
 videoLink: -86F6xuBvjw
-tags: ['solidjs', 'tailwind', 'deepseek']
+tags:
+  - solidjs
+  - tailwind
+  - deepseek
+duration: 2723
+fileSize: 43568900
 ---
 
 ## Vercel achète Tremor
@@ -96,7 +105,3 @@ Le nouveau modèle chinois bouscule les États-Unis et provoque la panique.
 https://www.usine-digitale.fr/article/deepseek-cette-start-up-chinoise-qui-fait-mieux-qu-openai-pour-96-moins-cher.N2226172
 
 Bonne écoute !
-
-
-
-

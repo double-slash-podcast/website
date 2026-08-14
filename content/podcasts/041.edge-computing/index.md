@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2571
+duration: 5143
 episodeNumber: 41
 episodeType: full
 explicit: false
@@ -13,21 +13,19 @@ title: Edge computing, le serverless à la sauce CDN
 subtitle: Edge computing, la simplicité du serverless et la rapidité du CDN.
 dsSlug: DS_041_edge
 guid: c246e26c028cfadb74ec559363a7e479
-description: Dans cet épisode nous allons vous expliquer les grands principes du Edge Computing, son fonctionnement et son utilisation.
-videoLink : sy-cV7KzU6E
+description: Dans cet épisode nous allons vous expliquer les grands principes du
+  Edge Computing, son fonctionnement et son utilisation.
+videoLink: sy-cV7KzU6E
 links:
-  [
-    {
-      title: 'Netlify Edge function',
-      url: 'https://www.netlify.com/blog/deep-dive-into-netlify-edge-functions'
-    },
-    {
-      title: Cloudflare Workers',
-      url: 'https://developers.cloudflare.com/workers/learning/how-workers-works'
-    }
-  ]
-tags: [serverless,edge,devops]
-
+  - title: Netlify Edge function
+    url: https://www.netlify.com/blog/deep-dive-into-netlify-edge-functions
+  - title: Cloudflare Workers'
+    url: https://developers.cloudflare.com/workers/learning/how-workers-works
+tags:
+  - serverless
+  - edge
+  - devops
+fileSize: 61763611
 ---
 
 ## Le serverless
@@ -68,7 +66,3 @@ Bref, le futur est en marche et il semble prometteur.
 
 
 Bonne écoute !
-
-
-
-

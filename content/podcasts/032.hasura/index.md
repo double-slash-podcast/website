@@ -4,18 +4,23 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2725
+duration: 5450
 dsSlug: DS_032_hasura
 episodeNumber: 32
 episodeType: full
 explicit: false
 season: 1
 title: Hasura, une API GraphQL qui assure !
-subtitle: Alex nous fait découvrir Hasura, un service qui permet de monter une API GraphQL à partir d'une base de données.
+subtitle: Alex nous fait découvrir Hasura, un service qui permet de monter une
+  API GraphQL à partir d'une base de données.
 guid: 232290c1a57fb93aac34811ec55f41ca
-description: Alex nous parle d'Hasura, un service qui permet de monter une API GraphQL à partir d'une base de données.
-videoLink:
-tags: [hasura, graphql]
+description: Alex nous parle d'Hasura, un service qui permet de monter une API
+  GraphQL à partir d'une base de données.
+videoLink: null
+tags:
+  - hasura
+  - graphql
+fileSize: 65428213
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://youtu.be/0fK57NRHqPY)
@@ -39,7 +44,3 @@ Bonne écoute.
 
 - [https://hasura.io/](https://hasura.io/)
 - [https://www.nhost.io/](https://www.nhost.io/)
-
-
-
-

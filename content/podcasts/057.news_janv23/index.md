@@ -4,69 +4,52 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3054
+duration: 7308
 episodeNumber: 57
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_057_news0123
 title: Les News pour janvier 2023
-subtitle: Épisode spécial news pour janvier 2023, nous évoquons Forestry, HTTPIE, Nuxt, State of JS et quelques tools...
+subtitle: Épisode spécial news pour janvier 2023, nous évoquons Forestry,
+  HTTPIE, Nuxt, State of JS et quelques tools...
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,w_200/v1674596590/episode/ART_56_news_01-23_chid7j.png
-description: Dans cet épisode spécial news de janvier 2023, nous évoquons Forestry, HTTPIE, Nuxt, ... Nous revenons également sur les classements 2022. Les repository sur GitHub via RisingStars et aussi un retour rapide sur "State of JS" 2022.
-videoLink : YpyTUZn6IUo
+description: Dans cet épisode spécial news de janvier 2023, nous évoquons
+  Forestry, HTTPIE, Nuxt, ... Nous revenons également sur les classements 2022.
+  Les repository sur GitHub via RisingStars et aussi un retour rapide sur "State
+  of JS" 2022.
+videoLink: YpyTUZn6IUo
 links:
-  [
-    {
-      title: 'https://staticjscms.netlify.app',
-      url: 'https://staticjscms.netlify.app',
-    },
-    {
-      title: 'https://spinalcms.com',
-      url: 'https://spinalcms.com',
-    },
-    {
-      title: 'https://circleci.com/blog/jan-4-2023-incident-report',
-      url: 'https://circleci.com/blog/jan-4-2023-incident-report',
-    },
-    {
-      title: 'https://npm-kiosk.remotion.dev',
-      url: 'https://npm-kiosk.remotion.dev',
-    },
-    {
-      title: 'https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps',
-      url: 'https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps',
-    },
-    {
-      title: 'https://httpie.io/',
-      url: 'https://httpie.io/',
-    },
-    {
-      title: 'https://nuxt.com/vision-2023',
-      url: 'https://nuxt.com/vision-2023',
-    },
-    {
-      title: 'https://octoverse.github.com/2022/top-programming-languages',
-      url: 'https://octoverse.github.com/2022/top-programming-languages',
-    },
-    {
-      title: 'https://risingstars.js.org/2022/en',
-      url: 'https://risingstars.js.org/2022/en',
-    },
-    {
-      title: 'https://stateofjs.com/en-us/',
-      url: 'https://stateofjs.com/en-us/',
-    },
-    {
-      title: 'https://github.com/danielroe/fontaine',
-      url: 'https://github.com/danielroe/fontaine',
-    },
-    {
-      title: 'https://zod.dev',
-      url: 'https://zod.dev',
-    },
-  ]
-tags: [static,devops,css,devtools]
+  - title: https://staticjscms.netlify.app
+    url: https://staticjscms.netlify.app
+  - title: https://spinalcms.com
+    url: https://spinalcms.com
+  - title: https://circleci.com/blog/jan-4-2023-incident-report
+    url: https://circleci.com/blog/jan-4-2023-incident-report
+  - title: https://npm-kiosk.remotion.dev
+    url: https://npm-kiosk.remotion.dev
+  - title: https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps
+    url: https://www.smashingmagazine.com/2022/12/deploying-css-logical-properties-on-web-apps
+  - title: https://httpie.io/
+    url: https://httpie.io/
+  - title: https://nuxt.com/vision-2023
+    url: https://nuxt.com/vision-2023
+  - title: https://octoverse.github.com/2022/top-programming-languages
+    url: https://octoverse.github.com/2022/top-programming-languages
+  - title: https://risingstars.js.org/2022/en
+    url: https://risingstars.js.org/2022/en
+  - title: https://stateofjs.com/en-us/
+    url: https://stateofjs.com/en-us/
+  - title: https://github.com/danielroe/fontaine
+    url: https://github.com/danielroe/fontaine
+  - title: https://zod.dev
+    url: https://zod.dev
+tags:
+  - static
+  - devops
+  - css
+  - devtools
+fileSize: 51156872
 ---
 
 ## Quoi de neuf dernièrement ?
@@ -131,7 +114,3 @@ Durant l'enregistrement de cet épisode, l'équipe de Nuxt a publié la version 
 [https://github.com/pomber/placeholdifier](https://github.com/pomber/placeholdifier)
 
 Bonne écoute !
-
-
-
-

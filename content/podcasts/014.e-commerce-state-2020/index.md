@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4302
+duration: 8617
 dsSlug: DS_014_ecommerce2020
 episodeNumber: 14
 episodeType: full
 explicit: false
 season: 1
 title: Les plateformes e-commerce en 2020 avec Aurélien Lavorel
-subtitle: État des lieux des différentes plateformes et solutions e-commerce en 2020. Faut-il encore utiliser les CMS les plus connus (Magento, Prestashop, WooCommerce) ou passer sur des solutions SASS (Shopify..).
+subtitle: État des lieux des différentes plateformes et solutions e-commerce en
+  2020. Faut-il encore utiliser les CMS les plus connus (Magento, Prestashop,
+  WooCommerce) ou passer sur des solutions SASS (Shopify..).
 guid: 3dff15e6db69929b871c5393172a91d8
-description: Dans ce nouvel épisode, nous allons faire un état des lieux des différentes plateformes et solutions e-commerce en 2020. Faut-il encore utiliser les CMS les plus connus (Magento, Prestashop, WooCommerce) ou passer sur des solutions SASS (Shopify..).
-videoLink:
-tags: [ecommerce]
+description: Dans ce nouvel épisode, nous allons faire un état des lieux des
+  différentes plateformes et solutions e-commerce en 2020. Faut-il encore
+  utiliser les CMS les plus connus (Magento, Prestashop, WooCommerce) ou passer
+  sur des solutions SASS (Shopify..).
+videoLink: null
+tags:
+  - ecommerce
+fileSize: 103436719
 ---
 
 Notre invité, Aurélien Lavorel, est un expert e-commerce. Il nous donne ses avis sur les plateformes disponibles, vers quelle forme de plateforme va se diriger le e-commerce et des conseils pour lancer un e-commerce en 2020.
@@ -52,7 +59,3 @@ Aurélien Lavorel : [https://lumao.eu/](https://lumao.eu/) et [@LavoWeb](https:/
 - Liste de solutions e-commerce headless https://headlesscommerce.org/
 - Exemple d'une solution GatsbyJS/Sylius https://github.com/Gatsbylius/Gatsbylius
 - Solution de tracking de livraison https://www.shipup.co/
-
-
-
-
