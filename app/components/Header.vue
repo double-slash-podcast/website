@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import {debounce} from 'throttle-debounce';
 
+// Multi-root component: bind fallthrough attrs to <header>, not the fragment
+defineOptions({inheritAttrs: false});
+
 const header = ref();
 const headerHeight = ref();
 
@@ -26,6 +29,7 @@ onUnmounted(() => {
   <Navbar />
   <header
     ref="header"
+    v-bind="$attrs"
     class="relative z-10 pt-33 flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
   >
     <div

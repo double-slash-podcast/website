@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-    '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
     '@nuxt/icon',
@@ -23,6 +22,13 @@ export default defineNuxtConfig({
 
   icon: {
     mode: 'svg',
+    clientBundle: {
+      // Pre-bundle scanned icons so SSR does not fetch /api/_nuxt_icon
+      scan: true,
+      // Icons referenced dynamically via app.config (SocialList)
+      icons: ['fa6-brands:square-x-twitter', 'logos:bluesky', 'mdi:github'],
+      sizeLimitKb: 512,
+    },
   },
   content: {
     experimental: {nativeSqlite: true},
@@ -55,7 +61,6 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    reactivityTransform: true,
     componentIslands: true,
     viewTransition: true,
   },
