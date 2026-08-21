@@ -1,5 +1,5 @@
 ---
-publicationDate: 20 Aug 2026
+publicationDate: 21 Aug 2026
 status: published
 author: Double Slash
 categories:
@@ -11,12 +11,12 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_137_news08-26
-title: News Août 2026,
-subtitle: 
+title: "News août 2026 : Cursor Origin, requêtes HTTP, Lerd et modèles IA open-weight"
+subtitle: Les news pour août 2026, agents IA, Cloudflare et outils du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1787235734/episode/ART_137_yhshvy.png
-description:
+description: Nous évoquons WebMCP et Kitesurf que Cloudflare lance pour les agents IA, pnpm 12 réécrit en Rust, la méthode HTTP QUERY, Cursor qui passe à React et lance Origin, Mesa le filesystem versionné pour agents, Mistral et Hetzner côté IA souveraine, et quelques outils comme Xirp, Lerd, fx ou CodexBar.
 videoLink : egXl359HcNo
-tags: []
+tags: ['webmcp', 'kitesurf', 'cloudflare', 'pnpm', 'cursor', 'mesa', 'mistral', 'hetzner', 'react compiler', 'ai', 'open source', 'lerd']
 ---
 
 ## Xirp : L'environnement de développement agentique avec mémoire institutionnelle
