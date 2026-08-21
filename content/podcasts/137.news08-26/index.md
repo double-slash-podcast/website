@@ -4,8 +4,8 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
-fileSize:
+duration: 4762
+fileSize: 76208005
 episodeNumber: 137
 episodeType: full
 explicit: false
@@ -14,9 +14,25 @@ dsSlug: DS_137_news08-26
 title: "News août 2026 : Cursor Origin, requêtes HTTP, Lerd et modèles IA open-weight"
 subtitle: Les news pour août 2026, agents IA, Cloudflare et outils du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1787235734/episode/ART_137_yhshvy.png
-description: Nous évoquons WebMCP et Kitesurf que Cloudflare lance pour les agents IA, pnpm 12 réécrit en Rust, la méthode HTTP QUERY, Cursor qui passe à React et lance Origin, Mesa le filesystem versionné pour agents, Mistral et Hetzner côté IA souveraine, et quelques outils comme Xirp, Lerd, fx ou CodexBar.
-videoLink : egXl359HcNo
-tags: ['webmcp', 'kitesurf', 'cloudflare', 'pnpm', 'cursor', 'mesa', 'mistral', 'hetzner', 'react compiler', 'ai', 'open source', 'lerd']
+description: Nous évoquons WebMCP et Kitesurf que Cloudflare lance pour les
+  agents IA, pnpm 12 réécrit en Rust, la méthode HTTP QUERY, Cursor qui passe à
+  React et lance Origin, Mesa le filesystem versionné pour agents, Mistral et
+  Hetzner côté IA souveraine, et quelques outils comme Xirp, Lerd, fx ou
+  CodexBar.
+videoLink: egXl359HcNo
+tags:
+  - webmcp
+  - kitesurf
+  - cloudflare
+  - pnpm
+  - cursor
+  - mesa
+  - mistral
+  - hetzner
+  - react compiler
+  - ai
+  - open source
+  - lerd
 ---
 
 ## Xirp : L'environnement de développement agentique avec mémoire institutionnelle
@@ -126,6 +142,3 @@ https://lerd.sh
 https://codexbar.app
 
 **CodexBar** est un outil **open-source** pour macOS qui permet de suivre les **limites d'utilisation**, les **coûts** et les **statuts** des outils d'IA directement depuis la barre de menu. Il prend en charge **69 fournisseurs d'IA**, dont Codex, Claude, Cursor, OpenCode, Alibaba, Copilot, et bien d'autres. Avec des fonctionnalités comme le suivi des **fenêtres de session et hebdomadaires**, les **compteurs de réinitialisation**, et les **incidents**, CodexBar est idéal pour les développeurs qui veulent optimiser leur utilisation des outils d'IA sans dépasser leurs limites.
-
-
-
