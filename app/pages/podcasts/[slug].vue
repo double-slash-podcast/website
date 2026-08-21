@@ -56,7 +56,7 @@ useSchemaOrg([
 
 <template>
   <div>
-    <Header class="">
+    <Header>
       <template #baseline>
         <span class="block h-16" />
         <EpisodeHead v-if="data" :episode="data" />

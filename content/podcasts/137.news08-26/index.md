@@ -18,17 +18,15 @@ description:
 videoLink : egXl359HcNo
 tags: []
 ---
-## News Aout 26 RC1
 
-
-### Xirp : L'environnement de développement agentique avec mémoire institutionnelle
+## Xirp : L'environnement de développement agentique avec mémoire institutionnelle
 
 https://xirp.spotify.com
 
 Xirp est un **environnement de développement agentique** qui résout le problème de la **récupération de connaissances** pour les agents IA. Contrairement aux outils traditionnels (README, Confluence, diagrammes d'architecture), Xirp se connecte à **Portal** pour comprendre les services, la propriété, les dépendances et les décisions architecturales, offrant ainsi un contexte complet et à jour pour chaque session. Les agents ne devinent plus, ils **savent**.
 On peut changer d’agent en cours de session, forker un agent.
 
-### WebMCP : Cloudflare lance une préversion pour les agents IA
+## WebMCP : Cloudflare lance une préversion pour les agents IA
 
 https://blog.cloudflare.com/webmcp/
 
