@@ -6,13 +6,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
-    '@pinia/nuxt',
     '@nuxt/image',
     'nuxt-schema-org',
     '@nuxt/icon',
     '@nuxt/eslint',
     '@browser-echo/nuxt',
     'nuxt-llms',
+    '@nuxtjs/robots',
   ],
 
   alias: {
@@ -22,6 +22,13 @@ export default defineNuxtConfig({
 
   icon: {
     mode: 'svg',
+    clientBundle: {
+      // Pre-bundle scanned icons so SSR does not fetch /api/_nuxt_icon
+      scan: true,
+      // Icons referenced dynamically via app.config (SocialList)
+      icons: ['fa6-brands:square-x-twitter', 'logos:bluesky', 'mdi:github'],
+      sizeLimitKb: 512,
+    },
   },
   content: {
     experimental: {nativeSqlite: true},
@@ -54,7 +61,6 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    reactivityTransform: true,
     componentIslands: true,
     viewTransition: true,
   },
@@ -100,6 +106,19 @@ export default defineNuxtConfig({
     title: 'Double Slash Podcast',
     description:
       'Le podcast sur le code, le développement web et les outils modernes.',
+  },
+  robots: {
+    sitemap: 'https://double-slash.dev/sitemaps.xml',
+    groups: [
+      {
+        userAgent: '*',
+        allow: '/',
+      },
+      {
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
+      },
+    ],
   },
   compatibilityDate: '2025-08-29',
 });

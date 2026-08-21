@@ -18,7 +18,7 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="bg-haiti">
-    <Header :height="160" />
+    <Header />
     <main class="px-4">
       <HeadingsSection
         title="Tous les articles du blog double slash"

@@ -58,7 +58,7 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="relative bg-haiti">
-    <Header class="z-10">
+    <Header>
       <template #title>
         <Brand slash />
       </template>
