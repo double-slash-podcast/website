@@ -126,7 +126,7 @@ export default defineNuxtConfig({
     registry: {
       umamiAnalytics: {
         websiteId: '942988c9-8c60-4497-ad8b-5c7169365a52',
-        hostUrl: 'https://double-slash.dev/umami',
+        hostUrl: '/umami',
         trigger: 'onNuxtReady',
       }
     }
