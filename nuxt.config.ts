@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     '@browser-echo/nuxt',
     'nuxt-llms',
     '@nuxtjs/robots',
+    '@nuxt/scripts',
   ],
 
   alias: {
