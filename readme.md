@@ -4,7 +4,7 @@
 
 [https://double-slash.dev/](https://double-slash.dev/)
 
-Production runs on **Coolify** (Nixpacks) behind **nginx**, as a **static site** (`pnpm generate` → `dist/`). See `AGENTS.md` for deploy and Umami proxy details.
+Production runs on **Coolify** (Nixpacks) behind **nginx**, as a **static site** (`pnpm generate` → `dist/`). See `AGENTS.md` for deploy and analytics details.
 
 ## Quick Start
 
@@ -62,7 +62,7 @@ pnpm validate-durations
 
 ## Analytics
 
-Umami is self-hosted. In SSG, Nuxt Scripts cannot proxy through Nitro. The tracker posts to `https://double-slash.dev/umami/api/send` (same origin). nginx on Coolify must reverse-proxy `/umami/` to the Umami container **port 3000** on the internal network — not `https://analytics.doubleslash.dev` (Istio RBAC) and not `:3000` on the public hostname (closed).
+Umami is self-hosted at [https://analytics.double-slash.dev](https://analytics.double-slash.dev). `@nuxt/scripts` loads it with `hostUrl: 'https://analytics.double-slash.dev'`. The browser posts to `/api/send` on that origin (CORS allowed). No nginx reverse-proxy on the static site.
 
 ## Tools
 
