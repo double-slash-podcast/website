@@ -33,3 +33,4 @@ supportedArchitectures:
 # Coolify installs are not blocked by ERR_PNPM_MINIMUM_RELEASE_AGE_VIOLATION.
 minimumReleaseAgeExclude:
   - '@iconify-json/*'
+  - '@types/node@26.4.1'
