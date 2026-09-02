@@ -125,7 +125,7 @@ export default defineNuxtConfig({
     privacy: { ip: true, language: true, hardware: true },
     registry: {
       umamiAnalytics: {
-        websiteId: '7c9e9bde-91d9-4c59-a877-17f305d80e09',
+        websiteId: '942988c9-8c60-4497-ad8b-5c7169365a52',
         hostUrl: 'https://analytics.doubleslash.dev',
         trigger: 'onNuxtReady',
       }

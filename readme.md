@@ -1,15 +1,14 @@
 # Double Slash Podcast Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/790566ad-de5b-494f-9a91-e285f98080e5/deploy-status)](https://app.netlify.com/sites/double-slash-website/deploys)
-
 ## Website
 
 [https://double-slash.dev/](https://double-slash.dev/)
 
+Production runs on **Coolify** (Nixpacks) behind **nginx**, as a **static site** (`pnpm generate` → `dist/`). See `AGENTS.md` for deploy and Umami proxy details.
+
 ## Quick Start
 
 We use [pnpm](https://pnpm.io) on package management.
-
 
 #### Install dependencies
 
@@ -23,20 +22,23 @@ pnpm install
 pnpm dev
 ```
 
-
-#### Build application
-
-```
-pnpm build
-```
-
-#### Generate static site
+#### Generate static site (production)
 
 ```
 pnpm generate
 ```
 
-Both `build` and `generate` run `validate-durations` first and fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
+Output: `dist/`. Coolify/nginx serves that folder.
+
+#### Node server build (local / not prod)
+
+```
+pnpm build
+```
+
+`pnpm start` runs Nitro (`node .output/server/index.mjs`). Production is SSG, not this server.
+
+`generate` runs `sync-durations` then `nuxi generate`. `build` runs `validate-durations` then `nuxi build`. Both fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
 
 ### Podcast episode metadata
 
@@ -58,6 +60,9 @@ Check that all published episodes have the required metadata (same check used be
 pnpm validate-durations
 ```
 
+## Analytics
+
+Umami is self-hosted. In SSG, Nuxt Scripts cannot proxy through Nitro. The tracker posts to `https://double-slash.dev/umami/api/send` (same origin). nginx on Coolify must reverse-proxy `/umami/` to the Umami container **port 3000** on the internal network — not `https://analytics.doubleslash.dev` (Istio RBAC) and not `:3000` on the public hostname (closed).
 
 ## Tools
 
@@ -83,7 +88,6 @@ pnpm validate-durations
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
 - [Typescript](https://www.typescriptlang.org/)
-
 
 ## Todo
 
