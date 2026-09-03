@@ -9,6 +9,8 @@ export const usePlayerStore = defineStore('player', () => {
 
   // source for player
   const src = ref<string | undefined>(undefined);
+  // stable episode key for analytics deduplication
+  const currentDsSlug = ref<string | undefined>(undefined);
   // current title of podcast player
   const currentTitle = ref<string | undefined>(undefined);
   // current status of player
@@ -23,6 +25,7 @@ export const usePlayerStore = defineStore('player', () => {
     }
     // remove tracking for dev
     src.value = `${isDev ? prefixAudioDev : prefixAudio}/${dsSlug}.mp3`;
+    currentDsSlug.value = dsSlug;
     currentTitle.value = title;
   }
 
@@ -33,5 +36,12 @@ export const usePlayerStore = defineStore('player', () => {
     statusPlayer.value = status;
   }
 
-  return {src, currentTitle, statusPlayer, setDsSlug, setStatusPlayer};
+  return {
+    src,
+    currentDsSlug,
+    currentTitle,
+    statusPlayer,
+    setDsSlug,
+    setStatusPlayer,
+  };
 });
