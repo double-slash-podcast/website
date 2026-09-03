@@ -69,18 +69,25 @@ import ButtonPlayer from './ButtonPlayer.vue';
 import TimelinePlayer from './TimelinePlayer.vue';
 import TimerPlayer from './TimerPlayer.vue';
 import SpeedPlayer from './SpeedPlayer.vue';
+const {trackPlayOnce} = usePlayTracking();
 
 const props = withDefaults(
   defineProps<{
     src?: string | undefined;
+    dsSlug?: string | undefined;
     title?: string | undefined;
     status: typeStatusPlayer;
   }>(),
   {
     src: undefined,
+    dsSlug: undefined,
     title: undefined,
   },
 );
+
+function handleAction() {
+  trackPlayOnce(props.dsSlug, props.title);
+}
 
 const emit = defineEmits<{
   (e: 'statusChange', status: typeStatusPlayer): void;
@@ -249,6 +256,7 @@ const detailCurrentTime = computed(
 /** play sound or pause */
 const toggle = () => {
   if (state.status === 'pause') {
+    handleAction();
     audioPlayerElement.value?.play();
     state.status = 'play';
   } else {
