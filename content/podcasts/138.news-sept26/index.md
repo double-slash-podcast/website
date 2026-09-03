@@ -4,18 +4,24 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
-fileSize:
+duration: 3973
+fileSize: 63572485
 episodeNumber: 138
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_138_news-sept26
-title: News Sept 2026 RC1
-subtitle: 
+title: News Septembre 2026 RC1, OpenAI coupe Cursor, Omarchy, HTMX 4 et Bun 1.4
+subtitle: Les news pour septembre 2026 RC1, Cursor, Omarchy, HTMX, TanStack et outils
+  du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1788439787/episode/ART_138_kwbvlq.png
-description:
-videoLink : lSlbk6KWoaI
+description: Nous évoquons OpenAI qui coupe l'accès à ses modèles pour Cursor
+  après le rachat par SpaceX, la sortie de HTMX 4.0 et de Bun 1.4, Lovable qui
+  quitte Next.js pour TanStack Start, Vercel qui collabore avec TanStack, TypePHP qui compile du PHP en binaire natif, Zed qui retire
+  l'edit prediction du plan gratuit, le starter kit Laravel sur Vite+, GLM
+  dans Mistral Vibe, l'outil CNIL Genmod, Omarchy, et quelques outils comme
+  Screendrop, Orchard, Openwork et openSEO.
+videoLink: lSlbk6KWoaI
 tags:
   - bun
   - htmx
@@ -23,9 +29,6 @@ tags:
   - cursor
   - omarchy
 ---
-## News Sept 2026 RC1
-
-
 ## Context7
 
 https://upstash.com/blog/context7-vs-web-search-benchmark
@@ -34,23 +37,18 @@ https://upstash.com/blog/context7-vs-web-search-benchmark
 
 Fin de l’edit prediction dans le compte free. Alternative, self-host d’un model.
 
-https://huggingface.co/zed-industries/zeta-2.1
+- https://zed.dev/docs/ai/edit-prediction#local-and-self-hosted-models
+- https://huggingface.co/zed-industries/zeta-2.1
 
-https://zed.dev/docs/ai/edit-prediction#local-and-self-hosted-models
-
-## Les dernières sorties
 
 ## Bun 1.4
 
 https://bun.com/blog/bun-v1.4
 
-**Sortie de Bun v1.4** 
 
 ## HTMX 4
 
 https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released
-
-**Sortie de HTMX 4.0.0**
 
 ## Laravel Starter Kit sur Vite +
 
@@ -60,7 +58,6 @@ https://x.com/taylorotwell/status/2093374948303618558
 
 https://lovable.dev/blog/how-we-migrated-lovable-dev-away-from-nextjs
 
-Lovable
 
 ## TanStack sur Vercel
 
@@ -72,11 +69,8 @@ https://vercel.com/kb/guide/deploy-a-tanstack-start-app-to-vercel
 
 Compiler du code PHP en code binaire executable
 
-https://github.com/swoole/typephp
-
-https://laravel-news.com/typephp-compile-php-native-binaries
-
-## On développe !
+- https://github.com/swoole/typephp
+- https://laravel-news.com/typephp-compile-php-native-binaries
 
 ## OpenAI coupe le robinet pour Cursor
 
@@ -92,27 +86,21 @@ https://huggingface.co/spaces/cnil/genmod
 
 ## Omarchy
 
-https://www.frandroid.com/culture-tech/3225941_hype-ou-vraie-revolution-on-a-teste-la-distribution-linux-omarchy-fait-tant-de-bruit
+- https://www.frandroid.com/culture-tech/3225941_hype-ou-vraie-revolution-on-a-teste-la-distribution-linux-omarchy-fait-tant-de-bruit
+- https://www.youtube.com/watch?v=Q7TBEL7vZ5A
 
-https://www.youtube.com/watch?v=Q7TBEL7vZ5A
-
-Omarchy
-
-## Tools !
-
-### Screendrop
+## Screendrop
 
 https://github.com/fayazara/Screendrop
 
-### Orchard
+## Orchard
 
 https://github.com/andrew-waters/orchard
 
-### Openwork
+## Openwork
 
 https://github.com/different-ai/openwork
 
-### openSEO
+## openSEO
 
 https://openseo.so
-
