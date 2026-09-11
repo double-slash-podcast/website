@@ -82,6 +82,11 @@ export default defineNuxtConfig({
     public: {
       numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',
+      posthog: {
+        publicKey: process.env.NUXT_PUBLIC_POSTHOG_PROJECT_TOKEN,
+        host: process.env.NUXT_PUBLIC_POSTHOG_HOST,
+        posthogDefaults: '2026-01-30',
+      },
     },
   },
   hooks: {

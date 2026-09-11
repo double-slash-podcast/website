@@ -166,7 +166,7 @@ useSchemaOrg([
           </div> -->
         </div>
       </div>
-      <ShareBtn :text="data?.title || ''" />
+      <ShareBtn :text="data?.title || ''" track-podcast-share />
     </main>
     <Wrapper class="my-16">
       <PodcastList dark />

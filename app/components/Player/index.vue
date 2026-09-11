@@ -48,6 +48,7 @@
           isNaN(state.currentPosition) ? 0 : state.currentPosition
         "
         @update-current-time="updateCurrentTime"
+        @seeked="trackSeek"
       />
       <div class="flex items-center justify-between w-full">
         <div class="flex">
@@ -70,6 +71,7 @@ import TimelinePlayer from './TimelinePlayer.vue';
 import TimerPlayer from './TimerPlayer.vue';
 import SpeedPlayer from './SpeedPlayer.vue';
 const {trackPlayOnce} = usePlayTracking();
+const {$posthog: posthog} = useNuxtApp();
 
 const props = withDefaults(
   defineProps<{
@@ -257,6 +259,9 @@ const detailCurrentTime = computed(
 const toggle = () => {
   if (state.status === 'pause') {
     handleAction();
+    posthog?.capture('podcast_play_started', {
+      episode_slug: props.dsSlug,
+    });
     audioPlayerElement.value?.play();
     state.status = 'play';
   } else {
@@ -279,6 +284,15 @@ const updateCurrentTime = (event: Event) => {
   state.currentTime = _currentTime;
 };
 
+const trackSeek = (event: Event) => {
+  posthog?.capture('podcast_position_seeked', {
+    episode_slug: props.dsSlug,
+    position_percentage: Math.round(
+      +(event.currentTarget as HTMLInputElement).value,
+    ),
+  });
+};
+
 // reset player
 const reset = () => {
   toggle();
@@ -294,11 +308,19 @@ const changeSpeed = (speed: typeSpeedPlayer) => {
   // set play rate
   state.playbackRate = speed;
   audioPlayerElement.value.playbackRate = speed;
+  posthog?.capture('podcast_playback_speed_changed', {
+    episode_slug: props.dsSlug,
+    playback_speed: speed,
+  });
 };
 
 const skip = (value: number) => {
   if (!audioPlayerElement.value) return;
   const to = audioPlayerElement.value.currentTime + value;
   audioPlayerElement.value.currentTime = to > 0 ? to : 0;
+  posthog?.capture('podcast_skipped', {
+    episode_slug: props.dsSlug,
+    skip_seconds: value,
+  });
 };
 </script>

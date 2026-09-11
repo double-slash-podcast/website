@@ -3,9 +3,15 @@ const {
   baseInfos: {titleDefault},
 } = useAppConfig();
 
-const props = defineProps<{
-  text: string;
-}>();
+const props = withDefaults(
+  defineProps<{
+    text: string;
+    trackPodcastShare?: boolean;
+  }>(),
+  {trackPodcastShare: false},
+);
+
+const {$posthog: posthog} = useNuxtApp();
 
 // share btn
 const share = async () => {
@@ -15,6 +21,9 @@ const share = async () => {
       text: props.text,
       url: window.location.href,
     });
+    if (props.trackPodcastShare) {
+      posthog?.capture('podcast_shared');
+    }
   } catch (err) {
     console.error(err);
   }

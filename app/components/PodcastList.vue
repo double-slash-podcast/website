@@ -10,6 +10,12 @@ defineProps({
   },
 });
 
+const {$posthog: posthog} = useNuxtApp();
+
+const trackPlatformSelection = (platform: string) => {
+  posthog?.capture('podcast_platform_selected', {platform});
+};
+
 const plateforms = [
   {
     href: 'https://open.spotify.com/show/539N9WvnUguUzMWluPp2UK',
@@ -53,7 +59,12 @@ const plateforms = [
       class="flex items-center justify-center mt-7 space-x-5 space-y-3 sm:space-x-8"
     >
       <li v-for="plateform in plateforms" :key="plateform.icon">
-        <a :href="plateform.href" :title="plateform.title" target="_blank">
+        <a
+          :href="plateform.href"
+          :title="plateform.title"
+          target="_blank"
+          @click="trackPlatformSelection(plateform.title)"
+        >
           <Icon
             class="duration-300 hover:-translate-y-2"
             :class="plateform.className"

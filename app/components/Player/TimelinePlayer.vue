@@ -21,6 +21,7 @@
       )}`"
       :seek-value="props.currentPosition"
       @input.stop="event => $emit('updateCurrentTime', event)"
+      @change.stop="event => $emit('seeked', event)"
     />
     <progress
       min="0"
@@ -39,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-defineEmits(['updateCurrentTime']);
+defineEmits(['updateCurrentTime', 'seeked']);
 
 const props = defineProps<{
   currentPosition: number;

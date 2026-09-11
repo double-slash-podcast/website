@@ -1,4 +1,10 @@
 <script setup>
+const {$posthog: posthog} = useNuxtApp();
+
+const trackNewsletterSubmission = () => {
+  posthog?.capture('newsletter_subscription_submitted');
+};
+
 useHead({
   link: [
     {
@@ -114,6 +120,7 @@ onMounted(() => {
           method="POST"
           action="https://1762df9f.sibforms.com/serve/MUIFAC6hboARa2I-ABlyU2RhNZ0RqBClj_Pz5RJr2qxBDfNgf6Rb-axWTyZKsjvk9-gByn1ab9QZ_jXKnOpZudyR80YUuhUIJG6JifQai6uhQwscHDDMisHeynwN928Yu-0uA9lkYmifhZTQNTXXXOf3G0S2wUSac6twi02fMVvJYoZ0H4XriNX_Fy-CR7u-3AHqEqAQFTuF6ptc"
           data-type="subscription"
+          @submit="trackNewsletterSubmission"
         >
           <div style="padding: 16px 0">
             <div class="sib-input sib-form-block">
