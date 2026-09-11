@@ -16,7 +16,7 @@ subtitle:
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1789110154/episode/ART_139_szimen.png
 description:
 videoLink : Wp0LvBiyK_M
-tags: []
+tags: [bun, javascript, backend]
 ---
 ## BunJS, l'environement JS ultime ?
 
