@@ -12,6 +12,7 @@
 <script setup>
 import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
 import UpButton from '~/components/global/UpButton.vue';
+import {agentDiscoveryLinks} from '~/utils/agentDiscovery';
 const {path} = useRoute();
 const {
   baseInfos: {siteUrl, titleDefault, twitterUrl},
@@ -20,11 +21,12 @@ const {
 useHead({
   htmlAttrs: {lang: 'fr-FR'},
   link: [
-    {
-      rel: 'alternate',
-      type: 'application/rss+xml',
-      href: '/podcast-rss-feed.xml',
-    },
+    ...agentDiscoveryLinks.map(link => ({
+      rel: link.rel,
+      href: link.href,
+      type: link.type,
+      title: link.title,
+    })),
     {
       key: 'canonical',
       rel: 'canonical',

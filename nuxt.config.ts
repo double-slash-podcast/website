@@ -65,6 +65,15 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  // Production SSG is nginx (config on the server): also set
+  // Content-Type application/linkset+json on /.well-known/api-catalog there.
+  routeRules: {
+    '/.well-known/api-catalog': {
+      headers: {
+        'Content-Type': 'application/linkset+json; charset=utf-8',
+      },
+    },
+  },
   nitro: {
     prerender: {
       failOnError: true,
@@ -120,14 +129,14 @@ export default defineNuxtConfig({
     ],
   },
   scripts: {
-    privacy: { ip: true, language: true, hardware: true },
+    privacy: {ip: true, language: true, hardware: true},
     registry: {
       umamiAnalytics: {
         websiteId: '942988c9-8c60-4497-ad8b-5c7169365a52',
         hostUrl: 'https://analytics.double-slash.dev',
         trigger: 'onNuxtReady',
-      }
-    }
+      },
+    },
   },
   compatibilityDate: '2026-09-16',
 });

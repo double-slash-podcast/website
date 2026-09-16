@@ -1,6 +1,13 @@
 <script setup lang="ts">
+/**
+ * Latest articles on the homepage. Not a server island: islands render via a
+ * separate prerender request and throw NUXT_E4015 (then a 500 on `/`) on generate.
+ */
 const {data} = await useAsyncData('last-articles', () => {
-  return queryCollection('articles').order('publicationDate', 'DESC').limit(2).all();
+  return queryCollection('articles')
+    .order('publicationDate', 'DESC')
+    .limit(2)
+    .all();
 });
 </script>
 
@@ -9,15 +16,15 @@ const {data} = await useAsyncData('last-articles', () => {
     <HeadingsSection title="Les derniers articles" class="mb-14" level="2" />
     <div v-for="article in data" :key="article.path" class="mb-16 last:mb-8">
       <NuxtLink :to="`${article.path}/`">
-        <h3 class="text-3xl tracking-tighter normal-case text-primary">{{ article.title }}</h3>
+        <h3 class="text-3xl tracking-tighter normal-case text-primary">
+          {{ article.title }}
+        </h3>
       </NuxtLink>
-      <div class="py-2 text-sm text-gray-300">
-        <span>Le {{ useLocalDate(article.publicationDate) }}</span
-        ><span class="px-0.5">|</span>
-        <a class="hover:underline" :href="article.author.url" target="_blank">{{
-          article.author.name
-        }}</a>
-      </div>
+      <ArticleDetails
+        :publication-date="article.publicationDate"
+        :author="article.author"
+        :is-list="true"
+      />
       <p class="pt-4 text-gray-100">{{ article.description }}</p>
       <nuxt-link
         :title="`Lire l'article : ${article.title}`"

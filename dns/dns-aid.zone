@@ -1,0 +1,10 @@
+; DNS for AI Discovery (DNS-AID) — draft-mozleywilliams-dnsop-dnsaid
+; Publish in the OVH zone for double-slash.dev (ns17.ovh.net / dns17.ovh.net).
+; DNSSEC already signs this zone; new records inherit signatures.
+;
+; ServiceMode (priority >= 1). TargetName is absolute (trailing dot) and
+; must not contain underscores. alpn is h2/http1.1 — the site has no A2A/MCP
+; server. Do not set experimental SvcParamKeys until IANA assigns numbers.
+
+_index._agents.double-slash.dev. 3600 IN SVCB 1 double-slash.dev. alpn="h2,http/1.1" port=443
+_a2a._agents.double-slash.dev. 3600 IN SVCB 1 double-slash.dev. alpn="h2,http/1.1" port=443
