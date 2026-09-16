@@ -20,7 +20,7 @@ description: "Nous évoquons Tailwind Labs qui rejoint Shopify, Homebrew 7 avec
   @scope, Is your site agent ready, le débat petit modèle vs énorme
   modèle avec Desert Ant, et quelques outils comme 9Router, Modal, Docs7,
   Recorder Select ou PR Lens."
-videoLink: null
+videoLink: kQNn8sHTMFg
 tags:
   - tailwind
   - shopify
