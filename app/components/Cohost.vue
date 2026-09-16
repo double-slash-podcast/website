@@ -14,14 +14,13 @@ const {
       class="flex flex-col items-center w-full px-4 py-8 space-y-12 md:gap-20 md:grid-cols-2 md:space-y-0 md:grid"
     >
       <div class="flex w-10/12 md:w-full md:justify-start">
-        <nuxt-img
+        <AppImg
           :src="`${siteUrl}/assets/pat_picture.jpg`"
           alt="Photo Patrick Faramaz"
-          width="160px"
-          height="160px"
+          width="160"
+          height="160"
           loading="lazy"
           decoding="async"
-          sizes="xs:128px sm:160px"
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-primary shadow-purple-500"
         />
         <div class="pl-6 text-left uppercase font-brand">
@@ -65,14 +64,13 @@ const {
         </div>
       </div>
       <div class="flex w-10/12 md:w-full md:justify-end md:flex-row-reverse">
-        <nuxt-img
+        <AppImg
           :src="`${siteUrl}/assets/alex_picture.jpg`"
           alt="Photo Alex Duval"
-          width="160px"
-          height="160px"
+          width="160"
+          height="160"
           loading="lazy"
           decoding="async"
-          sizes="xs:128px sm:160px"
           class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-primary shadow-purple-500"
         />
         <div

@@ -46,7 +46,7 @@ onUnmounted(() => {
   <div
     class="grid grid-cols-episode-heading-mobile md:grid-cols-episode-heading episode-heading w-full md:min-w-3xl px-3 text-center text-white gap-x-3 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
-    <nuxt-img
+    <AppImg
       :src="episode.episodeArtwork || podcastInfos.imageUrl"
       class="w-full col-start-1 row-span-1 row-start-1 rounded-lg md:row-span-3"
       loading="lazy"
