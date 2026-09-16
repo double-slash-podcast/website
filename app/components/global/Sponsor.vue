@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/**
+ * GitHub Sponsors block. Setup stays sync so episode pages do not need an
+ * extra Suspense boundary around this component.
+ */
 // eslint-disable vue/no-v-html
 withDefaults(
   defineProps<{
@@ -7,22 +11,26 @@ withDefaults(
   {withList: true},
 );
 const organizationSponsors = ref();
-const {data} = await useAsyncData('github-sponsor', () =>
+const {data} = useAsyncData('github-sponsor', () =>
   $fetch('/github-sponsor.json'),
 );
 
-if (data.value) {
-  try {
-    // Validate JSON format before parsing
-    const prs =
-      typeof data.value === 'object'
-        ? data.value
-        : JSON.parse(data.value as string);
-    organizationSponsors.value = prs.data.organization.sponsorsListing;
-  } catch (error) {
-    console.error('Error parsing GitHub Sponsors data:', error);
-  }
-}
+watch(
+  data,
+  value => {
+    if (!value) {
+      return;
+    }
+    try {
+      const prs =
+        typeof value === 'object' ? value : JSON.parse(value as string);
+      organizationSponsors.value = prs.data.organization.sponsorsListing;
+    } catch (error) {
+      console.error('Error parsing GitHub Sponsors data:', error);
+    }
+  },
+  {immediate: true},
+);
 // list person
 const listSponsor = computed(
   () => organizationSponsors.value?.sponsorable?.sponsors?.edges,

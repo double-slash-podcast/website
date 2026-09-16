@@ -1,12 +1,13 @@
 <script setup lang="ts">
+import {toIsoDatetime} from '~/utils/toIsoDatetime';
 /**
  * Article byline (date + author). Not a server island: islands serialize
  * props into the GET query, and a full article body triggers HTTP 431.
  * Dates use NuxtTime so SSR and the client do not disagree on timezone.
  */
-withDefaults(
+const props = withDefaults(
   defineProps<{
-    publicationDate?: string | null;
+    publicationDate?: string | Date | null;
     author?: {name: string; url: string} | null;
     isList?: boolean;
   }>(),
@@ -16,21 +17,25 @@ withDefaults(
     isList: false,
   },
 );
+
+const isoPublicationDate = computed(() =>
+  toIsoDatetime(props.publicationDate),
+);
 </script>
 
 <template>
   <div
-    v-if="publicationDate"
+    v-if="isoPublicationDate"
     class="py-2 text-sm"
     :class="{
       'text-gray-300': isList,
       'text-gray-500': !isList,
     }"
   >
-    <span
+    <span v-if="isoPublicationDate"
       >Le
       <NuxtTime
-        :datetime="publicationDate"
+        :datetime="isoPublicationDate"
         locale="fr-FR"
         year="numeric"
         month="long"

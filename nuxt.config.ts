@@ -23,7 +23,13 @@ export default defineNuxtConfig({
       // Pre-bundle scanned icons so SSR does not fetch /api/_nuxt_icon
       scan: true,
       // Icons referenced dynamically via app.config (SocialList)
-      icons: ['fa6-brands:square-x-twitter', 'logos:bluesky', 'mdi:github'],
+      icons: [
+        'fa6-brands:square-x-twitter',
+        'logos:bluesky',
+        'mdi:github',
+        'cbi:deezer-logo',
+        'vscode-icons:file-type-rss',
+      ],
       sizeLimitKb: 512,
     },
   },
@@ -79,11 +85,28 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       failOnError: true,
+      // Native sqlite is not safe for parallel prerender workers.
+      concurrency: 1,
       routes: [
         '/podcast-rss-feed.xml',
         '/sitemaps.xml',
         '/github-sponsor.json',
       ],
+    },
+    hooks: {
+      'prerender:generate'(route) {
+        if (!route.error) {
+          return;
+        }
+        console.error('[prerender]', route.route, route.error);
+        const err = route.error as {cause?: unknown; stack?: string};
+        if (err.cause) {
+          console.error('[prerender:cause]', err.cause);
+        }
+        if (err.stack) {
+          console.error(err.stack);
+        }
+      },
     },
   },
   runtimeConfig: {
