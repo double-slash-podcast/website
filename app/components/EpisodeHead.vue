@@ -1,9 +1,14 @@
 <script setup lang="ts">
+import {toIsoDatetime} from '~/utils/toIsoDatetime';
 const {podcastInfos} = useAppConfig();
 
 const props = defineProps<{
   episode: PodcastsCollectionItem;
 }>();
+
+const isoPublicationDate = computed(() =>
+  toIsoDatetime(props.episode.publicationDate),
+);
 </script>
 
 <template>
@@ -33,7 +38,8 @@ const props = defineProps<{
         </h1>
       </nuxt-link>
       <NuxtTime
-        :datetime="props.episode.publicationDate"
+        v-if="isoPublicationDate"
+        :datetime="isoPublicationDate"
         locale="fr-FR"
         year="numeric"
         month="long"
@@ -46,7 +52,7 @@ const props = defineProps<{
     >
       <div class="flex items-center gap-x-2">
         <EpisodeNumber :episode-number="+props.episode.episodeNumber" />
-        <NewEpisode :publication-date="props.episode.publicationDate" />
+        <NewEpisode :publication-date="isoPublicationDate" />
       </div>
       <div class="flex items-center gap-x-2">
         <Duration :duration="props.episode.duration" />

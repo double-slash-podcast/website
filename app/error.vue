@@ -28,25 +28,27 @@ function goHome() {
 
 <template>
   <NuxtLayout>
-    <Header>
-      <template #title>
-        <h1 class="text-5xl text-primary font-brand relative z-1">
-          Erreur {{ statusCode }} !
-        </h1>
-      </template>
-    </Header>
-    <main class="relative z-10 pb-24 min-h-[350px] px-4">
-      <div class="-mt-6 text-center">
-        <Icon name="NotFoundIcon" size="250" class="text-secondary" />
-      </div>
-      <h2 class="mt-16 text-5xl normal-case font-brand text-secondary">
-        {{ copy.heading }}
-      </h2>
-      <p class="my-3 text-xl">{{ copy.description }}</p>
-      <NuxtLink class="underline" to="/" @click="goHome">
-        <Icon name="mdi:arrow-left" size="20" class="mr-1" />Retourner sur la
-        page d'accueil
-      </NuxtLink>
-    </main>
+    <div>
+      <Header>
+        <template #title>
+          <h1 class="text-5xl text-primary font-brand relative z-1">
+            Erreur {{ statusCode }} !
+          </h1>
+        </template>
+      </Header>
+      <main class="relative z-10 pb-24 min-h-[350px] px-4">
+        <div class="-mt-6 text-center">
+          <Icon name="NotFoundIcon" size="250" class="text-secondary" />
+        </div>
+        <h2 class="mt-16 text-5xl normal-case font-brand text-secondary">
+          {{ copy.heading }}
+        </h2>
+        <p class="my-3 text-xl">{{ copy.description }}</p>
+        <NuxtLink class="underline" to="/" @click="goHome">
+          <Icon name="mdi:arrow-left" size="20" class="mr-1" />Retourner sur la
+          page d'accueil
+        </NuxtLink>
+      </main>
+    </div>
   </NuxtLayout>
 </template>

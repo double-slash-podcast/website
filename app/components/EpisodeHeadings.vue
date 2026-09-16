@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type {PodcastsCollectionItem} from '@nuxt/content';
 import {debounce} from 'throttle-debounce';
+import {toIsoDatetime} from '~/utils/toIsoDatetime';
 const {podcastInfos} = useAppConfig();
 
 const title = ref<HTMLHeadingElement | null>(null);
@@ -15,6 +16,11 @@ const props = withDefaults(
   },
 );
 
+const isoPublicationDate = computed(() =>
+  toIsoDatetime(props.episode.publicationDate),
+);
+
+/** Shift the title on small screens when it wraps onto extra lines. */
 const setTitlePosition = () => {
   if (!title.value) return;
   const height = title.value.getBoundingClientRect().height;
@@ -66,7 +72,8 @@ onUnmounted(() => {
       {{ props.episode.description?.substring(0, 120) }}...
     </p>
     <NuxtTime
-      :datetime="props.episode.publicationDate"
+      v-if="isoPublicationDate"
+      :datetime="isoPublicationDate"
       locale="fr-FR"
       year="numeric"
       month="long"
@@ -76,7 +83,7 @@ onUnmounted(() => {
     <div class="flex items-center justify-between col-span-2 md:pt-2">
       <div class="flex items-center gap-x-2">
         <EpisodeNumber :episode-number="+props.episode.episodeNumber" />
-        <NewEpisode :publication-date="props.episode.publicationDate" />
+        <NewEpisode :publication-date="isoPublicationDate" />
       </div>
       <div class="flex items-center gap-x-2">
         <Duration :duration="props.episode.duration" />

@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
+import {contentSignal} from './app/utils/contentSignals';
 
 export default defineNuxtConfig({
   modules: [
@@ -60,13 +61,14 @@ export default defineNuxtConfig({
     componentIslands: true,
     viewTransition: true,
     typedPages: true,
-    prefetchPreloadTags: true,
   },
   colorMode: {
     classSuffix: '',
   },
   // Production SSG is nginx (config on the server): also set
   // Content-Type application/linkset+json on /.well-known/api-catalog there.
+  // Markdown for Agents: pnpm generate copies content/*.md next to HTML;
+  // nginx must negotiate Accept: text/markdown (see AGENTS.md).
   routeRules: {
     '/.well-known/api-catalog': {
       headers: {
@@ -121,10 +123,12 @@ export default defineNuxtConfig({
       {
         userAgent: '*',
         allow: '/',
+        contentSignal,
       },
       {
         userAgent: 'OAI-SearchBot',
         allow: '/',
+        contentSignal,
       },
     ],
   },

@@ -1,9 +1,8 @@
 <script setup>
-import {animate, scroll} from 'motion';
-
 const bigSlash = ref();
 const tinySlash = ref();
-onMounted(() => {
+onMounted(async () => {
+  const {animate, scroll} = await import('motion');
   if (bigSlash.value) {
     scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
   }
@@ -49,7 +48,11 @@ useSchemaOrg([defineWebPage()]);
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data" class="mt-20 max-w-3xl" />
+        <EpisodeHeadings
+          v-if="data"
+          :episode="data"
+          class="mt-20 max-w-3xl"
+        />
       </template>
     </Header>
     <main class="relative z-10 pb-24">

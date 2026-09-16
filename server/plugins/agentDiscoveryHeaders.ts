@@ -8,6 +8,10 @@ import {AGENT_DISCOVERY_LINK_HEADER} from '../../app/utils/agentDiscovery';
  */
 export default defineNitroPlugin(nitroApp => {
   nitroApp.hooks.hook('beforeResponse', event => {
-    appendResponseHeader(event, 'Link', AGENT_DISCOVERY_LINK_HEADER);
+    try {
+      appendResponseHeader(event, 'Link', AGENT_DISCOVERY_LINK_HEADER);
+    } catch (error) {
+      console.error('[agent-discovery] failed to append Link header', error);
+    }
   });
 });

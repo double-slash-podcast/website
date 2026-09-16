@@ -18,7 +18,8 @@
     "format-write": "npx prettier --write ./",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "generate": "pnpm sync-durations && nuxi generate",
+    "emit-markdown": "jiti scripts/emit-agent-markdown.ts",
+    "generate": "pnpm sync-durations && nuxi generate && pnpm emit-markdown",
     "clean": "rm -rf .output node_modules pnpm-lock.yaml dist .nuxt"
   },
   "devDependencies": {

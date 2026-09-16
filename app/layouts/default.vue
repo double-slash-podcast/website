@@ -1,12 +1,14 @@
 <template>
-  <div class="min-h-screen bg-linear-to-b from-purple-50 to-purple-100">
-    <slot />
-    <Footer />
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
-      <LazyWrapperPlayer />
+  <div>
+    <div class="min-h-screen bg-linear-to-b from-purple-50 to-purple-100">
+      <slot />
+      <Footer />
+      <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
+        <LazyWrapperPlayer />
+      </div>
     </div>
+    <UpButton />
   </div>
-  <UpButton />
 </template>
 
 <script setup>
@@ -24,8 +26,8 @@ useHead({
     ...agentDiscoveryLinks.map(link => ({
       rel: link.rel,
       href: link.href,
-      type: link.type,
-      title: link.title,
+      ...(link.type ? {type: link.type} : {}),
+      ...(link.title ? {title: link.title} : {}),
     })),
     {
       key: 'canonical',
