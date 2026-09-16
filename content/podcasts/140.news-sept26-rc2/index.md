@@ -14,7 +14,7 @@ dsSlug: DS_140_news-sept26-rc2
 title: News septembre 2026 RC2, Tailwind rejoint Shopify, des tokens gratuits et Homebrew UI
 subtitle: Les news pour septembre 2026 RC2, Tailwind, Homebrew, Linux sur Mac et
   outils du mois.
-episodeArtwork: null
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1789550110/episode/ART_140_h8gqbr.png
 description: "Nous évoquons Tailwind Labs qui rejoint Shopify, Homebrew 7 avec
   son app native macOS, Omarchy M sur Apple Silicon, le CSS
   @scope, Is your site agent ready, le débat petit modèle vs énorme
