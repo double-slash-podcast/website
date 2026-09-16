@@ -7,7 +7,11 @@ defineProps<{article: ArticleType}>();
     <NuxtLink :to="`${article.path}/`">
       <h2 class="text-3xl tracking-tighter normal-case">{{ article.title }}</h2>
     </NuxtLink>
-    <ArticleDetails :article="article" :is-list="true" />
+    <ArticleDetails
+      :publication-date="article.publicationDate"
+      :author="article.author"
+      :is-list="true"
+    />
     <p class="pt-4 text-gray-100">{{ article.description }}</p>
     <nuxt-link
       :title="`Lire l'article : ${article.title}`"

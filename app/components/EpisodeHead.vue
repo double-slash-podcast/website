@@ -4,8 +4,6 @@ const {podcastInfos} = useAppConfig();
 const props = defineProps<{
   episode: PodcastsCollectionItem;
 }>();
-
-const date = useLocalDate(props.episode.publicationDate);
 </script>
 
 <template>
@@ -34,12 +32,14 @@ const date = useLocalDate(props.episode.publicationDate);
           {{ props.episode.title }}
         </h1>
       </nuxt-link>
-      <time
-        :datetime="new Date(props.episode.publicationDate)"
+      <NuxtTime
+        :datetime="props.episode.publicationDate"
+        locale="fr-FR"
+        year="numeric"
+        month="long"
+        day="numeric"
         class="mt-1 text-sm text-left"
-      >
-        {{ date }}
-      </time>
+      />
     </div>
     <div
       class="flex items-center justify-between col-start-1 col-end-3 row-start-2 gap-3"

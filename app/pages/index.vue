@@ -22,36 +22,13 @@ const {data} = await useAsyncData('lastOne', () => {
   return queryCollection('podcasts').order('id', 'DESC').first();
 });
 
-useHead({
+useSeoMeta({
   title: 'Double Slash, le podcast sur le développement web en français',
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content:
-        'Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.',
-    },
-    {
-      hid: 'og:title',
-      name: 'og:title',
-      content: 'Double Slash, le podcast sur le développement web en français',
-    },
-    {
-      hid: 'og:url',
-      property: 'og:url',
-      content: `${siteUrl}${path}`,
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: '/android-chrome-512x512.png',
-    },
-    {
-      hid: 'twitter:url',
-      name: 'twitter:url',
-      content: siteUrl,
-    },
-  ],
+  ogTitle: 'Double Slash, le podcast sur le développement web en français',
+  description:
+    'Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.',
+  ogUrl: `${siteUrl}${path}`,
+  ogImage: '/android-chrome-512x512.png',
 });
 useSchemaOrg([defineWebPage()]);
 </script>

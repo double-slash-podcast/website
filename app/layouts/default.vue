@@ -20,21 +20,13 @@ const {
 useHead({
   htmlAttrs: {lang: 'fr-FR'},
   link: [
-    // {
-    //   hid: 'preload-font-mono',
-    //   rel: 'preload',
-    //   as: 'font',
-    //   // i don't know how to import this dynamically
-    //   href: '/_nuxt/mono45.90bc7bc8.woff2',
-    //   type: 'font/woff2',
-    // },
     {
       rel: 'alternate',
       type: 'application/rss+xml',
       href: '/podcast-rss-feed.xml',
     },
     {
-      hid: 'canonical',
+      key: 'canonical',
       rel: 'canonical',
       href: `${siteUrl}${path}`,
     },

@@ -13,8 +13,7 @@ const {data} = await useAsyncData(`episode-${pathStr}`, () =>
 );
 
 if (!data.value?.title) {
-  // redirect to 404 page
-  navigateTo('/_404');
+  throw createError(notFoundErrorOptions);
 }
 
 // disable transcription for the moment

@@ -16,11 +16,6 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
   ],
 
-  alias: {
-    'micromark/lib/preprocess.js': 'micromark',
-    'micromark/lib/postprocess.js': 'micromark',
-  },
-
   icon: {
     mode: 'svg',
     clientBundle: {
@@ -32,7 +27,7 @@ export default defineNuxtConfig({
     },
   },
   content: {
-    experimental: {nativeSqlite: true},
+    experimental: {sqliteConnector: 'native'},
     // anchorLinks: { h1: false, h2: false, h3: false, h4: false, h5: false, h6: false },
     build: {
       markdown: {
@@ -64,12 +59,15 @@ export default defineNuxtConfig({
   experimental: {
     componentIslands: true,
     viewTransition: true,
+    typedPages: true,
+    prefetchPreloadTags: true,
   },
   colorMode: {
     classSuffix: '',
   },
   nitro: {
     prerender: {
+      failOnError: true,
       routes: [
         '/podcast-rss-feed.xml',
         '/sitemaps.xml',
@@ -131,5 +129,5 @@ export default defineNuxtConfig({
       }
     }
   },
-  compatibilityDate: '2025-08-29',
+  compatibilityDate: '2026-09-16',
 });

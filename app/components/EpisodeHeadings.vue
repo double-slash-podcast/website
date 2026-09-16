@@ -15,8 +15,6 @@ const props = withDefaults(
   },
 );
 
-const date = useLocalDate(props.episode.publicationDate);
-
 const setTitlePosition = () => {
   if (!title.value) return;
   const height = title.value.getBoundingClientRect().height;
@@ -67,12 +65,14 @@ onUnmounted(() => {
     >
       {{ props.episode.description?.substring(0, 120) }}...
     </p>
-    <time
-      :datetime="`${new Date(props.episode.publicationDate).toLocaleDateString('fr-FR', {})}`"
+    <NuxtTime
+      :datetime="props.episode.publicationDate"
+      locale="fr-FR"
+      year="numeric"
+      month="long"
+      day="numeric"
       class="col-start-1 col-end-3 mt-1 text-sm text-left text-white/60 md:col-start-2"
-    >
-      {{ date }}
-    </time>
+    />
     <div class="flex items-center justify-between col-span-2 md:pt-2">
       <div class="flex items-center gap-x-2">
         <EpisodeNumber :episode-number="+props.episode.episodeNumber" />
