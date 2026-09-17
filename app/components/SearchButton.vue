@@ -1,8 +1,8 @@
 <script setup lang="ts">
 /**
- * Navbar search trigger. Lives outside the animated link row so the
- * underline does not treat it as a nav link. Shortcut label waits for
- * mount to avoid a Mac/Windows hydration mismatch.
+ * Navbar search trigger. Lives outside wrapperNav so the underline animation
+ * does not treat it as a nav link. Shortcut label waits for mount to avoid
+ * a Mac/Windows hydration mismatch.
  */
 const {open} = useSiteSearch();
 

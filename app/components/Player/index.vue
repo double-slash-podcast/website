@@ -1,5 +1,5 @@
 <template>
-  <audio class="js-player-audio" preload="auto">
+  <audio ref="audioPlayerElement" preload="auto">
     <source :src="props.src" :type="type" />
   </audio>
   <div
@@ -95,15 +95,8 @@ const emit = defineEmits<{
 
 // never change
 const type = 'audio/mpeg';
-
-/**
- * Audio element without a Vue template ref. This player sits under Nuxt's
- * root Suspense; Vue 3.5 setRef crashes in production when owner is null.
- */
-function getAudio(): HTMLAudioElement | null {
-  const el = document.querySelector('.js-player-audio');
-  return el instanceof HTMLAudioElement ? el : null;
-}
+// audio tag
+const audioPlayerElement = ref<HTMLAudioElement | null>(null);
 
 const state: {
   // duration of sound
@@ -132,48 +125,48 @@ const state: {
 
 /** progress data load */
 const load = () => {
-  if (!getAudio()) return;
+  if (!audioPlayerElement.value) return;
   if (!state.loaded) return;
   // length of buffered
-  const c = getAudio()?.buffered.length || 1;
-  const totalBuffered = getAudio()?.buffered.end(c - 1);
+  const c = audioPlayerElement.value?.buffered.length || 1;
+  const totalBuffered = audioPlayerElement.value?.buffered.end(c - 1);
   state.loadedProgress =
-    (totalBuffered / getAudio()?.duration) * 100;
+    (totalBuffered / audioPlayerElement.value?.duration) * 100;
 };
 
 const updateDuration = () => {
-  state.duration = getAudio()
-    ? +getAudio().duration
+  state.duration = audioPlayerElement.value
+    ? +audioPlayerElement.value.duration
     : Infinity;
 };
 
 /** init player on mounted or when src change */
 const initPlayer = (withPlay = false) => {
-  if (getAudio() && props.src) {
+  if (audioPlayerElement.value && props.src) {
     state.duration = 0;
     state.currentTime = 0;
     state.currentPosition = 0;
     state.loadedProgress = 0;
     // first load
-    getAudio()?.load();
-    getAudio().addEventListener('canplay', () => {
+    audioPlayerElement.value?.load();
+    audioPlayerElement.value.addEventListener('canplay', () => {
       state.loaded = true;
     });
     // update duration
-    getAudio().addEventListener('loadedmetadata', updateDuration);
+    audioPlayerElement.value.addEventListener('loadedmetadata', updateDuration);
     // update currentTime
-    getAudio().addEventListener('timeupdate', () => {
-      state.currentTime = getAudio()?.currentTime || 0;
+    audioPlayerElement.value.addEventListener('timeupdate', () => {
+      state.currentTime = audioPlayerElement.value?.currentTime || 0;
     });
 
-    getAudio().addEventListener('progress', load);
-    getAudio().addEventListener('loadedmetadata', load);
+    audioPlayerElement.value.addEventListener('progress', load);
+    audioPlayerElement.value.addEventListener('loadedmetadata', load);
 
     // sound is ended
-    getAudio().addEventListener('ended', reset);
+    audioPlayerElement.value.addEventListener('ended', reset);
 
     // set play rate
-    getAudio().playbackRate = state.playbackRate;
+    audioPlayerElement.value.playbackRate = state.playbackRate;
 
     if (withPlay) {
       toggle();
@@ -183,29 +176,29 @@ const initPlayer = (withPlay = false) => {
 
 /** reset player */
 const resetPlayer = (init = false) => {
-  if (getAudio()) {
+  if (audioPlayerElement.value) {
     // stop
-    getAudio().pause();
-    getAudio().currentTime = 0;
+    audioPlayerElement.value.pause();
+    audioPlayerElement.value.currentTime = 0;
     state.status = 'pause';
     emit('statusChange', state.status);
     // first load
-    getAudio().removeEventListener('canplay', () => {
+    audioPlayerElement.value.removeEventListener('canplay', () => {
       state.loaded = true;
     });
     // update duration
-    getAudio().removeEventListener(
+    audioPlayerElement.value.removeEventListener(
       'loadedmetadata',
       updateDuration,
     );
     // update currentTime
-    getAudio().removeEventListener('timeupdate', () => {
-      state.currentTime = getAudio()?.currentTime || 0;
+    audioPlayerElement.value.removeEventListener('timeupdate', () => {
+      state.currentTime = audioPlayerElement.value?.currentTime || 0;
     });
-    getAudio().removeEventListener('progress', load);
-    getAudio().removeEventListener('loadedmetadata', load);
+    audioPlayerElement.value.removeEventListener('progress', load);
+    audioPlayerElement.value.removeEventListener('loadedmetadata', load);
     // sound is ended
-    getAudio().removeEventListener('ended', reset);
+    audioPlayerElement.value.removeEventListener('ended', reset);
     if (init) {
       // reinit player
       initPlayer(true);
@@ -229,9 +222,9 @@ watch(
 watch(
   () => state.currentTime,
   () =>
-    (state.currentPosition = getAudio()
-      ? (getAudio().currentTime /
-          getAudio().duration) *
+    (state.currentPosition = audioPlayerElement.value
+      ? (audioPlayerElement.value.currentTime /
+          audioPlayerElement.value.duration) *
         100
       : 0),
 );
@@ -264,10 +257,10 @@ const detailCurrentTime = computed(
 const toggle = () => {
   if (state.status === 'pause') {
     handleAction();
-    getAudio()?.play();
+    audioPlayerElement.value?.play();
     state.status = 'play';
   } else {
-    getAudio()?.pause();
+    audioPlayerElement.value?.pause();
     state.status = 'pause';
   }
 
@@ -277,11 +270,12 @@ const toggle = () => {
 /** update currentTime from input range */
 const updateCurrentTime = (event: Event) => {
   const {currentTarget} = event;
-  const audio = getAudio();
-  if (!audio || !currentTarget) return;
+  if (!audioPlayerElement.value || !currentTarget) return;
   const _currentTime =
-    (+(currentTarget as HTMLInputElement).value * audio.duration) / 100;
-  audio.currentTime = _currentTime;
+    (+(currentTarget as HTMLInputElement).value *
+      audioPlayerElement?.value.duration) /
+    100;
+  audioPlayerElement.value.currentTime = _currentTime;
   state.currentTime = _currentTime;
 };
 
@@ -289,22 +283,22 @@ const updateCurrentTime = (event: Event) => {
 const reset = () => {
   toggle();
   state.currentPosition = 0;
-  if (getAudio()) {
-    getAudio().currentTime = 0;
+  if (audioPlayerElement.value) {
+    audioPlayerElement.value.currentTime = 0;
     state.currentTime = 0;
   }
 };
 
 const changeSpeed = (speed: typeSpeedPlayer) => {
-  if (!getAudio()) return;
+  if (!audioPlayerElement.value) return;
   // set play rate
   state.playbackRate = speed;
-  getAudio().playbackRate = speed;
+  audioPlayerElement.value.playbackRate = speed;
 };
 
 const skip = (value: number) => {
-  if (!getAudio()) return;
-  const to = getAudio().currentTime + value;
-  getAudio().currentTime = to > 0 ? to : 0;
+  if (!audioPlayerElement.value) return;
+  const to = audioPlayerElement.value.currentTime + value;
+  audioPlayerElement.value.currentTime = to > 0 ? to : 0;
 };
 </script>

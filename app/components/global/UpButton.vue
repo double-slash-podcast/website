@@ -1,46 +1,23 @@
 <script setup lang="ts">
-/**
- * Scroll-to-top control with a circular progress ring.
- * Template refs are unsafe under Nuxt's root Suspense: Vue 3.5 setRef
- * reads owner.refs while owner is still null in production.
- */
+// stroke width
 const size = 2;
 const mobileSize = 46;
 const desktopSize = 54;
 
 const store = usePlayerStore();
 const route = useRoute();
-const instance = getCurrentInstance();
 
+// get height of total scroll
 const scrollHeight = ref(0);
+// viewport height
 const vh = ref(0);
 const showCircle = ref(false);
+
+const circleWrapper = ref<HTMLDivElement | null>(null);
+const circle = ref<HTMLDivElement | null>(null);
+const progressCircle = ref<SVGElement | null>(null);
 const mq = ref<MediaQueryList | null>(null);
 const isMobile = ref(false);
-
-/**
- * Root element of the control, without a Vue template ref.
- */
-function getWrapper(): HTMLElement | null {
-  const el = instance?.vnode.el;
-  return el instanceof HTMLElement ? el : null;
-}
-
-/**
- * Progress ring SVG inside the control.
- */
-function getProgressSvg(): SVGElement | null {
-  const svg = getWrapper()?.querySelector('svg');
-  return svg instanceof SVGElement ? svg : null;
-}
-
-/**
- * Foreground circle whose dashoffset tracks scroll progress.
- */
-function getProgressCircle(): SVGCircleElement | null {
-  const circle = getProgressSvg()?.querySelector('circle:last-child');
-  return circle instanceof SVGCircleElement ? circle : null;
-}
 
 onMounted(() => {
   scrollHeight.value = document.body.scrollHeight - window.innerHeight;
@@ -85,16 +62,15 @@ const onScroll = () =>
     if (
       scrollHeight.value > vh.value &&
       window.scrollY > vh.value &&
-      getWrapper()
+      circleWrapper.value
     ) {
       showCircle.value = true;
-    } else if (getWrapper()) {
+    } else if (circleWrapper?.value) {
       showCircle.value = false;
     }
 
-    const progress = getProgressCircle();
-    if (progress) {
-      progress.style.strokeDashoffset =
+    if (progressCircle?.value && circle.value) {
+      circle.value.style.strokeDashoffset =
         scrollPosition > 99.9999 ? '0' : `${100 - scrollPosition}`;
     }
   });
@@ -115,6 +91,7 @@ const getSize = computed(() => {
 
 <template>
   <div
+    ref="circleWrapper"
     class="fixed z-100 md:bottom-4 right-3 flex items-center justify-center transition-opacity duration-500 ease-in-out"
     :class="{
       'bottom-30 sm:bottom-20': store.src,
@@ -124,6 +101,7 @@ const getSize = computed(() => {
     }"
   >
     <svg
+      ref="progressCircle"
       :width="`${getSize}px`"
       :height="`${getSize}px`"
       :viewBox="`0 0 ${getSize} ${getSize}`"
@@ -136,6 +114,7 @@ const getSize = computed(() => {
         :stroke-width="size"
       />
       <circle
+        ref="circle"
         :cx="getSize / 2"
         :cy="getSize / 2"
         :r="getSize / 2 - size - 0.2"

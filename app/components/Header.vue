@@ -3,10 +3,9 @@
 defineOptions({inheritAttrs: false});
 
 /**
- * Static fill height for decorative icon rows.
- * Do not lazy-hydrate this block: Lazy + hydrate-on-idle registers an async
- * Suspense dep and Vue 3.5 setRef crashes in production (null owner.refs).
- * IconsRows stays behind ClientOnly. Overflow is clipped by the header.
+ * Static fill height for decorative icon rows. Measuring the header on mount
+ * updated this lazy island before hydration and skipped hydrate-on-idle.
+ * Overflow is clipped by the header.
  */
 const BACKGROUND_HEIGHT = 960;
 </script>
@@ -29,7 +28,8 @@ const BACKGROUND_HEIGHT = 960;
     </div>
     <!-- Player -->
     <slot name="player" />
-    <AnimateBackground
+    <LazyAnimateBackground
+      hydrate-on-idle
       class="absolute top-0 left-[50%] -translate-x-1/2"
       :height="BACKGROUND_HEIGHT"
     />
