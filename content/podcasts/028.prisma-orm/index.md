@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3456
+duration: 6911
 dsSlug: DS_028_prisma
 episodeNumber: 28
 episodeType: full
@@ -14,8 +14,12 @@ title: Prisma ORM
 subtitle: Un épisode "explore" dans lequel Alex nous présente l'ORM Prisma.
 guid: e5cc08fb14a96639f9b6a98f199d47f8
 description: Un épisode "explore" dans lequel Alex nous présente l'ORM Prisma.
-videoLink:
-tags: [prisma,orm,node]
+videoLink: null
+tags:
+  - prisma
+  - orm
+  - node
+fileSize: 82965444
 ---
 
 - Le son de Patrick est pas terrible, toutes nos escuses pour ça. Nous allons améliorer ça dans les prochains épisodes.
@@ -58,7 +62,3 @@ Un service en early stage pour gérer un DB via une interface cloud.
 ## Outil recommandé
 
 - [syncinc.so](https://syncinc.so)
-
-
-
-

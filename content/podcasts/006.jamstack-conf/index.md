@@ -5,17 +5,24 @@ publicationDate: 2020-06-01
 status: published
 dsSlug: DS_006_janstack_conf
 author: Double slash
-duration: 4483
+duration: 8967
 season: 1
-episodeNumber: 06
+episodeNumber: 6
 episodeType: full
 explicit: false
 categories:
   - Technology
 guid: b96116a9e855f7620515c606f1464738
-description: JAMStack Conf London 27 mai 2020 Cette année, la conférence JAMStack de Londres est passée complètement online du à la crise du COVID-19. Nous avons assisté à la conférence le 27 mai 2020 et nous vous faisons un petit résumé sur l’événement et les annonces des acteurs présents.
-videoLink:
-tags: [statis,jamstack,conference]
+description: JAMStack Conf London 27 mai 2020 Cette année, la conférence
+  JAMStack de Londres est passée complètement online du à la crise du COVID-19.
+  Nous avons assisté à la conférence le 27 mai 2020 et nous vous faisons un
+  petit résumé sur l’événement et les annonces des acteurs présents.
+videoLink: null
+tags:
+  - statis
+  - jamstack
+  - conference
+fileSize: 107628784
 ---
 
 # JAMStack Conf London 27 mai 2020
@@ -90,7 +97,3 @@ Le site est en anglais.
 [https://redwoodjs.com/](https://redwoodjs.com/)
 
 React, GraphQL and Prisma pour faire le Ruby on Rails du JS.
-
-
-
-

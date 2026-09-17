@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 5026
+duration: 10052
 episodeNumber: 73
 episodeType: full
 explicit: false
@@ -13,11 +13,16 @@ dsSlug: DS_073_seoia
 title: Améliorer le SEO avec les IA, mythe ou réalité ?
 subtitle: Avec Dan Bernier
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1698610790/episode/ART_73_bxnjbq.png
-description: Un épisode dédié au SEO et plus particulièrement sur l’arrivée des IA dans le SEO. Qu’est-ce que cela change. Peut-on tirer parti des IA pour améliorer son SEO. Pouvons-nous générer du contenu de qualité avec les IA ?
-videoLink : HF-707ZQlyU
-tags: [seo,ia]
-
+description: Un épisode dédié au SEO et plus particulièrement sur l’arrivée des
+  IA dans le SEO. Qu’est-ce que cela change. Peut-on tirer parti des IA pour
+  améliorer son SEO. Pouvons-nous générer du contenu de qualité avec les IA ?
+videoLink: HF-707ZQlyU
+tags:
+  - seo
+  - ia
+fileSize: 80474038
 ---
+
 ## Les algorithmes lancés par Google en 2023
 - En 2023, il y a eu les confirmations de HelpFull Content avec de nouvelles MAJ.
 - Des core update en mars, en août et en octobre.
@@ -71,7 +76,3 @@ SEO et Marketing comportemental
 - [https://www.youtube.com/@antipods/streams](https://www.youtube.com/@antipods/streams)
 
 Bonne écoute !
-
-
-
-

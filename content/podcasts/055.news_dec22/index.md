@@ -4,31 +4,47 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: xxxx
+duration: 5471
 episodeNumber: 55
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_055_news_dec22
 title: Les News pour décembre 22
-subtitle: Dans ce dernier épisode de l'année 2022, une épisode spécial news, nous évoquons Vite.js 4, Prestashop 8, Angular 15, Sveltkit 1.0, Supabase...
+subtitle: Dans ce dernier épisode de l'année 2022, une épisode spécial news,
+  nous évoquons Vite.js 4, Prestashop 8, Angular 15, Sveltkit 1.0, Supabase...
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1671657438/episode/ART_55_NEWS_DEC22_xomvhh.png
-description: Dans ce dernier épisode de l'année 2022, une épisode spécial news, nous évoquons Vite.js 4, Prestashop 8, Angular 15, Sveltkit 1.0, Supabase. Également une liste de tutos pour s'occuper durant les vacances et quelques news.
-videoLink : pn5mrVAVJik
+description: Dans ce dernier épisode de l'année 2022, une épisode spécial news,
+  nous évoquons Vite.js 4, Prestashop 8, Angular 15, Sveltkit 1.0, Supabase.
+  Également une liste de tutos pour s'occuper durant les vacances et quelques
+  news.
+videoLink: pn5mrVAVJik
 links:
-  [
-    { title: 'Flex blox tuto interactif', url: 'https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/?ref=refind'},
-    { title: 'Tuto Tailwind avancé', url: 'https://www.protailwind.com/tutorials'},
-    { title: 'Tuto Typescript', url: 'https://www.totaltypescript.com/tutorials'},
-    { title: 'Tuto Git', url: 'https://www.youtube.com/@DeliciousInsights/playlists'},
-    { title: 'Vite.js 4', url: 'https://vitejs.dev/blog/announcing-vite4.html'},
-    { title: 'Angular 15', url: 'https://blog.angular.io/angular-v15-is-now-available-df7be7f2f4c8'},
-    { title: 'Prestashop 8', url: 'https://build.prestashop-project.org/news/prestashop-8-0-0-available/'},
-    { title: 'Sveltkit 1.0', url: 'https://svelte.dev/blog/announcing-sveltekit-1.0'},
-    { title: 'Supabase Launch Week 6', url: 'https://supabase.com/blog/launch-week-6-wrap-up'}
-  ]
-tags: [tuto, vite,svelte]
+  - title: Flex blox tuto interactif
+    url: https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/?ref=refind
+  - title: Tuto Tailwind avancé
+    url: https://www.protailwind.com/tutorials
+  - title: Tuto Typescript
+    url: https://www.totaltypescript.com/tutorials
+  - title: Tuto Git
+    url: https://www.youtube.com/@DeliciousInsights/playlists
+  - title: Vite.js 4
+    url: https://vitejs.dev/blog/announcing-vite4.html
+  - title: Angular 15
+    url: https://blog.angular.io/angular-v15-is-now-available-df7be7f2f4c8
+  - title: Prestashop 8
+    url: https://build.prestashop-project.org/news/prestashop-8-0-0-available/
+  - title: Sveltkit 1.0
+    url: https://svelte.dev/blog/announcing-sveltekit-1.0
+  - title: Supabase Launch Week 6
+    url: https://supabase.com/blog/launch-week-6-wrap-up
+tags:
+  - tuto
+  - vite
+  - svelte
+fileSize: 38298739
 ---
+
 ## Les dernières releases
 
 ### Vite.js V4
@@ -126,5 +142,3 @@ Graphql via pg_graphql
 - [components.ai](https://components.ai/u/system/cl5a97rxe001209ldetuczj0x)
 
 Bonne écoute !
-
-

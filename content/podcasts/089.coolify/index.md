@@ -13,11 +13,22 @@ dsSlug: DS_089_coolify
 title: PaaS, déployer et héberger les Web Applications avec Coolify
 subtitle: Prenez le contrôle avec votre propre Paas
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1719681217/episode/ART_89_ypup7l.png
-description: Un épisode dans lequel nous allons aborder dans un premier temps la définition d'un PaaS, ses avantages et ses inconvénients. Ensuite, nous orienterons rapidement la discussion vers une solution auto-hébergeable permettant de déployer et de contrôler ses applications Web. Coolify est une solution open-source pour la gestion des applications et leur déploiement. La solution propose également une version cloud pour éviter la partie installation. Découvrons ensemble Coolify.
-videoLink : _bOr0sKMzcs
+description: Un épisode dans lequel nous allons aborder dans un premier temps la
+  définition d'un PaaS, ses avantages et ses inconvénients. Ensuite, nous
+  orienterons rapidement la discussion vers une solution auto-hébergeable
+  permettant de déployer et de contrôler ses applications Web. Coolify est une
+  solution open-source pour la gestion des applications et leur déploiement. La
+  solution propose également une version cloud pour éviter la partie
+  installation. Découvrons ensemble Coolify.
+videoLink: _bOr0sKMzcs
 links: []
-tags: ["coolify", "hébergement", "PaaS"]
+tags:
+  - coolify
+  - hébergement
+  - PaaS
+fileSize: 42488893
 ---
+
 ## Première partie sur la définition d'un PaaS
 
 Un Platform as a Service (PaaS) est un modèle de service cloud qui fournit aux développeurs une plateforme complète pour créer, déployer et gérer des applications sans se soucier de l'infrastructure sous-jacente. Il offre des outils de développement, de test et de déploiement intégrés, permettant un gain de temps et une meilleure collaboration. Les avantages incluent la facilité d'évolutivité et la réduction des coûts d'infrastructure, tandis que les inconvénients peuvent inclure une dépendance accrue au fournisseur et des possibilités de personnalisation limitées.
@@ -58,7 +69,3 @@ Coolify représente une excellente alternative pour ceux qui cherchent à combin
 Pour ceux intéressés par une démonstration plus approfondie, nous envisageons de réaliser un workshop détaillé sur Coolify. N'hésitez pas à nous faire part de votre intérêt dans les commentaires!
 
 Coolify pourrait bien être la solution que vous cherchiez pour prendre en main le déploiement et la gestion de vos applications. Explorez cette option et découvrez comment elle peut s'intégrer dans votre flux de travail de développement.
-
-
-
-

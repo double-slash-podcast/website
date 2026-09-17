@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3385
+duration: 6770
 dsSlug: DS_038_ts
 episodeNumber: 38
 episodeType: full
@@ -13,30 +13,23 @@ season: 1
 title: Doit-on utiliser TypeScript ?
 subtitle: Doit-on utiliser TypeScript sur nos projets en 2022
 guid: 2c93ee325b9807e8e4c77ec0871af9e0
-description: Un épisode sur les bases de TypeScript afin de vous convaincre d’utiliser TypeScript dans vos projets.
+description: Un épisode sur les bases de TypeScript afin de vous convaincre
+  d’utiliser TypeScript dans vos projets.
 videoLink: kVdeiE-hod0
 links:
-  [
-    {
-      title: "Article Medium",
-      url: "https://medium.com/@wujido20/runtime-types-in-typescript-5f74fc9dc6c4"
-    },
-    {
-      title: "Flow",
-      url: "https://flow.org"
-    },
-    {
-      title: "TS config",
-      url: "https://www.typescriptlang.org/tsconfig#target"
-    },
-    {
-      title: "TypeScript Cheatsheets",
-      url: "https://www.typescriptlang.org/cheatsheets"
-    }
-  ]
-tags: [js,TypeScript]
+  - title: Article Medium
+    url: https://medium.com/@wujido20/runtime-types-in-typescript-5f74fc9dc6c4
+  - title: Flow
+    url: https://flow.org
+  - title: TS config
+    url: https://www.typescriptlang.org/tsconfig#target
+  - title: TypeScript Cheatsheets
+    url: https://www.typescriptlang.org/cheatsheets
+tags:
+  - js
+  - TypeScript
+fileSize: 81278039
 ---
-
 
 **Précision sur les types et interfaces**
 Durant l'épisode, on évoque la différence entre les types et les interfaces. Je dois préciser que l'on peut également faire des objets avec les types.
@@ -178,7 +171,3 @@ C’est souvent un problème de définition de type un peu trop poussé.
 - [https://www.typescriptlang.org/cheatsheets](https://www.typescriptlang.org/cheatsheets)
 
 Bonne écoute !
-
-
-
-

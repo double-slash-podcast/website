@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3537
 episodeNumber: 120
 episodeType: full
 explicit: false
@@ -13,10 +13,16 @@ dsSlug: DS_120_archi
 title: Architecture logicielle
 subtitle: Les bases pour bien structurer votre projet
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1759324754/episode/ART_120_haob60.png
-description: Vous souhaitez développer un projet web ou une application, mais vous ne savez pas par où commencer ? Vous avez peur de faire des erreurs qui pourraient vous coûter cher à long terme ? Dans cet épisode de Double Slash, Alex et Patrick vous guident à travers les concepts clés de l'architecture logicielle.
-videoLink : wsSz_iUU9j4
+description: Vous souhaitez développer un projet web ou une application, mais
+  vous ne savez pas par où commencer ? Vous avez peur de faire des erreurs qui
+  pourraient vous coûter cher à long terme ? Dans cet épisode de Double Slash,
+  Alex et Patrick vous guident à travers les concepts clés de l'architecture
+  logicielle.
+videoLink: wsSz_iUU9j4
 tags: []
+fileSize: 56709861
 ---
+
 Attention : Négliger l'architecture de votre projet pourrait vous mener à des problèmes de performance, de scalabilité et de maintenance !
 Vous apprendrez à :
 - Identifier les besoins fonctionnels et non fonctionnels de votre projet.
@@ -30,7 +36,3 @@ Vous ne voulez pas rester coincé avec un projet qui ne répond pas à vos besoi
 
 
 Bonne écoute !
-
-
-
-

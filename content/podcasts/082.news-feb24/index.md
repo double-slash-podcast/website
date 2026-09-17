@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 1989
+duration: 1988
 episodeNumber: 82
 episodeType: full
 explicit: false
@@ -13,10 +13,18 @@ dsSlug: DS_082_news-feb24
 title: Les News Web Dev février 2024
 subtitle: Actualité du Web
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1708463465/episode/ART_82_fdid7q.png
-description: Épisode news pour février 2024, nous évoquons jQuery en version 4, si, si ! Remix JS sort un mode SPA, Million.js, une nouvelle lib pour gérer les dates, un retour d'expérience sur Next.js et Apple qui veut tuer les PWA.
-videoLink : zbHSRWzczIE
-tags: ["jquery","remix","react","pwa"]
+description: Épisode news pour février 2024, nous évoquons jQuery en version 4,
+  si, si ! Remix JS sort un mode SPA, Million.js, une nouvelle lib pour gérer
+  les dates, un retour d'expérience sur Next.js et Apple qui veut tuer les PWA.
+videoLink: zbHSRWzczIE
+tags:
+  - jquery
+  - remix
+  - react
+  - pwa
+fileSize: 31822993
 ---
+
 ## jQuery 4
 
 Non c’est pas une blague, le développement de jQuery continue !
@@ -68,7 +76,3 @@ Quelques articles :
 
 
 Bonne écoute !
-
-
-
-

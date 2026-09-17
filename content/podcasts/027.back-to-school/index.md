@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3717
+duration: 7435
 dsSlug: DS_027_news921
 episodeNumber: 27
 episodeType: full
 explicit: false
 season: 1
 title: Back to school
-subtitle: Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2021.
+subtitle: Un épisode de rentrée en format "news". Nous revenons sur les annonces
+  qui ont eu lieu durant l'été 2021.
 guid: 8c99b7f6333d2d920abfa786ffb827c9
-description: Un épisode de rentrée en format "news". Nous revenons sur les annonces qui ont eu lieu durant l'été 2021.
-videoLink:
-tags: [github,vue,nuxt,astro]
+description: Un épisode de rentrée en format "news". Nous revenons sur les
+  annonces qui ont eu lieu durant l'été 2021.
+videoLink: null
+tags:
+  - github
+  - vue
+  - nuxt
+  - astro
+fileSize: 89247480
 ---
 
 ## GitHub Copilot
@@ -101,7 +108,3 @@ Encore en version bêta, il semble très prometteur.
 ## Outil recommandé
 
 - [Fig](https://fig.io/)
-
-
-
-

@@ -1,5 +1,9 @@
 import {defineTransformer} from '@nuxt/content';
+import {parseMediaNumber} from '~/utils/mediaMeta';
 
+/**
+ * Normalize podcast markdown dates, numbers, duration and fileSize.
+ */
 export default defineTransformer({
   name: 'podcast',
   extensions: ['.md'],
@@ -14,6 +18,8 @@ export default defineTransformer({
           ? Number(file.episodeNumber)
           : undefined,
       season: file.season !== undefined ? Number(file.season) : undefined,
+      duration: parseMediaNumber(file.duration),
+      fileSize: parseMediaNumber(file.fileSize),
     };
   },
 });

@@ -4,82 +4,59 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3334
+duration: 6668
 episodeNumber: 52
 episodeType: full
 explicit: false
 season: 1
 title: Les News pour novembre 2022
-subtitle: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont eu lieu dernièrement.
+subtitle: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13,
+  Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont
+  eu lieu dernièrement.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1668525076/episode/Square_news_52_jaxnyp.png
-description: Dans cet épisode spécial news de novembre 2022, nous évoquons Next 13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui ont eu lieu dernièrement.
+description: Dans cet épisode spécial news de novembre 2022, nous évoquons Next
+  13, Turbopack, Gatbsy 5, Gatbsy Valhalla, WordPress 6.1 et les conférences qui
+  ont eu lieu dernièrement.
 dsSlug: DS_052_news_nov22
-videoLink : Pze8XficOfA
+videoLink: Pze8XficOfA
 links:
-  [
-    {
-      title: 'Node Security releases',
-      url: 'https://nodejs.org/en/blog/vulnerability/november-2022-security-releases/',
-    },
-    {
-      title: 'Npm 9.0.0',
-      url: 'https://github.blog/changelog/2022-10-24-npm-v9-0-0-released/',
-    },
-    {
-      title: 'Deno 1.28',
-      url: 'https://deno.com/blog/v1.28',
-    },
-    {
-      title: 'Next.js 13',
-      url: 'https://nextjs.org/blog/next-13#introducing-turbopack-alpha',
-    },
-    {
-      title: 'Turbopack',
-      url: 'https://turbo.build/pack/docs/core-concepts',
-    },
-    {
-      title: 'Gatsby 5',
-      url: 'https://www.gatsbyjs.com/gatsby-5/',
-    },
-    {
-      title: 'Gatsby Valhalla',
-      url: 'https://www.gatsbyjs.com/products/valhalla-content-hub',
-    },
-    {
-        title: 'WordPress 6.1',
-        url: 'https://fr.wordpress.org/2022/10/12/guide-des-changements-techniques-de-wordpress-6-1/'
-    },
-    {
-      title: 'Node conf EU 2022',
-      url: 'https://www.youtube.com/playlist?list=PL0CdgOSSGlBaULAdbribJiENfXxPW0aLQ',
-    },
-    {
-      title: 'ViteConf 2022',
-      url: 'https://viteconf.org/2022/replay',
-    },
-    {
-      title: 'The component gallery',
-      url: 'https://component.gallery/',
-    },
-    {
-      title: 'DevToys (window)',
-      url: 'https://devtoys.app/',
-    },
-    {
-      title: 'DevUtils (mac)',
-      url: 'https://devutils.com/',
-    },
-    {
-      title: 'Trash CLI',
-      url: 'https://www.npmjs.com/package/trash-cli',
-    },
-    {
-      title: 'Content Layer',
-      url: 'https://www.contentlayer.dev/',
-    },
-  ]
-tags: [next,bundler,wordpress]
+  - title: Node Security releases
+    url: https://nodejs.org/en/blog/vulnerability/november-2022-security-releases/
+  - title: Npm 9.0.0
+    url: https://github.blog/changelog/2022-10-24-npm-v9-0-0-released/
+  - title: Deno 1.28
+    url: https://deno.com/blog/v1.28
+  - title: Next.js 13
+    url: https://nextjs.org/blog/next-13#introducing-turbopack-alpha
+  - title: Turbopack
+    url: https://turbo.build/pack/docs/core-concepts
+  - title: Gatsby 5
+    url: https://www.gatsbyjs.com/gatsby-5/
+  - title: Gatsby Valhalla
+    url: https://www.gatsbyjs.com/products/valhalla-content-hub
+  - title: WordPress 6.1
+    url: https://fr.wordpress.org/2022/10/12/guide-des-changements-techniques-de-wordpress-6-1/
+  - title: Node conf EU 2022
+    url: https://www.youtube.com/playlist?list=PL0CdgOSSGlBaULAdbribJiENfXxPW0aLQ
+  - title: ViteConf 2022
+    url: https://viteconf.org/2022/replay
+  - title: The component gallery
+    url: https://component.gallery/
+  - title: DevToys (window)
+    url: https://devtoys.app/
+  - title: DevUtils (mac)
+    url: https://devutils.com/
+  - title: Trash CLI
+    url: https://www.npmjs.com/package/trash-cli
+  - title: Content Layer
+    url: https://www.contentlayer.dev/
+tags:
+  - next
+  - bundler
+  - wordpress
+fileSize: 53344526
 ---
+
 ## Next 13
 
 On pose les bases du futur de Next.js et de React.
@@ -148,7 +125,3 @@ On peut donc concentrer plusieurs sources de différents services pour l’inter
 
 
 Bonne écoute !
-
-
-
-

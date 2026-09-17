@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 2884
 episodeNumber: 128
 episodeType: full
 explicit: false
@@ -13,9 +13,20 @@ dsSlug: DS_128_iafatigue
 title: L'IA nous rend-elle plus productifs... ou plus crevés ?
 subtitle: IA Fatigue, l'IA nous rend-elle plus productifs... ou plus crevés ?
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1772388449/ART_128_cbbk9z.png
-description: L'IA nous rend souvent plus productifs, ça, c'est indéniable. Seulement, pourquoi vous sentez-vous plus fatigué que jamais ? Vos tâches ont-elles radicalement changé ? Avez-vous l'impression de ne plus maîtriser les choses, que tout va trop vite ? Peut-être êtes-vous victime de la fatigue liée à l'IA ? Dans cet épisode, nous allons parler de ce mal qui émerge et dont personne ne parle encore.
-videoLink : 9CCTfMwxEbE
-tags: ['ia', 'productivité', 'fatigue', 'bien-être', 'épuisement' ]
+description: L'IA nous rend souvent plus productifs, ça, c'est indéniable.
+  Seulement, pourquoi vous sentez-vous plus fatigué que jamais ? Vos tâches
+  ont-elles radicalement changé ? Avez-vous l'impression de ne plus maîtriser
+  les choses, que tout va trop vite ? Peut-être êtes-vous victime de la fatigue
+  liée à l'IA ? Dans cet épisode, nous allons parler de ce mal qui émerge et
+  dont personne ne parle encore.
+videoLink: 9CCTfMwxEbE
+tags:
+  - ia
+  - productivité
+  - fatigue
+  - bien-être
+  - épuisement
+fileSize: 46258069
 ---
 
 ## 1 - L'impact sur l'apprentissage

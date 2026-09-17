@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3910
 episodeNumber: 109
 episodeType: full
 explicit: false
@@ -13,9 +13,23 @@ dsSlug: DS_109_rag
 title: Développer des projets IA - Comprendre les RAG
 subtitle: Développer des services en IA, les RAG (Retrieval Augmented Generation)
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1743966112/episode/ART_109_licbwc.png
-description: Dans ce deuxième épisode de notre série IA, nous allons parler des RAG (Retrieval Augmented Generation). En effet, avec la puissance des LLM combinée aux bases vectorielles, nous pouvons contrôler le contexte du LLM et ainsi avoir un meilleur contrôle des réponses. Pas d'obligation de fine-tuning et nous pouvons spécialiser un modèle dans un domaine ultra-spécifique. C'est le retour des chatbots, mais des chatbots qui fournissent des réponses pertinentes. Mais attention, si cela semble simple sur le papier, l'exécution est parfois compliquée pour obtenir des résultats acceptables.
+description: Dans ce deuxième épisode de notre série IA, nous allons parler des
+  RAG (Retrieval Augmented Generation). En effet, avec la puissance des LLM
+  combinée aux bases vectorielles, nous pouvons contrôler le contexte du LLM et
+  ainsi avoir un meilleur contrôle des réponses. Pas d'obligation de fine-tuning
+  et nous pouvons spécialiser un modèle dans un domaine ultra-spécifique. C'est
+  le retour des chatbots, mais des chatbots qui fournissent des réponses
+  pertinentes. Mais attention, si cela semble simple sur le papier, l'exécution
+  est parfois compliquée pour obtenir des résultats acceptables.
 videoLink: 5vrWcZR26ho
-tags: ['ia', 'dev', 'llm', 'rag', 'db', 'vectoriel']
+tags:
+  - ia
+  - dev
+  - llm
+  - rag
+  - db
+  - vectoriel
+fileSize: 62560965
 ---
 
 Le RAG, ou Retrieval Augmented Generation, est une technique comportant deux étapes clés : la recherche d’informations pertinentes et la génération de contenu.
@@ -128,7 +142,3 @@ https://flowiseai.com/
 https://dify.ai/
 
 Bonne écoute !
-
-
-
-

@@ -13,8 +13,12 @@ dsSlug: DS_097_tools
 title: Nos meilleurs apps pour le développement
 subtitle: Nos meileurs applications pour le développement en 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1728464953/episode/ART_97_nggffh.png
-description: Dans cet épisode, nous allons vous présenter des outils que nous utilisons personnellement dans notre quotidien de développeurs web. Certains sont gratuits, d'autres payants. Mais la plupart peuvent vous faire gagner beaucoup de temps et vous faciliter la vie en tant que développeur.
-videoLink : 2wOBWVrccKE
+description: Dans cet épisode, nous allons vous présenter des outils que nous
+  utilisons personnellement dans notre quotidien de développeurs web. Certains
+  sont gratuits, d'autres payants. Mais la plupart peuvent vous faire gagner
+  beaucoup de temps et vous faciliter la vie en tant que développeur.
+videoLink: 2wOBWVrccKE
+fileSize: 56192939
 ---
 
 ### Orbstack
@@ -73,7 +77,3 @@ Développement PHP local (Mac, Windows, Linux)
 - https://upscayl.org/
 
 Bonne écoute !
-
-
-
-

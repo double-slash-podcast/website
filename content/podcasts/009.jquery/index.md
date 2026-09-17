@@ -4,18 +4,26 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3611
+duration: 7172
 dsSlug: DS_009_jquery
-episodeNumber: 09
+episodeNumber: 9
 episodeType: full
 explicit: false
 season: 1
 title: jQuery en 2020
-subtitle: Faut-il encore utiliser jQuery en 2020 ? Pas de réponse absolue et tranchée. On pèse le pour et le contre, puis on vous livre notre avis.
+subtitle: Faut-il encore utiliser jQuery en 2020 ? Pas de réponse absolue et
+  tranchée. On pèse le pour et le contre, puis on vous livre notre avis.
 guid: ebbc144f9bbbd6e5a36925b7d2359da6
-description: Faut-il encore utiliser jQuery en 2020 ? Pas de réponse absolue et tranchée. On pèse le pour et le contre, puis on vous livre notre avis. Avec l’évolution des navigateurs, l’uniformisation et la standardisation de JavaScript. Est ce qu’il est encore vraiment nécessaire d’embarquer et d’utiliser jQuery sur nos sites web ?
-videoLink:
-tags: [js,jquery]
+description: Faut-il encore utiliser jQuery en 2020 ? Pas de réponse absolue et
+  tranchée. On pèse le pour et le contre, puis on vous livre notre avis. Avec
+  l’évolution des navigateurs, l’uniformisation et la standardisation de
+  JavaScript. Est ce qu’il est encore vraiment nécessaire d’embarquer et
+  d’utiliser jQuery sur nos sites web ?
+videoLink: null
+tags:
+  - js
+  - jquery
+fileSize: 86090341
 ---
 
 **Correction** : Wordpress ne charge pas jQuery par défaut. Il est disponible, mais il faut l'ajouter dans le code du thème pour l'utiliser en front.
@@ -79,7 +87,3 @@ jQuery, est-ce que vous en avez encore besoin dans vos projets en 2020 ?
 **Stats sur jQuery et Bootstrap :**
 
 - [https://w3techs.com/technologies/comparison/js-bootstrap,js-jquery](https://w3techs.com/technologies/comparison/js-bootstrap,js-jquery)
-
-
-
-
