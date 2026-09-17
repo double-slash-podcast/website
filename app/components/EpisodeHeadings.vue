@@ -26,8 +26,8 @@ const isoPublicationDate = computed(() =>
 /**
  * Align the title with the artwork on small screens after layout.
  * The heading itself must not use a Vue template ref: `<component :is>`
- * plus a ref next to a Nuxt island (Duration) crashes in production
- * (`Cannot read properties of null (reading 'refs')` during hydrate).
+ * plus a ref crashes in production (`Cannot read properties of null
+ * (reading 'refs')` during hydrate).
  */
 const setTitlePosition = () => {
   const heading = root.value?.querySelector(

@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import {toIsoDatetime} from '~/utils/toIsoDatetime';
+/**
+ * Episode page header: artwork, title, date, duration and play control.
+ */
 const {podcastInfos} = useAppConfig();
 
 const props = defineProps<{

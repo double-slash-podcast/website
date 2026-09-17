@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import type {H3Event, NodeIncomingMessage} from 'h3';
 import RSS from 'rss';
 import type {PodcastsCollectionItem} from '@nuxt/content';
-import {parseMediaNumber} from '~/utils/mediaMeta';
+import {parseEpisodeDuration} from '~/helpers/duration/parseEpisodeDuration';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -16,6 +16,9 @@ const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
   return docs;
 };
 
+/**
+ * Build the podcast-level RSS channel options from app config.
+ */
 const getFeedBase = (infos: PodcastInfosType) =>
   // get the options for the podcast iteself
   ({
@@ -98,7 +101,7 @@ export default defineEventHandler(
     // create the rss feed
     const feed = new RSS(getFeedBase(podcastInfos));
 
-    for await (const podcast of await _podcasts) {
+    for (const podcast of _podcasts) {
       const {
         title,
         subtitle,
@@ -115,7 +118,6 @@ export default defineEventHandler(
         guid,
         episodeArtwork,
         duration,
-        fileSize,
       }: PodcastsCollectionItem = podcast;
 
       if (!title) {
@@ -158,9 +160,7 @@ export default defineEventHandler(
         {'googleplay:explicit': explicit},
       ];
 
-      const episodeDuration = parseMediaNumber(duration);
-      const episodeFileSize = parseMediaNumber(fileSize);
-
+      const episodeDuration = parseEpisodeDuration(duration);
       if (episodeDuration) {
         custom_elements.push({'itunes:duration': episodeDuration});
       }
@@ -177,7 +177,6 @@ export default defineEventHandler(
         custom_elements,
         enclosure: {
           url,
-          size: episodeFileSize,
           type: 'audio/mpeg',
         },
       });
