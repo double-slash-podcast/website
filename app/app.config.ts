@@ -31,7 +31,7 @@ export default defineAppConfig({
       Retrouvez-nous régulièrement pour parler de sujets variés tels que la JAMStack, l’accessibilité, l’écoconception, React JS, Vue JS et des retours d’expériences sur des implémentations.
       Également, des débats autour de sujets polémiques tels que la communication entre développeurs/designers ou comment avoir un discours compréhensible par les clients.
       Nous serons accompagnés de temps en temps par des invités experts dans leur domaine pour approfondir un sujet et avoir des retours d’expériences.
-      Faites-nous vos retours par mail sur <a href="mailto:contact@double-slash.dev">contact@double-slash.dev</a>
+      Faites-nous vos retours par mail sur contact@double-slash.dev
       `,
     // episodic || serial
     podcastType: `episodic`,
@@ -42,13 +42,13 @@ export default defineAppConfig({
       'https://asset.cloudinary.com/doubleslash/b8ab50c46bb5201ee77d2a8d85a2d1bc',
     feedUrl: `${baseInfos.siteUrl}/podcast-rss-feed.xml`,
     language: `fr-FR`,
-    copyright: `Copyright © 2025 Double Slash`,
+    copyright: `Copyright © 2026 Double Slash`,
     authorName: `Alex Duval/Patrick Faramaz`,
     ownerName: `Double Slash`,
     ownerEmail: baseInfos.email,
     managingEditor: baseInfos.email,
     webMaster: baseInfos.email,
-    explicit: `no`,
+    explicit: `false`,
     publicationDate: `April 01, 2020 10:00:00 GMT`,
     category1: `Technology`,
     timeToLive: 60,
