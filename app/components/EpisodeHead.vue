@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/**
+ * Episode page header: artwork, title, date, duration and play control.
+ */
 const {podcastInfos} = useAppConfig();
 
 const props = defineProps<{
@@ -49,7 +52,7 @@ const date = useLocalDate(props.episode.publicationDate);
         <NewEpisode :publication-date="props.episode.publicationDate" />
       </div>
       <div class="flex items-center gap-x-2">
-        <Duration :slug="props.episode.dsSlug" />
+        <Duration :duration="props.episode.duration" />
         <PlayerRemote
           :episode="props.episode"
           size="80"

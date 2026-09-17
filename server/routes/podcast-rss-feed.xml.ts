@@ -1,9 +1,8 @@
 import crypto from 'node:crypto';
 import type {H3Event, NodeIncomingMessage} from 'h3';
 import RSS from 'rss';
-import {useRedis} from '../../app/composables/useRedis';
-import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import type {PodcastsCollectionItem} from '@nuxt/content';
+import {parseEpisodeDuration} from '~/helpers/duration/parseEpisodeDuration';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -17,6 +16,9 @@ const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
   return docs;
 };
 
+/**
+ * Build the podcast-level RSS channel options from app config.
+ */
 const getFeedBase = (infos: PodcastInfosType) =>
   // get the options for the podcast iteself
   ({
@@ -77,30 +79,6 @@ const getFeedBase = (infos: PodcastInfosType) =>
     ],
   });
 
-/**
- * get the size of remote file
- * @param url
- * @returns
- */
-const getRemoteFileInfos = async (url: string) => {
-  const redis = useRedis();
-  let estimate;
-  // from cache
-  const dbEstimate = await redis.get(url);
-
-  if (dbEstimate) {
-    return dbEstimate;
-  }
-  try {
-    estimate = await estimateMP3DurationAxios(url);
-    // save in DB
-    await redis.set(url, estimate);
-  } catch (e) {
-    throw new Error((e as Error).message);
-  }
-  return estimate || {duration: undefined, size: undefined};
-};
-
 export default defineEventHandler(
   async (event: H3Event | NodeIncomingMessage) => {
     const {
@@ -123,7 +101,7 @@ export default defineEventHandler(
     // create the rss feed
     const feed = new RSS(getFeedBase(podcastInfos));
 
-    for await (const podcast of await _podcasts) {
+    for (const podcast of _podcasts) {
       const {
         title,
         subtitle,
@@ -139,6 +117,7 @@ export default defineEventHandler(
         description,
         guid,
         episodeArtwork,
+        duration,
       }: PodcastsCollectionItem = podcast;
 
       if (!title) {
@@ -181,12 +160,9 @@ export default defineEventHandler(
         {'googleplay:explicit': explicit},
       ];
 
-      // get size of audio files
-
-      const {duration, size} = await getRemoteFileInfos(url);
-
-      if (duration) {
-        custom_elements.push({'itunes:duration': duration});
+      const episodeDuration = parseEpisodeDuration(duration);
+      if (episodeDuration) {
+        custom_elements.push({'itunes:duration': episodeDuration});
       }
 
       // add an episode item to the feed using the options
@@ -201,7 +177,6 @@ export default defineEventHandler(
         custom_elements,
         enclosure: {
           url,
-          size,
           type: 'audio/mpeg',
         },
       });
