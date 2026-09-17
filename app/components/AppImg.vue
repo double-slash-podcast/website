@@ -1,9 +1,9 @@
 <script setup lang="ts">
 /**
  * Cloudinary-backed images via NuxtImg.
- * @nuxt/image is patched: useTemplateRef('imgEl') throws
- * `Cannot redefine property: imgEl` during Vue 3.5 production SSR
- * and fails `nuxi generate` (see patches/@nuxt__image@2.1.0.patch).
+ * @nuxt/image is patched (see patches/@nuxt__image@2.1.0.patch):
+ * useTemplateRef('imgEl') throws during Vue 3.5 production SSR, and a
+ * template ref on <img> crashes setRef under Nuxt Suspense (null owner).
  */
 withDefaults(
   defineProps<{

@@ -3,7 +3,7 @@ const {path} = useRoute();
 
 const {scrollDirection, scrollPosition} = useScrollDirection();
 
-const {wrapperNav, handleOut, handleHover} = useNavAnimation();
+const {handleOut, handleHover} = useNavAnimation();
 
 const {isOpen: isSearchOpen} = useSiteSearch();
 
@@ -36,7 +36,7 @@ const links = [
       'bg-transparent': scrollPosition <= 70,
     }"
   >
-    <div ref="wrapperNav" class="relative flex justify-center md:gap-4 gap-2 pb-2">
+    <div class="js-nav-links relative flex justify-center md:gap-4 gap-2 pb-2">
       <nuxt-link
         to="/"
         title="accueil"

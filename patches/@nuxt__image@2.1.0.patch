@@ -2,43 +2,68 @@ diff --git a/dist/runtime/components/NuxtImg.vue b/dist/runtime/components/NuxtI
 index b04be7e723f41e4da397a6d523af38f60a8bf9ce..86c78c0c22b5e22309dc5d6d49fe718cc9fba9ce 100644
 --- a/dist/runtime/components/NuxtImg.vue
 +++ b/dist/runtime/components/NuxtImg.vue
-@@ -17,7 +17,7 @@
+@@ -1,7 +1,6 @@
+ <template>
+   <img
+     v-if="!custom"
+-    ref="imgEl"
+     :class="placeholder ? placeholderClass : void 0"
+     v-bind="imgAttrs"
+     :src="src"
+@@ -17,7 +16,7 @@
  </template>
  
  <script setup>
 -import { computed, onMounted, ref, useAttrs, useTemplateRef } from "vue";
-+import { computed, onMounted, ref, useAttrs } from "vue";
++import { computed, getCurrentInstance, onMounted, ref, useAttrs } from "vue";
  import { useImage } from "../composables";
  import { prerenderStaticImages } from "../utils/prerender";
  import { markFeatureUsage } from "../utils/performance";
-@@ -106,7 +106,7 @@ if (import.meta.server && import.meta.prerender) {
+@@ -106,9 +105,12 @@ if (import.meta.server && import.meta.prerender) {
    prerenderStaticImages(src.value, sizes.value.srcset, useRequestEvent());
  }
  const initialLoad = useNuxtApp().isHydrating;
 -const imgEl = useTemplateRef("imgEl");
 +const imgEl = ref(null);
++const instance = getCurrentInstance();
  defineExpose({ imgEl });
  onMounted(() => {
++  const el = instance?.vnode.el;
++  imgEl.value = el instanceof HTMLImageElement ? el : null;
    if (placeholder.value || props.custom) {
+     const img = new Image();
+     if (mainSrc.value) {
 diff --git a/dist/runtime/components/NuxtPicture.vue b/dist/runtime/components/NuxtPicture.vue
 index 850ded45adac123991b860b6fba4b133395b9619..dc1f391e801e6317c109edc36ed19a9090d0c981 100644
 --- a/dist/runtime/components/NuxtPicture.vue
 +++ b/dist/runtime/components/NuxtPicture.vue
-@@ -22,7 +22,7 @@
+@@ -10,7 +10,6 @@
+       >
+       <img
+         v-else
+-        ref="imgEl"
+         :key="'last' + source.src"
+         v-bind="attrs.img"
+         :src="source.src"
+@@ -22,7 +21,7 @@
  </template>
  
  <script setup>
 -import { computed, onMounted, useAttrs, useTemplateRef } from "vue";
-+import { computed, onMounted, ref, useAttrs } from "vue";
++import { computed, getCurrentInstance, onMounted, ref, useAttrs } from "vue";
  import { prerenderStaticImages } from "../utils/prerender";
  import { markFeatureUsage } from "../utils/performance";
  import { useImage } from "../composables";
-@@ -127,7 +127,7 @@ if (import.meta.server && import.meta.prerender) {
+@@ -127,8 +126,11 @@ if (import.meta.server && import.meta.prerender) {
  }
  const nuxtApp = useNuxtApp();
  const initialLoad = nuxtApp.isHydrating;
 -const imgEl = useTemplateRef("imgEl");
 +const imgEl = ref(null);
++const instance = getCurrentInstance();
  onMounted(() => {
++  const root = instance?.vnode.el;
++  imgEl.value = root instanceof HTMLElement ? root.querySelector("img") : null;
    const el = Array.isArray(imgEl.value) ? imgEl.value[0] : imgEl.value;
    if (!el) {
+     return;

@@ -37,7 +37,8 @@ minimumReleaseAgeExclude:
   - baseline-browser-mapping@2.11.24
   - prettier@3.9.7
 
-# NuxtImg useTemplateRef('imgEl') throws during Vue 3.5 generate SSR.
+# NuxtImg: useTemplateRef throws during Vue 3.5 generate SSR, and a
+# template ref on <img> crashes setRef under Nuxt Suspense (null owner).
 # ContentRenderer/MDC wrap setup() in defineAsyncComponent and wipe SSR HTML.
 patchedDependencies:
   '@nuxt/content@3.16.0': patches/@nuxt__content@3.16.0.patch
