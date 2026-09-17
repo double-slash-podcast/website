@@ -5,6 +5,17 @@
 
 export type WebMcpCatalogKind = 'episode' | 'article';
 
+/** Raw Nuxt Content row before it is slimmed for agents. */
+export type WebMcpCatalogSource = {
+  title?: string;
+  path?: string;
+  description?: string;
+  tags?: string[];
+  dsSlug?: string;
+  episodeNumber?: number;
+  status?: string;
+};
+
 export type WebMcpCatalogItem = {
   kind: WebMcpCatalogKind;
   title: string;

@@ -1,9 +1,12 @@
 <script setup lang="ts">
 /**
- * Cloudinary-backed <img> via useImage(), without NuxtImg.
- * NuxtImg's useTemplateRef('imgEl') throws during Vue 3.5 production SSR
- * (`Cannot redefine property: imgEl`) and fails `nuxi generate`.
+ * Cloudinary-backed <img> via useImage(), with NuxtImg-like 1x/2x srcset.
+ * NuxtImg itself cannot be used: `useTemplateRef('imgEl')` throws during
+ * Vue 3.5 production SSR (`Cannot redefine property: imgEl`) and fails
+ * `nuxi generate`.
  */
+import {buildDensitySrcset, toPx} from '~/utils/appImg';
+
 const props = withDefaults(
   defineProps<{
     src: string;
@@ -31,20 +34,19 @@ const resolvedSrc = computed(() =>
   }),
 );
 
-/**
- * Parse a width/height that may be a number or a string with a `px` suffix.
- */
-function toPx(value?: number | string): number | undefined {
-  if (value === undefined || value === '') return undefined;
-  const parsed =
-    typeof value === 'number' ? value : Number.parseInt(String(value), 10);
-  return Number.isFinite(parsed) ? parsed : undefined;
-}
+const srcset = computed(() =>
+  buildDensitySrcset(
+    (width, height) => img(props.src, {width, height}),
+    widthPx.value,
+    heightPx.value,
+  ),
+);
 </script>
 
 <template>
   <img
     :src="resolvedSrc"
+    :srcset="srcset"
     :alt="alt"
     :width="widthPx"
     :height="heightPx"

@@ -13,6 +13,11 @@ const CONTENT_404_PAGES = [
   'app/pages/podcasts/[slug].vue',
 ];
 
+const SSR_ERROR_PLUGIN = path.join(
+  process.cwd(),
+  'app/plugins/logSsrErrors.server.ts',
+);
+
 describe('notFoundErrorOptions', () => {
   test('is a fatal 404 so client navigation shows error.vue', () => {
     expect(notFoundErrorOptions.statusCode).toBe(404);
@@ -54,5 +59,16 @@ describe('getErrorPageCopy', () => {
     expect(copy.title).toBe('Une erreur est survenue');
     expect(copy.heading).toBe('Une erreur est survenue !');
     expect(copy.description).not.toContain('page');
+  });
+});
+
+describe('logSsrErrors plugin', () => {
+  test('chains the previous Vue errorHandler instead of replacing it', () => {
+    const src = fs.readFileSync(SSR_ERROR_PLUGIN, 'utf8');
+
+    expect(src).toContain(
+      'const previous = nuxtApp.vueApp.config.errorHandler',
+    );
+    expect(src).toContain('previous?.(');
   });
 });

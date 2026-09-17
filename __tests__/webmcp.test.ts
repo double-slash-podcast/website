@@ -1,6 +1,10 @@
 import {afterEach, describe, expect, test, vi} from 'vitest';
-import {registerWebMcpTools} from '../app/utils/webmcpContext';
 import {
+  registerWebMcpTools,
+  registerWebMcpToolsWhenAvailable,
+} from '../app/utils/webmcpContext';
+import {
+  buildWebMcpCatalog,
   clampCatalogLimit,
   findEpisode,
   formatCatalogItem,
@@ -96,8 +100,41 @@ describe('webmcp search helpers', () => {
   });
 });
 
+describe('buildWebMcpCatalog', () => {
+  test('drops draft and scheduled episodes, keeps articles', () => {
+    const items = buildWebMcpCatalog(
+      [
+        {
+          title: 'Live',
+          path: '/podcasts/live',
+          status: 'published',
+          dsSlug: 'DS_1',
+        },
+        {
+          title: 'Secret',
+          path: '/podcasts/secret',
+          status: 'draft',
+          dsSlug: 'DS_2',
+        },
+        {
+          title: 'Soon',
+          path: '/podcasts/soon',
+          status: 'scheduled',
+          dsSlug: 'DS_3',
+        },
+      ],
+      [{title: 'Post', path: '/articles/post', description: 'x'}],
+    );
+
+    expect(items.map(item => item.path)).toEqual([
+      '/podcasts/live',
+      '/articles/post',
+    ]);
+  });
+});
+
 describe('registerWebMcpTools', () => {
-  test('calls registerTool for each tool and passes the abort signal', () => {
+  test('calls registerTool for each tool and passes the abort signal', async () => {
     const registerTool = vi.fn();
     Object.defineProperty(document, 'modelContext', {
       configurable: true,
@@ -109,14 +146,16 @@ describe('registerWebMcpTools', () => {
       {name: 'search_content', description: 'x', execute: () => ''},
     ] as WebMcpTool[];
 
-    expect(registerWebMcpTools(tools, {signal: controller.signal})).toBe(true);
+    expect(await registerWebMcpTools(tools, {signal: controller.signal})).toBe(
+      true,
+    );
     expect(registerTool).toHaveBeenCalledTimes(1);
     expect(registerTool.mock.calls[0]?.[1]).toEqual({
       signal: controller.signal,
     });
   });
 
-  test('falls back to provideContext when registerTool is missing', () => {
+  test('falls back to provideContext when registerTool is missing', async () => {
     const provideContext = vi.fn();
     Object.defineProperty(navigator, 'modelContext', {
       configurable: true,
@@ -131,12 +170,45 @@ describe('registerWebMcpTools', () => {
       getPlayerStatus: () => ({status: 'pause'}),
     });
 
-    expect(registerWebMcpTools(tools)).toBe(true);
+    expect(await registerWebMcpTools(tools)).toBe(true);
     expect(provideContext).toHaveBeenCalledWith({tools});
   });
 
-  test('returns false when the API is absent', () => {
-    expect(registerWebMcpTools([])).toBe(false);
+  test('returns false when the API is absent', async () => {
+    expect(await registerWebMcpTools([])).toBe(false);
+  });
+
+  test('swallows async registerTool failures without throwing', async () => {
+    const registerTool = vi.fn().mockRejectedValue(new Error('nope'));
+    Object.defineProperty(document, 'modelContext', {
+      configurable: true,
+      value: {registerTool},
+    });
+
+    await expect(
+      registerWebMcpTools([
+        {name: 'search_content', description: 'x', execute: () => ''},
+      ] as WebMcpTool[]),
+    ).resolves.toBe(true);
+  });
+
+  test('registers when modelContext appears after a ready event', async () => {
+    const registerTool = vi.fn();
+    const tools = [
+      {name: 'search_content', description: 'x', execute: () => ''},
+    ] as WebMcpTool[];
+
+    const stop = registerWebMcpToolsWhenAvailable(tools);
+    expect(registerTool).not.toHaveBeenCalled();
+
+    Object.defineProperty(document, 'modelContext', {
+      configurable: true,
+      value: {registerTool},
+    });
+    window.dispatchEvent(new Event('modelcontext'));
+
+    await vi.waitFor(() => expect(registerTool).toHaveBeenCalledTimes(1));
+    stop();
   });
 });
 
@@ -214,8 +286,9 @@ describe('webmcp client plugin wiring', () => {
       'utf8',
     );
 
-    expect(src).toContain('registerWebMcpTools');
+    expect(src).toContain('registerWebMcpToolsWhenAvailable');
     expect(src).toContain('createWebMcpTools');
+    expect(src).toContain('buildWebMcpCatalog');
     expect(src).toContain('AbortController');
   });
 });

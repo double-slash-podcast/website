@@ -1,5 +1,10 @@
 import {SITE_ORIGIN} from './agentDiscovery';
-import type {WebMcpCatalogItem} from './webmcpTypes';
+import {isPublishedStatus} from './publishedContent';
+import type {
+  WebMcpCatalogItem,
+  WebMcpCatalogKind,
+  WebMcpCatalogSource,
+} from './webmcpTypes';
 
 const MIN_TOKEN_LENGTH = 2;
 const MIN_LIMIT = 1;
@@ -169,4 +174,43 @@ export function formatCatalogItem(item: WebMcpCatalogItem): string {
   const slug = item.dsSlug ? ` [${item.dsSlug}]` : '';
 
   return `${kind}${number}: ${item.title}${slug}\n  ${item.path}/\n  ${item.description}`;
+}
+
+/**
+ * Slim a Nuxt Content document to the catalog shape agents receive.
+ */
+export function toCatalogItem(
+  kind: WebMcpCatalogKind,
+  doc: WebMcpCatalogSource,
+): WebMcpCatalogItem | undefined {
+  if (!doc.title || !doc.path) {
+    return undefined;
+  }
+
+  return {
+    kind,
+    title: doc.title,
+    path: doc.path,
+    description: doc.description ?? '',
+    tags: doc.tags ?? [],
+    dsSlug: doc.dsSlug,
+    episodeNumber: doc.episodeNumber,
+  };
+}
+
+/**
+ * Build the in-browser catalog: published episodes plus every article.
+ */
+export function buildWebMcpCatalog(
+  podcasts: WebMcpCatalogSource[],
+  articles: WebMcpCatalogSource[],
+): WebMcpCatalogItem[] {
+  const episodes = podcasts
+    .filter(doc => isPublishedStatus(doc.status))
+    .map(doc => toCatalogItem('episode', doc));
+  const posts = articles.map(doc => toCatalogItem('article', doc));
+
+  return [...episodes, ...posts].filter(
+    (item): item is WebMcpCatalogItem => item != null,
+  );
 }

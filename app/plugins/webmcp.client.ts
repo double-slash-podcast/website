@@ -1,41 +1,14 @@
-import {registerWebMcpTools} from '~/utils/webmcpContext';
+import {registerWebMcpToolsWhenAvailable} from '~/utils/webmcpContext';
+import {buildWebMcpCatalog} from '~/utils/webmcpSearch';
 import {createWebMcpTools} from '~/utils/webmcpTools';
 import type {WebMcpCatalogItem} from '~/utils/webmcpTypes';
 import {usePlayerStore} from '~/stores/player';
 
-/**
- * Map a Nuxt Content document to the slim catalog shape agents receive.
- */
-function toCatalogItem(
-  kind: WebMcpCatalogItem['kind'],
-  doc: {
-    title?: string;
-    path?: string;
-    description?: string;
-    tags?: string[];
-    dsSlug?: string;
-    episodeNumber?: number;
-  },
-): WebMcpCatalogItem | undefined {
-  if (!doc.title || !doc.path) {
-    return undefined;
-  }
-
-  return {
-    kind,
-    title: doc.title,
-    path: doc.path,
-    description: doc.description ?? '',
-    tags: doc.tags ?? [],
-    dsSlug: doc.dsSlug,
-    episodeNumber: doc.episodeNumber,
-  };
-}
-
 let catalogPromise: Promise<WebMcpCatalogItem[]> | null = null;
 
 /**
- * Load episodes and articles from the content collections, cached for the tab.
+ * Load published episodes and articles from the content collections, cached
+ * for the tab. Draft/scheduled podcasts stay out of the agent catalog.
  */
 async function loadCatalog(): Promise<WebMcpCatalogItem[]> {
   if (!catalogPromise) {
@@ -45,10 +18,7 @@ async function loadCatalog(): Promise<WebMcpCatalogItem[]> {
         queryCollection('articles').all(),
       ]);
 
-      return [
-        ...podcasts.map(doc => toCatalogItem('episode', doc)),
-        ...articles.map(doc => toCatalogItem('article', doc)),
-      ].filter((item): item is WebMcpCatalogItem => item != null);
+      return buildWebMcpCatalog(podcasts, articles);
     })().catch(error => {
       catalogPromise = null;
       throw error;
@@ -59,7 +29,8 @@ async function loadCatalog(): Promise<WebMcpCatalogItem[]> {
 }
 
 /**
- * Register Double Slash WebMCP tools when the browser exposes modelContext.
+ * Register Double Slash WebMCP tools when the browser exposes modelContext,
+ * including the late-injection case (agent sidebar after first paint).
  */
 export default defineNuxtPlugin({
   name: 'webmcp',
@@ -102,7 +73,7 @@ export default defineNuxtPlugin({
       },
     });
 
-    registerWebMcpTools(tools, {signal: controller.signal});
+    registerWebMcpToolsWhenAvailable(tools, {signal: controller.signal});
 
     if (import.meta.client) {
       window.addEventListener('pagehide', () => controller.abort(), {

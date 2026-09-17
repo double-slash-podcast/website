@@ -1,4 +1,10 @@
-import {mkdtempSync, readFileSync, writeFileSync, mkdirSync} from 'node:fs';
+import {
+  mkdtempSync,
+  readFileSync,
+  writeFileSync,
+  mkdirSync,
+  existsSync,
+} from 'node:fs';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
 import {describe, expect, test} from 'vitest';
@@ -14,6 +20,10 @@ import {
   emitAgentMarkdownIndexes,
   extractFrontmatterTitle,
 } from '../app/utils/agentMarkdownIndexes';
+import {
+  escapeMarkdownLinkLabel,
+  shouldPublishAgentMarkdown,
+} from '../app/utils/frontmatter';
 
 describe('stripContentOrderPrefix', () => {
   test('drops Nuxt Content numeric prefixes', () => {
@@ -88,7 +98,12 @@ describe('emitAgentMarkdownPages', () => {
     writeFileSync(join(contentDir, 'articles', 'demo.md'), '# article\n');
     writeFileSync(
       join(contentDir, 'podcasts', '001.hello', 'index.md'),
-      '# episode\n',
+      '---\nstatus: published\ntitle: Hello\n---\n# episode\n',
+    );
+    mkdirSync(join(contentDir, 'podcasts', '002.draft'), {recursive: true});
+    writeFileSync(
+      join(contentDir, 'podcasts', '002.draft', 'index.md'),
+      '---\nstatus: draft\ntitle: Secret\n---\n# draft\n',
     );
     writeFileSync(join(contentDir, 'custom', 'about.md'), '# about\n');
 
@@ -107,23 +122,60 @@ describe('emitAgentMarkdownPages', () => {
     );
     expect(
       readFileSync(join(outputDir, 'podcasts/hello/index.md'), 'utf8'),
-    ).toBe('# episode\n');
+    ).toContain('# episode\n');
     expect(readFileSync(join(outputDir, 'about/index.md'), 'utf8')).toBe(
       '# about\n',
     );
+    expect(pages.map(page => page.publicPath)).not.toContain('/podcasts/draft');
+    expect(existsSync(join(outputDir, 'podcasts/draft/index.md'))).toBe(false);
   });
 });
 
 describe('extractFrontmatterTitle', () => {
-  test('reads quoted and unquoted YAML titles', () => {
-    expect(extractFrontmatterTitle("title: 'Hello world'\n\nbody\n", 'x')).toBe(
-      'Hello world',
-    );
-    expect(extractFrontmatterTitle('title: News sans quotes\n', 'x')).toBe(
-      'News sans quotes',
-    );
+  test('reads quoted and unquoted YAML titles from the fence only', () => {
+    expect(
+      extractFrontmatterTitle("---\ntitle: 'Hello world'\n---\n\nbody\n", 'x'),
+    ).toBe('Hello world');
+    expect(
+      extractFrontmatterTitle('---\ntitle: News sans quotes\n---\n', 'x'),
+    ).toBe('News sans quotes');
     expect(extractFrontmatterTitle('# no frontmatter\n', '/fallback')).toBe(
       '/fallback',
+    );
+    expect(
+      extractFrontmatterTitle(
+        '---\ntitle: Real title\n---\n\ntitle: body spoiler\n',
+        'x',
+      ),
+    ).toBe('Real title');
+  });
+});
+
+describe('shouldPublishAgentMarkdown', () => {
+  test('emits articles always and podcasts only when published', () => {
+    expect(shouldPublishAgentMarkdown('articles/demo.md', '# x\n')).toBe(true);
+    expect(
+      shouldPublishAgentMarkdown(
+        'podcasts/001.hello/index.md',
+        '---\nstatus: published\n---\n',
+      ),
+    ).toBe(true);
+    expect(
+      shouldPublishAgentMarkdown(
+        'podcasts/002.draft/index.md',
+        '---\nstatus: draft\n---\n',
+      ),
+    ).toBe(false);
+    expect(
+      shouldPublishAgentMarkdown('podcasts/003.none/index.md', '# no status\n'),
+    ).toBe(false);
+  });
+});
+
+describe('escapeMarkdownLinkLabel', () => {
+  test('escapes brackets so titles cannot break index links', () => {
+    expect(escapeMarkdownLinkLabel('Foo](https://evil.example)[x')).toBe(
+      'Foo\\](https://evil.example)\\[x',
     );
   });
 });
@@ -145,11 +197,16 @@ describe('emitAgentMarkdownIndexes', () => {
     );
     writeFileSync(
       join(contentDir, 'podcasts', '001.hello', 'index.md'),
-      '---\ntitle: First episode\n---\n',
+      '---\nstatus: published\ntitle: First episode\n---\n',
     );
     writeFileSync(
       join(contentDir, 'podcasts', '002.later', 'index.md'),
-      '---\ntitle: Second episode\n---\n',
+      '---\nstatus: published\ntitle: Second episode\n---\n',
+    );
+    mkdirSync(join(contentDir, 'podcasts', '003.draft'), {recursive: true});
+    writeFileSync(
+      join(contentDir, 'podcasts', '003.draft', 'index.md'),
+      '---\nstatus: draft\ntitle: Secret draft\n---\n',
     );
     writeFileSync(
       join(contentDir, 'custom', 'about.md'),
@@ -171,6 +228,7 @@ describe('emitAgentMarkdownIndexes', () => {
     expect(readFileSync(join(outputDir, 'podcasts.md'), 'utf8')).toContain(
       '[First episode](/podcasts/hello/)',
     );
+    expect(home).not.toContain('Secret draft');
   });
 });
 

@@ -86,3 +86,6 @@ dist
 modules/rss-feed-podcasts
 
 .data
+
+# Vitest JSON reporter output
+.vitest/

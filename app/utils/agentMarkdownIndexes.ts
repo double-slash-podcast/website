@@ -1,9 +1,12 @@
-import {mkdirSync, readFileSync, writeFileSync} from 'node:fs';
+import {mkdirSync, writeFileSync} from 'node:fs';
 import {dirname, join} from 'node:path';
 import {
   contentFileToPublicPath,
-  listAgentMarkdownSources,
+  listPublishableAgentMarkdown,
 } from './agentMarkdown';
+import {escapeMarkdownLinkLabel, extractFrontmatterTitle} from './frontmatter';
+
+export {extractFrontmatterTitle} from './frontmatter';
 
 export const AGENT_MARKDOWN_SITE_TITLE = 'Double Slash';
 export const AGENT_MARKDOWN_SITE_DESCRIPTION =
@@ -22,35 +25,24 @@ export type EmitAgentMarkdownIndexesOptions = {
 };
 
 /**
- * Read a scalar YAML `title` from markdown frontmatter.
- */
-export function extractFrontmatterTitle(
-  markdown: string,
-  fallback: string,
-): string {
-  const match = markdown.match(/^title:\s*(?:['"](.+?)['"]|(.+?))\s*$/m);
-  const raw = match?.[1] ?? match?.[2];
-  return raw?.trim() || fallback;
-}
-
-/**
- * Build catalog entries from content markdown files.
+ * Build catalog entries from published content markdown files.
  */
 export function collectAgentMarkdownIndexEntries(
   contentDir: string,
 ): AgentMarkdownIndexEntry[] {
-  return listAgentMarkdownSources(contentDir).map(sourcePath => {
-    const publicPath = contentFileToPublicPath(sourcePath);
-    const markdown = readFileSync(join(contentDir, sourcePath), 'utf8');
-    const collection = sourcePath.split('/')[0] ?? 'pages';
+  return listPublishableAgentMarkdown(contentDir).map(
+    ({sourcePath, markdown}) => {
+      const publicPath = contentFileToPublicPath(sourcePath);
+      const collection = sourcePath.split('/')[0] ?? 'pages';
 
-    return {
-      collection,
-      publicPath,
-      sourcePath,
-      title: extractFrontmatterTitle(markdown, publicPath),
-    };
-  });
+      return {
+        collection,
+        publicPath,
+        sourcePath,
+        title: extractFrontmatterTitle(markdown, publicPath),
+      };
+    },
+  );
 }
 
 /**
@@ -58,7 +50,10 @@ export function collectAgentMarkdownIndexEntries(
  */
 function toBulletList(entries: AgentMarkdownIndexEntry[]): string {
   return entries
-    .map(entry => `- [${entry.title}](${entry.publicPath}/)`)
+    .map(
+      entry =>
+        `- [${escapeMarkdownLinkLabel(entry.title)}](${entry.publicPath}/)`,
+    )
     .join('\n');
 }
 

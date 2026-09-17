@@ -1,3 +1,4 @@
+import {isPublishedStatus} from './publishedContent';
 import {toIsoDatetime} from './toIsoDatetime';
 
 /** One sitemap <url> payload: loc is site-relative, lastmod is YYYY-MM-DD. */
@@ -48,8 +49,8 @@ export function collectSitemapUrls(docs: {
 }): SitemapUrl[] {
   const urls: SitemapUrl[] = STATIC_SITEMAP_PATHS.map(url => ({url}));
 
-  const publishedPodcasts = docs.podcasts.filter(
-    doc => doc.status === 'published',
+  const publishedPodcasts = docs.podcasts.filter(doc =>
+    isPublishedStatus(doc.status),
   );
 
   for (const doc of [...publishedPodcasts, ...docs.articles, ...docs.custom]) {

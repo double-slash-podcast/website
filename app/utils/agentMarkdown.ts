@@ -1,5 +1,6 @@
-import {copyFileSync, globSync, mkdirSync} from 'node:fs';
+import {copyFileSync, globSync, mkdirSync, readFileSync} from 'node:fs';
 import {dirname, join} from 'node:path';
+import {shouldPublishAgentMarkdown} from './frontmatter';
 
 /** Nuxt Content ordering prefix, e.g. `140.news` → `news`. */
 const ORDER_PREFIX = /^\d+\./;
@@ -99,17 +100,38 @@ export function listAgentMarkdownSources(contentDir: string): string[] {
   ).sort();
 }
 
+export type PublishableAgentMarkdown = {
+  sourcePath: string;
+  markdown: string;
+};
+
 /**
- * Copy each content markdown file next to its prerendered HTML in `outputDir`.
+ * Content markdown that may be copied next to HTML (podcast drafts stay out).
+ */
+export function listPublishableAgentMarkdown(
+  contentDir: string,
+): PublishableAgentMarkdown[] {
+  return listAgentMarkdownSources(contentDir).flatMap(sourcePath => {
+    const markdown = readFileSync(join(contentDir, sourcePath), 'utf8');
+    if (!shouldPublishAgentMarkdown(sourcePath, markdown)) {
+      return [];
+    }
+
+    return [{sourcePath, markdown}];
+  });
+}
+
+/**
+ * Copy each published content markdown file next to its prerendered HTML.
  */
 export function emitAgentMarkdownPages(
   options: EmitAgentMarkdownOptions,
 ): EmittedMarkdownPage[] {
-  const sources = listAgentMarkdownSources(options.contentDir);
+  const sources = listPublishableAgentMarkdown(options.contentDir);
   const seen = new Map<string, string>();
   const emitted: EmittedMarkdownPage[] = [];
 
-  for (const relativePath of sources) {
+  for (const {sourcePath: relativePath} of sources) {
     const publicPath = contentFileToPublicPath(relativePath);
     const previous = seen.get(publicPath);
 
@@ -125,12 +147,12 @@ export function emitAgentMarkdownPages(
       publicPath,
       options.outputDir,
     );
-    const sourcePath = join(options.contentDir, relativePath);
+    const diskPath = join(options.contentDir, relativePath);
 
     mkdirSync(dirname(indexPath), {recursive: true});
     mkdirSync(dirname(siblingPath), {recursive: true});
-    copyFileSync(sourcePath, indexPath);
-    copyFileSync(sourcePath, siblingPath);
+    copyFileSync(diskPath, indexPath);
+    copyFileSync(diskPath, siblingPath);
 
     emitted.push({
       sourcePath: relativePath,
