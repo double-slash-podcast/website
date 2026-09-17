@@ -9,6 +9,11 @@ import {
   publicPathToOutputFiles,
   stripContentOrderPrefix,
 } from '../app/utils/agentMarkdown';
+import {
+  buildHomeMarkdown,
+  emitAgentMarkdownIndexes,
+  extractFrontmatterTitle,
+} from '../app/utils/agentMarkdownIndexes';
 
 describe('stripContentOrderPrefix', () => {
   test('drops Nuxt Content numeric prefixes', () => {
@@ -106,5 +111,82 @@ describe('emitAgentMarkdownPages', () => {
     expect(readFileSync(join(outputDir, 'about/index.md'), 'utf8')).toBe(
       '# about\n',
     );
+  });
+});
+
+describe('extractFrontmatterTitle', () => {
+  test('reads quoted and unquoted YAML titles', () => {
+    expect(extractFrontmatterTitle("title: 'Hello world'\n\nbody\n", 'x')).toBe(
+      'Hello world',
+    );
+    expect(extractFrontmatterTitle('title: News sans quotes\n', 'x')).toBe(
+      'News sans quotes',
+    );
+    expect(extractFrontmatterTitle('# no frontmatter\n', '/fallback')).toBe(
+      '/fallback',
+    );
+  });
+});
+
+describe('emitAgentMarkdownIndexes', () => {
+  test('writes homepage and listing markdown for Accept negotiation', () => {
+    const root = mkdtempSync(join(tmpdir(), 'agent-md-idx-'));
+    const contentDir = join(root, 'content');
+    const outputDir = join(root, 'dist');
+
+    mkdirSync(join(contentDir, 'articles'), {recursive: true});
+    mkdirSync(join(contentDir, 'podcasts', '002.later'), {recursive: true});
+    mkdirSync(join(contentDir, 'podcasts', '001.hello'), {recursive: true});
+    mkdirSync(join(contentDir, 'custom'), {recursive: true});
+
+    writeFileSync(
+      join(contentDir, 'articles', 'demo.md'),
+      '---\ntitle: Demo article\n---\n',
+    );
+    writeFileSync(
+      join(contentDir, 'podcasts', '001.hello', 'index.md'),
+      '---\ntitle: First episode\n---\n',
+    );
+    writeFileSync(
+      join(contentDir, 'podcasts', '002.later', 'index.md'),
+      '---\ntitle: Second episode\n---\n',
+    );
+    writeFileSync(
+      join(contentDir, 'custom', 'about.md'),
+      '---\ntitle: About\n---\n',
+    );
+
+    const written = emitAgentMarkdownIndexes({contentDir, outputDir});
+    const home = readFileSync(join(outputDir, 'index.md'), 'utf8');
+
+    expect(written).toEqual(['/', '/articles', '/podcasts']);
+    expect(home).toContain('# Double Slash');
+    expect(home).toContain('- [Demo article](/articles/demo/)');
+    expect(home.indexOf('Second episode')).toBeLessThan(
+      home.indexOf('First episode'),
+    );
+    expect(
+      readFileSync(join(outputDir, 'articles/index.md'), 'utf8'),
+    ).toContain('[Demo article](/articles/demo/)');
+    expect(readFileSync(join(outputDir, 'podcasts.md'), 'utf8')).toContain(
+      '[First episode](/podcasts/hello/)',
+    );
+  });
+});
+
+describe('buildHomeMarkdown', () => {
+  test('includes navigation and grouped catalogs', () => {
+    const markdown = buildHomeMarkdown([
+      {
+        collection: 'articles',
+        publicPath: '/articles/demo',
+        title: 'Demo',
+        sourcePath: 'articles/demo.md',
+      },
+    ]);
+
+    expect(markdown).toContain('[Articles](/articles/)');
+    expect(markdown).toContain('[Index LLMs](/llms.txt)');
+    expect(markdown).toContain('- [Demo](/articles/demo/)');
   });
 });

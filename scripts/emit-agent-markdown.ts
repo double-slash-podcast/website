@@ -1,6 +1,7 @@
 import {existsSync} from 'node:fs';
 import {resolve} from 'node:path';
 import {emitAgentMarkdownPages} from '../app/utils/agentMarkdown';
+import {emitAgentMarkdownIndexes} from '../app/utils/agentMarkdownIndexes';
 
 const root = process.cwd();
 const contentDir = resolve(root, 'content');
@@ -30,5 +31,8 @@ if (outputDirs.length === 0) {
 
 for (const outputDir of outputDirs) {
   const pages = emitAgentMarkdownPages({contentDir, outputDir});
-  console.log(`Emitted ${pages.length} markdown pages to ${outputDir}`);
+  const indexes = emitAgentMarkdownIndexes({contentDir, outputDir});
+  console.log(
+    `Emitted ${pages.length} markdown pages and ${indexes.length} indexes to ${outputDir}`,
+  );
 }
