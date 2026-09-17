@@ -1,3 +1,5 @@
+import {PREFIX_AUDIO} from '~/utils/audio';
+
 const baseInfos: BaseInfosType = {
   siteUrl: 'https://double-slash.dev',
   email: 'contact@double-slash.dev',
@@ -6,8 +8,8 @@ const baseInfos: BaseInfosType = {
     'https://res.cloudinary.com/doubleslash/image/upload/v1597260128/doubleSlashDefault_kyl8s9.png',
   descriptionDefault:
     'Le podcast sur le code, le développement web et les outils modernes.',
-  prefixAudio: 'https://double-slash.ams3.cdn.digitaloceanspaces.com',
-  prefixAudioDev: 'https://double-slash.ams3.cdn.digitaloceanspaces.com',
+  prefixAudio: PREFIX_AUDIO,
+  prefixAudioDev: PREFIX_AUDIO,
   // https://www.youtube.com/feeds/videos.xml?channel_id=
   youtubeChannelId: 'UCp5DGBAX2XNJXeOVAo7bICQ',
   twitterUrl: 'https://twitter.com/doubleslash_dev',
@@ -56,11 +58,6 @@ export default defineAppConfig({
       href: 'https://x.com/doubleslash_dev',
       icon: 'fa6-brands:square-x-twitter',
       title: 'X',
-    },
-    {
-      href: 'https://bsky.app/profile/double-slash.dev',
-      icon: 'logos:bluesky',
-      title: 'Blue Sky',
     },
     {
       href: 'https://github.com/double-slash-podcast',

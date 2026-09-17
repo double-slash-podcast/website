@@ -16,7 +16,7 @@ withDefaults(
 </script>
 
 <template>
-  <nuxt-img
+  <AppImg
     :src="`${siteUrl}${src}`"
     :alt="alt"
     :width="width"

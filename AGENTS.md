@@ -9,8 +9,8 @@
 
 ## Deploy
 
-- Build: `pnpm generate` (`nuxi generate` → `dist/`)
-- nginx serves `dist/`
+- Build: `pnpm generate` (`nuxi generate` → `dist/`, then copies content markdown next to HTML)
+- nginx serves `dist/` and must negotiate `Accept: text/markdown` (sibling `.md` / `index.md`)
 - Node 22 via `nixpacks.toml` / `pnpm-workspace.yaml` (linux/glibc)
 - Do not add `netlify.toml` or treat `nuxi build` + `pnpm start` as production
 - `pnpm generate` is SSG: `@nuxt/scripts` **disables** its Nitro reverse proxy (`/_scripts/p/`)

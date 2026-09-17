@@ -3,22 +3,17 @@ const {data} = await useAsyncData('bloglist', () => {
   return queryCollection('articles').order('publicationDate', 'DESC').all();
 });
 
-useHead({
+useSeoMeta({
   title: 'Tous les articles du blog Double Slash',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Retrouvez la liste de tous les articles publiés par Double Slash',
-    },
-  ],
+  description:
+    'Retrouvez la liste de tous les articles publiés par Double Slash',
 });
 useSchemaOrg([defineWebPage()]);
 </script>
 
 <template>
   <div class="bg-haiti">
-    <Header :height="160" />
+    <Header />
     <main class="px-4">
       <HeadingsSection
         title="Tous les articles du blog double slash"

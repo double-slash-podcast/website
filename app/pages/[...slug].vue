@@ -1,23 +1,22 @@
 <script setup>
 const {path} = useRoute();
 const pathStr = path.replace(/\/+$/, '');
+const {
+  baseInfos: {siteUrl},
+} = useAppConfig();
 // custom page are in content/custom
 const {data} = await useAsyncData(`${pathStr}`, () =>
   queryCollection('custom').where('path', '=', `/custom${pathStr}`).first(),
 );
 
 if (!data.value?.title) {
-  // redirect to 404 page
-  navigateTo('/_404');
+  throw createError(notFoundErrorOptions);
 }
-useHead({
-  title: data.value?.title,
-  meta: [
-    {
-      name: 'description',
-      content: data.value?.description,
-    },
-  ],
+
+useSeoMeta({
+  title: data.value.title,
+  description: data.value.description,
+  ogUrl: `${siteUrl}${path}`,
 });
 useSchemaOrg([defineWebPage()]);
 </script>
@@ -28,7 +27,7 @@ useSchemaOrg([defineWebPage()]);
       <ContentRenderer
         v-if="data"
         :value="data"
-        class="prose min-h-[500px] py-6"
+        class="prose min-h-125 py-6"
       />
     </main>
   </div>

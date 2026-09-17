@@ -81,6 +81,13 @@ type PodcastItems = {
   categories: string;
 };
 
+declare module '@nuxt/content' {
+  interface PodcastsCollectionItem {
+    duration?: number;
+    fileSize?: number;
+  }
+}
+
 declare module '@nuxt/schema' {
   interface AppConfig {
     globalInfos: PodcastInfosType;
