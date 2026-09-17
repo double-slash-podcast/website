@@ -251,7 +251,52 @@ describe('createWebMcpTools', () => {
     const result = await tool('search_content').execute({query: 'webmcp'});
 
     expect(result).toContain('Épisode #137');
+    expect(result).toContain('Page résultats : /search/?q=webmcp');
     expect(result).not.toContain('Redis');
+  });
+
+  test('search_content results URL keeps the article tab', async () => {
+    const result = await tool('search_content').execute({
+      query: 'openclaw',
+      kind: 'article',
+    });
+
+    expect(result).toContain(
+      'Page résultats : /search/?q=openclaw&kind=article',
+    );
+  });
+
+  test('search_content merges FTS body hits with the catalog', async () => {
+    const withFts = createWebMcpTools({
+      loadCatalog: async () => catalog,
+      searchFullText: async () => [
+        {
+          collection: 'articles',
+          id: '/articles/openclaw-vs-hermes',
+          title: 'OpenClaw vs Hermes',
+          content: 'agents open source',
+          rank: -6,
+          snippet: 'agents <mark>open</mark> source',
+        },
+      ],
+      openPage,
+      playEpisode,
+      controlPlayer: action => ({
+        status: action,
+        title: 'News août 2026 : Cursor Origin et WebMCP',
+        dsSlug: 'DS_137_news08-26',
+      }),
+      getPlayerStatus: () => ({
+        status: 'pause',
+        title: 'News août 2026 : Cursor Origin et WebMCP',
+        dsSlug: 'DS_137_news08-26',
+      }),
+    });
+    const searchTool = withFts.find(entry => entry.name === 'search_content');
+    const result = await searchTool!.execute({query: 'open source'});
+
+    expect(result).toContain('Article: OpenClaw vs Hermes');
+    expect(result).toContain('Extrait: agents open source');
   });
 
   test('open_page refuses unsafe paths and navigates safe ones', async () => {
@@ -288,7 +333,8 @@ describe('webmcp client plugin wiring', () => {
 
     expect(src).toContain('registerWebMcpToolsWhenAvailable');
     expect(src).toContain('createWebMcpTools');
-    expect(src).toContain('buildWebMcpCatalog');
+    expect(src).toContain('loadSiteCatalog');
+    expect(src).toContain('useSearchCollection');
     expect(src).toContain('AbortController');
   });
 });

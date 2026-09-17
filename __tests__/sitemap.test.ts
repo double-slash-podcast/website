@@ -86,6 +86,7 @@ describe('collectSitemapUrls', () => {
     expect(urls.map(entry => entry.url)).not.toContain(
       '/podcasts/scheduled-episode/',
     );
+    expect(STATIC_SITEMAP_PATHS).not.toContain('/search/');
   });
 
   test('serializes sitemaps.org urlset with absolute loc and lastmod', async () => {

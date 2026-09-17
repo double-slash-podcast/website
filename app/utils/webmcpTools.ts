@@ -4,8 +4,14 @@ import {
   formatCatalogItem,
   isSafeSitePath,
   latestEpisodes,
-  rankCatalog,
 } from './webmcpSearch';
+import {
+  formatSiteSearchHit,
+  mergeFullTextAndCatalog,
+  type FullTextHit,
+  type SiteSearchHit,
+} from './mergeSearchHits';
+import {searchResultsPath} from './siteCatalog';
 import type {
   WebMcpCatalogItem,
   WebMcpDependencies,
@@ -45,6 +51,38 @@ function formatHits(items: WebMcpCatalogItem[], emptyMessage: string): string {
 }
 
 /**
+ * Format merged search hits, or a "no results" sentence.
+ */
+function formatSearchHits(
+  items: SiteSearchHit[],
+  emptyMessage: string,
+): string {
+  if (items.length === 0) {
+    return emptyMessage;
+  }
+
+  return items
+    .map((item, index) => `${index + 1}. ${formatSiteSearchHit(item)}`)
+    .join('\n\n');
+}
+
+/**
+ * Restrict FTS rows to the collection that matches an optional kind filter.
+ */
+function filterFullTextHits(
+  hits: FullTextHit[],
+  kind: string | undefined,
+): FullTextHit[] {
+  if (kind === 'episode') {
+    return hits.filter(hit => hit.collection === 'podcasts');
+  }
+  if (kind === 'article') {
+    return hits.filter(hit => hit.collection === 'articles');
+  }
+  return hits;
+}
+
+/**
  * Build the WebMCP tools Double Slash exposes to in-browser agents.
  */
 export function createWebMcpTools(deps: WebMcpDependencies): WebMcpTool[] {
@@ -53,7 +91,7 @@ export function createWebMcpTools(deps: WebMcpDependencies): WebMcpTool[] {
       name: 'search_content',
       title: 'Rechercher sur Double Slash',
       description:
-        'Recherche les épisodes du podcast et les articles du blog Double Slash par mot-clé (titre, description, tags, numéro d’épisode).',
+        'Recherche les épisodes du podcast et les articles du blog Double Slash par mot-clé (titre, description, corps du texte, tags, numéro d’épisode).',
       annotations: {readOnlyHint: true},
       inputSchema: {
         type: 'object',
@@ -74,7 +112,8 @@ export function createWebMcpTools(deps: WebMcpDependencies): WebMcpTool[] {
             minimum: 1,
             maximum: 25,
             default: 5,
-            description: 'Nombre maximum de résultats (1–25).',
+            description:
+              'Nombre maximum de résultats par type, épisode ou article (1–25).',
           },
         },
         required: ['query'],
@@ -91,9 +130,26 @@ export function createWebMcpTools(deps: WebMcpDependencies): WebMcpTool[] {
           kind === 'episode' || kind === 'article'
             ? catalog.filter(item => item.kind === kind)
             : catalog;
-        const hits = rankCatalog(pool, query, readNumber(input, 'limit'));
+        const limit = clampCatalogLimit(readNumber(input, 'limit'), 5);
+        const ftsHits = deps.searchFullText
+          ? await deps
+              .searchFullText(query, Math.min(limit * 6, 50))
+              .catch(() => [])
+          : [];
+        const hits = mergeFullTextAndCatalog(
+          filterFullTextHits(ftsHits, kind),
+          pool,
+          query,
+          limit,
+        );
+        const body = formatSearchHits(
+          hits,
+          `Aucun résultat pour « ${query} ».`,
+        );
+        const resultsKind =
+          kind === 'article' || kind === 'episode' ? kind : undefined;
 
-        return formatHits(hits, `Aucun résultat pour « ${query} ».`);
+        return `${body}\n\nPage résultats : ${searchResultsPath(query, resultsKind)}`;
       },
     },
     {
