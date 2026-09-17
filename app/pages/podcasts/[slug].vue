@@ -98,13 +98,12 @@ useSchemaOrg([
             <p class="mb-3">
               {{ data.description }}
             </p>
-            <!-- error 500 with this component -->
             <ContentRenderer
               v-if="data"
               :value="data"
               class="max-w-full prose"
             />
-            <div class="prose">
+            <div class="prose max-w-full">
               <Authors />
               <Sponsor :with-list="false" />
             </div>

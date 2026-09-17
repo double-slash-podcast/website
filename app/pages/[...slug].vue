@@ -27,7 +27,7 @@ useSchemaOrg([defineWebPage()]);
       <ContentRenderer
         v-if="data"
         :value="data"
-        class="prose min-h-[500px] py-6"
+        class="prose min-h-125 py-6"
       />
     </main>
   </div>

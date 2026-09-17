@@ -60,11 +60,6 @@ export default defineAppConfig({
       title: 'X',
     },
     {
-      href: 'https://bsky.app/profile/double-slash.dev',
-      icon: 'logos:bluesky',
-      title: 'Blue Sky',
-    },
-    {
       href: 'https://github.com/double-slash-podcast',
       icon: 'mdi:github',
       title: 'Github',

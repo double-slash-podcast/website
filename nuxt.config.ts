@@ -35,7 +35,17 @@ export default defineNuxtConfig({
   },
   content: {
     experimental: {sqliteConnector: 'native'},
-    // anchorLinks: { h1: false, h2: false, h3: false, h4: false, h5: false, h6: false },
+    // Content 3 heading anchors wrap titles in <a> and steal .prose h2/h3 styles.
+    renderer: {
+      anchorLinks: {
+        h1: false,
+        h2: false,
+        h3: false,
+        h4: false,
+        h5: false,
+        h6: false,
+      },
+    },
     build: {
       markdown: {
         highlight: {
