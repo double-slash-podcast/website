@@ -6,7 +6,8 @@ import type {PodcastsCollectionItem} from '@nuxt/content';
 import {debounce} from 'throttle-debounce';
 
 const {podcastInfos} = useAppConfig();
-const instance = getCurrentInstance();
+
+const root = ref<HTMLElement | null>(null);
 
 const props = withDefaults(
   defineProps<{
@@ -22,25 +23,14 @@ const isoPublicationDate = computed(() =>
   toIsoDatetime(props.episode.publicationDate),
 );
 
-const titleClass =
-  'episode-heading-title text-lg leading-6 text-balance text-pretty text-white normal-case tracking-normal sm:leading-8 sm:text-2xl font-headings font-bold top-2 sm:top-0 relative mb-1';
-
-/**
- * Single-root element of this row, without a Vue template ref.
- */
-function getRootEl(): HTMLElement | null {
-  const el = instance?.vnode.el;
-  return el instanceof HTMLElement ? el : null;
-}
-
 /**
  * Align the title with the artwork on small screens after layout.
- * Template refs are unsafe here: this row is patched from a Suspense
- * async setup (homepage and listings). Vue 3.5 setRef then reads
- * `owner.refs` while owner is still null and crashes in production.
+ * The heading itself must not use a Vue template ref: `<component :is>`
+ * plus a ref crashes in production (`Cannot read properties of null
+ * (reading 'refs')` during hydrate).
  */
-function setTitlePosition() {
-  const heading = getRootEl()?.querySelector(
+const setTitlePosition = () => {
+  const heading = root.value?.querySelector(
     '.episode-heading-title',
   ) as HTMLElement | null;
   if (!heading) return;
@@ -50,7 +40,7 @@ function setTitlePosition() {
   } else if (height < 30 && window.innerWidth < 640) {
     heading.style.top = '20px';
   }
-}
+};
 
 const onResize = debounce(300, setTitlePosition);
 
@@ -67,6 +57,7 @@ onUnmounted(() => {
 
 <template>
   <div
+    ref="root"
     class="grid grid-cols-episode-heading-mobile md:grid-cols-episode-heading episode-heading w-full md:min-w-3xl px-3 text-center text-white gap-x-3 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
     <AppImg
@@ -82,12 +73,11 @@ onUnmounted(() => {
       :to="`${episode.path}/`"
       class="text-left md:col-start-2 md:col-end-3 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
     >
-      <h1 v-if="level === '1'" :class="titleClass">
-        {{ props.episode.title }}
-      </h1>
-      <h2 v-else :class="titleClass">
-        {{ props.episode.title }}
-      </h2>
+      <component
+        :is="`h${level}`"
+        class="episode-heading-title text-lg leading-6 text-balance text-pretty text-white normal-case tracking-normal sm:leading-8 sm:text-2xl font-headings font-bold top-2 sm:top-0 relative mb-1"
+        >{{ props.episode.title }}</component
+      >
     </nuxt-link>
     <p
       class="col-start-1 col-end-3 text-left text-white/80 md:row-start-2 md:col-start-2"

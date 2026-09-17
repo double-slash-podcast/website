@@ -1,19 +1,15 @@
 <script setup>
-/**
- * Scroll-linked parallax for the decorative slashes.
- * Query the DOM instead of Vue template refs: this page awaits content
- * (Suspense) and a ref on LazySlashIcon crashes Vue 3.5 setRef in
- * production (`owner` is null).
- */
-async function startSlashParallax() {
+const bigSlash = ref();
+const tinySlash = ref();
+onMounted(async () => {
   const {animate, scroll} = await import('motion');
-  const big = document.querySelector('.js-slash-big');
-  const tiny = document.querySelector('.js-slash-tiny');
-  if (big) scroll(animate(big, {x: 0, y: 100}));
-  if (tiny) scroll(animate(tiny, {x: 0, y: 100}));
-}
-
-onMounted(startSlashParallax);
+  if (bigSlash.value) {
+    scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
+  }
+  if (tinySlash.value) {
+    scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
+  }
+});
 
 const {path} = useRoute();
 
@@ -105,14 +101,16 @@ useSchemaOrg([defineWebPage()]);
       </Suspense>
       <SocialList class="mb-28" />
     </main>
-    <SlashIcon
+    <LazySlashIcon
+      ref="bigSlash"
       size="350"
-      class="js-slash-big hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20"
+      class="hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20"
       inside-class="fill-purple-800"
     />
-    <SlashIcon
+    <LazySlashIcon
+      ref="tinySlash"
       size="200"
-      class="js-slash-tiny hidden md:block fixed top-[10%] right-0 z-8 opacity-20"
+      class="hidden md:block fixed top-[10%] right-0 z-8 opacity-20"
       inside-class="fill-purple-800"
     />
   </div>
