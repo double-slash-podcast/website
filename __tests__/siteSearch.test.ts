@@ -1,4 +1,5 @@
 import {describe, expect, test} from 'vitest';
+import {shouldApplyRouteQuery} from '../app/utils/searchRouteSync';
 import {isTypingTarget} from '../app/utils/siteSearchKeys';
 
 describe('isTypingTarget', () => {
@@ -17,5 +18,15 @@ describe('isTypingTarget', () => {
     editable.setAttribute('contenteditable', 'true');
     expect(isTypingTarget(select)).toBe(true);
     expect(isTypingTarget(editable)).toBe(true);
+  });
+});
+
+describe('shouldApplyRouteQuery', () => {
+  test('ignores echoes of the last pushed query while the user kept typing', () => {
+    expect(shouldApplyRouteQuery('web', 'webmcp', 'web')).toBe(false);
+  });
+
+  test('applies back/forward navigation to a different query', () => {
+    expect(shouldApplyRouteQuery('redis', 'webmcp', 'webmcp')).toBe(true);
   });
 });

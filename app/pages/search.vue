@@ -5,18 +5,24 @@ import {
   searchKindFromQuery,
   searchResultsPath,
 } from '~/utils/siteCatalog';
+import {shouldApplyRouteQuery} from '~/utils/searchRouteSync';
 import type {SiteSearchHit} from '~/utils/mergeSearchHits';
 import type {WebMcpCatalogKind} from '~/utils/webmcpTypes';
 
 const route = useRoute();
 const {search, init, ftsStatus} = useSiteSearch();
 
-const query = ref(typeof route.query.q === 'string' ? route.query.q : '');
-const kind = ref<WebMcpCatalogKind>(searchKindFromQuery(route.query.kind));
+/**
+ * Start empty so SSG `/search/` HTML hydrates; the URL query is applied on mount.
+ */
+const query = ref('');
+const kind = ref<WebMcpCatalogKind>('episode');
 const hits = ref<SiteSearchHit[]>([]);
-const isSearching = ref(Boolean(query.value.trim()));
+const isSearching = ref(false);
 const hasIndexed = ref(false);
 let searchRequestId = 0;
+let lastPushedQuery = '';
+let didMount = false;
 
 /** True until FTS init and the current query have settled. */
 const showPending = computed(
@@ -43,6 +49,7 @@ useSchemaOrg([defineWebPage()]);
 async function syncQueryToRoute(value: string) {
   const trimmed = value.trim();
   const current = typeof route.query.q === 'string' ? route.query.q : '';
+  lastPushedQuery = trimmed;
   if (trimmed === current) {
     return;
   }
@@ -91,16 +98,20 @@ async function refreshHits() {
 const debouncedRefresh = debounce(150, refreshHits);
 
 watch(query, () => {
-  debouncedRefresh();
+  if (didMount) {
+    debouncedRefresh();
+  }
 });
 
 watch(
   () => route.query.q,
   value => {
     const next = typeof value === 'string' ? value : '';
-    if (next !== query.value) {
-      query.value = next;
+    if (!shouldApplyRouteQuery(next, query.value, lastPushedQuery)) {
+      return;
     }
+
+    query.value = next;
   },
 );
 
@@ -124,6 +135,11 @@ watch(kind, async value => {
 });
 
 onMounted(() => {
+  const q = typeof route.query.q === 'string' ? route.query.q : '';
+  lastPushedQuery = q.trim();
+  query.value = q;
+  kind.value = searchKindFromQuery(route.query.kind);
+  didMount = true;
   void refreshHits();
 });
 </script>
