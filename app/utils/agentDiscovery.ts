@@ -24,7 +24,7 @@ export const agentDiscoveryLinks: AgentDiscoveryLink[] = [
     type: 'application/linkset+json',
   },
   {
-    href: '/sitemaps.xml',
+    href: '/sitemap.xml',
     rel: 'sitemap',
     type: 'application/xml',
   },

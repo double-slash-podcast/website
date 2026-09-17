@@ -81,6 +81,11 @@ export default defineNuxtConfig({
         'Content-Type': 'application/linkset+json; charset=utf-8',
       },
     },
+    '/sitemap.xml': {
+      headers: {
+        'Content-Type': 'application/xml; charset=utf-8',
+      },
+    },
   },
   nitro: {
     prerender: {
@@ -89,6 +94,8 @@ export default defineNuxtConfig({
       concurrency: 1,
       routes: [
         '/podcast-rss-feed.xml',
+        '/robots.txt',
+        '/sitemap.xml',
         '/sitemaps.xml',
         '/github-sponsor.json',
       ],
@@ -141,7 +148,7 @@ export default defineNuxtConfig({
       'Le podcast sur le code, le développement web et les outils modernes.',
   },
   robots: {
-    sitemap: 'https://double-slash.dev/sitemaps.xml',
+    sitemap: 'https://double-slash.dev/sitemap.xml',
     groups: [
       {
         userAgent: '*',

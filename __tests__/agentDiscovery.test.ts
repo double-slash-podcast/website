@@ -19,7 +19,7 @@ describe('buildAgentDiscoveryLinkHeader', () => {
 
     expect(header).toContain('</.well-known/api-catalog>; rel="api-catalog"');
     expect(header).toContain('</llms.txt>; rel="describedby"');
-    expect(header).toContain('</sitemaps.xml>; rel="sitemap"');
+    expect(header).toContain('</sitemap.xml>; rel="sitemap"');
     expect(header).toContain('</podcast-rss-feed.xml>; rel="alternate"');
     expect(header).not.toMatch(/Link:\s*"/);
   });

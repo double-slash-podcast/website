@@ -11,7 +11,7 @@
       ],
       "sitemap": [
         {
-          "href": "https://double-slash.dev/sitemaps.xml",
+          "href": "https://double-slash.dev/sitemap.xml",
           "type": "application/xml"
         }
       ],
