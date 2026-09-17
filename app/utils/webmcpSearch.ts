@@ -1,5 +1,6 @@
 import {SITE_ORIGIN} from './agentDiscovery';
 import {isPublishedStatus} from './publishedContent';
+import {toIsoDatetime} from './toIsoDatetime';
 import type {
   WebMcpCatalogItem,
   WebMcpCatalogKind,
@@ -195,6 +196,7 @@ export function toCatalogItem(
     tags: doc.tags ?? [],
     dsSlug: doc.dsSlug,
     episodeNumber: doc.episodeNumber,
+    publicationDate: toIsoDatetime(doc.publicationDate),
   };
 }
 

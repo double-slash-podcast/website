@@ -55,6 +55,7 @@ describe('content signals', () => {
 
     expect(robotsTxt).toContain('User-agent: *');
     expect(robotsTxt).toContain('User-agent: OAI-SearchBot');
+    expect(robotsTxt).not.toMatch(/Disallow:\s*\/search/i);
     expect(robotsTxt.match(/^Content-Signal:/gm)).toHaveLength(2);
     expect(robotsTxt).toContain(formatContentSignalDirective());
   });

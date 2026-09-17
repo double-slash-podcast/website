@@ -79,6 +79,10 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  html {
+    @apply scrollbar-thin scrollbar-thumb-secondary scrollbar-track-haiti;
+  }
 }
 
 @utility trackTimeline {

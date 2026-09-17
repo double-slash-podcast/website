@@ -13,6 +13,7 @@ export type WebMcpCatalogSource = {
   tags?: string[];
   dsSlug?: string;
   episodeNumber?: number;
+  publicationDate?: string | number | Date | null;
   status?: string;
 };
 
@@ -24,6 +25,7 @@ export type WebMcpCatalogItem = {
   tags: string[];
   dsSlug?: string;
   episodeNumber?: number;
+  publicationDate?: string;
 };
 
 export type WebMcpPlayerStatus = {
@@ -32,8 +34,22 @@ export type WebMcpPlayerStatus = {
   dsSlug?: string;
 };
 
+/** FTS5 row passed from the client plugin into search_content. */
+export type WebMcpFullTextHit = {
+  collection: string;
+  id: string;
+  title: string;
+  content: string;
+  rank: number;
+  snippet?: string;
+};
+
 export type WebMcpDependencies = {
   loadCatalog: () => Promise<WebMcpCatalogItem[]>;
+  searchFullText?: (
+    query: string,
+    limit: number,
+  ) => Promise<WebMcpFullTextHit[]>;
   openPage: (path: string) => void | Promise<unknown>;
   playEpisode: (item: WebMcpCatalogItem) => void;
   controlPlayer: (action: 'play' | 'pause') => WebMcpPlayerStatus;

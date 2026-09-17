@@ -38,27 +38,6 @@ useSchemaOrg([defineWebPage()]);
         Page {{ page }} sur {{ Math.ceil(count / config.numberEpisodesList) }}
       </div>
 
-      <!-- <div class="sm:max-w-md sm:m-auto">
-        <label for="search" class="block m-auto text-sm font-medium text-white"
-          >Recherche</label
-        >
-        <div class="relative mt-1">
-          <input
-            id="search"
-            type="text"
-            name="search"
-            placeholder="alpineJS, Sébastion Chopin, ThreeJS..."
-            class="block w-full pr-12 rounded-md shadow-xs placeholder:text-gray-500 border-secondary focus:border-purple-400 focus:ring-purple-400 sm:text-md"
-          />
-          <div class="absolute hidden inset-y-0 right-0 flex py-1.5 pr-1.5">
-            <kbd
-              class="inline-flex items-center px-2 font-sans text-sm font-medium border rounded-sm text-secondary border-secondary"
-              >⌘K</kbd
-            >
-          </div>
-        </div>
-      </div> -->
-
       <div class="flex flex-col gap-20 mt-20">
         <EpisodeHeadings
           v-for="episode in data"

@@ -1,44 +1,61 @@
 import {registerWebMcpToolsWhenAvailable} from '~/utils/webmcpContext';
-import {buildWebMcpCatalog} from '~/utils/webmcpSearch';
 import {createWebMcpTools} from '~/utils/webmcpTools';
-import type {WebMcpCatalogItem} from '~/utils/webmcpTypes';
+import {loadSiteCatalog} from '~/utils/siteCatalog';
+import {toFullTextHits} from '~/utils/mergeSearchHits';
+import {withSqlite} from '~/utils/sqliteQueue';
+import type {SiteFullTextApi} from '~/composables/useSiteSearch';
 import {usePlayerStore} from '~/stores/player';
-
-let catalogPromise: Promise<WebMcpCatalogItem[]> | null = null;
-
-/**
- * Load published episodes and articles from the content collections, cached
- * for the tab. Draft/scheduled podcasts stay out of the agent catalog.
- */
-async function loadCatalog(): Promise<WebMcpCatalogItem[]> {
-  if (!catalogPromise) {
-    catalogPromise = (async () => {
-      const [podcasts, articles] = await Promise.all([
-        queryCollection('podcasts').all(),
-        queryCollection('articles').all(),
-      ]);
-
-      return buildWebMcpCatalog(podcasts, articles);
-    })().catch(error => {
-      catalogPromise = null;
-      throw error;
-    });
-  }
-
-  return catalogPromise;
-}
 
 /**
  * Register Double Slash WebMCP tools when the browser exposes modelContext,
  * including the late-injection case (agent sidebar after first paint).
+ * Also exposes the lazy FTS5 searcher to the human search UI.
  */
 export default defineNuxtPlugin({
   name: 'webmcp',
-  setup() {
+  setup(nuxtApp) {
     const controller = new AbortController();
+    const {
+      status,
+      search: searchCollection,
+      init: initCollection,
+    } = useSearchCollection(['podcasts', 'articles'], {
+      immediate: false,
+      ignoredTags: ['code', 'pre'],
+    });
+
+    /**
+     * Build the FTS5 index once, queued so it never overlaps a catalog select.
+     */
+    const initFullText: SiteFullTextApi['init'] = () =>
+      withSqlite(() => initCollection());
+
+    /**
+     * Build the FTS5 index on first use, then return ranked body/title rows.
+     */
+    const searchFullText: SiteFullTextApi['search'] = async (query, limit) => {
+      await initFullText();
+      return withSqlite(async () => {
+        const rows = await searchCollection(query, {
+          limit,
+          minTermLength: 2,
+          snippet: {columns: ['content'], around: 40},
+        });
+
+        return toFullTextHits(rows);
+      });
+    };
+
+    const siteFullText: SiteFullTextApi = {
+      status,
+      init: initFullText,
+      search: searchFullText,
+    };
+    nuxtApp.provide('siteFullText', siteFullText);
 
     const tools = createWebMcpTools({
-      loadCatalog,
+      loadCatalog: loadSiteCatalog,
+      searchFullText,
       openPage(path) {
         return navigateTo(path);
       },
