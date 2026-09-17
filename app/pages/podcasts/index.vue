@@ -18,15 +18,10 @@ const {data} = await useAsyncData(`podcasts-${page}`, () => {
     .all();
 });
 
-useHead({
+useSeoMeta({
   title: `Tous les épisodes du podcast Double Slash ${+page > 1 ? ` - page ${page}` : ''}`,
-  meta: [
-    {
-      name: 'description',
-      content:
-        "Retrouvez la liste de tous les podcasts publiés par Double Slash depuis le début de l'aventure en avril 2020",
-    },
-  ],
+  description:
+    "Retrouvez la liste de tous les podcasts publiés par Double Slash depuis le début de l'aventure en avril 2020",
 });
 useSchemaOrg([defineWebPage()]);
 </script>

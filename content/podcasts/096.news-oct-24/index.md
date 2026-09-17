@@ -13,8 +13,16 @@ dsSlug: DS_096_news-oct
 title: Les news web dev pour octobre 2024
 subtitle: Épisode new web développement pour octobre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1727863067/ART_96_sjwwkf.png
-description: Dans cet épisode, nous revenons sur la keynote d'ouverture de DHH, qui n'a pas manqué de secouer l'industrie en critiquant vivement les fournisseurs de cloud, tout en esquissant les grandes tendances pour les années à venir. L'intelligence artificielle avec des navigateurs et des éditeurs de code. Nous abordons également les nouvelles versions des frameworks populaires comme Astro et Fastify, sans oublier l'importance croissante des projets open source et des outils qui transforment notre quotidien de développeurs.
+description: Dans cet épisode, nous revenons sur la keynote d'ouverture de DHH,
+  qui n'a pas manqué de secouer l'industrie en critiquant vivement les
+  fournisseurs de cloud, tout en esquissant les grandes tendances pour les
+  années à venir. L'intelligence artificielle avec des navigateurs et des
+  éditeurs de code. Nous abordons également les nouvelles versions des
+  frameworks populaires comme Astro et Fastify, sans oublier l'importance
+  croissante des projets open source et des outils qui transforment notre
+  quotidien de développeurs.
 videoLink: 0Cqksl85_4M
+fileSize: 65393057
 ---
 
 ## Tendances et orientations

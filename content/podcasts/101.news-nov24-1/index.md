@@ -12,8 +12,13 @@ dsSlug: DS_101_newsNov
 title: Les news web dev pour novembre 2024 - RC 1.0
 subtitle: RC 1.0 - Épisode new web développement pour novembre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1732181644/episode/ART_101_evr0de.png
-description: Dans ce nouvel épisode, nous allons évoquer le nouveau edge de Bunny, Framer Motion qui devient Motion, PHP 8.4, Docusaurus 3.6, Angular 19, Python qui détrône JavaScript sur GitHub, le débats sur JS0/JSSugar, et le soutien accru pour l’open source par GitHub et Sentry.
+description: Dans ce nouvel épisode, nous allons évoquer le nouveau edge de
+  Bunny, Framer Motion qui devient Motion, PHP 8.4, Docusaurus 3.6, Angular 19,
+  Python qui détrône JavaScript sur GitHub, le débats sur JS0/JSSugar, et le
+  soutien accru pour l’open source par GitHub et Sentry.
 videoLink: fiDd5dqHYnA
+duration: 2847
+fileSize: 45559221
 ---
 
 ## Bunny Edge
@@ -128,7 +133,3 @@ https://www.anthropic.com/customers/stackblitz
 https://www.ikea.com/
 
 Bonne écoute !
-
-
-
-

@@ -1,21 +1,27 @@
 ---
 title: TailwindCSS - Évolution ou Révolution ?
-subtitle: On retrouve Patrick et Alex qui échange sur le framework CSS Tailwind, son fonctionnement et son paradigme.
+subtitle: On retrouve Patrick et Alex qui échange sur le framework CSS Tailwind,
+  son fonctionnement et son paradigme.
 publicationDate: 2020-06-19
 status: published
 dsSlug: DS_007_tailwindcss
 author: Double slash
-duration: 3907
+duration: 7802
 season: 1
-episodeNumber: 07
+episodeNumber: 7
 episodeType: full
 explicit: false
 categories:
   - Technology
 guid: eab1b245f897d185b62b958e12ecee0b
-description: Dans cet épisode, on retrouve Patrick et Alex qui échange sur le framework CSS Tailwind. Quels sont les avantages à utiliser encore un framework CSS ? Quel est le fonctionnement de Tailwind ?
-videoLink:
-tags: [css,tailwindcss]
+description: Dans cet épisode, on retrouve Patrick et Alex qui échange sur le
+  framework CSS Tailwind. Quels sont les avantages à utiliser encore un
+  framework CSS ? Quel est le fonctionnement de Tailwind ?
+videoLink: null
+tags:
+  - css
+  - tailwindcss
+fileSize: 93655087
 ---
 
 Tailwind est différent des frameworks CSS existants et Alex va vous expliquer pourquoi.
@@ -31,7 +37,3 @@ Tailwind est différent des frameworks CSS existants et Alex va vous expliquer p
 - Le repo [AWESOME TailwindCSS](https://github.com/aniftyco/awesome-tailwindcss).
 
 - Le [Color shade generator](https://javisperez.github.io/tailwindcolorshades/#/).
-
-
-
-

@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3462
 episodeNumber: 106
 episodeType: full
 explicit: false
@@ -13,9 +13,17 @@ dsSlug: DS_106_news02-25
 title: Les news web dev pour février 2025
 subtitle: Épisode new web développement pour février 2025
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1739444914/episode/ART_106_b7gdmc.png
-description: Un épisode news dans lequel nous évoquons ExpressJS 5, un documentaire sur Angular, de nouvelles versions d'Astro, PrestaShop et Pinia. Également le states of React en 2024, du PHP dans des fichiers VueJS ! Quelques outils et évidemment nous parlons de quelques nouvelles IA..
+description: Un épisode news dans lequel nous évoquons ExpressJS 5, un
+  documentaire sur Angular, de nouvelles versions d'Astro, PrestaShop et Pinia.
+  Également le states of React en 2024, du PHP dans des fichiers VueJS !
+  Quelques outils et évidemment nous parlons de quelques nouvelles IA..
 videoLink: tISW6Iizmgw
-tags: ['ia', 'prestashop', 'js', 'react']
+tags:
+  - ia
+  - prestashop
+  - js
+  - react
+fileSize: 55392965
 ---
 
 ## Free JavaScript
@@ -103,7 +111,3 @@ https://huggingface.co/spaces
 https://huggingface.co/blog/inference-providers
 
 Bonne écoute !
-
-
-
-

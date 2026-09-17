@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3013
+duration: 6027
 dsSlug: DS_020_fastify
 episodeNumber: 20
 episodeType: full
 explicit: false
 season: 1
 title: Fastify, framework rapide Node JS avec Vincent Le Goff
-subtitle: Un épisode avec notre invité Vincent Le Goff qui contribue activement au projet Fastify. Un framework pour Node JS orienté vitesse et légèreté
+subtitle: Un épisode avec notre invité Vincent Le Goff qui contribue activement
+  au projet Fastify. Un framework pour Node JS orienté vitesse et légèreté
 guid: c0ab9fa68657a38131e5007e376d1b09
-description: Un épisode avec notre invité Vincent Le Goff qui contribue activement au projet Fastify. Un framework pour Node JS orienté vitesse et légèreté.
-videoLink:
-tags: [nodejs,fastify,js]
+description: Un épisode avec notre invité Vincent Le Goff qui contribue
+  activement au projet Fastify. Un framework pour Node JS orienté vitesse et
+  légèreté.
+videoLink: null
+tags:
+  - nodejs
+  - fastify
+  - js
+fileSize: 72354747
 ---
 
 [Fastify](https://www.fastify.io/) est un framework pour Node JS qui est principalement orienté sur la légèreté et la rapidité.
@@ -26,7 +33,3 @@ Nous vous laissons découvrir le framework plus en détail en écoutant l'épiso
 
 - Vincent Le Goff,
   - [https://github.com/zekth](https://github.com/zekth)
-
-
-
-

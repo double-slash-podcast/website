@@ -4,18 +4,27 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2385
+duration: 2384
 episodeNumber: 86
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_086_news05-2
 title: Les news web dev pour Mai 2024 - partie 2
-subtitle:
+subtitle: null
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1715962149/episode/ART_86_sscbe2.png
-description: Dans cet épisode, nous revenons sur une sélection de conférences en vidéo de l'évènement Devoxx France. Nous parlons également de Tabby, une IA open-source pour coder. Nous discuterons d’un retour sur WordPress headless couplé à NextJS. Nous allons aussi jouer à Doom dans le navigateur. Et nous finirons par quelques outils de développement.
-videoLink : sNBeqwJ8hPE
-tags: ["copilot", "css", "php", "deno"]
+description: Dans cet épisode, nous revenons sur une sélection de conférences en
+  vidéo de l'évènement Devoxx France. Nous parlons également de Tabby, une IA
+  open-source pour coder. Nous discuterons d’un retour sur WordPress headless
+  couplé à NextJS. Nous allons aussi jouer à Doom dans le navigateur. Et nous
+  finirons par quelques outils de développement.
+videoLink: sNBeqwJ8hPE
+tags:
+  - copilot
+  - css
+  - php
+  - deno
+fileSize: 38145043
 ---
 
 ### Conférence Devoxx France 17 au 19 avril 2024
@@ -66,7 +75,3 @@ https://deno.com/blog/document-javascript-package
 ### Générateur de documentation (encore un !)
 
 https://vocs.dev/
-
-
-
-

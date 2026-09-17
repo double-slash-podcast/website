@@ -196,6 +196,13 @@
   @apply wrap-break-word;
 }
 
+/* Heading autolinks must not look like body links (underline + default color). */
+.prose :where(h2, h3, h4) a {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
+}
+
 .prose a[target='_blank']:not(.no-arrow) {
   @apply after:bg-external-link after:inline-block after:bg-contain after:text-gray-400 after:opacity-50 after:bg-no-repeat after:w-4 after:h-4 after:ml-1 after:top-0.75 after:relative;
 }

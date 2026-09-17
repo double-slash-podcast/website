@@ -4,18 +4,23 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3254
+duration: 6509
 dsSlug: DS_033_web3
 episodeNumber: 33
 episodeType: full
 explicit: false
 season: 1
 title: Web3, bullshit ou révolution ?
-subtitle: Alex nous fait découvrir le Web3 et nous explique les fondamentaux de ce web décentralisé prometteur.
+subtitle: Alex nous fait découvrir le Web3 et nous explique les fondamentaux de
+  ce web décentralisé prometteur.
 guid: 86f360be3ff581e2236173ba0ed482d3
-description: Alex nous fait découvrir le Web3 et nous explique les fondamentaux de ce web décentralisé prometteur.
-videoLink:
-tags: [web3,blockchain]
+description: Alex nous fait découvrir le Web3 et nous explique les fondamentaux
+  de ce web décentralisé prometteur.
+videoLink: null
+tags:
+  - web3
+  - blockchain
+fileSize: 78144872
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://youtu.be/A8yk7NT__HM)
@@ -33,7 +38,3 @@ Alex nous explique comment le web peut tendre vers plus de transparence, confian
 On parle de blockchain, et de toutes les technos sous-jacentes (NFT,...). Comment vont-elles jouer un rôle dans le futur de nos métiers de développeur.
 
 Bonne écoute !
-
-
-
-

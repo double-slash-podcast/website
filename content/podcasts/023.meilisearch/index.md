@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2939
+duration: 5877
 dsSlug: DS_023_meillisearch
 episodeNumber: 23
 episodeType: full
 explicit: false
 season: 1
 title: MeiliSearch, rustique à la française !
-subtitle: 'Un épisode avec 2 invités : Thomas cofondateur et Marin développeur Core de MeiliSearch. Nous allons parler de ce moteur de recherche open source et du langage Rust'
+subtitle: "Un épisode avec 2 invités : Thomas cofondateur et Marin développeur
+  Core de MeiliSearch. Nous allons parler de ce moteur de recherche open source
+  et du langage Rust"
 guid: e514d4fc0073c9bb7ad8625d7a190e9a
-description: 'Un épisode avec 2 invités : Thomas cofondateur et Marin développeur Core de MeiliSearch. Nous allons parler de ce moteur de recherche open source et du langage Rust.'
-videoLink:
-tags: [meilisearch,search]
+description: "Un épisode avec 2 invités : Thomas cofondateur et Marin
+  développeur Core de MeiliSearch. Nous allons parler de ce moteur de recherche
+  open source et du langage Rust."
+videoLink: null
+tags:
+  - meilisearch
+  - search
+fileSize: 70557992
 ---
 
 [MeiliSearch](https://www.meilisearch.com/) est un moteur de recherche open source.
@@ -44,7 +51,3 @@ Nous vous laissons découvrir MeiliSearch et Rust plus en détail en écoutant l
 - [Le github](https://github.com/meilisearch/meilisearch)
 - [Getting started](https://docs.meilisearch.com/learn/getting_started/quick_start.html#download-and-launch)
 - [twitter](https://twitter.com/meilisearch)
-
-
-
-

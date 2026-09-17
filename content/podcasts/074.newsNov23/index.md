@@ -4,19 +4,32 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4617
+duration: 9234
 episodeNumber: 74
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_074_new11_23
 title: Les News Web Dev pour Novembre 2023
-subtitle: Un épisode news pour novembre 2023 sur les dernières conférences et des tips CSS.
+subtitle: Un épisode news pour novembre 2023 sur les dernières conférences et
+  des tips CSS.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1700291224/ec4f4ef3-ad08-4945-8aab-cae563411170_nabun7.jpg
-description: Un épisode news pour novembre 2023. On parle des dernières conférences en cette fin d'année, la Next JS Conf, Open AI. Mais aussi le retour en force d'Angular. Et aussi des tools et des tips CSS.
-videoLink : Bx_358U49Xg
-tags: [next,remix,angular,ia,laravel,animation css,rust,linter]
+description: Un épisode news pour novembre 2023. On parle des dernières
+  conférences en cette fin d'année, la Next JS Conf, Open AI. Mais aussi le
+  retour en force d'Angular. Et aussi des tools et des tips CSS.
+videoLink: Bx_358U49Xg
+tags:
+  - next
+  - remix
+  - angular
+  - ia
+  - laravel
+  - animation css
+  - rust
+  - linter
+fileSize: 64642594
 ---
+
 ### Next JS Conf
 
 - NextJS 14 https://nextjs.org/blog/next-14
@@ -153,5 +166,3 @@ Font variante tabular : https://twitter.com/jh3yy/status/1715409590320288041?s=6
 https://twitter.com/stackblitz/status/1717902407437373458?s=61&t=UwPamSaFma8DyQED2m4MEg
 
 https://codepen.io/jh3y/pen/JjxPKXz
-
-

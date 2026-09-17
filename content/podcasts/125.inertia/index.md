@@ -4,19 +4,29 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 3808
 episodeNumber: 125
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_125_inertiaJS_frontBack
-title: "Inertia JS, le front et le back unifiés"
+title: Inertia JS, le front et le back unifiés
 subtitle: Construire des applications web modernes avec Inertia JS
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1768479819/episode/ART_125_o7rqog.png
-description: Inertia est un système qui permet de construire des applications web modernes en utilisant des frameworks front-end comme Vue.js ou React, tout en conservant une architecture back-end traditionnelle avec Laravel ou d'autres frameworks similaires.
-videoLink : MYNWK94LUxA
-tags: ['laravel', 'php', 'typescript', 'vue', 'inertia']
+description: Inertia est un système qui permet de construire des applications
+  web modernes en utilisant des frameworks front-end comme Vue.js ou React, tout
+  en conservant une architecture back-end traditionnelle avec Laravel ou
+  d'autres frameworks similaires.
+videoLink: MYNWK94LUxA
+tags:
+  - laravel
+  - php
+  - typescript
+  - vue
+  - inertia
+fileSize: 61039523
 ---
+
 L'avantage principal d'Inertia est qu'il permet aux développeurs de créer des applications web réactives sans avoir à gérer une API séparée. Au lieu de cela, Inertia agit comme un pont entre le front-end et le back-end, permettant aux développeurs de rendre des vues côté serveur tout en utilisant des composants front-end modernes.
 
 Il supprime totalement la nécessité de construire une API REST ou GraphQL, ce qui simplifie le développement et réduit la complexité de l'application. Inertia gère la navigation côté client, les transitions de pages et le partage d'état entre les composants, offrant ainsi une expérience utilisateur fluide et réactive.

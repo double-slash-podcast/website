@@ -4,18 +4,26 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4392
+duration: 8784
 dsSlug: DS_011_pwa
 episodeNumber: 11
 episodeType: full
 explicit: false
 season: 1
 title: Les Progressive Web Apps avec Stéphanie Alix
-subtitle: Dans cet épisode, nous allons faire le point sur les Progressive Web App en 2020. Définir ce qu'est une PWA, les principales features d'une PWA. Pourquoi choisir une PWA au lieu d'une application native. Et revenir sur les blocages de Safari par rapport aux PWA.
+subtitle: Dans cet épisode, nous allons faire le point sur les Progressive Web
+  App en 2020. Définir ce qu'est une PWA, les principales features d'une PWA.
+  Pourquoi choisir une PWA au lieu d'une application native. Et revenir sur les
+  blocages de Safari par rapport aux PWA.
 guid: 505f20a07aab6d5fdfa9e3bdd41ec676
-description: Dans cet épisode assez technique, nous allons faire le point sur les Progressive Web App en 2020. Définir ce qu'est une PWA, les principales features d'une PWA. Puis, pourquoi choisir une PWA au lieu d'une application native. Et enfin, revenir sur les blocages de Safari par rapport aux PWA
-videoLink:
-tags: [pwa]
+description: Dans cet épisode assez technique, nous allons faire le point sur
+  les Progressive Web App en 2020. Définir ce qu'est une PWA, les principales
+  features d'une PWA. Puis, pourquoi choisir une PWA au lieu d'une application
+  native. Et enfin, revenir sur les blocages de Safari par rapport aux PWA
+videoLink: null
+tags:
+  - pwa
+fileSize: 105435565
 ---
 
 ## Notre invitée pour l'épisode :
@@ -72,7 +80,3 @@ Les blocages de la part de safari :
 **Note spécifique sur IOS :**
 Apple interdit de développer un navigateur pour IOS avec un moteur de rendu différent de WebKit. Donc les navigateurs disponibles sur IOS sont en réalité des applications composées de WebViews WebKit.
 Ils n'ont donc pas les fonctionnalités PWA (ex: impossible d'ajouter la PWA à l'écran d'accueil via iOS chrome ou d'utiliser les Services Workers)
-
-
-
-

@@ -4,29 +4,31 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3366
+duration: 6730
 episodeNumber: 54
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_054_cecil
 title: Générer un site statique avec PHP grâce à Cecil
-subtitle:
+subtitle: null
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,w_400/v1670322954/episode/54-artwork_xw7clo.png
-description: Dans cet épisode, nous recevons Arnaud Ligny (Consultant fonctionnel & technique web, expert e-commerce), pour parler de Cecil, le générateur de site statique. Nous évoquerons aussi le langage PHP, l'évolution et quel est le niveau de maturité aujourd'hui de ce langage qui arrive à sa version 8.2.
-videoLink : QdP5KWwyPo4
+description: Dans cet épisode, nous recevons Arnaud Ligny (Consultant
+  fonctionnel & technique web, expert e-commerce), pour parler de Cecil, le
+  générateur de site statique. Nous évoquerons aussi le langage PHP, l'évolution
+  et quel est le niveau de maturité aujourd'hui de ce langage qui arrive à sa
+  version 8.2.
+videoLink: QdP5KWwyPo4
 links:
-  [
-    {
-      title: 'Cecil',
-      url: 'https://cecil.app',
-    },
-    {
-      title: 'arnaudligny.fr',
-      url: 'https://arnaudligny.fr',
-    },
-  ]
-tags: [php, static, jamstack]
+  - title: Cecil
+    url: https://cecil.app
+  - title: arnaudligny.fr
+    url: https://arnaudligny.fr
+tags:
+  - php
+  - static
+  - jamstack
+fileSize: 53845651
 ---
 
 ## Cecil PHP
@@ -65,7 +67,3 @@ Heureusement, il y a des systèmes automatisés pour cela que vous pouvez mettre
 - [https://arnaudligny.fr/](https://arnaudligny.fr/)
 
 Bonne écoute !
-
-
-
-

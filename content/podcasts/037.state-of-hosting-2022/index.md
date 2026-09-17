@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3873
+duration: 7747
 dsSlug: DS_037_hosting
 episodeNumber: 37
 episodeType: full
@@ -13,8 +13,10 @@ season: 1
 title: Héberger une application web en 2022
 subtitle: Comment héberger une application web en 2022
 guid: 60f157f17c98ece17c1b550c6151d4f0
-description: Dans cet épisode, nous évoquons les différentes solutions pour héberger une application web
+description: Dans cet épisode, nous évoquons les différentes solutions pour
+  héberger une application web
 tags: []
+fileSize: 93000893
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [le Youtube de DoubleSlash](https://youtu.be/zmE7EZp4vDM)

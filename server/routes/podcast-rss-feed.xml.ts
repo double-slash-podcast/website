@@ -1,9 +1,8 @@
 import crypto from 'node:crypto';
 import type {H3Event, NodeIncomingMessage} from 'h3';
 import RSS from 'rss';
-import {useRedis} from '../../app/composables/useRedis';
-import estimateMP3DurationAxios from '~/helpers/duration/estimateMP3DurationAxios';
 import type {PodcastsCollectionItem} from '@nuxt/content';
+import {parseMediaNumber} from '~/utils/mediaMeta';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -77,30 +76,6 @@ const getFeedBase = (infos: PodcastInfosType) =>
     ],
   });
 
-/**
- * get the size of remote file
- * @param url
- * @returns
- */
-const getRemoteFileInfos = async (url: string) => {
-  const redis = useRedis();
-  let estimate;
-  // from cache
-  const dbEstimate = await redis.get(url);
-
-  if (dbEstimate) {
-    return dbEstimate;
-  }
-  try {
-    estimate = await estimateMP3DurationAxios(url);
-    // save in DB
-    await redis.set(url, estimate);
-  } catch (e) {
-    throw new Error((e as Error).message);
-  }
-  return estimate || {duration: undefined, size: undefined};
-};
-
 export default defineEventHandler(
   async (event: H3Event | NodeIncomingMessage) => {
     const {
@@ -139,6 +114,8 @@ export default defineEventHandler(
         description,
         guid,
         episodeArtwork,
+        duration,
+        fileSize,
       }: PodcastsCollectionItem = podcast;
 
       if (!title) {
@@ -181,12 +158,11 @@ export default defineEventHandler(
         {'googleplay:explicit': explicit},
       ];
 
-      // get size of audio files
+      const episodeDuration = parseMediaNumber(duration);
+      const episodeFileSize = parseMediaNumber(fileSize);
 
-      const {duration, size} = await getRemoteFileInfos(url);
-
-      if (duration) {
-        custom_elements.push({'itunes:duration': duration});
+      if (episodeDuration) {
+        custom_elements.push({'itunes:duration': episodeDuration});
       }
 
       // add an episode item to the feed using the options
@@ -201,7 +177,7 @@ export default defineEventHandler(
         custom_elements,
         enclosure: {
           url,
-          size,
+          size: episodeFileSize,
           type: 'audio/mpeg',
         },
       });

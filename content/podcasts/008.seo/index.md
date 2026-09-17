@@ -1,21 +1,26 @@
 ---
 title: Le SEO en 2020, avec Nicolas Baldi
-subtitle: Le SEO en 2020, les méthodes, les outils, les bonnes pratiques. Comment penser le projet "SEO Friendly" dès sa construction.
+subtitle: Le SEO en 2020, les méthodes, les outils, les bonnes pratiques.
+  Comment penser le projet "SEO Friendly" dès sa construction.
 publicationDate: 2020-07-10
 status: published
 author: Double slash
 dsSlug: DS_008_seo
 categories:
   - Technology
-duration: 7080
-episodeNumber: 08
+duration: 14158
+episodeNumber: 8
 episodeType: full
 explicit: false
 season: 1
 guid: 5ee1320d8c992a324b83e8fc970de1e4
-description: Un épisode avec autour du SEO (Search Engine Optimisation). Le SEO en 2020, les méthodes, les outils, les bonnes pratiques. Comment penser le projet "SEO Friendly" dès sa construction.
-videoLink:
-tags: [seo]
+description: Un épisode avec autour du SEO (Search Engine Optimisation). Le SEO
+  en 2020, les méthodes, les outils, les bonnes pratiques. Comment penser le
+  projet "SEO Friendly" dès sa construction.
+videoLink: null
+tags:
+  - seo
+fileSize: 169931770
 ---
 
 Nous en discutons avec notre invité, expert SEO : [Nicolas Baldi](https://www.linkedin.com/in/nicolasbaldi/)
@@ -43,7 +48,3 @@ Pour savoir quels mots-clés choisir, on utilise des outils comme :
 - [Screaming Frog](https://www.screamingfrog.co.uk/seo-spider/)
 - [Xenu](http://home.snafu.de/tilman/xenulink.html)
 - [Seo Mofo Snippet Optimizer](https://seomofo.com/snippet-optimizer.html)
-
-
-
-
