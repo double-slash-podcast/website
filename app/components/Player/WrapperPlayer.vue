@@ -7,6 +7,7 @@ const store = usePlayerStore();
 <template>
   <LazyPlayer
     :src="store.src || ''"
+    :ds-slug="store.currentDsSlug || ''"
     :title="store.currentTitle || ''"
     :status="store.statusPlayer || ''"
     @status-change="store.setStatusPlayer"

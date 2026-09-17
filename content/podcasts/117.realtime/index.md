@@ -4,19 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 2593
 episodeNumber: 117
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_117_realtime
 title: Développer des applications Realtime
-subtitle: Développer des applications Realtime avec rafraîchissement des données automatiques
+subtitle: Développer des applications Realtime avec rafraîchissement des données
+  automatiques
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1755771163/episode/ART_117_evajtf.png
-description: Pour offrir une meilleure expérience à vos utilisateurs, il est possible d'implémenter un rafraîchissement des données automatique. L'utilisateur voit donc les informations se mettre à jour sans faire aucune action.
-videoLink : E-cxziu6zBg
+description: Pour offrir une meilleure expérience à vos utilisateurs, il est
+  possible d'implémenter un rafraîchissement des données automatique.
+  L'utilisateur voit donc les informations se mettre à jour sans faire aucune
+  action.
+videoLink: E-cxziu6zBg
 tags: []
+fileSize: 41601573
 ---
+
 Un exemple d'utilisation : dans une application de commande de pizza, le pizzaiolo n'a pas la possibilité d'interagir avec l'écran puisqu'il a les mains dans les ingrédients. Un tableau de bord qui affiche les commandes au fur et à mesure est une bonne solution pour l'aider.
 
 D'autres exemples : chat, résultats sportifs, trading, collaborations en direct.
@@ -93,7 +99,3 @@ Les développeurs web disposent de plusieurs technologies et solutions pour impl
 
 
 Bonne écoute !
-
-
-
-

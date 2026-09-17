@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 1938
+duration: 3018
 episodeNumber: 93
 episodeType: full
 explicit: false
@@ -13,10 +13,19 @@ dsSlug: DS_093_news-aout-24
 title: Les news web dev pour août 2024
 subtitle: Épisode new web développement pour août 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1724250199/episode/ART_93_x8ew8o.png
-description: Dans cet épisode, on explore les dernières nouveautés en matière de développement web. Des outils innovants basés sur l'IA pour la génération de bases de données et de formulaires, des solutions pour la création de sites en open source, et bien plus encore. On évoque également des ressources éducatives et des outils pour améliorer l'accessibilité sur le web.
-videoLink : QJWm1tCbM88
-tags: ["directus","a11n","ia"]
+description: Dans cet épisode, on explore les dernières nouveautés en matière de
+  développement web. Des outils innovants basés sur l'IA pour la génération de
+  bases de données et de formulaires, des solutions pour la création de sites en
+  open source, et bien plus encore. On évoque également des ressources
+  éducatives et des outils pour améliorer l'accessibilité sur le web.
+videoLink: QJWm1tCbM88
+tags:
+  - directus
+  - a11n
+  - ia
+fileSize: 48289749
 ---
+
 ## POSTGRES.new
 
 Outils pour designer, visualiser les tables, bases de données, et créer des migrations avec un chat IA.
@@ -92,7 +101,3 @@ Un générateur de CSS pour créer des formes géométriques.
 
 
 Bonne écoute !
-
-
-
-

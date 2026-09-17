@@ -1,15 +1,14 @@
 # Double Slash Podcast Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/790566ad-de5b-494f-9a91-e285f98080e5/deploy-status)](https://app.netlify.com/sites/double-slash-website/deploys)
-
 ## Website
 
 [https://double-slash.dev/](https://double-slash.dev/)
 
+Production runs on **Coolify** (Nixpacks) behind **nginx**, as a **static site** (`pnpm generate` → `dist/`). See `AGENTS.md` for deploy and analytics details.
+
 ## Quick Start
 
 We use [pnpm](https://pnpm.io) on package management.
-
 
 #### Install dependencies
 
@@ -23,13 +22,47 @@ pnpm install
 pnpm dev
 ```
 
+#### Generate static site (production)
 
-#### Build application
+```
+pnpm generate
+```
+
+Output: `dist/`. Coolify/nginx serves that folder.
+
+#### Node server build (local / not prod)
 
 ```
 pnpm build
 ```
 
+`pnpm start` runs Nitro (`node .output/server/index.mjs`). Production is SSG, not this server.
+
+`generate` runs `sync-durations`, `nuxi generate`, then copies content markdown next to the HTML. `build` runs `validate-durations` then `nuxi build`. Both fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
+
+### Podcast episode metadata
+
+After adding a new episode, sync `duration` and `fileSize` from the remote MP3 into the markdown frontmatter:
+
+```
+pnpm sync-durations
+```
+
+Options:
+
+- `--dry-run` — preview changes without writing files
+- `--force` — recalculate even when values already exist
+- `--slug <dsSlug>` — sync a single episode
+
+Check that all published episodes have the required metadata (same check used before build):
+
+```
+pnpm validate-durations
+```
+
+## Analytics
+
+Umami is self-hosted at [https://analytics.double-slash.dev](https://analytics.double-slash.dev). `@nuxt/scripts` loads it with `hostUrl: 'https://analytics.double-slash.dev'`. The browser posts to `/api/send` on that origin (CORS allowed). No nginx reverse-proxy on the static site.
 
 ## Tools
 
@@ -55,7 +88,6 @@ pnpm build
 - [Prettier](https://prettier.io/)
 - [ESLint](https://eslint.org/)
 - [Typescript](https://www.typescriptlang.org/)
-
 
 ## Todo
 

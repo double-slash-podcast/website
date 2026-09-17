@@ -4,18 +4,30 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 4180
 episodeNumber: 130
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_130_news-avril26
-title: News avril 2026, Cursor et Copilot dans la tourmente, Axios compromis et Arrow JS
+title: News avril 2026, Cursor et Copilot dans la tourmente, Axios compromis et
+  Arrow JS
 subtitle: Les news pour avril 2026, nouveau modèle, nouveau framework JS et IA.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/q_auto/f_auto/v1775232343/ART_130_jvz7f3.png
-description: Un épisode où l'on évoque le drama pour la sortie du nouveau modèle de Cursor, Copilot qui injecte des bugs dans les PR et qui va utiliser vos données pour s'entraîner, un nouveau framework JS — Next.js — qui s'adapte enfin aux autres providers, Axios qui se fait injecter du code malveillant, et quelques outils.
-videoLink : kgAUN5messQ
-tags: ['cursor', 'composer 2', 'copilot', 'axios', 'arrowjs', 'nextjs']
+description: Un épisode où l'on évoque le drama pour la sortie du nouveau modèle
+  de Cursor, Copilot qui injecte des bugs dans les PR et qui va utiliser vos
+  données pour s'entraîner, un nouveau framework JS — Next.js — qui s'adapte
+  enfin aux autres providers, Axios qui se fait injecter du code malveillant, et
+  quelques outils.
+videoLink: kgAUN5messQ
+tags:
+  - cursor
+  - composer 2
+  - copilot
+  - axios
+  - arrowjs
+  - nextjs
+fileSize: 67000614
 ---
 
 ## Cursor sort Composer 2
@@ -101,7 +113,3 @@ Cloudflare développe un CMS TypeScript équivalent à WordPress qui, d'après e
 - https://www.youtube.com/watch?v=oWJPu3yvfp8&t=2s
 
 Bonne écoute !
-
-
-
-

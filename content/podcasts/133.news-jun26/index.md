@@ -4,18 +4,39 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 3603
 episodeNumber: 133
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_133_news-juin26
 title: News Juin 2026, Bun passe à Rust, npm verrouille les scripts et SEO pour l'IA
-subtitle: Les news pour juin 2026, sécurité npm/Composer, Bun porté en Rust, SEO IA et outils MCP.
+subtitle: Les news pour juin 2026, sécurité npm/Composer, Bun porté en Rust, SEO
+  IA et outils MCP.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1780480242/episode/ART_133_tt4h5f.png
-description: Nous évoquons le portage de Bun de Zig vers Rust par des agents IA, npm qui bloque par défaut les scripts postinstall non approuvés, Composer 2.10 qui filtre nativement les paquets malveillants, Windsurf absorbé par Devin Desktop, le guide SEO de Google optimisé pour les IA, MCP Chrome DevTools, Kimi WebBridge et quelques outils comme Perry, Osaurus ou Liquid Dom.
-videoLink : lS9ZDxoTzNo
-tags: ["npm", "bun", "rust", "zig", "composer", "windsurf", "devin", "google", "seo", "ai", "mcp", "chrome", "devtools", "kimi", "perry"]
+description: Nous évoquons le portage de Bun de Zig vers Rust par des agents IA,
+  npm qui bloque par défaut les scripts postinstall non approuvés, Composer 2.10
+  qui filtre nativement les paquets malveillants, Windsurf absorbé par Devin
+  Desktop, le guide SEO de Google optimisé pour les IA, MCP Chrome DevTools,
+  Kimi WebBridge et quelques outils comme Perry, Osaurus ou Liquid Dom.
+videoLink: lS9ZDxoTzNo
+tags:
+  - npm
+  - bun
+  - rust
+  - zig
+  - composer
+  - windsurf
+  - devin
+  - google
+  - seo
+  - ai
+  - mcp
+  - chrome
+  - devtools
+  - kimi
+  - perry
+fileSize: 57657349
 ---
 
 ## Composer 2.10

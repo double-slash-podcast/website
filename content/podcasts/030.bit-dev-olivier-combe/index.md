@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3747
+duration: 7494
 dsSlug: DS_030_bit
 episodeNumber: 30
 episodeType: full
 explicit: false
 season: 1
 title: Bit.dev avec Olivier Combe
-subtitle: Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe pour parler du service Bitdev.
+subtitle: Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe pour
+  parler du service Bitdev.
 guid: e8fead5a9f5e8f1d4ae779d654509d3b
-description: Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe pour parler du service Bitdev. Un service qui vous facilite le quotidien pour la gestion de vos components.
-videoLink:
-tags: [bit,angular,web component]
+description: Dans cet épisode, nous avons le plaisir de recevoir Olivier Combe
+  pour parler du service Bitdev. Un service qui vous facilite le quotidien pour
+  la gestion de vos components.
+videoLink: null
+tags:
+  - bit
+  - angular
+  - web component
+fileSize: 89966919
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [YouTube](https://www.youtube.com/watch?v=3TFpuKHMdb4) et [Twitch](https://www.twitch.tv/doubleslashpodcast/video/1221756050)
@@ -54,7 +61,3 @@ Dans cet épisode, nous profitons de l’expertise d’olivier pour parler rapid
 - [@bitdev](https://twitter.com/bitdev_?s=20)
 - [Angular 13](https://blog.angular.io/angular-v13-is-now-available-cce66f7bc296)
 - [NGX Translate](http://www.ngx-translate.com/)
-
-
-
-

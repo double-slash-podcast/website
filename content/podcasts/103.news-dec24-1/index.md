@@ -12,8 +12,14 @@ dsSlug: DS_103_news-12_24
 title: Les news web dev pour décembre 2024 - RC 1.0
 subtitle: RC 1.0 - Épisode new web développement pour décembre 2024
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1734637084/episode/ART_103_mkrbqf.png
-description: Dans ce nouvel épisode, nous allons évoquer le State of JS 2024, GitHub Copilot qui réintroduit une version gratuite. Nous faisons le point sur les éditeurs disponibles actuellement, les sorties de Vite 0.6 et d'Astro 5.0, la version bêta de Tailwind CSS 4, la version stable de React 19, l'extension officielle pour Laravel sur VSCode et une petite vidéo sur NuxtJS.
+description: Dans ce nouvel épisode, nous allons évoquer le State of JS 2024,
+  GitHub Copilot qui réintroduit une version gratuite. Nous faisons le point sur
+  les éditeurs disponibles actuellement, les sorties de Vite 0.6 et d'Astro 5.0,
+  la version bêta de Tailwind CSS 4, la version stable de React 19, l'extension
+  officielle pour Laravel sur VSCode et une petite vidéo sur NuxtJS.
 videoLink: 3gA7nlMyq8Q
+duration: 2863
+fileSize: 45809161
 ---
 
 ## State of JS 2024
@@ -76,7 +82,3 @@ https://x.com/supabase/status/1869427407003812135?s=61
 
 
 Bonne écoute !
-
-
-
-

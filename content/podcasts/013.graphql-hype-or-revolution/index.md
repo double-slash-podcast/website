@@ -4,18 +4,24 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3464
+duration: 6919
 dsSlug: DS_013_graphql
 episodeNumber: 13
 episodeType: full
 explicit: false
 season: 1
 title: GraphQL, Hype ou Révolution
-subtitle: GraphQL est un langage de requête basé sur le protocole HTTP qui a été pensé pour une utilisation adapté aux usages actuels
+subtitle: GraphQL est un langage de requête basé sur le protocole HTTP qui a été
+  pensé pour une utilisation adapté aux usages actuels
 guid: e52e7d625a9a2113b1163230a11925d6
-description: Dans cet épisode, nous allons parler de GraphQL et de REST. GraphQL est un langage de requête basé sur le protocole HTTP qui a été pensé pour une utilisation adapté aux usages actuels.
-videoLink:
-tags: [api,graphql]
+description: Dans cet épisode, nous allons parler de GraphQL et de REST. GraphQL
+  est un langage de requête basé sur le protocole HTTP qui a été pensé pour une
+  utilisation adapté aux usages actuels.
+videoLink: null
+tags:
+  - api
+  - graphql
+fileSize: 83058173
 ---
 
 Pourquoi avons-nous besoin d'utiliser graphQL dans nos projets, quels sont les avantages et inconvénients par rapport à REST.
@@ -40,7 +46,3 @@ Pourquoi avons-nous besoin d'utiliser graphQL dans nos projets, quels sont les a
 - [Hasura](https://hasura.io/)
 - [Prisma](https://www.prisma.io/)
 - [Apollo GraphQL](https://github.com/apollographql)
-
-
-
-

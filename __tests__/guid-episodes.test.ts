@@ -1,7 +1,5 @@
-// import {fileURLToPath} from 'node:url';
 import fs from 'fs';
 import path from 'path';
-// import {setup, $fetch} from '@nuxt/test-utils-edge';
 import {XMLParser} from 'fast-xml-parser';
 import {describe, expect, test} from 'vitest';
 

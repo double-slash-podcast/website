@@ -12,9 +12,23 @@ dsSlug: DS_110_news-04-25
 title: Les news web dev pour avril 2025
 subtitle: Épisode news web développement pour avril 2025
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1745438903/episode/ART_110_fbv3bm.png
-description: Dans cet épisode de news pour avril 2025, nous évoquons PIE, le futur des extensions PHP, Chrome qui va peut-être bientôt passer chez OpenAI, Zod 4 en bêta, RedwoodSDK, AnimeJS V4, une nouvelle runtime JS. Puis, dans la rubrique IA, nous parlons de Firebase Studio, State of Dev IA, Firecrawl et une petite vidéo avec Linkup.
-videoLink : xbmFPE35OzU
-tags: ['PHP', 'Google', 'Chrome', 'RedwoodSDK', 'animejs', 'FerretDB','Firebase', 'Firecrawl']
+description: Dans cet épisode de news pour avril 2025, nous évoquons PIE, le
+  futur des extensions PHP, Chrome qui va peut-être bientôt passer chez OpenAI,
+  Zod 4 en bêta, RedwoodSDK, AnimeJS V4, une nouvelle runtime JS. Puis, dans la
+  rubrique IA, nous parlons de Firebase Studio, State of Dev IA, Firecrawl et
+  une petite vidéo avec Linkup.
+videoLink: xbmFPE35OzU
+tags:
+  - PHP
+  - Google
+  - Chrome
+  - RedwoodSDK
+  - animejs
+  - FerretDB
+  - Firebase
+  - Firecrawl
+duration: 4520
+fileSize: 72335359
 ---
 
 ## Pie le futur gestionnaire d’extensions pour PHP
@@ -111,7 +125,3 @@ https://www.youtube.com/watch?v=vOgI_3CyRWU
 
 
 Bonne écoute !
-
-
-
-

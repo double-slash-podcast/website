@@ -4,19 +4,33 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4915
+duration: 9830
 episodeNumber: 72
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_072_newsOct23
 title: Les News Web Dev pour octobre 2023
-subtitle: Épisode de news pour ce début d'automne où l'on revient sur les dernières conférences.
+subtitle: Épisode de news pour ce début d'automne où l'on revient sur les
+  dernières conférences.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1697869551/episode/ART_72_newOct_mzzj8y.png
-description: Un épisode news pour octobre 2023. On parle des dernières avancées en matière de navigateur. Mais aussi des conférences WebFlow, Vite JS et Ruby on Rails. On mentionne également les dernières versions de Remix, Front Commerce et Surreal DB. Bien entendu, on ne peut pas faire un épisode sans parler d'IA. Et nous terminerons par les prochaines conférences à suivre.
-videoLink : B9K93MvlDRc
-tags: [js, Ecommerce, ruby on rails, docker, database,ia,vite]
+description: Un épisode news pour octobre 2023. On parle des dernières avancées
+  en matière de navigateur. Mais aussi des conférences WebFlow, Vite JS et Ruby
+  on Rails. On mentionne également les dernières versions de Remix, Front
+  Commerce et Surreal DB. Bien entendu, on ne peut pas faire un épisode sans
+  parler d'IA. Et nous terminerons par les prochaines conférences à suivre.
+videoLink: B9K93MvlDRc
+tags:
+  - js
+  - Ecommerce
+  - ruby on rails
+  - docker
+  - database
+  - ia
+  - vite
+fileSize: 78697655
 ---
+
 ## Browsers
 
 - Conférence sur les capacités des navigateurs https://2023.stateofthebrowser.com/
@@ -127,7 +141,3 @@ Next Conf 26 octobre 2023 https://nextjs.org/conf
 
 
 Bonne écoute !
-
-
-
-

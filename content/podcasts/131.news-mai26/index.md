@@ -4,18 +4,35 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 4165
 episodeNumber: 131
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_131_news-mai26
-title: News Mai 2026, TypeScript 7 en beta, faux package TanStack et agent Cursor destructeur
+title: News Mai 2026, TypeScript 7 en beta, faux package TanStack et agent
+  Cursor destructeur
 subtitle: Les news pour mai 2026, TypeScript 7, sécurité npm, IA et outils du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1778059761/episode/ART_131_yyi6wl.png
-description: Nous évoquons TypeScript 7 qui débarque en beta, NPMX et son indicateur « You might not need this dependency », un agent Cursor qui détruit une base de prod en neuf secondes, le faux package TanStack qui volait les fichiers .env, Laravel qui glisse des publicités dans le contexte des agents IA, et quelques outils comme React Email 6, Starship ou Patterns.dev.
-videoLink : N4cECyxaZik
-tags: ['typescript', 'cursor', 'tanstack', 'npmx', 'laravel', 'react email', 'starship', 'ai', 'flue', 'security', 'claude']
+description: Nous évoquons TypeScript 7 qui débarque en beta, NPMX et son
+  indicateur « You might not need this dependency », un agent Cursor qui détruit
+  une base de prod en neuf secondes, le faux package TanStack qui volait les
+  fichiers .env, Laravel qui glisse des publicités dans le contexte des agents
+  IA, et quelques outils comme React Email 6, Starship ou Patterns.dev.
+videoLink: N4cECyxaZik
+tags:
+  - typescript
+  - cursor
+  - tanstack
+  - npmx
+  - laravel
+  - react email
+  - starship
+  - ai
+  - flue
+  - security
+  - claude
+fileSize: 66745977
 ---
 
 ## NPMX Dev

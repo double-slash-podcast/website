@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3822
+duration: 7643
 episodeNumber: 75
 episodeType: full
 explicit: false
@@ -13,9 +13,16 @@ dsSlug: DS_075_dev_email
 title: Coder des emails
 subtitle: Méthodes et outils pour la création et l'envoi d'emails
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1701157471/ART_75_email_mytqlw.png
-description: Dans cet épisode, nous allons évoquer le côté obscur de notre métier. Faire du développement à destination des emails ! Nous allons commencer par la partie templating, puis nous évoquerons les plateformes en lignes, les frameworks, les pièges à éviter et nous finirons par un retour d’expérience dans le secteur du e-commerce.
-videoLink : uc6vJ7ujlLE
-tags: [email,design]
+description: Dans cet épisode, nous allons évoquer le côté obscur de notre
+  métier. Faire du développement à destination des emails ! Nous allons
+  commencer par la partie templating, puis nous évoquerons les plateformes en
+  lignes, les frameworks, les pièges à éviter et nous finirons par un retour
+  d’expérience dans le secteur du e-commerce.
+videoLink: uc6vJ7ujlLE
+tags:
+  - email
+  - design
+fileSize: 61198523
 ---
 
 ## La problématique concernant le templating des emails
@@ -115,7 +122,3 @@ https://www.caniemail.com/
 
 
 Bonne écoute !
-
-
-
-

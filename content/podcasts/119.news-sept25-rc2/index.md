@@ -4,19 +4,36 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 2158
 episodeNumber: 119
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_119_news-sept25-rc2
 title: Les news sur le développement web et l'IA pour septembre 2025 RC2
-subtitle: Toutes les dernières news sur le développement web et l'IA pour septembre 2025 RC2
+subtitle: Toutes les dernières news sur le développement web et l'IA pour
+  septembre 2025 RC2
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1758102044/episode/ART_119_rtdn6v.png
-description: "Un épisode news dans lequel nous évoquons : une page Nuxt changelogs, Dia et Arc qui partent chez Atlassian, Google qui conserve Chrome, plusieurs packages NPM compromis, une librairie AI Elements qui devient open-source, Telex IA, comment créer des fichiers llms.txt, comment bloquer les bots AI, FeedSmith qui passe en V2, un article pour conserver son package.json sous contrôle, Codex qui passe sur GPT-5, Apertus, une IA vraiment open-source, et un SDK PHP pour faire des serveurs MCP."
-videoLink : MSA5UTdi_lo
-tags: ['nuxt', 'atlassian', 'chrome', 'npm', 'pnpm', 'ai', 'gpt-5', 'php']
+description: "Un épisode news dans lequel nous évoquons : une page Nuxt
+  changelogs, Dia et Arc qui partent chez Atlassian, Google qui conserve Chrome,
+  plusieurs packages NPM compromis, une librairie AI Elements qui devient
+  open-source, Telex IA, comment créer des fichiers llms.txt, comment bloquer
+  les bots AI, FeedSmith qui passe en V2, un article pour conserver son
+  package.json sous contrôle, Codex qui passe sur GPT-5, Apertus, une IA
+  vraiment open-source, et un SDK PHP pour faire des serveurs MCP."
+videoLink: MSA5UTdi_lo
+tags:
+  - nuxt
+  - atlassian
+  - chrome
+  - npm
+  - pnpm
+  - ai
+  - gpt-5
+  - php
+fileSize: 34643710
 ---
+
 ## Nuxt Change logs page
 
 - [https://nuxt-changelog.vercel.app](https://nuxt-changelog.vercel.app/)
@@ -84,7 +101,3 @@ Générateur de bloc gutenberg par IA
 - https://thephp.foundation/blog/2025/09/05/php-mcp-sdk
 
 Bonne écoute !
-
-
-
-

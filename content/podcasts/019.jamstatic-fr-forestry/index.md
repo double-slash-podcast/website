@@ -4,18 +4,26 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4531
+duration: 9063
 dsSlug: DS_019_jamstatic
 episodeNumber: 19
 episodeType: full
 explicit: false
 season: 1
 title: Jamstatic fr, Forestry.io et Tina CMS avec Frank Taillandier
-subtitle: Un épisode avec notre invité Frank Taillandier qui a créé la communauté Jamstatic FR et qui travaille pour Forestry.io. Un épisode orienté statique !
+subtitle: Un épisode avec notre invité Frank Taillandier qui a créé la
+  communauté Jamstatic FR et qui travaille pour Forestry.io. Un épisode orienté
+  statique !
 guid: e920b97fca291002903e32ea3aefff46
-description: Un épisode avec notre invité Frank Taillandier qui a créé la communauté Jamstatic FR et qui travaille pour Forestry.io. Un épisode orienté statique !
-videoLink:
-tags: [static,jamstack,forestry]
+description: Un épisode avec notre invité Frank Taillandier qui a créé la
+  communauté Jamstatic FR et qui travaille pour Forestry.io. Un épisode orienté
+  statique !
+videoLink: null
+tags:
+  - static
+  - jamstack
+  - forestry
+fileSize: 108790453
 ---
 
 ## Dans la première partie, nous allons parler de la communauté "Jamstatic FR"
@@ -46,7 +54,3 @@ Nous vous laissons découvrir le service plus en détail en écoutant l'épisode
 - Frank Taillandier,
   - [https://twitter.com/FrankTLDR](https://twitter.com/FrankTLDR)
   - [https://github.com/DirtyF](https://github.com/DirtyF)
-
-
-
-

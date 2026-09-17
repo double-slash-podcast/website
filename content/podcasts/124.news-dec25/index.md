@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration:
+duration: 4024
 episodeNumber: 124
 episodeType: full
 explicit: false
@@ -13,9 +13,29 @@ dsSlug: DS_124_newsDec25
 title: "🤖 News Décembre 2025 : de l'IA, de la bêta et des pannes"
 subtitle: Les news sur le développement web et l'IA pour décembre 2025 RC1
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1765313645/episode/ART_124_wf0qcz.png
-description: Dans cet épisode, nous évoquons PHP avec Laravel et la landing page de la v8.5. Nous parlons également de l'IA avec EURIA d'Infomaniak, Bloom pour MedusaJS, TanStack IA, la bibliothèque Vue AI Élément, Anthropic qui achète Bun et l'arrivée de WebGPU sur les principaux navigateurs. Nous abordons aussi les pannes successives de Cloudflare, ainsi que ses alternatives européennes et non européennes.
-videoLink : IH4317UsceY
-tags: ['laravel', 'php', 'typescript', 'cloudflare', 'antigravity', 'vue', 'webgpu', 'transformerjs', 'tanstack', 'anthropic', 'bun', 'euria', 'medusajs', 'ai']
+description: Dans cet épisode, nous évoquons PHP avec Laravel et la landing page
+  de la v8.5. Nous parlons également de l'IA avec EURIA d'Infomaniak, Bloom pour
+  MedusaJS, TanStack IA, la bibliothèque Vue AI Élément, Anthropic qui achète
+  Bun et l'arrivée de WebGPU sur les principaux navigateurs. Nous abordons aussi
+  les pannes successives de Cloudflare, ainsi que ses alternatives européennes
+  et non européennes.
+videoLink: IH4317UsceY
+tags:
+  - laravel
+  - php
+  - typescript
+  - cloudflare
+  - antigravity
+  - vue
+  - webgpu
+  - transformerjs
+  - tanstack
+  - anthropic
+  - bun
+  - euria
+  - medusajs
+  - ai
+fileSize: 64489228
 ---
 
 ## Calendrier Laravel

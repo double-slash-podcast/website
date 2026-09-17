@@ -13,10 +13,17 @@ dsSlug: DS_095_secret
 title: La gestion des secrets et .ENV
 subtitle: Astuces et bonnes pratiques
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1726588579/episode/ART_95_dwvg6v.png
-description: Les variables d'environnement sont essentielles pour la sécurité et la flexibilité des applications web. Bien que le fichier .ENV soit couramment utilisé, il présente des risques de partage d'informations sensibles. Des solutions alternatives comme les gestionnaires de mots de passe et les "secrets managers" offrent une meilleure sécurité pour le stockage et le partage d'informations confidentielles, particulièrement dans les environnements de développement collaboratifs et les déploiements cloud.
-videoLink : CH_il0Zh6nM
-
+description: Les variables d'environnement sont essentielles pour la sécurité et
+  la flexibilité des applications web. Bien que le fichier .ENV soit couramment
+  utilisé, il présente des risques de partage d'informations sensibles. Des
+  solutions alternatives comme les gestionnaires de mots de passe et les
+  "secrets managers" offrent une meilleure sécurité pour le stockage et le
+  partage d'informations confidentielles, particulièrement dans les
+  environnements de développement collaboratifs et les déploiements cloud.
+videoLink: CH_il0Zh6nM
+fileSize: 46601194
 ---
+
 ## Pourquoi utiliser des variables d’environnement ?
 
 Les variables d'environnement sont utilisées dans les programmes de sites web pour plusieurs raisons importantes :
@@ -99,7 +106,3 @@ NuxtJS donne la possibilité d’utiliser `NUXT_PUBLIC_` pour placer une variabl
 - Yoann Dev sur Infisical https://youtu.be/EyDWgo2eXuU?feature=shared
 
 Bonne écoute !
-
-
-
-

@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3408
+duration: 6817
 episodeNumber: 62
 episodeType: full
 explicit: false
@@ -13,113 +13,69 @@ dsSlug: DS_062_newBD
 title: Les nouvelles DB
 subtitle: Comprendre et bien choisir sa base de données en 2023
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1681120716/episode/ART_62_newDB_da5svz.png
-description: Bienvenue dans notre épisode de podcast consacré aux bases de données en 2023 ! Rejoignez-nous pour découvrir les dernières tendances dans le monde des bases de données, de SQL à NoSQL, en passant par les bases de données distribuées et les nouvelles générations de bases de données comme NewSQL.
-videoLink : FlhMns5KsiU
+description: Bienvenue dans notre épisode de podcast consacré aux bases de
+  données en 2023 ! Rejoignez-nous pour découvrir les dernières tendances dans
+  le monde des bases de données, de SQL à NoSQL, en passant par les bases de
+  données distribuées et les nouvelles générations de bases de données comme
+  NewSQL.
+videoLink: FlhMns5KsiU
 links:
-  [
-    {
-      title: 'MySQL',
-      url: 'https://www.mysql.com/'
-    },
-    {
-      title: 'Postgres',
-      url: 'https://www.postgresql.org/'
-    },
-    {
-      title: 'Oracle',
-      url: 'https://www.oracle.com/database/'
-    },
-    {
-      title: 'SQLite',
-      url: 'https://www.sqlite.org/index.html'
-    },
-    {
-      title: 'MongoDB',
-      url: 'https://www.mongodb.com/'
-    },
-    {
-      title: 'Couchbase',
-      url: 'https://www.couchbase.com/'
-    },
-    {
-      title: 'RethinkDB',
-      url: 'https://rethinkdb.com/'
-    },
-    {
-      title: 'Redis',
-      url: 'https://redis.io/'
-    },
-    {
-      title: 'DragonFly',
-      url: 'https://www.dragonflydb.com/'
-    },
-    {
-      title: 'InfluxDB',
-      url: 'https://www.influxdata.com/'
-    },
-    {
-      title: 'TimescaleDB',
-      url: 'https://www.timescale.com/'
-    },
-    {
-      title: 'GreptimeDB',
-      url: 'https://greptime.com/'
-    },
-    {
-      title: 'Neo4j',
-      url: 'https://neo4j.com/'
-    },
-    {
-      title: 'Elasticsearch',
-      url: 'https://www.elastic.co/elasticsearch/'
-    },
-    {
-      title: 'Meilisearch',
-      url: 'https://www.meilisearch.com/'
-    },
-    {
-      title: 'Algolia',
-      url: 'https://www.algolia.com/'
-    },
-    {
-      title: 'Prisma',
-      url: 'https://www.prisma.io/'
-    },
-    {
-      title: 'Scaleway',
-      url: 'https://www.scaleway.com/'
-    },
-    {
-      title: 'AWS',
-      url: 'https://aws.amazon.com/'
-    },
-    {
-      title: 'Digital Ocean',
-      url: 'https://www.digitalocean.com/'
-    },
-    {
-      title: 'Neon',
-      url: 'https://neondb.com/'
-    },
-    {
-      title: 'PlanetScale',
-      url: 'https://www.planetscale.com/'
-    },
-    {
-      title: 'FaunaDB',
-      url: 'https://fauna.com/'
-    },
-    {
-      title: 'SurrealDB',
-      url: 'https://surrealdb.com/'
-    },
-    {
-      title: 'Upstash',
-      url: 'https://upstash.com/',
-    }
-  ]
-tags: [devops,database]
+  - title: MySQL
+    url: https://www.mysql.com/
+  - title: Postgres
+    url: https://www.postgresql.org/
+  - title: Oracle
+    url: https://www.oracle.com/database/
+  - title: SQLite
+    url: https://www.sqlite.org/index.html
+  - title: MongoDB
+    url: https://www.mongodb.com/
+  - title: Couchbase
+    url: https://www.couchbase.com/
+  - title: RethinkDB
+    url: https://rethinkdb.com/
+  - title: Redis
+    url: https://redis.io/
+  - title: DragonFly
+    url: https://www.dragonflydb.com/
+  - title: InfluxDB
+    url: https://www.influxdata.com/
+  - title: TimescaleDB
+    url: https://www.timescale.com/
+  - title: GreptimeDB
+    url: https://greptime.com/
+  - title: Neo4j
+    url: https://neo4j.com/
+  - title: Elasticsearch
+    url: https://www.elastic.co/elasticsearch/
+  - title: Meilisearch
+    url: https://www.meilisearch.com/
+  - title: Algolia
+    url: https://www.algolia.com/
+  - title: Prisma
+    url: https://www.prisma.io/
+  - title: Scaleway
+    url: https://www.scaleway.com/
+  - title: AWS
+    url: https://aws.amazon.com/
+  - title: Digital Ocean
+    url: https://www.digitalocean.com/
+  - title: Neon
+    url: https://neondb.com/
+  - title: PlanetScale
+    url: https://www.planetscale.com/
+  - title: FaunaDB
+    url: https://fauna.com/
+  - title: SurrealDB
+    url: https://surrealdb.com/
+  - title: Upstash
+    url: https://upstash.com/
+tags:
+  - devops
+  - database
+fileSize: 54539471
 ---
+
 ## Comprendre et bien choisir sa base de données en 2023
 
 Nous discuterons des avantages et des inconvénients de chaque approche, des tendances émergentes, ainsi que des défis et opportunités auxquels les développeurs et les entreprises font face dans le paysage en constante évolution des bases de données. Ne manquez pas cet épisode passionnant rempli d'idées novatrices et de perspectives sur l'avenir des bases de données en 2023 !
@@ -196,7 +152,3 @@ Et nous finirons par les bases de données newSQL. Qu'est-ce que c'est ? Quels s
 - 43:48 Les New SQL
 
 Bonne écoute !
-
-
-
-

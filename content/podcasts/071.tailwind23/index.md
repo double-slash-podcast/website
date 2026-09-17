@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 4441
+duration: 8888
 episodeNumber: 71
 episodeType: full
 explicit: false
@@ -13,9 +13,15 @@ dsSlug: DS_071_tailwind23
 title: Découvrir TailwindCSS en 2023
 subtitle: Pourquoi et comment
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1696020556/episode/ART_71_qltppk.png
-description: Un épisode [Remix] sur TailwindCSS. Nous avions déjà fait un épisode sur l'outil TailwindCSS, le numéro 7, sorti en 2020. Comme ce magnifique outil a évolué depuis, nous voulions refaire un épisode dédié pour réexpliquer le fonctionnement et l’écosystème autour de ce dernier.
-videoLink : vAhiMb7YAoo
-tags: [css,tailwindcss]
+description: Un épisode [Remix] sur TailwindCSS. Nous avions déjà fait un
+  épisode sur l'outil TailwindCSS, le numéro 7, sorti en 2020. Comme ce
+  magnifique outil a évolué depuis, nous voulions refaire un épisode dédié pour
+  réexpliquer le fonctionnement et l’écosystème autour de ce dernier.
+videoLink: vAhiMb7YAoo
+tags:
+  - css
+  - tailwindcss
+fileSize: 71105682
 ---
 
 ## Description de TailwindCSS
@@ -77,7 +83,3 @@ Articles qui regroupent des bonnes pratiques :
 - [shadcn/ui](https://ui.shadcn.com/)
 
 Bonne écoute !
-
-
-
-

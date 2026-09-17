@@ -4,19 +4,44 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 3169
 episodeNumber: 135
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_135_news-jul26
 title: News Juillet 2026, TypeScript 7 RC, Astro 7 et des pièges pour agents IA
-subtitle: Les news pour juillet 2026, TypeScript 7 RC, Astro 7, agents IA et outils du mois.
+subtitle: Les news pour juillet 2026, TypeScript 7 RC, Astro 7, agents IA et
+  outils du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1782901023/ART_135_m3vbav.png
-description: Nous évoquons TypeScript 7.0 RC jusqu'à 10 fois plus rapide, Astro 7.0 avec Sätteri et Rolldown, l'astuce de Mitchell Hashimoto pour piéger les PR sans review de code, Cursor sur iOS, Docker sur Vercel, Deno Desktop, Babel 8, le framework d'agents Eve, les modèles IA Fugu et Ornith, le nouveau Mistral OCR 4, Firecrawl Keyless, LightOn, Linkup et Proxae.
-videoLink : zap1n9Sb_B4
-tags: ['typescript', 'astro', 'satteri', 'cursor', 'vercel', 'docker', 'deno', 'babel', 'eve', 'ai', 'agents', 'mistral', 'ocr', 'firecrawl', 'fugu', 'ornith', 'linkup', 'lighton']
+description: Nous évoquons TypeScript 7.0 RC jusqu'à 10 fois plus rapide, Astro
+  7.0 avec Sätteri et Rolldown, l'astuce de Mitchell Hashimoto pour piéger les
+  PR sans review de code, Cursor sur iOS, Docker sur Vercel, Deno Desktop, Babel
+  8, le framework d'agents Eve, les modèles IA Fugu et Ornith, le nouveau
+  Mistral OCR 4, Firecrawl Keyless, LightOn, Linkup et Proxae.
+videoLink: zap1n9Sb_B4
+tags:
+  - typescript
+  - astro
+  - satteri
+  - cursor
+  - vercel
+  - docker
+  - deno
+  - babel
+  - eve
+  - ai
+  - agents
+  - mistral
+  - ocr
+  - firecrawl
+  - fugu
+  - ornith
+  - linkup
+  - lighton
+fileSize: 50707717
 ---
+
 ## Mitchell Hashimoto et les pièges à agents
 
 https://x.com/mitchellh/status/2067970516951150721
@@ -168,7 +193,3 @@ Cas d'usage : Agents de vente, veille corporate, détection de fuites de donnée
 https://proxae.com
 
 **Proxae** permet de certifier vos idées, textes et fichiers dans la blockchain Bitcoin. Créez des preuves infalsifiables et vérifiables à vie, sans confiance requise. Idéal pour protéger vos créations et prouver leur antériorité.
-
-
-
-

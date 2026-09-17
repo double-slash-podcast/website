@@ -4,29 +4,33 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2921
+duration: 5825
 episodeNumber: 56
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_056_medusa
 title: Medusa JS, l'alternative headless e-commerce open-source
-subtitle: Medusa JS, une solution e-commerce open-source en full headless, l'alternative à Shopify
+subtitle: Medusa JS, une solution e-commerce open-source en full headless,
+  l'alternative à Shopify
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,w_200/v1673194437/episode/ART_56_medusa_una5ps.png
-description: Dans cet épisode, nous avons le plaisir de recevoir Adrien de Peretti. Il fait partie de l'équipe Core du projet "Medusa JS" en tant que "Senior Software Engineer". Adrien est également coauteur du framework Nest JS. Il possède donc des bases très solides en développement JavaScript. Avec lui nous allons parler de la solution open source, Medusa JS. Une solution e-commerce qui prétend être une alternative à Shopify.
-videoLink : r-RLxCmDRKg
+description: Dans cet épisode, nous avons le plaisir de recevoir Adrien de
+  Peretti. Il fait partie de l'équipe Core du projet "Medusa JS" en tant que
+  "Senior Software Engineer". Adrien est également coauteur du framework Nest
+  JS. Il possède donc des bases très solides en développement JavaScript. Avec
+  lui nous allons parler de la solution open source, Medusa JS. Une solution
+  e-commerce qui prétend être une alternative à Shopify.
+videoLink: r-RLxCmDRKg
 links:
-  [
-    {
-      title: 'Medusa JS',
-      url: 'https://medusajs.com',
-    },
-    {
-      title: 'Github Medusa JS',
-      url: 'https://github.com/medusajs',
-    },
-  ]
-tags: [medusajs,ecoomerce,headless]
+  - title: Medusa JS
+    url: https://medusajs.com
+  - title: Github Medusa JS
+    url: https://github.com/medusajs
+tags:
+  - medusajs
+  - ecoomerce
+  - headless
+fileSize: 46652074
 ---
 
 ## Medusa JS
@@ -49,7 +53,3 @@ Senior Software Engineer pour Medusa JS
 - [Linkedin d'Adrien](https://www.linkedin.com/in/adriendeperetti)
 
 Bonne écoute !
-
-
-
-

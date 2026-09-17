@@ -5,17 +5,22 @@ publicationDate: 2020-04-09
 status: published
 dsSlug: DS_001_jamstack
 author: Double slash
-duration: 4825
+duration: 9651
 season: 1
-episodeNumber: 02
+episodeNumber: 2
 episodeType: full
 explicit: false
 categories:
   - Technology
 guid: 72b1aeca6ea293f3fa30d4003404be07
-description: Dans ce podcast, nous parlons de la JAMStack. Comment la JAMStack fonctionne, quelle est la différence avec les sites dynamiques du type PHP/WordPress. Quelles sont les limites et quels sont les avantages.
-videoLink:
-tags: [jamstack, static]
+description: Dans ce podcast, nous parlons de la JAMStack. Comment la JAMStack
+  fonctionne, quelle est la différence avec les sites dynamiques du type
+  PHP/WordPress. Quelles sont les limites et quels sont les avantages.
+videoLink: null
+tags:
+  - jamstack
+  - static
+fileSize: 115827689
 ---
 
 - [https://jamstack.org/](https://jamstack.org/)
@@ -48,7 +53,3 @@ Entre temps, Gatsby a annoncé l'incremental builds :
 
 - site web (billets originaux et traductions) : [https://jamstatic.fr/](https://jamstatic.fr/)
 - Slack avec beaucoup de sujets abordés et une communauté active (et accueillante) : [https://jamstatic.fr/slack/](https://jamstatic.fr/slack/)
-
-
-
-

@@ -4,18 +4,25 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3705
+duration: 7610
 dsSlug: DS_034_news22
 episodeNumber: 34
 episodeType: full
 explicit: false
 season: 1
 title: La chasse aux news - Avril 2022
-subtitle: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines
+subtitle: Un passage en revue des news et releases de nos outils et technologies
+  de développement web des dernières semaines
 guid: 0479679fbfac701b8757a41fb3422d20
-description: Un passage en revue des news et releases de nos outils et technologies de développement web des dernières semaines.
-videoLink:
-tags: [devops,react,astro,cms]
+description: Un passage en revue des news et releases de nos outils et
+  technologies de développement web des dernières semaines.
+videoLink: null
+tags:
+  - devops
+  - react
+  - astro
+  - cms
+fileSize: 91348945
 ---
 
 ### Retrouvez la vidéo de l'enregistrement sur [le Youtube de DoubleSlash](https://youtu.be/qH6m3WxUq9k)
@@ -38,7 +45,3 @@ tags: [devops,react,astro,cms]
 - 57:15 - Petit retour rapide sur le WordCamp Geneve 2022
 
 Bonne écoute !
-
-
-
-

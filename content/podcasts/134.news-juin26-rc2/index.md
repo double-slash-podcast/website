@@ -4,18 +4,35 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 
+duration: 3532
 episodeNumber: 134
 episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_134_news-juin26-rc2
 title: News Juin 2026 RC2, React quitte Meta, VoidZero rejoint Cloudflare et IA locale
-subtitle: Les news pour la deuxième quinzaine de juin 2026, React Foundation, VoidZero x Cloudflare, WordPress Protect The Shire et toujours plus d'IA.
+subtitle: Les news pour la deuxième quinzaine de juin 2026, React Foundation,
+  VoidZero x Cloudflare, WordPress Protect The Shire et toujours plus d'IA.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1781689392/episode/ART_134_dmbb8r.png
-description: Nous évoquons React qui passe sous la Linux Foundation avec la React Foundation, VoidZero et Vite qui rejoignent Cloudflare, l'initiative Protect The Shire pour sécuriser les 78 000 plugins WordPress, TanStack AI en beta, Maizzle 6 et sa refonte Tailwind CSS 4, les nouveaux modèles open-weight de Mistral, Mellum2 qui passe en open source, le Ryzen AI Halo d'AMD avec 128 Go de RAM pour faire tourner 200 milliards de paramètres en local, et les nouveautés Chrome comme WebMCP et les Declarative Partial Updates.
-videoLink : 4DUHYPTYipk
-tags: ["wordpress", "PHP", "React", "chrome", "Maizzle", "TanStack", "IA", "Mistral", "AMD"]
+description: Nous évoquons React qui passe sous la Linux Foundation avec la
+  React Foundation, VoidZero et Vite qui rejoignent Cloudflare, l'initiative
+  Protect The Shire pour sécuriser les 78 000 plugins WordPress, TanStack AI en
+  beta, Maizzle 6 et sa refonte Tailwind CSS 4, les nouveaux modèles open-weight
+  de Mistral, Mellum2 qui passe en open source, le Ryzen AI Halo d'AMD avec 128
+  Go de RAM pour faire tourner 200 milliards de paramètres en local, et les
+  nouveautés Chrome comme WebMCP et les Declarative Partial Updates.
+videoLink: 4DUHYPTYipk
+tags:
+  - wordpress
+  - PHP
+  - React
+  - chrome
+  - Maizzle
+  - TanStack
+  - IA
+  - Mistral
+  - AMD
+fileSize: 56526085
 ---
 
 ## Protect The Shire – WordPress

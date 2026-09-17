@@ -4,7 +4,7 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2 627
+duration: 2637
 episodeNumber: 136
 episodeType: full
 explicit: false
@@ -13,10 +13,19 @@ dsSlug: DS_136_workflow
 title: Workflow SDK, orchestrer des tâches asynchrones sans usine à gaz
 subtitle: Un processus intelligent ?
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1784274696/episode/ART_136_zvafgr.png
-description: "Présentation de Workflow SDK, la librairie Vercel pour orchestrer simplement des tâches asynchrones en JavaScript/TypeScript, avec retries, pauses, webhooks, actions humaines et observabilité, en partageant son retour d’expérience et des cas concrets."
-videoLink : r8gtqImnrCk
-tags: ['workflow', 'javascript', 'queue', 'vercel']
+description: Présentation de Workflow SDK, la librairie Vercel pour orchestrer
+  simplement des tâches asynchrones en JavaScript/TypeScript, avec retries,
+  pauses, webhooks, actions humaines et observabilité, en partageant son retour
+  d’expérience et des cas concrets.
+videoLink: r8gtqImnrCk
+tags:
+  - workflow
+  - javascript
+  - queue
+  - vercel
+fileSize: 42197125
 ---
+
 ## Workflow SDK : orchestrer simplement sans réinventer les queues
 
 Comment enchaîner des étapes métier fiables : retry, pause, webhook, reprise après erreur. Sans monter une usine Kafka/Redis à la main ?

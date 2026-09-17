@@ -4,18 +4,26 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 2821
+duration: 5643
 episodeNumber: 59
 episodeType: full
 explicit: false
 season: 1
 dsSlug: DS_059_newsFev23
 title: Les News pour février 2023
-subtitle: Épisode spécial news pour février 2023, nous évoquons Eleventy, Astro, Gatby chez Netlify, le documentaire React, ...
+subtitle: Épisode spécial news pour février 2023, nous évoquons Eleventy, Astro,
+  Gatby chez Netlify, le documentaire React, ...
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/c_scale,w_300/v1677015062/episode/ART_59_news_fev_zzflor.png
-description: Dans cet épisode spécial news de février 2023, nous évoquons Eleventy V2 beta, Astro 2.0, Gatsby JS qui passe chez Netlify, le documentaire React à voir et de l'open-source évidemment.
-videoLink : eXWk-LdcgDw
-tags: [astro, devtools,js,performance]
+description: Dans cet épisode spécial news de février 2023, nous évoquons
+  Eleventy V2 beta, Astro 2.0, Gatsby JS qui passe chez Netlify, le documentaire
+  React à voir et de l'open-source évidemment.
+videoLink: eXWk-LdcgDw
+tags:
+  - astro
+  - devtools
+  - js
+  - performance
+fileSize: 39505565
 ---
 
 ## Les retours d’auditeurs
@@ -88,7 +96,3 @@ Suite à l’épisode news décembre Thibault Barrat qui bosse chez Marmelab, no
 
 
 Bonne écoute !
-
-
-
-
