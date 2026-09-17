@@ -1,18 +1,18 @@
 <script setup lang="ts">
 /**
- * Cloudinary-backed <img> via useImage(), with NuxtImg-like 1x/2x srcset.
- * NuxtImg itself cannot be used: `useTemplateRef('imgEl')` throws during
- * Vue 3.5 production SSR (`Cannot redefine property: imgEl`) and fails
- * `nuxi generate`.
+ * Cloudinary-backed images via NuxtImg.
+ * @nuxt/image is patched: useTemplateRef('imgEl') throws
+ * `Cannot redefine property: imgEl` during Vue 3.5 production SSR
+ * and fails `nuxi generate` (see patches/@nuxt__image@2.1.0.patch).
  */
-import {buildDensitySrcset, toPx} from '~/utils/appImg';
-
-const props = withDefaults(
+withDefaults(
   defineProps<{
     src: string;
     alt: string;
     width?: number | string;
     height?: number | string;
+    sizes?: string;
+    densities?: string;
     loading?: 'lazy' | 'eager';
     decoding?: 'async' | 'auto' | 'sync';
   }>(),
@@ -21,35 +21,16 @@ const props = withDefaults(
     decoding: 'async',
   },
 );
-
-const img = useImage();
-
-const widthPx = computed(() => toPx(props.width));
-const heightPx = computed(() => toPx(props.height));
-
-const resolvedSrc = computed(() =>
-  img(props.src, {
-    width: widthPx.value,
-    height: heightPx.value,
-  }),
-);
-
-const srcset = computed(() =>
-  buildDensitySrcset(
-    (width, height) => img(props.src, {width, height}),
-    widthPx.value,
-    heightPx.value,
-  ),
-);
 </script>
 
 <template>
-  <img
-    :src="resolvedSrc"
-    :srcset="srcset"
+  <NuxtImg
+    :src="src"
     :alt="alt"
-    :width="widthPx"
-    :height="heightPx"
+    :width="width"
+    :height="height"
+    :sizes="sizes"
+    :densities="densities"
     :loading="loading"
     :decoding="decoding"
   />

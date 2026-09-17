@@ -31,20 +31,26 @@ function goHome() {
     <div>
       <Header>
         <template #title>
-          <h1 class="text-5xl text-primary font-brand relative z-1">
+          <h1 class="text-5xl md:text-8xl text-primary font-brand relative z-1 text-center">
             Erreur {{ statusCode }} !
           </h1>
         </template>
       </Header>
-      <main class="relative z-10 pb-24 min-h-[350px] px-4">
-        <div class="-mt-6 text-center">
-          <Icon name="NotFoundIcon" size="250" class="text-secondary" />
+      <main class="relative z-10 pb-24 min-h-[80vh] px-4 flex flex-col items-center justify-start gap-6">
+        <div class="mt-6 text-center">
+          <img
+            src="/404-mp3-casse.jpg"
+            width="512"
+            height="512"
+            alt="Lecteur MP3 avec un casque cassé dont le fil est coupé"
+            class="mx-auto w-full max-w-88 h-auto rounded-3xl"
+          />
         </div>
-        <h2 class="mt-16 text-5xl normal-case font-brand text-secondary">
+        <h2 class="mt-8 text-3xl md:text-5xl font-brand text-secondary">
           {{ copy.heading }}
         </h2>
-        <p class="my-3 text-xl">{{ copy.description }}</p>
-        <NuxtLink class="underline" to="/" @click="goHome">
+        <p class="my-3 text-xl text-gray-600">{{ copy.description }}</p>
+        <NuxtLink class="flex items-center justify-center border border-secondary rounded-md bg-secondary text-primary hover:opacity-80 transition-all duration-300 px-4 py-2" to="/" @click="goHome">
           <Icon name="mdi:arrow-left" size="20" class="mr-1" />Retourner sur la
           page d'accueil
         </NuxtLink>

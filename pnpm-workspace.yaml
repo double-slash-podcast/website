@@ -36,3 +36,7 @@ minimumReleaseAgeExclude:
   - '@types/node@26.4.1'
   - baseline-browser-mapping@2.11.24
   - prettier@3.9.7
+
+# NuxtImg useTemplateRef('imgEl') throws during Vue 3.5 generate SSR.
+patchedDependencies:
+  '@nuxt/image@2.1.0': patches/@nuxt__image@2.1.0.patch
