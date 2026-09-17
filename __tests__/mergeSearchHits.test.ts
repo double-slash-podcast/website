@@ -6,9 +6,12 @@ import {
   mergeFullTextAndCatalog,
   normalizeDocPath,
   pickSearchTab,
-  sanitizeSnippetHtml,
   toHitHref,
 } from '../app/utils/mergeSearchHits';
+import {
+  snippetHighlightParts,
+  stripSnippetHtml,
+} from '../app/utils/snippetHtml';
 import {searchKindFromQuery, searchResultsPath} from '../app/utils/siteCatalog';
 import type {WebMcpCatalogItem} from '../app/utils/webmcpTypes';
 
@@ -267,16 +270,23 @@ describe('groupSearchHits', () => {
     expect(pickSearchTab(grouped, 'article')).toBe('episode');
   });
 });
-describe('sanitizeSnippetHtml', () => {
-  test('keeps mark tags and strips other markup', () => {
-    expect(
-      sanitizeSnippetHtml('<script>x</script>hello <mark>web</mark>'),
-    ).toBe('hello <mark>web</mark>');
+describe('snippet HTML', () => {
+  test('strips nested leftover tags that a single replace would miss', () => {
+    expect(stripSnippetHtml('<<script>alert(1)</script>')).toBe('alert(1)');
   });
 
-  test('strips attributes from mark tags', () => {
-    expect(sanitizeSnippetHtml('<mark onclick="alert(1)">web</mark>')).toBe(
-      '<mark>web</mark>',
-    );
+  test('splits mark highlights and drops other markup', () => {
+    expect(
+      snippetHighlightParts('<script>x</script>hello <mark>web</mark>'),
+    ).toEqual([
+      {text: 'xhello ', highlighted: false},
+      {text: 'web', highlighted: true},
+    ]);
+  });
+
+  test('ignores mark attributes and nested tags inside a highlight', () => {
+    expect(
+      snippetHighlightParts('<mark onclick="alert(1)"><em>web</em></mark>'),
+    ).toEqual([{text: 'web', highlighted: true}]);
   });
 });

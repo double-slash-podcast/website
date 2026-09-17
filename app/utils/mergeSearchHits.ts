@@ -1,3 +1,4 @@
+import {stripSnippetHtml} from './snippetHtml';
 import {
   clampCatalogLimit,
   rankCatalog,
@@ -71,24 +72,6 @@ export function collectMatchedTags(tags: string[], query: string): string[] {
     const lower = tag.toLowerCase();
     return tokens.some(token => lower.includes(token));
   });
-}
-
-/**
- * Drop HTML from an FTS snippet so agents get plain text.
- */
-export function stripSnippetHtml(html: string): string {
-  return html.replace(/<[^>]+>/g, '');
-}
-
-/**
- * Keep bare mark tags from FTS snippets; drop other markup and mark attributes.
- */
-export function sanitizeSnippetHtml(html: string): string {
-  return html
-    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '')
-    .replace(/<(?!\/?mark\b)[^>]*>/gi, '')
-    .replace(/<mark\b[^>]*>/gi, '<mark>')
-    .replace(/<\/mark\b[^>]*>/gi, '</mark>');
 }
 
 /**

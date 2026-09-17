@@ -1,16 +1,16 @@
 <script setup lang="ts">
 import type {SiteSearchHit} from '~/utils/mergeSearchHits';
-import {sanitizeSnippetHtml} from '~/utils/mergeSearchHits';
+import {snippetHighlightParts} from '~/utils/snippetHtml';
 
 const props = defineProps<{
   hit: SiteSearchHit;
 }>();
 
 /**
- * Safe FTS excerpt: mark tags only.
+ * FTS excerpt as text nodes so Vue escapes markup; mark wraps highlights.
  */
-const snippetHtml = computed(() =>
-  props.hit.snippet ? sanitizeSnippetHtml(props.hit.snippet) : '',
+const snippetParts = computed(() =>
+  props.hit.snippet ? snippetHighlightParts(props.hit.snippet) : [],
 );
 
 const kindLabel = computed(() =>
@@ -28,11 +28,12 @@ const kindLabel = computed(() =>
       {{ kindLabel }}
     </p>
     <p class="text-base font-headings text-white">{{ hit.title }}</p>
-    <p
-      v-if="snippetHtml"
-      class="text-sm text-purple-100 search-snippet"
-      v-html="snippetHtml"
-    />
+    <p v-if="snippetParts.length" class="text-sm text-purple-100 search-snippet">
+      <template v-for="(part, index) in snippetParts" :key="index">
+        <mark v-if="part.highlighted">{{ part.text }}</mark>
+        <template v-else>{{ part.text }}</template>
+      </template>
+    </p>
     <p v-else-if="hit.description" class="text-sm text-purple-100">
       {{ hit.description }}
     </p>
