@@ -2,7 +2,7 @@ import crypto from 'node:crypto';
 import type {H3Event, NodeIncomingMessage} from 'h3';
 import RSS from 'rss';
 import type {PodcastsCollectionItem} from '@nuxt/content';
-import {parseEpisodeDuration} from '~/helpers/duration/parseEpisodeDuration';
+import {parseMediaNumber} from '~/utils/mediaMeta';
 
 /**
  * get the list of podcasts from content/podcasts
@@ -118,6 +118,7 @@ export default defineEventHandler(
         guid,
         episodeArtwork,
         duration,
+        fileSize,
       }: PodcastsCollectionItem = podcast;
 
       if (!title) {
@@ -160,7 +161,8 @@ export default defineEventHandler(
         {'googleplay:explicit': explicit},
       ];
 
-      const episodeDuration = parseEpisodeDuration(duration);
+      const episodeDuration = parseMediaNumber(duration);
+      const episodeFileSize = parseMediaNumber(fileSize);
       if (episodeDuration) {
         custom_elements.push({'itunes:duration': episodeDuration});
       }
@@ -177,6 +179,7 @@ export default defineEventHandler(
         custom_elements,
         enclosure: {
           url,
+          size: episodeFileSize,
           type: 'audio/mpeg',
         },
       });
