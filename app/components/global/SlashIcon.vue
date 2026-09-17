@@ -1,13 +1,11 @@
 <template>
   <svg
-    ref="svg"
     xmlns="http://www.w3.org/2000/svg"
     :width="`${size}px`"
     :height="`${size}px`"
     viewBox="0 0 90 144"
     :class="insideClass"
   >
-    >
     <text
       transform="translate(0 111)"
       font-size="144"
@@ -19,14 +17,11 @@
   </svg>
 </template>
 <script setup lang="ts">
+/**
+ * Decorative // mark used on the homepage and footer.
+ */
 const {insideClass} = useAttrs();
 defineProps<{
   size: string;
 }>();
-const svg = ref();
-defineExpose({
-  svg,
-});
 </script>
-
-<!-- class="absolute -top-[13px] left-[43%] hidden drop-shadow-sm -z-10 sm:block" -->
