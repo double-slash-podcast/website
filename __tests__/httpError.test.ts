@@ -1,11 +1,13 @@
 import fs from 'fs';
 import path from 'path';
-import {describe, expect, test} from 'vitest';
+import {describe, expect, test, vi} from 'vitest';
 import {
   getErrorPageCopy,
   getErrorStatusCode,
+  isNotFoundError,
   notFoundErrorOptions,
 } from '../app/utils/httpError';
+import {logUnknownError} from '../app/utils/logUnknownError';
 
 const CONTENT_404_PAGES = [
   'app/pages/[...slug].vue',
@@ -34,6 +36,30 @@ describe('notFoundErrorOptions', () => {
       expect(src).toContain('throw createError(notFoundErrorOptions)');
     },
   );
+});
+
+describe('isNotFoundError', () => {
+  test('requires an explicit 404 status', () => {
+    expect(isNotFoundError({statusCode: 404})).toBe(true);
+    expect(isNotFoundError({status: 404})).toBe(true);
+    expect(isNotFoundError({statusCode: 500})).toBe(false);
+    expect(isNotFoundError(new Error('Page not found'))).toBe(false);
+    expect(isNotFoundError(undefined)).toBe(false);
+  });
+});
+
+describe('logUnknownError', () => {
+  test('does not print expected 404s', () => {
+    const spy = vi.spyOn(console, 'error').mockImplementation(() => {});
+
+    logUnknownError('[test]', {
+      statusCode: 404,
+      statusMessage: 'Page not found',
+    });
+
+    expect(spy).not.toHaveBeenCalled();
+    spy.mockRestore();
+  });
 });
 
 describe('getErrorStatusCode', () => {

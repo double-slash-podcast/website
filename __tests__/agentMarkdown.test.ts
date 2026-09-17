@@ -18,10 +18,10 @@ import {
 import {
   buildHomeMarkdown,
   emitAgentMarkdownIndexes,
-  extractFrontmatterTitle,
 } from '../app/utils/agentMarkdownIndexes';
 import {
   escapeMarkdownLinkLabel,
+  extractFrontmatterTitle,
   shouldPublishAgentMarkdown,
 } from '../app/utils/frontmatter';
 

@@ -6,8 +6,6 @@ import {
 } from './agentMarkdown';
 import {escapeMarkdownLinkLabel, extractFrontmatterTitle} from './frontmatter';
 
-export {extractFrontmatterTitle} from './frontmatter';
-
 export const AGENT_MARKDOWN_SITE_TITLE = 'Double Slash';
 export const AGENT_MARKDOWN_SITE_DESCRIPTION =
   'Le podcast sur le code, le développement web et les outils modernes.';

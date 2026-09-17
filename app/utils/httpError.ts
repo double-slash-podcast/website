@@ -21,6 +21,19 @@ export const notFoundErrorOptions = {
 } as const;
 
 /**
+ * True for an expected HTTP 404. Does not default missing status to 404.
+ */
+export function isNotFoundError(error: unknown): boolean {
+  if (!error || typeof error !== 'object') {
+    return false;
+  }
+
+  const candidate = error as HttpErrorLike;
+  const status = candidate.statusCode ?? candidate.status;
+  return status === 404;
+}
+
+/**
  * Resolve the HTTP status from a Nuxt error (statusCode or Nuxt 4 `status`).
  * Defaults to 404: this SSG site almost always surfaces missing pages, and
  * a missing status during hydration must not flip the copy to a 500.

@@ -22,7 +22,7 @@ const {
           sizes="xs:128px sm:160px"
           loading="lazy"
           decoding="async"
-          class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-primary shadow-purple-500"
+          class="w-32 h-32 border-4 border-solid sm:w-40 sm:h-40 border-primary "
         />
         <div class="pl-6 text-left uppercase font-brand">
           <p class="text-5xl text-white">Patrick</p>
@@ -73,7 +73,7 @@ const {
           sizes="xs:128px sm:160px"
           loading="lazy"
           decoding="async"
-          class="w-32 h-32 border-4 border-solid shadow-2xl sm:w-40 sm:h-40 border-primary shadow-purple-500"
+          class="w-32 h-32 border-4 border-solid sm:w-40 sm:h-40 border-primary "
         />
         <div
           class="flex-1 pl-6 text-left uppercase md:pr-6 md:pl-0 md:text-right lg:pl-6 font-brand"

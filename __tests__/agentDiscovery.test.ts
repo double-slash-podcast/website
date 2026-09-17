@@ -58,6 +58,7 @@ describe('Nitro discovery wiring', () => {
 
     expect(src).toContain('appendResponseHeader');
     expect(src).toContain('AGENT_DISCOVERY_LINK_HEADER');
+    expect(src).toContain('headersSent');
     expect(AGENT_DISCOVERY_LINK_HEADER).toContain('rel="api-catalog"');
   });
 });
