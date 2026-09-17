@@ -55,11 +55,11 @@ export default defineNuxtConfig({
       },
     },
   },
-  sourcemap: false,
+  sourcemap: true,
   vite: {
     plugins: [tailwindcss()],
     build: {
-      sourcemap: false,
+      sourcemap: true,
     },
   },
   css: ['~/assets/main.css'],
