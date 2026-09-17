@@ -1,5 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
-import {contentSignal} from './app/utils/contentSignals';
+import {formatContentSignalPairs} from './app/utils/contentSignals';
 
 export default defineNuxtConfig({
   modules: [
@@ -153,12 +153,12 @@ export default defineNuxtConfig({
       {
         userAgent: '*',
         allow: '/',
-        contentSignal,
+        contentSignal: formatContentSignalPairs(),
       },
       {
         userAgent: 'OAI-SearchBot',
         allow: '/',
-        contentSignal,
+        contentSignal: formatContentSignalPairs(),
       },
     ],
   },

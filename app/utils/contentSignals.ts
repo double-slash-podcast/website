@@ -18,16 +18,42 @@ export const contentSignal: ContentSignal = {
 };
 
 /**
+ * Comma-separated Content-Signal pairs without the directive prefix.
+ */
+export function formatContentSignalPairs(
+  signals: ContentSignal = contentSignal,
+): string {
+  return (
+    Object.entries(signals) as [keyof ContentSignal, ContentSignalValue][]
+  )
+    .map(([key, value]) => `${key}=${value}`)
+    .join(', ');
+}
+
+/**
  * Canonical `Content-Signal:` line expected in robots.txt.
  */
 export function formatContentSignalDirective(
   signals: ContentSignal = contentSignal,
 ): string {
-  const pairs = (
-    Object.entries(signals) as [keyof ContentSignal, ContentSignalValue][]
-  )
-    .map(([key, value]) => `${key}=${value}`)
-    .join(', ');
+  return `Content-Signal: ${formatContentSignalPairs(signals)}`;
+}
 
-  return `Content-Signal: ${pairs}`;
+/**
+ * Insert the site-wide Content-Signal line into a robots.txt body when missing.
+ */
+export function ensureContentSignalInRobotsTxt(
+  robotsTxt: string,
+  directive = formatContentSignalDirective(),
+): string {
+  if (/^Content-Signal:/im.test(robotsTxt)) {
+    return robotsTxt;
+  }
+
+  const wildcardGroup = /^(User-agent: \*(?:\r?\n(?:Allow|Disallow):[^\n]*)*)/m;
+  if (wildcardGroup.test(robotsTxt)) {
+    return robotsTxt.replace(wildcardGroup, `$1\n${directive}`);
+  }
+
+  return `${directive}\n${robotsTxt}`;
 }
