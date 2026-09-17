@@ -12,7 +12,7 @@ const dark = false;
         <a :href="plateform.href" :title="plateform.title" target="_blank">
           <Icon
             class="w-12 h-12 text-white duration-300 fill-white hover:text-gray-400 hover:-translate-y-2 sm:h-12 sm:w-12"
-            :class="{'text-haiti': dark, 'mt-3': index < 2}"
+            :class="{'text-haiti': dark, 'mt-3': plateform.title !== 'Github'}"
             :name="plateform.icon"
           />
         </a>

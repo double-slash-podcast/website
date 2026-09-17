@@ -1,17 +1,23 @@
 <template>
-  <div class="min-h-screen bg-linear-to-b from-purple-50 to-purple-100">
-    <slot />
-    <Footer />
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
-      <LazyWrapperPlayer />
+  <div>
+    <div class="min-h-screen bg-linear-to-b from-purple-50 to-purple-100">
+      <slot />
+      <Footer />
+      <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
+        <LazyWrapperPlayer />
+      </div>
     </div>
+    <UpButton />
+    <ClientOnly>
+      <SearchModal />
+    </ClientOnly>
   </div>
-  <UpButton />
 </template>
 
 <script setup>
 import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
 import UpButton from '~/components/global/UpButton.vue';
+import {agentDiscoveryLinks} from '~/utils/agentDiscovery';
 const {path} = useRoute();
 const {
   baseInfos: {siteUrl, titleDefault, twitterUrl},
@@ -20,25 +26,18 @@ const {
 useHead({
   htmlAttrs: {lang: 'fr-FR'},
   link: [
-    // {
-    //   hid: 'preload-font-mono',
-    //   rel: 'preload',
-    //   as: 'font',
-    //   // i don't know how to import this dynamically
-    //   href: '/_nuxt/mono45.90bc7bc8.woff2',
-    //   type: 'font/woff2',
-    // },
+    ...agentDiscoveryLinks.map(link => ({
+      rel: link.rel,
+      href: link.href,
+      ...(link.type ? {type: link.type} : {}),
+      ...(link.title ? {title: link.title} : {}),
+    })),
     {
-      rel: 'alternate',
-      type: 'application/rss+xml',
-      href: '/podcast-rss-feed.xml',
-    },
-    {
-      hid: 'canonical',
+      key: 'canonical',
       rel: 'canonical',
       href: `${siteUrl}${path}`,
     },
-    {rel: 'icon', type: 'image/png', href: '/favicon.png'},
+    {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
     {
       rel: 'apple-touch-icon',
       sizes: '180x180',

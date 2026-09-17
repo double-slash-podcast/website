@@ -1,4 +1,5 @@
 import tailwindcss from '@tailwindcss/vite';
+import {formatContentSignalPairs} from './app/utils/contentSignals';
 
 export default defineNuxtConfig({
   modules: [
@@ -16,24 +17,35 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
   ],
 
-  alias: {
-    'micromark/lib/preprocess.js': 'micromark',
-    'micromark/lib/postprocess.js': 'micromark',
-  },
-
   icon: {
     mode: 'svg',
     clientBundle: {
       // Pre-bundle scanned icons so SSR does not fetch /api/_nuxt_icon
       scan: true,
       // Icons referenced dynamically via app.config (SocialList)
-      icons: ['fa6-brands:square-x-twitter', 'logos:bluesky', 'mdi:github'],
+      icons: [
+        'fa6-brands:square-x-twitter',
+        'logos:bluesky',
+        'mdi:github',
+        'cbi:deezer-logo',
+        'vscode-icons:file-type-rss',
+      ],
       sizeLimitKb: 512,
     },
   },
   content: {
-    experimental: {nativeSqlite: true},
-    // anchorLinks: { h1: false, h2: false, h3: false, h4: false, h5: false, h6: false },
+    experimental: {sqliteConnector: 'native'},
+    // Content 3 heading anchors wrap titles in <a> and steal .prose h2/h3 styles.
+    renderer: {
+      anchorLinks: {
+        h1: false,
+        h2: false,
+        h3: false,
+        h4: false,
+        h5: false,
+        h6: false,
+      },
+    },
     build: {
       markdown: {
         highlight: {
@@ -64,17 +76,54 @@ export default defineNuxtConfig({
   experimental: {
     componentIslands: true,
     viewTransition: true,
+    typedPages: true,
   },
   colorMode: {
     classSuffix: '',
   },
+  // Production SSG is nginx (config on the server): also set
+  // Content-Type application/linkset+json on /.well-known/api-catalog there.
+  // Markdown for Agents: pnpm generate copies content/*.md next to HTML;
+  // nginx must negotiate Accept: text/markdown (see AGENTS.md).
+  routeRules: {
+    '/.well-known/api-catalog': {
+      headers: {
+        'Content-Type': 'application/linkset+json; charset=utf-8',
+      },
+    },
+    '/sitemap.xml': {
+      headers: {
+        'Content-Type': 'application/xml; charset=utf-8',
+      },
+    },
+  },
   nitro: {
     prerender: {
+      failOnError: true,
+      // Native sqlite is not safe for parallel prerender workers.
+      concurrency: 1,
       routes: [
         '/podcast-rss-feed.xml',
+        '/robots.txt',
+        '/sitemap.xml',
         '/sitemaps.xml',
         '/github-sponsor.json',
       ],
+    },
+    hooks: {
+      'prerender:generate'(route) {
+        if (!route.error) {
+          return;
+        }
+        console.error('[prerender]', route.route, route.error);
+        const err = route.error as {cause?: unknown; stack?: string};
+        if (err.cause) {
+          console.error('[prerender:cause]', err.cause);
+        }
+        if (err.stack) {
+          console.error(err.stack);
+        }
+      },
     },
   },
   runtimeConfig: {
@@ -109,27 +158,29 @@ export default defineNuxtConfig({
       'Le podcast sur le code, le développement web et les outils modernes.',
   },
   robots: {
-    sitemap: 'https://double-slash.dev/sitemaps.xml',
+    sitemap: 'https://double-slash.dev/sitemap.xml',
     groups: [
       {
         userAgent: '*',
         allow: '/',
+        contentSignal: formatContentSignalPairs(),
       },
       {
         userAgent: 'OAI-SearchBot',
         allow: '/',
+        contentSignal: formatContentSignalPairs(),
       },
     ],
   },
   scripts: {
-    privacy: { ip: true, language: true, hardware: true },
+    privacy: {ip: true, language: true, hardware: true},
     registry: {
       umamiAnalytics: {
         websiteId: '942988c9-8c60-4497-ad8b-5c7169365a52',
         hostUrl: 'https://analytics.double-slash.dev',
         trigger: 'onNuxtReady',
-      }
-    }
+      },
+    },
   },
-  compatibilityDate: '2025-08-29',
+  compatibilityDate: '2026-09-16',
 });

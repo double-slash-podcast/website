@@ -1,4 +1,8 @@
 <script setup lang="ts">
+/**
+ * Markdown <a> renderer. Lives in global/ so ContentRenderer resolves it
+ * synchronously (components/content is local and hydrates via async import).
+ */
 import type {PropType} from 'vue';
 
 const reg =
@@ -24,6 +28,7 @@ const props = defineProps({
   },
 });
 
+/** True when href is an absolute http(s) URL. */
 const isExternal = computed((): boolean => reg.test(props.href));
 </script>
 

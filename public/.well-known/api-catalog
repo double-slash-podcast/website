@@ -1,0 +1,27 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://double-slash.dev/",
+      "describedby": [
+        {
+          "href": "https://double-slash.dev/llms.txt",
+          "type": "text/markdown",
+          "title": "Site index for LLMs"
+        }
+      ],
+      "sitemap": [
+        {
+          "href": "https://double-slash.dev/sitemap.xml",
+          "type": "application/xml"
+        }
+      ],
+      "alternate": [
+        {
+          "href": "https://double-slash.dev/podcast-rss-feed.xml",
+          "type": "application/rss+xml",
+          "title": "Podcast RSS feed"
+        }
+      ]
+    }
+  ]
+}

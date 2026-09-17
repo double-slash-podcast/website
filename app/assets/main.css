@@ -79,6 +79,10 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  html {
+    @apply scrollbar-thin scrollbar-thumb-secondary scrollbar-track-haiti;
+  }
 }
 
 @utility trackTimeline {
@@ -194,6 +198,13 @@
 
 .prose a {
   @apply wrap-break-word;
+}
+
+/* Heading autolinks must not look like body links (underline + default color). */
+.prose :where(h2, h3, h4) a {
+  color: inherit;
+  text-decoration: inherit;
+  font-weight: inherit;
 }
 
 .prose a[target='_blank']:not(.no-arrow) {

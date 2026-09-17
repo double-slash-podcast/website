@@ -96,6 +96,13 @@ declare module '@nuxt/schema' {
 
 type typeDuration = {hours: number; minutes: number; seconds: number};
 
+declare module '@nuxt/content' {
+  interface PodcastsCollectionItem {
+    duration?: number;
+    fileSize?: number;
+  }
+}
+
 type typeStatusPlayer = 'play' | 'pause';
 
 type typeSpeedPlayer = 0.5 | 0.75 | 1.0 | 1.25 | 1.5 | 1.75 | 2.0;

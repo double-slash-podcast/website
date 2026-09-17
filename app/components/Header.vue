@@ -1,52 +1,37 @@
 <script setup lang="ts">
-import {debounce} from 'throttle-debounce';
-
 // Multi-root component: bind fallthrough attrs to <header>, not the fragment
 defineOptions({inheritAttrs: false});
 
-const header = ref();
-const headerHeight = ref();
-
-const updateHeaderHeight = () => {
-  if (!header.value) return;
-  headerHeight.value = header.value?.getBoundingClientRect().height || 0;
-};
-
-onMounted(async () => {
-  // only client side
-  await nextTick();
-  updateHeaderHeight();
-  // resize window
-  window.addEventListener('resize', debounce(300, updateHeaderHeight));
-});
-
-onUnmounted(() => {
-  window.removeEventListener('resize', debounce(300, updateHeaderHeight));
-});
+/**
+ * Static fill height for decorative icon rows. Measuring the header on mount
+ * updated this lazy island before hydration and skipped hydrate-on-idle.
+ * Overflow is clipped by the header.
+ */
+const BACKGROUND_HEIGHT = 960;
 </script>
 
 <template>
   <Navbar />
   <header
-    ref="header"
     v-bind="$attrs"
     class="relative z-10 pt-33 flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
   >
     <div
       class="flex flex-col justify-center w-full md:max-w-3xl max-w-[calc(100vw-2rem)]"
     >
-      <!-- titre -->
+      <!-- Title -->
       <slot name="title">
         <Brand />
       </slot>
-      <!-- baseline -->
+      <!-- Baseline -->
       <slot name="baseline" />
     </div>
-    <!-- player -->
+    <!-- Player -->
     <slot name="player" />
     <LazyAnimateBackground
+      hydrate-on-idle
       class="absolute top-0 left-[50%] -translate-x-1/2"
-      :height="headerHeight"
+      :height="BACKGROUND_HEIGHT"
     />
   </header>
 </template>

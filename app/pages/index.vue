@@ -1,9 +1,8 @@
 <script setup>
-import {animate, scroll} from 'motion';
-
 const bigSlash = ref();
 const tinySlash = ref();
-onMounted(() => {
+onMounted(async () => {
+  const {animate, scroll} = await import('motion');
   if (bigSlash.value) {
     scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
   }
@@ -22,36 +21,13 @@ const {data} = await useAsyncData('lastOne', () => {
   return queryCollection('podcasts').order('id', 'DESC').first();
 });
 
-useHead({
+useSeoMeta({
   title: 'Double Slash, le podcast sur le développement web en français',
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content:
-        'Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.',
-    },
-    {
-      hid: 'og:title',
-      name: 'og:title',
-      content: 'Double Slash, le podcast sur le développement web en français',
-    },
-    {
-      hid: 'og:url',
-      property: 'og:url',
-      content: `${siteUrl}${path}`,
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: '/android-chrome-512x512.png',
-    },
-    {
-      hid: 'twitter:url',
-      name: 'twitter:url',
-      content: siteUrl,
-    },
-  ],
+  ogTitle: 'Double Slash, le podcast sur le développement web en français',
+  description:
+    'Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.',
+  ogUrl: `${siteUrl}${path}`,
+  ogImage: '/android-chrome-512x512.png',
 });
 useSchemaOrg([defineWebPage()]);
 </script>
@@ -72,7 +48,11 @@ useSchemaOrg([defineWebPage()]);
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data" class="mt-20 max-w-3xl" />
+        <EpisodeHeadings
+          v-if="data"
+          :episode="data"
+          class="mt-20 max-w-3xl"
+        />
       </template>
     </Header>
     <main class="relative z-10 pb-24">
@@ -101,7 +81,9 @@ useSchemaOrg([defineWebPage()]);
         class="mb-14"
         level="2"
       />
-      <LastEpisodes class="mb-8" />
+      <Suspense>
+        <LastEpisodes class="mb-8" />
+      </Suspense>
       <div class="mt-12 mb-24 text-center">
         <nuxt-link
           to="/podcasts/"
@@ -114,7 +96,9 @@ useSchemaOrg([defineWebPage()]);
         /></nuxt-link>
       </div>
       <Cohost class="mb-28" />
-      <LastArticle class="mb-28" />
+      <Suspense>
+        <LastArticle class="mb-28" />
+      </Suspense>
       <SocialList class="mb-28" />
     </main>
     <LazySlashIcon

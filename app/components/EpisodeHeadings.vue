@@ -1,9 +1,13 @@
 <script setup lang="ts">
+/**
+ * Episode row for listings: artwork, title, excerpt, duration and play control.
+ */
 import type {PodcastsCollectionItem} from '@nuxt/content';
 import {debounce} from 'throttle-debounce';
+
 const {podcastInfos} = useAppConfig();
 
-const title = ref<HTMLHeadingElement | null>(null);
+const root = ref<HTMLElement | null>(null);
 
 const props = withDefaults(
   defineProps<{
@@ -15,34 +19,48 @@ const props = withDefaults(
   },
 );
 
-const date = useLocalDate(props.episode.publicationDate);
+const isoPublicationDate = computed(() =>
+  toIsoDatetime(props.episode.publicationDate),
+);
 
+/**
+ * Align the title with the artwork on small screens after layout.
+ * The heading itself must not use a Vue template ref: `<component :is>`
+ * plus a ref crashes in production (`Cannot read properties of null
+ * (reading 'refs')` during hydrate).
+ */
 const setTitlePosition = () => {
-  if (!title.value) return;
-  const height = title.value.getBoundingClientRect().height;
+  const heading = root.value?.querySelector(
+    '.episode-heading-title',
+  ) as HTMLElement | null;
+  if (!heading) return;
+  const height = heading.getBoundingClientRect().height;
   if (height > 68 && window.innerWidth < 640) {
-    title.value.style.top = '-5px';
+    heading.style.top = '-5px';
   } else if (height < 30 && window.innerWidth < 640) {
-    title.value.style.top = '20px';
+    heading.style.top = '20px';
   }
 };
+
+const onResize = debounce(300, setTitlePosition);
 
 onMounted(async () => {
   await nextTick();
   setTitlePosition();
-  window.addEventListener('resize', debounce(300, setTitlePosition));
+  window.addEventListener('resize', onResize);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', debounce(300, setTitlePosition));
+  window.removeEventListener('resize', onResize);
 });
 </script>
 
 <template>
   <div
+    ref="root"
     class="grid grid-cols-episode-heading-mobile md:grid-cols-episode-heading episode-heading w-full md:min-w-3xl px-3 text-center text-white gap-x-3 md:gap-x-8 gap-y-3 md:gap-y-1 relative z-10"
   >
-    <nuxt-img
+    <AppImg
       :src="episode.episodeArtwork || podcastInfos.imageUrl"
       class="w-full col-start-1 row-span-1 row-start-1 rounded-lg md:row-span-3"
       loading="lazy"
@@ -57,8 +75,7 @@ onUnmounted(() => {
     >
       <component
         :is="`h${level}`"
-        ref="title"
-        class="text-lg leading-6 text-balance text-pretty text-white normal-case tracking-normal sm:leading-8 sm:text-2xl font-headings font-bold top-2 sm:top-0 relative mb-1"
+        class="episode-heading-title text-lg leading-6 text-balance text-pretty text-white normal-case tracking-normal sm:leading-8 sm:text-2xl font-headings font-bold top-2 sm:top-0 relative mb-1"
         >{{ props.episode.title }}</component
       >
     </nuxt-link>
@@ -67,16 +84,19 @@ onUnmounted(() => {
     >
       {{ props.episode.description?.substring(0, 120) }}...
     </p>
-    <time
-      :datetime="`${new Date(props.episode.publicationDate).toLocaleDateString('fr-FR', {})}`"
+    <NuxtTime
+      v-if="isoPublicationDate"
+      :datetime="isoPublicationDate"
+      locale="fr-FR"
+      year="numeric"
+      month="long"
+      day="numeric"
       class="col-start-1 col-end-3 mt-1 text-sm text-left text-white/60 md:col-start-2"
-    >
-      {{ date }}
-    </time>
+    />
     <div class="flex items-center justify-between col-span-2 md:pt-2">
       <div class="flex items-center gap-x-2">
         <EpisodeNumber :episode-number="+props.episode.episodeNumber" />
-        <NewEpisode :publication-date="props.episode.publicationDate" />
+        <NewEpisode :publication-date="isoPublicationDate" />
       </div>
       <div class="flex items-center gap-x-2">
         <Duration :duration="props.episode.duration" />
