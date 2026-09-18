@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /**
- * Staging probe step 2: blank layout + Header only (Navbar, Brand,
- * LazyAnimateBackground). Player, UpButton and SearchModal stay out.
+ * Staging probe step 3: blank layout + Header + UpButton.
+ * Player and SearchModal stay out.
  */
 definePageMeta({
   layout: 'blank',
@@ -16,6 +16,7 @@ useSeoMeta({
 <template>
   <div>
     <Header />
-    <p>debug hydrate — Header only</p>
+    <p>debug hydrate — Header + UpButton</p>
+    <UpButton />
   </div>
 </template>
