@@ -83,8 +83,8 @@ export default defineNuxtConfig({
   },
   // Production SSG is nginx (config on the server): also set
   // Content-Type application/linkset+json on /.well-known/api-catalog there.
-  // Markdown for Agents: pnpm generate copies content/*.md next to HTML;
-  // nginx must negotiate Accept: text/markdown (see AGENTS.md).
+  // Markdown for Agents: pnpm generate converts prerendered HTML to markdown
+  // next to it; nginx must negotiate Accept: text/markdown (see AGENTS.md).
   routeRules: {
     '/.well-known/api-catalog': {
       headers: {

@@ -5,6 +5,7 @@ import {
   listPublishableAgentMarkdown,
 } from './agentMarkdown';
 import {escapeMarkdownLinkLabel, extractFrontmatterTitle} from './frontmatter';
+import {buildAgentNavMarkdown} from './agentMarkdownNav';
 
 export const AGENT_MARKDOWN_SITE_TITLE = 'Double Slash';
 export const AGENT_MARKDOWN_SITE_DESCRIPTION =
@@ -64,19 +65,11 @@ export function buildHomeMarkdown(entries: AgentMarkdownIndexEntry[]): string {
     .filter(entry => entry.collection === 'podcasts')
     .reverse();
 
-  return `---
-title: "${AGENT_MARKDOWN_SITE_TITLE}"
-description: "${AGENT_MARKDOWN_SITE_DESCRIPTION}"
----
-
-# ${AGENT_MARKDOWN_SITE_TITLE}
+  return `# ${AGENT_MARKDOWN_SITE_TITLE}
 
 ${AGENT_MARKDOWN_SITE_DESCRIPTION}
 
-- [Épisodes](/podcasts/)
-- [Articles](/articles/)
-- [Soutenir le podcast](/nous-soutenir/)
-- [Index LLMs](/llms.txt)
+${buildAgentNavMarkdown()}
 
 ## Articles
 
@@ -95,12 +88,9 @@ export function buildCollectionMarkdown(
   title: string,
   entries: AgentMarkdownIndexEntry[],
 ): string {
-  return `---
-title: "${title} — ${AGENT_MARKDOWN_SITE_TITLE}"
-description: "${AGENT_MARKDOWN_SITE_DESCRIPTION}"
----
+  return `# ${title}
 
-# ${title}
+${buildAgentNavMarkdown()}
 
 ${toBulletList(entries)}
 `;

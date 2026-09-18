@@ -4,7 +4,7 @@
 
 [https://double-slash.dev/](https://double-slash.dev/)
 
-Production runs on **Coolify** (Nixpacks) behind **nginx**, as a **static site** (`pnpm generate` → `dist/`). See `AGENTS.md` for deploy and analytics details.
+Production runs on **Coolify** (Nixpacks) behind **nginx**, as a **static site** (`pnpm generate` → `.output/public`). See `AGENTS.md` for deploy and analytics details.
 
 ## Quick Start
 
@@ -28,7 +28,7 @@ pnpm dev
 pnpm generate
 ```
 
-Output: `dist/`. Coolify/nginx serves that folder.
+Output: `.output/public`. Coolify/nginx serves that folder.
 
 #### Node server build (local / not prod)
 
@@ -38,7 +38,7 @@ pnpm build
 
 `pnpm start` runs Nitro (`node .output/server/index.mjs`). Production is SSG, not this server.
 
-`generate` runs `sync-durations`, `nuxi generate`, then copies content markdown next to the HTML. `build` runs `validate-durations` then `nuxi build`. Both fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
+`generate` runs `sync-durations`, `nuxi generate`, then converts prerendered HTML to markdown next to the HTML. `build` runs `validate-durations` then `nuxi build`. Both fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
 
 ### Podcast episode metadata
 
