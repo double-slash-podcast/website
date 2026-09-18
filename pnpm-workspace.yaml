@@ -34,8 +34,8 @@ supportedArchitectures:
 minimumReleaseAgeExclude:
   - '@iconify-json/*'
   - '@types/node@26.4.1'
-  - baseline-browser-mapping@2.11.24
-  - prettier@3.9.7
+  - baseline-browser-mapping@2.11.24 || 2.11.25
+  - prettier@3.9.7 || 3.9.8
 
 # NuxtImg useTemplateRef('imgEl') throws during Vue 3.5 generate SSR.
 # ContentRenderer/MDC wrap setup() in defineAsyncComponent and wipe SSR HTML.
