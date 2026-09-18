@@ -29,7 +29,7 @@ const listSponsor = computed(
   <div v-if="organizationSponsors">
     <div
       v-if="organizationSponsors.activeGoal != null"
-      class="border-t border-gray-300"
+      class=""
     >
       <h2>
         {{ organizationSponsors.activeGoal?.percentComplete }}% vers l'objectif

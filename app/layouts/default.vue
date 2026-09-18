@@ -55,7 +55,7 @@ useHead({
       sizes: '16x16',
       href: '/favicon-16x16.png',
     },
-    {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5'},
+    {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#3c0c55'},
   ],
 });
 useSchemaOrg([

@@ -164,14 +164,14 @@
 /* PROSE ONLY */
 
 .prose h2 {
-  @apply my-8 text-lg font-bold text-purple-700 normal-case font-base;
+  @apply mt-12 mb-4 text-2xl font-normal text-dark/70 normal-case font-base;
 }
 .prose h3 {
-  @apply my-8 text-sm font-bold text-purple-700 uppercase font-base;
+  @apply mt-12 mb-4 text-lg font-normal text-purple-900 uppercase font-base;
 }
 
 .prose.article-content h2 {
-  @apply text-2xl normal-case;
+  @apply mt-12 mb-4 text-2xl font-normal text-dark/70 normal-case;
 }
 
 .prose.article-content h3 {
