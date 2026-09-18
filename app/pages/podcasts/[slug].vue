@@ -103,8 +103,10 @@ useSchemaOrg([
               :value="data"
               class="max-w-full prose"
             />
-            <div class="prose max-w-full">
-              <Authors />
+            <div class="prose max-w-full mt-20">
+              <div class="bg-purple-400/20 p-4 rounded-lg border border-purple-400/40">
+                <Authors />
+              </div>
               <Sponsor :with-list="false" />
             </div>
           </div>
