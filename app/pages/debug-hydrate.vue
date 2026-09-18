@@ -1,8 +1,7 @@
 <script setup lang="ts">
 /**
- * Staging probe: empty layout, no Header/Player/UpButton.
- * If this page still throws setRef, the crash is above the layout
- * (plugins, app wrapper, Nuxt internals).
+ * Staging probe step 2: blank layout + Header only (Navbar, Brand,
+ * LazyAnimateBackground). Player, UpButton and SearchModal stay out.
  */
 definePageMeta({
   layout: 'blank',
@@ -15,5 +14,8 @@ useSeoMeta({
 </script>
 
 <template>
-  <p>debug hydrate — layout vide</p>
+  <div>
+    <Header />
+    <p>debug hydrate — Header only</p>
+  </div>
 </template>
