@@ -4,9 +4,6 @@ import {
   ComboboxInput,
   ComboboxOption,
   ComboboxOptions,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
 } from '@headlessui/vue';
 import {debounce} from 'throttle-debounce';
 import {SEARCH_MODAL_LIMIT, searchResultsPath} from '~/utils/siteCatalog';
@@ -20,6 +17,7 @@ import type {WebMcpCatalogKind} from '~/utils/webmcpTypes';
 
 const {isOpen, close, open, search, init, ftsStatus} = useSiteSearch();
 
+const dialogEl = ref<HTMLDialogElement | null>(null);
 const query = ref('');
 const hits = ref<SiteSearchHit[]>([]);
 const isSearching = ref(false);
@@ -28,7 +26,40 @@ const kind = ref<WebMcpCatalogKind>('episode');
 let searchRequestId = 0;
 
 /**
- * Run the shared FTS + catalog search for the palette.
+ * Open or close the native dialog without double-toggling showModal/close.
+ */
+function syncDialog(openState: boolean) {
+  const el = dialogEl.value;
+  if (!el) {
+    return;
+  }
+  if (openState && !el.open) {
+    el.showModal();
+  } else if (!openState && el.open) {
+    el.close();
+  }
+}
+
+/**
+ * Keep Vue state in sync when Escape or the backdrop dismisses the dialog.
+ */
+function onNativeClose() {
+  if (isOpen.value) {
+    close();
+  }
+}
+
+/**
+ * Clicks on the ::backdrop hit the dialog element itself, not its children.
+ */
+function onBackdropClick(event: MouseEvent) {
+  if (event.target === dialogEl.value) {
+    close();
+  }
+}
+
+/**
+ * Rank published documents for a query (FTS5 + catalog tags / numbers).
  */
 async function refreshHits() {
   const value = query.value.trim();
@@ -65,6 +96,9 @@ watch(query, () => {
 });
 
 watch(isOpen, async openState => {
+  await nextTick();
+  syncDialog(openState);
+
   if (!openState) {
     query.value = '';
     hits.value = [];
@@ -175,109 +209,124 @@ watch(kind, () => {
 </script>
 
 <template>
-  <Dialog :open="isOpen" class="relative z-60" @close="close">
-    <div class="fixed inset-0 bg-haiti/85" aria-hidden="true" />
+  <dialog
+    ref="dialogEl"
+    class="search-palette z-60 w-[min(42rem,calc(100vw-2rem))] max-h-[min(40rem,80vh)] border-0 bg-transparent p-0 text-white"
+    aria-labelledby="search-palette-title"
+    @close="onNativeClose"
+    @click="onBackdropClick"
+  >
+    <h2 id="search-palette-title" class="sr-only">
+      Rechercher sur Double Slash
+    </h2>
     <div
-      class="fixed inset-0 overflow-y-auto p-4 pt-[12vh] scrollbar-thin scrollbar-thumb-secondary scrollbar-track-haiti"
+      class="overflow-hidden rounded-lg bg-dark shadow-lg shadow-haiti/80 ring-1 ring-secondary"
     >
-      <DialogPanel
-        class="mx-auto w-full max-w-2xl overflow-hidden rounded-lg bg-dark shadow-lg shadow-haiti/80 ring-1 ring-secondary"
-      >
-        <DialogTitle class="sr-only">Rechercher sur Double Slash</DialogTitle>
-        <Combobox v-model="selected" nullable @update:model-value="goToHit">
-          <div
-            class="flex items-center gap-2 border-b border-secondary/50 px-3"
-          >
-            <Icon
-              name="material-symbols:search"
-              class="w-5 h-5 shrink-0 text-primary"
-              aria-hidden="true"
-            />
-            <ComboboxInput
-              class="w-full bg-transparent py-3 text-white placeholder:text-purple-200/80 border-0 focus:ring-0"
-              :display-value="() => query"
-              placeholder="alpineJS, WebMCP, ThreeJS…"
-              aria-label="Rechercher des épisodes et des articles"
-              @change="onQueryInput"
-            />
-            <kbd
-              class="hidden sm:inline px-1.5 py-0.5 text-[10px] uppercase border rounded-sm border-primary/40 text-primary"
-            >
-              esc
-            </kbd>
-          </div>
-          <SearchKindTabs
-            v-if="hits.length"
-            v-model="kind"
-            id-prefix="search-modal"
-            :episode-count="groupedHits.episodes.length"
-            :article-count="groupedHits.articles.length"
+      <Combobox v-model="selected" nullable @update:model-value="goToHit">
+        <div
+          class="flex items-center gap-2 border-b border-secondary/50 px-3"
+        >
+          <Icon
+            name="material-symbols:search"
+            class="w-5 h-5 shrink-0 text-primary"
+            aria-hidden="true"
           />
-          <div
-            class="max-h-[min(30rem,60vh)] overflow-y-auto scrollbar-thin scrollbar-thumb-secondary scrollbar-track-haiti"
+          <ComboboxInput
+            class="w-full bg-transparent py-3 text-white placeholder:text-purple-200/80 border-0 focus:ring-0"
+            :display-value="() => query"
+            placeholder="alpineJS, WebMCP, ThreeJS…"
+            aria-label="Rechercher des épisodes et des articles"
+            @change="onQueryInput"
+          />
+          <kbd
+            class="hidden sm:inline px-1.5 py-0.5 text-[10px] uppercase border rounded-sm border-primary/40 text-primary"
           >
-            <p
-              v-if="ftsStatus === 'loading' && !hits.length"
-              class="px-4 py-3 text-sm text-purple-100"
-            >
-              Préparation de l'index…
-            </p>
-            <p
-              v-else-if="!query.trim()"
-              class="px-4 py-3 text-sm text-purple-100"
-            >
-              Tapez un mot-clé, un tag ou un numéro d'épisode.
-            </p>
-            <p v-else-if="showEmpty" class="px-4 py-3 text-sm text-purple-100">
-              Aucun résultat pour « {{ query.trim() }} ».
-            </p>
-            <p
-              v-else-if="activeHits.length === 0"
-              id="search-modal-panel"
-              class="px-4 py-3 text-sm text-purple-100"
-              role="tabpanel"
-              :aria-labelledby="`search-modal-tab-${kind}`"
-            >
-              {{ emptyTabLabel }} pour « {{ query.trim() }} ».
-            </p>
-            <div
-              v-else
-              id="search-modal-panel"
-              role="tabpanel"
-              :aria-labelledby="`search-modal-tab-${kind}`"
-            >
-              <ComboboxOptions static class="p-2">
-                <ComboboxOption
-                  v-for="hit in activeHits"
-                  :key="hit.href"
-                  v-slot="{active}"
-                  :value="hit"
-                  as="template"
+            esc
+          </kbd>
+        </div>
+        <SearchKindTabs
+          v-if="hits.length"
+          v-model="kind"
+          id-prefix="search-modal"
+          :episode-count="groupedHits.episodes.length"
+          :article-count="groupedHits.articles.length"
+        />
+        <div
+          class="max-h-[min(30rem,60vh)] overflow-y-auto scrollbar-thin scrollbar-thumb-secondary scrollbar-track-haiti"
+        >
+          <p
+            v-if="ftsStatus === 'loading' && !hits.length"
+            class="px-4 py-3 text-sm text-purple-100"
+          >
+            Préparation de l'index…
+          </p>
+          <p
+            v-else-if="!query.trim()"
+            class="px-4 py-3 text-sm text-purple-100"
+          >
+            Tapez un mot-clé, un tag ou un numéro d'épisode.
+          </p>
+          <p v-else-if="showEmpty" class="px-4 py-3 text-sm text-purple-100">
+            Aucun résultat pour « {{ query.trim() }} ».
+          </p>
+          <p
+            v-else-if="activeHits.length === 0"
+            id="search-modal-panel"
+            class="px-4 py-3 text-sm text-purple-100"
+            role="tabpanel"
+            :aria-labelledby="`search-modal-tab-${kind}`"
+          >
+            {{ emptyTabLabel }} pour « {{ query.trim() }} ».
+          </p>
+          <div
+            v-else
+            id="search-modal-panel"
+            role="tabpanel"
+            :aria-labelledby="`search-modal-tab-${kind}`"
+          >
+            <ComboboxOptions static class="p-2">
+              <ComboboxOption
+                v-for="hit in activeHits"
+                :key="hit.href"
+                v-slot="{active}"
+                :value="hit"
+                as="template"
+              >
+                <li
+                  class="cursor-pointer rounded-md p-3"
+                  :class="active ? 'bg-secondary/40' : ''"
                 >
-                  <li
-                    class="cursor-pointer rounded-md p-3"
-                    :class="active ? 'bg-secondary/40' : ''"
-                  >
-                    <SearchHitRow :hit="hit" />
-                  </li>
-                </ComboboxOption>
-              </ComboboxOptions>
-            </div>
+                  <SearchHitRow :hit="hit" />
+                </li>
+              </ComboboxOption>
+            </ComboboxOptions>
           </div>
-          <div
-            v-if="query.trim()"
-            class="border-t border-secondary/50 px-4 py-2 text-right"
+        </div>
+        <div
+          v-if="query.trim()"
+          class="border-t border-secondary/50 px-4 py-2 text-right"
+        >
+          <NuxtLink
+            :to="resultsHref"
+            class="text-sm text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            @click.prevent="goToResults"
           >
-            <NuxtLink
-              :to="resultsHref"
-              class="text-sm text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              @click.prevent="goToResults"
-            >
-              Voir tous les résultats
-            </NuxtLink>
-          </div>
-        </Combobox>
-      </DialogPanel>
+            Voir tous les résultats
+          </NuxtLink>
+        </div>
+      </Combobox>
     </div>
-  </Dialog>
+  </dialog>
 </template>
+
+<style scoped>
+@reference '../assets/main.css';
+
+.search-palette {
+  margin: 12vh auto auto;
+}
+
+.search-palette::backdrop {
+  @apply bg-haiti/85;
+}
+</style>
