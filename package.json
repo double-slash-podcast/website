@@ -9,7 +9,7 @@
     "plop": "plop",
     "sync-durations": "jiti scripts/sync-durations.ts",
     "validate-durations": "jiti scripts/validate-durations.ts",
-    "build": "pnpm assert-patches && pnpm validate-durations && nuxi build",
+    "build": "pnpm validate-durations && nuxi build",
     "dev": "nuxi dev",
     "start": "node .output/server/index.mjs",
     "lint": "eslint . --ext .ts,.vue",
@@ -18,9 +18,8 @@
     "format-write": "npx prettier --write ./",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "assert-patches": "jiti scripts/assert-patches.ts",
     "emit-markdown": "jiti scripts/emit-agent-markdown.ts",
-    "generate": "pnpm assert-patches && pnpm sync-durations && nuxi generate && pnpm emit-markdown",
+    "generate": "pnpm sync-durations && nuxi generate && pnpm emit-markdown",
     "clean": "rm -rf .output node_modules pnpm-lock.yaml dist .nuxt"
   },
   "devDependencies": {
@@ -43,7 +42,6 @@
     "@nuxt/scripts": "1.3.9",
     "@nuxt/test-utils": "4.3.2",
     "@nuxtjs/color-mode": "4.0.1",
-    "@nuxtjs/mdc": "0.23.1",
     "@nuxtjs/robots": "6.2.3",
     "@pinia/nuxt": "1.0.2",
     "@tailwindcss/typography": "0.5.20",
@@ -86,15 +84,5 @@
     "throttle-debounce": "^5.0.2",
     "vue-lite-youtube-embed": "1.2.4"
   },
-  "packageManager": "pnpm@11.25.0",
-  "pnpm": {
-    "overrides": {
-      "@nuxtjs/mdc": "0.23.1"
-    },
-    "patchedDependencies": {
-      "@nuxt/content@3.16.0": "patches/@nuxt__content@3.16.0.patch",
-      "@nuxt/image@2.1.0": "patches/@nuxt__image@2.1.0.patch",
-      "@nuxtjs/mdc@0.23.1": "patches/@nuxtjs__mdc@0.23.1.patch"
-    }
-  }
+  "packageManager": "pnpm@11.25.0"
 }
