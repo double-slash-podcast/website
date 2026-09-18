@@ -1,8 +1,9 @@
 <script setup lang="ts">
 /**
- * Staging probe step 5: same chrome as step 4, but SearchModal is a plain
- * v-if panel. Isolates Headless UI Dialog/Combobox from useSiteSearch.open().
+ * Staging probe step 6: Headless UI Dialog only (no Combobox).
  */
+import {Dialog, DialogPanel, DialogTitle} from '@headlessui/vue';
+
 definePageMeta({
   layout: 'blank',
 });
@@ -18,14 +19,19 @@ useSeoMeta({
 <template>
   <div>
     <Header />
-    <p>debug hydrate — Header + UpButton + search stub</p>
+    <p>debug hydrate — Header + UpButton + Dialog only</p>
     <UpButton />
-    <div
-      v-if="isOpen"
-      class="fixed inset-0 z-60 bg-haiti/85 p-8 text-white"
-      @click="close"
-    >
-      search stub (pas Headless UI)
-    </div>
+    <ClientOnly>
+      <Dialog :open="isOpen" class="relative z-60" @close="close">
+        <div class="fixed inset-0 bg-haiti/85" aria-hidden="true" />
+        <div class="fixed inset-0 overflow-y-auto p-4 pt-[12vh]">
+          <DialogPanel
+            class="mx-auto w-full max-w-2xl overflow-hidden rounded-lg bg-dark p-6 text-white"
+          >
+            <DialogTitle>Dialog only (pas Combobox)</DialogTitle>
+          </DialogPanel>
+        </div>
+      </Dialog>
+    </ClientOnly>
   </div>
 </template>
