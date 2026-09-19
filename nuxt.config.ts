@@ -99,9 +99,9 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    componentIslands: true,
+    componentIslands: false,
     viewTransition: true,
-    typedPages: true,
+    typedPages: false,
   },
   colorMode: {
     classSuffix: '',
