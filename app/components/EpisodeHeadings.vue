@@ -29,30 +29,30 @@ const isoPublicationDate = computed(() =>
  * plus a ref crashes in production (`Cannot read properties of null
  * (reading 'refs')` during hydrate).
  */
-// const setTitlePosition = () => {
-//   const heading = root.value?.querySelector(
-//     '.episode-heading-title',
-//   ) as HTMLElement | null;
-//   if (!heading) return;
-//   const height = heading.getBoundingClientRect().height;
-//   if (height > 68 && window.innerWidth < 640) {
-//     heading.style.top = '-5px';
-//   } else if (height < 30 && window.innerWidth < 640) {
-//     heading.style.top = '20px';
-//   }
-// };
+const setTitlePosition = () => {
+  const heading = root.value?.querySelector(
+    '.episode-heading-title',
+  ) as HTMLElement | null;
+  if (!heading) return;
+  const height = heading.getBoundingClientRect().height;
+  if (height > 68 && window.innerWidth < 640) {
+    heading.style.top = '-5px';
+  } else if (height < 30 && window.innerWidth < 640) {
+    heading.style.top = '20px';
+  }
+};
 
-// const onResize = debounce(300, setTitlePosition);
+const onResize = debounce(300, setTitlePosition);
 
-// onMounted(async () => {
-//   await nextTick();
-//   setTitlePosition();
-//   window.addEventListener('resize', onResize);
-// });
+onMounted(async () => {
+  await nextTick();
+  setTitlePosition();
+  window.addEventListener('resize', onResize);
+});
 
-// onUnmounted(() => {
-//   window.removeEventListener('resize', onResize);
-// });
+onUnmounted(() => {
+  window.removeEventListener('resize', onResize);
+});
 </script>
 
 <template>
