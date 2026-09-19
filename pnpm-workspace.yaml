@@ -5,6 +5,7 @@ packages:
 
 allowBuilds:
   '@parcel/watcher': true
+  '@sentry/cli': true
   esbuild: true
   sharp: true
   unrs-resolver: true
@@ -12,6 +13,7 @@ allowBuilds:
 
 onlyBuiltDependencies:
   - '@parcel/watcher'
+  - '@sentry/cli'
   - esbuild
   - sharp
   - unrs-resolver
