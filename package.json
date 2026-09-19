@@ -61,6 +61,7 @@
     "jsdom": "30.1.0",
     "nuxt": "4.5.2",
     "nuxt-schema-org": "6.3.2",
+    "nuxtseo-layer-devtools": "^5.3.16",
     "pinia": "4.0.3",
     "plop": "4.0.5",
     "postcss-custom-properties": "15.0.1",
