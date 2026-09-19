@@ -64,7 +64,7 @@ const links = [
         @mouseleave="handleOut"
         >{{ title }}</nuxt-link
       >
-      <!-- <SearchButton /> -->
+      <SearchButton />
     </div>
   </div>
 </template>

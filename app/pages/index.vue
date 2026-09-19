@@ -1,12 +1,13 @@
-<script setup>
-const bigSlash = ref();
-const tinySlash = ref();
+<script setup lang="ts">
+const bigSlash = ref<{svg: SVGSVGElement} | null>(null);
+const tinySlash = ref<{svg: SVGSVGElement} | null>(null);
+
 onMounted(async () => {
   const {animate, scroll} = await import('motion');
-  if (bigSlash.value) {
+  if (bigSlash.value?.svg) {
     scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
   }
-  if (tinySlash.value) {
+  if (tinySlash.value?.svg) {
     scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
   }
 });
@@ -104,7 +105,7 @@ useSchemaOrg([defineWebPage()]);
     <LazySlashIcon
       ref="bigSlash"
       size="350"
-      class="hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20"
+      class="hidden md:block fixed top-[25%] md:left-[-10%] z-8 opacity-20"
       inside-class="fill-purple-800"
     />
     <LazySlashIcon
