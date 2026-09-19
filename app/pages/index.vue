@@ -82,9 +82,7 @@ useSchemaOrg([defineWebPage()]);
         class="mb-14"
         level="2"
       />
-      <Suspense>
-        <LastEpisodes class="mb-8" />
-      </Suspense>
+      <LastEpisodes class="mb-8" />
       <div class="mt-12 mb-24 text-center">
         <nuxt-link
           to="/podcasts/"
@@ -97,9 +95,7 @@ useSchemaOrg([defineWebPage()]);
         /></nuxt-link>
       </div>
       <Cohost class="mb-28" />
-      <Suspense>
-        <LastArticle class="mb-28" />
-      </Suspense>
+      <LastArticle class="mb-28" />
       <SocialList class="mb-28" />
     </main>
     <!-- <LazySlashIcon

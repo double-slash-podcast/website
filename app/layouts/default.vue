@@ -7,7 +7,7 @@
         <!-- <LazyWrapperPlayer /> -->
       </div>
     </div>
-    <UpButton />
+    <!-- <UpButton /> -->
     <ClientOnly>
       <SearchModal />
     </ClientOnly>
@@ -16,7 +16,7 @@
 
 <script setup>
 // import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
-import UpButton from '~/components/global/UpButton.vue';
+// import UpButton from '~/components/global/UpButton.vue';
 import {agentDiscoveryLinks} from '~/utils/agentDiscovery';
 const {path} = useRoute();
 const {

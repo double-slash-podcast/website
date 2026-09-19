@@ -12,10 +12,10 @@ const date = useLocalDate(Date.now(), {
   <footer
     class="relative py-4 bg-purple-800 border-t-4 min-h-12 border-primary"
   >
-    <SlashIcon
+    <!-- <SlashIcon
       size="80"
       class="absolute -top-12.5 left-0 md:left-[20%] sm:left-[10%] fill-primary"
-    />
+    /> -->
     <div
       class="flex flex-col items-center justify-center h-full max-w-2xl gap-2 m-auto text-xs text-center text-gray-50"
     >
