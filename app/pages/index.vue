@@ -102,7 +102,7 @@ useSchemaOrg([defineWebPage()]);
       </Suspense>
       <SocialList class="mb-28" />
     </main>
-    <LazySlashIcon
+    <!-- <LazySlashIcon
       ref="bigSlash"
       size="350"
       class="hidden md:block fixed top-[25%] md:left-[-10%] z-8 opacity-20"
@@ -113,6 +113,6 @@ useSchemaOrg([defineWebPage()]);
       size="200"
       class="hidden md:block fixed top-[10%] right-0 z-8 opacity-20"
       inside-class="fill-purple-800"
-    />
+    /> -->
   </div>
 </template>
