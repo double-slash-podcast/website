@@ -35,7 +35,27 @@ useSchemaOrg([defineWebPage()]);
 
 <template>
   <div class="relative bg-haiti">
-    
+    <Header>
+      <template #title>
+        <Brand slash />
+      </template>
+      <template #baseline>
+        <h1
+          class="relative z-10 mt-2 text-2xl tracking-wider text-center uppercase text-primary font-headings"
+        >
+          le podcast <br class="sm:hidden" />des developpeurs web
+        </h1>
+        <p class="font-light text-center text-white">
+          par <span class="font-normal">PATRICK FARAMAZ</span> et
+          <span class="font-normal">ALEX DUVAL</span>
+        </p>
+        <EpisodeHeadings
+          v-if="data"
+          :episode="data"
+          class="mt-20 max-w-3xl"
+        />
+      </template>
+    </Header>
     <main class="relative z-10 pb-24">
       <PodcastList class="mb-20" />
       <HeadingsSection title="et en vidéo" class="mb-24">
