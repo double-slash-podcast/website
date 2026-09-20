@@ -98,7 +98,7 @@ useSchemaOrg([defineWebPage()]);
       <LastArticle class="mb-28" />
       <SocialList class="mb-28" />
     </main>
-    <!-- <LazySlashIcon
+    <LazySlashIcon
       ref="bigSlash"
       size="350"
       class="hidden md:block fixed top-[25%] md:left-[-10%] z-8 opacity-20"

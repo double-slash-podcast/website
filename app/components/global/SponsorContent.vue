@@ -12,7 +12,7 @@ const props = withDefaults(
   {withList: true},
 );
 
-const {data} = useAsyncData('github-sponsor', () =>
+const {data} = await useAsyncData('github-sponsor', () =>
   $fetch('/github-sponsor.json').catch(() => null),
 );
 
