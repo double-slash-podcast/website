@@ -4,17 +4,17 @@
       <slot />
       <Footer />
       <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
-        <!-- <LazyWrapperPlayer /> -->
+        <LazyWrapperPlayer />
       </div>
     </div>
-    <!-- <UpButton /> -->
+    <UpButton />
     
   </div>
 </template>
 
 <script setup>
-// import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
-// import UpButton from '~/components/global/UpButton.vue';
+import LazyWrapperPlayer from '~/components/Player/WrapperPlayer.vue';
+import UpButton from '~/components/global/UpButton.vue';
 import {agentDiscoveryLinks} from '~/utils/agentDiscovery';
 const {path} = useRoute();
 const {
