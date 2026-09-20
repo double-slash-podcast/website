@@ -28,11 +28,11 @@ const BACKGROUND_HEIGHT = 960;
     </div>
     <!-- Player -->
     <slot name="player" />
-    <!-- <AnimateBackground
+    <AnimateBackground
       hydrate-on-idle
       class="absolute top-0 left-[50%] -translate-x-1/2"
       :height="BACKGROUND_HEIGHT"
-    /> -->
+    />
   </header>
 </template>
 
