@@ -1,8 +1,4 @@
-# Required by pnpm 9 (Coolify/Nixpacks). pnpm 10+ allows config-only
-# workspace files; pnpm 9 fails with "packages field missing or empty".
-packages:
-  - '.'
-
+# pnpm 11 reads install policy from this file (not package.json / .npmrc).
 allowBuilds:
   '@parcel/watcher': true
   '@sentry/cli': true
@@ -10,14 +6,6 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
   vue-demi: true
-
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - '@sentry/cli'
-  - esbuild
-  - sharp
-  - unrs-resolver
-  - vue-demi
 
 # Install oxc-parser native bindings for local dev and Linux deploy targets.
 supportedArchitectures:
