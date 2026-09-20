@@ -73,11 +73,11 @@ onUnmounted(() => {
       :to="`${episode.path}/`"
       class="text-left md:col-start-2 md:col-end-3 after:absolute after:w-full after:h-full after:top-0 after:left-0 after:z-10"
     >
-      <!-- <component
+      <component
         :is="`h${level}`"
         class="episode-heading-title text-lg leading-6 text-balance text-pretty text-white normal-case tracking-normal sm:leading-8 sm:text-2xl font-headings font-bold top-2 sm:top-0 relative mb-1"
         >{{ props.episode.title }}</component
-      > -->
+      >
     </nuxt-link>
     <p
       class="col-start-1 col-end-3 text-left text-white/80 md:row-start-2 md:col-start-2"
