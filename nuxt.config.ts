@@ -63,9 +63,8 @@ export default defineNuxtConfig({
       },
     },
   },
-  // Hidden maps keep stack traces readable in Sentry without leaking map URLs.
   sourcemap: {
-    client: 'hidden',
+    client: true,
     server: true,
   },
   sentry: {
@@ -74,9 +73,6 @@ export default defineNuxtConfig({
     authToken: process.env.SENTRY_AUTH_TOKEN,
     // Capture prerender errors during `nuxi generate` without a Node --import flag.
     autoInjectServerSentry: 'top-level-import',
-    sourcemaps: {
-      filesToDeleteAfterUpload: ['.output/**/*.map', 'dist/**/*.map'],
-    },
     /**
      * Keep `nuxi generate` going if Sentry upload fails (missing token, network).
      */
