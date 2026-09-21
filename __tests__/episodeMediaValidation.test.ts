@@ -20,7 +20,7 @@ describe('formatEpisodeMediaIssues', () => {
     const message = formatEpisodeMediaIssues(issues);
 
     expect(message).toContain('Build blocked: podcast episodes are missing media metadata');
-    expect(message).toContain('Run `pnpm sync-durations`');
+    expect(message).toContain('Run `bun run sync-durations`');
     expect(message).toContain('DS_131_news-mai26 — News Mai 2026');
     expect(message).toContain('missing duration, fileSize');
   });

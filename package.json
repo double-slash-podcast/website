@@ -3,24 +3,25 @@
   "name": "double-slash-website",
   "type": "module",
   "engines": {
-    "node": "^20.19.0 || >=22.12.0"
+    "node": ">=22.12.0",
+    "bun": ">=1.4.2"
   },
   "scripts": {
     "plop": "plop",
     "sync-durations": "jiti scripts/sync-durations.ts",
     "validate-durations": "jiti scripts/validate-durations.ts",
-    "build": "pnpm validate-durations && nuxi build",
+    "build": "bun run validate-durations && nuxi build",
     "dev": "nuxi dev",
     "start": "node .output/server/index.mjs",
     "lint": "eslint . --ext .ts,.vue",
     "lint:fix": "eslint . --ext .ts,.vue --fix",
-    "format-check": "npx prettier --check ./",
-    "format-write": "npx prettier --write ./",
+    "format-check": "prettier --check ./",
+    "format-write": "prettier --write ./",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "emit-markdown": "jiti scripts/emit-agent-markdown.ts",
-    "generate": "pnpm sync-durations && nuxi generate && pnpm emit-markdown",
-    "clean": "rm -rf .output node_modules pnpm-lock.yaml dist .nuxt"
+    "generate": "bun run sync-durations && nuxi generate && bun run emit-markdown",
+    "clean": "rm -rf .output node_modules bun.lock dist .nuxt"
   },
   "devDependencies": {
     "@browser-echo/nuxt": "^1.1.1",
@@ -86,5 +87,12 @@
     "throttle-debounce": "^5.0.2",
     "vue-lite-youtube-embed": "1.2.4"
   },
-  "packageManager": "pnpm@11.25.0"
+  "packageManager": "bun@1.4.2",
+  "trustedDependencies": [
+    "@parcel/watcher",
+    "esbuild",
+    "sharp",
+    "unrs-resolver",
+    "vue-demi"
+  ]
 }

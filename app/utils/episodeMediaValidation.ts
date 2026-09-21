@@ -20,6 +20,9 @@ export type EpisodeMediaIssue = {
   missingFileSize: boolean;
 };
 
+/**
+ * Scan published podcast markdown for missing duration or fileSize frontmatter.
+ */
 export const collectEpisodeMediaIssues = async (
   globPattern = PODCASTS_GLOB,
 ): Promise<EpisodeMediaIssue[]> => {
@@ -54,6 +57,9 @@ export const collectEpisodeMediaIssues = async (
   return issues;
 };
 
+/**
+ * Human-readable build error listing episodes that still need media metadata.
+ */
 export const formatEpisodeMediaIssues = (
   issues: EpisodeMediaIssue[],
 ): string => {
@@ -74,7 +80,7 @@ export const formatEpisodeMediaIssues = (
     'Build blocked: podcast episodes are missing media metadata in frontmatter.',
     '',
     'Each published episode must have `duration` and `fileSize` filled in.',
-    'Run `pnpm sync-durations` to fetch them from the CDN, then commit the updated markdown files.',
+    'Run `bun run sync-durations` to fetch them from the CDN, then commit the updated markdown files.',
     '',
     ...lines,
   ].join('\n');
