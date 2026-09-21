@@ -1,10 +1,16 @@
 import tailwindcss from '@tailwindcss/vite';
 import {formatContentSignalPairs} from './app/utils/contentSignals';
 
+const sentryDsn =
+  process.env.NUXT_PUBLIC_SENTRY_DSN;
+const sentryEnvironment =
+  process.env.NUXT_SITE_ENV ||
+  (process.env.NODE_ENV === 'production' ? 'production' : 'development');
+
 export default defineNuxtConfig({
   modules: [
+    '@sentry/nuxt/module',
     '@nuxt/content',
-    '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/image',
@@ -55,12 +61,27 @@ export default defineNuxtConfig({
       },
     },
   },
-  sourcemap: false,
+  sourcemap: {
+    client: false,
+    // Server maps bloat the prerender worker (~4GB OOM on `nuxi build`).
+    // Production is nginx/SSG; prerender errors go through logSsrErrors.
+    server: false,
+  },
+  sentry: {
+    org: 'goodmotion',
+    project: 'double-slash',
+    authToken: process.env.SENTRY_AUTH_TOKEN,
+    // Capture prerender errors during `nuxi generate` without a Node --import flag.
+    autoInjectServerSentry: 'top-level-import',
+    /**
+     * Keep `nuxi generate` going if Sentry upload fails (missing token, network).
+     */
+    errorHandler(error: Error) {
+      console.warn('[sentry] source maps upload failed', error);
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      sourcemap: false,
-    },
   },
   css: ['~/assets/main.css'],
   image: {
@@ -83,8 +104,8 @@ export default defineNuxtConfig({
   },
   // Production SSG is nginx (config on the server): also set
   // Content-Type application/linkset+json on /.well-known/api-catalog there.
-  // Markdown for Agents: pnpm generate copies content/*.md next to HTML;
-  // nginx must negotiate Accept: text/markdown (see AGENTS.md).
+  // Markdown for Agents: bun run generate converts prerendered HTML to markdown
+  // next to it; nginx must negotiate Accept: text/markdown (see AGENTS.md).
   routeRules: {
     '/.well-known/api-catalog': {
       headers: {
@@ -131,6 +152,10 @@ export default defineNuxtConfig({
     public: {
       numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',
+      sentry: {
+        dsn: sentryDsn,
+        environment: sentryEnvironment,
+      },
     },
   },
   hooks: {

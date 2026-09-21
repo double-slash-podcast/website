@@ -27,6 +27,8 @@ useSchemaOrg([defineWebPage()]);
       <ContentRenderer
         v-if="data"
         :value="data"
+        :prose="false"
+        :components="markdownComponents"
         class="prose min-h-125 py-6"
       />
     </main>

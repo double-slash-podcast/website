@@ -101,6 +101,8 @@ useSchemaOrg([
             <ContentRenderer
               v-if="data"
               :value="data"
+              :prose="false"
+              :components="markdownComponents"
               class="max-w-full prose"
             />
             <div class="prose max-w-full mt-20">

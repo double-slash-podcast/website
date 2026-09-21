@@ -2,18 +2,21 @@
 
 ## Stack
 
-- Nuxt 4, Vue 3, pnpm (`packageManager` in `package.json`)
+- Nuxt 4, Vue 3, Bun (`packageManager` in `package.json`)
 - Content: `@nuxt/content` (markdown in `content/`)
 - Local: lerd (`*.test`)
-- Production: **Coolify + Nixpacks + nginx, static (SSG)**. Not Netlify.
+- Production: **Coolify + Railpack + nginx, static (SSG)**. Not Netlify.
 
 ## Deploy
 
-- Build: `pnpm generate` (`nuxi generate` → `dist/`, then copies content markdown next to HTML)
-- nginx serves `dist/` and must negotiate `Accept: text/markdown` (sibling `.md` / `index.md`)
-- Node 22 via `nixpacks.toml` / `pnpm-workspace.yaml` (linux/glibc)
-- Do not add `netlify.toml` or treat `nuxi build` + `pnpm start` as production
-- `pnpm generate` is SSG: `@nuxt/scripts` **disables** its Nitro reverse proxy (`/_scripts/p/`)
+- Build pack: **Railpack (Beta)** (`railpack.json`)
+- Build: `bun run generate` (`nuxi generate` → `.output/public`, then converts prerendered HTML to markdown next to it)
+- nginx serves `.output/public` and must negotiate `Accept: text/markdown` (sibling `.md` / `index.md`)
+- Node 24 + Bun 1.4.2 via `railpack.json` / `.nvmrc`
+- Do not add `netlify.toml` or treat `nuxi build` + `bun run start` as production
+- `bun run generate` is SSG: `@nuxt/scripts` **disables** its Nitro reverse proxy (`/_scripts/p/`)
+
+Coolify (staging first): static site, publish `/.output/public`. Leave **Install Command empty** (Railpack copies `package.json` + `bun.lock` then runs `bun install`). Build Command: `NUXT_SITE_ENV=staging bun run generate`. Do not set Install to `bun install --frozen-lockfile`: that replaces Railpack’s COPY steps and fails with “could not find a package.json”. Remove `NIXPACKS_*` env vars. Optional: `RAILPACK_NODE_VERSION=24`, `RAILPACK_NO_SPA=1`.
 
 ## Umami (`@nuxt/scripts`)
 
@@ -36,8 +39,8 @@ Staging (`staging.double-slash.dev`) and prod use the same `hostUrl`. `privacy` 
 ## Podcast content
 
 - Frontmatter: `.agents/podcast-frontmatter.md`
-- After a new episode: `pnpm sync-durations`
-- `pnpm validate-durations` runs before `pnpm generate` / `pnpm build`
+- After a new episode: `bun run sync-durations`
+- `bun run validate-durations` runs before `bun run generate` / `bun run build`
 
 ## Code conventions
 

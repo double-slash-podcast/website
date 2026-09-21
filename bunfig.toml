@@ -1,0 +1,8 @@
+# Hoist like the previous pnpm shamefully-hoist so Nuxt resolves nested deps.
+# Skip the 3-day minimumReleaseAge so Coolify is not blocked by fresh Iconify packs.
+
+[install]
+linker = "hoisted"
+optional = true
+peer = true
+minimumReleaseAge = 0

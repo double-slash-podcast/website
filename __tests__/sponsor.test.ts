@@ -28,7 +28,7 @@ describe('Sponsor SSG wiring', () => {
     const shell = fs.readFileSync(SPONSOR, 'utf8');
     const inner = fs.readFileSync(SPONSOR_CONTENT, 'utf8');
 
-    expect(shell).toContain('<Suspense>');
+    expect(shell).toMatch(/<Suspense\b/);
     expect(shell).toContain('SponsorContent');
     expect(inner).toContain('await useAsyncData');
     expect(inner).toContain("'/github-sponsor.json'");

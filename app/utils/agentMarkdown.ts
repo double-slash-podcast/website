@@ -1,11 +1,18 @@
-import {copyFileSync, globSync, mkdirSync, readFileSync} from 'node:fs';
-import {dirname, join} from 'node:path';
+import {
+  existsSync,
+  globSync,
+  mkdirSync,
+  readFileSync,
+  writeFileSync,
+} from 'node:fs';
+import {dirname, join, resolve} from 'node:path';
 import {shouldPublishAgentMarkdown} from './frontmatter';
+import {htmlToAgentMarkdown} from './htmlToAgentMarkdown';
 
 /** Nuxt Content ordering prefix, e.g. `140.news` → `news`. */
 const ORDER_PREFIX = /^\d+\./;
 
-/** Collections whose files are copied next to prerendered HTML. */
+/** Collections whose prerendered HTML is converted to agent markdown. */
 export const AGENT_MARKDOWN_COLLECTIONS = [
   'articles',
   'podcasts',
@@ -33,7 +40,8 @@ export function stripContentOrderPrefix(segment: string): string {
 
 /**
  * Map a path relative to `content/` to the public URL (no trailing slash).
- * Mirrors Nuxt Content page routes, including the `/custom` prefix strip.
+ * Mirrors Nuxt Content page routes: numeric prefixes stripped, `/custom`
+ * dropped, and slugs lowercased like Content pathMeta (Linux prerender).
  */
 export function contentFileToPublicPath(relativePath: string): string {
   const normalized = relativePath.replaceAll('\\', '/').replace(/^\/+/, '');
@@ -72,7 +80,7 @@ export function contentFileToPublicPath(relativePath: string): string {
     throw new Error(`Could not map content path: ${relativePath}`);
   }
 
-  return `/${segments.join('/')}`;
+  return `/${segments.map(segment => segment.toLowerCase()).join('/')}`;
 }
 
 /**
@@ -92,6 +100,38 @@ export function publicPathToOutputFiles(
 }
 
 /**
+ * Public URL path → prerendered HTML written by `nuxi generate`.
+ */
+export function publicPathToHtmlFile(
+  publicPath: string,
+  outputDir: string,
+): string {
+  const relative = publicPath.replace(/^\//, '');
+  return join(outputDir, relative, 'index.html');
+}
+
+/**
+ * SSG folders to emit into: CLI arg, else `.output/public`, else leftover `dist/`.
+ * Never both — a stale dist next to a fresh generate must not fail the build.
+ */
+export function resolveAgentMarkdownOutputDirs(
+  root: string,
+  fromArg?: string,
+): string[] {
+  if (fromArg) {
+    return [resolve(root, fromArg)];
+  }
+
+  const outputPublic = resolve(root, '.output/public');
+  if (existsSync(outputPublic)) {
+    return [outputPublic];
+  }
+
+  const dist = resolve(root, 'dist');
+  return existsSync(dist) ? [dist] : [];
+}
+
+/**
  * List markdown sources under `content/` that get an agent representation.
  */
 export function listAgentMarkdownSources(contentDir: string): string[] {
@@ -106,7 +146,7 @@ export type PublishableAgentMarkdown = {
 };
 
 /**
- * Content markdown that may be copied next to HTML (podcast drafts stay out).
+ * Content markdown that may get an agent page (podcast drafts stay out).
  */
 export function listPublishableAgentMarkdown(
   contentDir: string,
@@ -122,7 +162,7 @@ export function listPublishableAgentMarkdown(
 }
 
 /**
- * Copy each published content markdown file next to its prerendered HTML.
+ * Convert each published page's prerendered HTML into agent markdown files.
  */
 export function emitAgentMarkdownPages(
   options: EmitAgentMarkdownOptions,
@@ -143,16 +183,23 @@ export function emitAgentMarkdownPages(
 
     seen.set(publicPath, relativePath);
 
+    const htmlPath = publicPathToHtmlFile(publicPath, options.outputDir);
+    if (!existsSync(htmlPath)) {
+      throw new Error(
+        `Missing prerendered HTML for ${publicPath} (${htmlPath}). Run nuxi generate first.`,
+      );
+    }
+
     const {indexPath, siblingPath} = publicPathToOutputFiles(
       publicPath,
       options.outputDir,
     );
-    const diskPath = join(options.contentDir, relativePath);
+    const markdown = htmlToAgentMarkdown(readFileSync(htmlPath, 'utf8'));
 
     mkdirSync(dirname(indexPath), {recursive: true});
     mkdirSync(dirname(siblingPath), {recursive: true});
-    copyFileSync(diskPath, indexPath);
-    copyFileSync(diskPath, siblingPath);
+    writeFileSync(indexPath, markdown);
+    writeFileSync(siblingPath, markdown);
 
     emitted.push({
       sourcePath: relativePath,

@@ -90,3 +90,4 @@ modules/rss-feed-podcasts
 
 # Vitest JSON reporter output
 .vitest/
+.pnpm-store

@@ -12,7 +12,9 @@ import {
   contentFileToPublicPath,
   emitAgentMarkdownPages,
   listAgentMarkdownSources,
+  publicPathToHtmlFile,
   publicPathToOutputFiles,
+  resolveAgentMarkdownOutputDirs,
   stripContentOrderPrefix,
 } from '../app/utils/agentMarkdown';
 import {
@@ -20,10 +22,39 @@ import {
   emitAgentMarkdownIndexes,
 } from '../app/utils/agentMarkdownIndexes';
 import {
+  escapeMarkdownHeading,
   escapeMarkdownLinkLabel,
   extractFrontmatterTitle,
   shouldPublishAgentMarkdown,
 } from '../app/utils/frontmatter';
+
+/**
+ * Write a tiny prerendered HTML page under outputDir/{publicPath}/index.html.
+ */
+function writePrerenderedHtml(
+  outputDir: string,
+  publicPath: string,
+  title: string,
+  main: string,
+  titleInMain = true,
+): void {
+  const dir = join(outputDir, publicPath.replace(/^\//, ''));
+  const heading = `<h1>${title}</h1>`;
+  mkdirSync(dir, {recursive: true});
+  writeFileSync(
+    join(dir, 'index.html'),
+    `<!doctype html><html><body>
+      <div class="fixed top-0">
+        <a href="/" title="accueil">//</a>
+        <a href="/podcasts/" title="Podcasts">Podcasts</a>
+        <a href="/articles/" title="Blog">Blog</a>
+        <a href="/nous-soutenir/" title="Soutenir">Soutenir</a>
+      </div>
+      ${titleInMain ? '' : `<header>${heading}</header>`}
+      <main>${titleInMain ? heading : ''}${main}</main>
+    </body></html>`,
+  );
+}
 
 describe('stripContentOrderPrefix', () => {
   test('drops Nuxt Content numeric prefixes', () => {
@@ -53,6 +84,18 @@ describe('contentFileToPublicPath', () => {
     );
   });
 
+  test('lowercases mixed-case content folders to match Linux prerender', () => {
+    expect(contentFileToPublicPath('podcasts/044.animeCSS/index.md')).toBe(
+      '/podcasts/animecss',
+    );
+    expect(contentFileToPublicPath('podcasts/045.animeJS/index.md')).toBe(
+      '/podcasts/animejs',
+    );
+    expect(
+      contentFileToPublicPath('podcasts/058.compagnons-du-devOps/index.md'),
+    ).toBe('/podcasts/compagnons-du-devops');
+  });
+
   test('rejects empty or unknown shapes', () => {
     expect(() => contentFileToPublicPath('readme.md')).toThrow(
       'Unexpected content path',
@@ -72,6 +115,33 @@ describe('publicPathToOutputFiles', () => {
   });
 });
 
+describe('publicPathToHtmlFile', () => {
+  test('points at the prerendered index.html next to the markdown', () => {
+    expect(publicPathToHtmlFile('/articles/foo', '/tmp/out')).toBe(
+      '/tmp/out/articles/foo/index.html',
+    );
+  });
+});
+
+describe('resolveAgentMarkdownOutputDirs', () => {
+  test('prefers .output/public and ignores a leftover dist', () => {
+    const root = mkdtempSync(join(tmpdir(), 'agent-md-out-'));
+    mkdirSync(join(root, '.output/public'), {recursive: true});
+    mkdirSync(join(root, 'dist'), {recursive: true});
+
+    expect(resolveAgentMarkdownOutputDirs(root)).toEqual([
+      join(root, '.output/public'),
+    ]);
+  });
+
+  test('falls back to dist only when .output/public is missing', () => {
+    const root = mkdtempSync(join(tmpdir(), 'agent-md-dist-'));
+    mkdirSync(join(root, 'dist'), {recursive: true});
+
+    expect(resolveAgentMarkdownOutputDirs(root)).toEqual([join(root, 'dist')]);
+  });
+});
+
 describe('listAgentMarkdownSources', () => {
   test('every real content file maps to a unique public path', () => {
     const sources = listAgentMarkdownSources(join(process.cwd(), 'content'));
@@ -80,16 +150,18 @@ describe('listAgentMarkdownSources', () => {
     expect(sources.length).toBeGreaterThan(100);
     expect(new Set(paths).size).toBe(sources.length);
     expect(paths).toContain('/podcasts/news-sept26-rc2');
+    expect(paths).toContain('/podcasts/animecss');
     expect(paths).toContain('/articles/openclaw-vs-hermes');
     expect(paths).toContain('/nous-soutenir');
+    expect(paths).not.toContain('/podcasts/animeCSS');
   });
 });
 
 describe('emitAgentMarkdownPages', () => {
-  test('copies source markdown next to HTML output paths', () => {
+  test('converts prerendered HTML next to output paths', () => {
     const root = mkdtempSync(join(tmpdir(), 'agent-md-'));
     const contentDir = join(root, 'content');
-    const outputDir = join(root, 'dist');
+    const outputDir = join(root, '.output/public');
 
     mkdirSync(join(contentDir, 'articles'), {recursive: true});
     mkdirSync(join(contentDir, 'podcasts', '001.hello'), {recursive: true});
@@ -107,27 +179,60 @@ describe('emitAgentMarkdownPages', () => {
     );
     writeFileSync(join(contentDir, 'custom', 'about.md'), '# about\n');
 
+    writePrerenderedHtml(
+      outputDir,
+      '/articles/demo',
+      'Demo article',
+      '<p>article</p>',
+    );
+    writePrerenderedHtml(
+      outputDir,
+      '/podcasts/hello',
+      'Hello',
+      '<p>episode</p>',
+      false,
+    );
+    writePrerenderedHtml(outputDir, '/about', 'about', '<p>about body</p>');
+
     const pages = emitAgentMarkdownPages({contentDir, outputDir});
+    const articleMd = readFileSync(
+      join(outputDir, 'articles/demo/index.md'),
+      'utf8',
+    );
 
     expect(pages.map(page => page.publicPath).sort()).toEqual([
       '/about',
       '/articles/demo',
       '/podcasts/hello',
     ]);
-    expect(
-      readFileSync(join(outputDir, 'articles/demo/index.md'), 'utf8'),
-    ).toBe('# article\n');
+    expect(articleMd).toContain('# Demo article');
+    expect(articleMd).toContain('article');
+    expect(articleMd).toContain('- [Accueil](/)');
+    expect(articleMd).not.toMatch(/^---/);
     expect(readFileSync(join(outputDir, 'articles/demo.md'), 'utf8')).toBe(
-      '# article\n',
+      articleMd,
     );
     expect(
       readFileSync(join(outputDir, 'podcasts/hello/index.md'), 'utf8'),
-    ).toContain('# episode\n');
-    expect(readFileSync(join(outputDir, 'about/index.md'), 'utf8')).toBe(
-      '# about\n',
+    ).toContain('# Hello');
+    expect(readFileSync(join(outputDir, 'about/index.md'), 'utf8')).toContain(
+      '# about',
     );
     expect(pages.map(page => page.publicPath)).not.toContain('/podcasts/draft');
     expect(existsSync(join(outputDir, 'podcasts/draft/index.md'))).toBe(false);
+  });
+
+  test('throws when prerendered HTML is missing', () => {
+    const root = mkdtempSync(join(tmpdir(), 'agent-md-missing-'));
+    const contentDir = join(root, 'content');
+    const outputDir = join(root, '.output/public');
+
+    mkdirSync(join(contentDir, 'articles'), {recursive: true});
+    writeFileSync(join(contentDir, 'articles', 'demo.md'), '# article\n');
+
+    expect(() => emitAgentMarkdownPages({contentDir, outputDir})).toThrow(
+      'Missing prerendered HTML for /articles/demo',
+    );
   });
 });
 
@@ -180,11 +285,19 @@ describe('escapeMarkdownLinkLabel', () => {
   });
 });
 
+describe('escapeMarkdownHeading', () => {
+  test('escapes hashes and brackets in ATX titles', () => {
+    expect(escapeMarkdownHeading('Foo](https://evil.example) #bar')).toBe(
+      'Foo\\](https://evil.example) \\#bar',
+    );
+  });
+});
+
 describe('emitAgentMarkdownIndexes', () => {
   test('writes homepage and listing markdown for Accept negotiation', () => {
     const root = mkdtempSync(join(tmpdir(), 'agent-md-idx-'));
     const contentDir = join(root, 'content');
-    const outputDir = join(root, 'dist');
+    const outputDir = join(root, '.output/public');
 
     mkdirSync(join(contentDir, 'articles'), {recursive: true});
     mkdirSync(join(contentDir, 'podcasts', '002.later'), {recursive: true});
@@ -218,6 +331,10 @@ describe('emitAgentMarkdownIndexes', () => {
 
     expect(written).toEqual(['/', '/articles', '/podcasts']);
     expect(home).toContain('# Double Slash');
+    expect(home).not.toMatch(/^---/);
+    expect(home).not.toContain('llms.txt');
+    expect(home).toContain('- [Accueil](/)');
+    expect(home).toContain('- [Blog](/articles/)');
     expect(home).toContain('- [Demo article](/articles/demo/)');
     expect(home.indexOf('Second episode')).toBeLessThan(
       home.indexOf('First episode'),
@@ -243,8 +360,9 @@ describe('buildHomeMarkdown', () => {
       },
     ]);
 
-    expect(markdown).toContain('[Articles](/articles/)');
-    expect(markdown).toContain('[Index LLMs](/llms.txt)');
+    expect(markdown).toContain('[Blog](/articles/)');
+    expect(markdown).not.toContain('[Index LLMs](/llms.txt)');
+    expect(markdown).not.toMatch(/^---/);
     expect(markdown).toContain('- [Demo](/articles/demo/)');
   });
 });

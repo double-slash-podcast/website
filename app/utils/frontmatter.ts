@@ -59,3 +59,10 @@ export function shouldPublishAgentMarkdown(
 export function escapeMarkdownLinkLabel(label: string): string {
   return label.replace(/\\/g, '\\\\').replace(/[[\]]/g, '\\$&');
 }
+
+/**
+ * Escape a heading so `# Title` cannot inject a link or extra ATX markup.
+ */
+export function escapeMarkdownHeading(text: string): string {
+  return escapeMarkdownLinkLabel(text).replace(/#/g, '\\#');
+}
