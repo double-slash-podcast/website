@@ -4,10 +4,7 @@
  * this component in <Suspense>.
  */
 const {data} = await useAsyncData('last-articles', () => {
-  return queryCollection('articles')
-    .order('publicationDate', 'DESC')
-    .limit(2)
-    .all();
+  return articleListingQuery().order('publicationDate', 'DESC').limit(2).all();
 });
 </script>
 
@@ -40,8 +37,9 @@ const {data} = await useAsyncData('last-articles', () => {
     <div class="mt-12 mb-16 text-center">
       <nuxt-link
         to="/articles/"
+        :prefetch="false"
         class="flex items-center justify-center text-xl uppercase group text-primary"
-        >Voir tous les articles
+      >Voir tous les articles
         <Icon
           class="ml-1 transition-all group-hover:translate-x-1"
           name="mdi:arrow-right"

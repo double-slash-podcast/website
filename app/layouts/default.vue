@@ -9,7 +9,7 @@
     </div>
     <UpButton />
     <ClientOnly>
-      <SearchModal />
+      <SearchHost />
     </ClientOnly>
   </div>
 </template>
@@ -17,6 +17,9 @@
 <script setup>
 import UpButton from '~/components/global/UpButton.vue';
 import {agentDiscoveryLinks} from '~/utils/agentDiscovery';
+import mono45Url from '~/assets/fonts/mono45.woff2?url';
+import dankUrl from '~/assets/fonts/DankMono.woff2?url';
+
 const {path} = useRoute();
 const {
   baseInfos: {siteUrl, titleDefault, twitterUrl},
@@ -25,6 +28,20 @@ const {
 useHead({
   htmlAttrs: {lang: 'fr-FR'},
   link: [
+    {
+      rel: 'preload',
+      as: 'font',
+      type: 'font/woff2',
+      href: mono45Url,
+      crossorigin: 'anonymous',
+    },
+    {
+      rel: 'preload',
+      as: 'font',
+      type: 'font/woff2',
+      href: dankUrl,
+      crossorigin: 'anonymous',
+    },
     ...agentDiscoveryLinks.map(link => ({
       rel: link.rel,
       href: link.href,

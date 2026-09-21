@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/**
+ * Command-palette search dialog. Mounted on demand by SearchHost.
+ */
 import {debounce} from 'throttle-debounce';
 import {SEARCH_MODAL_LIMIT, searchResultsPath} from '~/utils/siteCatalog';
 import {
@@ -10,11 +13,10 @@ import {
   getSiteSearchDialog,
   syncSiteSearchDialog,
 } from '~/utils/siteSearchDialog';
-import {isTypingTarget} from '~/utils/siteSearchKeys';
 import type {WebMcpCatalogKind} from '~/utils/webmcpTypes';
 
 const instance = getCurrentInstance();
-const {isOpen, close, open, search, init, ftsStatus} = useSiteSearch();
+const {isOpen, close, search, init, ftsStatus} = useSiteSearch();
 
 const query = ref('');
 const hits = ref<SiteSearchHit[]>([]);
@@ -59,17 +61,11 @@ watch(query, () => {
   debouncedRefresh();
 });
 
-watch(isOpen, async openState => {
-  if (!openState) {
-    query.value = '';
-    hits.value = [];
-    kind.value = 'episode';
-    syncSiteSearchDialog(getSiteSearchDialog(instance), false);
-    return;
-  }
-
+/**
+ * Show the dialog and build the FTS index the first time the palette opens.
+ */
+async function onPaletteOpen() {
   await nextTick();
-  // Re-check after awaits: a close can land before showModal/init finish.
   if (!isOpen.value) {
     return;
   }
@@ -81,35 +77,24 @@ watch(isOpen, async openState => {
   if (query.value.trim()) {
     await refreshHits();
   }
-});
-
-/**
- * Keyboard shortcut: Cmd/Ctrl+K opens the palette unless a field has focus.
- */
-function onGlobalKeydown(event: KeyboardEvent) {
-  if (event.repeat || event.key.toLowerCase() !== 'k') {
-    return;
-  }
-  if (!event.metaKey && !event.ctrlKey) {
-    return;
-  }
-  if (isTypingTarget(event.target) && !isOpen.value) {
-    return;
-  }
-
-  event.preventDefault();
-  open();
 }
 
-onMounted(() => {
-  window.addEventListener('keydown', onGlobalKeydown);
-  if (isOpen.value) {
-    syncSiteSearchDialog(getSiteSearchDialog(instance), true);
+watch(isOpen, async openState => {
+  if (!openState) {
+    query.value = '';
+    hits.value = [];
+    kind.value = 'episode';
+    syncSiteSearchDialog(getSiteSearchDialog(instance), false);
+    return;
   }
+
+  await onPaletteOpen();
 });
 
-onUnmounted(() => {
-  window.removeEventListener('keydown', onGlobalKeydown);
+onMounted(() => {
+  if (isOpen.value) {
+    void onPaletteOpen();
+  }
 });
 
 /**

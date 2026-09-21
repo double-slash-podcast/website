@@ -2,15 +2,16 @@ import * as Sentry from '@sentry/nuxt';
 import {isNotFoundError} from './app/utils/httpError';
 
 /**
- * Browser SDK for the SSG site: captures Vue errors and client-side traces.
- * The DSN is public; source maps stay private via SENTRY_AUTH_TOKEN at build time.
+ * Browser SDK for the SSG site: captures Vue errors only.
+ * Tracing is off — a static site has no useful transaction spans and the
+ * extra SDK work showed up on the homepage main thread (PageSpeed TBT).
  */
 const {sentry} = useRuntimeConfig().public;
 
 Sentry.init({
   dsn: sentry.dsn,
   environment: sentry.environment,
-  tracesSampleRate: 0.1,
+  tracesSampleRate: 0,
   /**
    * Drop expected 404s (catch-all content pages, crawler probes).
    */

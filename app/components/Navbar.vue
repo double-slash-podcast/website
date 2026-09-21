@@ -54,6 +54,7 @@ const links = [
         :key="url"
         :to="url"
         :title="title"
+        :prefetch="false"
         class="md:px-4 px-2 pt-4 pb-2 text-sm sm:text-base animate-link-underline"
         :class="{
           'router-link-active router-link-exact-active':

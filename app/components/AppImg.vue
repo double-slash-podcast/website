@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * Cloudinary-backed images via a native img tag.
+ * Cloudinary-backed images via Nuxt Image.
  */
 withDefaults(
   defineProps<{
@@ -12,10 +12,13 @@ withDefaults(
     densities?: string;
     loading?: 'lazy' | 'eager';
     decoding?: 'async' | 'auto' | 'sync';
+    fetchpriority?: 'high' | 'low' | 'auto';
+    preload?: boolean;
   }>(),
   {
     loading: 'lazy',
     decoding: 'async',
+    preload: false,
   },
 );
 </script>
@@ -30,5 +33,7 @@ withDefaults(
     :densities="densities"
     :loading="loading"
     :decoding="decoding"
+    :fetchpriority="fetchpriority"
+    :preload="preload"
   />
 </template>
