@@ -10,8 +10,8 @@
 ## Deploy
 
 - Build pack: **Railpack (Beta)** (`railpack.json`)
-- Build: `bun run generate` (`nuxi generate` → `.output/public`)
-- nginx serves `.output/public` (Coolify publish directory)
+- Build: `bun run generate` (`nuxi generate` → `.output/public`, then converts prerendered HTML to markdown next to it)
+- nginx serves `.output/public` and must negotiate `Accept: text/markdown` (sibling `.md` / `index.md`)
 - Node 24 + Bun 1.4.2 via `railpack.json` / `.nvmrc`
 - Do not add `netlify.toml` or treat `nuxi build` + `bun run start` as production
 - `bun run generate` is SSG: `@nuxt/scripts` **disables** its Nitro reverse proxy (`/_scripts/p/`)
