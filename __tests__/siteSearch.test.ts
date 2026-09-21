@@ -1,4 +1,6 @@
 import {afterEach, describe, expect, test} from 'vitest';
+import {nextTick, ref} from 'vue';
+import {bindSearchModalRender} from '../app/utils/searchModalLatch';
 import {shouldApplyRouteQuery} from '../app/utils/searchRouteSync';
 import {syncSiteSearchDialog, getSiteSearchDialog} from '../app/utils/siteSearchDialog';
 import {isTypingTarget} from '../app/utils/siteSearchKeys';
@@ -19,6 +21,28 @@ describe('isTypingTarget', () => {
     editable.setAttribute('contenteditable', 'true');
     expect(isTypingTarget(select)).toBe(true);
     expect(isTypingTarget(editable)).toBe(true);
+  });
+});
+
+describe('bindSearchModalRender', () => {
+  test('mounts SearchModal when search is already open', () => {
+    const isOpen = ref(true);
+    const shouldRender = bindSearchModalRender(isOpen);
+    expect(shouldRender.value).toBe(true);
+  });
+
+  test('keeps SearchModal mounted after close so the next open is instant', async () => {
+    const isOpen = ref(false);
+    const shouldRender = bindSearchModalRender(isOpen);
+    expect(shouldRender.value).toBe(false);
+
+    isOpen.value = true;
+    await nextTick();
+    expect(shouldRender.value).toBe(true);
+
+    isOpen.value = false;
+    await nextTick();
+    expect(shouldRender.value).toBe(true);
   });
 });
 
