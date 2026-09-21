@@ -5,9 +5,7 @@ import type {PodcastsCollectionItem} from '@nuxt/content';
 import {parseMediaNumber} from '~/utils/mediaMeta';
 
 /**
- * get the list of podcasts from content/podcasts
- * @param event
- * @returns array
+ * Load podcast episodes from the content collection.
  */
 const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
   const docs = await queryCollection(event, 'podcasts')
@@ -16,6 +14,15 @@ const getPodcasts = async (event: H3Event | NodeIncomingMessage) => {
   return docs;
 };
 
+/**
+ * Minimal HTML show notes for RSS content:encoded (plain description + canonical URL).
+ */
+const buildEpisodeContentEncoded = (description: string, episodeUrl: string): string =>
+  `<p>${description}</p><p><a href="${episodeUrl}">Retrouvez toutes les notes et les liens de l'épisode</a></p>`;
+
+/**
+ * Build the podcast-level RSS channel options from app config.
+ */
 const getFeedBase = (infos: PodcastInfosType) =>
   // get the options for the podcast iteself
   ({
@@ -41,7 +48,6 @@ const getFeedBase = (infos: PodcastInfosType) =>
     ttl: +infos.timeToLive,
     custom_namespaces: {
       itunes: 'http://www.itunes.com/dtds/podcast-1.0.dtd',
-      googleplay: 'http://www.google.com/schemas/play-podcasts/1.0',
     },
     custom_elements: [
       {'itunes:title': infos.title},
@@ -70,9 +76,6 @@ const getFeedBase = (infos: PodcastInfosType) =>
           },
         },
       },
-      {'googleplay:author': infos.authorName},
-      {'googleplay:description': infos.summary.substring(0, 999)},
-      {'googleplay:explicit': infos.explicit},
     ],
   });
 
@@ -86,19 +89,19 @@ export default defineEventHandler(
     // podcast items
     const podcasts = await getPodcasts(event);
 
-    // sort by date
+    // newest episode first (naive RSS readers ignore pubDate)
     const _podcasts = podcasts.sort((a, b) => {
       const _a = new Date(a.publicationDate);
       const _b = new Date(b.publicationDate);
-      if (_a.getTime() > _b.getTime()) return 1;
-      if (_a.getTime() < _b.getTime()) return -1;
+      if (_a.getTime() > _b.getTime()) return -1;
+      if (_a.getTime() < _b.getTime()) return 1;
       return 0;
     });
 
     // create the rss feed
     const feed = new RSS(getFeedBase(podcastInfos));
 
-    for await (const podcast of await _podcasts) {
+    for (const podcast of _podcasts) {
       const {
         title,
         subtitle,
@@ -129,8 +132,8 @@ export default defineEventHandler(
         path?.charAt(path.length - 1) === '/' ? path.slice(0, -1) : path;
       // create url of file
       const url = `${prefixAudio}/${dsSlug}.mp3`;
-
-      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${siteUrl}${_path}/`;
+      const episodeUrl = `${siteUrl}${_path}/`;
+      const _description = `${description} Retrouvez toutes les notes et les liens de l'épisode sur cette page : ${episodeUrl}`;
 
       // generate guid
       const guidFresh = crypto
@@ -154,13 +157,15 @@ export default defineEventHandler(
             },
           },
         },
-        {'googleplay:description': description},
-        {'googleplay:explicit': explicit},
+        {
+          'content:encoded': {
+            _cdata: buildEpisodeContentEncoded(description, episodeUrl),
+          },
+        },
       ];
 
       const episodeDuration = parseMediaNumber(duration);
       const episodeFileSize = parseMediaNumber(fileSize);
-
       if (episodeDuration) {
         custom_elements.push({'itunes:duration': episodeDuration});
       }
@@ -171,7 +176,7 @@ export default defineEventHandler(
         title: title || '',
         date: publicationDate,
         description: _description,
-        url: `${siteUrl}${_path}/`,
+        url: episodeUrl,
         categories,
         author,
         custom_elements,

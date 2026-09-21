@@ -1,10 +1,16 @@
 <script setup lang="ts">
 const props = defineProps<{
-  publicationDate: string;
+  publicationDate?: string | null;
 }>();
 
 const isNewEpisode = computed(() => {
+  if (!props.publicationDate) {
+    return false;
+  }
   const date = new Date(props.publicationDate);
+  if (Number.isNaN(date.getTime())) {
+    return false;
+  }
   const now = new Date();
   now.setDate(now.getDate() - 15);
   return date.getTime() > now.getTime();

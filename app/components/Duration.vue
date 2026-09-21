@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/**
+ * Display an episode duration from content frontmatter (seconds).
+ */
 const props = defineProps<{
   duration?: number;
 }>();

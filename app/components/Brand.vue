@@ -1,4 +1,7 @@
 <script setup>
+/**
+ * Site wordmark in the header.
+ */
 defineProps({
   slash: {
     type: Boolean,

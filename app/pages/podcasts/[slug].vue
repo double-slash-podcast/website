@@ -13,8 +13,7 @@ const {data} = await useAsyncData(`episode-${pathStr}`, () =>
 );
 
 if (!data.value?.title) {
-  // redirect to 404 page
-  navigateTo('/_404');
+  throw createError(notFoundErrorOptions);
 }
 
 // disable transcription for the moment
@@ -99,14 +98,17 @@ useSchemaOrg([
             <p class="mb-3">
               {{ data.description }}
             </p>
-            <!-- error 500 with this component -->
             <ContentRenderer
               v-if="data"
               :value="data"
+              :prose="false"
+              :components="markdownComponents"
               class="max-w-full prose"
             />
-            <div class="prose">
-              <Authors />
+            <div class="prose max-w-full mt-20">
+              <div class="bg-purple-400/20 p-4 rounded-lg border border-purple-400/40">
+                <Authors />
+              </div>
               <Sponsor :with-list="false" />
             </div>
           </div>

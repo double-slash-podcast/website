@@ -1,11 +1,12 @@
 <template>
-  <audio ref="audioPlayerElement" preload="auto">
-    <source :src="props.src" :type="type" />
-  </audio>
-  <div
-    v-if="props.src"
-    class="block w-full px-2 -translate-y-6 md:w-3/4 lg:w-1/2 md:m-auto sm:flex"
-  >
+  <div>
+    <audio ref="audioPlayerElement" preload="auto">
+      <source :src="props.src" :type="type" />
+    </audio>
+    <div
+      v-if="props.src"
+      class="block w-full px-2 -translate-y-6 md:w-3/4 lg:w-1/2 md:m-auto sm:flex"
+    >
     <div class="flex items-end justify-center">
       <button
         class="mr-2"
@@ -23,7 +24,7 @@
         :height="65"
         :size="4"
         :load="state.loadedProgress < state.currentPosition"
-        @click="toggle"
+        @toggle="toggle"
       />
       <button class="ml-2" title="forward to 10 seconds" @click="skip(+10)">
         <Icon class="text-white" name="fluent:skip-forward-10-24-filled" />
@@ -60,6 +61,7 @@
 
         <SpeedPlayer :speed="state.playbackRate" @change="changeSpeed" />
       </div>
+    </div>
     </div>
   </div>
 </template>

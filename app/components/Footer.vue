@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/**
+ * Site footer with copyright year and source link.
+ */
 const date = useLocalDate(Date.now(), {
   year: 'numeric',
 });

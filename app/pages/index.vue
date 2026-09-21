@@ -1,13 +1,13 @@
-<script setup>
-import {animate, scroll} from 'motion';
+<script setup lang="ts">
+const bigSlash = ref<{svg: SVGSVGElement} | null>(null);
+const tinySlash = ref<{svg: SVGSVGElement} | null>(null);
 
-const bigSlash = ref();
-const tinySlash = ref();
-onMounted(() => {
-  if (bigSlash.value) {
+onMounted(async () => {
+  const {animate, scroll} = await import('motion');
+  if (bigSlash.value?.svg) {
     scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
   }
-  if (tinySlash.value) {
+  if (tinySlash.value?.svg) {
     scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
   }
 });
@@ -22,36 +22,13 @@ const {data} = await useAsyncData('lastOne', () => {
   return queryCollection('podcasts').order('id', 'DESC').first();
 });
 
-useHead({
+useSeoMeta({
   title: 'Double Slash, le podcast sur le développement web en français',
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content:
-        'Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.',
-    },
-    {
-      hid: 'og:title',
-      name: 'og:title',
-      content: 'Double Slash, le podcast sur le développement web en français',
-    },
-    {
-      hid: 'og:url',
-      property: 'og:url',
-      content: `${siteUrl}${path}`,
-    },
-    {
-      hid: 'og:image',
-      property: 'og:image',
-      content: '/android-chrome-512x512.png',
-    },
-    {
-      hid: 'twitter:url',
-      name: 'twitter:url',
-      content: siteUrl,
-    },
-  ],
+  ogTitle: 'Double Slash, le podcast sur le développement web en français',
+  description:
+    'Double Slash, le podcast audio et vidéo sur le développement web en français. Retrouvez un épisode deux fois par mois avec Patrick Faramaz et Alex Duval.',
+  ogUrl: `${siteUrl}${path}`,
+  ogImage: '/android-chrome-512x512.png',
 });
 useSchemaOrg([defineWebPage()]);
 </script>
@@ -72,7 +49,11 @@ useSchemaOrg([defineWebPage()]);
           par <span class="font-normal">PATRICK FARAMAZ</span> et
           <span class="font-normal">ALEX DUVAL</span>
         </p>
-        <EpisodeHeadings :episode="data" class="mt-20 max-w-3xl" />
+        <EpisodeHeadings
+          v-if="data"
+          :episode="data"
+          class="mt-20 max-w-3xl"
+        />
       </template>
     </Header>
     <main class="relative z-10 pb-24">
@@ -114,16 +95,18 @@ useSchemaOrg([defineWebPage()]);
         /></nuxt-link>
       </div>
       <Cohost class="mb-28" />
-      <LastArticle class="mb-28" />
+      <Suspense>
+        <LastArticle class="mb-28" />
+      </Suspense>
       <SocialList class="mb-28" />
     </main>
-    <LazySlashIcon
+    <SlashIcon
       ref="bigSlash"
       size="350"
-      class="hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20"
+      class="hidden md:block fixed top-[25%] md:left-[-10%] z-8 opacity-20"
       inside-class="fill-purple-800"
     />
-    <LazySlashIcon
+    <SlashIcon
       ref="tinySlash"
       size="200"
       class="hidden md:block fixed top-[10%] right-0 z-8 opacity-20"

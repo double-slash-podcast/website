@@ -54,10 +54,19 @@ const plateforms = [
     >
       <li v-for="plateform in plateforms" :key="plateform.icon">
         <a :href="plateform.href" :title="plateform.title" target="_blank">
+          <!-- Iconify names contain a colon; the rest are local Vue SVGs. -->
           <Icon
+            v-if="plateform.icon.includes(':')"
             class="duration-300 hover:-translate-y-2"
             :class="plateform.className"
             :name="plateform.icon"
+            :title="plateform.title"
+          />
+          <component
+            :is="plateform.icon"
+            v-else
+            class="duration-300 hover:-translate-y-2"
+            :class="plateform.className"
             :title="plateform.title"
           />
         </a>
