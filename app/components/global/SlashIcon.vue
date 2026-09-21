@@ -1,6 +1,5 @@
 <template>
   <svg
-    ref="svg"
     xmlns="http://www.w3.org/2000/svg"
     :width="`${size}px`"
     :height="`${size}px`"
@@ -23,7 +22,11 @@ const {insideClass} = useAttrs();
 defineProps<{
   size: string;
 }>();
-const svg = ref();
+const svg = shallowRef<Element | null>(null);
+const instance = getCurrentInstance();
+onMounted(() => {
+  svg.value = instance?.proxy?.$el ?? null;
+});
 defineExpose({
   svg,
 });

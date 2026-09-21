@@ -8,7 +8,7 @@
       </div>
     </div>
     <UpButton />
-    
+    <SearchModal />
   </div>
 </template>
 
