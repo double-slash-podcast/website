@@ -1,28 +1,23 @@
-/**
- * Native <dialog> lookup for the command palette.
- * Vue 3.5 production setRef crashes when a template ref owner is null,
- * so the palette must never use ref="" on this element.
- */
-
-export const SITE_SEARCH_DIALOG_ID = 'site-search-dialog';
+import type {ComponentInternalInstance} from 'vue';
 
 /**
- * Palette dialog looked up by id (undefined during SSR).
+ * Root <dialog> of SearchModal from the component vnode.
+ * Avoid Vue template refs: production setRef crashes when owner is null.
  */
-export function getSiteSearchDialog(): HTMLDialogElement | null {
-  if (typeof document === 'undefined') {
-    return null;
-  }
-
-  const el = document.getElementById(SITE_SEARCH_DIALOG_ID);
+export function getSiteSearchDialog(
+  instance: ComponentInternalInstance | null,
+): HTMLDialogElement | null {
+  const el = instance?.vnode.el;
   return el instanceof HTMLDialogElement ? el : null;
 }
 
 /**
  * Open or close the palette without double-calling showModal/close.
  */
-export function syncSiteSearchDialog(openState: boolean): void {
-  const el = getSiteSearchDialog();
+export function syncSiteSearchDialog(
+  el: HTMLDialogElement | null,
+  openState: boolean,
+): void {
   if (!el) {
     return;
   }

@@ -7,12 +7,13 @@ import {
   type SiteSearchHit,
 } from '~/utils/mergeSearchHits';
 import {
-  SITE_SEARCH_DIALOG_ID,
+  getSiteSearchDialog,
   syncSiteSearchDialog,
 } from '~/utils/siteSearchDialog';
 import {isTypingTarget} from '~/utils/siteSearchKeys';
 import type {WebMcpCatalogKind} from '~/utils/webmcpTypes';
 
+const instance = getCurrentInstance();
 const {isOpen, close, open, search, init, ftsStatus} = useSiteSearch();
 
 const query = ref('');
@@ -63,12 +64,12 @@ watch(isOpen, async openState => {
     query.value = '';
     hits.value = [];
     kind.value = 'episode';
-    syncSiteSearchDialog(false);
+    syncSiteSearchDialog(getSiteSearchDialog(instance), false);
     return;
   }
 
   await nextTick();
-  syncSiteSearchDialog(true);
+  syncSiteSearchDialog(getSiteSearchDialog(instance), true);
   await init();
   if (query.value.trim()) {
     await refreshHits();
@@ -96,7 +97,7 @@ function onGlobalKeydown(event: KeyboardEvent) {
 onMounted(() => {
   window.addEventListener('keydown', onGlobalKeydown);
   if (isOpen.value) {
-    syncSiteSearchDialog(true);
+    syncSiteSearchDialog(getSiteSearchDialog(instance), true);
   }
 });
 
@@ -152,7 +153,6 @@ watch(groupedHits, next => {
 
 <template>
   <dialog
-    :id="SITE_SEARCH_DIALOG_ID"
     class="m-auto w-[min(42rem,calc(100vw-2rem))] max-h-[min(80vh,40rem)] overflow-hidden rounded-lg bg-dark p-0 text-white shadow-lg shadow-haiti/80 ring-1 ring-secondary backdrop:bg-haiti/85"
     aria-labelledby="site-search-dialog-title"
     @close="close"

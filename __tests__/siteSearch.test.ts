@@ -1,10 +1,6 @@
 import {afterEach, describe, expect, test} from 'vitest';
 import {shouldApplyRouteQuery} from '../app/utils/searchRouteSync';
-import {
-  SITE_SEARCH_DIALOG_ID,
-  getSiteSearchDialog,
-  syncSiteSearchDialog,
-} from '../app/utils/siteSearchDialog';
+import {syncSiteSearchDialog, getSiteSearchDialog} from '../app/utils/siteSearchDialog';
 import {isTypingTarget} from '../app/utils/siteSearchKeys';
 
 describe('isTypingTarget', () => {
@@ -38,17 +34,26 @@ describe('shouldApplyRouteQuery', () => {
 
 describe('syncSiteSearchDialog', () => {
   afterEach(() => {
-    document.getElementById(SITE_SEARCH_DIALOG_ID)?.remove();
+    document.querySelector('dialog')?.remove();
   });
 
   test('is a no-op when the dialog is missing', () => {
-    expect(getSiteSearchDialog()).toBeNull();
-    expect(() => syncSiteSearchDialog(true)).not.toThrow();
+    expect(() => syncSiteSearchDialog(null, true)).not.toThrow();
+  });
+
+  test('reads the dialog from the component vnode, not from the document', () => {
+    const dialog = document.createElement('dialog');
+    expect(getSiteSearchDialog(null)).toBeNull();
+    expect(
+      getSiteSearchDialog({vnode: {el: dialog}} as never),
+    ).toBe(dialog);
+    expect(
+      getSiteSearchDialog({vnode: {el: document.createElement('div')}} as never),
+    ).toBeNull();
   });
 
   test('opens and closes the native dialog without double-toggle', () => {
     const dialog = document.createElement('dialog');
-    dialog.id = SITE_SEARCH_DIALOG_ID;
     if (typeof dialog.showModal !== 'function') {
       dialog.showModal = function showModal() {
         this.setAttribute('open', '');
@@ -59,17 +64,16 @@ describe('syncSiteSearchDialog', () => {
     }
     document.body.append(dialog);
 
-    expect(getSiteSearchDialog()).toBe(dialog);
     expect(dialog.open).toBe(false);
 
-    syncSiteSearchDialog(true);
+    syncSiteSearchDialog(dialog, true);
     expect(dialog.open).toBe(true);
-    syncSiteSearchDialog(true);
+    syncSiteSearchDialog(dialog, true);
     expect(dialog.open).toBe(true);
 
-    syncSiteSearchDialog(false);
+    syncSiteSearchDialog(dialog, false);
     expect(dialog.open).toBe(false);
-    syncSiteSearchDialog(false);
+    syncSiteSearchDialog(dialog, false);
     expect(dialog.open).toBe(false);
   });
 });
