@@ -12,12 +12,11 @@ export default defineNuxtConfig({
     '@sentry/nuxt/module',
     '@nuxt/content',
     '@pinia/nuxt',
-    '@nuxtjs/color-mode',
     '@nuxt/image',
     'nuxt-schema-org',
     '@nuxt/icon',
     '@nuxt/eslint',
-    '@browser-echo/nuxt',
+    ...(process.env.NODE_ENV === 'development' ? ['@browser-echo/nuxt'] : []),
     'nuxt-llms',
     '@nuxtjs/robots',
     '@nuxt/scripts',
@@ -89,8 +88,7 @@ export default defineNuxtConfig({
     cloudinary: {
       baseURL: 'https://res.cloudinary.com/doubleslash/image/fetch/',
       modifiers: {
-        effect: 'sharpen:100',
-        quality: 'auto:best',
+        quality: 'auto:good',
       },
     },
   },
@@ -98,9 +96,11 @@ export default defineNuxtConfig({
     componentIslands: true,
     viewTransition: true,
     typedPages: true,
-  },
-  colorMode: {
-    classSuffix: '',
+    defaults: {
+      nuxtLink: {
+        prefetchOn: {visibility: false, interaction: true},
+      },
+    },
   },
   // Production SSG is nginx (config on the server): also set
   // Content-Type application/linkset+json on /.well-known/api-catalog there.
@@ -168,14 +168,18 @@ export default defineNuxtConfig({
       });
     },
   },
-  browserEcho: {
-    route: '/__client-logs',
-    include: ['log', 'warn', 'error'],
-    tag: '[web]',
-    batch: {size: 20, interval: 300},
-    preserveConsole: true,
-    stackMode: 'condensed', // 'full' | 'condensed' | 'none'
-  },
+  ...(process.env.NODE_ENV === 'development'
+    ? {
+        browserEcho: {
+          route: '/__client-logs',
+          include: ['log', 'warn', 'error'],
+          tag: '[web]',
+          batch: {size: 20, interval: 300},
+          preserveConsole: true,
+          stackMode: 'condensed' as const,
+        },
+      }
+    : {}),
   llms: {
     domain: 'https://double-slash.dev',
     title: 'Double Slash Podcast',
@@ -208,4 +212,15 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: '2026-09-16',
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'preconnect',
+          href: 'https://res.cloudinary.com',
+          crossorigin: '',
+        },
+      ],
+    },
+  },
 });

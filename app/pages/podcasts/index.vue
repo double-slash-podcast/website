@@ -11,7 +11,7 @@ const {data: count} = await useAsyncData(`podcasts-count-${page}`, () => {
 const skip = +page < 2 ? 0 : (+page - 1) * config.numberEpisodesList;
 
 const {data} = await useAsyncData(`podcasts-${page}`, () => {
-  return queryCollection('podcasts')
+  return podcastListingQuery()
     .order('id', 'DESC')
     .limit(config.numberEpisodesList)
     .skip(skip)
@@ -41,7 +41,7 @@ useSchemaOrg([defineWebPage()]);
       <div class="flex flex-col gap-20 mt-20">
         <EpisodeHeadings
           v-for="episode in data"
-          :key="episode.id"
+          :key="episode.path"
           v-bind="{episode}"
         />
         <div class="flex justify-center">

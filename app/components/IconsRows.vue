@@ -1,134 +1,72 @@
+<script setup lang="ts">
+import stripA from '~/assets/logo-strips/strip-a.svg?url';
+import stripB from '~/assets/logo-strips/strip-b.svg?url';
+import stripC from '~/assets/logo-strips/strip-c.svg?url';
+
+const STRIPS = [stripA, stripB, stripC] as const;
+
+/**
+ * Native strip size from scripts/build-logo-strips.ts (34 logos × 64px − 16px gap).
+ */
+const STRIP_WIDTH = 2160;
+const STRIP_HEIGHT = 48;
+
+const props = defineProps({
+  /**
+   * Cycles a/b/c so stacked marquees do not share the same shuffle.
+   */
+  variant: {
+    type: Number,
+    default: 0,
+  },
+});
+
+const src = computed(() => {
+  return STRIPS[props.variant % STRIPS.length] ?? stripA;
+});
+</script>
+
 <template>
-  <div>
+  <div aria-hidden="true">
     <div class="relative flex gap-8 overflow-hidden select-none">
-      <ul class="flex min-w-full gap-4 h-12 shrink-0 animate-slideLeft1 mb-2">
-        <li
-          v-for="logo in shuffleLogos"
-          :key="logo"
-          class="w-12 h-12 flex items-center justify-center"
-        >
-          <Icon
-            :id="logo"
-            :name="logo"
-            size="38"
-            class="w-12 h-12 max-w-full grayscale object-contain object-center"
-            mode="css"
-          />
-          <!-- <Icon
-            v-if="isFirst"
-            :id="logo"
-            :name="logo"
-            size="40"
-            class="flex grayscale"
-            mode="css"
-          />
-          <IconsUse v-else :id="logo" size="40" class="grayscale icon" /> -->
-        </li>
-      </ul>
-      <ul
-        class="absolute top-0 flex min-w-full gap-4 shrink-0 animate-slideLeft2 mb-2"
-      >
-        <li
-          v-for="logo in shuffleLogos"
-          :key="logo"
-          class="w-12 h-12 flex items-center justify-center"
-        >
-          <!-- <IconsUse :id="logo" size="40" class="grayscale icon" /> -->
-          <Icon
-            :id="logo"
-            :name="logo"
-            size="38"
-            class="w-12 h-12 max-w-full grayscale object-contain object-center"
-            mode="css"
-          />
-        </li>
-      </ul>
+      <img
+        :src="src"
+        alt=""
+        :width="STRIP_WIDTH"
+        :height="STRIP_HEIGHT"
+        decoding="async"
+        draggable="false"
+        class="mb-2 h-12 w-[2160px] max-w-none shrink-0 animate-slideLeft1 grayscale"
+      />
+      <img
+        :src="src"
+        alt=""
+        :width="STRIP_WIDTH"
+        :height="STRIP_HEIGHT"
+        decoding="async"
+        draggable="false"
+        class="absolute top-0 mb-2 h-12 w-[2160px] max-w-none shrink-0 animate-slideLeft2 grayscale"
+      />
     </div>
-    <!-- 2 eme ligne -->
     <div class="relative flex gap-4 overflow-hidden select-none">
-      <ul class="flex min-w-full gap-4 h-12 shrink-0 animate-slideRight1 mb-2">
-        <li
-          v-for="logo in shuffleLogos"
-          :key="logo"
-          class="w-12 h-12 flex items-center justify-center"
-        >
-          <!-- <IconsUse :id="logo" size="40" class="grayscale icon" /> -->
-          <Icon
-            :id="logo"
-            :name="logo"
-            size="38"
-            class="w-12 h-12 max-w-full grayscale object-contain object-center"
-            mode="css"
-          />
-        </li>
-      </ul>
-      <ul
-        class="absolute top-0 flex min-w-full gap-4 shrink-0 animate-slideRight2 mb-2"
-      >
-        <li
-          v-for="logo in shuffleLogos"
-          :key="logo"
-          class="w-12 h-12 flex items-center justify-center"
-        >
-          <Icon
-            :id="logo"
-            :name="logo"
-            size="38"
-            class="w-12 h-12 max-w-full grayscale object-contain object-center"
-            mode="css"
-          />
-        </li>
-      </ul>
+      <img
+        :src="src"
+        alt=""
+        :width="STRIP_WIDTH"
+        :height="STRIP_HEIGHT"
+        decoding="async"
+        draggable="false"
+        class="mb-2 h-12 w-[2160px] max-w-none shrink-0 animate-slideRight1 grayscale"
+      />
+      <img
+        :src="src"
+        alt=""
+        :width="STRIP_WIDTH"
+        :height="STRIP_HEIGHT"
+        decoding="async"
+        draggable="false"
+        class="absolute top-0 mb-2 h-12 w-[2160px] max-w-none shrink-0 animate-slideRight2 grayscale"
+      />
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-withDefaults(
-  defineProps<{
-    isFirst?: boolean;
-  }>(),
-  {isFirst: false},
-);
-
-const logos = [
-  'logos:vitejs',
-  'logos:pnpm',
-  'logos:fastify-icon',
-  'logos:javascript',
-  'logos:nextjs-icon',
-  'logos:nodejs-icon',
-  'logos:css-3-official',
-  'logos:html-5',
-  'logos:vue',
-  'logos:react',
-  'logos:mistral-ai-icon',
-  'logos:bun',
-  'logos:deno',
-  'logos:pwa',
-  'logos:php',
-  'logos:laravel',
-  'logos:graphql',
-  'logos:astro',
-  'logos:angular-icon',
-  'logos:visual-studio-code',
-  'logos:docker-icon',
-  'logos:hasura-icon',
-  'logos:nuxt-icon',
-  'logos:rust',
-  'logos:tailwindcss-icon',
-  'logos:redis',
-  'logos:postgresql',
-  'logos:mongodb-icon',
-  'logos:wordpress-icon',
-  'logos:webpack',
-  'logos:alpinejs-icon',
-  'logos:solidity',
-  'logos:claude-icon',
-  'logos:github-copilot',
-];
-
-const shuffleLogos = computed(() => {
-  return [...logos].sort(() => Math.random() - 0.5);
-});
-</script>

@@ -13,9 +13,12 @@ const props = withDefaults(
   defineProps<{
     episode: PodcastsCollectionItem;
     level?: string;
+    /** Eager-load artwork when this row is the LCP element (homepage hero). */
+    priority?: boolean;
   }>(),
   {
     level: '2',
+    priority: false,
   },
 );
 
@@ -63,10 +66,13 @@ onUnmounted(() => {
     <AppImg
       :src="episode.episodeArtwork || podcastInfos.imageUrl"
       class="w-full col-start-1 row-span-1 row-start-1 rounded-lg md:row-span-3"
-      loading="lazy"
+      :loading="priority ? 'eager' : 'lazy'"
+      :fetchpriority="priority ? 'high' : undefined"
+      :preload="priority"
       decoding="async"
       width="140"
       height="140"
+      sizes="(min-width: 640px) 140px, 70px"
       :alt="episode.title"
     />
     <nuxt-link
