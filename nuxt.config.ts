@@ -41,6 +41,11 @@ export default defineNuxtConfig({
       sizeLimitKb: 512,
     },
   },
+  mdc: {
+    components: {
+      prose: false
+    }
+  },
   content: {
     experimental: {sqliteConnector: 'native'},
     // Content 3 heading anchors wrap titles in <a> and steal .prose h2/h3 styles.
