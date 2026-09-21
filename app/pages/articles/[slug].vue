@@ -41,6 +41,8 @@ useSchemaOrg([
       <ContentRenderer
         v-if="article"
         :value="article"
+        :prose="false"
+        :components="markdownComponents"
         class="prose article-content min-h-125 py-6 max-w-full"
       />
       <ShareBtn :text="article?.title || ''" />

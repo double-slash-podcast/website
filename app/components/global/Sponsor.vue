@@ -15,7 +15,7 @@ withDefaults(
 </script>
 
 <template>
-  <Suspense>
+  <Suspense suspensible>
     <SponsorContent :with-list="withList" />
   </Suspense>
 </template>

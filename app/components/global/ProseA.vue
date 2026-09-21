@@ -1,35 +1,41 @@
-<script setup lang="ts">
+<script lang="ts">
 /**
- * Markdown <a> renderer. Lives in global/ so ContentRenderer resolves it
- * synchronously (components/content is local and hydrates via async import).
+ * Markdown <a> renderer. Options API without setup() so ContentRenderer
+ * does not wrap it in defineAsyncComponent (SSG hydration keeps a real <a>).
  */
-import type {PropType} from 'vue';
+import {defineComponent, type PropType} from 'vue';
 
-const reg =
+const EXTERNAL_HREF =
   /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([-.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
 
-const props = defineProps({
-  href: {
-    type: String,
-    default: '',
+export default defineComponent({
+  name: 'ProseA',
+  props: {
+    href: {
+      type: String,
+      default: '',
+    },
+    target: {
+      type: String as PropType<
+        | '_blank'
+        | '_parent'
+        | '_self'
+        | '_top'
+        | (string & object)
+        | null
+        | undefined
+      >,
+      default: undefined,
+      required: false,
+    },
   },
-  target: {
-    type: String as PropType<
-      | '_blank'
-      | '_parent'
-      | '_self'
-      | '_top'
-      | (string & object)
-      | null
-      | undefined
-    >,
-    default: undefined,
-    required: false,
+  computed: {
+    /** True when href is an absolute http(s) URL. */
+    isExternal(): boolean {
+      return EXTERNAL_HREF.test(this.href);
+    },
   },
 });
-
-/** True when href is an absolute http(s) URL. */
-const isExternal = computed((): boolean => reg.test(props.href));
 </script>
 
 <template>
