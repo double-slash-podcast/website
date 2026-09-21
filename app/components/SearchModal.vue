@@ -69,8 +69,15 @@ watch(isOpen, async openState => {
   }
 
   await nextTick();
+  // Re-check after awaits: a close can land before showModal/init finish.
+  if (!isOpen.value) {
+    return;
+  }
   syncSiteSearchDialog(getSiteSearchDialog(instance), true);
   await init();
+  if (!isOpen.value) {
+    return;
+  }
   if (query.value.trim()) {
     await refreshHits();
   }
