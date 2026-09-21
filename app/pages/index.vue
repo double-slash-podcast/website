@@ -1,12 +1,13 @@
-<script setup>
-const bigSlash = ref();
-const tinySlash = ref();
+<script setup lang="ts">
+const bigSlash = ref<{svg: SVGSVGElement} | null>(null);
+const tinySlash = ref<{svg: SVGSVGElement} | null>(null);
+
 onMounted(async () => {
   const {animate, scroll} = await import('motion');
-  if (bigSlash.value) {
+  if (bigSlash.value?.svg) {
     scroll(animate(bigSlash.value.svg, {x: 0, y: 100}));
   }
-  if (tinySlash.value) {
+  if (tinySlash.value?.svg) {
     scroll(animate(tinySlash.value.svg, {x: 0, y: 100}));
   }
 });
@@ -81,9 +82,7 @@ useSchemaOrg([defineWebPage()]);
         class="mb-14"
         level="2"
       />
-      <Suspense>
-        <LastEpisodes class="mb-8" />
-      </Suspense>
+      <LastEpisodes class="mb-8" />
       <div class="mt-12 mb-24 text-center">
         <nuxt-link
           to="/podcasts/"
@@ -101,13 +100,13 @@ useSchemaOrg([defineWebPage()]);
       </Suspense>
       <SocialList class="mb-28" />
     </main>
-    <LazySlashIcon
+    <SlashIcon
       ref="bigSlash"
       size="350"
-      class="hidden md:block fixed top-[25%] md:-left-[10%] z-8 opacity-20"
+      class="hidden md:block fixed top-[25%] md:left-[-10%] z-8 opacity-20"
       inside-class="fill-purple-800"
     />
-    <LazySlashIcon
+    <SlashIcon
       ref="tinySlash"
       size="200"
       class="hidden md:block fixed top-[10%] right-0 z-8 opacity-20"

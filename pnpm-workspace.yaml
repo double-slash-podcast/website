@@ -1,21 +1,11 @@
-# Required by pnpm 9 (Coolify/Nixpacks). pnpm 10+ allows config-only
-# workspace files; pnpm 9 fails with "packages field missing or empty".
-packages:
-  - '.'
-
+# pnpm 11 reads install policy from this file (not package.json / .npmrc).
 allowBuilds:
   '@parcel/watcher': true
+  '@sentry/cli': true
   esbuild: true
   sharp: true
   unrs-resolver: true
   vue-demi: true
-
-onlyBuiltDependencies:
-  - '@parcel/watcher'
-  - esbuild
-  - sharp
-  - unrs-resolver
-  - vue-demi
 
 # Install oxc-parser native bindings for local dev and Linux deploy targets.
 supportedArchitectures:
@@ -34,12 +24,5 @@ supportedArchitectures:
 minimumReleaseAgeExclude:
   - '@iconify-json/*'
   - '@types/node@26.4.1'
-  - baseline-browser-mapping@2.11.24
-  - prettier@3.9.7
-
-# NuxtImg useTemplateRef('imgEl') throws during Vue 3.5 generate SSR.
-# ContentRenderer/MDC wrap setup() in defineAsyncComponent and wipe SSR HTML.
-patchedDependencies:
-  '@nuxt/content@3.16.0': patches/@nuxt__content@3.16.0.patch
-  '@nuxt/image@2.1.0': patches/@nuxt__image@2.1.0.patch
-  '@nuxtjs/mdc@0.23.1': patches/@nuxtjs__mdc@0.23.1.patch
+  - baseline-browser-mapping@2.11.24 || 2.11.25
+  - prettier@3.9.7 || 3.9.8

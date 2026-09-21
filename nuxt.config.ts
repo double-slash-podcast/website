@@ -1,8 +1,16 @@
 import tailwindcss from '@tailwindcss/vite';
 import {formatContentSignalPairs} from './app/utils/contentSignals';
 
+const sentryDsn =
+  process.env.NUXT_PUBLIC_SENTRY_DSN ||
+  'https://f03a75c8a1b456ca9b2d2faec3c61e39@o448138.ingest.us.sentry.io/4512111836332032';
+const sentryEnvironment =
+  process.env.NUXT_SITE_ENV ||
+  (process.env.NODE_ENV === 'production' ? 'production' : 'development');
+
 export default defineNuxtConfig({
   modules: [
+    // '@sentry/nuxt/module',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
@@ -55,12 +63,27 @@ export default defineNuxtConfig({
       },
     },
   },
-  sourcemap: false,
+  sourcemap: {
+    client: true,
+    // Server maps bloat the prerender worker (~4GB OOM on `nuxi build`).
+    // Production is nginx/SSG; prerender errors go through logSsrErrors.
+    server: false,
+  },
+  sentry: {
+    org: 'goodmotion',
+    project: 'double-slash',
+    authToken: process.env.SENTRY_AUTH_TOKEN,
+    // Capture prerender errors during `nuxi generate` without a Node --import flag.
+    autoInjectServerSentry: 'top-level-import',
+    /**
+     * Keep `nuxi generate` going if Sentry upload fails (missing token, network).
+     */
+    errorHandler(error: Error) {
+      console.warn('[sentry] source maps upload failed', error);
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
-    build: {
-      sourcemap: false,
-    },
   },
   css: ['~/assets/main.css'],
   image: {
@@ -74,9 +97,8 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    componentIslands: true,
     viewTransition: true,
-    typedPages: true,
+    typedPages: false,
   },
   colorMode: {
     classSuffix: '',
@@ -131,6 +153,10 @@ export default defineNuxtConfig({
     public: {
       numberEpisodesList: 25,
       isDev: process.env.NODE_ENV === 'development',
+      sentry: {
+        dsn: sentryDsn,
+        environment: sentryEnvironment,
+      },
     },
   },
   hooks: {

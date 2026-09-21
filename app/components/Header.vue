@@ -3,9 +3,7 @@
 defineOptions({inheritAttrs: false});
 
 /**
- * Static fill height for decorative icon rows. Measuring the header on mount
- * updated this lazy island before hydration and skipped hydrate-on-idle.
- * Overflow is clipped by the header.
+ * Decorative icon grid height. Overflow is clipped by the header.
  */
 const BACKGROUND_HEIGHT = 960;
 </script>
@@ -29,7 +27,6 @@ const BACKGROUND_HEIGHT = 960;
     <!-- Player -->
     <slot name="player" />
     <LazyAnimateBackground
-      hydrate-on-idle
       class="absolute top-0 left-[50%] -translate-x-1/2"
       :height="BACKGROUND_HEIGHT"
     />

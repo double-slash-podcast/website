@@ -1,7 +1,6 @@
 <script setup lang="ts">
 /**
- * Hosts block on the homepage. Not a server island: islands prerender via a
- * separate request and a runtime error there is NUXT_E4015, which fails generate.
+ * Hosts block on the homepage.
  */
 const {
   baseInfos: {siteUrl},

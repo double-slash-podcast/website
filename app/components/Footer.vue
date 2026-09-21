@@ -1,7 +1,6 @@
 <script setup lang="ts">
 /**
- * Site footer. Not a server island: islands prerender via a separate request
- * and a runtime error there is NUXT_E4015, which fails `nuxi generate`.
+ * Site footer with copyright year and source link.
  */
 const date = useLocalDate(Date.now(), {
   year: 'numeric',

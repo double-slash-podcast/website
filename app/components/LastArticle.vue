@@ -1,8 +1,7 @@
 <script setup lang="ts">
 /**
- * Latest articles on the homepage. Not a server island: islands render via a
- * separate prerender request and throw NUXT_E4015 (then a 500 on `/`) on generate.
- * Homepage wraps this in <Suspense> because setup awaits content.
+ * Latest articles on the homepage. Setup awaits content, so the page wraps
+ * this component in <Suspense>.
  */
 const {data} = await useAsyncData('last-articles', () => {
   return queryCollection('articles')

@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import {toIsoDatetime} from '~/utils/toIsoDatetime';
 /**
- * Article byline (date + author). Not a server island: islands serialize
- * props into the GET query, and a full article body triggers HTTP 431.
- * Dates use NuxtTime so SSR and the client do not disagree on timezone.
+ * Article byline (date + author). Dates use NuxtTime so SSR and the client
+ * do not disagree on timezone.
  */
 const props = withDefaults(
   defineProps<{
