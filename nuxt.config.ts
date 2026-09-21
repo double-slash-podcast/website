@@ -10,7 +10,7 @@ const sentryEnvironment =
 
 export default defineNuxtConfig({
   modules: [
-    '@sentry/nuxt/module',
+    // '@sentry/nuxt/module',
     '@nuxt/content',
     '@vueuse/nuxt',
     '@pinia/nuxt',
@@ -65,7 +65,9 @@ export default defineNuxtConfig({
   },
   sourcemap: {
     client: true,
-    server: true,
+    // Server maps bloat the prerender worker (~4GB OOM on `nuxi build`).
+    // Production is nginx/SSG; prerender errors go through logSsrErrors.
+    server: false,
   },
   sentry: {
     org: 'goodmotion',
@@ -95,7 +97,6 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    componentIslands: true,
     viewTransition: true,
     typedPages: false,
   },

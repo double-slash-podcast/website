@@ -1,7 +1,6 @@
 <script setup>
 /**
- * Site wordmark. Not a server island: islands prerender via a separate request
- * and a runtime error there is NUXT_E4015, which fails `nuxi generate` on `/`.
+ * Site wordmark in the header.
  */
 defineProps({
   slash: {

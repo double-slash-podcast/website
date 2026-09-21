@@ -3,9 +3,7 @@
 defineOptions({inheritAttrs: false});
 
 /**
- * Static fill height for decorative icon rows. Measuring the header on mount
- * updated this lazy island before hydration and skipped hydrate-on-idle.
- * Overflow is clipped by the header.
+ * Decorative icon grid height. Overflow is clipped by the header.
  */
 const BACKGROUND_HEIGHT = 960;
 </script>

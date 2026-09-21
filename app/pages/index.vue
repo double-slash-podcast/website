@@ -95,7 +95,9 @@ useSchemaOrg([defineWebPage()]);
         /></nuxt-link>
       </div>
       <Cohost class="mb-28" />
-      <LastArticle class="mb-28" />
+      <Suspense>
+        <LastArticle class="mb-28" />
+      </Suspense>
       <SocialList class="mb-28" />
     </main>
     <SlashIcon
