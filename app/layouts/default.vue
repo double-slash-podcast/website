@@ -4,7 +4,9 @@
       <slot />
       <Footer />
       <div class="fixed bottom-0 left-0 right-0 z-50 bg-dark">
-        <LazyWrapperPlayer />
+        <Suspense suspensible>
+          <LazyWrapperPlayer />
+        </Suspense>
       </div>
     </div>
     <UpButton />

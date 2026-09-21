@@ -5,7 +5,7 @@ const store = usePlayerStore();
 </script>
 
 <template>
-  <LazyPlayer
+  <Player
     :src="store.src || ''"
     :ds-slug="store.currentDsSlug || ''"
     :title="store.currentTitle || ''"
