@@ -29,7 +29,6 @@ const BACKGROUND_HEIGHT = 960;
     <!-- Player -->
     <slot name="player" />
     <LazyAnimateBackground
-      hydrate-on-idle
       class="absolute top-0 left-[50%] -translate-x-1/2"
       :height="BACKGROUND_HEIGHT"
     />
