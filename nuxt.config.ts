@@ -2,17 +2,15 @@ import tailwindcss from '@tailwindcss/vite';
 import {formatContentSignalPairs} from './app/utils/contentSignals';
 
 const sentryDsn =
-  process.env.NUXT_PUBLIC_SENTRY_DSN ||
-  'https://f03a75c8a1b456ca9b2d2faec3c61e39@o448138.ingest.us.sentry.io/4512111836332032';
+  process.env.NUXT_PUBLIC_SENTRY_DSN;
 const sentryEnvironment =
   process.env.NUXT_SITE_ENV ||
   (process.env.NODE_ENV === 'production' ? 'production' : 'development');
 
 export default defineNuxtConfig({
   modules: [
-    // '@sentry/nuxt/module',
+    '@sentry/nuxt/module',
     '@nuxt/content',
-    '@vueuse/nuxt',
     '@pinia/nuxt',
     '@nuxtjs/color-mode',
     '@nuxt/image',
@@ -64,7 +62,7 @@ export default defineNuxtConfig({
     },
   },
   sourcemap: {
-    client: true,
+    client: false,
     // Server maps bloat the prerender worker (~4GB OOM on `nuxi build`).
     // Production is nginx/SSG; prerender errors go through logSsrErrors.
     server: false,
@@ -97,8 +95,9 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
+    componentIslands: true,
     viewTransition: true,
-    typedPages: false,
+    typedPages: true,
   },
   colorMode: {
     classSuffix: '',

@@ -21,7 +21,7 @@ withDefaults(
 </script>
 
 <template>
-  <img
+  <NuxtImg
     :src="src"
     :alt="alt"
     :width="width"
