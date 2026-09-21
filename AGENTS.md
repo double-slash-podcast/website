@@ -2,18 +2,21 @@
 
 ## Stack
 
-- Nuxt 4, Vue 3, pnpm (`packageManager` in `package.json`)
+- Nuxt 4, Vue 3, Bun (`packageManager` in `package.json`)
 - Content: `@nuxt/content` (markdown in `content/`)
 - Local: lerd (`*.test`)
-- Production: **Coolify + Nixpacks + nginx, static (SSG)**. Not Netlify.
+- Production: **Coolify + Railpack + nginx, static (SSG)**. Not Netlify.
 
 ## Deploy
 
-- Build: `pnpm generate` (`nuxi generate` → `dist/`)
-- nginx serves `dist/`
-- Node 22 via `nixpacks.toml` / `pnpm-workspace.yaml` (linux/glibc)
-- Do not add `netlify.toml` or treat `nuxi build` + `pnpm start` as production
-- `pnpm generate` is SSG: `@nuxt/scripts` **disables** its Nitro reverse proxy (`/_scripts/p/`)
+- Build pack: **Railpack (Beta)** (`railpack.json`)
+- Build: `bun run generate` (`nuxi generate` → `.output/public`)
+- nginx serves `.output/public` (Coolify publish directory)
+- Node 24 + Bun 1.3.4 via `railpack.json` / `.nvmrc`
+- Do not add `netlify.toml` or treat `nuxi build` + `bun run start` as production
+- `bun run generate` is SSG: `@nuxt/scripts` **disables** its Nitro reverse proxy (`/_scripts/p/`)
+
+Coolify (staging first): static site, publish `/.output/public`, install `bun install --frozen-lockfile`, build `NUXT_SITE_ENV=staging bun run generate`. Remove `NIXPACKS_*` env vars. Optional: `RAILPACK_NODE_VERSION=24`, `RAILPACK_NO_SPA=1`.
 
 ## Umami (`@nuxt/scripts`)
 
@@ -36,8 +39,8 @@ Staging (`staging.double-slash.dev`) and prod use the same `hostUrl`. `privacy` 
 ## Podcast content
 
 - Frontmatter: `.agents/podcast-frontmatter.md`
-- After a new episode: `pnpm sync-durations`
-- `pnpm validate-durations` runs before `pnpm generate` / `pnpm build`
+- After a new episode: `bun run sync-durations`
+- `bun run validate-durations` runs before `bun run generate` / `bun run build`
 
 ## Code conventions
 

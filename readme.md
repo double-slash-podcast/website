@@ -4,39 +4,39 @@
 
 [https://double-slash.dev/](https://double-slash.dev/)
 
-Production runs on **Coolify** (Nixpacks) behind **nginx**, as a **static site** (`pnpm generate` → `dist/`). See `AGENTS.md` for deploy and analytics details.
+Production runs on **Coolify** (Railpack) behind **nginx**, as a **static site** (`bun run generate` → `.output/public`). See `AGENTS.md` for deploy and analytics details.
 
 ## Quick Start
 
-We use [pnpm](https://pnpm.io) on package management.
+We use [Bun](https://bun.com) for package management. `nuxi generate` still runs on Node.
 
 #### Install dependencies
 
 ```
-pnpm install
+bun install
 ```
 
 #### Run dev mode
 
 ```
-pnpm dev
+bun run dev
 ```
 
 #### Generate static site (production)
 
 ```
-pnpm generate
+bun run generate
 ```
 
-Output: `dist/`. Coolify/nginx serves that folder.
+Output: `.output/public`. Coolify/nginx serves that folder.
 
 #### Node server build (local / not prod)
 
 ```
-pnpm build
+bun run build
 ```
 
-`pnpm start` runs Nitro (`node .output/server/index.mjs`). Production is SSG, not this server.
+`bun run start` runs Nitro (`node .output/server/index.mjs`). Production is SSG, not this server.
 
 `generate` runs `sync-durations` then `nuxi generate`. `build` runs `validate-durations` then `nuxi build`. Both fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
 
@@ -45,7 +45,7 @@ pnpm build
 After adding a new episode, sync `duration` and `fileSize` from the remote MP3 into the markdown frontmatter:
 
 ```
-pnpm sync-durations
+bun run sync-durations
 ```
 
 Options:
@@ -57,7 +57,7 @@ Options:
 Check that all published episodes have the required metadata (same check used before build):
 
 ```
-pnpm validate-durations
+bun run validate-durations
 ```
 
 ## Analytics
