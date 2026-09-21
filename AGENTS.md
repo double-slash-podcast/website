@@ -12,11 +12,11 @@
 - Build pack: **Railpack (Beta)** (`railpack.json`)
 - Build: `bun run generate` (`nuxi generate` → `.output/public`)
 - nginx serves `.output/public` (Coolify publish directory)
-- Node 24 + Bun 1.3.4 via `railpack.json` / `.nvmrc`
+- Node 24 + Bun 1.4.2 via `railpack.json` / `.nvmrc`
 - Do not add `netlify.toml` or treat `nuxi build` + `bun run start` as production
 - `bun run generate` is SSG: `@nuxt/scripts` **disables** its Nitro reverse proxy (`/_scripts/p/`)
 
-Coolify (staging first): static site, publish `/.output/public`, install `bun install --frozen-lockfile`, build `NUXT_SITE_ENV=staging bun run generate`. Remove `NIXPACKS_*` env vars. Optional: `RAILPACK_NODE_VERSION=24`, `RAILPACK_NO_SPA=1`.
+Coolify (staging first): static site, publish `/.output/public`. Leave **Install Command empty** (Railpack copies `package.json` + `bun.lock` then runs `bun install`). Build Command: `NUXT_SITE_ENV=staging bun run generate`. Do not set Install to `bun install --frozen-lockfile`: that replaces Railpack’s COPY steps and fails with “could not find a package.json”. Remove `NIXPACKS_*` env vars. Optional: `RAILPACK_NODE_VERSION=24`, `RAILPACK_NO_SPA=1`.
 
 ## Umami (`@nuxt/scripts`)
 
