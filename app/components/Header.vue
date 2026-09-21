@@ -1,4 +1,7 @@
 <script setup lang="ts">
+/**
+ * Site header shell: navbar, title/baseline slots, decorative backdrop.
+ */
 // Multi-root component: bind fallthrough attrs to <header>, not the fragment
 defineOptions({inheritAttrs: false});
 

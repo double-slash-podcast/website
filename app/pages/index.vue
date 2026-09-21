@@ -19,7 +19,7 @@ const {
 } = useAppConfig();
 
 const {data} = await useAsyncData('lastOne', () => {
-  return queryCollection('podcasts').order('id', 'DESC').first();
+  return podcastListingQuery().order('id', 'DESC').first();
 });
 
 useSeoMeta({
@@ -52,6 +52,7 @@ useSchemaOrg([defineWebPage()]);
         <EpisodeHeadings
           v-if="data"
           :episode="data"
+          priority
           class="mt-20 max-w-3xl"
         />
       </template>
@@ -86,8 +87,9 @@ useSchemaOrg([defineWebPage()]);
       <div class="mt-12 mb-24 text-center">
         <nuxt-link
           to="/podcasts/"
+          :prefetch="false"
           class="flex items-center justify-center text-xl uppercase group text-primary"
-          >Voir tous les épisodes
+        >Voir tous les épisodes
           <Icon
             class="ml-1 transition-all group-hover:translate-x-1"
             name="mdi:arrow-right"

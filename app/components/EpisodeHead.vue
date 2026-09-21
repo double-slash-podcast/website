@@ -22,9 +22,12 @@ const isoPublicationDate = computed(() =>
         :src="episode.episodeArtwork || podcastInfos.imageUrl"
         class="w-full rounded-lg md:row-span-3"
         loading="eager"
+        fetchpriority="high"
+        preload
         decoding="async"
         width="200"
         height="200"
+        sizes="(min-width: 768px) 200px, (min-width: 640px) 140px, 110px"
         :alt="episode.title"
       />
     </div>

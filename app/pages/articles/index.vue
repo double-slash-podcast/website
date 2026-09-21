@@ -1,6 +1,6 @@
 <script setup>
 const {data} = await useAsyncData('bloglist', () => {
-  return queryCollection('articles').order('publicationDate', 'DESC').all();
+  return articleListingQuery().order('publicationDate', 'DESC').all();
 });
 
 useSeoMeta({
