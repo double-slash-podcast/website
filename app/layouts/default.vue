@@ -8,7 +8,9 @@
       </div>
     </div>
     <UpButton />
-    <SearchModal />
+    <ClientOnly>
+      <SearchModal />
+    </ClientOnly>
   </div>
 </template>
 
