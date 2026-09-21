@@ -4,7 +4,7 @@
     :style="`width: ${width}px; height:${height}px;`"
   >
     <svg
-      class="progressCircle"
+      class="progressCircle pointer-events-none"
       :width="`${width}px`"
       :height="`${height}px`"
       :viewBox="`0 0 ${width} ${height}`"
@@ -34,10 +34,11 @@
     </div>
     <button
       v-else
+      type="button"
       class="relative z-1"
       :aria-label="props.status === 'pause' ? 'play' : 'pause'"
       :title="props.status === 'pause' ? 'play' : 'pause'"
-      @click="$emit('click')"
+      @click="emit('toggle')"
     >
       <span v-if="props.status === 'pause'"
         ><Icon
@@ -55,7 +56,13 @@
 </template>
 
 <script setup lang="ts">
-defineEmits(['click']);
+/**
+ * Circular play/pause control with a buffered-progress ring.
+ * Emits `toggle` (not native `click`) so the parent is not tied to DOM bubbling.
+ */
+const emit = defineEmits<{
+  toggle: [];
+}>();
 
 const props = withDefaults(
   defineProps<{
