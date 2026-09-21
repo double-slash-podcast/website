@@ -38,7 +38,7 @@ bun run build
 
 `bun run start` runs Nitro (`node .output/server/index.mjs`). Production is SSG, not this server.
 
-`generate` runs `sync-durations`, `nuxi generate`, then copies content markdown next to the HTML. `build` runs `validate-durations` then `nuxi build`. Both fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
+`generate` runs `sync-durations`, `nuxi generate`, then converts prerendered HTML to markdown next to the HTML. `build` runs `validate-durations` then `nuxi build`. Both fail if a published episode is missing `duration` or `fileSize` in its frontmatter.
 
 ### Podcast episode metadata
 
