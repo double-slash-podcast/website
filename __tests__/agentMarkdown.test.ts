@@ -84,6 +84,18 @@ describe('contentFileToPublicPath', () => {
     );
   });
 
+  test('lowercases mixed-case content folders to match Linux prerender', () => {
+    expect(contentFileToPublicPath('podcasts/044.animeCSS/index.md')).toBe(
+      '/podcasts/animecss',
+    );
+    expect(contentFileToPublicPath('podcasts/045.animeJS/index.md')).toBe(
+      '/podcasts/animejs',
+    );
+    expect(
+      contentFileToPublicPath('podcasts/058.compagnons-du-devOps/index.md'),
+    ).toBe('/podcasts/compagnons-du-devops');
+  });
+
   test('rejects empty or unknown shapes', () => {
     expect(() => contentFileToPublicPath('readme.md')).toThrow(
       'Unexpected content path',
@@ -138,8 +150,10 @@ describe('listAgentMarkdownSources', () => {
     expect(sources.length).toBeGreaterThan(100);
     expect(new Set(paths).size).toBe(sources.length);
     expect(paths).toContain('/podcasts/news-sept26-rc2');
+    expect(paths).toContain('/podcasts/animecss');
     expect(paths).toContain('/articles/openclaw-vs-hermes');
     expect(paths).toContain('/nous-soutenir');
+    expect(paths).not.toContain('/podcasts/animeCSS');
   });
 });
 

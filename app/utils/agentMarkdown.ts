@@ -40,7 +40,8 @@ export function stripContentOrderPrefix(segment: string): string {
 
 /**
  * Map a path relative to `content/` to the public URL (no trailing slash).
- * Mirrors Nuxt Content page routes, including the `/custom` prefix strip.
+ * Mirrors Nuxt Content page routes: numeric prefixes stripped, `/custom`
+ * dropped, and slugs lowercased like Content pathMeta (Linux prerender).
  */
 export function contentFileToPublicPath(relativePath: string): string {
   const normalized = relativePath.replaceAll('\\', '/').replace(/^\/+/, '');
@@ -79,7 +80,7 @@ export function contentFileToPublicPath(relativePath: string): string {
     throw new Error(`Could not map content path: ${relativePath}`);
   }
 
-  return `/${segments.join('/')}`;
+  return `/${segments.map(segment => segment.toLowerCase()).join('/')}`;
 }
 
 /**
