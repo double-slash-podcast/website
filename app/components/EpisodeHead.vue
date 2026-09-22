@@ -62,7 +62,6 @@ const isoPublicationDate = computed(() =>
       <div class="flex items-center gap-x-2">
         <Duration :duration="props.episode.duration" />
         <LazyPlayerRemote
-          nuxt-client
           :episode="props.episode"
           size="80"
           class="relative z-20 -mt-1"

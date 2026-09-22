@@ -1,6 +1,7 @@
 <template>
   <div class="flex items-center justify-end space-x-3 text-primary">
     <button
+      class="pointer-cursor"
       :aria-label="getStatus"
       :title="getStatus"
       @click.stop.prevent="tooglePlayer"
