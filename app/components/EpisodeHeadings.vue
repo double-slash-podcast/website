@@ -106,7 +106,7 @@ onUnmounted(() => {
       </div>
       <div class="flex items-center gap-x-2">
         <Duration :duration="props.episode.duration" />
-        <PlayerRemote :episode="props.episode" class="relative z-20 -mt-1" />
+        <LazyPlayerRemote :episode="props.episode" class="relative z-20 -mt-1" />
       </div>
     </div>
   </div>
