@@ -18,7 +18,7 @@ const BACKGROUND_HEIGHT = 960;
     class="relative z-10 pt-33 flex flex-col items-center gap-20 pb-20 overflow-hidden bg-dark"
   >
     <div
-      class="flex flex-col justify-center w-full md:max-w-3xl max-w-[calc(100vw-2rem)]"
+      class="flex flex-col justify-center w-full md:max-w-4xl max-w-[calc(100vw-2rem)]"
     >
       <!-- Title -->
       <slot name="title">

@@ -29,7 +29,7 @@ useSchemaOrg([defineWebPage()]);
         :value="data"
         :prose="false"
         :components="markdownComponents"
-        class="prose min-h-125 py-6"
+        class="prose min-h-125 py-6 max-w-4xl m-auto"
       />
     </main>
   </div>

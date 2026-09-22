@@ -9,7 +9,7 @@ const {data} = await useAsyncData('last-articles', () => {
 </script>
 
 <template>
-  <section v-if="data && data.length" class="max-w-3xl m-auto px-4">
+  <section v-if="data && data.length" class="max-w-4xl m-auto px-4">
     <HeadingsSection title="Les derniers articles" class="mb-14" level="2" />
     <div v-for="article in data" :key="article.path" class="mb-16 last:mb-8">
       <NuxtLink :to="`${article.path}/`">
