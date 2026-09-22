@@ -9,7 +9,7 @@
     </div>
     <UpButton />
     <ClientOnly>
-      <SearchHost />
+      <LazySearchHost />
     </ClientOnly>
   </div>
 </template>
@@ -19,6 +19,7 @@ import UpButton from '~/components/global/UpButton.vue';
 import {agentDiscoveryLinks} from '~/utils/agentDiscovery';
 import mono45Url from '~/assets/fonts/mono45.woff2?url';
 import dankUrl from '~/assets/fonts/DankMono.woff2?url';
+import interUrl from '~/assets/fonts/Inter-clean.woff2?url';
 
 const {path} = useRoute();
 const {
@@ -40,6 +41,13 @@ useHead({
       as: 'font',
       type: 'font/woff2',
       href: dankUrl,
+      crossorigin: 'anonymous',
+    },
+    {
+      rel: 'preload',
+      as: 'font',
+      type: 'font/woff2',
+      href: interUrl,
       crossorigin: 'anonymous',
     },
     ...agentDiscoveryLinks.map(link => ({
@@ -71,7 +79,7 @@ useHead({
       sizes: '16x16',
       href: '/favicon-16x16.png',
     },
-    {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5'},
+    {rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#9123cb'},
   ],
 });
 useSchemaOrg([

@@ -3,6 +3,7 @@
  * Defer SearchModal until the first open so its CSS/JS stay off first paint.
  * Owns Cmd/Ctrl+K so the shortcut still works before the dialog is mounted.
  */
+import {bindSearchModalRender} from '~/utils/searchModalLatch';
 import {isTypingTarget} from '~/utils/siteSearchKeys';
 
 const SearchModal = defineAsyncComponent(
@@ -10,13 +11,7 @@ const SearchModal = defineAsyncComponent(
 );
 
 const {isOpen, open} = useSiteSearch();
-const shouldRender = ref(false);
-
-watch(isOpen, value => {
-  if (value) {
-    shouldRender.value = true;
-  }
-});
+const shouldRender = bindSearchModalRender(isOpen);
 
 /**
  * Keyboard shortcut: Cmd/Ctrl+K opens the palette unless a field has focus.

@@ -61,7 +61,7 @@ const isoPublicationDate = computed(() =>
       </div>
       <div class="flex items-center gap-x-2">
         <Duration :duration="props.episode.duration" />
-        <PlayerRemote
+        <LazyPlayerRemote
           :episode="props.episode"
           size="80"
           class="relative z-20 -mt-1"
