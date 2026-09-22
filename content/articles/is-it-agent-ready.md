@@ -1,6 +1,6 @@
 ---
 publicationDate: 2026-09-17
-title: 'Agent-ready à 100 % : les checks content qu’on a passés sur Double Slash'
+title: 'Agent-ready à 100 %, les checks content qu’on a passés sur Double Slash'
 description: 'On a scanné double-slash.dev avec Is It Agent Ready (profil site de contenu, sans auth ni e-commerce). Voici ce que chaque check mesure, quoi mettre en place, et pourquoi ça compte.'
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 ---

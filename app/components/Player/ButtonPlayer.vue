@@ -35,7 +35,7 @@
     <button
       v-else
       type="button"
-      class="relative z-1"
+      class="relative z-1 pointer-cursor"
       :aria-label="props.status === 'pause' ? 'play' : 'pause'"
       :title="props.status === 'pause' ? 'play' : 'pause'"
       @click="emit('toggle')"

@@ -16,10 +16,10 @@ export default defineNuxtConfig({
     'nuxt-schema-org',
     '@nuxt/icon',
     '@nuxt/eslint',
-    ...(process.env.NODE_ENV === 'development' ? ['@browser-echo/nuxt'] : []),
     'nuxt-llms',
     '@nuxtjs/robots',
     '@nuxt/scripts',
+    ...(process.env.NODE_ENV === 'development' ? ['@browser-echo/nuxt'] : []),
   ],
 
   icon: {
@@ -93,7 +93,10 @@ export default defineNuxtConfig({
     },
   },
   experimental: {
-    componentIslands: true,
+    componentIslands: {
+      selectiveClient: true, // or 'deep', to enable `nuxt-client`
+      remoteIsland: false, // allow rendering islands from a remote source
+    },
     viewTransition: true,
     typedPages: true,
     defaults: {
