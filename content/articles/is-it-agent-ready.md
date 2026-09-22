@@ -20,7 +20,7 @@ Sur double-slash.dev, on est à **100 %** sur ce périmètre, niveau *Agent-Inte
 ::Image
 ---
 
-src: https://double-slash.dev/assets/articles/bot-ai-web.jpg
+src: /assets/articles/bot-ai-web.jpg
 alt: "Agent qui aime un site web"
 align: 'center'
 ---

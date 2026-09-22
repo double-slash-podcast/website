@@ -43,7 +43,7 @@ useSchemaOrg([
         :value="article"
         :prose="false"
         :components="markdownComponents"
-        class="prose article-content min-h-125 py-6 max-w-full"
+        class="prose article-content min-h-125 py-6 max-w-full [&>img]:rounded-lg"
       />
       <ShareBtn :text="article?.title || ''" />
     </main>
