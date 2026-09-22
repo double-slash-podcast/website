@@ -24,7 +24,7 @@
   --animate-slideRight2: slideRight2 40s linear infinite;
 
   --grid-template-columns-episode-heading: 140px auto;
-  --grid-template-columns-episode-heading-mobile: 70px auto;
+  --grid-template-columns-episode-heading-mobile: 90px auto;
   --grid-template-columns-episode-head: 200px auto;
   --grid-template-columns-episode-head-mobile: 110px auto;
   --grid-template-columns-episode-head-phablette: 140px auto;
@@ -140,7 +140,7 @@
   }
 
   main {
-    @apply md:max-w-3xl m-auto px-2 sm:px-0;
+    @apply md:max-w-4xl m-auto px-2 sm:px-0;
   }
 
   h1 {

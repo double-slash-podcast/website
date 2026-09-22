@@ -53,7 +53,7 @@ useSchemaOrg([defineWebPage()]);
           v-if="data"
           :episode="data"
           priority
-          class="mt-20 max-w-3xl"
+          class="mt-20 max-w-4xl"
         />
       </template>
     </Header>

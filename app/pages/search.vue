@@ -153,7 +153,7 @@ onMounted(() => {
     </Header>
     <main class="px-4 min-h-[70vh]">
       <form
-        class="max-w-3xl mx-auto mt-8"
+        class="max-w-4xl mx-auto mt-8"
         role="search"
         @submit.prevent="refreshHits"
       >
@@ -179,7 +179,7 @@ onMounted(() => {
         </div>
       </form>
 
-      <section class="max-w-3xl mx-auto mt-10 min-h-40" aria-live="polite">
+      <section class="max-w-4xl mx-auto mt-10 min-h-40" aria-live="polite">
         <p v-if="showPending" class="text-purple-100">Recherche en cours…</p>
         <p v-else-if="!query.trim()" class="text-purple-100">
           Tapez un mot-clé, un tag ou un numéro d’épisode.

@@ -26,6 +26,7 @@ withDefaults(
     :class="{
       'mx-auto': align === 'center',
       'ml-auto': align === 'right',
+      'rounded-lg': true,
     }"
   />
 </template>
