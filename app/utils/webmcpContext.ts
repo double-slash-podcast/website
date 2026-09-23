@@ -65,6 +65,7 @@ export async function registerWebMcpTools(
 
 /**
  * Register now, and again if `modelContext` appears later.
+ * Overlapping ready events share one in-flight registration.
  * Returns a teardown that drops the ready-event listeners.
  */
 export function registerWebMcpToolsWhenAvailable(
@@ -72,18 +73,26 @@ export function registerWebMcpToolsWhenAvailable(
   options: WebMcpRegisterOptions = {},
 ): () => void {
   let settled = false;
+  let pending = false;
 
   const attempt = () => {
-    if (settled || options.signal?.aborted) {
+    if (settled || pending || options.signal?.aborted || !getModelContext()) {
       return;
     }
 
-    void registerWebMcpTools(tools, options).then(ok => {
-      if (ok) {
+    pending = true;
+    void registerWebMcpTools(tools, options)
+      .then(ok => {
+        if (!ok || options.signal?.aborted) {
+          return;
+        }
+
         settled = true;
         teardown();
-      }
-    });
+      })
+      .finally(() => {
+        pending = false;
+      });
   };
 
   const onAbort = () => {
