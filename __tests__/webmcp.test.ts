@@ -210,6 +210,31 @@ describe('registerWebMcpTools', () => {
     await vi.waitFor(() => expect(registerTool).toHaveBeenCalledTimes(1));
     stop();
   });
+
+  test('registers each tool once when several ready events fire together', async () => {
+    const registerTool = vi.fn(
+      () => new Promise<void>(resolve => setTimeout(resolve, 20)),
+    );
+    const tools = [
+      {name: 'search_content', description: 'x', execute: () => ''},
+    ] as WebMcpTool[];
+
+    const stop = registerWebMcpToolsWhenAvailable(tools);
+    Object.defineProperty(document, 'modelContext', {
+      configurable: true,
+      value: {registerTool},
+    });
+
+    for (const name of ['modelcontext', 'modelcontextready'] as const) {
+      window.dispatchEvent(new Event(name));
+      document.dispatchEvent(new Event(name));
+    }
+
+    await vi.waitFor(() => expect(registerTool).toHaveBeenCalledTimes(1));
+    await new Promise(resolve => setTimeout(resolve, 40));
+    expect(registerTool).toHaveBeenCalledTimes(1);
+    stop();
+  });
 });
 
 describe('createWebMcpTools', () => {

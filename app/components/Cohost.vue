@@ -50,7 +50,7 @@ const {
               />
             </NuxtLink>
             <NuxtLink
-              to="https://www.goodmotion.fr/"
+              to="https://goodmotion.dev/"
               target="_blank"
               title="Goodmotion"
             >
