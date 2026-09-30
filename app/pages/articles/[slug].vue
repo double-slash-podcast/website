@@ -45,6 +45,12 @@ useSchemaOrg([
         :components="markdownComponents"
         class="prose article-content min-h-125 py-6 max-w-full [&>img]:rounded-lg"
       />
+      <Author
+        v-if="article?.author?.url"
+        about
+        :url="article.author.url"
+        class="mt-10 w-full max-w-xl"
+      />
       <ShareBtn :text="article?.title || ''" />
     </main>
   </div>

@@ -2,7 +2,23 @@
 
 import type {PodcastsCollectionItem} from '@nuxt/content';
 
-type BaseInfosType = {
+export type CohostLinkType = {
+  href: string;
+  icon: string;
+  title: string;
+};
+
+export type CohostType = {
+  firstName: string;
+  lastName: string;
+  picture: string;
+  alt: string;
+  /** Short bio shown on article pages. */
+  intro: string;
+  links: CohostLinkType[];
+};
+
+export type BaseInfosType = {
   siteUrl: string;
   email: string;
   titleDefault: string;
