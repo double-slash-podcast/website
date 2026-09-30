@@ -1,4 +1,54 @@
+import type {BaseInfosType, CohostType} from '~~/declaration';
 import {PREFIX_AUDIO} from '~/utils/audio';
+
+const cohosts: CohostType[] = [
+  {
+    firstName: 'Patrick',
+    lastName: 'FARAMAZ',
+    picture: '/assets/pat_picture.jpg',
+    alt: 'Photo Patrick Faramaz',
+    links: [
+      {
+        href: 'https://twitter.com/PatrickFaramaz',
+        icon: 'mdi:twitter',
+        title: 'Twitter',
+      },
+      {
+        href: 'https://github.com/ipatate',
+        icon: 'mdi:github',
+        title: 'Github',
+      },
+      {
+        href: 'https://goodmotion.dev/',
+        icon: 'iconoir:www',
+        title: 'Goodmotion.dev',
+      },
+    ],
+  },
+  {
+    firstName: 'Alex',
+    lastName: 'DUVAL',
+    picture: '/assets/alex_picture.jpg',
+    alt: 'Photo Alex Duval',
+    links: [
+      {
+        href: 'https://twitter.com/xlanex6',
+        icon: 'mdi:twitter',
+        title: 'Twitter',
+      },
+      {
+        href: 'https://github.com/xlanex6',
+        icon: 'mdi:github',
+        title: 'Github',
+      },
+      {
+        href: 'https://www.alexduval.fr/',
+        icon: 'iconoir:www',
+        title: 'alexduval.fr',
+      },
+    ],
+  },
+];
 
 const baseInfos: BaseInfosType = {
   siteUrl: 'https://double-slash.dev',
@@ -20,6 +70,7 @@ export default defineAppConfig({
     size: '2em',
   },
   baseInfos,
+  cohosts,
   podcastInfos: {
     title: baseInfos.titleDefault,
     // baseline
