@@ -42,7 +42,7 @@ const {
           <p class="text-4xl font-brand text-primary">{{ cohost.firstName }}</p>
           <p class="font-sans text-lg text-white">{{ cohost.lastName }}</p>
           <div
-            class="flex flex-col gap-2 items-start mt-2 space-x-4"
+            class="flex flex-col gap-2 items-start mt-3 space-x-4"
             :class="{'lg:justify-end lg:items-end': index === 1}"
           >
             <NuxtLink
@@ -51,7 +51,7 @@ const {
               :to="link.href"
               target="_blank"
               :title="link.title"
-              class="flex text-sm items-center gap-2 m-0 group"
+              class="flex text-xs items-center gap-2 m-0 group"
             >
               <Icon
                 :name="link.icon"

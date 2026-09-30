@@ -7,6 +7,8 @@ const cohosts: CohostType[] = [
     lastName: 'FARAMAZ',
     picture: '/assets/pat_picture.jpg',
     alt: 'Photo Patrick Faramaz',
+    intro:
+      'Développeur web depuis plus de 18 ans. Il conçoit des sites rapides et durables avec Goodmotion, et co-anime le podcast Double Slash.',
     links: [
       {
         href: 'https://twitter.com/PatrickFaramaz',
@@ -30,6 +32,8 @@ const cohosts: CohostType[] = [
     lastName: 'DUVAL',
     picture: '/assets/alex_picture.jpg',
     alt: 'Photo Alex Duval',
+    intro:
+      'Co-animateur de Double Slash. Il parle développement web sur le podcast et publie sur alexduval.fr.',
     links: [
       {
         href: 'https://twitter.com/xlanex6',

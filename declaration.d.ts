@@ -13,6 +13,8 @@ export type CohostType = {
   lastName: string;
   picture: string;
   alt: string;
+  /** Short bio shown on article pages. */
+  intro: string;
   links: CohostLinkType[];
 };
 
