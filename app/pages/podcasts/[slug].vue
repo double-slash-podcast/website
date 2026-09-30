@@ -106,9 +106,8 @@ useSchemaOrg([
               class="max-w-full prose"
             />
             <div class="prose max-w-full mt-20">
-              <div class="bg-purple-400/20 p-4 rounded-lg border border-purple-400/40">
-                <Authors />
-              </div>
+              <Authors />
+              <hr class="my-8"/>
               <Sponsor :with-list="false" />
             </div>
           </div>
