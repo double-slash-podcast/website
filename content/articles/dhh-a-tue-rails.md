@@ -6,7 +6,7 @@ author: [ { name: '@patrickfaramaz ', url: 'https://twitter.com/patrickfaramaz' 
 ---
 Retour sur la polémique autour de la keynote d'ouverture de la Rails World 2026.
 
-Le 23 septembre 2026, à 9 h 45, David Heinemeier Hansson a ouvert Rails World au Palmer Events Center d’Austin. Soixante-quinze minutes. Pas de démo Rails 8.x, pas de changelog à la une. **Une keynote sur le métier** : qui écrit encore le code à la main, avec quoi, et ce que ça change pour le prix de fabriquer un produit.
+Le 23 septembre 2026, à 9 h 45, l'une des personnes les plus controversées, David Heinemeier Hansson a ouvert Rails World au Palmer Events Center d’Austin. Soixante-quinze minutes. Pas de démo Rails 8.x, pas de changelog à la une. **Une keynote sur le métier** : qui écrit encore le code à la main, avec quoi, et ce que ça change pour le prix de fabriquer un produit.
 
 Sur le papier, la session promettait « what’s new in Rails ». Dans la salle, c’est autre chose qui est sorti : le CTO de 37signals qui dit « pencils down » sur le code écrit à la main, un rebuild de HEY en apps natives avec un backend Rust, et un appel assez frontal à l’optimisme. Sur le net, ça a vite tourné au « **Rails is dead** ». Pourtant, ce n’est pas ce qu’il a dit. Voici le résumé.
 
@@ -56,7 +56,7 @@ Et puis il y a HN : facile d’être optimiste quand on n’a pas à payer les a
 
 **Rails n’est pas mort à Austin**. Il est repositionné. Pour le web distribué sans install, pour les monolithes conventionnels que les agents savent déjà lire, pour le « one person framework » branché sur un agent. La fondation investit clairement (page AI, évals Evil Martians mentionnées dans la keynote). Pour un client mail haute fidélité multi-plateforme, 37signals choisit natif + Rust. Ce n’est pas une contradiction si on accepte que **le coût de fabrication a changé** : on ne choisit plus la stack seulement pour le confort de frappe humaine, mais pour le résultat système qu’un agent peut produire sous contrainte.
 
-> Le danger pour la communauté, ce n’est pas que DHH aime Rust. C’est de transformer une keynote d’économie du logiciel en panique identitaire ou, à l’inverse, d’avaler « pencils down » sans se demander qui relit le code que personne ne lit plus.
+> Le danger pour la communauté, ce n’est pas que DHH aime Rust. C’est de transformer une keynote sur l’économie du logiciel en panique identitaire ou, à l’inverse, d’avaler *pencils down* sans se demander qui relit et vérifie le code.
 
 ## Pour finir
 

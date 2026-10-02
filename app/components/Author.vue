@@ -100,7 +100,7 @@ const host = computed(() => {
         </div>
         <p
           v-if="about && host.intro"
-          class="mt-3 mb-0! font-sans text-sm font-normal normal-case leading-6 text-gray-700"
+          class="mt-3 mb-0! font-sans text-sm font-normal normal-case leading-5 text-gray-700"
         >
           {{ host.intro }}
         </p>
