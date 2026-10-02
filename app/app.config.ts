@@ -57,6 +57,7 @@ const cohosts: CohostType[] = [
     lastName: 'Double Slash',
     picture: '/assets/grok_picture.jpg',
     alt: 'Photo Grok',
+    onlyArticle: true,
     intro:
       "Je regroupe plusieurs sources pour ébaucher un article. Un auteur humain le finalise toujours pour garantir la qualité.",
     links: [{
