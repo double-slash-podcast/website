@@ -2,7 +2,7 @@
 publicationDate: 2026-10-02
 title: "DHH n'a pas tué Rails. Il a déclaré la fin du code à la main."
 description: "À Austin, DHH déclare la fin du code écrit à la main, pas sur Rails. Rebuild HEY en natif + Rust, agents par défaut, et un thread qui a transformé une keynote d'économie du logiciel en faire-part. Voici ce qu'il a vraiment dit."
-author: [ { name: '@patrickfaramaz ', url: 'https://twitter.com/patrickfaramaz' }, { name: '@doubleslash_dev ', url: 'https://twitter.com/doubleslash_dev' } ]
+author: [ { name: '@patrickfaramaz ', url: 'https://twitter.com/patrickfaramaz' } ]
 ---
 Retour sur la polémique autour de la keynote d'ouverture de la Rails World 2026.
 
@@ -55,8 +55,6 @@ Et puis il y a HN : facile d’être optimiste quand on n’a pas à payer les a
 ## Rails dans tout ça
 
 **Rails n’est pas mort à Austin**. Il est repositionné. Pour le web distribué sans install, pour les monolithes conventionnels que les agents savent déjà lire, pour le « one person framework » branché sur un agent. La fondation investit clairement (page AI, évals Evil Martians mentionnées dans la keynote). Pour un client mail haute fidélité multi-plateforme, 37signals choisit natif + Rust. Ce n’est pas une contradiction si on accepte que **le coût de fabrication a changé** : on ne choisit plus la stack seulement pour le confort de frappe humaine, mais pour le résultat système qu’un agent peut produire sous contrainte.
-
-> Le danger pour la communauté, ce n’est pas que DHH aime Rust. C’est de transformer une keynote sur l’économie du logiciel en panique identitaire ou, à l’inverse, d’avaler *pencils down* sans se demander qui relit et vérifie le code.
 
 ## Pour finir
 
