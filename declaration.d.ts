@@ -128,6 +128,6 @@ type ArticleType = {
   title: string;
   description: string;
   publicationDate: string;
-  author: {name: string; url: string};
+  author: {name: string; url: string} | {name: string; url: string}[];
   body: string;
 };

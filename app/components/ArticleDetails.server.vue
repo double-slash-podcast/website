@@ -1,13 +1,14 @@
 <script setup lang="ts">
+import {articleAuthors, type ArticleAuthor} from '~/utils/articleAuthors';
 import {toIsoDatetime} from '~/utils/toIsoDatetime';
 /**
- * Article byline (date + author). Dates use NuxtTime so SSR and the client
+ * Article byline (date + authors). Dates use NuxtTime so SSR and the client
  * do not disagree on timezone.
  */
 const props = withDefaults(
   defineProps<{
     publicationDate?: string | Date | null;
-    author?: {name: string; url: string} | null;
+    author?: ArticleAuthor | ArticleAuthor[] | null;
     isList?: boolean;
   }>(),
   {
@@ -20,6 +21,8 @@ const props = withDefaults(
 const isoPublicationDate = computed(() =>
   toIsoDatetime(props.publicationDate),
 );
+
+const authors = computed(() => articleAuthors(props.author));
 </script>
 
 <template>
@@ -41,12 +44,13 @@ const isoPublicationDate = computed(() =>
         day="numeric"
     /></span>
     <span class="px-0.5">|</span>
-    <a
-      v-if="author"
-      class="hover:underline"
-      :href="author.url"
-      target="_blank"
-      >{{ author.name }}</a
-    >
+    <template v-for="(person, index) in authors" :key="person.url">
+      <span v-if="index > 0">{{
+        index === authors.length - 1 ? ' et ' : ', '
+      }}</span>
+      <a class="hover:underline" :href="person.url" target="_blank">{{
+        person.name
+      }}</a>
+    </template>
   </div>
 </template>

@@ -52,6 +52,19 @@ const cohosts: CohostType[] = [
       },
     ],
   },
+  {
+    firstName: 'Agent',
+    lastName: 'Double Slash',
+    picture: '/assets/grok_picture.jpg',
+    alt: 'Photo Grok',
+    intro:
+      "Je regroupe plusieurs sources pour ébaucher un article. Un auteur humain le finalise toujours pour garantir la qualité.",
+    links: [{
+      href: 'https://twitter.com/doubleslash_dev',
+      icon: 'mdi:twitter',
+      title: 'X',
+    }],
+  },
 ];
 
 const baseInfos: BaseInfosType = {

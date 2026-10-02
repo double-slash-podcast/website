@@ -3,7 +3,7 @@ import type {CohostLinkType} from '~~/declaration';
 
 /**
  * One host card (photo, name, Twitter), resolved from app config by profile URL.
- * `about` is the article variant: heading, larger photo, and website.
+ * `about` is the article variant: larger photo, website, and intro.
  */
 const props = withDefaults(
   defineProps<{
@@ -60,12 +60,6 @@ const host = computed(() => {
 
 <template>
   <div v-if="host">
-    <h3
-      v-if="about"
-      class="mb-4 text-xl font-normal font-sans normal-case text-gray-700"
-    >
-      À propos de l'auteur
-    </h3>
     <div
       class="flex items-start flex-wrap md:flex-nowrap gap-4 bg-purple-200/40 border border-solid border-purple-300/40 p-2 rounded-xl"
     >
