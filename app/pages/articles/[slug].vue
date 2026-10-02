@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import {articleAuthors} from '~/utils/articleAuthors';
+
 const {path} = useRoute();
 const {
   baseInfos: {siteUrl},
@@ -19,6 +21,8 @@ useSeoMeta({
   description: article.value.description ?? '',
   ogUrl: `${siteUrl}${path}`,
 });
+
+const authors = computed(() => articleAuthors(article.value?.author));
 
 useSchemaOrg([
   defineWebPage(),
@@ -45,12 +49,31 @@ useSchemaOrg([
         :components="markdownComponents"
         class="prose article-content min-h-125 py-6 max-w-full [&>img]:rounded-lg"
       />
-      <Author
-        v-if="article?.author?.url"
-        about
-        :url="article.author.url"
-        class="mt-10 w-full max-w-xl"
-      />
+      <div
+        v-if="authors.length"
+        class="mt-10 w-full"
+        :class="{'max-w-xl': authors.length === 1}"
+      >
+        <h3 class="mb-4 text-xl font-normal font-sans normal-case text-gray-700">
+          {{
+            authors.length > 1
+              ? 'À propos des auteurs'
+              : "À propos de l'auteur"
+          }}
+        </h3>
+        <div
+          class="flex flex-col gap-4"
+          :class="{'md:flex-row md:items-stretch': authors.length > 1}"
+        >
+          <Author
+            v-for="person in authors"
+            :key="person.url"
+            about
+            :url="person.url"
+            class="min-w-0 md:flex-1"
+          />
+        </div>
+      </div>
       <ShareBtn :text="article?.title || ''" />
     </main>
   </div>

@@ -6,6 +6,9 @@ const {cohosts} = useAppConfig();
 
 const hosts = computed(() =>
   cohosts.flatMap((cohost) => {
+    if (cohost.onlyArticle) {
+      return [];
+    }
     const url = cohost.links.find((link) => link.icon === 'mdi:twitter')?.href;
     return url ? [{key: cohost.lastName, url}] : [];
   }),

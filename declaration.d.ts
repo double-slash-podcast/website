@@ -15,6 +15,10 @@ export type CohostType = {
   alt: string;
   /** Short bio shown on article pages. */
   intro: string;
+  /**
+   * Article credits only. Hidden from the homepage and episode host blocks.
+   */
+  onlyArticle?: boolean;
   links: CohostLinkType[];
 };
 
@@ -128,6 +132,6 @@ type ArticleType = {
   title: string;
   description: string;
   publicationDate: string;
-  author: {name: string; url: string};
+  author: {name: string; url: string} | {name: string; url: string}[];
   body: string;
 };

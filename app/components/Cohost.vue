@@ -6,6 +6,9 @@ const {
   baseInfos: {siteUrl},
   cohosts,
 } = useAppConfig();
+
+/** Hosts shown on the homepage. Profiles flagged onlyArticle stay on articles. */
+const hosts = computed(() => cohosts.filter((cohost) => !cohost.onlyArticle));
 </script>
 
 <template>
@@ -14,7 +17,7 @@ const {
       class="flex flex-col items-center w-full px-4 py-8 space-y-12 md:gap-20 md:grid-cols-2 md:space-y-0 md:grid lg:max-w-3xl mx-auto"
     >
       <div
-        v-for="(cohost, index) in cohosts"
+        v-for="(cohost, index) in hosts"
         :key="cohost.lastName"
         class="flex w-full"
         :class="

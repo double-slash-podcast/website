@@ -46,7 +46,10 @@ export default defineContentConfig({
           .regex(/^\d{4}-\d{2}-\d{2}$/, 'Format YYYY-MM-DD requis'),
         title: z.string().min(1),
         description: z.string().min(1),
-        author: ArticleAuthorSchema,
+        author: z.union([
+          ArticleAuthorSchema,
+          z.array(ArticleAuthorSchema).min(1),
+        ]),
       }),
     }),
     custom: defineCollection({
