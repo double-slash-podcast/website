@@ -5,7 +5,7 @@ author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
 publicationDate: 2026-10-06
 ---
 
-Em Dash est passé en 1.0 le 28 septembre. Je l'ai pris en main, loin de la hype ou des vidéos rapidement enregistrées pour faire des vues, voici ce que j'en retiens.
+EmDash CMS est passé en 1.0 le 28 septembre. Je l'ai pris en main, loin de la hype ou des vidéos rapidement enregistrées pour faire des vues, voici ce que j'en retiens.
 
 ## Une communication de lancement maladroite
 
