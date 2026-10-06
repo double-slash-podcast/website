@@ -58,6 +58,13 @@ Par contre, pour le moment, un bloc custom ne s'édite pas dans le mode "live ed
 
 À noter que chaque collection a sa propre table au lieu de tout mélanger dans une seule table comme c'est le cas sur WordPress.
 
+## Les content types et les champs flexibles.
+
+On peut créer autant de content type que l'on veut. Équivalent aux fameux CPT de WordPress. Avec différentes options : routable, SEO, versioning, on active ou pas ce que l'on veut.
+Comme mentionné juste avant, une table est créée pour une nouvelle collection. C'est propre.
+
+Et dans ces content types, on peut modéliser les champs dont on a besoin. On a les champs par défaut : ID, slug, statut, etc. Et à nous de définir si l'on veut un champ pour telle valeur, etc. 17 types de champs pour le moment : texte court, texte long, nombre, JSON, liste déroulante, répéteur (9 champs possibles). Ici, pas besoin d'ACF ou de coder. C'est natif et très pratique.
+
 ## Le multilingue, natif
 
 Le multilingue est intégré, et il s'appuie directement sur l'i18n d'Astro. Par défaut, il est désactivé. Pour l'activer, on ajoute un bloc `i18n` dans la config Astro, et EmDash y lit la liste des langues, la langue par défaut et les fallbacks :
