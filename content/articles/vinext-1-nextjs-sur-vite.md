@@ -2,7 +2,7 @@
 title: "Vinext 1.0 : faire tourner une app Next.js sur Vite, pour de vrai"
 description: "vinext, la réimplémentation de Next.js sur Vite signée Cloudflare, passe en 1.0 : Pages Router, ISR, cache warming. Ce qui change et quand l'adopter."
 author: {name: '@patrickfaramaz ',url: 'https://twitter.com/patrickfaramaz'}
-publicationDate: 2026-10-06
+publicationDate: 2026-10-05
 ---
 
 En février, Cloudflare racontait comment un ingénieur et un modèle d'IA avaient reconstruit Next.js sur Vite en une semaine, pour environ 1 100 dollars de tokens. Le projet s'appelait vinext (prononcez « vee-next »), et beaucoup d'entre nous l'ont rangé dans la case « démo IA impressionnante, à revoir plus tard ».
