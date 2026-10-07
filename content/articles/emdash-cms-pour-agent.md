@@ -165,6 +165,10 @@ Voici ce qui me gêne à l'usage :
 - **Peu de personnalisation de l'admin.** On peut changer le logo, le nom et le favicon (option `admin`), mais ça ne va pas beaucoup plus loin.
 - **Impossible de créer de nouveaux rôles**. On doit se cantonner aux rôles par défaut.
 
+**Gros point noir**, mais je suis certain que cela va être corrigé prochainement :  quand on ajoute un champ sur notre installation locale, on pousse sur le repository et le site est redéployé. Eh bien, accrochez-vous ! 
+Les champs ne sont pas ajoutés en production. Le fichier seed n'est pas appliqué. Il faut donc ajouter ou modifier les champs manuellement. Pourtant, ce sont des fonctionnalités qui existent sur ACF ou sur Craft CMS : un schéma de champs qui peut s'appliquer en production.
+
+
 ## Conclusion
 
 Malgré ses défauts, EmDash est un bon produit. Finalement, il n'est pas vraiment comparable à WordPress : ce n'est ni le même écosystème, ni le même public. C'est un CMS pour les devs Astro, sûr par défaut, pensé pour les agents, avec des idées vraiment neuves comme x402.
