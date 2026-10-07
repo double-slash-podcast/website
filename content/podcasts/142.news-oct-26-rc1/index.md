@@ -9,7 +9,7 @@ episodeType: "full"
 explicit: false
 season: 2
 dsSlug: "DS_142_news-oct-26-rc1"
-title: "News octobre 2026, Cloudflare Birthday Week, Shaders open source et LeCun à Sciences Po"
+title: "News octobre 2026, Cloudflare Birthday Week, Shaders open source et pencils down"
 subtitle: "Les news pour octobre 2026 RC1, Cloudflare, Shaders, LeCun et outils du mois."
 episodeArtwork: "https://res.cloudinary.com/doubleslash/image/upload/v1791365672/episode/ART_142_c5ioxn.png"
 type: "news"
