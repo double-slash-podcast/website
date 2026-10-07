@@ -9,11 +9,19 @@ episodeType: full
 explicit: false
 season: 2
 dsSlug: DS_142_news-oct-26-rc1
-title: "News octobre 2026, Cloudflare Birthday Week, Shaders open source et LeCun à Sciences Po"
+title: News octobre 2026, Cloudflare Birthday Week, Shaders open source et LeCun
+  à Sciences Po
 subtitle: Les news pour octobre 2026 RC1, Cloudflare, Shaders, LeCun et outils du mois.
-episodeArtwork: "https://res.cloudinary.com/doubleslash/image/upload/v1791365672/episode/ART_142_c5ioxn.png"
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1791365672/episode/ART_142_c5ioxn.png
 type: news
-description: "Nous évoquons la Cloudflare Birthday Week avec la CLI cf, Vinext et Clef, Shaders qui passe en open source sous MIT, Yann LeCun à Sciences Po sur les world models et JEPA, Lightpanda 1.0 hors beta, le patch sécurité Next.js 15.5.27 et 16.3.8, Turso qui rejoint Supabase, TanStack Charts 1.0, la keynote DHH pencils down avec HEY en Rust, le runtime Copilot porté en Rust, ng-native, OpenDots et OpenMuse, Upstash Blob à 1 To d’egress, un mois sans IA, Nuxt 4.6, et quelques outils comme uncheck, e2e, Zedis, Laya ou interfaces.dev, plus le débat sur la mort de l’éducation web."
+description: Nous évoquons la Cloudflare Birthday Week avec la CLI cf, Vinext et
+  Clef, Shaders qui passe en open source sous MIT, Yann LeCun à Sciences Po sur
+  les world models et JEPA, Lightpanda 1.0 hors beta, le patch sécurité Next.js
+  15.5.27 et 16.3.8, Turso qui rejoint Supabase, TanStack Charts 1.0, la keynote
+  DHH pencils down avec HEY en Rust, le runtime Copilot porté en Rust,
+  ng-native, OpenDots et OpenMuse, Upstash Blob à 1 To d’egress, un mois sans
+  IA, Nuxt 4.6, et quelques outils comme uncheck, e2e, Zedis, Laya ou
+  interfaces.dev, plus le débat sur la mort de l’éducation web.
 videoLink: fL0A8R54fng
 tags:
   - agents
@@ -31,6 +39,8 @@ tags:
   - supabase
   - tanstack
   - turso
+duration: 5052
+fileSize: 80837509
 ---
 
 ## TanStack Charts 1.0: grammaire de charts typée SVG/Canvas
