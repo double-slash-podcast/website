@@ -135,6 +135,10 @@
 }
 
 @layer components {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply font-base scroll-smooth;
   }
