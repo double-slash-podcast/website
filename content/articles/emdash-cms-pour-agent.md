@@ -7,6 +7,12 @@ publicationDate: 2026-10-06
 
 EmDash CMS est passé en 1.0 le 28 septembre. Je l'ai pris en main, loin de la hype ou des vidéos rapidement enregistrées pour faire des vues, voici ce que j'en retiens.
 
+## L'épisode en lien avec l'article
+
+Retrouvez et écoutez l'épisode dédié à EmDash : [EmDash, le CMS de Cloudflare taillé pour les agents ? (épisode 143)](https://double-slash.dev/podcasts/emdash)
+
+<a href="#vidéo-de-lépisode" style="display: inline-block; margin-top: 0.5rem; padding: 0.5rem 1rem; background-color: #7c3aed; color: white; border-radius: 0.5rem; text-decoration: none; font-weight: 500;">Voir la vidéo de l'épisode</a>
+
 ## Une communication de lancement maladroite
 
 Rappel du contexte : Cloudflare a annoncé EmDash le 1er avril 2026 avec un titre qui ne laissait pas de place au doute : « le successeur spirituel de WordPress ». Un 1er avril, beaucoup ont cru à une blague, ce que l'équipe reconnaît elle-même.
@@ -174,6 +180,17 @@ Les champs ne sont pas ajoutés en production. Le fichier seed n'est pas appliqu
 Malgré ses défauts, EmDash est un bon produit. Finalement, il n'est pas vraiment comparable à WordPress : ce n'est ni le même écosystème, ni le même public. C'est un CMS pour les devs Astro, sûr par défaut, pensé pour les agents, avec des idées vraiment neuves comme x402.
 
 C'est un bon CMS qui ne demande qu'à grandir. Et au rythme où il évolue (la 1.1 est déjà sortie trois jours après la 1.0), je pense qu'il va grandir vite.
+
+## Vidéo de l'épisode
+
+::VideoPlayer
+---
+
+videoLink: KdP9wEbTsYg
+videoTitle: "EmDash, le CMS de Cloudflare taillé pour les agents ?"
+---
+
+::
 
 ## Sources
 
