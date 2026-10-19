@@ -189,6 +189,12 @@ export default defineNuxtConfig({
     description:
       'Le podcast sur le code, le développement web et les outils modernes.',
   },
+  // Absolute origin for Schema.org and prerendered URLs.
+  // Indexable still follows the env: production indexes, staging does not.
+  site: {
+    url: 'https://double-slash.dev',
+    name: 'Double Slash',
+  },
   robots: {
     sitemap: 'https://double-slash.dev/sitemap.xml',
     groups: [

@@ -4,7 +4,7 @@
 
 - Nuxt 4, Vue 3, Bun (`packageManager` in `package.json`)
 - Content: `@nuxt/content` (markdown in `content/`)
-- Local: lerd (`*.test`)
+- Local: runtime local
 - Production: **Coolify + Railpack + nginx, static (SSG)**. Not Netlify.
 
 ## Deploy
@@ -20,7 +20,7 @@ Coolify (staging first): static site, publish `/.output/public`. Leave **Install
 
 ## Umami (`@nuxt/scripts`)
 
-Self-hosted, public: https://analytics.double-slash.dev
+Self-hosted
 
 SSG disables the Nuxt Scripts Nitro proxy (`/_scripts/p/`). The tracker talks to Umami **directly** (CORS is enabled on `/api/send`). Do **not** add an nginx `location /umami/` on this site (502 / crash if it replaces the static `default.conf`).
 
@@ -28,7 +28,7 @@ SSG disables the Nuxt Scripts Nitro proxy (`/_scripts/p/`). The tracker talks to
 
 ```ts
 umamiAnalytics: {
-  websiteId: '942988c9-8c60-4497-ad8b-5c7169365a52',
+  websiteId: 'XXXXX',
   hostUrl: 'https://analytics.double-slash.dev',
   trigger: 'onNuxtReady',
 }
