@@ -1,8 +1,11 @@
 <script setup lang="ts">
 /**
  * Cloudinary-backed images via Nuxt Image.
+ * Author aspect-ratio keeps a layout box before the file loads. The
+ * user-agent hint is `aspect-ratio: auto W / H`, which Chrome treats as
+ * a zero-size lazy image.
  */
-withDefaults(
+const props = withDefaults(
   defineProps<{
     src: string;
     alt: string;
@@ -21,6 +24,18 @@ withDefaults(
     preload: false,
   },
 );
+
+const aspectRatio = computed(() => {
+  if (
+    props.width == null ||
+    props.height == null ||
+    props.width === '' ||
+    props.height === ''
+  ) {
+    return undefined;
+  }
+  return `${props.width} / ${props.height}`;
+});
 </script>
 
 <template>
@@ -35,5 +50,6 @@ withDefaults(
     :decoding="decoding"
     :fetchpriority="fetchpriority"
     :preload="preload"
+    :style="aspectRatio ? {aspectRatio} : undefined"
   />
 </template>

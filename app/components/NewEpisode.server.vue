@@ -1,4 +1,9 @@
 <script setup lang="ts">
+/**
+ * "NEW" badge for episodes published in the last 15 days.
+ * The root stays mounted: a server island cannot hydrate a v-if that
+ * renders only an HTML comment.
+ */
 const props = defineProps<{
   publicationDate?: string | null;
 }>();
@@ -18,11 +23,9 @@ const isNewEpisode = computed(() => {
 </script>
 
 <template>
-  <span v-if="isNewEpisode" class="flex items-center neonText"
-    ><span class="pr-1 text-3xl">&#8226;</span>NE<span class="neonTextBug"
-      >W</span
-    ></span
-  >
+  <span v-show="isNewEpisode" class="flex items-center neonText">
+    <span class="pr-1 text-3xl">&#8226;</span>NE<span class="neonTextBug">W</span>
+  </span>
 </template>
 
 <style scoped>
