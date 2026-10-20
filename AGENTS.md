@@ -36,6 +36,15 @@ umamiAnalytics: {
 
 Staging (`staging.double-slash.dev`) and prod use the same `hostUrl`. `privacy` on Nuxt Scripts does nothing in SSG.
 
+## Fonts (`@nuxt/fonts`)
+
+Self-hosted only: `provider: 'local'`, files in `app/assets/fonts/` (unused files kept in `app/assets/fonts-archive/`, not scanned).
+
+- Family ↔ filename convention of the local provider: `dank-regular.woff2` → family `Dank`, `inter-variable.woff2` → `Inter`, `mono45.woff2` → `Mono45`.
+- `processCSSVariables: false` + families declared with `global: true` in `nuxt.config.ts` (avoids Tailwind `--font-weight-*` false-positive warnings). Do not re-enable CSS variable processing.
+- `throwOnError` fails `bun run generate` if a family cannot be resolved. Any new `font-family` in CSS must be a generic family (`sans-serif`, `monospace`…) or have a woff2 file / a `families` entry, otherwise the build breaks.
+- Font preloads and `@font-face` are injected by the module — never add manual `<link rel="preload" as="font">` or `@font-face` rules.
+
 ## Podcast content
 
 - Frontmatter: `.agents/podcast-frontmatter.md`

@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     'nuxt-llms',
     '@nuxtjs/robots',
     '@nuxt/scripts',
+    '@nuxt/fonts',
     ...(process.env.NODE_ENV === 'development' ? ['@browser-echo/nuxt'] : []),
   ],
 
@@ -82,6 +83,38 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   css: ['~/assets/main.css'],
+  // Fonts are self-hosted woff2 files in app/assets/fonts, resolved by filename
+  // convention (see @nuxt/fonts local provider). provider: 'local' guarantees
+  // no remote font download at build time (Railpack/SSG).
+  // processCSSVariables is disabled: with the default 'font-prefixed-only' the
+  // module also parses Tailwind's --font-weight-* / --default-font-family
+  // variables as font families and warns on every build. The families are
+  // declared explicitly with global: true instead.
+  fonts: {
+    provider: 'local',
+    processCSSVariables: false,
+    // Fail the production build when a family cannot be resolved (missing or
+    // renamed woff2 file) instead of shipping a silent fallback font.
+    // Dev keeps warn-only so a broken stack does not block local work.
+    throwOnError: process.env.NODE_ENV === 'production',
+    local: {
+      dirs: ['app/assets/fonts'],
+    },
+    families: [
+      {name: 'Mono45', global: true},
+      {name: 'Dank', global: true},
+      {
+        name: 'Inter',
+        global: true,
+        weights: ['100 800'],
+        display: 'optional',
+        unicodeRange: ['U+000-5FF'],
+        // unicode-range disables the automatic preload; keep the old manual
+        // preload behavior from app/layouts/default.vue.
+        preload: true,
+      },
+    ],
+  },
   image: {
     provider: 'cloudinary',
     cloudinary: {
