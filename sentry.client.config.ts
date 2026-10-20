@@ -13,6 +13,20 @@ Sentry.init({
   environment: sentry.environment,
   tracesSampleRate: 0,
   /**
+   * Privacy-first collection — restores the v10 `sendDefaultPii: false` default.
+   * v11 flipped every `dataCollection` category to on: without this block the
+   * browser SDK lets Sentry infer and store visitor IPs (`userInfo`), and
+   * collects cookies, request bodies and raw query strings. Only User-Agent
+   * is kept (v10 sent it too) so issues keep their browser context.
+   */
+  dataCollection: {
+    userInfo: false,
+    cookies: false,
+    httpBodies: [],
+    urlQueryParams: false,
+    httpHeaders: {request: {allow: ['user-agent']}, response: false},
+  },
+  /**
    * Drop expected 404s (catch-all content pages, crawler probes).
    */
   beforeSend(event, hint) {
