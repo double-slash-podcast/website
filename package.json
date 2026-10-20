@@ -94,5 +94,8 @@
     "sharp",
     "unrs-resolver",
     "vue-demi"
-  ]
+  ],
+  "patchedDependencies": {
+    "nuxt@4.6.2": "patches/nuxt@4.6.2.patch"
+  }
 }

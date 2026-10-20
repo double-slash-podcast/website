@@ -1,8 +1,7 @@
 import tailwindcss from '@tailwindcss/vite';
 import {formatContentSignalPairs} from './app/utils/contentSignals';
 
-const sentryDsn =
-  process.env.NUXT_PUBLIC_SENTRY_DSN;
+const sentryDsn = process.env.NUXT_PUBLIC_SENTRY_DSN;
 const sentryEnvironment =
   process.env.NUXT_SITE_ENV ||
   (process.env.NODE_ENV === 'production' ? 'production' : 'development');
