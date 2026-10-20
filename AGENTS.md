@@ -4,7 +4,7 @@
 
 - Nuxt 4, Vue 3, Bun (`packageManager` in `package.json`)
 - Content: `@nuxt/content` (markdown in `content/`)
-- Local: lerd (`*.test`)
+- Local: runtime local
 - Production: **Coolify + Railpack + nginx, static (SSG)**. Not Netlify.
 
 ## Deploy
@@ -20,7 +20,7 @@ Coolify (staging first): static site, publish `/.output/public`. Leave **Install
 
 ## Umami (`@nuxt/scripts`)
 
-Self-hosted, public: https://analytics.double-slash.dev
+Self-hosted
 
 SSG disables the Nuxt Scripts Nitro proxy (`/_scripts/p/`). The tracker talks to Umami **directly** (CORS is enabled on `/api/send`). Do **not** add an nginx `location /umami/` on this site (502 / crash if it replaces the static `default.conf`).
 
@@ -28,7 +28,7 @@ SSG disables the Nuxt Scripts Nitro proxy (`/_scripts/p/`). The tracker talks to
 
 ```ts
 umamiAnalytics: {
-  websiteId: '942988c9-8c60-4497-ad8b-5c7169365a52',
+  websiteId: 'XXXXX',
   hostUrl: 'https://analytics.double-slash.dev',
   trigger: 'onNuxtReady',
 }
@@ -41,6 +41,11 @@ Staging (`staging.double-slash.dev`) and prod use the same `hostUrl`. `privacy` 
 - Frontmatter: `.agents/podcast-frontmatter.md`
 - After a new episode: `bun run sync-durations`
 - `bun run validate-durations` runs before `bun run generate` / `bun run build`
+
+## Nuxt patch (temporary)
+
+- `patches/nuxt@4.6.2.patch` deduplicates `prerenderRoutes`: Nuxt 4.6.x server islands re-append shared routes, and the oversized spread crashes `nuxi generate` (`Maximum call stack size exceeded` in nitro `extractLinks`) → missing prerendered HTML → staging deploys fail.
+- Remove it once upstream fixes the bug: drop `patchedDependencies` from `package.json`, delete the patch file, `bun install`, then check `bun run generate` prerenders ~1100 routes without errors. A nuxt upgrade that ignores the patch is the reminder to re-evaluate.
 
 ## Code conventions
 

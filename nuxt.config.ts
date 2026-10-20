@@ -1,8 +1,7 @@
 import tailwindcss from '@tailwindcss/vite';
 import {formatContentSignalPairs} from './app/utils/contentSignals';
 
-const sentryDsn =
-  process.env.NUXT_PUBLIC_SENTRY_DSN;
+const sentryDsn = process.env.NUXT_PUBLIC_SENTRY_DSN;
 const sentryEnvironment =
   process.env.NUXT_SITE_ENV ||
   (process.env.NODE_ENV === 'production' ? 'production' : 'development');
@@ -188,6 +187,12 @@ export default defineNuxtConfig({
     title: 'Double Slash Podcast',
     description:
       'Le podcast sur le code, le développement web et les outils modernes.',
+  },
+  // Absolute origin for Schema.org and prerendered URLs.
+  // Indexable still follows the env: production indexes, staging does not.
+  site: {
+    url: 'https://double-slash.dev',
+    name: 'Double Slash',
   },
   robots: {
     sitemap: 'https://double-slash.dev/sitemap.xml',
