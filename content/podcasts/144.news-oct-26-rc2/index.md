@@ -36,7 +36,7 @@ fileSize: 43180549
 
 ## pnpm installe les skills d'agents IA embarqués dans les paquets npm
 
-- [pnpm installe les skills d'agents IA embarqués dans les paquets npm](https://pnpm.io/agent-skills)
+- [Documentation pnpm](https://pnpm.io/agent-skills)
 
 pnpm sait maintenant gérer les agent skills : des dossiers avec un `SKILL.md` que les agents de code IA chargent comme instructions. Un paquet peut en livrer dans un dossier `skills/`, voire ne contenir que ça, et pnpm les relie dans le projet pour que l'agent qui bosse dans le repo les voie.
 
@@ -46,8 +46,8 @@ Les liens arrivent dans les dossiers d'agents déjà présents, comme `.claude/s
 
 ## PHP : deux failles critiques en approche, patch d'urgence le 21 octobre
 
-- [PHP : deux failles critiques en approche, patch d'urgence le 21 octobre](https://cert.europa.eu/publications/security-advisories/2026-018/)
-- [PHP : deux failles critiques en approche, patch d'urgence le 21 octobre](https://www.php.net/archive/2026.php#2026-10-20-1)
+- [Avis CERT-EU](https://cert.europa.eu/publications/security-advisories/2026-018/)
+- [Annonce de sécurité PHP](https://www.php.net/archive/2026.php#2026-10-20-1)
 
 Alerte rouge côté PHP. Le 20 octobre 2026, l'équipe sécurité de PHP a prévenu d'une release de sécurité programmée le mercredi 21 octobre à 14:00 UTC (16 h à Paris). Elle corrige deux vulnérabilités critiques, CVE-2026-109618 et CVE-2026-109619, toutes les deux notées 9.2 en CVSS v4.0.
 
@@ -59,13 +59,13 @@ Le conseil est simple : faites l'inventaire de vos apps PHP dès maintenant et p
 
 ## OSS Scanner : Anthropic scanne gratuitement les failles des projets open source
 
-- [OSS Scanner : Anthropic scanne gratuitement les failles des projets open source](https://red.anthropic.com/oss-scanner/)
+- [OSS Scanner (Anthropic)](https://red.anthropic.com/oss-scanner/)
 
 Anthropic lance OSS Scanner, un service gratuit et sur inscription qui scanne les dépôts open source à la recherche de vulnérabilités avec ses modèles les plus puissants. Il prolonge le travail fait pendant Project Glasswing. Jusqu'ici, Anthropic envoyait ses rapports après une relecture humaine, dans le cadre de son programme de divulgation coordonnée (plus de 6 000 rapports relus à octobre 2026), ce qui prend du temps. OSS Scanner propose une voie rapide : les projets inscrits reçoivent par email les rapports bruts, sans relecture humaine, avec vérification par agents, analyse de cause et proposition de patch. Il n'y a pas de délai de divulgation de 90 jours sur ces résultats non validés. Les critères d'éligibilité reprennent ceux d'OSS-Fuzz : projets établis, critiques pour l'infrastructure ou la sécurité, capables de traiter des rapports high ou critical. Pour s'inscrire, un mainteneur ouvre une PR sur github.com/anthropics/oss-scanner avec un project.yaml et un Dockerfile qui permet à l'agent d'auditer le projet hors ligne. Un fichier de threat model optionnel oriente le scanner, et on peut chiffrer les emails avec une clé PGP ou mettre le service en pause avec disabled: true.
 
 ## Nuxt Fonts : des web fonts auto-hébergées sans configuration
 
-- [Nuxt Fonts : des web fonts auto-hébergées sans configuration](https://fonts.nuxt.com/)
+- [Documentation Nuxt Fonts](https://fonts.nuxt.com/)
 
 Nuxt Fonts est le module officiel qui gère les polices web dans une appli Nuxt. On écrit juste un `font-family` dans son CSS, et le module trouve la police, génère les règles `@font-face` avec les bonnes graisses, styles et plages unicode, puis l'injecte dans la feuille de style. Rien à importer, aucun composant à ajouter.
 
@@ -75,7 +75,7 @@ Pour limiter le décalage de mise en page, une police système est recalibrée s
 
 ## Bootstrap 6 alpha : Sass modules, CSS moderne, ESM only et préfixes à la Tailwind
 
-- [Bootstrap 6 alpha : Sass modules, CSS moderne, ESM only et préfixes à la Tailwind](https://blog.getbootstrap.com/2026/10/08/bootstrap-6-alpha/)
+- [Annonce sur le blog Bootstrap](https://blog.getbootstrap.com/2026/10/08/bootstrap-6-alpha/)
 
 Bootstrap revient avec une première alpha de la v6, une refonte complète du framework. Elle est déjà sur npm via `bootstrap@6.0.0-alpha.1` et sur jsDelivr.
 
@@ -87,14 +87,14 @@ Prix à payer : il faut au minimum Chrome et Edge 130, Firefox 132 et Safari 18.
 
 ## TanStack Hotkeys : des raccourcis clavier typés qui gèrent AZERTY, Mac et dialogs
 
-- [TanStack Hotkeys : des raccourcis clavier typés qui gèrent AZERTY, Mac et dialogs](https://tanstack.com/hotkeys/latest)
+- [Documentation TanStack Hotkeys](https://tanstack.com/hotkeys/latest)
 
 TanStack Hotkeys est une librairie typée pour les raccourcis clavier dans les apps web. Le cœur est indépendant du framework, avec des adaptateurs pour React, Vue, Solid, Svelte, Angular et d'autres. L'idée : remplacer le listener keydown bricolé par une ligne comme useHotkey('Mod+S', save). Mod donne ⌘ sur Mac et Ctrl ailleurs, et ⌘S sauvegarde ton doc plutôt que la page. La lib gère aussi les cas pénibles : les raccourcis à lettre attendent quand on tape dans un champ, les boutons gardent Entrée et Espace, les dispositions Dvorak, AZERTY ou cyrilliques sont prises en compte, et AltGr ou la saisie en japonais ne déclenchent rien par erreur. Les chaînes de raccourcis sont typées, donc ton éditeur les autocomplète et les combinaisons impossibles cassent à la compilation. Les scopes permettent à une dialog de prendre le clavier pour elle seule. On peut afficher les raccourcis quand on maintient une touche modificatrice, et générer depuis une seule liste une cheat sheet et une page de réglages où l'utilisateur choisit ses touches, avec détection des conflits. Des devtools montrent tous les raccourcis enregistrés et ce qui se déclenche.
 
 ## OpenCode 2.0 : service local, nouvelle API, Code Mode et sous-agents en tâche de fond
 
-- [OpenCode 2.0 : service local, nouvelle API, Code Mode et sous-agents en tâche de fond](https://x.com/opencode/status/2109649032931119362)
-- [OpenCode 2.0 : service local, nouvelle API, Code Mode et sous-agents en tâche de fond](https://t.co/xJrKUZjYtu)
+- [Annonce OpenCode sur X](https://x.com/opencode/status/2109649032931119362)
+- [Note Anoma.ly](https://t.co/xJrKUZjYtu)
 
 OpenCode, l'agent de code open source, sort sa version 2.0, une grosse refonte nourrie par les retours de ses millions d'utilisateurs quotidiens.
 
@@ -106,8 +106,8 @@ Au menu aussi : sous-agents et commandes shell en tâche de fond, plus de 80 plu
 
 ## Prime NG 22 quitte l'open source avec la nouvelle licence PrimeUI
 
-- [Prime NG 22 quitte l'open source avec la nouvelle licence PrimeUI](https://angular.fr/news/primeng-primeui-licence)
-- [Prime NG 22 quitte l'open source avec la nouvelle licence PrimeUI](https://primeui.store/primeui)
+- [Article Angular.fr](https://angular.fr/news/primeng-primeui-licence)
+- [Licence PrimeUI](https://primeui.store/primeui)
 
 PrimeTek change de modèle avec PrimeUI, une nouvelle licence qui couvre les futures versions majeures de PrimeNG, PrimeReact et PrimeVue. À partir de PrimeNG 22, la bibliothèque de composants Angular n'est plus publiée en open source. Le dépôt GitHub historique est archivé et le développement continue dans l'écosystème PrimeUI.
 
@@ -117,7 +117,7 @@ PrimeTek justifie ce choix par la soutenabilité : le modèle libs gratuites plu
 
 ## Deno rejoint Cloudflare, le runtime et Deno Deploy vont s'arrêter
 
-- [Deno rejoint Cloudflare, le runtime et Deno Deploy vont s'arrêter](https://deno.com/blog/cloudflare)
+- [Annonce sur le blog Deno](https://deno.com/blog/cloudflare)
 
 Ryan Dahl annonce que toute l'équipe Deno rejoint Cloudflare. Elle va travailler avec les équipes Workers et Durable Objects sur celld, un projet basé sur le modèle de programmation des Workers. L'idée : construire des applis distribuées dès le départ, avec le scaling intégré au modèle, sur le réseau Cloudflare ou sur sa propre infra.
 
@@ -127,16 +127,16 @@ JSR continue, avec son infra qui passe chez Cloudflare, et `rusty_v8` reste main
 
 ## Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS
 
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://www.cloudflare.com/press/press-releases/2026/cloudflare-acquires-astro-to-accelerate-the-future-of-high-performance-web-development/)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://voidzero.dev/posts/voidzero-cloudflare)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://blog.cloudflare.com/the-story-of-web-framework-hono-from-the-creator-of-hono/)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://vercel.com/blog/vercel-acquires-turborepo)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://vercel.com/blog/vercel-welcomes-rich-harris-creator-of-svelte)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://vercel.com/blog/nuxtlabs-joins-vercel)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://better-auth.com/blog/better-auth-joins-vercel)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://bun.com/blog/bun-joins-anthropic)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://shopify.engineering/remix-joins-shopify)
-- [Cloudflare, Vercel, Anthropic, OpenAI : les gros rachètent l'open source JS](https://tailwindcss.com/blog/tailwind-is-joining-shopify)
+- [Communiqué Cloudflare (Astro)](https://www.cloudflare.com/press/press-releases/2026/cloudflare-acquires-astro-to-accelerate-the-future-of-high-performance-web-development/)
+- [VoidZero rejoint Cloudflare](https://voidzero.dev/posts/voidzero-cloudflare)
+- [Histoire de Hono (blog Cloudflare)](https://blog.cloudflare.com/the-story-of-web-framework-hono-from-the-creator-of-hono/)
+- [Vercel rachète Turborepo](https://vercel.com/blog/vercel-acquires-turborepo)
+- [Rich Harris rejoint Vercel](https://vercel.com/blog/vercel-welcomes-rich-harris-creator-of-svelte)
+- [NuxtLabs rejoint Vercel](https://vercel.com/blog/nuxtlabs-joins-vercel)
+- [Better Auth rejoint Vercel](https://better-auth.com/blog/better-auth-joins-vercel)
+- [Bun rejoint Anthropic](https://bun.com/blog/bun-joins-anthropic)
+- [Remix rejoint Shopify](https://shopify.engineering/remix-joins-shopify)
+- [Tailwind rejoint Shopify](https://tailwindcss.com/blog/tailwind-is-joining-shopify)
 
 Les équipes derrière nos outils open source préférés changent de patron les unes après les autres. Cloudflare mène la danse. Après PartyKit en 2024 et l'embauche du créateur de Hono, il a racheté Astro le 16 janvier 2026, puis VoidZero le 4 juin, soit l'équipe de Vite, Vitest, Rolldown et Oxc. Le 9 octobre, il a annoncé l'arrivée de Deno. Deno Deploy doit fermer et le runtime ne serait maintenu qu'environ un an, mais les conditions exactes restent floues.
 
@@ -150,13 +150,13 @@ Le graphe « qui possède quoi » (état au 10 octobre 2026) : https://hub.doubl
 
 ## Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript
 
-- [Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript](https://blog.cloudflare.com/typescript-rust-port/)
-- [Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript](https://bun.com/blog/bun-v1.4.3)
-- [Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript](https://www.infoq.com/news/2026/09/bun-AI-rewrite-zig-rust-4-months/)
-- [Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript](https://github.com/pingdotgg/ts-rust)
-- [Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript](https://tsz.dev/)
-- [Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript](https://github.com/vercel-labs/tsc-ts)
-- [Go, Rust, et retour au TypeScript : la course aux compilateurs TypeScript](https://news.ycombinator.com/item?id=50132911)
+- [Portage TypeScript (blog Cloudflare)](https://blog.cloudflare.com/typescript-rust-port/)
+- [Annonce Bun 1.4.3](https://bun.com/blog/bun-v1.4.3)
+- [Réécriture de Bun (InfoQ)](https://www.infoq.com/news/2026/09/bun-AI-rewrite-zig-rust-4-months/)
+- [Dépôt tsc-rs](https://github.com/pingdotgg/ts-rust)
+- [Site de tsz](https://tsz.dev/)
+- [Dépôt tsc-ts](https://github.com/vercel-labs/tsc-ts)
+- [Discussion Hacker News](https://news.ycombinator.com/item?id=50132911)
 
 En octobre 2026, les réécritures du compilateur TypeScript s'enchaînent. La référence reste le portage Go officiel : TypeScript 7 (tsgo, typescript@7.0.2) est environ 10x plus rapide que TS 6, et la 7.1 beta gagne jusqu'à 2,5x de plus, en partie grâce à des optimisations venues de tsrs.
 
@@ -178,6 +178,6 @@ Pour s'y retrouver, voici la chronologie des compilateurs et checkers TypeScript
 
 ## lessrusty: apprendre Rust par petites stories de vrai code et révisions espacées
 
-- [lessrusty: apprendre Rust par petites stories de vrai code et révisions espacées](https://lessrusty.com)
+- [Site de lessrusty](https://lessrusty.com)
 
 lessrusty.com (« learn rust, a little every day ») est un site pour apprendre ou réviser Rust par petites doses, à partir de « stories » tirées de vrai code: une situation concrète (par exemple un handler d’inscription qui ne compile pas à cause d’une valeur déplacée), une question à choix, puis un explorateur qui permet de zoomer sur une ligne ou un symbole et explique le pourquoi (ownership, move, borrow, clone…). Le parcours part de la syntaxe, des variables et des fonctions, puis passe par ownership, borrowing, lifetimes, traits, gestion d’erreurs, collections et async Rust, avec aussi concurrence et Serde sur la carte de connaissances. Côté méthode: une courte pratique quotidienne, des révisions espacées qui ramènent une story quand le rappel estimé baisse (les questions ratées reviennent plus tôt), une revue des erreurs, de la pratique par thème et des examens chronométrés où les réponses sont verrouillées, avec score et explications à la fin. Pratique, exploration du code et examens sont gratuits et accessibles sans compte; se connecter sert à garder réponses et progression d’une visite à l’autre. Le site ne dit en revanche ni qui est derrière, ni s’il est open source, ni ce que recouvre son « free to start ».
