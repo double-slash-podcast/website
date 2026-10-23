@@ -8,7 +8,7 @@ episodeNumber: 144
 episodeType: "full"
 explicit: false
 season: 2
-dsSlug: "DS_144_news-oct-rc2"
+dsSlug: "DS_144_news-oct-26-rc2"
 title: "News octobre 2026 RC2, Deno file chez Cloudflare, qui possède l'open source JS et PHP sonne l'alerte"
 subtitle: "Les news pour octobre 2026 RC2, compilateurs TypeScript, OpenCode 2.0, Bootstrap 6, PrimeNG et outils du mois."
 episodeArtwork: "https://res.cloudinary.com/doubleslash/image/upload/v1792571027/episode/ART_144_xz4non.png"
