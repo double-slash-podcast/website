@@ -51,11 +51,6 @@ Self-hosted only: `provider: 'local'`, files in `app/assets/fonts/` (unused file
 - After a new episode: `bun run sync-durations`
 - `bun run validate-durations` runs before `bun run generate` / `bun run build`
 
-## Nuxt patch (temporary)
-
-- `patches/nuxt@4.6.2.patch` deduplicates `prerenderRoutes`: Nuxt 4.6.x server islands re-append shared routes, and the oversized spread crashes `nuxi generate` (`Maximum call stack size exceeded` in nitro `extractLinks`) → missing prerendered HTML → staging deploys fail.
-- Remove it once upstream fixes the bug: drop `patchedDependencies` from `package.json`, delete the patch file, `bun install`, then check `bun run generate` prerenders ~1100 routes without errors. A nuxt upgrade that ignores the patch is the reminder to re-evaluate.
-
 ## Code conventions
 
 - User-facing replies in French
