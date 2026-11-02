@@ -1,20 +1,28 @@
 ---
-publicationDate: "21 Oct 2026"
-status: "published"
-author: "Double Slash"
+publicationDate: 21 Oct 2026
+status: published
+author: Double Slash
 categories:
   - Technology
 episodeNumber: 144
-episodeType: "full"
+episodeType: full
 explicit: false
 season: 2
-dsSlug: "DS_144_news-oct-26-rc2"
-title: "News octobre 2026 RC2, Deno file chez Cloudflare, qui possède l'open source JS et PHP sonne l'alerte"
-subtitle: "Les news pour octobre 2026 RC2, compilateurs TypeScript, OpenCode 2.0, Bootstrap 6, PrimeNG et outils du mois."
-episodeArtwork: "https://res.cloudinary.com/doubleslash/image/upload/v1792571027/episode/ART_144_xz4non.png"
-type: "news"
-description: "Nous évoquons Deno qui rejoint Cloudflare et la fin annoncée de Deno Deploy, la vague de rachats de l'open source JS par Cloudflare, Vercel, Anthropic et OpenAI, la course aux compilateurs TypeScript avec tsgo, bun check, tsc-rs, tsrs et tsc-ts, les deux failles critiques annoncées côté PHP, OSS Scanner d'Anthropic, OpenCode 2.0, Bootstrap 6 alpha, PrimeNG 22 qui quitte l'open source, les agent skills dans pnpm, et quelques outils comme Nuxt Fonts, TanStack Hotkeys ou lessrusty."
-videoLink: "vrsxxLde0TY"
+dsSlug: DS_144_news-oct-26-rc2
+title: News octobre 2026 RC2, Deno file chez Cloudflare, qui possède l'open
+  source JS et PHP sonne l'alerte
+subtitle: Les news pour octobre 2026 RC2, compilateurs TypeScript, OpenCode 2.0,
+  Bootstrap 6, PrimeNG et outils du mois.
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1792571027/episode/ART_144_xz4non.png
+type: news
+description: Nous évoquons Deno qui rejoint Cloudflare et la fin annoncée de
+  Deno Deploy, la vague de rachats de l'open source JS par Cloudflare, Vercel,
+  Anthropic et OpenAI, la course aux compilateurs TypeScript avec tsgo, bun
+  check, tsc-rs, tsrs et tsc-ts, les deux failles critiques annoncées côté PHP,
+  OSS Scanner d'Anthropic, OpenCode 2.0, Bootstrap 6 alpha, PrimeNG 22 qui
+  quitte l'open source, les agent skills dans pnpm, et quelques outils comme
+  Nuxt Fonts, TanStack Hotkeys ou lessrusty.
+videoLink: vrsxxLde0TY
 tags:
   - agents
   - angular

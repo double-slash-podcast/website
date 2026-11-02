@@ -1,35 +1,43 @@
 ---
-publicationDate: "29 Oct 2026"
-status: "published"
-author: "Double Slash"
+publicationDate: 29 Oct 2026
+status: published
+author: Double Slash
 categories:
-  - "Technology"
+  - Technology
 episodeNumber: 145
-episodeType: "full"
+episodeType: full
 explicit: false
 season: 2
-dsSlug: "DS_145_news-oct-26-rc3"
-title: "News octobre 2026, adieu Arc, Brotli fait trembler Node et Nuxt souffle ses 10 bougies"
-subtitle: "Les news pour octobre 2026, TanStack AI et Redact, Mistral, le coût IA des frameworks et outils du mois."
-episodeArtwork: "https://res.cloudinary.com/doubleslash/image/upload/v1793267726/episode/ART_145_o6yatk.png"
-type: "news"
-description: "Nous évoquons la fin d'Arc au profit de Dia, Sumi.css, les 10 ans de Nuxt, le framework Rust Proa, TanStack Redact, le skill next-bundle-optimizer de Next.js, TanStack AI 1.0, la faille Brotli corrigée dans Node.js et Bun, les certificats eMudhra compromis, GitHub Copilot Fusion, Timestral et la Responses API de Mistral, le benchmark de Nolan Lawson sur le coût IA des frameworks JS, et runonweb pour faire tourner des modèles d'IA dans le navigateur."
-videoLink: "6NdvWVH4F9Y"
+dsSlug: DS_145_news-oct-26-rc3
+title: News octobre 2026, adieu Arc, Brotli fait trembler Node et Nuxt souffle
+  ses 10 bougies
+subtitle: Les news pour octobre 2026, TanStack AI et Redact, Mistral, le coût IA
+  des frameworks et outils du mois.
+episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1793267726/episode/ART_145_o6yatk.png
+type: news
+description: Nous évoquons la fin d'Arc au profit de Dia, Sumi.css, les 10 ans
+  de Nuxt, le framework Rust Proa, TanStack Redact, le skill
+  next-bundle-optimizer de Next.js, TanStack AI 1.0, la faille Brotli corrigée
+  dans Node.js et Bun, les certificats eMudhra compromis, GitHub Copilot Fusion,
+  Timestral et la Responses API de Mistral, le benchmark de Nolan Lawson sur le
+  coût IA des frameworks JS, et runonweb pour faire tourner des modèles d'IA
+  dans le navigateur.
+videoLink: 6NdvWVH4F9Y
 tags:
-  - "agents"
-  - "ai"
-  - "arc"
-  - "bun"
-  - "css"
-  - "mistral"
-  - "nextjs"
-  - "nodejs"
-  - "nuxt"
-  - "python"
-  - "react"
-  - "rust"
-  - "securite"
-  - "tanstack"
+  - agents
+  - ai
+  - arc
+  - bun
+  - css
+  - mistral
+  - nextjs
+  - nodejs
+  - nuxt
+  - python
+  - react
+  - rust
+  - securite
+  - tanstack
 duration: 3431
 fileSize: 54904837
 ---

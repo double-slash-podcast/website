@@ -4,8 +4,8 @@ status: published
 author: Double Slash
 categories:
   - Technology
-duration: 3115
-fileSize: 49847173
+duration: 3121
+fileSize: 74916048
 episodeNumber: 141
 episodeType: full
 explicit: false
@@ -14,7 +14,8 @@ dsSlug: DS_141_agent-ready
 title: On a rendu Double Slash 100 % Agent Ready, et voilà comment
 subtitle: La liste Cloudflare en vrai, du robots.txt à WebMCP
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1790161315/episode/ART_141_unbyjg.png
-description: "Votre site est-il prêt pour les agents IA ? On a tout implémenté sur le podcast, on explique pourquoi et comment."
+description: Votre site est-il prêt pour les agents IA ? On a tout implémenté
+  sur le podcast, on explique pourquoi et comment.
 videoLink: vqQuATSPCmk
 tags:
   - agent-ready

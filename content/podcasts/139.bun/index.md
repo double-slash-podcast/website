@@ -14,13 +14,18 @@ dsSlug: DS_139_bun
 title: BunJS, l'environement JS ultime ?
 subtitle: Runtime, bundler, tests et package manager — tout dans un seul binaire
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1789110154/episode/ART_139_szimen.png
-description: "Bun est un toolkit tout-en-un pour JavaScript et TypeScript: runtime, gestionnaire de paquets, test runner et bundler, dans un seul exécutable. Créé par Jarred Sumner, présenté publiquement en juillet 2022 puis stable avec la 1.0 de septembre 2023, il se pose en alternative plus rapide à Node.js. On revient sur son historique et ce qu’il embarque vraiment."
+description: "Bun est un toolkit tout-en-un pour JavaScript et TypeScript:
+  runtime, gestionnaire de paquets, test runner et bundler, dans un seul
+  exécutable. Créé par Jarred Sumner, présenté publiquement en juillet 2022 puis
+  stable avec la 1.0 de septembre 2023, il se pose en alternative plus rapide à
+  Node.js. On revient sur son historique et ce qu’il embarque vraiment."
 videoLink: Wp0LvBiyK_M
 tags:
   - bun
   - javascript
   - backend
 ---
+
 Dans cet épisode, on soulève le capot de Bun : historique du JS back-end (Node, Deno, Bun), JavaScriptCore vs V8, l’effet waouh du `bun install`, workspaces et catalogues monorepo, bundler + binaire CLI, tests natifs, modules intégrés (SQLite, Redis, images, markdown…) et la polémique Anthropic / migration Rust. Pour qui c’est intéressant et pourquoi la DX compte autant que les performances.
 
 **Liens utiles :**

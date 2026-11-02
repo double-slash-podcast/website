@@ -12,15 +12,16 @@ explicit: false
 season: 2
 dsSlug: DS_138_news-sept26
 title: News Septembre 2026 RC1, OpenAI coupe Cursor, Omarchy, HTMX 4 et Bun 1.4
-subtitle: Les news pour septembre 2026 RC1, Cursor, Omarchy, HTMX, TanStack et outils
-  du mois.
+subtitle: Les news pour septembre 2026 RC1, Cursor, Omarchy, HTMX, TanStack et
+  outils du mois.
 episodeArtwork: https://res.cloudinary.com/doubleslash/image/upload/v1788439787/episode/ART_138_kwbvlq.png
 description: Nous évoquons OpenAI qui coupe l'accès à ses modèles pour Cursor
   après le rachat par SpaceX, la sortie de HTMX 4.0 et de Bun 1.4, Lovable qui
-  quitte Next.js pour TanStack Start, Vercel qui collabore avec TanStack, TypePHP qui compile du PHP en binaire natif, Zed qui retire
-  l'edit prediction du plan gratuit, le starter kit Laravel sur Vite+, GLM
-  dans Mistral Vibe, l'outil CNIL Genmod, Omarchy, et quelques outils comme
-  Screendrop, Orchard, Openwork et openSEO.
+  quitte Next.js pour TanStack Start, Vercel qui collabore avec TanStack,
+  TypePHP qui compile du PHP en binaire natif, Zed qui retire l'edit prediction
+  du plan gratuit, le starter kit Laravel sur Vite+, GLM dans Mistral Vibe,
+  l'outil CNIL Genmod, Omarchy, et quelques outils comme Screendrop, Orchard,
+  Openwork et openSEO.
 videoLink: lSlbk6KWoaI
 tags:
   - bun
@@ -29,6 +30,7 @@ tags:
   - cursor
   - omarchy
 ---
+
 ## Context7
 
 https://upstash.com/blog/context7-vs-web-search-benchmark
