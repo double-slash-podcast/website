@@ -82,7 +82,13 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
-      include: ["@browser-echo/core", "@vue/devtools-core", "motion", "throttle-debounce"],
+      include: [
+        "@browser-echo/core",
+        "@vue/devtools-core",
+        "motion",
+        "throttle-debounce",
+        "vue-lite-youtube-embed",
+      ],
     },
   },
   css: ["~/assets/main.css"],
